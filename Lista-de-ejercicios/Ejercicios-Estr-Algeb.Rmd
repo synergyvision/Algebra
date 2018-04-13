@@ -1,0 +1,19 @@
+---
+title: "Ejercicios de Estructuras Algebraicas"
+subtitle: "Álgebra"
+author: "http://synergy.vision/"
+output:
+  pdf_document:
+      toc: yes
+      toc_depth: 4
+      includes:
+        in_header: ./preambulo.tex
+  html_document: default
+fontsize: 12pt
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\newpage
