@@ -1,5 +1,5 @@
 --- 
-title: "Algebra"
+title: "Álgebra"
 subtitle: "Ciencia de los Datos Financieros"
 author: "Synergy Vision"
 date: "`r Sys.Date()`"
