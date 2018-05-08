@@ -1,13 +1,13 @@
-# Algebra
+# Álgebra
 Synergy Vision  
 `r Sys.Date()`  
 <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
 
 --- 
-title: "Algebra"
+title: "Álgebra"
 subtitle: "Ciencia de los Datos Financieros"
 author: "Synergy Vision"
-date: "2018-04-13"
+date: "2018-05-08"
 knit: "bookdown::render_book"
 documentclass: krantz
 bibliography: [book.bib, packages.bib]
