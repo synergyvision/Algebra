@@ -1,4 +1,4 @@
-book_filename: Analisis-Tecnico
+book_filename: Álgebra Lineal
 repo: https://github.com/rstudio/bookdown/
 output_dir: ../docs
 clean: [packages.bib, bookdown.bbl]

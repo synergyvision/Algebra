@@ -15,7 +15,7 @@ bookdown::gitbook:
       after: |
         <li><a href="https://bookdown.org" target="blank">Publicado con bookdown</a></li>
     download: [pdf]
-    edit: https://github.com/synergyvision/Teoria-de-Portafolio/edit/master/bookdown/%s
+    edit: https://github.com/synergyvision/Algebra/edit/master/bookdown/%s
     sharing:
       github: yes
       facebook: no
