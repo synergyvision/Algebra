@@ -1,1 +1,64 @@
 # Estructuras algebraicas
+## Conjuntos
+Abordaremos los temas relacionados con la teoría de conjuntos desde una perspectiva intuitiva, más bien oparacional para abordar los conceptos básicos necesarios para desarrollar el resto de los capítulos.
+
+### Definiciones Iniciales
+
+Entenderemos por **conjunto** a una colección de objetos cualesquiera. Las palabras *conjunto, colecci\'on, familia* suelen ser usadas para denotar este objeto matemático. Los objetos que conforman un conjunto son llamados comunmente **elementos** (o *miembros*) del conjunto. Los conjuntos suelen denotarse con letras mayúsculas $A, B, C, P,\cdots$, mientras que los miembros que los conforman generalmente se denotan con letras minúsculas $a,b, x, y,\cdots$. Si $C$ es un conjunto y $x$ es un elemento de $C$, escribiremos $x\in C$ (o equivalentemente $C\ni x$) lo que se lee *$x$ pertenece al conjunto $C$*. Para denotar lo contrario usaremos el símbolo $\notin$, así $x\notin C$ significa que *$x$ no pertenece a $C$ o $x$ no es miembro de $C$*.
+
+\smallskip
+
+Puede ocurrir que elementos de un conjunto también pertenezcan a otro conjunto. En el caso que todo elemento de un conjunto $A$ es miembro del conjunto $C$ decimos que **$A$ es subconjunto de $C$** (o $C$ contiene a $A$), lo que denotaremos $A\subseteq C$. Es decir, si $x\in A$, entonces $x\in C$ para todo $x$, implica que $A\subseteq C$. Note que es posible que $A$ y $C$ tengan exactamente los mismos elementos, en este caso diremos que los conjuntos $A$ y $C$ son iguale y lo denotaremos por $A=C$. Sin embargo debemos comprobar que $A\subseteq C$ y $C\subseteq A$ para asegurar que $A=C$. En otro caso, cuando $A\subseteq C$ pero $A$ no es igual al conjunto $C$, diremos que **{$A$ es un subconjunto propio de $C$** (o **$A$ está propiamente contenido en $C$**).
+
+```{example}
+	El conjunto formado por 1, 2, 3, 4, etc. es el llamado conjunto de los \textit{números naturales} y se denota por $\mathbb{N}$.\\
+	Se debe saber que podemos definir un conjunto describiendo uno a uno sus miembros. Esto se hace encerrándolos entre llaves. Así, el conjunto de los números naturales es $\mathbb{N}=\{1,2,3,4,\cdots\}$.
+```
+
+```{example}
+	Dado el conjunto de los números enteros $\mathbb{Z}=\{\cdots,-3,-2,-1,0,1,2,3,\cdots \}$, el conjunto de los números pares (enteros pares) es el conjunto de los números de la forma $2k$ donde $k$ es un entero.\\
+	También se puede describir el conjunto anterior así: $$\{p\in\mathbb{Z}| p=2k \mbox{ para algún } k\in\mathbb{Z} \}$$ lo cual se lee: *el conjunto formado por todos los números enteros* $p$ *tales que* $p=2k$ *para algún número entero* $k$.
+```
+```{example}
+	Denotaremos el conjunto de los números reales po $\mathbb{R}$. El conjunto de las soluciones de la ecuación $7x^{2}+4x-32=0$ es $C=\{x\in\mathbb{R}\textbar x \mbox{ es solución de } 7x^{2}+4x-32=0 \}$
+```
+## Operaciones
+
+Dados dos conjuntos $A$ y $B$ podemos definir nuevos conjuntos a partir de estos, con las operaciones entre conjuntos que definiremos a continuación.
+
+```{definition,label=uniondeconjuntos}
+	Dados dos conjuntos $A$ y $B$, el conjunto **unión** de $A$ y $B$ es el conjunto $A\cup B = \{ x| x\in A \mbox{ o } x\in B \}$.
+``` 
+Es decir, la unión de los conjuntos $A$ y $B$ es el conjunto formados por aquellos elementos que pertenezcan a al menos uno de los dos conjuntos, así un elemento que pertenezca tanto a $A$ como a $B$, es miembro de $A\cup B$.
+
+```{definition, label=intersecciondeconjuntos}
+		Dados dos conjuntos $A$ y $B$, el conjunto \textit{intersección} de $A$ y $B$ es el conjunto $A\cap B = \{ x| x\in A \mbox{ y } x\in B \}$.
+```
+
+En otras palabras, la intersección de $A$ y $B$ es el conjunto formado por aquellos elementos que pertenecen a ambos conjuntos simultaneamente.
+
+```{example}
+	Dados los conjuntos $A$ y $B$, tales que $B\subseteq A$ ($B$ es subconjunto de $A$).  Se tiene que $A\cup A=A$, más aán $A\cup B=A$. Además $A\cap A=A$ y $A\cap B=B$. 
+```
+```{example}
+	Sean $A=\{a,b,c\}$ y $B=\{c,d,e\}$. $A\cup B=\{a,b,c,d,e\}$ y $A\cap B=\{c\}$.
+```
+```{example}
+	Dado el conjunto de los números enteros, $\mathbb{Z}$. Los subconjuntos $\mathbb{Z}^{+}=\{p\in\mathbb{Z}| p \mbox{ es un entero positivo} \}$ y $\mathbb{Z}^{-}=\{p\in\mathbb{Z}| p \mbox{ es un entero negativo} \}$. Se tiene que $\mathbb{Z}\cap \mathbb{Z}^{+}=\mathbb{Z}^{+}$ y  $\mathbb{Z}\cup \mathbb{Z}^{-}=\mathbb{Z}$.\\
+	Ahora bien, pensemos en el conjunto $\mathbb{Z}^{+}\cap\mathbb{Z}^{-}$. Note que no existe nímero entero que pertenezca a $\mathbb{Z}^{+}$ y $\mathbb{Z}^{-}$ simultaneamente. Para que la intersección esté bien definida, el resultado debería ser un conjunto. Con ese fin daremos la siguiente definición.
+```
+```{definition, label=conjuntovacio}
+	Diremos que un conjunto es **vacío** si no posee elementos y lo denotaremos por $\emptyset$.
+```
+```{remark}
+	El conjunto vacío es único. Basta con demostrar que dados dos conjuntos $\emptyset$ y $\emptyset '$, se cumple que $\emptyset\subseteq \emptyset '$ y $\emptyset'\subseteq\emptyset$.
+```
+```{definition,label=conjuntodiferencia}
+	Dados dos conjuntos $A$ y $B$, el \textit{conjunto diferencia} $A-B$ es el conjunto $\{x\in A | x\notin B \}$.
+```
+
+
+```{example}
+	Dados los conjuntos de los números enteros, $\mathbb{Z}$ y el conjunto de los números naturales $\mathbb{N}=\{0,1,2,3,4,\cdots \}$, el conjunto diferencia $\mathbb{Z}-\mathbb{N}=\{p\in\mathbb{Z}| p\notin \mathbb{N} \}$ es decir, el conjunto de los números enteros que no son números naturales, que no es más que $\mathbb{Z}^{-}$.
+```
+
