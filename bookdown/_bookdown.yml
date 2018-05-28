@@ -1,4 +1,4 @@
-book_filename: Álgebra Lineal
+book_filename: Algebra-Lineal
 repo: https://github.com/rstudio/bookdown/
 output_dir: ../docs
 clean: [packages.bib, bookdown.bbl]
