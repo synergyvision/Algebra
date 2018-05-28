@@ -523,6 +523,11 @@ Sea $C$ un conjunto no vacío y $\mathcal{A}(C)$ el conjunto de todas las biyecc
 
 ```
 
+```{remark}
+Dado un elemento $f\in S_{n}$, podemos representarlo por 
+
+```
+
 ```{example, label="ejm1-21"}
 Dados $G$ y $H$ dos grupos con identidades $e_{G}$ y $e_{H}$ respectivamente. Consideremos el producto cartesiano $G\times H$ y la operación binaria $(a,b)\ast (c,d)=(a\ast c,b\ast d)$ donde $a\ast c\in G$ y $b\ast d\in H$. Con esta operación $G\times H$ es un grupo con identidad $(e_{G}, e_{H})$ y con inverso $(a^{-1}, b^{-1})$ para cada elemento $(a,b)\in G\times H$.
 
@@ -541,7 +546,9 @@ Demuestre que el grupo simétrico sobre $n$ letras es de orden $n!$.
 ```
 
 ```{exercise}
-Demuestre que el grupo del ejemplo \@ref(exm: ejm1-21) es un grupo de orden $|G||H|$. Además muestre que $G\times H$ es un grupo abeliano si $G$ y $H$ lo son.
+Demuestre que el grupo del ejemplo \@ref(exm:ejm1-21) es un grupo de orden $|G||H|$. Además muestre que $G\times H$ es un grupo abeliano si $G$ y $H$ lo son.
 
 ```
+
+
 

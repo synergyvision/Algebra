@@ -1,23 +1,10 @@
-<<<<<<< HEAD
-# Álgebra
-Synergy Vision  
-`r Sys.Date()`  
-<script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
-
---- 
-title: "Álgebra"
-subtitle: "Ciencia de los Datos Financieros"
-author: "Synergy Vision"
-date: "2018-05-08"
-=======
 <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
 
 --- 
 title: "Álgebra Lineal"
 subtitle: "Ciencia de los Datos Financieros"
 author: "Synergy Vision"
-date: "2018-05-07"
->>>>>>> 5fb01bf18b6aadb369125cd80053797b44d92989
+date: "2018-05-10"
 knit: "bookdown::render_book"
 documentclass: krantz
 bibliography: [book.bib, packages.bib]
@@ -117,6 +104,28 @@ Nuestra cuenta de Twitter es (https://twitter.com/bysynergyvision) y nuestros re
 <!--chapter:end:010-introduction.Rmd-->
 
 # Estructuras algebraicas
+## Conjuntos
+Abordaremos los temas relacionados con la teoría de conjuntos desde una perspectiva intuitiva, más bien oparacional para abordar los conceptos básicos necesarios para desarrollar el resto de los capítulos.
+
+### Definiciones Iniciales
+
+Entenderemos por **conjunto** a una colección de objetos cualesquiera. Las palabras *conjunto, colecci\'on, familia* suelen ser usadas para denotar este objeto matemático. Los objetos que conforman un conjunto son llamados comunmente **elementos** (o *miembros*) del conjunto. Los conjuntos suelen denotarse con letras mayúsculas $A, B, C, P,\cdots$, mientras que los miembros que los conforman generalmente se denotan con letras minúsculas $a,b, x, y,\cdots$. Si $C$ es un conjunto y $x$ es un elemento de $C$, escribiremos $x\in C$ (o equivalentemente $C\ni x$) lo que se lee *$x$ pertenece al conjunto $C$*. Para denotar lo contrario usaremos el símbolo $\notin$, así $x\notin C$ significa que *$x$ no pertenece a $C$ o $x$ no es miembro de $C$*.
+
+\smallskip
+
+Puede ocurrir que elementos de un conjunto también pertenezcan a otro conjunto. En el caso que todo elemento de un conjunto $A$ es miembro del conjunto $C$ decimos que **$A$ es subconjunto de $C$** (o $C$ contiene a $A$), lo que denotaremos $A\subseteq C$. Es decir, si $x\in A$, entonces $x\in C$ para todo $x$, implica que $A\subseteq C$. Note que es posible que $A$ y $C$ tengan exactamente los mismos elementos, en este caso diremos que los conjuntos $A$ y $C$ son iguale y lo denotaremos por $A=C$. Sin embargo debemos comprobar que $A\subseteq C$ y $C\subseteq A$ para asegurar que $A=C$. En otro caso, cuando $A\subseteq C$ pero $A$ no es igual al conjunto $C$, diremos que **{$A$ es un subconjunto propio de $C$** (o **$A$ está propiamente contenido en $C$**).
+
+´´´{example}
+	El conjunto formado por 1, 2, 3, 4, etc. es el llamado conjunto de los \textit{n\'umeros naturales} y se denota por $\mathbb{N}$.\\
+	Se debe saber que podemos definir un conjunto describiendo uno a uno sus miembros. Esto se hace encerrándolos entre llaves. Así, el conjunto de los números naturales es $\mathbb{N}=\{1,2,3,4,\cdots\}$.
+
+´´´{example}
+	Dado el conjunto de los números enteros $\mathbb{Z}=\{\cdots,-3,-2,-1,0,1,2,3,\cdots \}$, el conjunto de los números pares (enteros pares) es el conjunto de los números de la forma $2k$ donde $k$ es un entero.\\
+	También se puede describir el conjunto anterior así: $$\{p\in\mathbb{Z}| p=2k \mbox{ para alg\'un } k\in\mathbb{Z} \}$$ lo cual se lee: *el conjunto formado por todos los n\'umeros enteros* $p$ *tales que* $p=2k$ *para algún número entero* $k$.
+
+´´´{example}
+	Denotaremos el conjunto de los números reales po $\mathbb{R}$. El conjunto de las soluciones de la ecuación $7x^{2}+4x-32=0$ es $C=\{x\in\mathbb{R}\textbar x \mbox{ es solución de } 7x^{2}+4x-32=0 \}$
+
 
 <!--chapter:end:020-estructuras-algebraicas.Rmd-->
 
@@ -248,18 +257,13 @@ LaTeX distributions and packages are also updated from time to time, and you may
 
 ```r
 system('pdflatex --version')
-## pdfTeX 3.14159265-2.6-1.40.18 (TeX Live 2017)
-## kpathsea version 6.2.3
-## Copyright 2017 Han The Thanh (pdfTeX) et al.
-## There is NO warranty.  Redistribution of this software is
-## covered by the terms of both the pdfTeX copyright and
-## the Lesser GNU General Public License.
-## For more information about these matters, see the file
-## named COPYING and the pdfTeX source.
-## Primary author of pdfTeX: Han The Thanh (pdfTeX) et al.
-## Compiled with libpng 1.6.29; using libpng 1.6.29
-## Compiled with zlib 1.2.11; using zlib 1.2.11
-## Compiled with xpdf version 3.04
+## MiKTeX-pdfTeX 2.9.5840 (1.40.16) (MiKTeX 2.9)
+## Copyright (C) 1982 D. E. Knuth, (C) 1996-2014 Han The Thanh
+## TeX is a trademark of the American Mathematical Society.
+## compiled with zlib version 1.2.8; using 1.2.8
+## compiled with libpng version 1.6.19; using 1.6.19
+## compiled with poppler version 0.32.0
+## compiled with jpeg version 8.4
 ```
 
 <!--chapter:end:400-apendice.Rmd-->
