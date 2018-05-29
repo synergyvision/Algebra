@@ -14,7 +14,7 @@ Puede ocurrir que elementos de un conjunto también pertenezcan a otro conjunto.
 
 Se debe saber que podemos definir un conjunto describiendo uno a uno sus miembros. Esto se hace encerrándolos entre llaves. Así, el conjunto de los números naturales es $\mathbb{N}=\{0, 1, 2, 3, 4,\cdots\}$.
 
-Denotaremos por $|mathbb{N}^{*}=\{ 1, 2, 3, \cdots \}$.
+Denotaremos por $\mathbb{N}^{*}=\{ 1, 2, 3, \cdots \}$.
 </div>\EndKnitrBlock{example}
 
 \BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-2"><strong>(\#exm:unnamed-chunk-2) </strong></span>Dado el conjunto de los números enteros $\mathbb{Z}=\{\cdots,-3,-2,-1,0,1,2,3,\cdots \}$, el conjunto de los números pares (enteros pares) es el conjunto de los números de la forma $2k$ donde $k$ es un entero.
@@ -365,7 +365,7 @@ iii) Para todo $a\in G$, existe un elemento $a^{-1}\in G$ tal que $a^{-1}\ast a=
 </div>\EndKnitrBlock{definition}
 
 \BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}Puede hacerse referencia al grupo nombrando solo el conjunto $G$ cuando quede claro cual es la operación.
-Si una operacón binaria $\ast:G\times G\longrightarrow G$ es asociativa (i.), se dice que $(G,\ast)$ es un *semigrupo*. Un **monoide** es un semigrupo con identidad (ii.). De este modo, se puede decir que un grupo es un monoide con inverso (bilateral).
+Si una operacón binaria $\ast:G\times G\longrightarrow G$ es asociativa (i.), se dice que $(G,\ast)$ es un *semigrupo*. Llamaremos *monoide* a un semigrupo con identidad (ii.). De este modo, se puede decir que un grupo es un monoide con inverso (bilateral).
 </div>\EndKnitrBlock{remark}
 
 Un semigrupo $G$ se llamará **abeliano** o **commutativo** si la operación es
@@ -391,18 +391,75 @@ Sea $C_{4}$ el conjunto formado por las siguientes transformaciones: $R$, una ro
 \BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-47"><strong>(\#exm:unnamed-chunk-47) </strong></span>Sea $C$ un conjunto no vacío y $\mathcal{A}(C)$ el conjunto de todas las biyecciones de $C$ en si mismo. Con la operación composición de funciones vista en la sección anterior, $\mathcal{A}(C)$ forma un grupo (no abeliano). En efecto, la composición de funciones biyectivas es asociativa, la identidad es una función biyectiva y toda biyección tiene una inversa. Los elementos de $\mathcal{A}(C)$ son llamados **permutaciones** y $\mathcal{A}(C)$ es llamado el grupo de permutaciones sobre $C$. Si $C=\{1,2, ..., n\}$, entonces $\mathcal{A}(C)$ es llamdo el **grupo simétrico sobre $n$ letras** y se denota $S_{n}$. Se puede ver que $|S_{n}|=n!$ (ejercicio \@ref(exr:ejc3)).
 </div>\EndKnitrBlock{example}
 
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}Dado un elemento $f\in S_{n}$, podemos representarlo por $\left(  {\begin{array}{ccccc}
+	1 & 2 & 3 & \cdots & n \\
+	i_{1} & i_{2} & i_{3} & \cdots & i_{n}\\
+	\end{array} } \right) $. Y el producto de dos de estos elementos, $f, g\in\mathcal{C}$ es la composición de dos biyecciones $f\circ g$, y puede representarse por un arreglo como el anterior tomando en cuenta que $(f\circ g)(k)=f(g(k))=f(i_{k})$. Si suponemos que $f,g\in S_{5}$, donde $f$ está representado por $\left(  {\begin{array}{ccccc}
+	1 & 2 & 3 & 4 & 5 \\
+	3 & 4 & 1 & 2 & 5 \\
+	\end{array} } \right) $, y $g$ es la biyección
+ $\left(  {\begin{array}{ccccc}
+	1 & 2 & 3 & 4 & 5 \\
+	5 & 4 & 3 & 2 & 1 \\
+	\end{array} } \right) $. Entonces  $f\circ g$ es  tal que $(f\circ g)(1)=f(g(1))=f(5)=5$, análogamente con los números del $2$ al $5$, por lo tanto, $f\circ g$ es $\left(  {\begin{array}{ccccc}
+	1 & 2 & 3 & 4 & 5 \\
+	5 & 2 & 1 & 4 & 3 \\
+	\end{array} } \right) $. Mientras que $g\circ f$ es $\left(  {\begin{array}{ccccc}
+	1 & 2 & 3 & 4 & 5 \\
+	3 & 2 & 5 & 4 & 1 \\
+	\end{array} } \right) $. Lo que evidencia que $S_{n}$ no es necesariamente un grupo abeliano.
+</div>\EndKnitrBlock{remark}
+
 \BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:ejm1-21"><strong>(\#exm:ejm1-21) </strong></span>Dados $G$ y $H$ dos grupos con identidades $e_{G}$ y $e_{H}$ respectivamente. Consideremos el producto cartesiano $G\times H$ y la operación binaria $(a,b)\ast (c,d)=(a\ast c,b\ast d)$ donde $a\ast c\in G$ y $b\ast d\in H$. Con esta operación $G\times H$ es un grupo con identidad $(e_{G}, e_{H})$ y con inverso $(a^{-1}, b^{-1})$ para cada elemento $(a,b)\in G\times H$.
 </div>\EndKnitrBlock{example}
 
+Veremos algunos resultados muy técnicos que nos serán útiles mas adelante.
+
+\BeginKnitrBlock{lemma}<div class="lemma"><span class="lemma" id="lem:unnamed-chunk-49"><strong>(\#lem:unnamed-chunk-49) </strong></span>Sea $G$ un grupo, entonces se tiene que:
+  
+  a) el elemento identidad de $G$ es único;
+
+  b) para cada $a\in G$, el inverso $a^{-1}$ es único;
+
+  c) para todo $a\in G$, se tiene que $(a^{-1})^{-1}=a$;
+  
+  d) para $a,b\in G$, se tiene que $(a*b)^{-1}=b^{-1}*a^{-1}$.
+  </div>\EndKnitrBlock{lemma}
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}
+a) Supongamos que $e, f\in G$ son tales que, $\forall a\in G$, $a*e=e*a=a$ y $a*f=f*a=a$. En particular, $f*e=f$ y $f*e=e$, de donde se sigue que $e=f$.
+
+b) Sea $a\in G$, veamos que si $a*x=a*y$, entonces $x=y$; en efecto, sea $b$ un inverso de $a$, es decir, $a*b=b*a=e$. De la igualdad $a*x=a*y$ se tiene que $b*(a*x)=b*(a*y)$ y así $(b*a)*x=(b*a)*y$, por lo tanto $x=y$. De este modo, si dos elemento $b,c\in G$ son dos inversos de $a$ se tiene que $a*b=e=a*c$ y de lo anterior se sigue que $b=c$.
+
+c) Sabemos que $a^{-1}*(a^{-1})^{-1}=e=a^{-1}*a$, por lo que demostramos en la parte b), se sigue fácilmente que $(a^{-1})^{-1}=a$.
+
+d) De la asociatividad se tiene la igualdad $(a*b)*(b^{-1}*a^{-1})=(a*(b*b^{-1})*a^{-1})=a*e*a^{-1}=e$. Y por la unicidad del elemento inverso (demostrada justo antes) se sigue que $(a*b)^{-1}$ es igual a $b^{-1}*a^{-1}$.
+</div>\EndKnitrBlock{proof}
+
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-51"><strong>(\#def:unnamed-chunk-51) </strong></span>Un subconjunto $H$ de un grupo $G$, se llama **subgrupo** de $G$ si respecto a la operación definida sobre $G$, él mismo forma un grupo.
+</div>\EndKnitrBlock{definition}
+Suponga que $G$ es un grupo y $H\subseteq G$ es un subconjunto cerrado bajo la operación de grupo definida sobre G, es decir, para todo $a,b\in H$ se tiene que $ab\in H$. Y cada elemento de $H$ tiene su inverso también en $H$, esto es, si $a\in H$, entonces $a^{-1}\in H$. Es claro que $H$ será un semigrupo de $G$.
+ Esto lo mostramos en el siguiente resultado:
+
+\BeginKnitrBlock{lemma}<div class="lemma"><span class="lemma" id="lem:unnamed-chunk-52"><strong>(\#lem:unnamed-chunk-52) </strong></span>Un subconjunto no vacío $H$ de un grupo $G$, es un subgrupo si y solo si:
+  
+  1) para cada $a,b\in H$, $ab\in H$.
+
+  2) para cada $a\in H$, $a^{-1}\in H$.
+</div>\EndKnitrBlock{lemma}
+
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Es claro que si $H\subseteq G$ es un subgrupo de $G$, cumple 1 y 2.
+Recíprocamente, supongamos que $H\subseteq G$, cumple con 1 y 2. Faltaría ver que la operación es asociativa en $H$ y que el elemento neutro está en $H$. La ley asociativa se hereda de $G$ (si la operación es asociativa en $G$, de igual forma lo será en $H$). Como para cada elemento de $H$ tiene un inverso, existen $a, a^{-1}\in H$; además se tiene que la operación es cerrada en $H$, luego $e=aa^{-1}\in H$. Por lo tanto se tiene que $H$ es un grupo (con la operación heredada de $G$). 
+</div>\EndKnitrBlock{proof}
+
 ### Ejercicios
 
-\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-48"><strong>(\#exr:unnamed-chunk-48) </strong></span>Sea $G$ un grupo y $C$ un conjunto no vacío. Sea $M(C,G)$ el conjunto de todas las funciones $f:C\longrightarrow G$. Definamos la operación de grupo como la suma de funciones, es decir, para cada $f,g\in M(C,G)$, $f\ast g = f +g$. Demuestre que $M(C,G)$ es un grupo, es abeliano si $G$ lo es.
+\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-54"><strong>(\#exr:unnamed-chunk-54) </strong></span>Sea $G$ un grupo y $C$ un conjunto no vacío. Sea $M(C,G)$ el conjunto de todas las funciones $f:C\longrightarrow G$. Definamos la operación de grupo como la suma de funciones, es decir, para cada $f,g\in M(C,G)$, $f\ast g = f +g$. Demuestre que $M(C,G)$ es un grupo, es abeliano si $G$ lo es.
 </div>\EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:ejc3"><strong>(\#exr:ejc3) </strong></span>Demuestre que el grupo simétrico sobre $n$ letras es de orden $n!$.
 </div>\EndKnitrBlock{exercise}
 
-\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-49"><strong>(\#exr:unnamed-chunk-49) </strong></span>Demuestre que el grupo del ejemplo \@ref(exm:ejm1-21) es un grupo de orden $|G||H|$. Además muestre que $G\times H$ es un grupo abeliano si $G$ y $H$ lo son.
+\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-55"><strong>(\#exr:unnamed-chunk-55) </strong></span>Demuestre que el grupo del ejemplo \@ref(exm:ejm1-21) es un grupo de orden $|G||H|$. Además muestre que $G\times H$ es un grupo abeliano si $G$ y $H$ lo son.
 </div>\EndKnitrBlock{exercise}
 
 

@@ -116,7 +116,7 @@
 <div class="example">
 <p><span id="exm:unnamed-chunk-1" class="example"><strong>Ejemplo 1.1  </strong></span>El conjunto formado por 0, 1, 2, 3, 4, etc. es el llamado conjunto de los <strong>números naturales</strong> y se denota por <span class="math inline">\(\mathbb{N}\)</span>.</p>
 <p>Se debe saber que podemos definir un conjunto describiendo uno a uno sus miembros. Esto se hace encerrándolos entre llaves. Así, el conjunto de los números naturales es <span class="math inline">\(\mathbb{N}=\{0, 1, 2, 3, 4,\cdots\}\)</span>.</p>
-<p>Denotaremos por <span class="math inline">\(|mathbb{N}^{*}=\{ 1, 2, 3, \cdots \}\)</span>.</p>
+<p>Denotaremos por <span class="math inline">\(\mathbb{N}^{*}=\{ 1, 2, 3, \cdots \}\)</span>.</p>
 </div>
 
 
@@ -530,7 +530,7 @@ Basta probar que <span class="math inline">\(\mathbb{Z}\sim \mathbb{N}\)</span> 
 
 
 <div class="remark">
-<p> <span class="remark"><em>Nota. </em></span> Puede hacerse referencia al grupo nombrando solo el conjunto <span class="math inline">\(G\)</span> cuando quede claro cual es la operación. Si una operacón binaria <span class="math inline">\(\ast:G\times G\longrightarrow G\)</span> es asociativa (i.), se dice que <span class="math inline">\((G,\ast)\)</span> es un <em>semigrupo</em>. Un <strong>monoide</strong> es un semigrupo con identidad (ii.). De este modo, se puede decir que un grupo es un monoide con inverso (bilateral).</p>
+<p> <span class="remark"><em>Nota. </em></span> Puede hacerse referencia al grupo nombrando solo el conjunto <span class="math inline">\(G\)</span> cuando quede claro cual es la operación. Si una operacón binaria <span class="math inline">\(\ast:G\times G\longrightarrow G\)</span> es asociativa (i.), se dice que <span class="math inline">\((G,\ast)\)</span> es un <em>semigrupo</em>. Llamaremos <em>monoide</em> a un semigrupo con identidad (ii.). De este modo, se puede decir que un grupo es un monoide con inverso (bilateral).</p>
 </div>
 
 <p>Un semigrupo <span class="math inline">\(G\)</span> se llamará <strong>abeliano</strong> o <strong>commutativo</strong> si la operación es</p>
@@ -565,15 +565,84 @@ Basta probar que <span class="math inline">\(\mathbb{Z}\sim \mathbb{N}\)</span> 
 </div>
 
 
+<div class="remark">
+ <span class="remark"><em>Nota. </em></span> Dado un elemento <span class="math inline">\(f\in S_{n}\)</span>, podemos representarlo por $( {
+<span class="math display">\[\begin{array}{ccccc}
+    1 &amp; 2 &amp; 3 &amp; \cdots &amp; n \\
+    i_{1} &amp; i_{2} &amp; i_{3} &amp; \cdots &amp; i_{n}\\
+    \end{array}\]</span>
+} ) $. Y el producto de dos de estos elementos, <span class="math inline">\(f, g\in\mathcal{C}\)</span> es la composición de dos biyecciones <span class="math inline">\(f\circ g\)</span>, y puede representarse por un arreglo como el anterior tomando en cuenta que <span class="math inline">\((f\circ g)(k)=f(g(k))=f(i_{k})\)</span>. Si suponemos que <span class="math inline">\(f,g\in S_{5}\)</span>, donde <span class="math inline">\(f\)</span> está representado por $( {
+<span class="math display">\[\begin{array}{ccccc}
+    1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 \\
+    3 &amp; 4 &amp; 1 &amp; 2 &amp; 5 \\
+    \end{array}\]</span>
+} ) $, y <span class="math inline">\(g\)</span> es la biyección $( {
+<span class="math display">\[\begin{array}{ccccc}
+    1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 \\
+    5 &amp; 4 &amp; 3 &amp; 2 &amp; 1 \\
+    \end{array}\]</span>
+} ) $. Entonces <span class="math inline">\(f\circ g\)</span> es tal que <span class="math inline">\((f\circ g)(1)=f(g(1))=f(5)=5\)</span>, análogamente con los números del <span class="math inline">\(2\)</span> al <span class="math inline">\(5\)</span>, por lo tanto, <span class="math inline">\(f\circ g\)</span> es $( {
+<span class="math display">\[\begin{array}{ccccc}
+    1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 \\
+    5 &amp; 2 &amp; 1 &amp; 4 &amp; 3 \\
+    \end{array}\]</span>
+} ) $. Mientras que <span class="math inline">\(g\circ f\)</span> es $( {
+<span class="math display">\[\begin{array}{ccccc}
+    1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 \\
+    3 &amp; 2 &amp; 5 &amp; 4 &amp; 1 \\
+    \end{array}\]</span>
+<p>} ) $. Lo que evidencia que <span class="math inline">\(S_{n}\)</span> no es necesariamente un grupo abeliano.</p>
+</div>
+
+
 <div class="example">
 <p><span id="exm:ejm1-21" class="example"><strong>Ejemplo 1.29  </strong></span>Dados <span class="math inline">\(G\)</span> y <span class="math inline">\(H\)</span> dos grupos con identidades <span class="math inline">\(e_{G}\)</span> y <span class="math inline">\(e_{H}\)</span> respectivamente. Consideremos el producto cartesiano <span class="math inline">\(G\times H\)</span> y la operación binaria <span class="math inline">\((a,b)\ast (c,d)=(a\ast c,b\ast d)\)</span> donde <span class="math inline">\(a\ast c\in G\)</span> y <span class="math inline">\(b\ast d\in H\)</span>. Con esta operación <span class="math inline">\(G\times H\)</span> es un grupo con identidad <span class="math inline">\((e_{G}, e_{H})\)</span> y con inverso <span class="math inline">\((a^{-1}, b^{-1})\)</span> para cada elemento <span class="math inline">\((a,b)\in G\times H\)</span>.</p>
+</div>
+
+<p>Veremos algunos resultados muy técnicos que nos serán útiles mas adelante.</p>
+
+<div class="lemma">
+<p><span id="lem:unnamed-chunk-49" class="lemma"><strong>Lema 1.5  </strong></span>Sea <span class="math inline">\(G\)</span> un grupo, entonces se tiene que:</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>el elemento identidad de <span class="math inline">\(G\)</span> es único;</p></li>
+<li><p>para cada <span class="math inline">\(a\in G\)</span>, el inverso <span class="math inline">\(a^{-1}\)</span> es único;</p></li>
+<li><p>para todo <span class="math inline">\(a\in G\)</span>, se tiene que <span class="math inline">\((a^{-1})^{-1}=a\)</span>;</p></li>
+<li>para <span class="math inline">\(a,b\in G\)</span>, se tiene que <span class="math inline">\((a*b)^{-1}=b^{-1}*a^{-1}\)</span>.
+</div>
+ 
+<div class="proof">
+ <span class="proof"><em>Demostración. </em></span> </li>
+<li><p>Supongamos que <span class="math inline">\(e, f\in G\)</span> son tales que, <span class="math inline">\(\forall a\in G\)</span>, <span class="math inline">\(a*e=e*a=a\)</span> y <span class="math inline">\(a*f=f*a=a\)</span>. En particular, <span class="math inline">\(f*e=f\)</span> y <span class="math inline">\(f*e=e\)</span>, de donde se sigue que <span class="math inline">\(e=f\)</span>.</p></li>
+<li><p>Sea <span class="math inline">\(a\in G\)</span>, veamos que si <span class="math inline">\(a*x=a*y\)</span>, entonces <span class="math inline">\(x=y\)</span>; en efecto, sea <span class="math inline">\(b\)</span> un inverso de <span class="math inline">\(a\)</span>, es decir, <span class="math inline">\(a*b=b*a=e\)</span>. De la igualdad <span class="math inline">\(a*x=a*y\)</span> se tiene que <span class="math inline">\(b*(a*x)=b*(a*y)\)</span> y así <span class="math inline">\((b*a)*x=(b*a)*y\)</span>, por lo tanto <span class="math inline">\(x=y\)</span>. De este modo, si dos elemento <span class="math inline">\(b,c\in G\)</span> son dos inversos de <span class="math inline">\(a\)</span> se tiene que <span class="math inline">\(a*b=e=a*c\)</span> y de lo anterior se sigue que <span class="math inline">\(b=c\)</span>.</p></li>
+<li><p>Sabemos que <span class="math inline">\(a^{-1}*(a^{-1})^{-1}=e=a^{-1}*a\)</span>, por lo que demostramos en la parte b), se sigue fácilmente que <span class="math inline">\((a^{-1})^{-1}=a\)</span>.</p></li>
+<li>De la asociatividad se tiene la igualdad <span class="math inline">\((a*b)*(b^{-1}*a^{-1})=(a*(b*b^{-1})*a^{-1})=a*e*a^{-1}=e\)</span>. Y por la unicidad del elemento inverso (demostrada justo antes) se sigue que <span class="math inline">\((a*b)^{-1}\)</span> es igual a <span class="math inline">\(b^{-1}*a^{-1}\)</span>.</li>
+</ol>
+</div>
+
+
+<div class="definition">
+<p><span id="def:unnamed-chunk-51" class="definition"><strong>Definición 1.22  </strong></span>Un subconjunto <span class="math inline">\(H\)</span> de un grupo <span class="math inline">\(G\)</span>, se llama <strong>subgrupo</strong> de <span class="math inline">\(G\)</span> si respecto a la operación definida sobre <span class="math inline">\(G\)</span>, él mismo forma un grupo.</p>
+</div>
+<p> Suponga que <span class="math inline">\(G\)</span> es un grupo y <span class="math inline">\(H\subseteq G\)</span> es un subconjunto cerrado bajo la operación de grupo definida sobre G, es decir, para todo <span class="math inline">\(a,b\in H\)</span> se tiene que <span class="math inline">\(ab\in H\)</span>. Y cada elemento de <span class="math inline">\(H\)</span> tiene su inverso también en <span class="math inline">\(H\)</span>, esto es, si <span class="math inline">\(a\in H\)</span>, entonces <span class="math inline">\(a^{-1}\in H\)</span>. Es claro que <span class="math inline">\(H\)</span> será un semigrupo de <span class="math inline">\(G\)</span>. Esto lo mostramos en el siguiente resultado:</p>
+
+<div class="lemma">
+<p><span id="lem:unnamed-chunk-52" class="lemma"><strong>Lema 1.6  </strong></span>Un subconjunto no vacío <span class="math inline">\(H\)</span> de un grupo <span class="math inline">\(G\)</span>, es un subgrupo si y solo si:</p>
+<ol style="list-style-type: decimal">
+<li><p>para cada <span class="math inline">\(a,b\in H\)</span>, <span class="math inline">\(ab\in H\)</span>.</p></li>
+<li>para cada <span class="math inline">\(a\in H\)</span>, <span class="math inline">\(a^{-1}\in H\)</span>.</li>
+</ol>
+</div>
+
+
+<div class="proof">
+<p> <span class="proof"><em>Demostración. </em></span> Es claro que si <span class="math inline">\(H\subseteq G\)</span> es un subgrupo de <span class="math inline">\(G\)</span>, cumple 1 y 2. Recíprocamente, supongamos que <span class="math inline">\(H\subseteq G\)</span>, cumple con 1 y 2. Faltaría ver que la operación es asociativa en <span class="math inline">\(H\)</span> y que el elemento neutro está en <span class="math inline">\(H\)</span>. La ley asociativa se hereda de <span class="math inline">\(G\)</span> (si la operación es asociativa en <span class="math inline">\(G\)</span>, de igual forma lo será en <span class="math inline">\(H\)</span>). Como para cada elemento de <span class="math inline">\(H\)</span> tiene un inverso, existen <span class="math inline">\(a, a^{-1}\in H\)</span>; además se tiene que la operación es cerrada en <span class="math inline">\(H\)</span>, luego <span class="math inline">\(e=aa^{-1}\in H\)</span>. Por lo tanto se tiene que <span class="math inline">\(H\)</span> es un grupo (con la operación heredada de <span class="math inline">\(G\)</span>).</p>
 </div>
 
 <div id="ejercicios-1" class="section level3">
 <h3><span class="header-section-number">1.5.1</span> Ejercicios</h3>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-48" class="exercise"><strong>Ejercicio 1.3  </strong></span>Sea <span class="math inline">\(G\)</span> un grupo y <span class="math inline">\(C\)</span> un conjunto no vacío. Sea <span class="math inline">\(M(C,G)\)</span> el conjunto de todas las funciones <span class="math inline">\(f:C\longrightarrow G\)</span>. Definamos la operación de grupo como la suma de funciones, es decir, para cada <span class="math inline">\(f,g\in M(C,G)\)</span>, <span class="math inline">\(f\ast g = f +g\)</span>. Demuestre que <span class="math inline">\(M(C,G)\)</span> es un grupo, es abeliano si <span class="math inline">\(G\)</span> lo es.</p>
+<p><span id="exr:unnamed-chunk-54" class="exercise"><strong>Ejercicio 1.3  </strong></span>Sea <span class="math inline">\(G\)</span> un grupo y <span class="math inline">\(C\)</span> un conjunto no vacío. Sea <span class="math inline">\(M(C,G)\)</span> el conjunto de todas las funciones <span class="math inline">\(f:C\longrightarrow G\)</span>. Definamos la operación de grupo como la suma de funciones, es decir, para cada <span class="math inline">\(f,g\in M(C,G)\)</span>, <span class="math inline">\(f\ast g = f +g\)</span>. Demuestre que <span class="math inline">\(M(C,G)\)</span> es un grupo, es abeliano si <span class="math inline">\(G\)</span> lo es.</p>
 </div>
 
 
@@ -583,7 +652,7 @@ Basta probar que <span class="math inline">\(\mathbb{Z}\sim \mathbb{N}\)</span> 
 
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-49" class="exercise"><strong>Ejercicio 1.5  </strong></span>Demuestre que el grupo del ejemplo <a href="#exm:ejm1-21">1.29</a> es un grupo de orden <span class="math inline">\(|G||H|\)</span>. Además muestre que <span class="math inline">\(G\times H\)</span> es un grupo abeliano si <span class="math inline">\(G\)</span> y <span class="math inline">\(H\)</span> lo son.</p>
+<p><span id="exr:unnamed-chunk-55" class="exercise"><strong>Ejercicio 1.5  </strong></span>Demuestre que el grupo del ejemplo <a href="#exm:ejm1-21">1.29</a> es un grupo de orden <span class="math inline">\(|G||H|\)</span>. Además muestre que <span class="math inline">\(G\times H\)</span> es un grupo abeliano si <span class="math inline">\(G\)</span> y <span class="math inline">\(H\)</span> lo son.</p>
 </div>
 
 </div>
