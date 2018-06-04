@@ -305,12 +305,14 @@ En esta sección demostraremos solo algunos resultados referidos a cardinalidad 
 
 \BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:teo1-2"><strong>(\#thm:teo1-2) </strong></span>La equipotencia es una relación de equivalencia.
 </div>\EndKnitrBlock{theorem}
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}La función identidad (de un conjunto en si mismo) es una biyección, por lo tanto la equipotencia es una relación reflexiva. Si $A\sim B$, existe una biyección $f:A\longrightarrow B$. Ya vimos antes que una función biyectiva es invertible y su inversa es $f^{-1}$ es una biyección de $B$ en $A$, lo que muestra que la simetría. Dadas dos biyecciones $f: A\longrightarrow B$ y $g:B\longrightarrow C$, la composición $g\circ f$ es una biyección de $A$ en $C$, por lo tanto la equipotencia es transitiva.
+</div>\EndKnitrBlock{proof}
 
 Podemos preguntarnos cuántos elementos tiene un conjunto. Una forma de "contar" los elementos que tiene un conjunto es la siguiente: Sean $A_{0}=\emptyset$ y para cada número natural $n$, sea $A_{n}=\{1,2,..., n\}$. Es fácil ver que $A_{n}=A_{m}$ si y solo si $n=m$ \@ref(exr:ejc1). De este modo, para ver que un conjunto $C$ tiene $n$ elementos basta ver que es equipotente con $A_{n}$, es decir $C\sim A_{n}$. Diremos que un conjunto es **finito** si es equipotente con algún $A_{n}$ para algún $n\in\mathbb{N}$. Si un conjunto no es finito diremos que es **infinito**. 
 
 Lo anterior nos da una idea del concepto de cardinalidad, que formalmente se definiría como sigue.
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-38"><strong>(\#def:unnamed-chunk-38) </strong></span>Dado un conjunto $C$, la clase de equivalencia definida por la relación de equipotencia se conoce como el **cardinal** (o **cardinalidad** o **número cardinal**) de $C$ y se denota por $|C|$.
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-39"><strong>(\#def:unnamed-chunk-39) </strong></span>Dado un conjunto $C$, la clase de equivalencia definida por la relación de equipotencia se conoce como el **cardinal** (o **cardinalidad** o **número cardinal**) de $C$ y se denota por $|C|$.
 </div>\EndKnitrBlock{definition}
 
 En algunos libros pueden conseguirse otras definiciones de cardinalidad. Los números cardinales pueden ser definidos mas formalmente como un objeto matemático y son de gran importancia en teoría de conjuntos, teniendo ellos mismos una importancia intrínseca, Sin embargo, la definición que presentamos se adecua perfectamente a los temas que trabajaremos aquí.
@@ -320,14 +322,22 @@ i) Todo conjunto tiene un único número cardinal.
 ii) Dos conjuntos tienen el mismo número cardinal si y solo si son equipotentes.
 iii) El cardinal de un conjunto finito es la cantidad de elementos que lo conforman.
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-39"><strong>(\#exm:unnamed-chunk-39) </strong></span>La cardinalidad de los conjuntos $A_{n}$ definidos antes es $n$ (la cantidad de elementos que tiene el conjunto).
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-40"><strong>(\#exm:unnamed-chunk-40) </strong></span>La cardinalidad de los conjuntos $A_{n}$ definidos antes es $n$ (la cantidad de elementos que tiene el conjunto).
 La cardinalidad del conjunto de los números naturales es $\aleph_{0}$ (se lee alef cero) (también puede conseguirse en alguna literatura que $|\mathbb{N}|=\omega$ y así el primer cardinal infinito $\aleph_{0}$, es igual el ordinal omega). Cualquier conjunto de cardinalidad $\aleph_{0}$, se dice **numerable**. Si un conjunto no es numerable, diremos que es un conjunto **no numerable**.
 El número cardinal del conjunto de los números enteros $\mathbb{Z}$ es $\aleph_{0}$, por lo tanto es un conjunto numerable, al igual que el conjunto de los números racionales $\mathbb{Q}$. Por otro lado, el conjunto de los números reales no es numerable.
 </div>\EndKnitrBlock{example}
 
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-41"><strong>(\#def:unnamed-chunk-41) </strong></span>	Sean $\alpha$ y $\beta$ dos números cardinales. La **suma $\alpha +\beta$** está definida como el número cardinal del conjunto $A\cup B$, donde $\alpha=|A|$ y $\beta=|B|$ y $A$ y $B$ son disjuntos. El producto $\alpha\beta$ está definido como el número cardinal $|A\times B|$, con $\alpha=|A|$ y $\beta=|B|$.
+</div>\EndKnitrBlock{definition}
 
-\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}La cardinalidad del producto cartesiano de dos conjuntos $A, B$ es el producto  $|A||B|$.
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	No es necesario que los conjuntos $A$ y $B$ sean disjuntos para la definición del producto $\alpha\beta$. Dados dos cardinales $\alpha$ y $\beta$, siempre se pueden hallar conjuntos disjuntos $A$ y $B$ tales que $\alpha=|A|$ y $\beta=|B|$. De la definición de cardinal y de los teoremas anteriores, se sigue que las definiciones de suma $\alpha +\beta$ y producto $\alpha\beta$ son independientes de la elección de los conjuntos $A$ y $B$.
 </div>\EndKnitrBlock{remark}
+
+Las operaciones de suma y productos de números cardinales cardinales son asociativas y commutativa, además se cumple la ley distributiva. Esto no lo demostraremos aquí porque escapa del alcance de este texto. De esto se tiene que la suma y el productos de cardinales finitos es coincidente con la suma y el producto de números naturales no negativos, por lo que existe el elemento identidad para la suma, no es más que el cardinal del conjunto vacío, $0=|\emptyset|$.
+
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-43"><strong>(\#def:unnamed-chunk-43) </strong></span>	Sean $\alpha$ y $\beta$ números cardinales y sean $A$ y $B$ conjuntos tales que $\alpha=|A|$ y $\beta=|B|$. Decimos que \textit{$\alpha$ es menor o igual que $\beta$} y lo denotamos así $\alpha\leq\beta$, si y solo si $A$ es equipotente con un subconjunto de $B$ (es decir, existe una función inyectiva $f:A\longrightarrow B$). Decimos que **$\alpha$ es estrictamente menor que $\beta$** y lo denotamos así $\alpha<\beta$, si $\alpha\leq\beta$ y $\alpha\neq\beta$.
+</div>\EndKnitrBlock{definition}
+
 
 ### Ejercicios
 
@@ -345,7 +355,8 @@ Basta probar que $\mathbb{Z}\sim \mathbb{N}$ y $\mathbb{Q}\sim \mathbb{N}$. Para
 	2n      & \mbox{ si } n>=0
 	\end{array}
 	\right.$$
-Es fácil ver que $f$ es una biyección, ya que $f$ asigna cada número entero negativo a los números naturales impares (1, 3, 5, ...) y cada número entero positivo a los números naturales pares (0, 2, 4, ...).</div>\EndKnitrBlock{exercise}
+Es fácil ver que $f$ es una biyección, ya que $f$ asigna cada número entero negativo a los números naturales impares (1, 3, 5, ...) y cada número entero positivo a los números naturales pares (0, 2, 4, ...).
+    </div>\EndKnitrBlock{exercise}
 
 ## Teoría de Grupos
 
@@ -355,7 +366,7 @@ A continuación presentaremos la definición formal de grupo así como un amplio
 
 Dado un conjunto no vacío $G$, una *operación binaria* es una función $G\times G\longrightarrow G$. Comunmente se usan las notaciones $a\ast b$ o  $a\cdot b$ para denotar la imagen de $(a,b)$ por la función, aunque puede también usarse $ab$ (obviando el punto como se hace para expresar el producto de dos números) o incluso $a+b$ cuando la operación es la suma usual (como sucede con los números enteros).
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-41"><strong>(\#def:unnamed-chunk-41) </strong></span>Un par $(G,\ast)$, donde $G$ es un conjunto no vacío y una operacón binaria $\ast:G\times G\longrightarrow G$, forman un **grupo** si:
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-44"><strong>(\#def:unnamed-chunk-44) </strong></span>Un par $(G,\ast)$, donde $G$ es un conjunto no vacío y una operacón binaria $\ast:G\times G\longrightarrow G$, forman un **grupo** si:
   
 i) Para todo $a,b,c\in G$, $(a\ast b)\ast c=a\ast (b\ast c)$. Es decir, la operación es *asociativa*.
 		
@@ -374,21 +385,21 @@ iv) Commutativa, es decir, $a*b=b*a$, para todo $a, b\in G$.
    
 El **orden** de un grupo $G$ es la cantidad de elementos que tiene el grupo, es decir, la cardinalidad de $G$ ($|G|$). También se denota $o(G)$ Decimos que un grupo es de **orden finito** (o simplemente finito) si $|G|$ es finito. En caso contrario decimos que el grupo es **infinito**.
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-43"><strong>(\#exm:unnamed-chunk-43) </strong></span>Como ya lo hemos mencionado, el conjunto de los números enteros, $\mathbb{Z}$ con la operación suma (la suma usual de enteros), forman un grupo. El lector podrá verificar fácilmente que la operación suma es cerrada, es asociativa, que el cero es el elemento neutro ($e$ en la definición) y que cada elemento tiene un inverso ($a^{-1}=-a$). Además es claro que se trata de un grupo abeliano (la suma es una operación commutativa).
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-46"><strong>(\#exm:unnamed-chunk-46) </strong></span>Como ya lo hemos mencionado, el conjunto de los números enteros, $\mathbb{Z}$ con la operación suma (la suma usual de enteros), forman un grupo. El lector podrá verificar fácilmente que la operación suma es cerrada, es asociativa, que el cero es el elemento neutro ($e$ en la definición) y que cada elemento tiene un inverso ($a^{-1}=-a$). Además es claro que se trata de un grupo abeliano (la suma es una operación commutativa).
 </div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-44"><strong>(\#exm:unnamed-chunk-44) </strong></span>Dado el conjunto $G={1,-1}$. Definimos la operación $\ast:G\times G \longrightarrow G$ como el producto de números reales usual. El par $(G,\ast)$ forman un grupo abeliano de orden $2$.
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-47"><strong>(\#exm:unnamed-chunk-47) </strong></span>Dado el conjunto $G={1,-1}$. Definimos la operación $\ast:G\times G \longrightarrow G$ como el producto de números reales usual. El par $(G,\ast)$ forman un grupo abeliano de orden $2$.
 </div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-45"><strong>(\#exm:unnamed-chunk-45) </strong></span>El conjunto de los números racionales $\mathbb{Q}$ con la suma usual, es un grupo abeliano.
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-48"><strong>(\#exm:unnamed-chunk-48) </strong></span>El conjunto de los números racionales $\mathbb{Q}$ con la suma usual, es un grupo abeliano.
 </div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-46"><strong>(\#exm:unnamed-chunk-46) </strong></span>Consideremos un cuadrado cuyos vértices estan numerados consecutivamente $1,2,3,4$ centrado en el origen del palno cartesiano y de lados paralelos a los ejes coordenados.
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-49"><strong>(\#exm:unnamed-chunk-49) </strong></span>Consideremos un cuadrado cuyos vértices estan numerados consecutivamente $1,2,3,4$ centrado en el origen del palno cartesiano y de lados paralelos a los ejes coordenados.
 
 Sea $C_{4}$ el conjunto formado por las siguientes transformaciones: $R$, una rotación de $90º$ del cuadrado. $R^{2}$ una rotación de $180º$ del cuadrados. $R^{3}$ una rotación de $270º$ del cuadrado (todas en el sentido de las agujas del reloj, centradas en el origen). $I$, una rotación de $360º$ (igual que antes en sentido horario, centrada en el origen). $T_{x}$ y $T_{y}$, reflexiones sobre los ejes $x$ y $y$ respectivamente y $T_{I}$ y $T_{II}$ reflexiones sobre las diagonales que pasan por los vértices que están en el primer y tercer cuadrante (la primera) y en el segundo y cuarto cuadrante (la segunda). Con la operación *composición de funciones*, el conjunto $C_{4} = {R, R^{2}, R^{3}, I, T_{x}, T_{y}, T_{I}, T_{II}}$ es un grupo no abeliano de orden $8$ llamado el **grupo de simetría del cuadrado**.
 </div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-47"><strong>(\#exm:unnamed-chunk-47) </strong></span>Sea $C$ un conjunto no vacío y $\mathcal{A}(C)$ el conjunto de todas las biyecciones de $C$ en si mismo. Con la operación composición de funciones vista en la sección anterior, $\mathcal{A}(C)$ forma un grupo (no abeliano). En efecto, la composición de funciones biyectivas es asociativa, la identidad es una función biyectiva y toda biyección tiene una inversa. Los elementos de $\mathcal{A}(C)$ son llamados **permutaciones** y $\mathcal{A}(C)$ es llamado el grupo de permutaciones sobre $C$. Si $C=\{1,2, ..., n\}$, entonces $\mathcal{A}(C)$ es llamdo el **grupo simétrico sobre $n$ letras** y se denota $S_{n}$. Se puede ver que $|S_{n}|=n!$ (ejercicio \@ref(exr:ejc3)).
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-50"><strong>(\#exm:unnamed-chunk-50) </strong></span>Sea $C$ un conjunto no vacío y $\mathcal{A}(C)$ el conjunto de todas las biyecciones de $C$ en si mismo. Con la operación composición de funciones vista en la sección anterior, $\mathcal{A}(C)$ forma un grupo (no abeliano). En efecto, la composición de funciones biyectivas es asociativa, la identidad es una función biyectiva y toda biyección tiene una inversa. Los elementos de $\mathcal{A}(C)$ son llamados **permutaciones** y $\mathcal{A}(C)$ es llamado el grupo de permutaciones sobre $C$. Si $C=\{1,2, ..., n\}$, entonces $\mathcal{A}(C)$ es llamdo el **grupo simétrico sobre $n$ letras** y se denota $S_{n}$. Se puede ver que $|S_{n}|=n!$ (ejercicio \@ref(exr:ejc3)).
 </div>\EndKnitrBlock{example}
 
 \BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}Dado un elemento $f\in S_{n}$, podemos representarlo por $\left(  {\begin{array}{ccccc}
@@ -415,7 +426,7 @@ Sea $C_{4}$ el conjunto formado por las siguientes transformaciones: $R$, una ro
 
 Veremos algunos resultados muy técnicos que nos serán útiles mas adelante.
 
-\BeginKnitrBlock{lemma}<div class="lemma"><span class="lemma" id="lem:unnamed-chunk-49"><strong>(\#lem:unnamed-chunk-49) </strong></span>Sea $G$ un grupo, entonces se tiene que:
+\BeginKnitrBlock{lemma}<div class="lemma"><span class="lemma" id="lem:unnamed-chunk-52"><strong>(\#lem:unnamed-chunk-52) </strong></span>Sea $G$ un grupo, entonces se tiene que:
   
   a) el elemento identidad de $G$ es único;
 
@@ -435,12 +446,12 @@ c) Sabemos que $a^{-1}*(a^{-1})^{-1}=e=a^{-1}*a$, por lo que demostramos en la p
 d) De la asociatividad se tiene la igualdad $(a*b)*(b^{-1}*a^{-1})=(a*(b*b^{-1})*a^{-1})=a*e*a^{-1}=e$. Y por la unicidad del elemento inverso (demostrada justo antes) se sigue que $(a*b)^{-1}$ es igual a $b^{-1}*a^{-1}$.
 </div>\EndKnitrBlock{proof}
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-51"><strong>(\#def:unnamed-chunk-51) </strong></span>Un subconjunto $H$ de un grupo $G$, se llama **subgrupo** de $G$ si respecto a la operación definida sobre $G$, él mismo forma un grupo.
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-54"><strong>(\#def:unnamed-chunk-54) </strong></span>Un subconjunto $H$ de un grupo $G$, se llama **subgrupo** de $G$ si respecto a la operación definida sobre $G$, él mismo forma un grupo.
 </div>\EndKnitrBlock{definition}
 Suponga que $G$ es un grupo y $H\subseteq G$ es un subconjunto cerrado bajo la operación de grupo definida sobre G, es decir, para todo $a,b\in H$ se tiene que $ab\in H$. Y cada elemento de $H$ tiene su inverso también en $H$, esto es, si $a\in H$, entonces $a^{-1}\in H$. Es claro que $H$ será un semigrupo de $G$.
  Esto lo mostramos en el siguiente resultado:
 
-\BeginKnitrBlock{lemma}<div class="lemma"><span class="lemma" id="lem:unnamed-chunk-52"><strong>(\#lem:unnamed-chunk-52) </strong></span>Un subconjunto no vacío $H$ de un grupo $G$, es un subgrupo si y solo si:
+\BeginKnitrBlock{lemma}<div class="lemma"><span class="lemma" id="lem:unnamed-chunk-55"><strong>(\#lem:unnamed-chunk-55) </strong></span>Un subconjunto no vacío $H$ de un grupo $G$, es un subgrupo si y solo si:
   
   1) para cada $a,b\in H$, $ab\in H$.
 
@@ -453,13 +464,22 @@ Recíprocamente, supongamos que $H\subseteq G$, cumple con 1 y 2. Faltaría ver 
 
 ### Ejercicios
 
-\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-54"><strong>(\#exr:unnamed-chunk-54) </strong></span>Sea $G$ un grupo y $C$ un conjunto no vacío. Sea $M(C,G)$ el conjunto de todas las funciones $f:C\longrightarrow G$. Definamos la operación de grupo como la suma de funciones, es decir, para cada $f,g\in M(C,G)$, $f\ast g = f +g$. Demuestre que $M(C,G)$ es un grupo, es abeliano si $G$ lo es.
+\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-57"><strong>(\#exr:unnamed-chunk-57) </strong></span>Sea $G$ un grupo y $C$ un conjunto no vacío. Sea $M(C,G)$ el conjunto de todas las funciones $f:C\longrightarrow G$. Definamos la operación de grupo como la suma de funciones, es decir, para cada $f,g\in M(C,G)$, $f\ast g = f +g$. Demuestre que $M(C,G)$ es un grupo, es abeliano si $G$ lo es.
+
+Respuesta: Es claro que la suma de funciones es cerrada en $M(C,G)$. Sean $f,g,h\in M(C,G)$, para cada $a\in C$, $(f+(g+h))(a)=f(a)+((g+h)(a))=f(a)+(g(a)+h(a))$ como $G$ es un grupo, la suma es asociativa, luego $f(a)+(g(a)+h(a))=(f(a)+g(a))+h(a)=((f+g)(a))+h(a)=((f+g)+h)(a)$; por lo tanto la suma de funciones es asociativa.
 </div>\EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:ejc3"><strong>(\#exr:ejc3) </strong></span>Demuestre que el grupo simétrico sobre $n$ letras es de orden $n!$.
+	Respuesta: Pensemos en el grupo simétrico $S_{3}$. El orden del grupo es equivalente a contar todas las posibles biyecciones de un conjunto de $3$ elementos, a saber:\\
+	$\left(  {\begin{array}{ccc}
+		1 & 2 & 3\\
+		i_{1} & i_{2} & i_{3}\\
+		\end{array} } \right) $. Nótese que $1$ tiene $3$ posibles imágenes $i_{1}$, luego de fijada la imagen de $1$, restas $2$ posibles imágenes de $2$, $i_{2}$ y luego de fijadas las imágenes de $1$ y $2$, le queda una sola posibilidad a $3$. De donde podemos concluír que existen $3!$ posibles biyecciones de $\{1,2,3\}$ en sí mismo.\\
+	Análogamente, contar los elementos de $S_{n}$ es equivalente a contar las posibles permutaciones del conjunto $\{1,2,3,\cdots, n\}$.
 </div>\EndKnitrBlock{exercise}
 
-\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-55"><strong>(\#exr:unnamed-chunk-55) </strong></span>Demuestre que el grupo del ejemplo \@ref(exm:ejm1-21) es un grupo de orden $|G||H|$. Además muestre que $G\times H$ es un grupo abeliano si $G$ y $H$ lo son.
+\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-58"><strong>(\#exr:unnamed-chunk-58) </strong></span>Demuestre que el grupo del ejemplo \@ref(exm:ejm1-21) es un grupo de orden $|G||H|$. Además muestre que $G\times H$ es un grupo abeliano si $G$ y $H$ lo son.
+Respuesta: Sabemos que $|G\times H|=|G||H|$, lo que demuestra que el orden del grupo es el producto $|G||H|$. Ahora supongamos que $G$ y $H$ son abelianos, luego $(a,b)\ast (c,d)=(a\ast c,b\ast d)=(c\ast a,d\ast b)=(c,d)\ast (a,b)$.
 </div>\EndKnitrBlock{exercise}
 
 
