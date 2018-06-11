@@ -59,7 +59,7 @@ Dados los conjuntos $A$ y $B$, tales que $B\subseteq A$ ($B$ es subconjunto de $
 ```
 
 ```{example}
-Sean $A=\{a,b,c\}$ y $B=\{c,d,e\}$. $A\cup B=\{a,b,c,d,e\}$ y $A\cap B=\{c\}$.
+Sean $A=\{a,b,c\}$ y $B=\{c,d,e\}$. $A\cup B=\{a,b,c,d,e\}$ y $A\cap B=\{c\}$.  Además $\mathcal{P}(A)=\{\ \emptyset, \{a\}, \{b\}, \{c\}, \{a,b\}, \{a,c\}, \{c,b\}, \{a,b,c\}\}$.
 
 ```
 
@@ -451,13 +451,31 @@ El número cardinal del conjunto de los números enteros $\mathbb{Z}$ es $\aleph
 
 ```
 
-Las operaciones de suma y productos de números cardinales cardinales son asociativas y commutativa, además se cumple la ley distributiva. Esto no lo demostraremos aquí porque escapa del alcance de este texto. De esto se tiene que la suma y el productos de cardinales finitos es coincidente con la suma y el producto de números naturales no negativos, por lo que existe el elemento identidad para la suma, no es más que el cardinal del conjunto vacío, $0=|\emptyset|$.
+Las operaciones de suma y productos de números cardinales cardinales son asociativas y commutativa, además se cumple la ley distributiva. Esto no lo demostraremos aquí porque escapa del alcance de este texto. De esto se tiene que la suma y el productos de cardinales finitos es coincidente con la suma y el producto de números naturales no negativos, por lo que existe el elemento identidad para la suma, no es más que el cardinal del conjunto vacío, $0=|\emptyset|$. Pero el producto de cardinales infinitos no coincide con el álgebra natural, por ejemplo el producto del cardinal $\aleph_{0}$ con él mismo, es $\aleph_{0}$. Así, si $A$ y $B$ son conjuntos numerables, $A\times B$ es un conjunto numerable. Para más detalle sobre este tema pueden referirse a HACER REFERENCIA AQUÍ- KUNEN Y DI PRISCO.
 
 ```{definition}
 	Sean $\alpha$ y $\beta$ números cardinales y sean $A$ y $B$ conjuntos tales que $\alpha=|A|$ y $\beta=|B|$. Decimos que \textit{$\alpha$ es menor o igual que $\beta$} y lo denotamos así $\alpha\leq\beta$, si y solo si $A$ es equipotente con un subconjunto de $B$ (es decir, existe una función inyectiva $f:A\longrightarrow B$). Decimos que **$\alpha$ es estrictamente menor que $\beta$** y lo denotamos así $\alpha<\beta$, si $\alpha\leq\beta$ y $\alpha\neq\beta$.
 
 ```
+Es claro que la definicióon de $\leq$ no depende de la elección de los conjuntos $A$ y $B$.
+ 
+ ```{theorem}
+ 	Sea $A$ un conjunto. Entonces $|A|\leq|\mathcal{P}(A)$.
+ 
+ ```
+ 
+ ```{proof}
+	 Sea $f:A\longrightarrow \mathcal{P}(A)$ la función $f(a)=\{a\}$. Dados $a,b\in A$, si $\{a\}\neq\{b\}$, por definición de igualdad de conjuntos, se tiene que $a\neq b$, por lo tanto $A\leq \mathcal{P}(A)$. Ahora veamos que $A\neq\mathcal{P}(A)$, note que el conjunto $B=\{a\in A: a\notin f(a) \}\subseteq A$ no pertenece al conjunto $Img(A)$, es decir, no existe $a\in A$ tal que $f(a)=B$. 
 
+```
+
+Enunciaremos el conocido *Teorema de Schroeder-Bernstein* sin demostración. El lector interesado en estos temas puede remitirse a HACER REFERENCIA AQUí.
+
+```{theorem, name="Teorema de Schroeder-Bernstein"}
+	 Si $A$ y $B$ son conjuntos tales que $|A|\leq |B|$ y $|B|\leq |A|$. Entonces $|A|=|B|$.
+ 
+```
+ 
 
 ### Ejercicios
 
@@ -479,8 +497,10 @@ Basta probar que $\mathbb{Z}\sim \mathbb{N}$ y $\mathbb{Q}\sim \mathbb{N}$. Para
 	\end{array}
 	\right.$$
 Es fácil ver que $f$ es una biyección, ya que $f$ asigna cada número entero negativo a los números naturales impares (1, 3, 5, ...) y cada número entero positivo a los números naturales pares (0, 2, 4, ...).
+     Por otro lado, la función $g:\mathbb{Z}\times\mathbb{N} \longrightarrow \mathbb{Q}$ definida por $f(a,n)=\frac{a}{n}$ es sobreyectiva. Se puede hallar una función inyectiva $\hat{g}$ de $\mathbb{Z}\times\mathbb{N}$ en $\mathbb{Q}$. Por lo tanto $|\mathbb{Q}|\leq |\mathbb{Z}\times\mathbb{N}|$. Como $\mathbb{Z}\times\mathbb{N}$ es numerable, se tiene que $\mathbb{Q}$ es numerable.
     
 ```
+
 
 ## Teoría de Grupos
 
@@ -514,7 +534,7 @@ iv) Commutativa, es decir, $a*b=b*a$, para todo $a, b\in G$.
 El **orden** de un grupo $G$ es la cantidad de elementos que tiene el grupo, es decir, la cardinalidad de $G$ ($|G|$). También se denota $o(G)$ Decimos que un grupo es de **orden finito** (o simplemente finito) si $|G|$ es finito. En caso contrario decimos que el grupo es **infinito**.
 
 ```{example}
-Como ya lo hemos mencionado, el conjunto de los números enteros, $\mathbb{Z}$ con la operación suma (la suma usual de enteros), forman un grupo. El lector podrá verificar fácilmente que la operación suma es cerrada, es asociativa, que el cero es el elemento neutro ($e$ en la definición) y que cada elemento tiene un inverso ($a^{-1}=-a$). Además es claro que se trata de un grupo abeliano (la suma es una operación commutativa).
+El conjunto de los números enteros con el producto usual es un monoide ya que el producto es una operación asociativa y el número uno (1) es el elemento identidad. Como ya lo hemos mencionado, el conjunto de los números enteros, $\mathbb{Z}$ con la operación suma (la suma usual de enteros), forman un grupo. El lector podrá verificar fácilmente que la operación suma es cerrada, es asociativa, que el cero es el elemento neutro ($e$ en la definición) y que cada elemento tiene un inverso ($a^{-1}=-a$). Además es claro que se trata de un grupo abeliano (la suma es una operación commutativa). A un grupo cuya operación es la suma, como en este ejemplo, lo llamaremos **grupo aditivo**, si es el producto, lo denominaremos **grupo multiplicativo**.
 
 ```
 
@@ -566,29 +586,56 @@ Dados $G$ y $H$ dos grupos con identidades $e_{G}$ y $e_{H}$ respectivamente. Co
 
 ```
 
+```{definition}
+Una relación de equivalencia sobre un monoide $G$ que satisface que si $a_{1}\sim a_{2}$ y $b_{1}\sim b_{2}$, entonces $a_{1}b_{1}\sim a_{2}b_{2}$ para todo $a_{1},a_{2},b_{1},b_{2}\in G$, se llama **relación de congruencia**.
+
+```
+
+```{theorem}
+Si $\sim$ es una relación de congruencia sobre un monoide $G$, entonces el conjunto $G/\sim$ de todas las clases equivalencia de $(G,\sim)$ es un monoide con la operación binaria definida por $[a][b]=[ab]$. Si $G$ es un grupo abeliano, entoces $(G,\sim)$ lo és.
+
+```
+```{proof}
+Como $\sim$ es una relación de equivalencia, se tiene que:
+  (1) Si $[a_{1}]=[a_{2}]$ y $[b_{1}]=[b_{2}]$, $a_{1}\sim a_{2}$ y $b_{1}\sim b_{2}$, entonces $a_{1}b_{1}\sim a_{2}b_{2}$, es decir, $[a_{1}b_{1}]= [a_{2}b_{2}]$. Entonces la operación está bien definida. $G/\sim$ tiene un elemento neutro, para todo $a\in G$ se tiene que $[a][e]=[ae]=[a]=[ea]=[e][a]$, donde $e\in G$ es el elemento neutro del monoide. La operación es asociativa, en efecto, $[a]([b][c])=[a][bc]=[a(bc)]=[(ab)c]=[ab][c]=([a][b])[c]$. De aquí concluímos que $G/\sim$ es un monoide.
+Supongamos que $G$ es un grupo abeliano, entonces cada $a\in G$ tiene un elemento inverso  $a^{-1}\in G$. De este modo, para cada $[a]\in G/\sim$, se tiene que $[a^{-1}]\in G/\sim$ es el inverso de $[a]$ ya que $[a][a^{-1}]=[aa^{-1}]=[e]=[a^{-1}][a]=[a^{-1}][a]$. Así $G/\sim$ es un grupo. Fácilmente se ve que si $G$ es abeliano, entonces $G/\sim$ lo és, ya que $[a][b]=[ab]=[ba]=[b][a]$. 
+
+```
+Este teorema dota de otros ejemplos, tanto de monoides como de grupos:
+
+```{example}
+Para un entero fijo, la relación de congruencia modular es una relación de congruencia sobre el grupo aditivo $\mathbb{Z}$. Como $(\mathbb{Z}, +)$ es un grupo abeliano, se tiene que $\mathbb{Z}_{n}$ es un grupo aditivo abeliano, con la operación natural $[a]+[b]=[a+b]$.
+
+```
+
+```{example}
+$(Z,\ast)$ es un monoide sobre $\mathbb{Z}$ con la multiplicación usual de enteros. por lo tanto $\mathbb{Z}_{n}$ es un monoide, con la operación $[a]\ast[b]=[a\ast b]$.
+
+```
+
 Veremos algunos resultados muy técnicos que nos serán útiles mas adelante.
 
 ```{lemma}
 Sea $G$ un grupo, entonces se tiene que:
   
-  a) el elemento identidad de $G$ es único;
+  1) el elemento identidad de $G$ es único;
 
-  b) para cada $a\in G$, el inverso $a^{-1}$ es único;
+  2) para cada $a\in G$, el inverso $a^{-1}$ es único;
 
-  c) para todo $a\in G$, se tiene que $(a^{-1})^{-1}=a$;
+  3) para todo $a\in G$, se tiene que $(a^{-1})^{-1}=a$;
   
-  d) para $a,b\in G$, se tiene que $(a*b)^{-1}=b^{-1}*a^{-1}$.
+  4) para $a,b\in G$, se tiene que $(a*b)^{-1}=b^{-1}*a^{-1}$.
   
 ```
 ```{proof}
 
-a) Supongamos que $e, f\in G$ son tales que, $\forall a\in G$, $a*e=e*a=a$ y $a*f=f*a=a$. En particular, $f*e=f$ y $f*e=e$, de donde se sigue que $e=f$.
+1) Supongamos que $e, f\in G$ son tales que, $\forall a\in G$, $a*e=e*a=a$ y $a*f=f*a=a$. En particular, $f*e=f$ y $f*e=e$, de donde se sigue que $e=f$.
 
-b) Sea $a\in G$, veamos que si $a*x=a*y$, entonces $x=y$; en efecto, sea $b$ un inverso de $a$, es decir, $a*b=b*a=e$. De la igualdad $a*x=a*y$ se tiene que $b*(a*x)=b*(a*y)$ y así $(b*a)*x=(b*a)*y$, por lo tanto $x=y$. De este modo, si dos elemento $b,c\in G$ son dos inversos de $a$ se tiene que $a*b=e=a*c$ y de lo anterior se sigue que $b=c$.
+2) Sea $a\in G$, veamos que si $a*x=a*y$, entonces $x=y$; en efecto, sea $b$ un inverso de $a$, es decir, $a*b=b*a=e$. De la igualdad $a*x=a*y$ se tiene que $b*(a*x)=b*(a*y)$ y así $(b*a)*x=(b*a)*y$, por lo tanto $x=y$. De este modo, si dos elemento $b,c\in G$ son dos inversos de $a$ se tiene que $a*b=e=a*c$ y de lo anterior se sigue que $b=c$.
 
-c) Sabemos que $a^{-1}*(a^{-1})^{-1}=e=a^{-1}*a$, por lo que demostramos en la parte b), se sigue fácilmente que $(a^{-1})^{-1}=a$.
+3) Sabemos que $a^{-1}*(a^{-1})^{-1}=e=a^{-1}*a$, por lo que demostramos en la parte b), se sigue fácilmente que $(a^{-1})^{-1}=a$.
 
-d) De la asociatividad se tiene la igualdad $(a*b)*(b^{-1}*a^{-1})=(a*(b*b^{-1})*a^{-1})=a*e*a^{-1}=e$. Y por la unicidad del elemento inverso (demostrada justo antes) se sigue que $(a*b)^{-1}$ es igual a $b^{-1}*a^{-1}$.
+4) De la asociatividad se tiene la igualdad $(a*b)*(b^{-1}*a^{-1})=(a*(b*b^{-1})*a^{-1})=a*e*a^{-1}=e$. Y por la unicidad del elemento inverso (demostrada justo antes) se sigue que $(a*b)^{-1}$ es igual a $b^{-1}*a^{-1}$.
 
 ```
 
@@ -639,5 +686,3 @@ Demuestre que el grupo del ejemplo \@ref(exm:ejm1-21) es un grupo de orden $|G||
 Respuesta: Sabemos que $|G\times H|=|G||H|$, lo que demuestra que el orden del grupo es el producto $|G||H|$. Ahora supongamos que $G$ y $H$ son abelianos, luego $(a,b)\ast (c,d)=(a\ast c,b\ast d)=(c\ast a,d\ast b)=(c,d)\ast (a,b)$.
 
 ```
-
-

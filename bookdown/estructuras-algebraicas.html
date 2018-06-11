@@ -155,7 +155,7 @@
 
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-5" class="example"><strong>Ejemplo 1.5  </strong></span>Sean <span class="math inline">\(A=\{a,b,c\}\)</span> y <span class="math inline">\(B=\{c,d,e\}\)</span>. <span class="math inline">\(A\cup B=\{a,b,c,d,e\}\)</span> y <span class="math inline">\(A\cap B=\{c\}\)</span>.</p>
+<p><span id="exm:unnamed-chunk-5" class="example"><strong>Ejemplo 1.5  </strong></span>Sean <span class="math inline">\(A=\{a,b,c\}\)</span> y <span class="math inline">\(B=\{c,d,e\}\)</span>. <span class="math inline">\(A\cup B=\{a,b,c,d,e\}\)</span> y <span class="math inline">\(A\cap B=\{c\}\)</span>. Además <span class="math inline">\(\mathcal{P}(A)=\{\ \emptyset, \{a\}, \{b\}, \{c\}, \{a,b\}, \{a,c\}, \{c,b\}, \{a,b,c\}\}\)</span>.</p>
 </div>
 
 
@@ -501,10 +501,26 @@
 <p> <span class="remark"><em>Nota. </em></span>  No es necesario que los conjuntos <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> sean disjuntos para la definición del producto <span class="math inline">\(\alpha\beta\)</span>. Dados dos cardinales <span class="math inline">\(\alpha\)</span> y <span class="math inline">\(\beta\)</span>, siempre se pueden hallar conjuntos disjuntos <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> tales que <span class="math inline">\(\alpha=|A|\)</span> y <span class="math inline">\(\beta=|B|\)</span>. De la definición de cardinal y de los teoremas anteriores, se sigue que las definiciones de suma <span class="math inline">\(\alpha +\beta\)</span> y producto <span class="math inline">\(\alpha\beta\)</span> son independientes de la elección de los conjuntos <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span>.</p>
 </div>
 
-<p>Las operaciones de suma y productos de números cardinales cardinales son asociativas y commutativa, además se cumple la ley distributiva. Esto no lo demostraremos aquí porque escapa del alcance de este texto. De esto se tiene que la suma y el productos de cardinales finitos es coincidente con la suma y el producto de números naturales no negativos, por lo que existe el elemento identidad para la suma, no es más que el cardinal del conjunto vacío, <span class="math inline">\(0=|\emptyset|\)</span>.</p>
+<p>Las operaciones de suma y productos de números cardinales cardinales son asociativas y commutativa, además se cumple la ley distributiva. Esto no lo demostraremos aquí porque escapa del alcance de este texto. De esto se tiene que la suma y el productos de cardinales finitos es coincidente con la suma y el producto de números naturales no negativos, por lo que existe el elemento identidad para la suma, no es más que el cardinal del conjunto vacío, <span class="math inline">\(0=|\emptyset|\)</span>. Pero el producto de cardinales infinitos no coincide con el álgebra natural, por ejemplo el producto del cardinal <span class="math inline">\(\aleph_{0}\)</span> con él mismo, es <span class="math inline">\(\aleph_{0}\)</span>. Así, si <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> son conjuntos numerables, <span class="math inline">\(A\times B\)</span> es un conjunto numerable. Para más detalle sobre este tema pueden referirse a HACER REFERENCIA AQUÍ- KUNEN Y DI PRISCO.</p>
 
 <div class="definition">
 <p><span id="def:unnamed-chunk-43" class="definition"><strong>Definición 1.22  </strong></span> Sean <span class="math inline">\(\alpha\)</span> y <span class="math inline">\(\beta\)</span> números cardinales y sean <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> conjuntos tales que <span class="math inline">\(\alpha=|A|\)</span> y <span class="math inline">\(\beta=|B|\)</span>. Decimos que  y lo denotamos así <span class="math inline">\(\alpha\leq\beta\)</span>, si y solo si <span class="math inline">\(A\)</span> es equipotente con un subconjunto de <span class="math inline">\(B\)</span> (es decir, existe una función inyectiva <span class="math inline">\(f:A\longrightarrow B\)</span>). Decimos que <strong><span class="math inline">\(\alpha\)</span> es estrictamente menor que <span class="math inline">\(\beta\)</span></strong> y lo denotamos así <span class="math inline">\(\alpha&lt;\beta\)</span>, si <span class="math inline">\(\alpha\leq\beta\)</span> y <span class="math inline">\(\alpha\neq\beta\)</span>.</p>
+</div>
+<p> Es claro que la definicióon de <span class="math inline">\(\leq\)</span> no depende de la elección de los conjuntos <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span>.</p>
+
+<div class="theorem">
+<span id="thm:unnamed-chunk-44" class="theorem"><strong>Teorema 1.3  </strong></span> Sea <span class="math inline">\(A\)</span> un conjunto. Entonces <span class="math inline">\(|A|\leq|\mathcal{P}(A)\)</span>.
+</div>
+
+
+<div class="proof">
+ <span class="proof"><em>Demostración. </em></span>  Sea <span class="math inline">\(f:A\longrightarrow \mathcal{P}(A)\)</span> la función <span class="math inline">\(f(a)=\{a\}\)</span>. Dados <span class="math inline">\(a,b\in A\)</span>, si <span class="math inline">\(\{a\}\neq\{b\}\)</span>, por definición de igualdad de conjuntos, se tiene que <span class="math inline">\(a\neq b\)</span>, por lo tanto <span class="math inline">\(A\leq \mathcal{P}(A)\)</span>. Ahora veamos que <span class="math inline">\(A\neq\mathcal{P}(A)\)</span>, note que el conjunto <span class="math inline">\(B=\{a\in A: a\notin f(a) \}\subseteq A\)</span> no pertenece al conjunto <span class="math inline">\(Img(A)\)</span>, es decir, no existe <span class="math inline">\(a\in A\)</span> tal que <span class="math inline">\(f(a)=B\)</span>.
+</div>
+
+<p>Enunciaremos el conocido <em>Teorema de Schroeder-Bernstein</em> sin demostración. El lector interesado en estos temas puede remitirse a HACER REFERENCIA AQUí.</p>
+
+<div class="theorem">
+<span id="thm:unnamed-chunk-46" class="theorem"><strong>Teorema 1.4  (Teorema de Schroeder-Bernstein)  </strong></span> Si <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> son conjuntos tales que <span class="math inline">\(|A|\leq |B|\)</span> y <span class="math inline">\(|B|\leq |A|\)</span>. Entonces <span class="math inline">\(|A|=|B|\)</span>.
 </div>
 
 <div id="ejercicios" class="section level3">
@@ -523,7 +539,7 @@ Basta probar que <span class="math inline">\(\mathbb{Z}\sim \mathbb{N}\)</span> 
     -2n-1      &amp; \mbox{ si } n&lt;0\\
     2n      &amp; \mbox{ si } n&gt;=0
     \end{array}
-    \right.\]</span> Es fácil ver que <span class="math inline">\(f\)</span> es una biyección, ya que <span class="math inline">\(f\)</span> asigna cada número entero negativo a los números naturales impares (1, 3, 5, …) y cada número entero positivo a los números naturales pares (0, 2, 4, …).
+    \right.\]</span> Es fácil ver que <span class="math inline">\(f\)</span> es una biyección, ya que <span class="math inline">\(f\)</span> asigna cada número entero negativo a los números naturales impares (1, 3, 5, …) y cada número entero positivo a los números naturales pares (0, 2, 4, …). Por otro lado, la función <span class="math inline">\(g:\mathbb{Z}\times\mathbb{N} \longrightarrow \mathbb{Q}\)</span> definida por <span class="math inline">\(f(a,n)=\frac{a}{n}\)</span> es sobreyectiva. Se puede hallar una función inyectiva <span class="math inline">\(\hat{g}\)</span> de <span class="math inline">\(\mathbb{Z}\times\mathbb{N}\)</span> en <span class="math inline">\(\mathbb{Q}\)</span>. Por lo tanto <span class="math inline">\(|\mathbb{Q}|\leq |\mathbb{Z}\times\mathbb{N}|\)</span>. Como <span class="math inline">\(\mathbb{Z}\times\mathbb{N}\)</span> es numerable, se tiene que <span class="math inline">\(\mathbb{Q}\)</span> es numerable.
 </div>
 
 </div>
@@ -535,7 +551,7 @@ Basta probar que <span class="math inline">\(\mathbb{Z}\sim \mathbb{N}\)</span> 
 <p>Dado un conjunto no vacío <span class="math inline">\(G\)</span>, una <em>operación binaria</em> es una función <span class="math inline">\(G\times G\longrightarrow G\)</span>. Comunmente se usan las notaciones <span class="math inline">\(a\ast b\)</span> o <span class="math inline">\(a\cdot b\)</span> para denotar la imagen de <span class="math inline">\((a,b)\)</span> por la función, aunque puede también usarse <span class="math inline">\(ab\)</span> (obviando el punto como se hace para expresar el producto de dos números) o incluso <span class="math inline">\(a+b\)</span> cuando la operación es la suma usual (como sucede con los números enteros).</p>
 
 <div class="definition">
-<p><span id="def:unnamed-chunk-44" class="definition"><strong>Definición 1.23  </strong></span>Un par <span class="math inline">\((G,\ast)\)</span>, donde <span class="math inline">\(G\)</span> es un conjunto no vacío y una operacón binaria <span class="math inline">\(\ast:G\times G\longrightarrow G\)</span>, forman un <strong>grupo</strong> si:</p>
+<p><span id="def:unnamed-chunk-47" class="definition"><strong>Definición 1.23  </strong></span>Un par <span class="math inline">\((G,\ast)\)</span>, donde <span class="math inline">\(G\)</span> es un conjunto no vacío y una operacón binaria <span class="math inline">\(\ast:G\times G\longrightarrow G\)</span>, forman un <strong>grupo</strong> si:</p>
 <ol style="list-style-type: lower-roman">
 <li><p>Para todo <span class="math inline">\(a,b,c\in G\)</span>, <span class="math inline">\((a\ast b)\ast c=a\ast (b\ast c)\)</span>. Es decir, la operación es <em>asociativa</em>.</p></li>
 <li><p>Existe un elemento <span class="math inline">\(e\in G\)</span> tal que <span class="math inline">\(a\ast e=e\ast a=a\)</span>. Llamaremos a tal elemento <em>neutro (o identidad) bilateral</em> de <span class="math inline">\(G\)</span>.</p></li>
@@ -555,28 +571,28 @@ Basta probar que <span class="math inline">\(\mathbb{Z}\sim \mathbb{N}\)</span> 
 <p>El <strong>orden</strong> de un grupo <span class="math inline">\(G\)</span> es la cantidad de elementos que tiene el grupo, es decir, la cardinalidad de <span class="math inline">\(G\)</span> (<span class="math inline">\(|G|\)</span>). También se denota <span class="math inline">\(o(G)\)</span> Decimos que un grupo es de <strong>orden finito</strong> (o simplemente finito) si <span class="math inline">\(|G|\)</span> es finito. En caso contrario decimos que el grupo es <strong>infinito</strong>.</p>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-46" class="example"><strong>Ejemplo 1.24  </strong></span>Como ya lo hemos mencionado, el conjunto de los números enteros, <span class="math inline">\(\mathbb{Z}\)</span> con la operación suma (la suma usual de enteros), forman un grupo. El lector podrá verificar fácilmente que la operación suma es cerrada, es asociativa, que el cero es el elemento neutro (<span class="math inline">\(e\)</span> en la definición) y que cada elemento tiene un inverso (<span class="math inline">\(a^{-1}=-a\)</span>). Además es claro que se trata de un grupo abeliano (la suma es una operación commutativa).</p>
+<p><span id="exm:unnamed-chunk-49" class="example"><strong>Ejemplo 1.24  </strong></span>El conjunto de los números enteros con el producto usual es un monoide ya que el producto es una operación asociativa y el número uno (1) es el elemento identidad. Como ya lo hemos mencionado, el conjunto de los números enteros, <span class="math inline">\(\mathbb{Z}\)</span> con la operación suma (la suma usual de enteros), forman un grupo. El lector podrá verificar fácilmente que la operación suma es cerrada, es asociativa, que el cero es el elemento neutro (<span class="math inline">\(e\)</span> en la definición) y que cada elemento tiene un inverso (<span class="math inline">\(a^{-1}=-a\)</span>). Además es claro que se trata de un grupo abeliano (la suma es una operación commutativa). A un grupo cuya operación es la suma, como en este ejemplo, lo llamaremos <strong>grupo aditivo</strong>, si es el producto, lo denominaremos <strong>grupo multiplicativo</strong>.</p>
 </div>
 
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-47" class="example"><strong>Ejemplo 1.25  </strong></span>Dado el conjunto <span class="math inline">\(G={1,-1}\)</span>. Definimos la operación <span class="math inline">\(\ast:G\times G \longrightarrow G\)</span> como el producto de números reales usual. El par <span class="math inline">\((G,\ast)\)</span> forman un grupo abeliano de orden <span class="math inline">\(2\)</span>.</p>
+<p><span id="exm:unnamed-chunk-50" class="example"><strong>Ejemplo 1.25  </strong></span>Dado el conjunto <span class="math inline">\(G={1,-1}\)</span>. Definimos la operación <span class="math inline">\(\ast:G\times G \longrightarrow G\)</span> como el producto de números reales usual. El par <span class="math inline">\((G,\ast)\)</span> forman un grupo abeliano de orden <span class="math inline">\(2\)</span>.</p>
 </div>
 
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-48" class="example"><strong>Ejemplo 1.26  </strong></span>El conjunto de los números racionales <span class="math inline">\(\mathbb{Q}\)</span> con la suma usual, es un grupo abeliano.</p>
+<p><span id="exm:unnamed-chunk-51" class="example"><strong>Ejemplo 1.26  </strong></span>El conjunto de los números racionales <span class="math inline">\(\mathbb{Q}\)</span> con la suma usual, es un grupo abeliano.</p>
 </div>
 
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-49" class="example"><strong>Ejemplo 1.27  </strong></span>Consideremos un cuadrado cuyos vértices estan numerados consecutivamente <span class="math inline">\(1,2,3,4\)</span> centrado en el origen del palno cartesiano y de lados paralelos a los ejes coordenados.</p>
+<p><span id="exm:unnamed-chunk-52" class="example"><strong>Ejemplo 1.27  </strong></span>Consideremos un cuadrado cuyos vértices estan numerados consecutivamente <span class="math inline">\(1,2,3,4\)</span> centrado en el origen del palno cartesiano y de lados paralelos a los ejes coordenados.</p>
 <p>Sea <span class="math inline">\(C_{4}\)</span> el conjunto formado por las siguientes transformaciones: <span class="math inline">\(R\)</span>, una rotación de <span class="math inline">\(90º\)</span> del cuadrado. <span class="math inline">\(R^{2}\)</span> una rotación de <span class="math inline">\(180º\)</span> del cuadrados. <span class="math inline">\(R^{3}\)</span> una rotación de <span class="math inline">\(270º\)</span> del cuadrado (todas en el sentido de las agujas del reloj, centradas en el origen). <span class="math inline">\(I\)</span>, una rotación de <span class="math inline">\(360º\)</span> (igual que antes en sentido horario, centrada en el origen). <span class="math inline">\(T_{x}\)</span> y <span class="math inline">\(T_{y}\)</span>, reflexiones sobre los ejes <span class="math inline">\(x\)</span> y <span class="math inline">\(y\)</span> respectivamente y <span class="math inline">\(T_{I}\)</span> y <span class="math inline">\(T_{II}\)</span> reflexiones sobre las diagonales que pasan por los vértices que están en el primer y tercer cuadrante (la primera) y en el segundo y cuarto cuadrante (la segunda). Con la operación <em>composición de funciones</em>, el conjunto <span class="math inline">\(C_{4} = {R, R^{2}, R^{3}, I, T_{x}, T_{y}, T_{I}, T_{II}}\)</span> es un grupo no abeliano de orden <span class="math inline">\(8\)</span> llamado el <strong>grupo de simetría del cuadrado</strong>.</p>
 </div>
 
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-50" class="example"><strong>Ejemplo 1.28  </strong></span>Sea <span class="math inline">\(C\)</span> un conjunto no vacío y <span class="math inline">\(\mathcal{A}(C)\)</span> el conjunto de todas las biyecciones de <span class="math inline">\(C\)</span> en si mismo. Con la operación composición de funciones vista en la sección anterior, <span class="math inline">\(\mathcal{A}(C)\)</span> forma un grupo (no abeliano). En efecto, la composición de funciones biyectivas es asociativa, la identidad es una función biyectiva y toda biyección tiene una inversa. Los elementos de <span class="math inline">\(\mathcal{A}(C)\)</span> son llamados <strong>permutaciones</strong> y <span class="math inline">\(\mathcal{A}(C)\)</span> es llamado el grupo de permutaciones sobre <span class="math inline">\(C\)</span>. Si <span class="math inline">\(C=\{1,2, ..., n\}\)</span>, entonces <span class="math inline">\(\mathcal{A}(C)\)</span> es llamdo el <strong>grupo simétrico sobre <span class="math inline">\(n\)</span> letras</strong> y se denota <span class="math inline">\(S_{n}\)</span>. Se puede ver que <span class="math inline">\(|S_{n}|=n!\)</span> (ejercicio <a href="#exr:ejc3">1.4</a>).</p>
+<p><span id="exm:unnamed-chunk-53" class="example"><strong>Ejemplo 1.28  </strong></span>Sea <span class="math inline">\(C\)</span> un conjunto no vacío y <span class="math inline">\(\mathcal{A}(C)\)</span> el conjunto de todas las biyecciones de <span class="math inline">\(C\)</span> en si mismo. Con la operación composición de funciones vista en la sección anterior, <span class="math inline">\(\mathcal{A}(C)\)</span> forma un grupo (no abeliano). En efecto, la composición de funciones biyectivas es asociativa, la identidad es una función biyectiva y toda biyección tiene una inversa. Los elementos de <span class="math inline">\(\mathcal{A}(C)\)</span> son llamados <strong>permutaciones</strong> y <span class="math inline">\(\mathcal{A}(C)\)</span> es llamado el grupo de permutaciones sobre <span class="math inline">\(C\)</span>. Si <span class="math inline">\(C=\{1,2, ..., n\}\)</span>, entonces <span class="math inline">\(\mathcal{A}(C)\)</span> es llamdo el <strong>grupo simétrico sobre <span class="math inline">\(n\)</span> letras</strong> y se denota <span class="math inline">\(S_{n}\)</span>. Se puede ver que <span class="math inline">\(|S_{n}|=n!\)</span> (ejercicio <a href="#exr:ejc3">1.4</a>).</p>
 </div>
 
 
@@ -614,11 +630,35 @@ Basta probar que <span class="math inline">\(\mathbb{Z}\sim \mathbb{N}\)</span> 
 <p><span id="exm:ejm1-21" class="example"><strong>Ejemplo 1.29  </strong></span>Dados <span class="math inline">\(G\)</span> y <span class="math inline">\(H\)</span> dos grupos con identidades <span class="math inline">\(e_{G}\)</span> y <span class="math inline">\(e_{H}\)</span> respectivamente. Consideremos el producto cartesiano <span class="math inline">\(G\times H\)</span> y la operación binaria <span class="math inline">\((a,b)\ast (c,d)=(a\ast c,b\ast d)\)</span> donde <span class="math inline">\(a\ast c\in G\)</span> y <span class="math inline">\(b\ast d\in H\)</span>. Con esta operación <span class="math inline">\(G\times H\)</span> es un grupo con identidad <span class="math inline">\((e_{G}, e_{H})\)</span> y con inverso <span class="math inline">\((a^{-1}, b^{-1})\)</span> para cada elemento <span class="math inline">\((a,b)\in G\times H\)</span>.</p>
 </div>
 
+
+<div class="definition">
+<p><span id="def:unnamed-chunk-55" class="definition"><strong>Definición 1.24  </strong></span>Una relación de equivalencia sobre un monoide <span class="math inline">\(G\)</span> que satisface que si <span class="math inline">\(a_{1}\sim a_{2}\)</span> y <span class="math inline">\(b_{1}\sim b_{2}\)</span>, entonces <span class="math inline">\(a_{1}b_{1}\sim a_{2}b_{2}\)</span> para todo <span class="math inline">\(a_{1},a_{2},b_{1},b_{2}\in G\)</span>, se llama <strong>relación de congruencia</strong>.</p>
+</div>
+
+
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-56" class="theorem"><strong>Teorema 1.5  </strong></span>Si <span class="math inline">\(\sim\)</span> es una relación de congruencia sobre un monoide <span class="math inline">\(G\)</span>, entonces el conjunto <span class="math inline">\(G/\sim\)</span> de todas las clases equivalencia de <span class="math inline">\((G,\sim)\)</span> es un monoide con la operación binaria definida por <span class="math inline">\([a][b]=[ab]\)</span>. Si <span class="math inline">\(G\)</span> es un grupo abeliano, entoces <span class="math inline">\((G,\sim)\)</span> lo és.</p>
+</div>
+ 
+<div class="proof">
+<p> <span class="proof"><em>Demostración. </em></span> Como <span class="math inline">\(\sim\)</span> es una relación de equivalencia, se tiene que: (1) Si <span class="math inline">\([a_{1}]=[a_{2}]\)</span> y <span class="math inline">\([b_{1}]=[b_{2}]\)</span>, <span class="math inline">\(a_{1}\sim a_{2}\)</span> y <span class="math inline">\(b_{1}\sim b_{2}\)</span>, entonces <span class="math inline">\(a_{1}b_{1}\sim a_{2}b_{2}\)</span>, es decir, <span class="math inline">\([a_{1}b_{1}]= [a_{2}b_{2}]\)</span>. Entonces la operación está bien definida. <span class="math inline">\(G/\sim\)</span> tiene un elemento neutro, para todo <span class="math inline">\(a\in G\)</span> se tiene que <span class="math inline">\([a][e]=[ae]=[a]=[ea]=[e][a]\)</span>, donde <span class="math inline">\(e\in G\)</span> es el elemento neutro del monoide. La operación es asociativa, en efecto, <span class="math inline">\([a]([b][c])=[a][bc]=[a(bc)]=[(ab)c]=[ab][c]=([a][b])[c]\)</span>. De aquí concluímos que <span class="math inline">\(G/\sim\)</span> es un monoide. Supongamos que <span class="math inline">\(G\)</span> es un grupo abeliano, entonces cada <span class="math inline">\(a\in G\)</span> tiene un elemento inverso <span class="math inline">\(a^{-1}\in G\)</span>. De este modo, para cada <span class="math inline">\([a]\in G/\sim\)</span>, se tiene que <span class="math inline">\([a^{-1}]\in G/\sim\)</span> es el inverso de <span class="math inline">\([a]\)</span> ya que <span class="math inline">\([a][a^{-1}]=[aa^{-1}]=[e]=[a^{-1}][a]=[a^{-1}][a]\)</span>. Así <span class="math inline">\(G/\sim\)</span> es un grupo. Fácilmente se ve que si <span class="math inline">\(G\)</span> es abeliano, entonces <span class="math inline">\(G/\sim\)</span> lo és, ya que <span class="math inline">\([a][b]=[ab]=[ba]=[b][a]\)</span>.</p>
+</div>
+<p> Este teorema dota de otros ejemplos, tanto de monoides como de grupos:</p>
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-58" class="example"><strong>Ejemplo 1.30  </strong></span>Para un entero fijo, la relación de congruencia modular es una relación de congruencia sobre el grupo aditivo <span class="math inline">\(\mathbb{Z}\)</span>. Como <span class="math inline">\((\mathbb{Z}, +)\)</span> es un grupo abeliano, se tiene que <span class="math inline">\(\mathbb{Z}_{n}\)</span> es un grupo aditivo abeliano, con la operación natural <span class="math inline">\([a]+[b]=[a+b]\)</span>.</p>
+</div>
+
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-59" class="example"><strong>Ejemplo 1.31  </strong></span><span class="math inline">\((Z,\ast)\)</span> es un monoide sobre <span class="math inline">\(\mathbb{Z}\)</span> con la multiplicación usual de enteros. por lo tanto <span class="math inline">\(\mathbb{Z}_{n}\)</span> es un monoide, con la operación <span class="math inline">\([a]\ast[b]=[a\ast b]\)</span>.</p>
+</div>
+
 <p>Veremos algunos resultados muy técnicos que nos serán útiles mas adelante.</p>
 
 <div class="lemma">
-<p><span id="lem:unnamed-chunk-52" class="lemma"><strong>Lema 1.5  </strong></span>Sea <span class="math inline">\(G\)</span> un grupo, entonces se tiene que:</p>
-<ol style="list-style-type: lower-alpha">
+<p><span id="lem:unnamed-chunk-60" class="lemma"><strong>Lema 1.5  </strong></span>Sea <span class="math inline">\(G\)</span> un grupo, entonces se tiene que:</p>
+<ol style="list-style-type: decimal">
 <li><p>el elemento identidad de <span class="math inline">\(G\)</span> es único;</p></li>
 <li><p>para cada <span class="math inline">\(a\in G\)</span>, el inverso <span class="math inline">\(a^{-1}\)</span> es único;</p></li>
 <li><p>para todo <span class="math inline">\(a\in G\)</span>, se tiene que <span class="math inline">\((a^{-1})^{-1}=a\)</span>;</p></li>
@@ -636,12 +676,12 @@ Basta probar que <span class="math inline">\(\mathbb{Z}\sim \mathbb{N}\)</span> 
 
 
 <div class="definition">
-<p><span id="def:unnamed-chunk-54" class="definition"><strong>Definición 1.24  </strong></span>Un subconjunto <span class="math inline">\(H\)</span> de un grupo <span class="math inline">\(G\)</span>, se llama <strong>subgrupo</strong> de <span class="math inline">\(G\)</span> si respecto a la operación definida sobre <span class="math inline">\(G\)</span>, él mismo forma un grupo.</p>
+<p><span id="def:unnamed-chunk-62" class="definition"><strong>Definición 1.25  </strong></span>Un subconjunto <span class="math inline">\(H\)</span> de un grupo <span class="math inline">\(G\)</span>, se llama <strong>subgrupo</strong> de <span class="math inline">\(G\)</span> si respecto a la operación definida sobre <span class="math inline">\(G\)</span>, él mismo forma un grupo.</p>
 </div>
 <p> Suponga que <span class="math inline">\(G\)</span> es un grupo y <span class="math inline">\(H\subseteq G\)</span> es un subconjunto cerrado bajo la operación de grupo definida sobre G, es decir, para todo <span class="math inline">\(a,b\in H\)</span> se tiene que <span class="math inline">\(ab\in H\)</span>. Y cada elemento de <span class="math inline">\(H\)</span> tiene su inverso también en <span class="math inline">\(H\)</span>, esto es, si <span class="math inline">\(a\in H\)</span>, entonces <span class="math inline">\(a^{-1}\in H\)</span>. Es claro que <span class="math inline">\(H\)</span> será un semigrupo de <span class="math inline">\(G\)</span>. Esto lo mostramos en el siguiente resultado:</p>
 
 <div class="lemma">
-<p><span id="lem:unnamed-chunk-55" class="lemma"><strong>Lema 1.6  </strong></span>Un subconjunto no vacío <span class="math inline">\(H\)</span> de un grupo <span class="math inline">\(G\)</span>, es un subgrupo si y solo si:</p>
+<p><span id="lem:unnamed-chunk-63" class="lemma"><strong>Lema 1.6  </strong></span>Un subconjunto no vacío <span class="math inline">\(H\)</span> de un grupo <span class="math inline">\(G\)</span>, es un subgrupo si y solo si:</p>
 <ol style="list-style-type: decimal">
 <li><p>para cada <span class="math inline">\(a,b\in H\)</span>, <span class="math inline">\(ab\in H\)</span>.</p></li>
 <li>para cada <span class="math inline">\(a\in H\)</span>, <span class="math inline">\(a^{-1}\in H\)</span>.</li>
@@ -657,7 +697,7 @@ Basta probar que <span class="math inline">\(\mathbb{Z}\sim \mathbb{N}\)</span> 
 <h3><span class="header-section-number">1.5.1</span> Ejercicios</h3>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-57" class="exercise"><strong>Ejercicio 1.3  </strong></span>Sea <span class="math inline">\(G\)</span> un grupo y <span class="math inline">\(C\)</span> un conjunto no vacío. Sea <span class="math inline">\(M(C,G)\)</span> el conjunto de todas las funciones <span class="math inline">\(f:C\longrightarrow G\)</span>. Definamos la operación de grupo como la suma de funciones, es decir, para cada <span class="math inline">\(f,g\in M(C,G)\)</span>, <span class="math inline">\(f\ast g = f +g\)</span>. Demuestre que <span class="math inline">\(M(C,G)\)</span> es un grupo, es abeliano si <span class="math inline">\(G\)</span> lo es.</p>
+<p><span id="exr:unnamed-chunk-65" class="exercise"><strong>Ejercicio 1.3  </strong></span>Sea <span class="math inline">\(G\)</span> un grupo y <span class="math inline">\(C\)</span> un conjunto no vacío. Sea <span class="math inline">\(M(C,G)\)</span> el conjunto de todas las funciones <span class="math inline">\(f:C\longrightarrow G\)</span>. Definamos la operación de grupo como la suma de funciones, es decir, para cada <span class="math inline">\(f,g\in M(C,G)\)</span>, <span class="math inline">\(f\ast g = f +g\)</span>. Demuestre que <span class="math inline">\(M(C,G)\)</span> es un grupo, es abeliano si <span class="math inline">\(G\)</span> lo es.</p>
 <p>Respuesta: Es claro que la suma de funciones es cerrada en <span class="math inline">\(M(C,G)\)</span>. Sean <span class="math inline">\(f,g,h\in M(C,G)\)</span>, para cada <span class="math inline">\(a\in C\)</span>, <span class="math inline">\((f+(g+h))(a)=f(a)+((g+h)(a))=f(a)+(g(a)+h(a))\)</span> como <span class="math inline">\(G\)</span> es un grupo, la suma es asociativa, luego <span class="math inline">\(f(a)+(g(a)+h(a))=(f(a)+g(a))+h(a)=((f+g)(a))+h(a)=((f+g)+h)(a)\)</span>; por lo tanto la suma de funciones es asociativa.</p>
 </div>
 
@@ -673,7 +713,7 @@ Basta probar que <span class="math inline">\(\mathbb{Z}\sim \mathbb{N}\)</span> 
 
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-58" class="exercise"><strong>Ejercicio 1.5  </strong></span>Demuestre que el grupo del ejemplo <a href="#exm:ejm1-21">1.29</a> es un grupo de orden <span class="math inline">\(|G||H|\)</span>. Además muestre que <span class="math inline">\(G\times H\)</span> es un grupo abeliano si <span class="math inline">\(G\)</span> y <span class="math inline">\(H\)</span> lo son. Respuesta: Sabemos que <span class="math inline">\(|G\times H|=|G||H|\)</span>, lo que demuestra que el orden del grupo es el producto <span class="math inline">\(|G||H|\)</span>. Ahora supongamos que <span class="math inline">\(G\)</span> y <span class="math inline">\(H\)</span> son abelianos, luego <span class="math inline">\((a,b)\ast (c,d)=(a\ast c,b\ast d)=(c\ast a,d\ast b)=(c,d)\ast (a,b)\)</span>.</p>
+<p><span id="exr:unnamed-chunk-66" class="exercise"><strong>Ejercicio 1.5  </strong></span>Demuestre que el grupo del ejemplo <a href="#exm:ejm1-21">1.29</a> es un grupo de orden <span class="math inline">\(|G||H|\)</span>. Además muestre que <span class="math inline">\(G\times H\)</span> es un grupo abeliano si <span class="math inline">\(G\)</span> y <span class="math inline">\(H\)</span> lo son. Respuesta: Sabemos que <span class="math inline">\(|G\times H|=|G||H|\)</span>, lo que demuestra que el orden del grupo es el producto <span class="math inline">\(|G||H|\)</span>. Ahora supongamos que <span class="math inline">\(G\)</span> y <span class="math inline">\(H\)</span> son abelianos, luego <span class="math inline">\((a,b)\ast (c,d)=(a\ast c,b\ast d)=(c\ast a,d\ast b)=(c,d)\ast (a,b)\)</span>.</p>
 </div>
 
 </div>
