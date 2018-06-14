@@ -492,10 +492,27 @@ Suponga que $G$ es un grupo y $H\subseteq G$ es un subconjunto cerrado bajo la o
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Es claro que si $H\subseteq G$ es un subgrupo de $G$, cumple 1 y 2.
 Recíprocamente, supongamos que $H\subseteq G$, cumple con 1 y 2. Faltaría ver que la operación es asociativa en $H$ y que el elemento neutro está en $H$. La ley asociativa se hereda de $G$ (si la operación es asociativa en $G$, de igual forma lo será en $H$). Como para cada elemento de $H$ tiene un inverso, existen $a, a^{-1}\in H$; además se tiene que la operación es cerrada en $H$, luego $e=aa^{-1}\in H$. Por lo tanto se tiene que $H$ es un grupo (con la operación heredada de $G$). 
 </div>\EndKnitrBlock{proof}
+\BeginKnitrBlock{lemma}<div class="lemma"><span class="lemma" id="lem:unnamed-chunk-65"><strong>(\#lem:unnamed-chunk-65) </strong></span>	Si $H$ es un subconjunto finito no vacío de un grupo $G$ y $H$ es cerrado bajo la operación de grupo, entonces $H$ es un subgrupo de $G$.
+</div>\EndKnitrBlock{lemma}
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Note que, dado $a\in H$, $a, a^{2}, a^{3},\cdots , c^{n},\cdots \in H$. Pero $H$ es finito, por lo tanto existen enteros positivos $r>s>0$ tales que $a^{r}=a^{s}$, entonces se tiene que $a^{r}a^{-s}=a^{s}a^{-s}$ de donde se sigue a $a^{r-s}=e$, lo que muestra que $e\in H$. Por otro lado, $a^{r-s-1}$ está en la lista de elementos de $H$, por lo tanto, dado $a\in H$ se tiene que $a^{-1}=ea^{-1}=a^{r-s-1}\in H$ ya que $aa^{-1}=aa^{r-s-1}=a^{r-s}=e=a^{r-s}=a^{r-s-1}a=a^{-1}a$. Por el lema anterior, se tiene que $H$ es un subgrupo de $G$.
+</div>\EndKnitrBlock{proof}
+
+Este lema nos permite saber si un subconjunto finito de un grupo es un subgrupo tan solo probando que la operación de grupo es cerrada en el subconjunto finito. 
+Veamos a conyinuación algunos ejemplos de subgrupos.
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-67"><strong>(\#exm:unnamed-chunk-67) </strong></span>	Dado un grupo $G$. El mismo $G$ es un subgrupo. El conjunto cuyo único elemento es la identidad del grupo, $\{e\}$ es un subgrupo. Estos dos se conocen con el nombre de **subgrupos triviales** del grupo $G$.
+</div>\EndKnitrBlock{example}
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-68"><strong>(\#exm:unnamed-chunk-68) </strong></span>	Consideremos el grupo aditico de los números enteros. Sea $n\in\mathbb{N}$ un entero positivo. El conjunto $H_{n}$ formado por los múltiplos de $n$ es un subgrupo. Es fácil ver que si sumamos dos múltiplos de $n$, es resultado es un múltiplo de $n$, $kn+qn=(k+q)n$. Además $k\ kn$ y $-kn$ están en $H$ y $kn+(-kn)=0=-kn+kn$.
+	Es interesante pensar en el conjunto intersección de dos de estos subgrupos, es decir, $H_{n}\cap H_{m}$. 
+</div>\EndKnitrBlock{example}
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-69"><strong>(\#exm:unnamed-chunk-69) </strong></span>	Sea $G$ un grupo cualquiera, sea $a\in G$ un elemento cualquiera. El conjunto $(a)=\{a^{n}|n\in\mathbb{Z} \}$ es un subgrupo de $G$ llamado el **grupo cíclico generado por $a$**. Efectivamente, claramente la operación es cerrada, para cuales quiera $a^{n}, a^{m}\in (a)$, $a^{n}a^{m}=a^{n+m}\in (a)$. por definición de $(a)$, $a^{n}$ y $a^{-n}$ están en $(a)$. Si para algún $a\in G$, $G=(a)$, entonces decimos que $G$ es un grupo cíclico.
+</div>\EndKnitrBlock{example}
+
 
 ### Ejercicios
 
-\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-65"><strong>(\#exr:unnamed-chunk-65) </strong></span>Sea $G$ un grupo y $C$ un conjunto no vacío. Sea $M(C,G)$ el conjunto de todas las funciones $f:C\longrightarrow G$. Definamos la operación de grupo como la suma de funciones, es decir, para cada $f,g\in M(C,G)$, $f\ast g = f +g$. Demuestre que $M(C,G)$ es un grupo, es abeliano si $G$ lo es.
+\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-70"><strong>(\#exr:unnamed-chunk-70) </strong></span>Sea $G$ un grupo y $C$ un conjunto no vacío. Sea $M(C,G)$ el conjunto de todas las funciones $f:C\longrightarrow G$. Definamos la operación de grupo como la suma de funciones, es decir, para cada $f,g\in M(C,G)$, $f\ast g = f +g$. Demuestre que $M(C,G)$ es un grupo, es abeliano si $G$ lo es.
 
 Respuesta: Es claro que la suma de funciones es cerrada en $M(C,G)$. Sean $f,g,h\in M(C,G)$, para cada $a\in C$, $(f+(g+h))(a)=f(a)+((g+h)(a))=f(a)+(g(a)+h(a))$ como $G$ es un grupo, la suma es asociativa, luego $f(a)+(g(a)+h(a))=(f(a)+g(a))+h(a)=((f+g)(a))+h(a)=((f+g)+h)(a)$; por lo tanto la suma de funciones es asociativa.
 </div>\EndKnitrBlock{exercise}
@@ -509,6 +526,6 @@ Respuesta: Es claro que la suma de funciones es cerrada en $M(C,G)$. Sean $f,g,h
 	Análogamente, contar los elementos de $S_{n}$ es equivalente a contar las posibles permutaciones del conjunto $\{1,2,3,\cdots, n\}$.
 </div>\EndKnitrBlock{exercise}
 
-\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-66"><strong>(\#exr:unnamed-chunk-66) </strong></span>Demuestre que el grupo del ejemplo \@ref(exm:ejm1-21) es un grupo de orden $|G||H|$. Además muestre que $G\times H$ es un grupo abeliano si $G$ y $H$ lo son.
+\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-71"><strong>(\#exr:unnamed-chunk-71) </strong></span>Demuestre que el grupo del ejemplo \@ref(exm:ejm1-21) es un grupo de orden $|G||H|$. Además muestre que $G\times H$ es un grupo abeliano si $G$ y $H$ lo son.
 Respuesta: Sabemos que $|G\times H|=|G||H|$, lo que demuestra que el orden del grupo es el producto $|G||H|$. Ahora supongamos que $G$ y $H$ son abelianos, luego $(a,b)\ast (c,d)=(a\ast c,b\ast d)=(c\ast a,d\ast b)=(c,d)\ast (a,b)$.
 </div>\EndKnitrBlock{exercise}
