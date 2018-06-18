@@ -716,11 +716,42 @@ Basta probar que <span class="math inline">\(\mathbb{Z}\sim \mathbb{N}\)</span> 
 <p><span id="exm:unnamed-chunk-69" class="example"><strong>Ejemplo 1.34  </strong></span> Sea <span class="math inline">\(G\)</span> un grupo cualquiera, sea <span class="math inline">\(a\in G\)</span> un elemento cualquiera. El conjunto <span class="math inline">\((a)=\{a^{n}|n\in\mathbb{Z} \}\)</span> es un subgrupo de <span class="math inline">\(G\)</span> llamado el <strong>grupo cíclico generado por <span class="math inline">\(a\)</span></strong>. Efectivamente, claramente la operación es cerrada, para cuales quiera <span class="math inline">\(a^{n}, a^{m}\in (a)\)</span>, <span class="math inline">\(a^{n}a^{m}=a^{n+m}\in (a)\)</span>. por definición de <span class="math inline">\((a)\)</span>, <span class="math inline">\(a^{n}\)</span> y <span class="math inline">\(a^{-n}\)</span> están en <span class="math inline">\((a)\)</span>. Si para algún <span class="math inline">\(a\in G\)</span>, <span class="math inline">\(G=(a)\)</span>, entonces decimos que <span class="math inline">\(G\)</span> es un grupo cíclico.</p>
 </div>
 
+
+<div class="definition">
+<span id="def:unnamed-chunk-70" class="definition"><strong>Definición 1.26  </strong></span> Sean <span class="math inline">\(G\)</span> y <span class="math inline">\(H\)</span> dos semigrupos. Una función <span class="math inline">\(f:G\longrightarrow H\)</span> es un <strong>homomorfismo</strong> si y solo si <span class="math inline">\(f(ab)=f(a)f(b)\)</span> para todo <span class="math inline">\(a,b\in G\)</span>. Si <span class="math inline">\(f\)</span> es inyectiva, decimos que <span class="math inline">\(f\)</span> es un <strong>monomorfismo</strong>. Si <span class="math inline">\(f\)</span> es sobreyectiva, diremos que <span class="math inline">\(f\)</span> es un <strong>epimorfismo</strong>. Cuando <span class="math inline">\(f\)</span> es una función biectiva diremos que <span class="math inline">\(f\)</span> es un <strong>isomorfismo</strong> y esto lo denotaremos por <span class="math inline">\(G\cong H\)</span>.
+</div>
+
+
+<div class="remark">
+<p> <span class="remark"><em>Nota. </em></span>  Un homomorfimos de <span class="math inline">\(G\)</span> en si mismo es llamado <strong>endomorfismo de <span class="math inline">\(G\)</span></strong>. Y un isomorfismo de <span class="math inline">\(G\)</span> en si mismo se conoce como <strong>automorfismo de <span class="math inline">\(G\)</span></strong>.</p>
+<pre><code>Como todo grupo es un semigrupo, la definición de homomorfismo de grupo aplica perfectamente a grupos, al igual que el resto de las definiciones.</code></pre>
+</div>
+
+<p>Note que dados dos homomorfismos de semigrupos <span class="math inline">\(f:G\longrightarrow H\)</span> y <span class="math inline">\(g:H\longrightarrow K\)</span>, la composición <span class="math inline">\(g\circ f:G\longrightarrow K\)</span> es un homomorfismo de semigrupo. Por lo tanto se tiene que la composición de monomorfismos, es un monomorfismo, análogamente para epimorfismos e isomorfismos. Si <span class="math inline">\(f:G\longrightarrow H\)</span> es un homomorfismo de grupos y <span class="math inline">\(e_{G}\)</span> y <span class="math inline">\(e_{H}\)</span> son los elementos identidad de los grupos <span class="math inline">\(G\)</span> y <span class="math inline">\(H\)</span> respectivamente, entonces se tiene que <span class="math inline">\(f(e_{G})=e_{H}\)</span>, por lo tanto <span class="math inline">\(f(a^{-1})=f(a)^{-1}\)</span>. No obstante, si <span class="math inline">\(G\)</span> y <span class="math inline">\(H\)</span> son monoides, esto no es cierto.\</p>
+
+<div class="definition">
+<p><span id="def:unnamed-chunk-72" class="definition"><strong>Definición 1.27  </strong></span> Dado <span class="math inline">\(f:G\longrightarrow H\)</span> un homomorfismo de grupo. El <strong>núcleo</strong> de <span class="math inline">\(f\)</span> (también conocido por su nombre en inglés <strong>kernel</strong>) es el conjunto <span class="math inline">\(\{a\in G| f(a)=e_{H} \}\)</span> y se denota <span class="math inline">\(Ker f\)</span>. Dado <span class="math inline">\(A\subseteq G\)</span>, <strong>la imagen de <span class="math inline">\(A\)</span></strong> es el conjunto <span class="math inline">\(\{f(a)| a\in A \}\)</span> y se denota por <span class="math inline">\(f(A)\)</span>; al conjunto imagen de <span class="math inline">\(G\)</span>, lo llamaremos <strong>imagen de <span class="math inline">\(f\)</span></strong> y le daremos una notación especial, <span class="math inline">\(Im f\)</span>. Dado un conjunto <span class="math inline">\(B\in H\)</span>, la imagen inversa de <span class="math inline">\(B\)</span> es el conjunto <span class="math inline">\(f^{-1}(B)=\{a\in G|f(a)\in B \}\)</span>.</p>
+</div>
+
+
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-73" class="theorem"><strong>Teorema 1.6  </strong></span> Sea <span class="math inline">\(f:G\longrightarrow H\)</span> un homomorfismo de grupos. Entonces:</p>
+<pre><code>    (i) $f$ es un monomorfismo si y solo si $Ker f=\{e_{G}\}$.
+
+    (ii) $f$ es un isomorfismo si y solo si existe un homomorfismo $g:H\longrightarrow G$ tal que $f^{-1}\circ f=\mathbb{I}_{G}$ y $f\circ f^{-1}=\mathbb{I}_{H}$.
+&lt;/div&gt;\EndKnitrBlock{theorem}</code></pre>
+
+<div class="proof">
+<p> <span class="proof"><em>Demostración. </em></span> <br />
+(i) Supongamos que <span class="math inline">\(f\)</span> es un monomorfismo. Sea <span class="math inline">\(a\in Ker f\)</span>, entonces <span class="math inline">\(f(a)=e_{H}\)</span>. Como <span class="math inline">\(f(e_{g})=e_{H}\)</span> y <span class="math inline">\(f\)</span> es inyectiva, se tiene que <span class="math inline">\(a=e_{G}\)</span>. Ahora supongamos que <span class="math inline">\(Ker f=\{e_{G} \}\)</span> y sean <span class="math inline">\(a, b\in G\)</span> tales que <span class="math inline">\(f(a)=f(b)\)</span>. Entonces <span class="math inline">\(=f(ab^{-1})f(a)f(b^{-1})=f(a)f(b)^{-1}=f(b)f(b)^{-1}=e_{H}\)</span>, por lo tanto <span class="math inline">\(ab^{-1}=e_{G}\)</span> de donde se sigue que <span class="math inline">\(a=b\)</span> y así <span class="math inline">\(f\)</span> es un monomorfismo.</p>
+<pre><code>    (i) Ya vimos en la sección de funciones que existe la función inversa y que ella es biyectiva, además en \@ref{lema1.48} vimos que $f^{-1}\circ f=\mathbb{I}_{G}$ y $f\circ f^{-1}=\mathbb{I}_{H}$. El recíproco se tiene del lema siguiente \ref{lema1.49}.</code></pre>
+</div>
+
 <div id="ejercicios-1" class="section level3">
 <h3><span class="header-section-number">1.5.1</span> Ejercicios</h3>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-70" class="exercise"><strong>Ejercicio 1.3  </strong></span>Sea <span class="math inline">\(G\)</span> un grupo y <span class="math inline">\(C\)</span> un conjunto no vacío. Sea <span class="math inline">\(M(C,G)\)</span> el conjunto de todas las funciones <span class="math inline">\(f:C\longrightarrow G\)</span>. Definamos la operación de grupo como la suma de funciones, es decir, para cada <span class="math inline">\(f,g\in M(C,G)\)</span>, <span class="math inline">\(f\ast g = f +g\)</span>. Demuestre que <span class="math inline">\(M(C,G)\)</span> es un grupo, es abeliano si <span class="math inline">\(G\)</span> lo es.</p>
+<p><span id="exr:unnamed-chunk-75" class="exercise"><strong>Ejercicio 1.3  </strong></span>Sea <span class="math inline">\(G\)</span> un grupo y <span class="math inline">\(C\)</span> un conjunto no vacío. Sea <span class="math inline">\(M(C,G)\)</span> el conjunto de todas las funciones <span class="math inline">\(f:C\longrightarrow G\)</span>. Definamos la operación de grupo como la suma de funciones, es decir, para cada <span class="math inline">\(f,g\in M(C,G)\)</span>, <span class="math inline">\(f\ast g = f +g\)</span>. Demuestre que <span class="math inline">\(M(C,G)\)</span> es un grupo, es abeliano si <span class="math inline">\(G\)</span> lo es.</p>
 <p>Respuesta: Es claro que la suma de funciones es cerrada en <span class="math inline">\(M(C,G)\)</span>. Sean <span class="math inline">\(f,g,h\in M(C,G)\)</span>, para cada <span class="math inline">\(a\in C\)</span>, <span class="math inline">\((f+(g+h))(a)=f(a)+((g+h)(a))=f(a)+(g(a)+h(a))\)</span> como <span class="math inline">\(G\)</span> es un grupo, la suma es asociativa, luego <span class="math inline">\(f(a)+(g(a)+h(a))=(f(a)+g(a))+h(a)=((f+g)(a))+h(a)=((f+g)+h)(a)\)</span>; por lo tanto la suma de funciones es asociativa.</p>
 </div>
 
@@ -736,7 +767,7 @@ Basta probar que <span class="math inline">\(\mathbb{Z}\sim \mathbb{N}\)</span> 
 
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-71" class="exercise"><strong>Ejercicio 1.5  </strong></span>Demuestre que el grupo del ejemplo <a href="#exm:ejm1-21">1.29</a> es un grupo de orden <span class="math inline">\(|G||H|\)</span>. Además muestre que <span class="math inline">\(G\times H\)</span> es un grupo abeliano si <span class="math inline">\(G\)</span> y <span class="math inline">\(H\)</span> lo son. Respuesta: Sabemos que <span class="math inline">\(|G\times H|=|G||H|\)</span>, lo que demuestra que el orden del grupo es el producto <span class="math inline">\(|G||H|\)</span>. Ahora supongamos que <span class="math inline">\(G\)</span> y <span class="math inline">\(H\)</span> son abelianos, luego <span class="math inline">\((a,b)\ast (c,d)=(a\ast c,b\ast d)=(c\ast a,d\ast b)=(c,d)\ast (a,b)\)</span>.</p>
+<p><span id="exr:unnamed-chunk-76" class="exercise"><strong>Ejercicio 1.5  </strong></span>Demuestre que el grupo del ejemplo <a href="#exm:ejm1-21">1.29</a> es un grupo de orden <span class="math inline">\(|G||H|\)</span>. Además muestre que <span class="math inline">\(G\times H\)</span> es un grupo abeliano si <span class="math inline">\(G\)</span> y <span class="math inline">\(H\)</span> lo son. Respuesta: Sabemos que <span class="math inline">\(|G\times H|=|G||H|\)</span>, lo que demuestra que el orden del grupo es el producto <span class="math inline">\(|G||H|\)</span>. Ahora supongamos que <span class="math inline">\(G\)</span> y <span class="math inline">\(H\)</span> son abelianos, luego <span class="math inline">\((a,b)\ast (c,d)=(a\ast c,b\ast d)=(c\ast a,d\ast b)=(c,d)\ast (a,b)\)</span>.</p>
 </div>
 
 </div>

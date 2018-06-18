@@ -509,10 +509,36 @@ Veamos a conyinuación algunos ejemplos de subgrupos.
 \BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-69"><strong>(\#exm:unnamed-chunk-69) </strong></span>	Sea $G$ un grupo cualquiera, sea $a\in G$ un elemento cualquiera. El conjunto $(a)=\{a^{n}|n\in\mathbb{Z} \}$ es un subgrupo de $G$ llamado el **grupo cíclico generado por $a$**. Efectivamente, claramente la operación es cerrada, para cuales quiera $a^{n}, a^{m}\in (a)$, $a^{n}a^{m}=a^{n+m}\in (a)$. por definición de $(a)$, $a^{n}$ y $a^{-n}$ están en $(a)$. Si para algún $a\in G$, $G=(a)$, entonces decimos que $G$ es un grupo cíclico.
 </div>\EndKnitrBlock{example}
 
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-70"><strong>(\#def:unnamed-chunk-70) </strong></span>	Sean $G$ y $H$ dos semigrupos. Una función $f:G\longrightarrow H$ es un **homomorfismo** si y solo si $f(ab)=f(a)f(b)$ para todo $a,b\in G$.
+	Si $f$ es inyectiva, decimos que $f$ es un **monomorfismo**. Si $f$ es sobreyectiva, diremos que $f$ es un **epimorfismo**. Cuando $f$ es una función biectiva diremos que $f$ es un **isomorfismo** y esto lo denotaremos por $G\cong H$.
+	</div>\EndKnitrBlock{definition}
+
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	Un homomorfimos de $G$ en si mismo es llamado **endomorfismo de $G$**. Y un isomorfismo de $G$ en si mismo se conoce como **automorfismo de $G$**. 
+
+	Como todo grupo es un semigrupo, la definición de homomorfismo de grupo aplica perfectamente a grupos, al igual que el resto de las definiciones.
+</div>\EndKnitrBlock{remark}
+
+Note que dados dos homomorfismos de semigrupos $f:G\longrightarrow H$ y $g:H\longrightarrow K$, la composición $g\circ f:G\longrightarrow K$ es un homomorfismo de semigrupo. Por lo tanto se tiene que la composición de monomorfismos, es un monomorfismo, análogamente para epimorfismos e isomorfismos. Si $f:G\longrightarrow H$ es un homomorfismo de grupos y $e_{G}$ y $e_{H}$ son los elementos identidad de los grupos $G$ y $H$ respectivamente, entonces se tiene que $f(e_{G})=e_{H}$, por lo tanto $f(a^{-1})=f(a)^{-1}$. No obstante, si $G$ y $H$ son monoides, esto no es cierto.\\
+
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-72"><strong>(\#def:unnamed-chunk-72) </strong></span>	Dado $f:G\longrightarrow H$ un homomorfismo de grupo. El **núcleo** de $f$ (también conocido por su nombre en inglés **kernel**) es el conjunto $\{a\in G| f(a)=e_{H} \}$ y se denota $Ker f$. Dado $A\subseteq G$, **la imagen de $A$** es el conjunto $\{f(a)| a\in A \}$ y se denota por $f(A)$; al conjunto imagen de $G$, lo llamaremos **imagen de $f$** y le daremos una notación especial, $Im f$. Dado un conjunto $B\in H$, la imagen inversa de $B$ es el conjunto $f^{-1}(B)=\{a\in G|f(a)\in B \}$.
+</div>\EndKnitrBlock{definition}
+
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-73"><strong>(\#thm:unnamed-chunk-73) </strong></span>	Sea $f:G\longrightarrow H$ un homomorfismo de grupos. Entonces:
+
+		(i) $f$ es un monomorfismo si y solo si $Ker f=\{e_{G}\}$.
+
+		(ii) $f$ es un isomorfismo si y solo si existe un homomorfismo $g:H\longrightarrow G$ tal que $f^{-1}\circ f=\mathbb{I}_{G}$ y $f\circ f^{-1}=\mathbb{I}_{H}$.
+	</div>\EndKnitrBlock{theorem}
+
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	
+		(i) Supongamos que $f$ es un monomorfismo. Sea $a\in Ker f$, entonces $f(a)=e_{H}$. Como $f(e_{g})=e_{H}$ y $f$ es inyectiva, se tiene que $a=e_{G}$. Ahora supongamos que $Ker f=\{e_{G} \}$ y sean $a, b\in G$ tales que $f(a)=f(b)$. Entonces $=f(ab^{-1})f(a)f(b^{-1})=f(a)f(b)^{-1}=f(b)f(b)^{-1}=e_{H}$, por lo tanto $ab^{-1}=e_{G}$ de donde se sigue que $a=b$ y así $f$ es un monomorfismo.
+
+		(i) Ya vimos en la sección de funciones que existe la función inversa y que ella es biyectiva, además en \@ref{lema1.48} vimos que $f^{-1}\circ f=\mathbb{I}_{G}$ y $f\circ f^{-1}=\mathbb{I}_{H}$. El recíproco se tiene del lema siguiente \ref{lema1.49}.
+</div>\EndKnitrBlock{proof}
 
 ### Ejercicios
 
-\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-70"><strong>(\#exr:unnamed-chunk-70) </strong></span>Sea $G$ un grupo y $C$ un conjunto no vacío. Sea $M(C,G)$ el conjunto de todas las funciones $f:C\longrightarrow G$. Definamos la operación de grupo como la suma de funciones, es decir, para cada $f,g\in M(C,G)$, $f\ast g = f +g$. Demuestre que $M(C,G)$ es un grupo, es abeliano si $G$ lo es.
+\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-75"><strong>(\#exr:unnamed-chunk-75) </strong></span>Sea $G$ un grupo y $C$ un conjunto no vacío. Sea $M(C,G)$ el conjunto de todas las funciones $f:C\longrightarrow G$. Definamos la operación de grupo como la suma de funciones, es decir, para cada $f,g\in M(C,G)$, $f\ast g = f +g$. Demuestre que $M(C,G)$ es un grupo, es abeliano si $G$ lo es.
 
 Respuesta: Es claro que la suma de funciones es cerrada en $M(C,G)$. Sean $f,g,h\in M(C,G)$, para cada $a\in C$, $(f+(g+h))(a)=f(a)+((g+h)(a))=f(a)+(g(a)+h(a))$ como $G$ es un grupo, la suma es asociativa, luego $f(a)+(g(a)+h(a))=(f(a)+g(a))+h(a)=((f+g)(a))+h(a)=((f+g)+h)(a)$; por lo tanto la suma de funciones es asociativa.
 </div>\EndKnitrBlock{exercise}
@@ -526,6 +552,6 @@ Respuesta: Es claro que la suma de funciones es cerrada en $M(C,G)$. Sean $f,g,h
 	Análogamente, contar los elementos de $S_{n}$ es equivalente a contar las posibles permutaciones del conjunto $\{1,2,3,\cdots, n\}$.
 </div>\EndKnitrBlock{exercise}
 
-\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-71"><strong>(\#exr:unnamed-chunk-71) </strong></span>Demuestre que el grupo del ejemplo \@ref(exm:ejm1-21) es un grupo de orden $|G||H|$. Además muestre que $G\times H$ es un grupo abeliano si $G$ y $H$ lo son.
+\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-76"><strong>(\#exr:unnamed-chunk-76) </strong></span>Demuestre que el grupo del ejemplo \@ref(exm:ejm1-21) es un grupo de orden $|G||H|$. Además muestre que $G\times H$ es un grupo abeliano si $G$ y $H$ lo son.
 Respuesta: Sabemos que $|G\times H|=|G||H|$, lo que demuestra que el orden del grupo es el producto $|G||H|$. Ahora supongamos que $G$ y $H$ son abelianos, luego $(a,b)\ast (c,d)=(a\ast c,b\ast d)=(c\ast a,d\ast b)=(c,d)\ast (a,b)$.
 </div>\EndKnitrBlock{exercise}
