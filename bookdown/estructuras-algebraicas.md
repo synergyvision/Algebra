@@ -477,7 +477,7 @@ Veremos algunos resultados muy técnicos que nos serán útiles mas adelante.
 4) De la asociatividad se tiene la igualdad $(a*b)*(b^{-1}*a^{-1})=(a*(b*b^{-1})*a^{-1})=a*e*a^{-1}=e$. Y por la unicidad del elemento inverso (demostrada justo antes) se sigue que $(a*b)^{-1}$ es igual a $b^{-1}*a^{-1}$.
 </div>\EndKnitrBlock{proof}
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-62"><strong>(\#def:unnamed-chunk-62) </strong></span>Un subconjunto $H$ de un grupo $G$, se llama **subgrupo** de $G$ si respecto a la operación definida sobre $G$, él mismo forma un grupo.
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-62"><strong>(\#def:unnamed-chunk-62) </strong></span>Un subconjunto $H$ de un grupo $G$, se llama **subgrupo** de $G$ si respecto a la operación definida sobre $G$, él mismo forma un grupo. Esto se denota por $H< G$.
 </div>\EndKnitrBlock{definition}
 Suponga que $G$ es un grupo y $H\subseteq G$ es un subconjunto cerrado bajo la operación de grupo definida sobre G, es decir, para todo $a,b\in H$ se tiene que $ab\in H$. Y cada elemento de $H$ tiene su inverso también en $H$, esto es, si $a\in H$, entonces $a^{-1}\in H$. Es claro que $H$ será un semigrupo de $G$.
  Esto lo mostramos en el siguiente resultado:
@@ -508,8 +508,23 @@ Veamos a conyinuación algunos ejemplos de subgrupos.
 </div>\EndKnitrBlock{example}
 \BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-69"><strong>(\#exm:unnamed-chunk-69) </strong></span>	Sea $G$ un grupo cualquiera, sea $a\in G$ un elemento cualquiera. El conjunto $(a)=\{a^{n}|n\in\mathbb{Z} \}$ es un subgrupo de $G$ llamado el **grupo cíclico generado por $a$**. Efectivamente, claramente la operación es cerrada, para cuales quiera $a^{n}, a^{m}\in (a)$, $a^{n}a^{m}=a^{n+m}\in (a)$. por definición de $(a)$, $a^{n}$ y $a^{-n}$ están en $(a)$. Si para algún $a\in G$, $G=(a)$, entonces decimos que $G$ es un grupo cíclico.
 </div>\EndKnitrBlock{example}
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-70"><strong>(\#thm:unnamed-chunk-70) </strong></span>	Sea $G$ un grupo y sea $\{H_{i}|i\in I \}$ una familia no vacía de subgrupos de $G$, entonces $\bigcap_{i\in I} H_{i}$ es un subgrupo de $G$.
+</div>\EndKnitrBlock{theorem}
+La demostración queda como ejercicio.
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-70"><strong>(\#def:unnamed-chunk-70) </strong></span>	Sean $G$ y $H$ dos semigrupos. Una función $f:G\longrightarrow H$ es un **homomorfismo** si y solo si $f(ab)=f(a)f(b)$ para todo $a,b\in G$.
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-71"><strong>(\#def:unnamed-chunk-71) </strong></span>	Sea $G$ un grupo y sea $X$ un subconjunto de $G$. Sea $I$ una familia de índices, entonces $\bigcap_{i\in I} \{H_{i}|X\subseteq H_{i}< G \}$ es el ***subgrupo generado por $X$** y se denota por $\langle X \rangle$.
+</div>\EndKnitrBlock{definition}
+
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	Es importante hacer notar que el subgrupo $\langle X\rangle$ puede ser generado por otro conjunto de elementos de $G$, es decir, puede ocurrir que $\angle X\rangle=\langle Y\rangle$, con $X\neq Y$. Si en conjunto $X$ es un conjunto finito, en lugar de $\langle X\rangle$ escribimos $\langle x_{1},x_{2},\cdots , x_{n}\rangle$, donde $X=\{x_{1}, x_{2},\cdots ,x_{n}\}$.\\
+	Si un grupo es generado por un conjunto finito de elementos, es decir, $G=\langle a_{1}, a_{2},\cdots ,a_{n}\rangle$, donde $a_{i}\in G$ decimos que $G$ es un grupo \textit{finitamente generado}.
+</div>\EndKnitrBlock{remark}
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-73"><strong>(\#thm:unnamed-chunk-73) </strong></span>	Si $G$ es un grupo y $X$ un subconjunto no vacío de $G$, entonces el subgrupo $\langle X\rangle$ generado por $X$ está contituído por los productos de la forma $a_{1}^{m_{1}}a_{2}^{m_{2}}\cdots a_{n}^{m_{n}}$ donde $a_{i}\in X$, $m_{i}\in\mathbb{Z}$ y $n$ es un número entero positivo cualquiera. En particular $\langle a\rangle=\{a^{n}|n\in\mathbb{Z} \}$.
+</div>\EndKnitrBlock{theorem}
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Veamos que $H=\{a_{1}^{m_{1}}a_{2}^{m_{2}}\cdots a_{n}^{m_{n}} | n\in\mathbb{N}, a_{i}\in X$ \mbox{ y } $m_{i}\in\mathbb{Z}\}$ es un subgrupo de $G$ que contiene a $X$. En efecto, claramente $X\subseteq H$. Además, si $a\in X$, $a^{-1}\in H$ por lo tanto para $b,c\in H$, por definición de $H$ se tiene que  $b=a_{1}^{m_{1}}a_{2}^{m_{2}}\cdots a_{n}^{m_{n}}$ y $c=a_{1}^{r_{1}}a_{2}^{r_{2}}\cdots a_{k}^{r_{k}}$ por lo tanto $b^{-1}=a_{n}^{-m_{n}}\cdots  a_{2}^{m_{2}}a_{1}^{m_{1}} \in H$ y $bc=a_{1}^{m_{1}}a_{2}^{m_{2}}\cdots a_{n}^{m_{n}}a_{1}^{r_{1}}a_{2}^{r_{2}}\cdots a_{k}^{r_{k}}In H$. De donde se concluye que $H$ es un subgrupo que contine a $G$.\\
+	Ahora note que $H$ está contenido en todo subgrupo que contenga a $X$. Por lo tanto $H=\bigcap_{i\in I} \{H_{i}|X\subseteq H_{i}< G \}$.
+</div>\EndKnitrBlock{proof}
+
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-75"><strong>(\#def:unnamed-chunk-75) </strong></span>	Sean $G$ y $H$ dos semigrupos. Una función $f:G\longrightarrow H$ es un **homomorfismo** si y solo si $f(ab)=f(a)f(b)$ para todo $a,b\in G$.
 	Si $f$ es inyectiva, decimos que $f$ es un **monomorfismo**. Si $f$ es sobreyectiva, diremos que $f$ es un **epimorfismo**. Cuando $f$ es una función biectiva diremos que $f$ es un **isomorfismo** y esto lo denotaremos por $G\cong H$.
 	</div>\EndKnitrBlock{definition}
 
@@ -520,10 +535,10 @@ Veamos a conyinuación algunos ejemplos de subgrupos.
 
 Note que dados dos homomorfismos de semigrupos $f:G\longrightarrow H$ y $g:H\longrightarrow K$, la composición $g\circ f:G\longrightarrow K$ es un homomorfismo de semigrupo. Por lo tanto se tiene que la composición de monomorfismos, es un monomorfismo, análogamente para epimorfismos e isomorfismos. Si $f:G\longrightarrow H$ es un homomorfismo de grupos y $e_{G}$ y $e_{H}$ son los elementos identidad de los grupos $G$ y $H$ respectivamente, entonces se tiene que $f(e_{G})=e_{H}$, por lo tanto $f(a^{-1})=f(a)^{-1}$. No obstante, si $G$ y $H$ son monoides, esto no es cierto.\\
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-72"><strong>(\#def:unnamed-chunk-72) </strong></span>	Dado $f:G\longrightarrow H$ un homomorfismo de grupo. El **núcleo** de $f$ (también conocido por su nombre en inglés **kernel**) es el conjunto $\{a\in G| f(a)=e_{H} \}$ y se denota $Ker f$. Dado $A\subseteq G$, **la imagen de $A$** es el conjunto $\{f(a)| a\in A \}$ y se denota por $f(A)$; al conjunto imagen de $G$, lo llamaremos **imagen de $f$** y le daremos una notación especial, $Im f$. Dado un conjunto $B\in H$, la imagen inversa de $B$ es el conjunto $f^{-1}(B)=\{a\in G|f(a)\in B \}$.
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-77"><strong>(\#def:unnamed-chunk-77) </strong></span>	Dado $f:G\longrightarrow H$ un homomorfismo de grupo. El **núcleo** de $f$ (también conocido por su nombre en inglés **kernel**) es el conjunto $\{a\in G| f(a)=e_{H} \}$ y se denota $Ker f$. Dado $A\subseteq G$, **la imagen de $A$** es el conjunto $\{f(a)| a\in A \}$ y se denota por $f(A)$; al conjunto imagen de $G$, lo llamaremos **imagen de $f$** y le daremos una notación especial, $Im f$. Dado un conjunto $B\in H$, la imagen inversa de $B$ es el conjunto $f^{-1}(B)=\{a\in G|f(a)\in B \}$.
 </div>\EndKnitrBlock{definition}
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-73"><strong>(\#thm:unnamed-chunk-73) </strong></span>	Sea $f:G\longrightarrow H$ un homomorfismo de grupos. Entonces:
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-78"><strong>(\#thm:unnamed-chunk-78) </strong></span>	Sea $f:G\longrightarrow H$ un homomorfismo de grupos. Entonces:
 
 		(i) $f$ es un monomorfismo si y solo si $Ker f=\{e_{G}\}$.
 
@@ -538,7 +553,7 @@ Note que dados dos homomorfismos de semigrupos $f:G\longrightarrow H$ y $g:H\lon
 
 ### Ejercicios
 
-\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-75"><strong>(\#exr:unnamed-chunk-75) </strong></span>Sea $G$ un grupo y $C$ un conjunto no vacío. Sea $M(C,G)$ el conjunto de todas las funciones $f:C\longrightarrow G$. Definamos la operación de grupo como la suma de funciones, es decir, para cada $f,g\in M(C,G)$, $f\ast g = f +g$. Demuestre que $M(C,G)$ es un grupo, es abeliano si $G$ lo es.
+\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-80"><strong>(\#exr:unnamed-chunk-80) </strong></span>Sea $G$ un grupo y $C$ un conjunto no vacío. Sea $M(C,G)$ el conjunto de todas las funciones $f:C\longrightarrow G$. Definamos la operación de grupo como la suma de funciones, es decir, para cada $f,g\in M(C,G)$, $f\ast g = f +g$. Demuestre que $M(C,G)$ es un grupo, es abeliano si $G$ lo es.
 
 Respuesta: Es claro que la suma de funciones es cerrada en $M(C,G)$. Sean $f,g,h\in M(C,G)$, para cada $a\in C$, $(f+(g+h))(a)=f(a)+((g+h)(a))=f(a)+(g(a)+h(a))$ como $G$ es un grupo, la suma es asociativa, luego $f(a)+(g(a)+h(a))=(f(a)+g(a))+h(a)=((f+g)(a))+h(a)=((f+g)+h)(a)$; por lo tanto la suma de funciones es asociativa.
 </div>\EndKnitrBlock{exercise}
@@ -552,6 +567,20 @@ Respuesta: Es claro que la suma de funciones es cerrada en $M(C,G)$. Sean $f,g,h
 	Análogamente, contar los elementos de $S_{n}$ es equivalente a contar las posibles permutaciones del conjunto $\{1,2,3,\cdots, n\}$.
 </div>\EndKnitrBlock{exercise}
 
-\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-76"><strong>(\#exr:unnamed-chunk-76) </strong></span>Demuestre que el grupo del ejemplo \@ref(exm:ejm1-21) es un grupo de orden $|G||H|$. Además muestre que $G\times H$ es un grupo abeliano si $G$ y $H$ lo son.
+\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-81"><strong>(\#exr:unnamed-chunk-81) </strong></span>(1.) Demuestre que el grupo del ejemplo \@ref(exm:ejm1-21) es un grupo de orden $|G||H|$. Además muestre que $G\times H$ es un grupo abeliano si $G$ y $H$ lo son.
 Respuesta: Sabemos que $|G\times H|=|G||H|$, lo que demuestra que el orden del grupo es el producto $|G||H|$. Ahora supongamos que $G$ y $H$ son abelianos, luego $(a,b)\ast (c,d)=(a\ast c,b\ast d)=(c\ast a,d\ast b)=(c,d)\ast (a,b)$.
+
+(2.) Demuestre que el grupo simétrico sobre $n$ letras es de orden $n!$.
+	Respuesta: Pensemos en el grupo simétrico $S_{3}$. El orden del grupo es equivalente a contar todas las posibles biyecciones de un conjunto de $3$ elementos, a saber:\\
+	$\left(  {\begin{array}{ccc}
+		1 & 2 & 3\\
+		i_{1} & i_{2} & i_{3}\\
+		\end{array} } \right) $. Nótese que $1$ tiene $3$ posibles imágenes $i_{1}$, luego de fijada la imagen de $1$, restas $2$ posibles imágenes de $2$, $i_{2}$ y luego de fijadas las imágenes de $1$ y $2$, le queda una sola posibilidad a $3$. De donde podemos concluír que existen $3!$ posibles biyecciones de $\{1,2,3\}$ en sí mismo.
+	Análogamente, contar los elementos de $S_{n}$ es equivalente a contar las posibles permutaciones del conjunto $\{1,2,3,\cdots, n\}$.
+	(3.) Demuestre que el grupo del ejemplo \ref{ejm1-21} es un grupo de orden $|G||H|$. Además muestre que $G\times H$ es un grupo abeliano si $G$ y $H$ lo son.
+	Respuesta: Sabemos que $|G\times H|=|G||H|$, lo que demuestra que el orden del grupo es el producto $|G||H|$. Ahora supongamos que $G$ y $H$ son abelianos, luego $(a,b)\ast (c,d)=(a\ast c,b\ast d)=(c\ast a,d\ast b)=(c,d)\ast (a,b)$.
+
+(4.) Demuestre que la intersección de subgrupos es un subgrupo.
+	Respuesta: Sea $G$ un grupo y sea $\{H_{i}|i\in I \}$ una familia no vacía de subgrupos de $G$. Sea $a,b\in\bigcap_{i\in I}H_{i}$. Entonces para cada $i\in I$, $a,b\in H_{i}$, como cada $H_{i}$ es un subgrupo de $G$, se tiene que $a^{-1}, ab\in H_{i}$, por lo tanto $a^{-1}, ab\in\bigcap_{i\in I} H_{i}$.
 </div>\EndKnitrBlock{exercise}
+
