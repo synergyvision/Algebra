@@ -349,7 +349,26 @@ Enunciaremos el conocido *Teorema de Schroeder-Bernstein* sin demostración. El 
 
 \BeginKnitrBlock{theorem}\iffalse{-91-84-101-111-114-101-109-97-32-100-101-32-83-99-104-114-111-101-100-101-114-45-66-101-114-110-115-116-101-105-110-93-}\fi{}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-46"><strong>(\#thm:unnamed-chunk-46)  \iffalse (Teorema de Schroeder-Bernstein) \fi{} </strong></span>	 Si $A$ y $B$ son conjuntos tales que $|A|\leq |B|$ y $|B|\leq |A|$. Entonces $|A|=|B|$.
  </div>\EndKnitrBlock{theorem}
- 
+A continuaci\'on veremos resultados que nos permiten caracterizar los grupos c\'iclicos.
+
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-47"><strong>(\#thm:unnamed-chunk-47) </strong></span>	Sea $H$ un subgrupo del grupo aditivo $\mathbb{Z}$. $H$ es cíclico, además $H=\langle 0\rangle$ o $H=\langle m\rangle$ donde $m$ es el menor entero positivo de $H$.
+</div>\EndKnitrBlock{theorem}
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Supongamos que $H\neq \langle 0\rangle$. Entonces existe $m\in H$ mínimo. Como $H$ es subgrupo, es fácil ver que $\langle m\rangle\subseteq H$. Ahora bien, para todo $h\in H$ se tiene que $h=km+r$ para algún entero $k$ y un entero no negativo $r<m$ (algoritmo de la división). De lo anterior se tiene que $r=h-km$ es un elemento de $H$. Como $m$ es el mínimo de $H$, se tiene que $r=0$ de donde se sigue que $h$ es un elemento de $\langle m\rangle$.
+</div>\EndKnitrBlock{proof}
+
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	En el teorema anterior, si $H\neq \langle 0\rangle$, entonces es infinito.
+\end{remark}
+
+Note que si $G$ es un grupo cíclico, la función que aplica a cada entero $k$ en el elemento $a^{k}$, es un epimorfismo. Además, si el núcleo es $0$, se tiene que $G\cong \mathbb{Z}$; si no, el núcleo es un subgrupo no trivial de $\mathbb{Z}$, por el teorema anterior, será un grupo cíclico, es decir, de la forma $\langle m\rangle$, con $m$ el menor entero positivo tal que $a^{m}=e$. Por otro lado, como $a^{r}=a^{s}\Leftrightarrow a^{r-s}=e$, se tiene que $r-s$ pertenece al núcleo, por lo que $r-s=km$ para algún entero $k$, de donde se tiene que $[r]=[s]\in\mathbb{Z}_{m}$. Por lo que la función que asigna a cada clase de equivalencia $[k]$ de $\mathbb{Z}_{m}$ al elemento $a^{k}$ está bien definida y es un isomorfismo. Esto es lo podemos escribir como el siguiente:
+</div>\EndKnitrBlock{remark}
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-50"><strong>(\#thm:unnamed-chunk-50) </strong></span>	Todo grupo cíclico infinito es isomorfo al grupo aditivo $\mathbb{Z}$ y todo grupo cíclico finito de orden $m$ es isomorfo al grupo aditivo $\mathbb{Z}_{m}$.
+</div>\EndKnitrBlock{theorem}
+
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Sea $G=\langle a\rangle$. Sea $f:\mathbb{Z}\longrightarrow G$ la función definida por $f(k)=a^{k}$. Para cada $b\in G$, existe $r\in\mathbb{Z}$ tal que $b=a^{r}$ por lo tanto $f(r)=a^{r}=b$, esto muestra que $f$ es sobreyectiva. Se tiene que $Ker f=\{0\}$, en caso contrario se tiene que $Ker f=\langle m\rangle$, luego $G$ sería finito.\\
+	Si $G$ es un grupo finito, $Ker f=\langle m\rangle$. Sea $g:\mathbb{Z}_{m}\longrightarrow G$ como $g([k])=a^{k}$ está bien definida ya que para todo $r,s\in\mathbb{Z}$, $a^{r}=a^{s}\Leftrightarrow a^{r-s}=e\Leftrightarrow r-s\in Ker f=\langle m\rangle$ por lo tanto $r-s=km$ para algún entero $k$ y así $[r]=[s]$. Es claro que es un epimorfismo, además, como $g([k])=e\Leftrightarrow a^{k}=e=a^{0}\Leftrightarrow [k]=[0]$, entonces $Ker g=\{[0]\}$, por lo tanto $g$ es un isomorfismo. 
+</div>\EndKnitrBlock{proof}
+
+Ejercicios
 
 ### Ejercicios
 
@@ -380,7 +399,7 @@ A continuación presentaremos la definición formal de grupo así como un amplio
 
 Dado un conjunto no vacío $G$, una *operación binaria* es una función $G\times G\longrightarrow G$. Comunmente se usan las notaciones $a\ast b$ o  $a\cdot b$ para denotar la imagen de $(a,b)$ por la función, aunque puede también usarse $ab$ (obviando el punto como se hace para expresar el producto de dos números) o incluso $a+b$ cuando la operación es la suma usual (como sucede con los números enteros).
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-47"><strong>(\#def:unnamed-chunk-47) </strong></span>Un par $(G,\ast)$, donde $G$ es un conjunto no vacío y una operacón binaria $\ast:G\times G\longrightarrow G$, forman un **grupo** si:
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-52"><strong>(\#def:unnamed-chunk-52) </strong></span>Un par $(G,\ast)$, donde $G$ es un conjunto no vacío y una operacón binaria $\ast:G\times G\longrightarrow G$, forman un **grupo** si:
   
 i) Para todo $a,b,c\in G$, $(a\ast b)\ast c=a\ast (b\ast c)$. Es decir, la operación es *asociativa*.
 		
@@ -399,21 +418,21 @@ iv) Commutativa, es decir, $a*b=b*a$, para todo $a, b\in G$.
    
 El **orden** de un grupo $G$ es la cantidad de elementos que tiene el grupo, es decir, la cardinalidad de $G$ ($|G|$). También se denota $o(G)$ Decimos que un grupo es de **orden finito** (o simplemente finito) si $|G|$ es finito. En caso contrario decimos que el grupo es **infinito**.
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-49"><strong>(\#exm:unnamed-chunk-49) </strong></span>El conjunto de los números enteros con el producto usual es un monoide ya que el producto es una operación asociativa y el número uno (1) es el elemento identidad. Como ya lo hemos mencionado, el conjunto de los números enteros, $\mathbb{Z}$ con la operación suma (la suma usual de enteros), forman un grupo. El lector podrá verificar fácilmente que la operación suma es cerrada, es asociativa, que el cero es el elemento neutro ($e$ en la definición) y que cada elemento tiene un inverso ($a^{-1}=-a$). Además es claro que se trata de un grupo abeliano (la suma es una operación commutativa). A un grupo cuya operación es la suma, como en este ejemplo, lo llamaremos **grupo aditivo**, si es el producto, lo denominaremos **grupo multiplicativo**.
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-54"><strong>(\#exm:unnamed-chunk-54) </strong></span>El conjunto de los números enteros con el producto usual es un monoide ya que el producto es una operación asociativa y el número uno (1) es el elemento identidad. Como ya lo hemos mencionado, el conjunto de los números enteros, $\mathbb{Z}$ con la operación suma (la suma usual de enteros), forman un grupo. El lector podrá verificar fácilmente que la operación suma es cerrada, es asociativa, que el cero es el elemento neutro ($e$ en la definición) y que cada elemento tiene un inverso ($a^{-1}=-a$). Además es claro que se trata de un grupo abeliano (la suma es una operación commutativa). A un grupo cuya operación es la suma, como en este ejemplo, lo llamaremos **grupo aditivo**, si es el producto, lo denominaremos **grupo multiplicativo**.
 </div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-50"><strong>(\#exm:unnamed-chunk-50) </strong></span>Dado el conjunto $G={1,-1}$. Definimos la operación $\ast:G\times G \longrightarrow G$ como el producto de números reales usual. El par $(G,\ast)$ forman un grupo abeliano de orden $2$.
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-55"><strong>(\#exm:unnamed-chunk-55) </strong></span>Dado el conjunto $G={1,-1}$. Definimos la operación $\ast:G\times G \longrightarrow G$ como el producto de números reales usual. El par $(G,\ast)$ forman un grupo abeliano de orden $2$.
 </div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-51"><strong>(\#exm:unnamed-chunk-51) </strong></span>El conjunto de los números racionales $\mathbb{Q}$ con la suma usual, es un grupo abeliano.
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-56"><strong>(\#exm:unnamed-chunk-56) </strong></span>El conjunto de los números racionales $\mathbb{Q}$ con la suma usual, es un grupo abeliano.
 </div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-52"><strong>(\#exm:unnamed-chunk-52) </strong></span>Consideremos un cuadrado cuyos vértices estan numerados consecutivamente $1,2,3,4$ centrado en el origen del palno cartesiano y de lados paralelos a los ejes coordenados.
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-57"><strong>(\#exm:unnamed-chunk-57) </strong></span>Consideremos un cuadrado cuyos vértices estan numerados consecutivamente $1,2,3,4$ centrado en el origen del palno cartesiano y de lados paralelos a los ejes coordenados.
 
 Sea $C_{4}$ el conjunto formado por las siguientes transformaciones: $R$, una rotación de $90º$ del cuadrado. $R^{2}$ una rotación de $180º$ del cuadrados. $R^{3}$ una rotación de $270º$ del cuadrado (todas en el sentido de las agujas del reloj, centradas en el origen). $I$, una rotación de $360º$ (igual que antes en sentido horario, centrada en el origen). $T_{x}$ y $T_{y}$, reflexiones sobre los ejes $x$ y $y$ respectivamente y $T_{I}$ y $T_{II}$ reflexiones sobre las diagonales que pasan por los vértices que están en el primer y tercer cuadrante (la primera) y en el segundo y cuarto cuadrante (la segunda). Con la operación *composición de funciones*, el conjunto $C_{4} = {R, R^{2}, R^{3}, I, T_{x}, T_{y}, T_{I}, T_{II}}$ es un grupo no abeliano de orden $8$ llamado el **grupo de simetría del cuadrado**.
 </div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-53"><strong>(\#exm:unnamed-chunk-53) </strong></span>Sea $C$ un conjunto no vacío y $\mathcal{A}(C)$ el conjunto de todas las biyecciones de $C$ en si mismo. Con la operación composición de funciones vista en la sección anterior, $\mathcal{A}(C)$ forma un grupo (no abeliano). En efecto, la composición de funciones biyectivas es asociativa, la identidad es una función biyectiva y toda biyección tiene una inversa. Los elementos de $\mathcal{A}(C)$ son llamados **permutaciones** y $\mathcal{A}(C)$ es llamado el grupo de permutaciones sobre $C$. Si $C=\{1,2, ..., n\}$, entonces $\mathcal{A}(C)$ es llamdo el **grupo simétrico sobre $n$ letras** y se denota $S_{n}$. Se puede ver que $|S_{n}|=n!$ (ejercicio \@ref(exr:ejc3)).
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-58"><strong>(\#exm:unnamed-chunk-58) </strong></span>Sea $C$ un conjunto no vacío y $\mathcal{A}(C)$ el conjunto de todas las biyecciones de $C$ en si mismo. Con la operación composición de funciones vista en la sección anterior, $\mathcal{A}(C)$ forma un grupo (no abeliano). En efecto, la composición de funciones biyectivas es asociativa, la identidad es una función biyectiva y toda biyección tiene una inversa. Los elementos de $\mathcal{A}(C)$ son llamados **permutaciones** y $\mathcal{A}(C)$ es llamado el grupo de permutaciones sobre $C$. Si $C=\{1,2, ..., n\}$, entonces $\mathcal{A}(C)$ es llamdo el **grupo simétrico sobre $n$ letras** y se denota $S_{n}$. Se puede ver que $|S_{n}|=n!$ (ejercicio \@ref(exr:ejc3)).
 </div>\EndKnitrBlock{example}
 
 \BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}Dado un elemento $f\in S_{n}$, podemos representarlo por $\left(  {\begin{array}{ccccc}
@@ -438,10 +457,10 @@ Sea $C_{4}$ el conjunto formado por las siguientes transformaciones: $R$, una ro
 \BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:ejm1-21"><strong>(\#exm:ejm1-21) </strong></span>Dados $G$ y $H$ dos grupos con identidades $e_{G}$ y $e_{H}$ respectivamente. Consideremos el producto cartesiano $G\times H$ y la operación binaria $(a,b)\ast (c,d)=(a\ast c,b\ast d)$ donde $a\ast c\in G$ y $b\ast d\in H$. Con esta operación $G\times H$ es un grupo con identidad $(e_{G}, e_{H})$ y con inverso $(a^{-1}, b^{-1})$ para cada elemento $(a,b)\in G\times H$.
 </div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-55"><strong>(\#def:unnamed-chunk-55) </strong></span>Una relación de equivalencia sobre un monoide $G$ que satisface que si $a_{1}\sim a_{2}$ y $b_{1}\sim b_{2}$, entonces $a_{1}b_{1}\sim a_{2}b_{2}$ para todo $a_{1},a_{2},b_{1},b_{2}\in G$, se llama **relación de congruencia**.
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-60"><strong>(\#def:unnamed-chunk-60) </strong></span>Una relación de equivalencia sobre un monoide $G$ que satisface que si $a_{1}\sim a_{2}$ y $b_{1}\sim b_{2}$, entonces $a_{1}b_{1}\sim a_{2}b_{2}$ para todo $a_{1},a_{2},b_{1},b_{2}\in G$, se llama **relación de congruencia**.
 </div>\EndKnitrBlock{definition}
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-56"><strong>(\#thm:unnamed-chunk-56) </strong></span>Si $\sim$ es una relación de congruencia sobre un monoide $G$, entonces el conjunto $G/\sim$ de todas las clases equivalencia de $(G,\sim)$ es un monoide con la operación binaria definida por $[a][b]=[ab]$. Si $G$ es un grupo abeliano, entoces $(G,\sim)$ lo és.
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-61"><strong>(\#thm:unnamed-chunk-61) </strong></span>Si $\sim$ es una relación de congruencia sobre un monoide $G$, entonces el conjunto $G/\sim$ de todas las clases equivalencia de $(G,\sim)$ es un monoide con la operación binaria definida por $[a][b]=[ab]$. Si $G$ es un grupo abeliano, entoces $(G,\sim)$ lo és.
 </div>\EndKnitrBlock{theorem}
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Como $\sim$ es una relación de equivalencia, se tiene que:
   (1) Si $[a_{1}]=[a_{2}]$ y $[b_{1}]=[b_{2}]$, $a_{1}\sim a_{2}$ y $b_{1}\sim b_{2}$, entonces $a_{1}b_{1}\sim a_{2}b_{2}$, es decir, $[a_{1}b_{1}]= [a_{2}b_{2}]$. Entonces la operación está bien definida. $G/\sim$ tiene un elemento neutro, para todo $a\in G$ se tiene que $[a][e]=[ae]=[a]=[ea]=[e][a]$, donde $e\in G$ es el elemento neutro del monoide. La operación es asociativa, en efecto, $[a]([b][c])=[a][bc]=[a(bc)]=[(ab)c]=[ab][c]=([a][b])[c]$. De aquí concluímos que $G/\sim$ es un monoide.
@@ -449,15 +468,15 @@ Supongamos que $G$ es un grupo abeliano, entonces cada $a\in G$ tiene un element
 </div>\EndKnitrBlock{proof}
 Este teorema dota de otros ejemplos, tanto de monoides como de grupos:
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-58"><strong>(\#exm:unnamed-chunk-58) </strong></span>Para un entero fijo, la relación de congruencia modular es una relación de congruencia sobre el grupo aditivo $\mathbb{Z}$. Como $(\mathbb{Z}, +)$ es un grupo abeliano, se tiene que $\mathbb{Z}_{n}$ es un grupo aditivo abeliano, con la operación natural $[a]+[b]=[a+b]$.
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-63"><strong>(\#exm:unnamed-chunk-63) </strong></span>Para un entero fijo, la relación de congruencia modular es una relación de congruencia sobre el grupo aditivo $\mathbb{Z}$. Como $(\mathbb{Z}, +)$ es un grupo abeliano, se tiene que $\mathbb{Z}_{n}$ es un grupo aditivo abeliano, con la operación natural $[a]+[b]=[a+b]$.
 </div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-59"><strong>(\#exm:unnamed-chunk-59) </strong></span>$(Z,\ast)$ es un monoide sobre $\mathbb{Z}$ con la multiplicación usual de enteros. por lo tanto $\mathbb{Z}_{n}$ es un monoide, con la operación $[a]\ast[b]=[a\ast b]$.
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-64"><strong>(\#exm:unnamed-chunk-64) </strong></span>$(Z,\ast)$ es un monoide sobre $\mathbb{Z}$ con la multiplicación usual de enteros. por lo tanto $\mathbb{Z}_{n}$ es un monoide, con la operación $[a]\ast[b]=[a\ast b]$.
 </div>\EndKnitrBlock{example}
 
 Veremos algunos resultados muy técnicos que nos serán útiles mas adelante.
 
-\BeginKnitrBlock{lemma}<div class="lemma"><span class="lemma" id="lem:unnamed-chunk-60"><strong>(\#lem:unnamed-chunk-60) </strong></span>Sea $G$ un grupo, entonces se tiene que:
+\BeginKnitrBlock{lemma}<div class="lemma"><span class="lemma" id="lem:unnamed-chunk-65"><strong>(\#lem:unnamed-chunk-65) </strong></span>Sea $G$ un grupo, entonces se tiene que:
   
   1) el elemento identidad de $G$ es único;
 
@@ -477,12 +496,12 @@ Veremos algunos resultados muy técnicos que nos serán útiles mas adelante.
 4) De la asociatividad se tiene la igualdad $(a*b)*(b^{-1}*a^{-1})=(a*(b*b^{-1})*a^{-1})=a*e*a^{-1}=e$. Y por la unicidad del elemento inverso (demostrada justo antes) se sigue que $(a*b)^{-1}$ es igual a $b^{-1}*a^{-1}$.
 </div>\EndKnitrBlock{proof}
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-62"><strong>(\#def:unnamed-chunk-62) </strong></span>Un subconjunto $H$ de un grupo $G$, se llama **subgrupo** de $G$ si respecto a la operación definida sobre $G$, él mismo forma un grupo. Esto se denota por $H< G$.
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-67"><strong>(\#def:unnamed-chunk-67) </strong></span>Un subconjunto $H$ de un grupo $G$, se llama **subgrupo** de $G$ si respecto a la operación definida sobre $G$, él mismo forma un grupo. Esto se denota por $H< G$.
 </div>\EndKnitrBlock{definition}
 Suponga que $G$ es un grupo y $H\subseteq G$ es un subconjunto cerrado bajo la operación de grupo definida sobre G, es decir, para todo $a,b\in H$ se tiene que $ab\in H$. Y cada elemento de $H$ tiene su inverso también en $H$, esto es, si $a\in H$, entonces $a^{-1}\in H$. Es claro que $H$ será un semigrupo de $G$.
  Esto lo mostramos en el siguiente resultado:
 
-\BeginKnitrBlock{lemma}<div class="lemma"><span class="lemma" id="lem:unnamed-chunk-63"><strong>(\#lem:unnamed-chunk-63) </strong></span>Un subconjunto no vacío $H$ de un grupo $G$, es un subgrupo si y solo si:
+\BeginKnitrBlock{lemma}<div class="lemma"><span class="lemma" id="lem:unnamed-chunk-68"><strong>(\#lem:unnamed-chunk-68) </strong></span>Un subconjunto no vacío $H$ de un grupo $G$, es un subgrupo si y solo si:
   
   1) para cada $a,b\in H$, $ab\in H$.
 
@@ -492,7 +511,7 @@ Suponga que $G$ es un grupo y $H\subseteq G$ es un subconjunto cerrado bajo la o
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Es claro que si $H\subseteq G$ es un subgrupo de $G$, cumple 1 y 2.
 Recíprocamente, supongamos que $H\subseteq G$, cumple con 1 y 2. Faltaría ver que la operación es asociativa en $H$ y que el elemento neutro está en $H$. La ley asociativa se hereda de $G$ (si la operación es asociativa en $G$, de igual forma lo será en $H$). Como para cada elemento de $H$ tiene un inverso, existen $a, a^{-1}\in H$; además se tiene que la operación es cerrada en $H$, luego $e=aa^{-1}\in H$. Por lo tanto se tiene que $H$ es un grupo (con la operación heredada de $G$). 
 </div>\EndKnitrBlock{proof}
-\BeginKnitrBlock{lemma}<div class="lemma"><span class="lemma" id="lem:unnamed-chunk-65"><strong>(\#lem:unnamed-chunk-65) </strong></span>	Si $H$ es un subconjunto finito no vacío de un grupo $G$ y $H$ es cerrado bajo la operación de grupo, entonces $H$ es un subgrupo de $G$.
+\BeginKnitrBlock{lemma}<div class="lemma"><span class="lemma" id="lem:unnamed-chunk-70"><strong>(\#lem:unnamed-chunk-70) </strong></span>	Si $H$ es un subconjunto finito no vacío de un grupo $G$ y $H$ es cerrado bajo la operación de grupo, entonces $H$ es un subgrupo de $G$.
 </div>\EndKnitrBlock{lemma}
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Note que, dado $a\in H$, $a, a^{2}, a^{3},\cdots , c^{n},\cdots \in H$. Pero $H$ es finito, por lo tanto existen enteros positivos $r>s>0$ tales que $a^{r}=a^{s}$, entonces se tiene que $a^{r}a^{-s}=a^{s}a^{-s}$ de donde se sigue a $a^{r-s}=e$, lo que muestra que $e\in H$. Por otro lado, $a^{r-s-1}$ está en la lista de elementos de $H$, por lo tanto, dado $a\in H$ se tiene que $a^{-1}=ea^{-1}=a^{r-s-1}\in H$ ya que $aa^{-1}=aa^{r-s-1}=a^{r-s}=e=a^{r-s}=a^{r-s-1}a=a^{-1}a$. Por el lema anterior, se tiene que $H$ es un subgrupo de $G$.
 </div>\EndKnitrBlock{proof}
@@ -500,31 +519,31 @@ Recíprocamente, supongamos que $H\subseteq G$, cumple con 1 y 2. Faltaría ver 
 Este lema nos permite saber si un subconjunto finito de un grupo es un subgrupo tan solo probando que la operación de grupo es cerrada en el subconjunto finito. 
 Veamos a conyinuación algunos ejemplos de subgrupos.
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-67"><strong>(\#exm:unnamed-chunk-67) </strong></span>	Dado un grupo $G$. El mismo $G$ es un subgrupo. El conjunto cuyo único elemento es la identidad del grupo, $\{e\}$ es un subgrupo. Estos dos se conocen con el nombre de **subgrupos triviales** del grupo $G$.
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-72"><strong>(\#exm:unnamed-chunk-72) </strong></span>	Dado un grupo $G$. El mismo $G$ es un subgrupo. El conjunto cuyo único elemento es la identidad del grupo, $\{e\}$ es un subgrupo. Estos dos se conocen con el nombre de **subgrupos triviales** del grupo $G$.
 </div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-68"><strong>(\#exm:unnamed-chunk-68) </strong></span>	Consideremos el grupo aditico de los números enteros. Sea $n\in\mathbb{N}$ un entero positivo. El conjunto $H_{n}$ formado por los múltiplos de $n$ es un subgrupo. Es fácil ver que si sumamos dos múltiplos de $n$, es resultado es un múltiplo de $n$, $kn+qn=(k+q)n$. Además $k\ kn$ y $-kn$ están en $H$ y $kn+(-kn)=0=-kn+kn$.
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-73"><strong>(\#exm:unnamed-chunk-73) </strong></span>	Consideremos el grupo aditico de los números enteros. Sea $n\in\mathbb{N}$ un entero positivo. El conjunto $H_{n}$ formado por los múltiplos de $n$ es un subgrupo. Es fácil ver que si sumamos dos múltiplos de $n$, es resultado es un múltiplo de $n$, $kn+qn=(k+q)n$. Además $k\ kn$ y $-kn$ están en $H$ y $kn+(-kn)=0=-kn+kn$.
 	Es interesante pensar en el conjunto intersección de dos de estos subgrupos, es decir, $H_{n}\cap H_{m}$. 
 </div>\EndKnitrBlock{example}
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-69"><strong>(\#exm:unnamed-chunk-69) </strong></span>	Sea $G$ un grupo cualquiera, sea $a\in G$ un elemento cualquiera. El conjunto $(a)=\{a^{n}|n\in\mathbb{Z} \}$ es un subgrupo de $G$ llamado el **grupo cíclico generado por $a$**. Efectivamente, claramente la operación es cerrada, para cuales quiera $a^{n}, a^{m}\in (a)$, $a^{n}a^{m}=a^{n+m}\in (a)$. por definición de $(a)$, $a^{n}$ y $a^{-n}$ están en $(a)$. Si para algún $a\in G$, $G=(a)$, entonces decimos que $G$ es un grupo cíclico.
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-74"><strong>(\#exm:unnamed-chunk-74) </strong></span>	Sea $G$ un grupo cualquiera, sea $a\in G$ un elemento cualquiera. El conjunto $(a)=\{a^{n}|n\in\mathbb{Z} \}$ es un subgrupo de $G$ llamado el **grupo cíclico generado por $a$**. Efectivamente, claramente la operación es cerrada, para cuales quiera $a^{n}, a^{m}\in (a)$, $a^{n}a^{m}=a^{n+m}\in (a)$. por definición de $(a)$, $a^{n}$ y $a^{-n}$ están en $(a)$. Si para algún $a\in G$, $G=(a)$, entonces decimos que $G$ es un grupo cíclico.
 </div>\EndKnitrBlock{example}
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-70"><strong>(\#thm:unnamed-chunk-70) </strong></span>	Sea $G$ un grupo y sea $\{H_{i}|i\in I \}$ una familia no vacía de subgrupos de $G$, entonces $\bigcap_{i\in I} H_{i}$ es un subgrupo de $G$.
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-75"><strong>(\#thm:unnamed-chunk-75) </strong></span>	Sea $G$ un grupo y sea $\{H_{i}|i\in I \}$ una familia no vacía de subgrupos de $G$, entonces $\bigcap_{i\in I} H_{i}$ es un subgrupo de $G$.
 </div>\EndKnitrBlock{theorem}
 La demostración queda como ejercicio.
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-71"><strong>(\#def:unnamed-chunk-71) </strong></span>	Sea $G$ un grupo y sea $X$ un subconjunto de $G$. Sea $I$ una familia de índices, entonces $\bigcap_{i\in I} \{H_{i}|X\subseteq H_{i}< G \}$ es el ***subgrupo generado por $X$** y se denota por $\langle X \rangle$.
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-76"><strong>(\#def:unnamed-chunk-76) </strong></span>	Sea $G$ un grupo y sea $X$ un subconjunto de $G$. Sea $I$ una familia de índices, entonces $\bigcap_{i\in I} \{H_{i}|X\subseteq H_{i}< G \}$ es el ***subgrupo generado por $X$** y se denota por $\langle X \rangle$.
 </div>\EndKnitrBlock{definition}
 
 \BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	Es importante hacer notar que el subgrupo $\langle X\rangle$ puede ser generado por otro conjunto de elementos de $G$, es decir, puede ocurrir que $\angle X\rangle=\langle Y\rangle$, con $X\neq Y$. Si en conjunto $X$ es un conjunto finito, en lugar de $\langle X\rangle$ escribimos $\langle x_{1},x_{2},\cdots , x_{n}\rangle$, donde $X=\{x_{1}, x_{2},\cdots ,x_{n}\}$.\\
 	Si un grupo es generado por un conjunto finito de elementos, es decir, $G=\langle a_{1}, a_{2},\cdots ,a_{n}\rangle$, donde $a_{i}\in G$ decimos que $G$ es un grupo \textit{finitamente generado}.
 </div>\EndKnitrBlock{remark}
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-73"><strong>(\#thm:unnamed-chunk-73) </strong></span>	Si $G$ es un grupo y $X$ un subconjunto no vacío de $G$, entonces el subgrupo $\langle X\rangle$ generado por $X$ está contituído por los productos de la forma $a_{1}^{m_{1}}a_{2}^{m_{2}}\cdots a_{n}^{m_{n}}$ donde $a_{i}\in X$, $m_{i}\in\mathbb{Z}$ y $n$ es un número entero positivo cualquiera. En particular $\langle a\rangle=\{a^{n}|n\in\mathbb{Z} \}$.
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-78"><strong>(\#thm:unnamed-chunk-78) </strong></span>	Si $G$ es un grupo y $X$ un subconjunto no vacío de $G$, entonces el subgrupo $\langle X\rangle$ generado por $X$ está contituído por los productos de la forma $a_{1}^{m_{1}}a_{2}^{m_{2}}\cdots a_{n}^{m_{n}}$ donde $a_{i}\in X$, $m_{i}\in\mathbb{Z}$ y $n$ es un número entero positivo cualquiera. En particular $\langle a\rangle=\{a^{n}|n\in\mathbb{Z} \}$.
 </div>\EndKnitrBlock{theorem}
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Veamos que $H=\{a_{1}^{m_{1}}a_{2}^{m_{2}}\cdots a_{n}^{m_{n}} | n\in\mathbb{N}, a_{i}\in X$ \mbox{ y } $m_{i}\in\mathbb{Z}\}$ es un subgrupo de $G$ que contiene a $X$. En efecto, claramente $X\subseteq H$. Además, si $a\in X$, $a^{-1}\in H$ por lo tanto para $b,c\in H$, por definición de $H$ se tiene que  $b=a_{1}^{m_{1}}a_{2}^{m_{2}}\cdots a_{n}^{m_{n}}$ y $c=a_{1}^{r_{1}}a_{2}^{r_{2}}\cdots a_{k}^{r_{k}}$ por lo tanto $b^{-1}=a_{n}^{-m_{n}}\cdots  a_{2}^{m_{2}}a_{1}^{m_{1}} \in H$ y $bc=a_{1}^{m_{1}}a_{2}^{m_{2}}\cdots a_{n}^{m_{n}}a_{1}^{r_{1}}a_{2}^{r_{2}}\cdots a_{k}^{r_{k}}In H$. De donde se concluye que $H$ es un subgrupo que contine a $G$.\\
 	Ahora note que $H$ está contenido en todo subgrupo que contenga a $X$. Por lo tanto $H=\bigcap_{i\in I} \{H_{i}|X\subseteq H_{i}< G \}$.
 </div>\EndKnitrBlock{proof}
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-75"><strong>(\#def:unnamed-chunk-75) </strong></span>	Sean $G$ y $H$ dos semigrupos. Una función $f:G\longrightarrow H$ es un **homomorfismo** si y solo si $f(ab)=f(a)f(b)$ para todo $a,b\in G$.
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-80"><strong>(\#def:unnamed-chunk-80) </strong></span>	Sean $G$ y $H$ dos semigrupos. Una función $f:G\longrightarrow H$ es un **homomorfismo** si y solo si $f(ab)=f(a)f(b)$ para todo $a,b\in G$.
 	Si $f$ es inyectiva, decimos que $f$ es un **monomorfismo**. Si $f$ es sobreyectiva, diremos que $f$ es un **epimorfismo**. Cuando $f$ es una función biectiva diremos que $f$ es un **isomorfismo** y esto lo denotaremos por $G\cong H$.
 	</div>\EndKnitrBlock{definition}
 
@@ -535,10 +554,10 @@ La demostración queda como ejercicio.
 
 Note que dados dos homomorfismos de semigrupos $f:G\longrightarrow H$ y $g:H\longrightarrow K$, la composición $g\circ f:G\longrightarrow K$ es un homomorfismo de semigrupo. Por lo tanto se tiene que la composición de monomorfismos, es un monomorfismo, análogamente para epimorfismos e isomorfismos. Si $f:G\longrightarrow H$ es un homomorfismo de grupos y $e_{G}$ y $e_{H}$ son los elementos identidad de los grupos $G$ y $H$ respectivamente, entonces se tiene que $f(e_{G})=e_{H}$, por lo tanto $f(a^{-1})=f(a)^{-1}$. No obstante, si $G$ y $H$ son monoides, esto no es cierto.\\
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-77"><strong>(\#def:unnamed-chunk-77) </strong></span>	Dado $f:G\longrightarrow H$ un homomorfismo de grupo. El **núcleo** de $f$ (también conocido por su nombre en inglés **kernel**) es el conjunto $\{a\in G| f(a)=e_{H} \}$ y se denota $Ker f$. Dado $A\subseteq G$, **la imagen de $A$** es el conjunto $\{f(a)| a\in A \}$ y se denota por $f(A)$; al conjunto imagen de $G$, lo llamaremos **imagen de $f$** y le daremos una notación especial, $Im f$. Dado un conjunto $B\in H$, la imagen inversa de $B$ es el conjunto $f^{-1}(B)=\{a\in G|f(a)\in B \}$.
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-82"><strong>(\#def:unnamed-chunk-82) </strong></span>	Dado $f:G\longrightarrow H$ un homomorfismo de grupo. El **núcleo** de $f$ (también conocido por su nombre en inglés **kernel**) es el conjunto $\{a\in G| f(a)=e_{H} \}$ y se denota $Ker f$. Dado $A\subseteq G$, **la imagen de $A$** es el conjunto $\{f(a)| a\in A \}$ y se denota por $f(A)$; al conjunto imagen de $G$, lo llamaremos **imagen de $f$** y le daremos una notación especial, $Im f$. Dado un conjunto $B\in H$, la imagen inversa de $B$ es el conjunto $f^{-1}(B)=\{a\in G|f(a)\in B \}$.
 </div>\EndKnitrBlock{definition}
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-78"><strong>(\#thm:unnamed-chunk-78) </strong></span>	Sea $f:G\longrightarrow H$ un homomorfismo de grupos. Entonces:
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-83"><strong>(\#thm:unnamed-chunk-83) </strong></span>	Sea $f:G\longrightarrow H$ un homomorfismo de grupos. Entonces:
 
 		(i) $f$ es un monomorfismo si y solo si $Ker f=\{e_{G}\}$.
 
@@ -553,7 +572,7 @@ Note que dados dos homomorfismos de semigrupos $f:G\longrightarrow H$ y $g:H\lon
 
 ### Ejercicios
 
-\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-80"><strong>(\#exr:unnamed-chunk-80) </strong></span>Sea $G$ un grupo y $C$ un conjunto no vacío. Sea $M(C,G)$ el conjunto de todas las funciones $f:C\longrightarrow G$. Definamos la operación de grupo como la suma de funciones, es decir, para cada $f,g\in M(C,G)$, $f\ast g = f +g$. Demuestre que $M(C,G)$ es un grupo, es abeliano si $G$ lo es.
+\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-85"><strong>(\#exr:unnamed-chunk-85) </strong></span>Sea $G$ un grupo y $C$ un conjunto no vacío. Sea $M(C,G)$ el conjunto de todas las funciones $f:C\longrightarrow G$. Definamos la operación de grupo como la suma de funciones, es decir, para cada $f,g\in M(C,G)$, $f\ast g = f +g$. Demuestre que $M(C,G)$ es un grupo, es abeliano si $G$ lo es.
 
 Respuesta: Es claro que la suma de funciones es cerrada en $M(C,G)$. Sean $f,g,h\in M(C,G)$, para cada $a\in C$, $(f+(g+h))(a)=f(a)+((g+h)(a))=f(a)+(g(a)+h(a))$ como $G$ es un grupo, la suma es asociativa, luego $f(a)+(g(a)+h(a))=(f(a)+g(a))+h(a)=((f+g)(a))+h(a)=((f+g)+h)(a)$; por lo tanto la suma de funciones es asociativa.
 </div>\EndKnitrBlock{exercise}
@@ -567,7 +586,7 @@ Respuesta: Es claro que la suma de funciones es cerrada en $M(C,G)$. Sean $f,g,h
 	Análogamente, contar los elementos de $S_{n}$ es equivalente a contar las posibles permutaciones del conjunto $\{1,2,3,\cdots, n\}$.
 </div>\EndKnitrBlock{exercise}
 
-\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-81"><strong>(\#exr:unnamed-chunk-81) </strong></span>(1.) Demuestre que el grupo del ejemplo \@ref(exm:ejm1-21) es un grupo de orden $|G||H|$. Además muestre que $G\times H$ es un grupo abeliano si $G$ y $H$ lo son.
+\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-86"><strong>(\#exr:unnamed-chunk-86) </strong></span>(1.) Demuestre que el grupo del ejemplo \@ref(exm:ejm1-21) es un grupo de orden $|G||H|$. Además muestre que $G\times H$ es un grupo abeliano si $G$ y $H$ lo son.
 Respuesta: Sabemos que $|G\times H|=|G||H|$, lo que demuestra que el orden del grupo es el producto $|G||H|$. Ahora supongamos que $G$ y $H$ son abelianos, luego $(a,b)\ast (c,d)=(a\ast c,b\ast d)=(c\ast a,d\ast b)=(c,d)\ast (a,b)$.
 
 (2.) Demuestre que el grupo simétrico sobre $n$ letras es de orden $n!$.

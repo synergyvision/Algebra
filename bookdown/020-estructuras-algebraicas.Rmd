@@ -475,7 +475,35 @@ Enunciaremos el conocido *Teorema de Schroeder-Bernstein* sin demostración. El 
 	 Si $A$ y $B$ son conjuntos tales que $|A|\leq |B|$ y $|B|\leq |A|$. Entonces $|A|=|B|$.
  
 ```
- 
+A continuaci\'on veremos resultados que nos permiten caracterizar los grupos c\'iclicos.
+
+```{theorem}
+	Sea $H$ un subgrupo del grupo aditivo $\mathbb{Z}$. $H$ es cíclico, además $H=\langle 0\rangle$ o $H=\langle m\rangle$ donde $m$ es el menor entero positivo de $H$.
+
+```
+```{proof}
+	Supongamos que $H\neq \langle 0\rangle$. Entonces existe $m\in H$ mínimo. Como $H$ es subgrupo, es fácil ver que $\langle m\rangle\subseteq H$. Ahora bien, para todo $h\in H$ se tiene que $h=km+r$ para algún entero $k$ y un entero no negativo $r<m$ (algoritmo de la división). De lo anterior se tiene que $r=h-km$ es un elemento de $H$. Como $m$ es el mínimo de $H$, se tiene que $r=0$ de donde se sigue que $h$ es un elemento de $\langle m\rangle$.
+
+```
+
+```{remark}
+	En el teorema anterior, si $H\neq \langle 0\rangle$, entonces es infinito.
+\end{remark}
+
+Note que si $G$ es un grupo cíclico, la función que aplica a cada entero $k$ en el elemento $a^{k}$, es un epimorfismo. Además, si el núcleo es $0$, se tiene que $G\cong \mathbb{Z}$; si no, el núcleo es un subgrupo no trivial de $\mathbb{Z}$, por el teorema anterior, será un grupo cíclico, es decir, de la forma $\langle m\rangle$, con $m$ el menor entero positivo tal que $a^{m}=e$. Por otro lado, como $a^{r}=a^{s}\Leftrightarrow a^{r-s}=e$, se tiene que $r-s$ pertenece al núcleo, por lo que $r-s=km$ para algún entero $k$, de donde se tiene que $[r]=[s]\in\mathbb{Z}_{m}$. Por lo que la función que asigna a cada clase de equivalencia $[k]$ de $\mathbb{Z}_{m}$ al elemento $a^{k}$ está bien definida y es un isomorfismo. Esto es lo podemos escribir como el siguiente:
+
+```{theorem}
+	Todo grupo cíclico infinito es isomorfo al grupo aditivo $\mathbb{Z}$ y todo grupo cíclico finito de orden $m$ es isomorfo al grupo aditivo $\mathbb{Z}_{m}$.
+
+```
+
+```{proof}
+	Sea $G=\langle a\rangle$. Sea $f:\mathbb{Z}\longrightarrow G$ la función definida por $f(k)=a^{k}$. Para cada $b\in G$, existe $r\in\mathbb{Z}$ tal que $b=a^{r}$ por lo tanto $f(r)=a^{r}=b$, esto muestra que $f$ es sobreyectiva. Se tiene que $Ker f=\{0\}$, en caso contrario se tiene que $Ker f=\langle m\rangle$, luego $G$ sería finito.\\
+	Si $G$ es un grupo finito, $Ker f=\langle m\rangle$. Sea $g:\mathbb{Z}_{m}\longrightarrow G$ como $g([k])=a^{k}$ está bien definida ya que para todo $r,s\in\mathbb{Z}$, $a^{r}=a^{s}\Leftrightarrow a^{r-s}=e\Leftrightarrow r-s\in Ker f=\langle m\rangle$ por lo tanto $r-s=km$ para algún entero $k$ y así $[r]=[s]$. Es claro que es un epimorfismo, además, como $g([k])=e\Leftrightarrow a^{k}=e=a^{0}\Leftrightarrow [k]=[0]$, entonces $Ker g=\{[0]\}$, por lo tanto $g$ es un isomorfismo. 
+
+```
+
+Ejercicios
 
 ### Ejercicios
 
