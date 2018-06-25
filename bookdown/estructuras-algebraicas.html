@@ -738,7 +738,7 @@ Basta probar que <span class="math inline">\(\mathbb{Z}\sim \mathbb{N}\)</span> 
 </div>
  
 <div class="example">
-<p><span id="exm:unnamed-chunk-74" class="example"><strong>Ejemplo 1.34  </strong></span> Sea <span class="math inline">\(G\)</span> un grupo cualquiera, sea <span class="math inline">\(a\in G\)</span> un elemento cualquiera. El conjunto <span class="math inline">\((a)=\{a^{n}|n\in\mathbb{Z} \}\)</span> es un subgrupo de <span class="math inline">\(G\)</span> llamado el <strong>grupo cíclico generado por <span class="math inline">\(a\)</span></strong>. Efectivamente, claramente la operación es cerrada, para cuales quiera <span class="math inline">\(a^{n}, a^{m}\in (a)\)</span>, <span class="math inline">\(a^{n}a^{m}=a^{n+m}\in (a)\)</span>. por definición de <span class="math inline">\((a)\)</span>, <span class="math inline">\(a^{n}\)</span> y <span class="math inline">\(a^{-n}\)</span> están en <span class="math inline">\((a)\)</span>. Si para algún <span class="math inline">\(a\in G\)</span>, <span class="math inline">\(G=(a)\)</span>, entonces decimos que <span class="math inline">\(G\)</span> es un grupo cíclico.</p>
+<p><span id="exm:unnamed-chunk-74" class="example"><strong>Ejemplo 1.34  </strong></span> Sea <span class="math inline">\(G\)</span> un grupo cualquiera, sea <span class="math inline">\(a\in G\)</span> un elemento cualquiera. El conjunto <span class="math inline">\(\rangle a\langle =\{a^{n}|n\in\mathbb{Z} \}\)</span> es un subgrupo de <span class="math inline">\(G\)</span> llamado el . Efectivamente, claramente la operación es cerrada, para cuales quiera <span class="math inline">\(a^{n}, a^{m}\in (a)\)</span>, <span class="math inline">\(a^{n}a^{m}=a^{n+m}\in (a)\)</span>. por definición de <span class="math inline">\((a)\)</span>, <span class="math inline">\(a^{n}\)</span> y <span class="math inline">\(a^{-n}\)</span> están en <span class="math inline">\((a)\)</span>. Si para algún <span class="math inline">\(a\in G\)</span>, <span class="math inline">\(G=(a)\)</span>, entonces decimos que <span class="math inline">\(G\)</span> es un grupo cíclico. El orden de un elemento <span class="math inline">\(a\in G\)</span> es el orden del grupo generado por <span class="math inline">\(a\)</span>, es decir el orden de <span class="math inline">\(|\rangle a\langle|\)</span>.</p>
 </div>
  
 <div class="theorem">
@@ -794,11 +794,69 @@ Basta probar que <span class="math inline">\(\mathbb{Z}\sim \mathbb{N}\)</span> 
 <pre><code>    (i) Ya vimos en la sección de funciones que existe la función inversa y que ella es biyectiva, además en \@ref{lema1.48} vimos que $f^{-1}\circ f=\mathbb{I}_{G}$ y $f\circ f^{-1}=\mathbb{I}_{H}$. El recíproco se tiene del lema siguiente \ref{lema1.49}.</code></pre>
 </div>
 
+<p>A continuación veremos resultados que nos permiten caracterizar los grupos cíclicos.</p>
+
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-85" class="theorem"><strong>Teorema 1.11  </strong></span> Sea <span class="math inline">\(H\)</span> un subgrupo del grupo aditivo <span class="math inline">\(\mathbb{Z}\)</span>. <span class="math inline">\(H\)</span> es cíclico, además <span class="math inline">\(H=\langle 0\rangle\)</span> o <span class="math inline">\(H=\langle m\rangle\)</span> donde <span class="math inline">\(m\)</span> es el menor entero positivo de <span class="math inline">\(H\)</span>.</p>
+</div>
+
+
+<div class="proof">
+<p> <span class="proof"><em>Demostración. </em></span>  Supongamos que <span class="math inline">\(H\neq \langle 0\rangle\)</span>. Entonces existe <span class="math inline">\(m\in H\)</span> mínimo. Como <span class="math inline">\(H\)</span> es subgrupo, es fácil ver que <span class="math inline">\(\langle m\rangle\subseteq H\)</span>. Ahora bien, para todo <span class="math inline">\(h\in H\)</span> se tiene que <span class="math inline">\(h=km+r\)</span> para algúno entero <span class="math inline">\(k\)</span> y un entero no negativo <span class="math inline">\(r&lt;m\)</span> (algoritmo de la división). De lo anterior se tiene que <span class="math inline">\(r=h-km\)</span> es un elemento de <span class="math inline">\(H\)</span>. Como <span class="math inline">\(m\)</span> es el mínimo de <span class="math inline">\(H\)</span>, se tiene que <span class="math inline">\(r=0\)</span> de donde se sigue que <span class="math inline">\(h\)</span> es un elemento de <span class="math inline">\(\langle m\rangle\)</span>.</p>
+</div>
+
+
+<div class="remark">
+<p> <span class="remark"><em>Nota. </em></span>  En el teorema anterior, si <span class="math inline">\(H\neq \langle 0\rangle\)</span>, entonces es infinito.</p>
+</div>
+
+<p>Note que si <span class="math inline">\(G\)</span> es un grupo cíclico, la función que aplica a cada entero <span class="math inline">\(k\)</span> en el elemento <span class="math inline">\(a^{k}\)</span>, es un epimorfismo. Además, si el núcleo es <span class="math inline">\(0\)</span>, se tiene que <span class="math inline">\(G\cong \mathbb{Z}\)</span>; si no, el núcleo es un subgrupo no trivial de <span class="math inline">\(\mathbb{Z}\)</span>, por el teorema anterior, será un grupo cíclico, es decir, de la forma <span class="math inline">\(\langle m\rangle\)</span>, con <span class="math inline">\(m\)</span> el menor entero positivo tal que <span class="math inline">\(a^{m}=e\)</span>. Por otro lado, como <span class="math inline">\(a^{r}=a^{s}\Leftrightarrow a^{r-s}=e\)</span>, se tiene que <span class="math inline">\(r-s\)</span> pertenece al núcleo, por lo que <span class="math inline">\(r-s=km\)</span> para algún entero <span class="math inline">\(k\)</span>, de donde se tiene que <span class="math inline">\([r]=[s]\in\mathbb{Z}_{m}\)</span>. Por lo que la función que asigna a cada clase de equivalencia <span class="math inline">\([k]\)</span> de <span class="math inline">\(\mathbb{Z}_{m}\)</span> al elemento <span class="math inline">\(a^{k}\)</span> está bien definida y es un isomorfismo. Esto es lo podemos escribir como el siguiente:</p>
+
+<div class="theorem">
+<p><span id="thm:teo1-86" class="theorem"><strong>Teorema 1.12  </strong></span> Todo grupo cíclico infinito es isomorfo al grupo aditivo <span class="math inline">\(\mathbb{Z}\)</span> y todo grupo cíclico finito de orden <span class="math inline">\(m\)</span> es isomorfo al grupo aditivo <span class="math inline">\(\mathbb{Z}_{m}\)</span>.</p>
+</div>
+
+
+<div class="proof">
+<p> <span class="proof"><em>Demostración. </em></span>  Sea <span class="math inline">\(G=\langle a\rangle\)</span>. Sea <span class="math inline">\(f:\mathbb{Z}\longrightarrow G\)</span> la función definida por <span class="math inline">\(f(k)=a^{k}\)</span>. Para cada <span class="math inline">\(b\in G\)</span>, existe <span class="math inline">\(r\in\mathbb{Z}\)</span> tal que <span class="math inline">\(b=a^{r}\)</span> por lo tanto <span class="math inline">\(f(r)=a^{r}=b\)</span>, esto muestra que <span class="math inline">\(f\)</span> es sobreyectiva. Se tiene que <span class="math inline">\(Ker f=\{0\}\)</span>, en caso contrario se tiene que <span class="math inline">\(Ker f=\langle m\rangle\)</span>, luego <span class="math inline">\(G\)</span> sería finito. Si <span class="math inline">\(G\)</span> es un grupo finito, <span class="math inline">\(Ker f=\langle m\rangle\)</span>. Sea <span class="math inline">\(g:\mathbb{Z}_{m}\longrightarrow G\)</span> como <span class="math inline">\(g([k])=a^{k}\)</span> está bien definida ya que para todo <span class="math inline">\(r,s\in\mathbb{Z}\)</span>, <span class="math inline">\(a^{r}=a^{s}\Leftrightarrow a^{r-s}=e\Leftrightarrow r-s\in Ker f=\langle m\rangle\)</span> por lo tanto <span class="math inline">\(r-s=km\)</span> para algún entero <span class="math inline">\(k\)</span> y así <span class="math inline">\([r]=[s]\)</span>. Es claro que es un epimorfismo, además, como <span class="math inline">\(g([k])=e\Leftrightarrow a^{k}=e=a^{0}\Leftrightarrow [k]=[0]\)</span>, entonces <span class="math inline">\(Ker g=\{[0]\}\)</span>, por lo tanto <span class="math inline">\(g\)</span> es un isomorfismo.</p>
+</div>
+
+
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-89" class="theorem"><strong>Teorema 1.13  </strong></span> Sea <span class="math inline">\(G\)</span> un grupo cíclico. Si <span class="math inline">\(f:G\longrightarrow H\)</span> es un homomorfismo de grupo, entonces <span class="math inline">\(Im f\)</span> es cíclico.</p>
+</div>
+
+
+<div class="proof">
+<p> <span class="proof"><em>Demostración. </em></span>  Supongamos que <span class="math inline">\(G\)</span> es un grupo cíclico, entonces <span class="math inline">\(G=\langle a\rangle\)</span> para algún <span class="math inline">\(a\in G\)</span>. Se tiene entonces que <span class="math inline">\(Im f=\langle f(a) \rangle\)</span>.</p>
+</div>
+
+
+<div class="remark">
+<p> <span class="remark"><em>Nota. </em></span>  Note que si <span class="math inline">\(k\)</span> es un subgrupo del grupo cíclico <span class="math inline">\(G=\langle a \rangle\)</span>, y sea <span class="math inline">\(m\)</span> el menor entero positivo tal que <span class="math inline">\(a^{m}\in H\)</span>. Entonces <span class="math inline">\(H=\langle a^{m} \rangle\)</span>.</p>
+</div>
+
+<p>Note que un grupo cíclico puede ser generado por dos elementos distintos.</p>
+
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-92" class="theorem"><strong>Teorema 1.14  </strong></span> Sea <span class="math inline">\(G=\langle a\rangle\)</span> un grupo cíclico. Si <span class="math inline">\(G\)</span> es infinito entonces <span class="math inline">\(a\)</span> y <span class="math inline">\(a^{-1}\)</span> son los únicos generadores de <span class="math inline">\(G\)</span>. Si <span class="math inline">\(G\)</span> es finito de orden <span class="math inline">\(m\)</span>, entonces <span class="math inline">\(a^{k}\)</span> es un generador de <span class="math inline">\(G\)</span> si y solo si el mínimo común múltiplo <span class="math inline">\((m,k)=1\)</span>.</p>
+</div>
+
+
+<div class="proof">
+<p> <span class="proof"><em>Demostración. </em></span>  Si <span class="math inline">\(G\)</span> es infinito, en virtud del teorema @ref{thm:teo1.86} podemos suponer que <span class="math inline">\(G\)</span> es el grupo aditivo <span class="math inline">\(\mathbb{Z}\)</span> y en este caso es muy fácil ver que es generado solo por <span class="math inline">\(1\)</span> y <span class="math inline">\(-1\)</span>. Si <span class="math inline">\(G\)</span> es finito de orden <span class="math inline">\(m\)</span>, podemos suponer que <span class="math inline">\(\mathbb{Z}_{m}\)</span>. Así, si <span class="math inline">\((m,k)=1\)</span>, entonces <span class="math inline">\(xk+ym=1\)</span> para enteros <span class="math inline">\(x,y\)</span>. Por lo tanto se tiene que para todo <span class="math inline">\(bm\in G\)</span> se tiene que <span class="math inline">\(bm\in [k]\)</span>.</p>
+</div>
+
+
+<div class="definition">
+<p><span id="def:unnamed-chunk-94" class="definition"><strong>Definición 1.29  </strong></span> Sea <span class="math inline">\(H\)</span> un subgrupo de un grupo <span class="math inline">\(G\)</span> y sean <span class="math inline">\(a,bIn G\)</span>. Decimos que <span class="math inline">\(a\)</span> es congruente por la derecha con <span class="math inline">\(b\)</span> módulo <span class="math inline">\(H\)</span>, si y solo <span class="math inline">\(ab^{-1}\in H\)</span> y se denota <span class="math inline">\(a\cong_{r} b mod H\)</span>. Decimos que <span class="math inline">\(a\)</span> es congruente por la izquierda con <span class="math inline">\(b\)</span> módulo <span class="math inline">\(H\)</span>, si y solo <span class="math inline">\(a^{-1}b\in H\)</span> y se denota <span class="math inline">\(a\cong_{l} b mod H\)</span>.</p>
+</div>
+
 <div id="ejercicios-1" class="section level3">
 <h3><span class="header-section-number">1.5.1</span> Ejercicios</h3>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-85" class="exercise"><strong>Ejercicio 1.3  </strong></span>Sea <span class="math inline">\(G\)</span> un grupo y <span class="math inline">\(C\)</span> un conjunto no vacío. Sea <span class="math inline">\(M(C,G)\)</span> el conjunto de todas las funciones <span class="math inline">\(f:C\longrightarrow G\)</span>. Definamos la operación de grupo como la suma de funciones, es decir, para cada <span class="math inline">\(f,g\in M(C,G)\)</span>, <span class="math inline">\(f\ast g = f +g\)</span>. Demuestre que <span class="math inline">\(M(C,G)\)</span> es un grupo, es abeliano si <span class="math inline">\(G\)</span> lo es.</p>
+<p><span id="exr:unnamed-chunk-95" class="exercise"><strong>Ejercicio 1.3  </strong></span>Sea <span class="math inline">\(G\)</span> un grupo y <span class="math inline">\(C\)</span> un conjunto no vacío. Sea <span class="math inline">\(M(C,G)\)</span> el conjunto de todas las funciones <span class="math inline">\(f:C\longrightarrow G\)</span>. Definamos la operación de grupo como la suma de funciones, es decir, para cada <span class="math inline">\(f,g\in M(C,G)\)</span>, <span class="math inline">\(f\ast g = f +g\)</span>. Demuestre que <span class="math inline">\(M(C,G)\)</span> es un grupo, es abeliano si <span class="math inline">\(G\)</span> lo es.</p>
 <p>Respuesta: Es claro que la suma de funciones es cerrada en <span class="math inline">\(M(C,G)\)</span>. Sean <span class="math inline">\(f,g,h\in M(C,G)\)</span>, para cada <span class="math inline">\(a\in C\)</span>, <span class="math inline">\((f+(g+h))(a)=f(a)+((g+h)(a))=f(a)+(g(a)+h(a))\)</span> como <span class="math inline">\(G\)</span> es un grupo, la suma es asociativa, luego <span class="math inline">\(f(a)+(g(a)+h(a))=(f(a)+g(a))+h(a)=((f+g)(a))+h(a)=((f+g)+h)(a)\)</span>; por lo tanto la suma de funciones es asociativa.</p>
 </div>
 
@@ -814,7 +872,7 @@ Basta probar que <span class="math inline">\(\mathbb{Z}\sim \mathbb{N}\)</span> 
 
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-86" class="exercise"><strong>Ejercicio 1.5  </strong></span>(1.) Demuestre que el grupo del ejemplo <a href="#exm:ejm1-21">1.29</a> es un grupo de orden <span class="math inline">\(|G||H|\)</span>. Además muestre que <span class="math inline">\(G\times H\)</span> es un grupo abeliano si <span class="math inline">\(G\)</span> y <span class="math inline">\(H\)</span> lo son. Respuesta: Sabemos que <span class="math inline">\(|G\times H|=|G||H|\)</span>, lo que demuestra que el orden del grupo es el producto <span class="math inline">\(|G||H|\)</span>. Ahora supongamos que <span class="math inline">\(G\)</span> y <span class="math inline">\(H\)</span> son abelianos, luego <span class="math inline">\((a,b)\ast (c,d)=(a\ast c,b\ast d)=(c\ast a,d\ast b)=(c,d)\ast (a,b)\)</span>.</p>
+<p><span id="exr:unnamed-chunk-96" class="exercise"><strong>Ejercicio 1.5  </strong></span>(1.) Demuestre que el grupo del ejemplo <a href="#exm:ejm1-21">1.29</a> es un grupo de orden <span class="math inline">\(|G||H|\)</span>. Además muestre que <span class="math inline">\(G\times H\)</span> es un grupo abeliano si <span class="math inline">\(G\)</span> y <span class="math inline">\(H\)</span> lo son. Respuesta: Sabemos que <span class="math inline">\(|G\times H|=|G||H|\)</span>, lo que demuestra que el orden del grupo es el producto <span class="math inline">\(|G||H|\)</span>. Ahora supongamos que <span class="math inline">\(G\)</span> y <span class="math inline">\(H\)</span> son abelianos, luego <span class="math inline">\((a,b)\ast (c,d)=(a\ast c,b\ast d)=(c\ast a,d\ast b)=(c,d)\ast (a,b)\)</span>.</p>
 (2.) Demuestre que el grupo simétrico sobre <span class="math inline">\(n\)</span> letras es de orden <span class="math inline">\(n!\)</span>. Respuesta: Pensemos en el grupo simétrico <span class="math inline">\(S_{3}\)</span>. El orden del grupo es equivalente a contar todas las posibles biyecciones de un conjunto de <span class="math inline">\(3\)</span> elementos, a saber:\ $( {
 <span class="math display">\[\begin{array}{ccc}
         1 &amp; 2 &amp; 3\\

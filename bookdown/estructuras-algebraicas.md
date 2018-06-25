@@ -525,7 +525,7 @@ Veamos a conyinuación algunos ejemplos de subgrupos.
 \BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-73"><strong>(\#exm:unnamed-chunk-73) </strong></span>	Consideremos el grupo aditico de los números enteros. Sea $n\in\mathbb{N}$ un entero positivo. El conjunto $H_{n}$ formado por los múltiplos de $n$ es un subgrupo. Es fácil ver que si sumamos dos múltiplos de $n$, es resultado es un múltiplo de $n$, $kn+qn=(k+q)n$. Además $k\ kn$ y $-kn$ están en $H$ y $kn+(-kn)=0=-kn+kn$.
 	Es interesante pensar en el conjunto intersección de dos de estos subgrupos, es decir, $H_{n}\cap H_{m}$. 
 </div>\EndKnitrBlock{example}
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-74"><strong>(\#exm:unnamed-chunk-74) </strong></span>	Sea $G$ un grupo cualquiera, sea $a\in G$ un elemento cualquiera. El conjunto $(a)=\{a^{n}|n\in\mathbb{Z} \}$ es un subgrupo de $G$ llamado el **grupo cíclico generado por $a$**. Efectivamente, claramente la operación es cerrada, para cuales quiera $a^{n}, a^{m}\in (a)$, $a^{n}a^{m}=a^{n+m}\in (a)$. por definición de $(a)$, $a^{n}$ y $a^{-n}$ están en $(a)$. Si para algún $a\in G$, $G=(a)$, entonces decimos que $G$ es un grupo cíclico.
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-74"><strong>(\#exm:unnamed-chunk-74) </strong></span>	Sea $G$ un grupo cualquiera, sea $a\in G$ un elemento cualquiera. El conjunto $\rangle a\langle =\{a^{n}|n\in\mathbb{Z} \}$ es un subgrupo de $G$ llamado el \textit{grupo cíclico generado por $a$}. Efectivamente, claramente la operación es cerrada, para cuales quiera $a^{n}, a^{m}\in (a)$, $a^{n}a^{m}=a^{n+m}\in (a)$. por definición de $(a)$, $a^{n}$ y $a^{-n}$ están en $(a)$. Si para algún $a\in G$, $G=(a)$, entonces decimos que $G$ es un grupo cíclico. El orden de un elemento $a\in G$ es el orden del grupo generado por $a$, es decir el orden de $|\rangle a\langle|$.
 </div>\EndKnitrBlock{example}
 \BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-75"><strong>(\#thm:unnamed-chunk-75) </strong></span>	Sea $G$ un grupo y sea $\{H_{i}|i\in I \}$ una familia no vacía de subgrupos de $G$, entonces $\bigcap_{i\in I} H_{i}$ es un subgrupo de $G$.
 </div>\EndKnitrBlock{theorem}
@@ -570,9 +570,51 @@ Note que dados dos homomorfismos de semigrupos $f:G\longrightarrow H$ y $g:H\lon
 		(i) Ya vimos en la sección de funciones que existe la función inversa y que ella es biyectiva, además en \@ref{lema1.48} vimos que $f^{-1}\circ f=\mathbb{I}_{G}$ y $f\circ f^{-1}=\mathbb{I}_{H}$. El recíproco se tiene del lema siguiente \ref{lema1.49}.
 </div>\EndKnitrBlock{proof}
 
+A continuación veremos resultados que nos permiten caracterizar los grupos cíclicos.
+
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-85"><strong>(\#thm:unnamed-chunk-85) </strong></span>	Sea $H$ un subgrupo del grupo aditivo $\mathbb{Z}$. $H$ es cíclico, además $H=\langle 0\rangle$ o $H=\langle m\rangle$ donde $m$ es el menor entero positivo de $H$.
+</div>\EndKnitrBlock{theorem}
+
+
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Supongamos que $H\neq \langle 0\rangle$. Entonces existe $m\in H$ mínimo. Como $H$ es subgrupo, es fácil ver que $\langle m\rangle\subseteq H$. Ahora bien, para todo $h\in H$ se tiene que $h=km+r$ para algúno entero $k$ y un entero no negativo $r<m$ (algoritmo de la división). De lo anterior se tiene que $r=h-km$ es un elemento de $H$. Como $m$ es el mínimo de $H$, se tiene que $r=0$ de donde se sigue que $h$ es un elemento de $\langle m\rangle$.
+</div>\EndKnitrBlock{proof}
+
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	En el teorema anterior, si $H\neq \langle 0\rangle$, entonces es infinito.
+</div>\EndKnitrBlock{remark}
+
+Note que si $G$ es un grupo cíclico, la función que aplica a cada entero $k$ en el elemento $a^{k}$, es un epimorfismo. Además, si el núcleo es $0$, se tiene que $G\cong \mathbb{Z}$; si no, el núcleo es un subgrupo no trivial de $\mathbb{Z}$, por el teorema anterior, será un grupo cíclico, es decir, de la forma $\langle m\rangle$, con $m$ el menor entero positivo tal que $a^{m}=e$. Por otro lado, como $a^{r}=a^{s}\Leftrightarrow a^{r-s}=e$, se tiene que $r-s$ pertenece al núcleo, por lo que $r-s=km$ para algún entero $k$, de donde se tiene que $[r]=[s]\in\mathbb{Z}_{m}$. Por lo que la función que asigna a cada clase de equivalencia $[k]$ de $\mathbb{Z}_{m}$ al elemento $a^{k}$ está bien definida y es un isomorfismo. Esto es lo podemos escribir como el siguiente:
+
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:teo1-86"><strong>(\#thm:teo1-86) </strong></span>	Todo grupo cíclico infinito es isomorfo al grupo aditivo $\mathbb{Z}$ y todo grupo cíclico finito de orden $m$ es isomorfo al grupo aditivo $\mathbb{Z}_{m}$.
+</div>\EndKnitrBlock{theorem}
+
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Sea $G=\langle a\rangle$. Sea $f:\mathbb{Z}\longrightarrow G$ la función definida por $f(k)=a^{k}$. Para cada $b\in G$, existe $r\in\mathbb{Z}$ tal que $b=a^{r}$ por lo tanto $f(r)=a^{r}=b$, esto muestra que $f$ es sobreyectiva. Se tiene que $Ker f=\{0\}$, en caso contrario se tiene que $Ker f=\langle m\rangle$, luego $G$ sería finito.
+	Si $G$ es un grupo finito, $Ker f=\langle m\rangle$. Sea $g:\mathbb{Z}_{m}\longrightarrow G$ como $g([k])=a^{k}$ está bien definida ya que para todo $r,s\in\mathbb{Z}$, $a^{r}=a^{s}\Leftrightarrow a^{r-s}=e\Leftrightarrow r-s\in Ker f=\langle m\rangle$ por lo tanto $r-s=km$ para algún entero $k$ y así $[r]=[s]$. Es claro que es un epimorfismo, además, como $g([k])=e\Leftrightarrow a^{k}=e=a^{0}\Leftrightarrow [k]=[0]$, entonces $Ker g=\{[0]\}$, por lo tanto $g$ es un isomorfismo. 
+</div>\EndKnitrBlock{proof}
+
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-89"><strong>(\#thm:unnamed-chunk-89) </strong></span>	Sea $G$ un grupo cíclico. Si $f:G\longrightarrow H$ es un homomorfismo de grupo, entonces $Im f$ es cíclico.
+</div>\EndKnitrBlock{theorem}
+
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Supongamos que $G$ es un grupo cíclico, entonces $G=\langle a\rangle$ para algún $a\in G$. Se tiene entonces que $Im f=\langle f(a) \rangle$.
+</div>\EndKnitrBlock{proof}
+
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	Note que si $k$ es un subgrupo del grupo cíclico $G=\langle a \rangle$, y sea $m$ el menor entero positivo tal que $a^{m}\in H$. Entonces $H=\langle a^{m} \rangle$.
+</div>\EndKnitrBlock{remark}
+
+Note que un grupo cíclico puede ser generado por dos elementos distintos.
+
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-92"><strong>(\#thm:unnamed-chunk-92) </strong></span>	Sea $G=\langle a\rangle$ un grupo cíclico. Si $G$ es infinito entonces $a$ y $a^{-1}$ son los únicos generadores de $G$. Si $G$ es finito de orden $m$, entonces $a^{k}$ es un generador de $G$ si y solo si el mínimo común múltiplo $(m,k)=1$.
+</div>\EndKnitrBlock{theorem}
+	
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Si $G$ es infinito, en virtud del teorema \@ref{thm:teo1.86} podemos suponer que $G$ es el grupo aditivo $\mathbb{Z}$ y en este caso es muy fácil ver que es generado solo por $1$ y $-1$. Si $G$ es finito de orden $m$, podemos suponer que $\mathbb{Z}_{m}$. Así, si $(m,k)=1$, entonces $xk+ym=1$ para enteros $x,y$. Por lo tanto se tiene que para todo $bm\in G$ se tiene que $bm\in [k]$.
+</div>\EndKnitrBlock{proof}
+
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-94"><strong>(\#def:unnamed-chunk-94) </strong></span>	Sea $H$ un subgrupo de un grupo $G$ y sean $a,bIn G$. Decimos que $a$ es congruente por la derecha con $b$ módulo $H$, si y solo $ab^{-1}\in H$ y se denota $a\cong_{r} b mod H$. Decimos que $a$ es congruente por la izquierda con $b$ módulo $H$, si y solo $a^{-1}b\in H$ y se denota $a\cong_{l} b mod H$. 
+</div>\EndKnitrBlock{definition}
+
+
 ### Ejercicios
 
-\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-85"><strong>(\#exr:unnamed-chunk-85) </strong></span>Sea $G$ un grupo y $C$ un conjunto no vacío. Sea $M(C,G)$ el conjunto de todas las funciones $f:C\longrightarrow G$. Definamos la operación de grupo como la suma de funciones, es decir, para cada $f,g\in M(C,G)$, $f\ast g = f +g$. Demuestre que $M(C,G)$ es un grupo, es abeliano si $G$ lo es.
+\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-95"><strong>(\#exr:unnamed-chunk-95) </strong></span>Sea $G$ un grupo y $C$ un conjunto no vacío. Sea $M(C,G)$ el conjunto de todas las funciones $f:C\longrightarrow G$. Definamos la operación de grupo como la suma de funciones, es decir, para cada $f,g\in M(C,G)$, $f\ast g = f +g$. Demuestre que $M(C,G)$ es un grupo, es abeliano si $G$ lo es.
 
 Respuesta: Es claro que la suma de funciones es cerrada en $M(C,G)$. Sean $f,g,h\in M(C,G)$, para cada $a\in C$, $(f+(g+h))(a)=f(a)+((g+h)(a))=f(a)+(g(a)+h(a))$ como $G$ es un grupo, la suma es asociativa, luego $f(a)+(g(a)+h(a))=(f(a)+g(a))+h(a)=((f+g)(a))+h(a)=((f+g)+h)(a)$; por lo tanto la suma de funciones es asociativa.
 </div>\EndKnitrBlock{exercise}
@@ -586,7 +628,7 @@ Respuesta: Es claro que la suma de funciones es cerrada en $M(C,G)$. Sean $f,g,h
 	Análogamente, contar los elementos de $S_{n}$ es equivalente a contar las posibles permutaciones del conjunto $\{1,2,3,\cdots, n\}$.
 </div>\EndKnitrBlock{exercise}
 
-\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-86"><strong>(\#exr:unnamed-chunk-86) </strong></span>(1.) Demuestre que el grupo del ejemplo \@ref(exm:ejm1-21) es un grupo de orden $|G||H|$. Además muestre que $G\times H$ es un grupo abeliano si $G$ y $H$ lo son.
+\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-96"><strong>(\#exr:unnamed-chunk-96) </strong></span>(1.) Demuestre que el grupo del ejemplo \@ref(exm:ejm1-21) es un grupo de orden $|G||H|$. Además muestre que $G\times H$ es un grupo abeliano si $G$ y $H$ lo son.
 Respuesta: Sabemos que $|G\times H|=|G||H|$, lo que demuestra que el orden del grupo es el producto $|G||H|$. Ahora supongamos que $G$ y $H$ son abelianos, luego $(a,b)\ast (c,d)=(a\ast c,b\ast d)=(c\ast a,d\ast b)=(c,d)\ast (a,b)$.
 
 (2.) Demuestre que el grupo simétrico sobre $n$ letras es de orden $n!$.
