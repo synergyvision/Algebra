@@ -608,13 +608,36 @@ Note que un grupo cíclico puede ser generado por dos elementos distintos.
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Si $G$ es infinito, en virtud del teorema \@ref{thm:teo1.86} podemos suponer que $G$ es el grupo aditivo $\mathbb{Z}$ y en este caso es muy fácil ver que es generado solo por $1$ y $-1$. Si $G$ es finito de orden $m$, podemos suponer que $\mathbb{Z}_{m}$. Así, si $(m,k)=1$, entonces $xk+ym=1$ para enteros $x,y$. Por lo tanto se tiene que para todo $bm\in G$ se tiene que $bm\in [k]$.
 </div>\EndKnitrBlock{proof}
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-94"><strong>(\#def:unnamed-chunk-94) </strong></span>	Sea $H$ un subgrupo de un grupo $G$ y sean $a,bIn G$. Decimos que $a$ es congruente por la derecha con $b$ módulo $H$, si y solo $ab^{-1}\in H$ y se denota $a\cong_{r} b mod H$. Decimos que $a$ es congruente por la izquierda con $b$ módulo $H$, si y solo $a^{-1}b\in H$ y se denota $a\cong_{l} b mod H$. 
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-94"><strong>(\#def:unnamed-chunk-94) </strong></span>	Sea $H$ un subgrupo de un grupo $G$ y sean $a,bIn G$. Decimos que **$a$ es congruente por la derecha con $b$ módulo $H$**, si y solo $ab^{-1}\in H$ y se denota $a\cong_{r} b mod H$. Decimos que **$a$ es congruente por la izquierda con $b$ módulo $H$**, si y solo $a^{-1}b\in H$ y se denota $a\cong_{l} b mod H$. 
 </div>\EndKnitrBlock{definition}
+
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	Note que si un grupo $G$ es abeliano y $H$ es un subgrupo, como $ab^{-1}\in H\Leftrightarrow (ab^{-1})^{-1}\in H \Leftrightarrow ba^{-1}\in H\Leftrightarrow a^{-1}b\in H$, entonces la congruencia derecha e izquierda módulo $H$ coinciden. Ahora bien, aunque existen grupos $G$ y subgrupos $H$ no abelianos en los que pueden coincidir la congruencia derecha e izquierda, módulo $H$, esto no es verdad en general.
+</div>\EndKnitrBlock{remark}
+
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-96"><strong>(\#thm:unnamed-chunk-96) </strong></span>	Sea $H$ un subgrupo de un grupo $G$.
+
+		(1) La congruencia por la derecha (respectivamente, por la izquierda) módulo $H$ es una relación de equivalencia sobre $G$.
+
+		(2) Las clases de equivalencia de $a\in G$ bajo la congruencia por la derecha (respectivamente por la izquierda) módulo $H$ es el conjunto $Ha=\{ha : h\in H \}$ (respectivamente $aH=\{ah :h\in H \}$). A los conjuntos del tipo $Ha$ y $aH$ se les llama \textit{clase lateral derecha módulo $H$} y  \textit{clase lateral izquierda módulo $H$}. En general, una clase lateral derecha no es una clase lateral izquierda.
+
+		(3) $|Ha|=|H|=|aH|$, para todo $a\in G$.
+</div>\EndKnitrBlock{theorem}
+
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Sean $a,b,c\in G$.
+	\begin{enumerate}
+		(1) Claramente $a\cong_{r} a mod H$, ya que $aa^{-1}=e\in H$, de donde se tiene que la relación es reflexiva. Como $ba^{-1}=(ab^{-1})^{-1}$, se tiene que la relación es reflexiva. Supongamos que $a\cong_{r} b mod H$ y que $b\cong_{r} c mod H$, esto es $ab^{-1}\in H$ y $bc^{-1}\in H$, por lo tanto $ac^{-1}=a(b^{-1}b)c^{-1}=(ab^{-1})(bc^{-1})\in H$, se tiene que $a\cong_{r} c mod H$, por lo que la relación es transitiva.
+
+		(2) La clase de equivalencia de $a$ es el conjunto $[a]=\{b\in G : b\cong a mod H \}=\{b\in G: ba^{-1}\in H \}=\{b\in G: b=ha \mbox{ para algún } h\in H \}=\{ha: h\in H \}=Ha$.
+
+		(3) Es fácil ver que la función de $Ha$ sobre $H$, que aplica a cada $ha$ en $h$, es una biyección.
+	
+	Para la congruencia por la izquierda se procede forma análoga.
+</div>\EndKnitrBlock{proof}
 
 
 ### Ejercicios
 
-\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-95"><strong>(\#exr:unnamed-chunk-95) </strong></span>Sea $G$ un grupo y $C$ un conjunto no vacío. Sea $M(C,G)$ el conjunto de todas las funciones $f:C\longrightarrow G$. Definamos la operación de grupo como la suma de funciones, es decir, para cada $f,g\in M(C,G)$, $f\ast g = f +g$. Demuestre que $M(C,G)$ es un grupo, es abeliano si $G$ lo es.
+\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-98"><strong>(\#exr:unnamed-chunk-98) </strong></span>Sea $G$ un grupo y $C$ un conjunto no vacío. Sea $M(C,G)$ el conjunto de todas las funciones $f:C\longrightarrow G$. Definamos la operación de grupo como la suma de funciones, es decir, para cada $f,g\in M(C,G)$, $f\ast g = f +g$. Demuestre que $M(C,G)$ es un grupo, es abeliano si $G$ lo es.
 
 Respuesta: Es claro que la suma de funciones es cerrada en $M(C,G)$. Sean $f,g,h\in M(C,G)$, para cada $a\in C$, $(f+(g+h))(a)=f(a)+((g+h)(a))=f(a)+(g(a)+h(a))$ como $G$ es un grupo, la suma es asociativa, luego $f(a)+(g(a)+h(a))=(f(a)+g(a))+h(a)=((f+g)(a))+h(a)=((f+g)+h)(a)$; por lo tanto la suma de funciones es asociativa.
 </div>\EndKnitrBlock{exercise}
@@ -628,7 +651,7 @@ Respuesta: Es claro que la suma de funciones es cerrada en $M(C,G)$. Sean $f,g,h
 	Análogamente, contar los elementos de $S_{n}$ es equivalente a contar las posibles permutaciones del conjunto $\{1,2,3,\cdots, n\}$.
 </div>\EndKnitrBlock{exercise}
 
-\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-96"><strong>(\#exr:unnamed-chunk-96) </strong></span>(1.) Demuestre que el grupo del ejemplo \@ref(exm:ejm1-21) es un grupo de orden $|G||H|$. Además muestre que $G\times H$ es un grupo abeliano si $G$ y $H$ lo son.
+\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-99"><strong>(\#exr:unnamed-chunk-99) </strong></span>(1.) Demuestre que el grupo del ejemplo \@ref(exm:ejm1-21) es un grupo de orden $|G||H|$. Además muestre que $G\times H$ es un grupo abeliano si $G$ y $H$ lo son.
 Respuesta: Sabemos que $|G\times H|=|G||H|$, lo que demuestra que el orden del grupo es el producto $|G||H|$. Ahora supongamos que $G$ y $H$ son abelianos, luego $(a,b)\ast (c,d)=(a\ast c,b\ast d)=(c\ast a,d\ast b)=(c,d)\ast (a,b)$.
 
 (2.) Demuestre que el grupo simétrico sobre $n$ letras es de orden $n!$.
@@ -643,5 +666,33 @@ Respuesta: Sabemos que $|G\times H|=|G||H|$, lo que demuestra que el orden del g
 
 (4.) Demuestre que la intersección de subgrupos es un subgrupo.
 	Respuesta: Sea $G$ un grupo y sea $\{H_{i}|i\in I \}$ una familia no vacía de subgrupos de $G$. Sea $a,b\in\bigcap_{i\in I}H_{i}$. Entonces para cada $i\in I$, $a,b\in H_{i}$, como cada $H_{i}$ es un subgrupo de $G$, se tiene que $a^{-1}, ab\in H_{i}$, por lo tanto $a^{-1}, ab\in\bigcap_{i\in I} H_{i}$.
-</div>\EndKnitrBlock{exercise}
+	</div>\EndKnitrBlock{exercise}
 
+\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:ejc5"><strong>(\#exr:ejc5) </strong></span>Sea $G$ un grupo y $a,b\in G$ de orden finito. Demuestre que se cumplen las siguientes propiedades:
+
+		(1) $a^{k}=e \Leftrightarrow |\langle a\rangle||k$.
+	
+		(2) $a=e \Leftrightarrow |\langle a\rangle|=1$.
+	
+		(3) $|\langle a\rangle|=|\langle a^{-1}\rangle|$.
+	
+		(4) $|\langle a^{k}\rangle|=\frac{|a|}{(|a|,k)}$. Donde $(m,n)$ denota el máximo común divisor de $m$ y $n$.
+	
+		(5) Si $|ab|$ es finito, entonces $|ab|=|ba|$.
+	
+		(6) Si $|ab|=|ba|$, entonces $|ab||[|a|,|b|]$. Además si $|a|$ y $|b|$ son coprimos, entonces $|ab|=|a||b|$. Donde $[m,n]$ denota el mínimo común múltiplo de $m$ y $n$.
+	
+	Respuesta:
+
+		(1) Sea $n$ el oreden de $a$. Note que si $k=qn+r$ para algunos enteros $0\leq r< n$, $a^{k}=a^{qn}a^{r}$. Si $a^{k}=e$, entonces $e=a^{k}=a^{qn}a^{r}=a^{r}$, de donde se sigue que $r$ es necesariamente $0$ .Si $n|k$, $k=qn\Leftrightarrow a^{k}=a^{qn}=e^{q}=e$.
+	
+		(2) Si el orden de $a$ es $1$, se tiene que $a=a^{1}=e$. Recíprocamente, si $a=e$, $\langle a\rangle=\langle e\rangle$, por lo tanto el orden de $a$ es $1$.
+	
+		(3) Se sigue del hecho que $(a^{-1})^{m}=(a^{m})^{-1}$.
+	
+		(4) Sea $n=|\langle a\rangle|$ y $d=(n,k)$. Entonces $n=sd$ y $k=td$. Si $(a^{k})^{m}=a^{km}=e=a^{n}$, entonces $n|km$, por lo tanto $s|tm$. Como $(s,t)=1$, entonces $s|m$, por lo tanto $|\langle a^{k}\rangle|=s$.
+	
+		(5) Sea $m$ el orden de $ab$. Esto es $(ab)^{m}=e$ por lo tanto $(ab)(ab)\cdots (ab)=e\Leftrightarrow a(ba)(ba)\cdots (ba)b=e\Leftrightarrow (ba)^{m-1}=a^{-1}b^{-1}=(ba)^{-1}\Leftrightarrow (ba)^{m}=e$
+	  
+		(6) Sean $n=|\langle a\rangle|$, $m=|\langle b\rangle|$, $s=|\langle (ab)\rangle|$ y $M=[n,m]$. Si $(ab)$ commuta, $(ab)^{M}=a^{M}b^{M}$. De la parte (a) se tiene que $(ab)^{M}=a^{M}b^{M}=e$ y que $s|M$. Si $(m,n)=1$, $(ab)^{s}=a^{s}b^{s}=e$ entonces $a^{s}=b^{-s}$ por lo tanto $|\langle a^{s}\rangle|=|\langle b^{s}\rangle|$; de los apartados anteriores se sigue que $\frac{n}{(n,s)}=\frac{m}{m,s}\Leftrightarrow n|s\mbox{ y }m|s$ de donde se tiene que $M|s$, y como $s|M$, entonces $s=M$.
+	</div>\EndKnitrBlock{exercise}

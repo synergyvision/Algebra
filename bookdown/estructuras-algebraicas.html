@@ -849,14 +849,39 @@ Basta probar que <span class="math inline">\(\mathbb{Z}\sim \mathbb{N}\)</span> 
 
 
 <div class="definition">
-<p><span id="def:unnamed-chunk-94" class="definition"><strong>Definición 1.29  </strong></span> Sea <span class="math inline">\(H\)</span> un subgrupo de un grupo <span class="math inline">\(G\)</span> y sean <span class="math inline">\(a,bIn G\)</span>. Decimos que <span class="math inline">\(a\)</span> es congruente por la derecha con <span class="math inline">\(b\)</span> módulo <span class="math inline">\(H\)</span>, si y solo <span class="math inline">\(ab^{-1}\in H\)</span> y se denota <span class="math inline">\(a\cong_{r} b mod H\)</span>. Decimos que <span class="math inline">\(a\)</span> es congruente por la izquierda con <span class="math inline">\(b\)</span> módulo <span class="math inline">\(H\)</span>, si y solo <span class="math inline">\(a^{-1}b\in H\)</span> y se denota <span class="math inline">\(a\cong_{l} b mod H\)</span>.</p>
+<p><span id="def:unnamed-chunk-94" class="definition"><strong>Definición 1.29  </strong></span> Sea <span class="math inline">\(H\)</span> un subgrupo de un grupo <span class="math inline">\(G\)</span> y sean <span class="math inline">\(a,bIn G\)</span>. Decimos que <strong><span class="math inline">\(a\)</span> es congruente por la derecha con <span class="math inline">\(b\)</span> módulo <span class="math inline">\(H\)</span></strong>, si y solo <span class="math inline">\(ab^{-1}\in H\)</span> y se denota <span class="math inline">\(a\cong_{r} b mod H\)</span>. Decimos que <strong><span class="math inline">\(a\)</span> es congruente por la izquierda con <span class="math inline">\(b\)</span> módulo <span class="math inline">\(H\)</span></strong>, si y solo <span class="math inline">\(a^{-1}b\in H\)</span> y se denota <span class="math inline">\(a\cong_{l} b mod H\)</span>.</p>
+</div>
+
+
+<div class="remark">
+<p> <span class="remark"><em>Nota. </em></span>  Note que si un grupo <span class="math inline">\(G\)</span> es abeliano y <span class="math inline">\(H\)</span> es un subgrupo, como <span class="math inline">\(ab^{-1}\in H\Leftrightarrow (ab^{-1})^{-1}\in H \Leftrightarrow ba^{-1}\in H\Leftrightarrow a^{-1}b\in H\)</span>, entonces la congruencia derecha e izquierda módulo <span class="math inline">\(H\)</span> coinciden. Ahora bien, aunque existen grupos <span class="math inline">\(G\)</span> y subgrupos <span class="math inline">\(H\)</span> no abelianos en los que pueden coincidir la congruencia derecha e izquierda, módulo <span class="math inline">\(H\)</span>, esto no es verdad en general.</p>
+</div>
+
+
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-96" class="theorem"><strong>Teorema 1.15  </strong></span> Sea <span class="math inline">\(H\)</span> un subgrupo de un grupo <span class="math inline">\(G\)</span>.</p>
+<pre><code>    (1) La congruencia por la derecha (respectivamente, por la izquierda) módulo $H$ es una relación de equivalencia sobre $G$.
+
+    (2) Las clases de equivalencia de $a\in G$ bajo la congruencia por la derecha (respectivamente por la izquierda) módulo $H$ es el conjunto $Ha=\{ha : h\in H \}$ (respectivamente $aH=\{ah :h\in H \}$). A los conjuntos del tipo $Ha$ y $aH$ se les llama \textit{clase lateral derecha módulo $H$} y  \textit{clase lateral izquierda módulo $H$}. En general, una clase lateral derecha no es una clase lateral izquierda.
+
+    (3) $|Ha|=|H|=|aH|$, para todo $a\in G$.</code></pre>
+</div>
+
+
+<div class="proof">
+<p> <span class="proof"><em>Demostración. </em></span>  Sean <span class="math inline">\(a,b,c\in G\)</span>. \begin{enumerate} (1) Claramente <span class="math inline">\(a\cong_{r} a mod H\)</span>, ya que <span class="math inline">\(aa^{-1}=e\in H\)</span>, de donde se tiene que la relación es reflexiva. Como <span class="math inline">\(ba^{-1}=(ab^{-1})^{-1}\)</span>, se tiene que la relación es reflexiva. Supongamos que <span class="math inline">\(a\cong_{r} b mod H\)</span> y que <span class="math inline">\(b\cong_{r} c mod H\)</span>, esto es <span class="math inline">\(ab^{-1}\in H\)</span> y <span class="math inline">\(bc^{-1}\in H\)</span>, por lo tanto <span class="math inline">\(ac^{-1}=a(b^{-1}b)c^{-1}=(ab^{-1})(bc^{-1})\in H\)</span>, se tiene que <span class="math inline">\(a\cong_{r} c mod H\)</span>, por lo que la relación es transitiva.</p>
+<pre><code>    (2) La clase de equivalencia de $a$ es el conjunto $[a]=\{b\in G : b\cong a mod H \}=\{b\in G: ba^{-1}\in H \}=\{b\in G: b=ha \mbox{ para algún } h\in H \}=\{ha: h\in H \}=Ha$.
+
+    (3) Es fácil ver que la función de $Ha$ sobre $H$, que aplica a cada $ha$ en $h$, es una biyección.
+
+Para la congruencia por la izquierda se procede forma análoga.</code></pre>
 </div>
 
 <div id="ejercicios-1" class="section level3">
 <h3><span class="header-section-number">1.5.1</span> Ejercicios</h3>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-95" class="exercise"><strong>Ejercicio 1.3  </strong></span>Sea <span class="math inline">\(G\)</span> un grupo y <span class="math inline">\(C\)</span> un conjunto no vacío. Sea <span class="math inline">\(M(C,G)\)</span> el conjunto de todas las funciones <span class="math inline">\(f:C\longrightarrow G\)</span>. Definamos la operación de grupo como la suma de funciones, es decir, para cada <span class="math inline">\(f,g\in M(C,G)\)</span>, <span class="math inline">\(f\ast g = f +g\)</span>. Demuestre que <span class="math inline">\(M(C,G)\)</span> es un grupo, es abeliano si <span class="math inline">\(G\)</span> lo es.</p>
+<p><span id="exr:unnamed-chunk-98" class="exercise"><strong>Ejercicio 1.3  </strong></span>Sea <span class="math inline">\(G\)</span> un grupo y <span class="math inline">\(C\)</span> un conjunto no vacío. Sea <span class="math inline">\(M(C,G)\)</span> el conjunto de todas las funciones <span class="math inline">\(f:C\longrightarrow G\)</span>. Definamos la operación de grupo como la suma de funciones, es decir, para cada <span class="math inline">\(f,g\in M(C,G)\)</span>, <span class="math inline">\(f\ast g = f +g\)</span>. Demuestre que <span class="math inline">\(M(C,G)\)</span> es un grupo, es abeliano si <span class="math inline">\(G\)</span> lo es.</p>
 <p>Respuesta: Es claro que la suma de funciones es cerrada en <span class="math inline">\(M(C,G)\)</span>. Sean <span class="math inline">\(f,g,h\in M(C,G)\)</span>, para cada <span class="math inline">\(a\in C\)</span>, <span class="math inline">\((f+(g+h))(a)=f(a)+((g+h)(a))=f(a)+(g(a)+h(a))\)</span> como <span class="math inline">\(G\)</span> es un grupo, la suma es asociativa, luego <span class="math inline">\(f(a)+(g(a)+h(a))=(f(a)+g(a))+h(a)=((f+g)(a))+h(a)=((f+g)+h)(a)\)</span>; por lo tanto la suma de funciones es asociativa.</p>
 </div>
 
@@ -872,16 +897,45 @@ Basta probar que <span class="math inline">\(\mathbb{Z}\sim \mathbb{N}\)</span> 
 
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-96" class="exercise"><strong>Ejercicio 1.5  </strong></span>(1.) Demuestre que el grupo del ejemplo <a href="#exm:ejm1-21">1.29</a> es un grupo de orden <span class="math inline">\(|G||H|\)</span>. Además muestre que <span class="math inline">\(G\times H\)</span> es un grupo abeliano si <span class="math inline">\(G\)</span> y <span class="math inline">\(H\)</span> lo son. Respuesta: Sabemos que <span class="math inline">\(|G\times H|=|G||H|\)</span>, lo que demuestra que el orden del grupo es el producto <span class="math inline">\(|G||H|\)</span>. Ahora supongamos que <span class="math inline">\(G\)</span> y <span class="math inline">\(H\)</span> son abelianos, luego <span class="math inline">\((a,b)\ast (c,d)=(a\ast c,b\ast d)=(c\ast a,d\ast b)=(c,d)\ast (a,b)\)</span>.</p>
+<p><span id="exr:unnamed-chunk-99" class="exercise"><strong>Ejercicio 1.5  </strong></span>(1.) Demuestre que el grupo del ejemplo <a href="#exm:ejm1-21">1.29</a> es un grupo de orden <span class="math inline">\(|G||H|\)</span>. Además muestre que <span class="math inline">\(G\times H\)</span> es un grupo abeliano si <span class="math inline">\(G\)</span> y <span class="math inline">\(H\)</span> lo son. Respuesta: Sabemos que <span class="math inline">\(|G\times H|=|G||H|\)</span>, lo que demuestra que el orden del grupo es el producto <span class="math inline">\(|G||H|\)</span>. Ahora supongamos que <span class="math inline">\(G\)</span> y <span class="math inline">\(H\)</span> son abelianos, luego <span class="math inline">\((a,b)\ast (c,d)=(a\ast c,b\ast d)=(c\ast a,d\ast b)=(c,d)\ast (a,b)\)</span>.</p>
 (2.) Demuestre que el grupo simétrico sobre <span class="math inline">\(n\)</span> letras es de orden <span class="math inline">\(n!\)</span>. Respuesta: Pensemos en el grupo simétrico <span class="math inline">\(S_{3}\)</span>. El orden del grupo es equivalente a contar todas las posibles biyecciones de un conjunto de <span class="math inline">\(3\)</span> elementos, a saber:\ $( {
 <span class="math display">\[\begin{array}{ccc}
         1 &amp; 2 &amp; 3\\
         i_{1} &amp; i_{2} &amp; i_{3}\\
         \end{array}\]</span>
 <p>} ) $. Nótese que <span class="math inline">\(1\)</span> tiene <span class="math inline">\(3\)</span> posibles imágenes <span class="math inline">\(i_{1}\)</span>, luego de fijada la imagen de <span class="math inline">\(1\)</span>, restas <span class="math inline">\(2\)</span> posibles imágenes de <span class="math inline">\(2\)</span>, <span class="math inline">\(i_{2}\)</span> y luego de fijadas las imágenes de <span class="math inline">\(1\)</span> y <span class="math inline">\(2\)</span>, le queda una sola posibilidad a <span class="math inline">\(3\)</span>. De donde podemos concluír que existen <span class="math inline">\(3!\)</span> posibles biyecciones de <span class="math inline">\(\{1,2,3\}\)</span> en sí mismo. Análogamente, contar los elementos de <span class="math inline">\(S_{n}\)</span> es equivalente a contar las posibles permutaciones del conjunto <span class="math inline">\(\{1,2,3,\cdots, n\}\)</span>. (3.) Demuestre que el grupo del ejemplo  es un grupo de orden <span class="math inline">\(|G||H|\)</span>. Además muestre que <span class="math inline">\(G\times H\)</span> es un grupo abeliano si <span class="math inline">\(G\)</span> y <span class="math inline">\(H\)</span> lo son. Respuesta: Sabemos que <span class="math inline">\(|G\times H|=|G||H|\)</span>, lo que demuestra que el orden del grupo es el producto <span class="math inline">\(|G||H|\)</span>. Ahora supongamos que <span class="math inline">\(G\)</span> y <span class="math inline">\(H\)</span> son abelianos, luego <span class="math inline">\((a,b)\ast (c,d)=(a\ast c,b\ast d)=(c\ast a,d\ast b)=(c,d)\ast (a,b)\)</span>.</p>
-<p>(4.) Demuestre que la intersección de subgrupos es un subgrupo. Respuesta: Sea <span class="math inline">\(G\)</span> un grupo y sea <span class="math inline">\(\{H_{i}|i\in I \}\)</span> una familia no vacía de subgrupos de <span class="math inline">\(G\)</span>. Sea <span class="math inline">\(a,b\in\bigcap_{i\in I}H_{i}\)</span>. Entonces para cada <span class="math inline">\(i\in I\)</span>, <span class="math inline">\(a,b\in H_{i}\)</span>, como cada <span class="math inline">\(H_{i}\)</span> es un subgrupo de <span class="math inline">\(G\)</span>, se tiene que <span class="math inline">\(a^{-1}, ab\in H_{i}\)</span>, por lo tanto <span class="math inline">\(a^{-1}, ab\in\bigcap_{i\in I} H_{i}\)</span>.</p>
+(4.) Demuestre que la intersección de subgrupos es un subgrupo. Respuesta: Sea <span class="math inline">\(G\)</span> un grupo y sea <span class="math inline">\(\{H_{i}|i\in I \}\)</span> una familia no vacía de subgrupos de <span class="math inline">\(G\)</span>. Sea <span class="math inline">\(a,b\in\bigcap_{i\in I}H_{i}\)</span>. Entonces para cada <span class="math inline">\(i\in I\)</span>, <span class="math inline">\(a,b\in H_{i}\)</span>, como cada <span class="math inline">\(H_{i}\)</span> es un subgrupo de <span class="math inline">\(G\)</span>, se tiene que <span class="math inline">\(a^{-1}, ab\in H_{i}\)</span>, por lo tanto <span class="math inline">\(a^{-1}, ab\in\bigcap_{i\in I} H_{i}\)</span>.
 </div>
 
+
+<div class="exercise">
+<p><span id="exr:ejc5" class="exercise"><strong>Ejercicio 1.6  </strong></span>Sea <span class="math inline">\(G\)</span> un grupo y <span class="math inline">\(a,b\in G\)</span> de orden finito. Demuestre que se cumplen las siguientes propiedades:</p>
+<pre><code>    (1) $a^{k}=e \Leftrightarrow |\langle a\rangle||k$.
+
+    (2) $a=e \Leftrightarrow |\langle a\rangle|=1$.
+
+    (3) $|\langle a\rangle|=|\langle a^{-1}\rangle|$.
+
+    (4) $|\langle a^{k}\rangle|=\frac{|a|}{(|a|,k)}$. Donde $(m,n)$ denota el máximo común divisor de $m$ y $n$.
+
+    (5) Si $|ab|$ es finito, entonces $|ab|=|ba|$.
+
+    (6) Si $|ab|=|ba|$, entonces $|ab||[|a|,|b|]$. Además si $|a|$ y $|b|$ son coprimos, entonces $|ab|=|a||b|$. Donde $[m,n]$ denota el mínimo común múltiplo de $m$ y $n$.
+
+Respuesta:
+
+    (1) Sea $n$ el oreden de $a$. Note que si $k=qn+r$ para algunos enteros $0\leq r&lt; n$, $a^{k}=a^{qn}a^{r}$. Si $a^{k}=e$, entonces $e=a^{k}=a^{qn}a^{r}=a^{r}$, de donde se sigue que $r$ es necesariamente $0$ .Si $n|k$, $k=qn\Leftrightarrow a^{k}=a^{qn}=e^{q}=e$.
+
+    (2) Si el orden de $a$ es $1$, se tiene que $a=a^{1}=e$. Recíprocamente, si $a=e$, $\langle a\rangle=\langle e\rangle$, por lo tanto el orden de $a$ es $1$.
+
+    (3) Se sigue del hecho que $(a^{-1})^{m}=(a^{m})^{-1}$.
+
+    (4) Sea $n=|\langle a\rangle|$ y $d=(n,k)$. Entonces $n=sd$ y $k=td$. Si $(a^{k})^{m}=a^{km}=e=a^{n}$, entonces $n|km$, por lo tanto $s|tm$. Como $(s,t)=1$, entonces $s|m$, por lo tanto $|\langle a^{k}\rangle|=s$.
+
+    (5) Sea $m$ el orden de $ab$. Esto es $(ab)^{m}=e$ por lo tanto $(ab)(ab)\cdots (ab)=e\Leftrightarrow a(ba)(ba)\cdots (ba)b=e\Leftrightarrow (ba)^{m-1}=a^{-1}b^{-1}=(ba)^{-1}\Leftrightarrow (ba)^{m}=e$
+  
+    (6) Sean $n=|\langle a\rangle|$, $m=|\langle b\rangle|$, $s=|\langle (ab)\rangle|$ y $M=[n,m]$. Si $(ab)$ commuta, $(ab)^{M}=a^{M}b^{M}$. De la parte (a) se tiene que $(ab)^{M}=a^{M}b^{M}=e$ y que $s|M$. Si $(m,n)=1$, $(ab)^{s}=a^{s}b^{s}=e$ entonces $a^{s}=b^{-s}$ por lo tanto $|\langle a^{s}\rangle|=|\langle b^{s}\rangle|$; de los apartados anteriores se sigue que $\frac{n}{(n,s)}=\frac{m}{m,s}\Leftrightarrow n|s\mbox{ y }m|s$ de donde se tiene que $M|s$, y como $s|M$, entonces $s=M$.
+&lt;/div&gt;\EndKnitrBlock{exercise}</code></pre>
 </div>
 </div>
 </div>
