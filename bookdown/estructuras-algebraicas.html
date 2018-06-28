@@ -877,11 +877,87 @@ Basta probar que <span class="math inline">\(\mathbb{Z}\sim \mathbb{N}\)</span> 
 Para la congruencia por la izquierda se procede forma análoga.</code></pre>
 </div>
 
+
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-98" class="theorem"><strong>Teorema 1.16  </strong></span> Sea <span class="math inline">\(H\)</span> un subgrupo de un grupo <span class="math inline">\(G\)</span>.</p>
+<pre><code>    (1) La congruencia por la derecha (respectivamente, por la izquierda) módulo $H$ es una relación de equivalencia sobre $G$.
+
+    (2) Las clases de equivalencia de $a\in G$ bajo la congruencia por la derecha (respectivamente por la izquierda) módulo $H$ es el conjunto $Ha=\{ha : h\in H \}$ (respectivamente $aH=\{ah :h\in H \}$). A los conjuntos del tipo $Ha$ y $aH$ se les llama **clase lateral derecha módulo $H$** y  **clase lateral izquierda módulo $H$**. En general, una clase lateral derecha no es una clase lateral izquierda.
+
+    (3) $|Ha|=|H|=|aH|$, para todo $a\in G$.</code></pre>
+</div>
+
+
+<div class="proof">
+<p> <span class="proof"><em>Demostración. </em></span>  Sean <span class="math inline">\(a,b,c\in G\)</span>.</p>
+<pre><code>    (1) Claramente $a\cong_{r} a mod H$, ya que $aa^{-1}=e\in H$, de donde se tiene que la relación es reflexiva. Como $ba^{-1}=(ab^{-1})^{-1}$, se tiene que la relación es reflexiva. Supongamos que $a\cong_{r} b mod H$ y que $b\cong_{r} c mod H$, esto es $ab^{-1}\in H$ y $bc^{-1}\in H$, por lo tanto $ac^{-1}=a(b^{-1}b)c^{-1}=(ab^{-1})(bc^{-1})\in H$, se tiene que $a\cong_{r} c mod H$, por lo que la relación es transitiva.
+
+    (2) La clase de equivalencia de $a$ es el conjunto $[a]=\{b\in G : b\cong a mod H \}=\{b\in G: ba^{-1}\in H \}=\{b\in G: b=ha \mbox{ para algún } h\in H \}=\{ha: h\in H \}=Ha$.
+
+(3) Es fácil ver que la función de $Ha$ sobre $H$, que aplica a cada $ha$ en $h$, es una biyección.
+
+Para la congruencia por la izquierda se procede forma análoga.</code></pre>
+</div>
+
+
+<div class="remark">
+<p> <span class="remark"><em>Nota. </em></span>  En la literatura puede hallarse que a los conjuntos <span class="math inline">\(Ha\)</span> (resp. <span class="math inline">\(aH\)</span>) se les llama <strong>coset derecho (resp. izquierdo) de <span class="math inline">\(H\)</span> en <span class="math inline">\(G\)</span></strong>, término proveniente del idioma inglés (right coset y left coset) pero que se ha hecho popular en la literatura en otras lenguas, en particular en la española, por su simplicidad. El prefijo co indica con o en compañía. De este punto en adelante usaremos este término para referirinos a las clases laterales módulo <span class="math inline">\(H\)</span>.</p>
+</div>
+
+
+<div class="corollary">
+<p><span id="cor:unnamed-chunk-101" class="corollary"><strong>Corolario 1.1  </strong></span> Sea <span class="math inline">\(H\)</span> un subgrupo de un grupo <span class="math inline">\(G\)</span>.</p>
+<pre><code>    (1) $G$ es la unión de los coset derechos (resp. izquierdos) de $H$ en $G$.
+    (2) Dos coset derechos (rersp. izquierdos) de $H$ en $G$ son disjuntos o iguales.
+    (4) Para todo $a,b\in G$, $Ha=Hb\Leftrightarrow ab^{-1}\in H$ y $aH=bH\Leftrightarrow a^{-1}b\in H$.
+    (4) Si $\mathcal{D}$ es el conjunto de los coset derechos de $H$ en $G$ y $\mathcal{I}$ es el conjunto de los coset izquierdos de $H$ en $G$, entonces $|\mathcal{D}|=|\mathcal{I}|$.
+&lt;/div&gt;\EndKnitrBlock{corollary}</code></pre>
+
+<div class="proof">
+<p> <span class="proof"><em>Demostración. </em></span>  Los apartados del (1) al (3) son consecuencia inmediata del teorema anterior y del teorema  (sección 2). (4) Sea <span class="math inline">\(f:\mathcal{D}\longrightarrow\mathcal{L}\)</span> la función definida por <span class="math inline">\(f(Ha)=Ha^{-1}\)</span> es una biyección, ya que <span class="math inline">\(Ha=Hb\Leftrightarrow ab^{-1}\in H\leftrightarrow (a^{-1})^{-1}b^{-1}\in H\leftrightarrow a^{1}H=b^{-1}H\)</span>.</p>
+</div>
+
+
+<div class="remark">
+<p> <span class="remark"><em>Nota. </em></span>  <strong>La notación aditiva</strong>. Si <span class="math inline">\(G\)</span> es un subgrupo aditivo y <span class="math inline">\(H\)</span> un subgrupo de <span class="math inline">\(G\)</span>, la congruencia por la derecha módul <span class="math inline">\(H\)</span> es <span class="math inline">\(a\cong_{r}b mod H\)</span> si y solo si <span class="math inline">\(a-b\in H\)</span>. Las clases laterales derechas (coset derechos) son los conjuntos <span class="math inline">\(H+a=\{h+a:h\in H \}\)</span>, para <span class="math inline">\(a\in G\)</span>. De forma análoga, para la congruencia por la izquierda módulo <span class="math inline">\(H\)</span>, <span class="math inline">\(a\cong_{l}b mod H\)</span> si y solo si <span class="math inline">\(b-a\in H\)</span>. Las clases laterales izquierdas (coset izquierdos) son los conjuntos de la forma <span class="math inline">\(a+H=\{h+a:h\in H \}\)</span>.</p>
+</div>
+
+<p>De la parte (4) del corolario se puede ver <span class="math inline">\(|\mathcal{D}|=|\mathcal{I}|\)</span>. Podemos entonces dar la siguiente definición:</p>
+
+<div class="definition">
+<p><span id="def:unnamed-chunk-104" class="definition"><strong>Definición 1.30  </strong></span> Sea <span class="math inline">\(H\)</span> un subgrupo de un grupo <span class="math inline">\(G\)</span>. El <strong>índice de <span class="math inline">\(H\)</span> en <span class="math inline">\(G\)</span></strong> es el cardinal del conjunto de los coset derechos de <span class="math inline">\(H\)</span> en <span class="math inline">\(G\)</span>. Lo denotamos por <span class="math inline">\([G:H]\)</span>.</p>
+</div>
+
+
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-105" class="theorem"><strong>Teorema 1.17  </strong></span> Si <span class="math inline">\(K,H, G\)</span> son subgrupos tales que <span class="math inline">\(K&lt;H&lt;G\)</span>, entonces <span class="math inline">\([G:K]=[G:H][H:K]\)</span>.</p>
+</div>
+
+
+<div class="proof">
+<p> <span class="proof"><em>Demostración. </em></span>  Sea <span class="math inline">\(a_{i}\in G\)</span>, con <span class="math inline">\(i\in I\)</span> un representante de cada coset de <span class="math inline">\(H\)</span> en <span class="math inline">\(G\)</span>, donde la familia de índices <span class="math inline">\(I\)</span> cumple que <span class="math inline">\(|I|=[G:H]\)</span>. Por el corolario anterior se tiene que <span class="math inline">\(G=\bigcup_{i\in I} Ha_{i}\)</span>. Note que los coset derechos <span class="math inline">\(Ha_{i}\)</span> son disjuntos (esto es <span class="math inline">\(Ha_{i}=Ha_{j}\leftrightarrow i=j\)</span>). Análogamente <span class="math inline">\(H=\bigcup_{j\in J} Kb_{j}\)</span>, con <span class="math inline">\(b_{j}\in H\)</span> y <span class="math inline">\(|J|=[H:K]\)</span>, donde los conjuntos <span class="math inline">\(Kb_{j}\)</span> son disjuntos dos a dos. De esta forma se tiene que <span class="math inline">\(G=\bigcup_{i\in I} Ha_{i}=\bigcup_{i\in I}(\bigcup_{j\in J} Kb_{j})a_{i}=\bigcup_{(i,j)\in I\times J} Kb_{j}a_{i}\)</span>. Basta probar que los conjuntos <span class="math inline">\(Kb_{j}a_{i}\)</span> son disjuntos dos a dos porque así, del corolario se tiene <span class="math inline">\([G:K]=|I\times J|=|I||J|=[G:K][K:H]\)</span>. Si <span class="math inline">\(Kb_{j}a_{i}=Kb_{s}a_{r}\Leftrightarrow b_{j}a_{i}=kb_{s}a_{r}\)</span> para algún <span class="math inline">\(k\in K\)</span>. Como <span class="math inline">\(b_{j},b_{r},k\in H\)</span> se tiene que <span class="math inline">\(Ha_{i}=Hb_{j}a_{i}=Hkb_{s}a_{r}=Ha_{r}\)</span>, por lo que <span class="math inline">\(i=r\)</span> y <span class="math inline">\(b_{j}=kb_{s}\)</span>. Así <span class="math inline">\(Kb_{j}=Kkb_{s}=Kb_{s}\)</span> por lo tanto <span class="math inline">\(j=s\)</span>. De este modo los coset <span class="math inline">\(Kb_{j}a_{i}\)</span> son disjuntos dos a dos.</p>
+</div>
+
+
+<div class="remark">
+<p> <span class="remark"><em>Nota. </em></span>  Si dos de estos índices son finitos, también lo será el tercero.</p>
+</div>
+
+
+<div class="corollary">
+<p><span id="cor:unnamed-chunk-108" class="corollary"><strong>Corolario 1.2  (Lagrange)  </strong></span> Si <span class="math inline">\(H\)</span> es un subgrupo de un grupo <span class="math inline">\(G\)</span>, entonces <span class="math inline">\(|G|=[G:H]|H|\)</span>. En particualar si <span class="math inline">\(G\)</span> es finito, el orden de <span class="math inline">\(a\in G\)</span> divide al orden de <span class="math inline">\(G\)</span>.</p>
+</div>
+
+
+<div class="proof">
+<p> <span class="proof"><em>Demostración. </em></span>  Considerando el subgrupo <span class="math inline">\(\langle e\rangle\)</span>, del teorema anterior se tiene el resultado. En particular, si se considera además el subgrupo <span class="math inline">\(\langle a\rangle\)</span>, se sigue que <span class="math inline">\(|\langle a\rangle|\)</span> divide a <span class="math inline">\(|G|\)</span>.</p>
+</div>
+
 <div id="ejercicios-1" class="section level3">
 <h3><span class="header-section-number">1.5.1</span> Ejercicios</h3>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-98" class="exercise"><strong>Ejercicio 1.3  </strong></span>Sea <span class="math inline">\(G\)</span> un grupo y <span class="math inline">\(C\)</span> un conjunto no vacío. Sea <span class="math inline">\(M(C,G)\)</span> el conjunto de todas las funciones <span class="math inline">\(f:C\longrightarrow G\)</span>. Definamos la operación de grupo como la suma de funciones, es decir, para cada <span class="math inline">\(f,g\in M(C,G)\)</span>, <span class="math inline">\(f\ast g = f +g\)</span>. Demuestre que <span class="math inline">\(M(C,G)\)</span> es un grupo, es abeliano si <span class="math inline">\(G\)</span> lo es.</p>
+<p><span id="exr:unnamed-chunk-110" class="exercise"><strong>Ejercicio 1.3  </strong></span>Sea <span class="math inline">\(G\)</span> un grupo y <span class="math inline">\(C\)</span> un conjunto no vacío. Sea <span class="math inline">\(M(C,G)\)</span> el conjunto de todas las funciones <span class="math inline">\(f:C\longrightarrow G\)</span>. Definamos la operación de grupo como la suma de funciones, es decir, para cada <span class="math inline">\(f,g\in M(C,G)\)</span>, <span class="math inline">\(f\ast g = f +g\)</span>. Demuestre que <span class="math inline">\(M(C,G)\)</span> es un grupo, es abeliano si <span class="math inline">\(G\)</span> lo es.</p>
 <p>Respuesta: Es claro que la suma de funciones es cerrada en <span class="math inline">\(M(C,G)\)</span>. Sean <span class="math inline">\(f,g,h\in M(C,G)\)</span>, para cada <span class="math inline">\(a\in C\)</span>, <span class="math inline">\((f+(g+h))(a)=f(a)+((g+h)(a))=f(a)+(g(a)+h(a))\)</span> como <span class="math inline">\(G\)</span> es un grupo, la suma es asociativa, luego <span class="math inline">\(f(a)+(g(a)+h(a))=(f(a)+g(a))+h(a)=((f+g)(a))+h(a)=((f+g)+h)(a)\)</span>; por lo tanto la suma de funciones es asociativa.</p>
 </div>
 
@@ -897,7 +973,7 @@ Para la congruencia por la izquierda se procede forma análoga.</code></pre>
 
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-99" class="exercise"><strong>Ejercicio 1.5  </strong></span>(1.) Demuestre que el grupo del ejemplo <a href="#exm:ejm1-21">1.29</a> es un grupo de orden <span class="math inline">\(|G||H|\)</span>. Además muestre que <span class="math inline">\(G\times H\)</span> es un grupo abeliano si <span class="math inline">\(G\)</span> y <span class="math inline">\(H\)</span> lo son. Respuesta: Sabemos que <span class="math inline">\(|G\times H|=|G||H|\)</span>, lo que demuestra que el orden del grupo es el producto <span class="math inline">\(|G||H|\)</span>. Ahora supongamos que <span class="math inline">\(G\)</span> y <span class="math inline">\(H\)</span> son abelianos, luego <span class="math inline">\((a,b)\ast (c,d)=(a\ast c,b\ast d)=(c\ast a,d\ast b)=(c,d)\ast (a,b)\)</span>.</p>
+<p><span id="exr:unnamed-chunk-111" class="exercise"><strong>Ejercicio 1.5  </strong></span>(1.) Demuestre que el grupo del ejemplo <a href="#exm:ejm1-21">1.29</a> es un grupo de orden <span class="math inline">\(|G||H|\)</span>. Además muestre que <span class="math inline">\(G\times H\)</span> es un grupo abeliano si <span class="math inline">\(G\)</span> y <span class="math inline">\(H\)</span> lo son. Respuesta: Sabemos que <span class="math inline">\(|G\times H|=|G||H|\)</span>, lo que demuestra que el orden del grupo es el producto <span class="math inline">\(|G||H|\)</span>. Ahora supongamos que <span class="math inline">\(G\)</span> y <span class="math inline">\(H\)</span> son abelianos, luego <span class="math inline">\((a,b)\ast (c,d)=(a\ast c,b\ast d)=(c\ast a,d\ast b)=(c,d)\ast (a,b)\)</span>.</p>
 (2.) Demuestre que el grupo simétrico sobre <span class="math inline">\(n\)</span> letras es de orden <span class="math inline">\(n!\)</span>. Respuesta: Pensemos en el grupo simétrico <span class="math inline">\(S_{3}\)</span>. El orden del grupo es equivalente a contar todas las posibles biyecciones de un conjunto de <span class="math inline">\(3\)</span> elementos, a saber:\ $( {
 <span class="math display">\[\begin{array}{ccc}
         1 &amp; 2 &amp; 3\\

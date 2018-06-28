@@ -634,10 +634,67 @@ Note que un grupo cíclico puede ser generado por dos elementos distintos.
 	Para la congruencia por la izquierda se procede forma análoga.
 </div>\EndKnitrBlock{proof}
 
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-98"><strong>(\#thm:unnamed-chunk-98) </strong></span>	Sea $H$ un subgrupo de un grupo $G$.
+
+		(1) La congruencia por la derecha (respectivamente, por la izquierda) módulo $H$ es una relación de equivalencia sobre $G$.
+
+		(2) Las clases de equivalencia de $a\in G$ bajo la congruencia por la derecha (respectivamente por la izquierda) módulo $H$ es el conjunto $Ha=\{ha : h\in H \}$ (respectivamente $aH=\{ah :h\in H \}$). A los conjuntos del tipo $Ha$ y $aH$ se les llama **clase lateral derecha módulo $H$** y  **clase lateral izquierda módulo $H$**. En general, una clase lateral derecha no es una clase lateral izquierda.
+
+		(3) $|Ha|=|H|=|aH|$, para todo $a\in G$.
+</div>\EndKnitrBlock{theorem}
+
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Sean $a,b,c\in G$.
+
+		(1) Claramente $a\cong_{r} a mod H$, ya que $aa^{-1}=e\in H$, de donde se tiene que la relación es reflexiva. Como $ba^{-1}=(ab^{-1})^{-1}$, se tiene que la relación es reflexiva. Supongamos que $a\cong_{r} b mod H$ y que $b\cong_{r} c mod H$, esto es $ab^{-1}\in H$ y $bc^{-1}\in H$, por lo tanto $ac^{-1}=a(b^{-1}b)c^{-1}=(ab^{-1})(bc^{-1})\in H$, se tiene que $a\cong_{r} c mod H$, por lo que la relación es transitiva.
+
+		(2) La clase de equivalencia de $a$ es el conjunto $[a]=\{b\in G : b\cong a mod H \}=\{b\in G: ba^{-1}\in H \}=\{b\in G: b=ha \mbox{ para algún } h\in H \}=\{ha: h\in H \}=Ha$.
+
+    (3) Es fácil ver que la función de $Ha$ sobre $H$, que aplica a cada $ha$ en $h$, es una biyección.
+
+	Para la congruencia por la izquierda se procede forma análoga.
+</div>\EndKnitrBlock{proof}
+
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	En la literatura puede hallarse que a los conjuntos $Ha$ (resp. $aH$) se les llama **coset derecho (resp. izquierdo) de $H$ en $G$**, término proveniente del idioma inglés (right coset y left coset) pero que se ha hecho popular en la literatura en otras lenguas, en particular en la española, por su simplicidad. El prefijo co indica con o en compañía. De este punto en adelante usaremos este término para referirinos a las clases laterales módulo $H$.
+</div>\EndKnitrBlock{remark}
+
+\BeginKnitrBlock{corollary}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-101"><strong>(\#cor:unnamed-chunk-101) </strong></span>	Sea $H$ un subgrupo de un grupo $G$.
+
+		(1) $G$ es la unión de los coset derechos (resp. izquierdos) de $H$ en $G$.
+		(2) Dos coset derechos (rersp. izquierdos) de $H$ en $G$ son disjuntos o iguales.
+		(4) Para todo $a,b\in G$, $Ha=Hb\Leftrightarrow ab^{-1}\in H$ y $aH=bH\Leftrightarrow a^{-1}b\in H$.
+		(4) Si $\mathcal{D}$ es el conjunto de los coset derechos de $H$ en $G$ y $\mathcal{I}$ es el conjunto de los coset izquierdos de $H$ en $G$, entonces $|\mathcal{D}|=|\mathcal{I}|$.
+	</div>\EndKnitrBlock{corollary}
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Los apartados del (1) al (3) son consecuencia inmediata del teorema anterior y del teorema \ref{teo1.27} (sección 2).
+	(4) Sea $f:\mathcal{D}\longrightarrow\mathcal{L}$ la función definida por $f(Ha)=Ha^{-1}$ es una biyección, ya que $Ha=Hb\Leftrightarrow ab^{-1}\in H\leftrightarrow (a^{-1})^{-1}b^{-1}\in H\leftrightarrow a^{1}H=b^{-1}H$.
+</div>\EndKnitrBlock{proof}
+
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	**La notación aditiva**. Si $G$ es un subgrupo aditivo y $H$ un subgrupo de $G$, la congruencia por la derecha módul $H$ es $a\cong_{r}b mod H$ si y solo si $a-b\in H$. Las clases laterales derechas (coset derechos) son los conjuntos $H+a=\{h+a:h\in H \}$, para $a\in G$. De forma análoga, para la congruencia por la izquierda módulo $H$, $a\cong_{l}b mod H$ si y solo si $b-a\in H$. Las clases laterales izquierdas (coset izquierdos) son los conjuntos de la forma  $a+H=\{h+a:h\in H \}$.
+</div>\EndKnitrBlock{remark}
+
+De la parte (4) del corolario se puede ver $|\mathcal{D}|=|\mathcal{I}|$. Podemos entonces dar la siguiente definición:
+ 
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-104"><strong>(\#def:unnamed-chunk-104) </strong></span>	Sea $H$ un subgrupo de un grupo $G$. El **índice de $H$ en $G$** es el cardinal del conjunto de los coset derechos de $H$ en $G$. Lo denotamos por $[G:H]$.
+</div>\EndKnitrBlock{definition}
+
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-105"><strong>(\#thm:unnamed-chunk-105) </strong></span>	Si $K,H, G$ son subgrupos tales que $K<H<G$, entonces $[G:K]=[G:H][H:K]$.
+</div>\EndKnitrBlock{theorem}
+
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Sea $a_{i}\in G$, con $i\in I$ un representante de cada coset de $H$ en $G$, donde la familia de índices $I$ cumple que $|I|=[G:H]$. Por el corolario anterior se tiene que $G=\bigcup_{i\in I} Ha_{i}$. Note que los coset derechos $Ha_{i}$ son disjuntos (esto es $Ha_{i}=Ha_{j}\leftrightarrow i=j$). Análogamente $H=\bigcup_{j\in J} Kb_{j}$, con $b_{j}\in H$ y $|J|=[H:K]$, donde los conjuntos $Kb_{j}$ son disjuntos dos a dos. De esta forma se tiene que $G=\bigcup_{i\in I} Ha_{i}=\bigcup_{i\in I}(\bigcup_{j\in J} Kb_{j})a_{i}=\bigcup_{(i,j)\in I\times J} Kb_{j}a_{i}$. Basta probar que los conjuntos $Kb_{j}a_{i}$ son disjuntos dos a dos porque así, del corolario se tiene $[G:K]=|I\times J|=|I||J|=[G:K][K:H]$. Si $Kb_{j}a_{i}=Kb_{s}a_{r}\Leftrightarrow b_{j}a_{i}=kb_{s}a_{r}$ para algún $k\in K$. Como $b_{j},b_{r},k\in H$ se tiene que $Ha_{i}=Hb_{j}a_{i}=Hkb_{s}a_{r}=Ha_{r}$, por lo que $i=r$ y $b_{j}=kb_{s}$. Así $Kb_{j}=Kkb_{s}=Kb_{s}$ por lo tanto $j=s$. De este modo los coset $Kb_{j}a_{i}$ son disjuntos dos a dos. 
+</div>\EndKnitrBlock{proof}
+
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	Si dos de estos índices son finitos, también lo será el tercero.
+</div>\EndKnitrBlock{remark}
+
+\BeginKnitrBlock{corollary}\iffalse{-91-76-97-103-114-97-110-103-101-93-}\fi{}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-108"><strong>(\#cor:unnamed-chunk-108)  \iffalse (Lagrange) \fi{} </strong></span>	Si $H$ es un subgrupo de un grupo $G$, entonces $|G|=[G:H]|H|$. En particualar si $G$ es finito, el orden de $a\in G$ divide al orden de $G$.
+</div>\EndKnitrBlock{corollary}
+
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Considerando el subgrupo $\langle e\rangle$, del teorema anterior se tiene el resultado. En particular, si se considera además el subgrupo $\langle a\rangle$, se sigue que $|\langle a\rangle|$ divide a $|G|$.
+</div>\EndKnitrBlock{proof}
+
 
 ### Ejercicios
 
-\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-98"><strong>(\#exr:unnamed-chunk-98) </strong></span>Sea $G$ un grupo y $C$ un conjunto no vacío. Sea $M(C,G)$ el conjunto de todas las funciones $f:C\longrightarrow G$. Definamos la operación de grupo como la suma de funciones, es decir, para cada $f,g\in M(C,G)$, $f\ast g = f +g$. Demuestre que $M(C,G)$ es un grupo, es abeliano si $G$ lo es.
+\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-110"><strong>(\#exr:unnamed-chunk-110) </strong></span>Sea $G$ un grupo y $C$ un conjunto no vacío. Sea $M(C,G)$ el conjunto de todas las funciones $f:C\longrightarrow G$. Definamos la operación de grupo como la suma de funciones, es decir, para cada $f,g\in M(C,G)$, $f\ast g = f +g$. Demuestre que $M(C,G)$ es un grupo, es abeliano si $G$ lo es.
 
 Respuesta: Es claro que la suma de funciones es cerrada en $M(C,G)$. Sean $f,g,h\in M(C,G)$, para cada $a\in C$, $(f+(g+h))(a)=f(a)+((g+h)(a))=f(a)+(g(a)+h(a))$ como $G$ es un grupo, la suma es asociativa, luego $f(a)+(g(a)+h(a))=(f(a)+g(a))+h(a)=((f+g)(a))+h(a)=((f+g)+h)(a)$; por lo tanto la suma de funciones es asociativa.
 </div>\EndKnitrBlock{exercise}
@@ -651,7 +708,7 @@ Respuesta: Es claro que la suma de funciones es cerrada en $M(C,G)$. Sean $f,g,h
 	Análogamente, contar los elementos de $S_{n}$ es equivalente a contar las posibles permutaciones del conjunto $\{1,2,3,\cdots, n\}$.
 </div>\EndKnitrBlock{exercise}
 
-\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-99"><strong>(\#exr:unnamed-chunk-99) </strong></span>(1.) Demuestre que el grupo del ejemplo \@ref(exm:ejm1-21) es un grupo de orden $|G||H|$. Además muestre que $G\times H$ es un grupo abeliano si $G$ y $H$ lo son.
+\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-111"><strong>(\#exr:unnamed-chunk-111) </strong></span>(1.) Demuestre que el grupo del ejemplo \@ref(exm:ejm1-21) es un grupo de orden $|G||H|$. Además muestre que $G\times H$ es un grupo abeliano si $G$ y $H$ lo son.
 Respuesta: Sabemos que $|G\times H|=|G||H|$, lo que demuestra que el orden del grupo es el producto $|G||H|$. Ahora supongamos que $G$ y $H$ son abelianos, luego $(a,b)\ast (c,d)=(a\ast c,b\ast d)=(c\ast a,d\ast b)=(c,d)\ast (a,b)$.
 
 (2.) Demuestre que el grupo simétrico sobre $n$ letras es de orden $n!$.
