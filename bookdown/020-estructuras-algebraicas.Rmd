@@ -503,7 +503,6 @@ Note que si $G$ es un grupo cíclico, la función que aplica a cada entero $k$ e
 
 ```
 
-Ejercicios
 
 ### Ejercicios
 
@@ -936,18 +935,95 @@ De la parte (4) del corolario se puede ver $|\mathcal{D}|=|\mathcal{I}|$. Podemo
 ```
 
 ```{remark}
-	Si dos de estos índices son finitos, también lo será el tercero.
+	Si dos de estos ?ndices son finitos, tambi?n lo ser? el tercero.
 
 ```
 
 ```{corollary, name="Lagrange"}
-	Si $H$ es un subgrupo de un grupo $G$, entonces $|G|=[G:H]|H|$. En particualar si $G$ es finito, el orden de $a\in G$ divide al orden de $G$.
+	Si $H$ es un subgrupo de un grupo $G$, entonces $|G|=[G:H]|H|$. En particular si $G$ es finito, el orden de $a\in G$ divide al orden de $G$.
 
 ```
 
 ```{proof}
 	Considerando el subgrupo $\langle e\rangle$, del teorema anterior se tiene el resultado. En particular, si se considera además el subgrupo $\langle a\rangle$, se sigue que $|\langle a\rangle|$ divide a $|G|$.
 
+```
+
+Dados dos subconjuntos $H$ y $K$ de un grupo $G$, el conjunto $HK$ es el formado por todos los productos del tipo $ab$ donde $a\in H$ y $b\in K$, es decir, $HK=\{ab|a\in H \mbox{ y }b\in K \}$. Los coset derecho e izquierdo son un caso particular de estos conjuntos. Puede que los subconjuntos $H$ y $K$ sean subgrupos, en este caso, el conjunto $HK$ no es necesariamente un subgrupo.
+
+Dados dos subconjuntos $H$ y $K$ de un grupo $G$, el conjunto $HK$ es el formado por todos los productos del tipo $ab$ donde $a\in H$ y $b\in K$, es decir, $HK=\{ab|a\in H \mbox{ y }b\in K \}$. Los coset derecho e izquierdo son un caso particular de estos conjuntos. Puede que los subconjuntos $H$ y $K$ sean subgrupos, en este caso, el conjunto $HK$ no es necesariamente un subgrupo.
+
+```{theorem}
+	Sea $H$ y $K$ subgrupos finitos de un grupo $G$. Entonces $|HK|=|H||K|/|H\cap K|$.
+
+```
+```{proof}
+	Sea $C=H\cap K$, $C$ es un subgrupo de $K$ de índice $n=|K|/|C|$ y $K$ es la unión disjunta de coset derechos $Ck_{1}\cup Ck_{2}\cdots Ck_{n}$ para algunos $k_{i}\in K$. Como $HC=H$, se tiene que $HK$ es la unión disjunta $Hk_{1}\cup Hk_{2}\cdots Hk_{n}$. Por lo tanto, $|HK|=|H|n=|H||K|/|H\cap K|$.
+
+```
+
+```{proposition}
+	Si $H$ y $K$ son subgrupos de un grupo $G$, entonces $[H:H\cap K]\leq [G:K]$. Si $[G:K]$ es finito, entonces $[H:H\cap K]= [G:K]$ si y solo si $G=KH$.
+
+```
+```{proof}
+	Sean $A$ y $B$ los conjuntos de coset´s de $H\cap K$ en $H$ y de $K$ en $G$ respectivamente. Sea $\phi:A\longleftarrow B$ la función definida por $\phi((H\cap K)h)=Kh$.  Veamos que está bien definida. Si $(H\cap K)h=(H\cap K)h´$, entonces $h´h^{-1}\in H\cap K\subseteq K$ y así $Kh=Kh´$. Además $\phi$ es inyectiva. Entonces $|A|\leq |B|$, es decir $[H:H\cap K]\leq [G:K]$.\\
+	Si $[G:K]$ es finito, entonces $\phi$ es sobreyectiva si y solo si $G=KH$. Nótese que para $h\in H$, $k\in K$, $Kkh=Kh$.
+
+```
+
+Ahora estuadiaremos algunos subgrupos $N$ (de un grupo $G$) para los que la congruencia derecha e izquierda módulo $N$ coinciden. 
+
+```{theorem}
+	Si $N$ es un subgrupo de un grupo $G$, entonces las siguientes condiciones son equivalentes:
+
+		(i) La congruencia por laderecha módulo $N$ y la congruencia por la izquierda módulo $N$ coinciden (es decir, definen la misma relación de equivalencia sobre G).
+
+		(ii) Todo coset derecho de $N$ en $G$ es un coset izquierdo de $N$ en $G$.
+
+		(iii) $aN=Na$ para todo $a\in G$.
+
+		(iv) Para todo $a\in G$, $\{ana^{-1}| n\in N \}=aNa^{-1}\subseteq N$.
+
+		(v) Para todo $a\in G$, $aNa^{-1}=N$.
+
+```
+
+```{proof}
+	Es inmediato ver que (i) es equivalente a (iii) ya que dos relaciones son idénticas si y solo si definen las mismas clases de equivalencias, en este caso los coset derechos e izquierdos de $N$. Veamos que (ii) implica (iii), si $aN=Nb$ para algún $b\in G$, entonces $a\in Nb\cap Na$, por lo que $Nb=Na$ ya que los cosets derechos (e izquierdos) son disjuntos o iguales. (iii) implica (iv) trivialmene, basta multiplicar por la derecha $a^{-1}$. Para ver que (iv) implica (v), basta notar que (iv) es cierto para el elemento $a^{-1}$, así $a^{-1}Na\subseteq N$ po lo que para todo $n\in N$, se tiene que $n=a(a^{-1}na)a^{-1}\in aNa^{-1}$ y así $N\subseteq aNa^{-1}$. Es trivial ver que (v) implica (ii) multiplicando por $a$ a la derecha.
+
+```
+
+```{definition}
+	Un subgrupo $N$ de un grupo $G$ que satisfaga las condiciones equivalentes del teorema anterior se llama **subgrupo normal de $G$** (o se dice que es **normal en $G$**) y se denota por $N\triangleleft G$.
+
+```
+
+Cuando se tiene un subgrupo normal $N$, por el teorema anterior, podemos omitir el subíndice i y d en la congruencia módulo $N$ ya que la las congruencias izquierda y derechas coinciden. 
+
+```{remark}
+
+		(1) Note que todo subgrupo de un grupo abeliano es normal.
+
+		(2) La intersección de subgrupos normales, es un subgrupo normal.
+
+		(3) Si $N$ es un subgrupo normal de un grupo $G$, entonces es normal en todo subgrupo de $G$ que lo contenga, sin embargo, si $H$ es un subgrupo normal de $K$ y $K$ es un subgrupo normal de $G$, no necesariamente se tiene que $H\triangleleft G$.
+
+		(4) Denotaremos por $H\bigvee K$ al subgrupo generado por el conjunto  unión $H\cup K$, es decir $H\bigvee K=\langle H\cup K\rangle$.
+
+```
+
+```{theorem}
+	Sean $K$ y $N$ subgrupos de un grupo $G$, con $N$ normal en $G$. Entonces:
+
+		(i) $N\cap K$ es un subgrupo normal de $K$.
+	
+		(ii) $N$ es un subgrupo normal de $N\bigvee K$.
+	
+		(iii) $NK=N\bigvee K=KN$.
+	
+		(iv) Si $K$ es normal en $G$ y $K\cap N=\langle e\rangle$, entonces $nk=kn$ para todo $k\in K$ y $n\in N$.
+	
 ```
 
 
