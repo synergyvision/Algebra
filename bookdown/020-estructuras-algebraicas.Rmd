@@ -759,7 +759,7 @@ Note que dados dos homomorfismos de semigrupos $f:G\longrightarrow H$ y $g:H\lon
 
 ```
 
-```{theorem}
+```{theorem,label="1homomorfismo"}
 	Sea $f:G\longrightarrow H$ un homomorfismo de grupos. Entonces:
 
 		(i) $f$ es un monomorfismo si y solo si $Ker f=\{e_{G}\}$.
@@ -1024,6 +1024,42 @@ Cuando se tiene un subgrupo normal $N$, por el teorema anterior, podemos omitir 
 	
 		(iv) Si $K$ es normal en $G$ y $K\cap N=\langle e\rangle$, entonces $nk=kn$ para todo $k\in K$ y $n\in N$.
 	
+```
+```{proof}
+		(i) Sea $n\in N\cap K$ y $a\in G$. Entonces $ana^{-1}\in N$ (porque $N$ es normal) y $ana^{-1}\in K$ (ya que $K<G$). De este modo $a(N\cap K)a^{-1}\subseteq N\cap K$ y $N\cap K \vartriangleleft K$. (ii) Se sigue trivialmente de $N< N\bigvee K$. (iii) Es claro que $NK\subseteq N\bigvee K$; un elemento $b$ de $N\bigvee K$ es de la forma $b=n_{1}k_{1}n_{2}k_{2}\cdots n_{r}k_{r}$ donde $n_{i}\in N$ y $k_{i}\in K$. Como $N$ es normal en $G$, se tiene que $n_{i}k_{i}=k_{i}m$ para algún $m\in N$ y de este modo $b=n(k_{1}k_{2}\cdots k_{r})$ con $n\in N$, por lo que $N\bigvee K\subseteq NK$. De forma análoga se tiene que $N\bigvee K=KN$. (iv) Sea $k\in K$ y $n\in N$, entonces $nkn^{-1}\in K$ ya que $K$ es normal en $G$ y $kn^{-1}k^{-1}\in N$ ya que $N$ es normal en $G$. Entonces $(nkn^{-1})k^{-1}=n(kn^{-1}k^{-1})\in N\cap K=\left\langle e\right\rangle$, por lo tanto $kn=kn$.
+
+```
+
+```{theorem}
+	Sea $N$ un subgrupos normal en $G$. Sea $G/N$ el conjunto de coset (izquierdas) de $N$ en $G$. Entonces $G/N$ es un grupo de orden $[G:N]$ bajo la operación $(aN)(bN)=abN$.
+
+```
+```{proof}
+	Veamos que la congruencia módulo $N$ es una relación de congruencia. Sean $a_{1}\cong a mod N$ y $b_{1}\cong b mod N$. Sean $n_{1}=a_{1}a^{-1}$ y $n_{2}=b_{1}b^{-1}$ donde $n_{1}$ y $n_{2}\in N$. Se tiene que $(a_{1}b_{1})(ab)^{-1}=a_{1}b_{1}b^{-1}a^{-1}=a_{1}n_{2}a^{-1}$. Como $N$ es normal, $a_{2}N=Na_{1}$ por lo tanto $a_{1}n_{2}=ma_{1}$ para algún $m\in N$, de este modo $(a_{1}b_{1})(ab)^{-1}=(a_{1}n_{2})a^{-1}=ma_{1}a^{-1}=mn_{1}\in N$, de donde $a_{1}b_{1}\cong ab mod N$.
+
+```
+
+Si $N$ es un grupo normal, entonces el grupo $G/N$ es llamado **grupo cociente (o grupo factor) de $G$ por $N$**. Si $G$ es un grupo aditivo, entonces la operación de grupo en $G/N$ está dada por $(a+N)+(b+N)=(a+b)+N$.
+
+```{theorem}
+	Si $f:G\longrightarrow H$ es un homomorfismo de grupos. Entonces el núcleo de $f$ es un subgrupo normal de $G$. Inversamente, si $N$ es un subgrupo normal de $G$, entonces la función $\pi: G\longrightarrow G/N$ definida por $\pi(a)=aN$ es un epimorfismo de núcleo $N$.
+
+```
+
+```{proof}
+	Sea $b\in Ker f$ y $a\in G$. Entonces $f(aba^{-1})=f(a)f(b)f(a^{-1})=f(a)ef(a)^{-1}=e$ por lo que $aba^{-1}\in Kerf$. Así $aKerfa^{-1}\subseteq Kerf$. Ya hemos visto que la función $\pi:G\longrightarrow G/N$ definida por $\pi(a)=aN$ es sobreyectiva. Luego $Ker\pi =\{a\in G: \pi(a)=eN=N \}=\{a\in G: aN=N \}=N$.
+
+```
+
+La función $\pi:G\longrightarrow G/N$ es llamada **epimorfismo can\'onico** (la proyeccón canónica).
+
+´´´{theorem}
+	Si $f:G\longrightarrow H$ es un homomorfismo de grupo y $N$ es un subgrupo normal de $G$ contenido en el núcleo de $f$, entonces existe un único homomorfismo $\hat{f}: G/N\longrightarrow H$ tal que $\hat{f}(aN)=f(a)$ para todo $a\in G$, $Im f=Im \hat{f}$ y $Ker\hat{f}=(Kerf)/N$. Adem\'as $\hat{f}$ es un isomorfismo si y solo si $f$ es un epimorfismo y $N=Ker f$.
+
+```
+```{proof}
+	Si $b\in aN$, $b=an$ para algún $n\in N$ y $f(b)=f(a)f(n)=f(a)$ por lo tanto para todo $b\in aN$, $f(b)=f(a)$, es decir la función $\hat{f}$ está bien definida. Ahora, $\hat{f}(aNbN)=\hat{f}(abN)=f(ab)=f(a)f(b)=\hat{f}(aN)\hat{f}(bN)$, luego $\hat{f}$ es un homomorfismo. Es evidente que $Im f=Im \hat{f}$ (ya que $\hat{f}(aN)=f(a)$) y $aN\in Ker\hat{f}\Leftrightarrow f(a)=e\Leftrightarrow a\in Ker f\Leftrightarrow Ker f/N=Ker\hat{f}$ ($Ker\hat{f}=\{aN: a\in Ker f \}=Ker f/N$). Al estar $\hat{f}$ definisa a partir de $f$, se tiene la unicidad. Es claro que $\hat{f}$ es un epimorfismo si y solo si $f$ lo es. Por el teorema \@ref(thm:1homomorfismo), $\hat{f}$ es un monomorfismo si y solo si $Ker\hat{f}(=Ker f/N)$ es el subgrupo trivial de $G/N$, esto es $\hat{f}$ es un monomorfismo si y solo si $Ker f=N$.
+
 ```
 
 

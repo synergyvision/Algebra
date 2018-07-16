@@ -556,7 +556,7 @@ Note que dados dos homomorfismos de semigrupos $f:G\longrightarrow H$ y $g:H\lon
 \BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-82"><strong>(\#def:unnamed-chunk-82) </strong></span>	Dado $f:G\longrightarrow H$ un homomorfismo de grupo. El **núcleo** de $f$ (también conocido por su nombre en inglés **kernel**) es el conjunto $\{a\in G| f(a)=e_{H} \}$ y se denota $Ker f$. Dado $A\subseteq G$, **la imagen de $A$** es el conjunto $\{f(a)| a\in A \}$ y se denota por $f(A)$; al conjunto imagen de $G$, lo llamaremos **imagen de $f$** y le daremos una notación especial, $Im f$. Dado un conjunto $B\in H$, la imagen inversa de $B$ es el conjunto $f^{-1}(B)=\{a\in G|f(a)\in B \}$.
 </div>\EndKnitrBlock{definition}
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-83"><strong>(\#thm:unnamed-chunk-83) </strong></span>	Sea $f:G\longrightarrow H$ un homomorfismo de grupos. Entonces:
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:1homomorfismo"><strong>(\#thm:1homomorfismo) </strong></span>	Sea $f:G\longrightarrow H$ un homomorfismo de grupos. Entonces:
 
 		(i) $f$ es un monomorfismo si y solo si $Ker f=\{e_{G}\}$.
 
@@ -571,7 +571,7 @@ Note que dados dos homomorfismos de semigrupos $f:G\longrightarrow H$ y $g:H\lon
 
 A continuación veremos resultados que nos permiten caracterizar los grupos cíclicos.
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-85"><strong>(\#thm:unnamed-chunk-85) </strong></span>	Sea $H$ un subgrupo del grupo aditivo $\mathbb{Z}$. $H$ es cíclico, además $H=\langle 0\rangle$ o $H=\langle m\rangle$ donde $m$ es el menor entero positivo de $H$.
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-84"><strong>(\#thm:unnamed-chunk-84) </strong></span>	Sea $H$ un subgrupo del grupo aditivo $\mathbb{Z}$. $H$ es cíclico, además $H=\langle 0\rangle$ o $H=\langle m\rangle$ donde $m$ es el menor entero positivo de $H$.
 </div>\EndKnitrBlock{theorem}
 
 
@@ -590,7 +590,7 @@ Note que si $G$ es un grupo cíclico, la función que aplica a cada entero $k$ e
 	Si $G$ es un grupo finito, $Ker f=\langle m\rangle$. Sea $g:\mathbb{Z}_{m}\longrightarrow G$ como $g([k])=a^{k}$ está bien definida ya que para todo $r,s\in\mathbb{Z}$, $a^{r}=a^{s}\Leftrightarrow a^{r-s}=e\Leftrightarrow r-s\in Ker f=\langle m\rangle$ por lo tanto $r-s=km$ para algún entero $k$ y así $[r]=[s]$. Es claro que es un epimorfismo, además, como $g([k])=e\Leftrightarrow a^{k}=e=a^{0}\Leftrightarrow [k]=[0]$, entonces $Ker g=\{[0]\}$, por lo tanto $g$ es un isomorfismo. 
 </div>\EndKnitrBlock{proof}
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-89"><strong>(\#thm:unnamed-chunk-89) </strong></span>	Sea $G$ un grupo cíclico. Si $f:G\longrightarrow H$ es un homomorfismo de grupo, entonces $Im f$ es cíclico.
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-88"><strong>(\#thm:unnamed-chunk-88) </strong></span>	Sea $G$ un grupo cíclico. Si $f:G\longrightarrow H$ es un homomorfismo de grupo, entonces $Im f$ es cíclico.
 </div>\EndKnitrBlock{theorem}
 
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Supongamos que $G$ es un grupo cíclico, entonces $G=\langle a\rangle$ para algún $a\in G$. Se tiene entonces que $Im f=\langle f(a) \rangle$.
@@ -601,19 +601,19 @@ Note que si $G$ es un grupo cíclico, la función que aplica a cada entero $k$ e
 
 Note que un grupo cíclico puede ser generado por dos elementos distintos.
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-92"><strong>(\#thm:unnamed-chunk-92) </strong></span>	Sea $G=\langle a\rangle$ un grupo cíclico. Si $G$ es infinito entonces $a$ y $a^{-1}$ son los únicos generadores de $G$. Si $G$ es finito de orden $m$, entonces $a^{k}$ es un generador de $G$ si y solo si el mínimo común múltiplo $(m,k)=1$.
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-91"><strong>(\#thm:unnamed-chunk-91) </strong></span>	Sea $G=\langle a\rangle$ un grupo cíclico. Si $G$ es infinito entonces $a$ y $a^{-1}$ son los únicos generadores de $G$. Si $G$ es finito de orden $m$, entonces $a^{k}$ es un generador de $G$ si y solo si el mínimo común múltiplo $(m,k)=1$.
 </div>\EndKnitrBlock{theorem}
 	
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Si $G$ es infinito, en virtud del teorema \@ref{thm:teo1.86} podemos suponer que $G$ es el grupo aditivo $\mathbb{Z}$ y en este caso es muy fácil ver que es generado solo por $1$ y $-1$. Si $G$ es finito de orden $m$, podemos suponer que $\mathbb{Z}_{m}$. Así, si $(m,k)=1$, entonces $xk+ym=1$ para enteros $x,y$. Por lo tanto se tiene que para todo $bm\in G$ se tiene que $bm\in [k]$.
 </div>\EndKnitrBlock{proof}
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-94"><strong>(\#def:unnamed-chunk-94) </strong></span>	Sea $H$ un subgrupo de un grupo $G$ y sean $a,bIn G$. Decimos que **$a$ es congruente por la derecha con $b$ módulo $H$**, si y solo $ab^{-1}\in H$ y se denota $a\cong_{r} b mod H$. Decimos que **$a$ es congruente por la izquierda con $b$ módulo $H$**, si y solo $a^{-1}b\in H$ y se denota $a\cong_{l} b mod H$. 
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-93"><strong>(\#def:unnamed-chunk-93) </strong></span>	Sea $H$ un subgrupo de un grupo $G$ y sean $a,bIn G$. Decimos que **$a$ es congruente por la derecha con $b$ módulo $H$**, si y solo $ab^{-1}\in H$ y se denota $a\cong_{r} b mod H$. Decimos que **$a$ es congruente por la izquierda con $b$ módulo $H$**, si y solo $a^{-1}b\in H$ y se denota $a\cong_{l} b mod H$. 
 </div>\EndKnitrBlock{definition}
 
 \BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	Note que si un grupo $G$ es abeliano y $H$ es un subgrupo, como $ab^{-1}\in H\Leftrightarrow (ab^{-1})^{-1}\in H \Leftrightarrow ba^{-1}\in H\Leftrightarrow a^{-1}b\in H$, entonces la congruencia derecha e izquierda módulo $H$ coinciden. Ahora bien, aunque existen grupos $G$ y subgrupos $H$ no abelianos en los que pueden coincidir la congruencia derecha e izquierda, módulo $H$, esto no es verdad en general.
 </div>\EndKnitrBlock{remark}
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-96"><strong>(\#thm:unnamed-chunk-96) </strong></span>	Sea $H$ un subgrupo de un grupo $G$.
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-95"><strong>(\#thm:unnamed-chunk-95) </strong></span>	Sea $H$ un subgrupo de un grupo $G$.
 
 		(1) La congruencia por la derecha (respectivamente, por la izquierda) módulo $H$ es una relación de equivalencia sobre $G$.
 
@@ -633,7 +633,7 @@ Note que un grupo cíclico puede ser generado por dos elementos distintos.
 	Para la congruencia por la izquierda se procede forma análoga.
 </div>\EndKnitrBlock{proof}
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-98"><strong>(\#thm:unnamed-chunk-98) </strong></span>	Sea $H$ un subgrupo de un grupo $G$.
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-97"><strong>(\#thm:unnamed-chunk-97) </strong></span>	Sea $H$ un subgrupo de un grupo $G$.
 
 		(1) La congruencia por la derecha (respectivamente, por la izquierda) módulo $H$ es una relación de equivalencia sobre $G$.
 
@@ -656,7 +656,7 @@ Note que un grupo cíclico puede ser generado por dos elementos distintos.
 \BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	En la literatura puede hallarse que a los conjuntos $Ha$ (resp. $aH$) se les llama **coset derecho (resp. izquierdo) de $H$ en $G$**, término proveniente del idioma inglés (right coset y left coset) pero que se ha hecho popular en la literatura en otras lenguas, en particular en la española, por su simplicidad. El prefijo co indica con o en compañía. De este punto en adelante usaremos este término para referirinos a las clases laterales módulo $H$.
 </div>\EndKnitrBlock{remark}
 
-\BeginKnitrBlock{corollary}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-101"><strong>(\#cor:unnamed-chunk-101) </strong></span>	Sea $H$ un subgrupo de un grupo $G$.
+\BeginKnitrBlock{corollary}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-100"><strong>(\#cor:unnamed-chunk-100) </strong></span>	Sea $H$ un subgrupo de un grupo $G$.
 
 		(1) $G$ es la unión de los coset derechos (resp. izquierdos) de $H$ en $G$.
 		(2) Dos coset derechos (rersp. izquierdos) de $H$ en $G$ son disjuntos o iguales.
@@ -672,10 +672,10 @@ Note que un grupo cíclico puede ser generado por dos elementos distintos.
 
 De la parte (4) del corolario se puede ver $|\mathcal{D}|=|\mathcal{I}|$. Podemos entonces dar la siguiente definición:
  
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-104"><strong>(\#def:unnamed-chunk-104) </strong></span>	Sea $H$ un subgrupo de un grupo $G$. El **índice de $H$ en $G$** es el cardinal del conjunto de los coset derechos de $H$ en $G$. Lo denotamos por $[G:H]$.
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-103"><strong>(\#def:unnamed-chunk-103) </strong></span>	Sea $H$ un subgrupo de un grupo $G$. El **índice de $H$ en $G$** es el cardinal del conjunto de los coset derechos de $H$ en $G$. Lo denotamos por $[G:H]$.
 </div>\EndKnitrBlock{definition}
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-105"><strong>(\#thm:unnamed-chunk-105) </strong></span>	Si $K,H, G$ son subgrupos tales que $K<H<G$, entonces $[G:K]=[G:H][H:K]$.
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-104"><strong>(\#thm:unnamed-chunk-104) </strong></span>	Si $K,H, G$ son subgrupos tales que $K<H<G$, entonces $[G:K]=[G:H][H:K]$.
 </div>\EndKnitrBlock{theorem}
 
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Sea $a_{i}\in G$, con $i\in I$ un representante de cada coset de $H$ en $G$, donde la familia de índices $I$ cumple que $|I|=[G:H]$. Por el corolario anterior se tiene que $G=\bigcup_{i\in I} Ha_{i}$. Note que los coset derechos $Ha_{i}$ son disjuntos (esto es $Ha_{i}=Ha_{j}\leftrightarrow i=j$). Análogamente $H=\bigcup_{j\in J} Kb_{j}$, con $b_{j}\in H$ y $|J|=[H:K]$, donde los conjuntos $Kb_{j}$ son disjuntos dos a dos. De esta forma se tiene que $G=\bigcup_{i\in I} Ha_{i}=\bigcup_{i\in I}(\bigcup_{j\in J} Kb_{j})a_{i}=\bigcup_{(i,j)\in I\times J} Kb_{j}a_{i}$. Basta probar que los conjuntos $Kb_{j}a_{i}$ son disjuntos dos a dos porque así, del corolario se tiene $[G:K]=|I\times J|=|I||J|=[G:K][K:H]$. Si $Kb_{j}a_{i}=Kb_{s}a_{r}\Leftrightarrow b_{j}a_{i}=kb_{s}a_{r}$ para algún $k\in K$. Como $b_{j},b_{r},k\in H$ se tiene que $Ha_{i}=Hb_{j}a_{i}=Hkb_{s}a_{r}=Ha_{r}$, por lo que $i=r$ y $b_{j}=kb_{s}$. Así $Kb_{j}=Kkb_{s}=Kb_{s}$ por lo tanto $j=s$. De este modo los coset $Kb_{j}a_{i}$ son disjuntos dos a dos. 
@@ -684,7 +684,7 @@ De la parte (4) del corolario se puede ver $|\mathcal{D}|=|\mathcal{I}|$. Podemo
 \BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	Si dos de estos ?ndices son finitos, tambi?n lo ser? el tercero.
 </div>\EndKnitrBlock{remark}
 
-\BeginKnitrBlock{corollary}\iffalse{-91-76-97-103-114-97-110-103-101-93-}\fi{}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-108"><strong>(\#cor:unnamed-chunk-108)  \iffalse (Lagrange) \fi{} </strong></span>	Si $H$ es un subgrupo de un grupo $G$, entonces $|G|=[G:H]|H|$. En particular si $G$ es finito, el orden de $a\in G$ divide al orden de $G$.
+\BeginKnitrBlock{corollary}\iffalse{-91-76-97-103-114-97-110-103-101-93-}\fi{}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-107"><strong>(\#cor:unnamed-chunk-107)  \iffalse (Lagrange) \fi{} </strong></span>	Si $H$ es un subgrupo de un grupo $G$, entonces $|G|=[G:H]|H|$. En particular si $G$ es finito, el orden de $a\in G$ divide al orden de $G$.
 </div>\EndKnitrBlock{corollary}
 
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Considerando el subgrupo $\langle e\rangle$, del teorema anterior se tiene el resultado. En particular, si se considera además el subgrupo $\langle a\rangle$, se sigue que $|\langle a\rangle|$ divide a $|G|$.
@@ -694,12 +694,12 @@ Dados dos subconjuntos $H$ y $K$ de un grupo $G$, el conjunto $HK$ es el formado
 
 Dados dos subconjuntos $H$ y $K$ de un grupo $G$, el conjunto $HK$ es el formado por todos los productos del tipo $ab$ donde $a\in H$ y $b\in K$, es decir, $HK=\{ab|a\in H \mbox{ y }b\in K \}$. Los coset derecho e izquierdo son un caso particular de estos conjuntos. Puede que los subconjuntos $H$ y $K$ sean subgrupos, en este caso, el conjunto $HK$ no es necesariamente un subgrupo.
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-110"><strong>(\#thm:unnamed-chunk-110) </strong></span>	Sea $H$ y $K$ subgrupos finitos de un grupo $G$. Entonces $|HK|=|H||K|/|H\cap K|$.
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-109"><strong>(\#thm:unnamed-chunk-109) </strong></span>	Sea $H$ y $K$ subgrupos finitos de un grupo $G$. Entonces $|HK|=|H||K|/|H\cap K|$.
 </div>\EndKnitrBlock{theorem}
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Sea $C=H\cap K$, $C$ es un subgrupo de $K$ de índice $n=|K|/|C|$ y $K$ es la unión disjunta de coset derechos $Ck_{1}\cup Ck_{2}\cdots Ck_{n}$ para algunos $k_{i}\in K$. Como $HC=H$, se tiene que $HK$ es la unión disjunta $Hk_{1}\cup Hk_{2}\cdots Hk_{n}$. Por lo tanto, $|HK|=|H|n=|H||K|/|H\cap K|$.
 </div>\EndKnitrBlock{proof}
 
-\BeginKnitrBlock{proposition}<div class="proposition"><span class="proposition" id="prp:unnamed-chunk-112"><strong>(\#prp:unnamed-chunk-112) </strong></span>	Si $H$ y $K$ son subgrupos de un grupo $G$, entonces $[H:H\cap K]\leq [G:K]$. Si $[G:K]$ es finito, entonces $[H:H\cap K]= [G:K]$ si y solo si $G=KH$.
+\BeginKnitrBlock{proposition}<div class="proposition"><span class="proposition" id="prp:unnamed-chunk-111"><strong>(\#prp:unnamed-chunk-111) </strong></span>	Si $H$ y $K$ son subgrupos de un grupo $G$, entonces $[H:H\cap K]\leq [G:K]$. Si $[G:K]$ es finito, entonces $[H:H\cap K]= [G:K]$ si y solo si $G=KH$.
 </div>\EndKnitrBlock{proposition}
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Sean $A$ y $B$ los conjuntos de coset´s de $H\cap K$ en $H$ y de $K$ en $G$ respectivamente. Sea $\phi:A\longleftarrow B$ la función definida por $\phi((H\cap K)h)=Kh$.  Veamos que está bien definida. Si $(H\cap K)h=(H\cap K)h´$, entonces $h´h^{-1}\in H\cap K\subseteq K$ y así $Kh=Kh´$. Además $\phi$ es inyectiva. Entonces $|A|\leq |B|$, es decir $[H:H\cap K]\leq [G:K]$.\\
 	Si $[G:K]$ es finito, entonces $\phi$ es sobreyectiva si y solo si $G=KH$. Nótese que para $h\in H$, $k\in K$, $Kkh=Kh$.
@@ -707,7 +707,7 @@ Dados dos subconjuntos $H$ y $K$ de un grupo $G$, el conjunto $HK$ es el formado
 
 Ahora estuadiaremos algunos subgrupos $N$ (de un grupo $G$) para los que la congruencia derecha e izquierda módulo $N$ coinciden. 
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-114"><strong>(\#thm:unnamed-chunk-114) </strong></span>	Si $N$ es un subgrupo de un grupo $G$, entonces las siguientes condiciones son equivalentes:
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-113"><strong>(\#thm:unnamed-chunk-113) </strong></span>	Si $N$ es un subgrupo de un grupo $G$, entonces las siguientes condiciones son equivalentes:
 
 		(i) La congruencia por laderecha módulo $N$ y la congruencia por la izquierda módulo $N$ coinciden (es decir, definen la misma relación de equivalencia sobre G).
 
@@ -723,7 +723,7 @@ Ahora estuadiaremos algunos subgrupos $N$ (de un grupo $G$) para los que la cong
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Es inmediato ver que (i) es equivalente a (iii) ya que dos relaciones son idénticas si y solo si definen las mismas clases de equivalencias, en este caso los coset derechos e izquierdos de $N$. Veamos que (ii) implica (iii), si $aN=Nb$ para algún $b\in G$, entonces $a\in Nb\cap Na$, por lo que $Nb=Na$ ya que los cosets derechos (e izquierdos) son disjuntos o iguales. (iii) implica (iv) trivialmene, basta multiplicar por la derecha $a^{-1}$. Para ver que (iv) implica (v), basta notar que (iv) es cierto para el elemento $a^{-1}$, así $a^{-1}Na\subseteq N$ po lo que para todo $n\in N$, se tiene que $n=a(a^{-1}na)a^{-1}\in aNa^{-1}$ y así $N\subseteq aNa^{-1}$. Es trivial ver que (v) implica (ii) multiplicando por $a$ a la derecha.
 </div>\EndKnitrBlock{proof}
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-116"><strong>(\#def:unnamed-chunk-116) </strong></span>	Un subgrupo $N$ de un grupo $G$ que satisfaga las condiciones equivalentes del teorema anterior se llama **subgrupo normal de $G$** (o se dice que es **normal en $G$**) y se denota por $N\triangleleft G$.
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-115"><strong>(\#def:unnamed-chunk-115) </strong></span>	Un subgrupo $N$ de un grupo $G$ que satisfaga las condiciones equivalentes del teorema anterior se llama **subgrupo normal de $G$** (o se dice que es **normal en $G$**) y se denota por $N\triangleleft G$.
 </div>\EndKnitrBlock{definition}
 
 Cuando se tiene un subgrupo normal $N$, por el teorema anterior, podemos omitir el subíndice i y d en la congruencia módulo $N$ ya que la las congruencias izquierda y derechas coinciden. 
@@ -738,7 +738,7 @@ Cuando se tiene un subgrupo normal $N$, por el teorema anterior, podemos omitir 
 		(4) Denotaremos por $H\bigvee K$ al subgrupo generado por el conjunto  unión $H\cup K$, es decir $H\bigvee K=\langle H\cup K\rangle$.
 </div>\EndKnitrBlock{remark}
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-118"><strong>(\#thm:unnamed-chunk-118) </strong></span>	Sean $K$ y $N$ subgrupos de un grupo $G$, con $N$ normal en $G$. Entonces:
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-117"><strong>(\#thm:unnamed-chunk-117) </strong></span>	Sean $K$ y $N$ subgrupos de un grupo $G$, con $N$ normal en $G$. Entonces:
 
 		(i) $N\cap K$ es un subgrupo normal de $K$.
 	
@@ -748,11 +748,35 @@ Cuando se tiene un subgrupo normal $N$, por el teorema anterior, podemos omitir 
 	
 		(iv) Si $K$ es normal en $G$ y $K\cap N=\langle e\rangle$, entonces $nk=kn$ para todo $k\in K$ y $n\in N$.
 	</div>\EndKnitrBlock{theorem}
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}		(i) Sea $n\in N\cap K$ y $a\in G$. Entonces $ana^{-1}\in N$ (porque $N$ es normal) y $ana^{-1}\in K$ (ya que $K<G$). De este modo $a(N\cap K)a^{-1}\subseteq N\cap K$ y $N\cap K \vartriangleleft K$. (ii) Se sigue trivialmente de $N< N\bigvee K$. (iii) Es claro que $NK\subseteq N\bigvee K$; un elemento $b$ de $N\bigvee K$ es de la forma $b=n_{1}k_{1}n_{2}k_{2}\cdots n_{r}k_{r}$ donde $n_{i}\in N$ y $k_{i}\in K$. Como $N$ es normal en $G$, se tiene que $n_{i}k_{i}=k_{i}m$ para algún $m\in N$ y de este modo $b=n(k_{1}k_{2}\cdots k_{r})$ con $n\in N$, por lo que $N\bigvee K\subseteq NK$. De forma análoga se tiene que $N\bigvee K=KN$. (iv) Sea $k\in K$ y $n\in N$, entonces $nkn^{-1}\in K$ ya que $K$ es normal en $G$ y $kn^{-1}k^{-1}\in N$ ya que $N$ es normal en $G$. Entonces $(nkn^{-1})k^{-1}=n(kn^{-1}k^{-1})\in N\cap K=\left\langle e\right\rangle$, por lo tanto $kn=kn$.
+</div>\EndKnitrBlock{proof}
+
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-119"><strong>(\#thm:unnamed-chunk-119) </strong></span>	Sea $N$ un subgrupos normal en $G$. Sea $G/N$ el conjunto de coset (izquierdas) de $N$ en $G$. Entonces $G/N$ es un grupo de orden $[G:N]$ bajo la operación $(aN)(bN)=abN$.
+</div>\EndKnitrBlock{theorem}
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Veamos que la congruencia módulo $N$ es una relación de congruencia. Sean $a_{1}\cong a mod N$ y $b_{1}\cong b mod N$. Sean $n_{1}=a_{1}a^{-1}$ y $n_{2}=b_{1}b^{-1}$ donde $n_{1}$ y $n_{2}\in N$. Se tiene que $(a_{1}b_{1})(ab)^{-1}=a_{1}b_{1}b^{-1}a^{-1}=a_{1}n_{2}a^{-1}$. Como $N$ es normal, $a_{2}N=Na_{1}$ por lo tanto $a_{1}n_{2}=ma_{1}$ para algún $m\in N$, de este modo $(a_{1}b_{1})(ab)^{-1}=(a_{1}n_{2})a^{-1}=ma_{1}a^{-1}=mn_{1}\in N$, de donde $a_{1}b_{1}\cong ab mod N$.
+</div>\EndKnitrBlock{proof}
+
+Si $N$ es un grupo normal, entonces el grupo $G/N$ es llamado **grupo cociente (o grupo factor) de $G$ por $N$**. Si $G$ es un grupo aditivo, entonces la operación de grupo en $G/N$ está dada por $(a+N)+(b+N)=(a+b)+N$.
+
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-121"><strong>(\#thm:unnamed-chunk-121) </strong></span>	Si $f:G\longrightarrow H$ es un homomorfismo de grupos. Entonces el núcleo de $f$ es un subgrupo normal de $G$. Inversamente, si $N$ es un subgrupo normal de $G$, entonces la función $\pi: G\longrightarrow G/N$ definida por $\pi(a)=aN$ es un epimorfismo de núcleo $N$.
+</div>\EndKnitrBlock{theorem}
+
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Sea $b\in Ker f$ y $a\in G$. Entonces $f(aba^{-1})=f(a)f(b)f(a^{-1})=f(a)ef(a)^{-1}=e$ por lo que $aba^{-1}\in Kerf$. Así $aKerfa^{-1}\subseteq Kerf$. Ya hemos visto que la función $\pi:G\longrightarrow G/N$ definida por $\pi(a)=aN$ es sobreyectiva. Luego $Ker\pi =\{a\in G: \pi(a)=eN=N \}=\{a\in G: aN=N \}=N$.
+</div>\EndKnitrBlock{proof}
+
+La función $\pi:G\longrightarrow G/N$ es llamada **epimorfismo can\'onico** (la proyeccón canónica).
+
+´´´{theorem}
+	Si $f:G\longrightarrow H$ es un homomorfismo de grupo y $N$ es un subgrupo normal de $G$ contenido en el núcleo de $f$, entonces existe un único homomorfismo $\hat{f}: G/N\longrightarrow H$ tal que $\hat{f}(aN)=f(a)$ para todo $a\in G$, $Im f=Im \hat{f}$ y $Ker\hat{f}=(Kerf)/N$. Adem\'as $\hat{f}$ es un isomorfismo si y solo si $f$ es un epimorfismo y $N=Ker f$.
+
+```
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Si $b\in aN$, $b=an$ para algún $n\in N$ y $f(b)=f(a)f(n)=f(a)$ por lo tanto para todo $b\in aN$, $f(b)=f(a)$, es decir la función $\hat{f}$ está bien definida. Ahora, $\hat{f}(aNbN)=\hat{f}(abN)=f(ab)=f(a)f(b)=\hat{f}(aN)\hat{f}(bN)$, luego $\hat{f}$ es un homomorfismo. Es evidente que $Im f=Im \hat{f}$ (ya que $\hat{f}(aN)=f(a)$) y $aN\in Ker\hat{f}\Leftrightarrow f(a)=e\Leftrightarrow a\in Ker f\Leftrightarrow Ker f/N=Ker\hat{f}$ ($Ker\hat{f}=\{aN: a\in Ker f \}=Ker f/N$). Al estar $\hat{f}$ definisa a partir de $f$, se tiene la unicidad. Es claro que $\hat{f}$ es un epimorfismo si y solo si $f$ lo es. Por el teorema \@ref(thm:1homomorfismo), $\hat{f}$ es un monomorfismo si y solo si $Ker\hat{f}(=Ker f/N)$ es el subgrupo trivial de $G/N$, esto es $\hat{f}$ es un monomorfismo si y solo si $Ker f=N$.
+</div>\EndKnitrBlock{proof}
 
 
 ### Ejercicios
 
-\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-119"><strong>(\#exr:unnamed-chunk-119) </strong></span>Sea $G$ un grupo y $C$ un conjunto no vacío. Sea $M(C,G)$ el conjunto de todas las funciones $f:C\longrightarrow G$. Definamos la operación de grupo como la suma de funciones, es decir, para cada $f,g\in M(C,G)$, $f\ast g = f +g$. Demuestre que $M(C,G)$ es un grupo, es abeliano si $G$ lo es.
+\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-124"><strong>(\#exr:unnamed-chunk-124) </strong></span>Sea $G$ un grupo y $C$ un conjunto no vacío. Sea $M(C,G)$ el conjunto de todas las funciones $f:C\longrightarrow G$. Definamos la operación de grupo como la suma de funciones, es decir, para cada $f,g\in M(C,G)$, $f\ast g = f +g$. Demuestre que $M(C,G)$ es un grupo, es abeliano si $G$ lo es.
 
 Respuesta: Es claro que la suma de funciones es cerrada en $M(C,G)$. Sean $f,g,h\in M(C,G)$, para cada $a\in C$, $(f+(g+h))(a)=f(a)+((g+h)(a))=f(a)+(g(a)+h(a))$ como $G$ es un grupo, la suma es asociativa, luego $f(a)+(g(a)+h(a))=(f(a)+g(a))+h(a)=((f+g)(a))+h(a)=((f+g)+h)(a)$; por lo tanto la suma de funciones es asociativa.
 </div>\EndKnitrBlock{exercise}
@@ -766,7 +790,7 @@ Respuesta: Es claro que la suma de funciones es cerrada en $M(C,G)$. Sean $f,g,h
 	Análogamente, contar los elementos de $S_{n}$ es equivalente a contar las posibles permutaciones del conjunto $\{1,2,3,\cdots, n\}$.
 </div>\EndKnitrBlock{exercise}
 
-\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-120"><strong>(\#exr:unnamed-chunk-120) </strong></span>(1.) Demuestre que el grupo del ejemplo \@ref(exm:ejm1-21) es un grupo de orden $|G||H|$. Además muestre que $G\times H$ es un grupo abeliano si $G$ y $H$ lo son.
+\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-125"><strong>(\#exr:unnamed-chunk-125) </strong></span>(1.) Demuestre que el grupo del ejemplo \@ref(exm:ejm1-21) es un grupo de orden $|G||H|$. Además muestre que $G\times H$ es un grupo abeliano si $G$ y $H$ lo son.
 Respuesta: Sabemos que $|G\times H|=|G||H|$, lo que demuestra que el orden del grupo es el producto $|G||H|$. Ahora supongamos que $G$ y $H$ son abelianos, luego $(a,b)\ast (c,d)=(a\ast c,b\ast d)=(c\ast a,d\ast b)=(c,d)\ast (a,b)$.
 
 (2.) Demuestre que el grupo simétrico sobre $n$ letras es de orden $n!$.
