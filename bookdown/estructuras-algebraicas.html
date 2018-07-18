@@ -1010,7 +1010,7 @@ Para la congruencia por la izquierda se procede forma análoga.</code></pre>
 
 
 <div class="theorem">
-<p><span id="thm:unnamed-chunk-117" class="theorem"><strong>Teorema 1.20  </strong></span> Sean <span class="math inline">\(K\)</span> y <span class="math inline">\(N\)</span> subgrupos de un grupo <span class="math inline">\(G\)</span>, con <span class="math inline">\(N\)</span> normal en <span class="math inline">\(G\)</span>. Entonces:</p>
+<p><span id="thm:teorema53" class="theorem"><strong>Teorema 1.20  </strong></span> Sean <span class="math inline">\(K\)</span> y <span class="math inline">\(N\)</span> subgrupos de un grupo <span class="math inline">\(G\)</span>, con <span class="math inline">\(N\)</span> normal en <span class="math inline">\(G\)</span>. Entonces:</p>
 <pre><code>    (i) $N\cap K$ es un subgrupo normal de $K$.
 
     (ii) $N$ es un subgrupo normal de $N\bigvee K$.
@@ -1026,7 +1026,7 @@ Para la congruencia por la izquierda se procede forma análoga.</code></pre>
 
 
 <div class="theorem">
-<p><span id="thm:unnamed-chunk-119" class="theorem"><strong>Teorema 1.21  </strong></span> Sea <span class="math inline">\(N\)</span> un subgrupos normal en <span class="math inline">\(G\)</span>. Sea <span class="math inline">\(G/N\)</span> el conjunto de coset (izquierdas) de <span class="math inline">\(N\)</span> en <span class="math inline">\(G\)</span>. Entonces <span class="math inline">\(G/N\)</span> es un grupo de orden <span class="math inline">\([G:N]\)</span> bajo la operación <span class="math inline">\((aN)(bN)=abN\)</span>.</p>
+<p><span id="thm:unnamed-chunk-118" class="theorem"><strong>Teorema 1.21  </strong></span> Sea <span class="math inline">\(N\)</span> un subgrupos normal en <span class="math inline">\(G\)</span>. Sea <span class="math inline">\(G/N\)</span> el conjunto de coset (izquierdas) de <span class="math inline">\(N\)</span> en <span class="math inline">\(G\)</span>. Entonces <span class="math inline">\(G/N\)</span> es un grupo de orden <span class="math inline">\([G:N]\)</span> bajo la operación <span class="math inline">\((aN)(bN)=abN\)</span>.</p>
 </div>
  
 <div class="proof">
@@ -1036,7 +1036,7 @@ Para la congruencia por la izquierda se procede forma análoga.</code></pre>
 <p>Si <span class="math inline">\(N\)</span> es un grupo normal, entonces el grupo <span class="math inline">\(G/N\)</span> es llamado <strong>grupo cociente (o grupo factor) de <span class="math inline">\(G\)</span> por <span class="math inline">\(N\)</span></strong>. Si <span class="math inline">\(G\)</span> es un grupo aditivo, entonces la operación de grupo en <span class="math inline">\(G/N\)</span> está dada por <span class="math inline">\((a+N)+(b+N)=(a+b)+N\)</span>.</p>
 
 <div class="theorem">
-<p><span id="thm:unnamed-chunk-121" class="theorem"><strong>Teorema 1.22  </strong></span> Si <span class="math inline">\(f:G\longrightarrow H\)</span> es un homomorfismo de grupos. Entonces el núcleo de <span class="math inline">\(f\)</span> es un subgrupo normal de <span class="math inline">\(G\)</span>. Inversamente, si <span class="math inline">\(N\)</span> es un subgrupo normal de <span class="math inline">\(G\)</span>, entonces la función <span class="math inline">\(\pi: G\longrightarrow G/N\)</span> definida por <span class="math inline">\(\pi(a)=aN\)</span> es un epimorfismo de núcleo <span class="math inline">\(N\)</span>.</p>
+<p><span id="thm:unnamed-chunk-120" class="theorem"><strong>Teorema 1.22  </strong></span> Si <span class="math inline">\(f:G\longrightarrow H\)</span> es un homomorfismo de grupos. Entonces el núcleo de <span class="math inline">\(f\)</span> es un subgrupo normal de <span class="math inline">\(G\)</span>. Inversamente, si <span class="math inline">\(N\)</span> es un subgrupo normal de <span class="math inline">\(G\)</span>, entonces la función <span class="math inline">\(\pi: G\longrightarrow G/N\)</span> definida por <span class="math inline">\(\pi(a)=aN\)</span> es un epimorfismo de núcleo <span class="math inline">\(N\)</span>.</p>
 </div>
 
 
@@ -1051,11 +1051,40 @@ Para la congruencia por la izquierda se procede forma análoga.</code></pre>
 <p> <span class="proof"><em>Demostración. </em></span>  Si <span class="math inline">\(b\in aN\)</span>, <span class="math inline">\(b=an\)</span> para algún <span class="math inline">\(n\in N\)</span> y <span class="math inline">\(f(b)=f(a)f(n)=f(a)\)</span> por lo tanto para todo <span class="math inline">\(b\in aN\)</span>, <span class="math inline">\(f(b)=f(a)\)</span>, es decir la función <span class="math inline">\(\hat{f}\)</span> está bien definida. Ahora, <span class="math inline">\(\hat{f}(aNbN)=\hat{f}(abN)=f(ab)=f(a)f(b)=\hat{f}(aN)\hat{f}(bN)\)</span>, luego <span class="math inline">\(\hat{f}\)</span> es un homomorfismo. Es evidente que <span class="math inline">\(Im f=Im \hat{f}\)</span> (ya que <span class="math inline">\(\hat{f}(aN)=f(a)\)</span>) y <span class="math inline">\(aN\in Ker\hat{f}\Leftrightarrow f(a)=e\Leftrightarrow a\in Ker f\Leftrightarrow Ker f/N=Ker\hat{f}\)</span> (<span class="math inline">\(Ker\hat{f}=\{aN: a\in Ker f \}=Ker f/N\)</span>). Al estar <span class="math inline">\(\hat{f}\)</span> definisa a partir de <span class="math inline">\(f\)</span>, se tiene la unicidad. Es claro que <span class="math inline">\(\hat{f}\)</span> es un epimorfismo si y solo si <span class="math inline">\(f\)</span> lo es. Por el teorema <a href="#thm:1homomorfismo">1.10</a>, <span class="math inline">\(\hat{f}\)</span> es un monomorfismo si y solo si <span class="math inline">\(Ker\hat{f}(=Ker f/N)\)</span> es el subgrupo trivial de <span class="math inline">\(G/N\)</span>, esto es <span class="math inline">\(\hat{f}\)</span> es un monomorfismo si y solo si <span class="math inline">\(Ker f=N\)</span>.</p>
 </div>
 
+
+<div class="corollary">
+<p><span id="cor:unnamed-chunk-123" class="corollary"><strong>Corolario 1.3  (Primer teorema de isomorfismo)  </strong></span> Si <span class="math inline">\(f:G\longrightarrow H\)</span> es un homomorfismo de grupos, entonces <span class="math inline">\(f\)</span> induce un isomorfismo <span class="math inline">\(G/Ker f\cong Im f\)</span>.</p>
+</div>
+
+
+<div class="proof">
+<p> <span class="proof"><em>Demostración. </em></span>  Como <span class="math inline">\(f\)</span> es un epimorfismo, tomando <span class="math inline">\(N=Ker f\)</span> en el teorema anterior se tiene el resultado.</p>
+</div>
+
+
+<div class="corollary">
+<p><span id="cor:unnamed-chunk-125" class="corollary"><strong>Corolario 1.4  </strong></span> Si <span class="math inline">\(f:G\longrightarrow H\)</span> es un homomorfismo de grupos, <span class="math inline">\(N\)</span> es normal en <span class="math inline">\(G\)</span>, <span class="math inline">\(M\)</span> es normal en <span class="math inline">\(H\)</span> y <span class="math inline">\(f(N)\)</span> es un subgrupo de <span class="math inline">\(M\)</span>; entonces <span class="math inline">\(f\)</span> induce un homomorfismo <span class="math inline">\(\hat{f}:G/N\longrightarrow H/M\)</span> donde <span class="math inline">\(\hat{f}(aN)=f(a)M\)</span>. <span class="math inline">\(\hat{f}\)</span> es un isomorfismo si y solo si <span class="math inline">\(Im f\bigvee M=H\)</span> y <span class="math inline">\(f^{-1}(M)\subseteq N\)</span>. En particular, si <span class="math inline">\(f\)</span> es un epimorfismo tal que <span class="math inline">\(f(N)=M\)</span> y <span class="math inline">\(Ker f\subseteq N\)</span>, entonces <span class="math inline">\(\hat{f}\)</span> es un isomorfismo.</p>
+</div>
+
+
+<div class="proof">
+<p> <span class="proof"><em>Demostración. </em></span>  Haremos un esquema de la demostraci'on. Dada la función <span class="math inline">\(f:G\longrightarrow H\)</span> y la proyección <span class="math inline">\(\pi:H\longrightarrow H/M\)</span>, consideramos la composición <span class="math inline">\(\pi f:G\longrightarrow H/M\)</span>. Se tiene que <span class="math inline">\(N\subseteq f^{-1}(M)=Ker \pi f\)</span>. Por el teorema anterior, se tiene que la función <span class="math inline">\(g:G/N\longrightarrow H/M\)</span> dada por <span class="math inline">\(g(aN)=(\pi f)(a)=f(a)M\)</span> es un homomorfismo que es un isomorfismo si y solo si <span class="math inline">\(\pi f\)</span> es un isomorfismo y <span class="math inline">\(N=Ker f\)</span>. Pero la última condición es cierta si y solo si <span class="math inline">\(Im f\bigvee M=H\)</span> y <span class="math inline">\(f^{-1}(M)\subseteq N\)</span>. Si <span class="math inline">\(f\)</span> es un epimorfismo, entonces <span class="math inline">\(H=Im f=Im f\bigvee M\)</span>. Si <span class="math inline">\(f(N)=M\)</span> y <span class="math inline">\(Ker f\subseteq N\)</span>, entonces <span class="math inline">\(f^{-1}(M)\subseteq N\)</span>, de donde se tiene que <span class="math inline">\(\hat{f}\)</span> es un isomorfismo.</p>
+</div>
+
+
+<div class="corollary">
+<p><span id="cor:name" class="corollary" segundo="" teorema="" de="" isomorfismo""=""><strong>(#cor:name“Segundo teorema de isomorfismo”) </strong></span> Si <span class="math inline">\(K\)</span> y <span class="math inline">\(N\)</span> son subgrupos de un grupo <span class="math inline">\(G\)</span>, donde <span class="math inline">\(N\)</span> es normal en <span class="math inline">\(G\)</span>. Entonces <span class="math inline">\(K/(N\cap K)\cong NK/N\)</span>.</p>
+</div>
+ 
+<div class="proof">
+<p> <span class="proof"><em>Demostración. </em></span>  Del teorema <a href="#thm:teorema53">1.20</a> se tiene que <span class="math inline">\(N\vartriangleleft NK=N\bigvee K\)</span>. Consideremos las funciones inclusión <span class="math inline">\(i:K\longrightarrow NK\)</span> y la proyección <span class="math inline">\(\pi: NK\longrightarrow NK/K\)</span>; la composición <span class="math inline">\(f:K\longrightarrow NK/K\)</span> (<span class="math inline">\(f=\pi i\)</span>) es un homomorfismo y su núcleo es <span class="math inline">\(Ker f=K\cap N\)</span>, de donde <span class="math inline">\(\hat{f}\)</span> es un isomorfismo de <span class="math inline">\(K/(K\cap N)\)</span> en <span class="math inline">\(Imf\)</span>, esto es <span class="math inline">\(K/(K\cap N)\cong Imf\)</span> (por el primer teorema de isomorfismo). Todo elemento en <span class="math inline">\(NK/N\)</span> tiene la forma <span class="math inline">\(nkN\)</span>, con <span class="math inline">\(n\in N\)</span> y <span class="math inline">\(k\in K\)</span>. Como <span class="math inline">\(N\)</span> es normal, se tiene que <span class="math inline">\(nk=kn_{1}\)</span> para algún <span class="math inline">\(n_{1}\in N\)</span>, de donde <span class="math inline">\(nkN=kn_{1}N=kN=f(k)\)</span>, por lo tanto <span class="math inline">\(f\)</span> es un epimorfismo y así <span class="math inline">\(Im f=NK/N\)</span>.</p>
+</div>
+
 <div id="ejercicios-1" class="section level3">
 <h3><span class="header-section-number">1.5.1</span> Ejercicios</h3>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-124" class="exercise"><strong>Ejercicio 1.3  </strong></span>Sea <span class="math inline">\(G\)</span> un grupo y <span class="math inline">\(C\)</span> un conjunto no vacío. Sea <span class="math inline">\(M(C,G)\)</span> el conjunto de todas las funciones <span class="math inline">\(f:C\longrightarrow G\)</span>. Definamos la operación de grupo como la suma de funciones, es decir, para cada <span class="math inline">\(f,g\in M(C,G)\)</span>, <span class="math inline">\(f\ast g = f +g\)</span>. Demuestre que <span class="math inline">\(M(C,G)\)</span> es un grupo, es abeliano si <span class="math inline">\(G\)</span> lo es.</p>
+<p><span id="exr:unnamed-chunk-128" class="exercise"><strong>Ejercicio 1.3  </strong></span>Sea <span class="math inline">\(G\)</span> un grupo y <span class="math inline">\(C\)</span> un conjunto no vacío. Sea <span class="math inline">\(M(C,G)\)</span> el conjunto de todas las funciones <span class="math inline">\(f:C\longrightarrow G\)</span>. Definamos la operación de grupo como la suma de funciones, es decir, para cada <span class="math inline">\(f,g\in M(C,G)\)</span>, <span class="math inline">\(f\ast g = f +g\)</span>. Demuestre que <span class="math inline">\(M(C,G)\)</span> es un grupo, es abeliano si <span class="math inline">\(G\)</span> lo es.</p>
 <p>Respuesta: Es claro que la suma de funciones es cerrada en <span class="math inline">\(M(C,G)\)</span>. Sean <span class="math inline">\(f,g,h\in M(C,G)\)</span>, para cada <span class="math inline">\(a\in C\)</span>, <span class="math inline">\((f+(g+h))(a)=f(a)+((g+h)(a))=f(a)+(g(a)+h(a))\)</span> como <span class="math inline">\(G\)</span> es un grupo, la suma es asociativa, luego <span class="math inline">\(f(a)+(g(a)+h(a))=(f(a)+g(a))+h(a)=((f+g)(a))+h(a)=((f+g)+h)(a)\)</span>; por lo tanto la suma de funciones es asociativa.</p>
 </div>
 
@@ -1071,7 +1100,7 @@ Para la congruencia por la izquierda se procede forma análoga.</code></pre>
 
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-125" class="exercise"><strong>Ejercicio 1.5  </strong></span>(1.) Demuestre que el grupo del ejemplo <a href="#exm:ejm1-21">1.29</a> es un grupo de orden <span class="math inline">\(|G||H|\)</span>. Además muestre que <span class="math inline">\(G\times H\)</span> es un grupo abeliano si <span class="math inline">\(G\)</span> y <span class="math inline">\(H\)</span> lo son. Respuesta: Sabemos que <span class="math inline">\(|G\times H|=|G||H|\)</span>, lo que demuestra que el orden del grupo es el producto <span class="math inline">\(|G||H|\)</span>. Ahora supongamos que <span class="math inline">\(G\)</span> y <span class="math inline">\(H\)</span> son abelianos, luego <span class="math inline">\((a,b)\ast (c,d)=(a\ast c,b\ast d)=(c\ast a,d\ast b)=(c,d)\ast (a,b)\)</span>.</p>
+<p><span id="exr:unnamed-chunk-129" class="exercise"><strong>Ejercicio 1.5  </strong></span>(1.) Demuestre que el grupo del ejemplo <a href="#exm:ejm1-21">1.29</a> es un grupo de orden <span class="math inline">\(|G||H|\)</span>. Además muestre que <span class="math inline">\(G\times H\)</span> es un grupo abeliano si <span class="math inline">\(G\)</span> y <span class="math inline">\(H\)</span> lo son. Respuesta: Sabemos que <span class="math inline">\(|G\times H|=|G||H|\)</span>, lo que demuestra que el orden del grupo es el producto <span class="math inline">\(|G||H|\)</span>. Ahora supongamos que <span class="math inline">\(G\)</span> y <span class="math inline">\(H\)</span> son abelianos, luego <span class="math inline">\((a,b)\ast (c,d)=(a\ast c,b\ast d)=(c\ast a,d\ast b)=(c,d)\ast (a,b)\)</span>.</p>
 (2.) Demuestre que el grupo simétrico sobre <span class="math inline">\(n\)</span> letras es de orden <span class="math inline">\(n!\)</span>. Respuesta: Pensemos en el grupo simétrico <span class="math inline">\(S_{3}\)</span>. El orden del grupo es equivalente a contar todas las posibles biyecciones de un conjunto de <span class="math inline">\(3\)</span> elementos, a saber:\ $( {
 <span class="math display">\[\begin{array}{ccc}
         1 &amp; 2 &amp; 3\\

@@ -738,7 +738,7 @@ Cuando se tiene un subgrupo normal $N$, por el teorema anterior, podemos omitir 
 		(4) Denotaremos por $H\bigvee K$ al subgrupo generado por el conjunto  unión $H\cup K$, es decir $H\bigvee K=\langle H\cup K\rangle$.
 </div>\EndKnitrBlock{remark}
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-117"><strong>(\#thm:unnamed-chunk-117) </strong></span>	Sean $K$ y $N$ subgrupos de un grupo $G$, con $N$ normal en $G$. Entonces:
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:teorema53"><strong>(\#thm:teorema53) </strong></span>	Sean $K$ y $N$ subgrupos de un grupo $G$, con $N$ normal en $G$. Entonces:
 
 		(i) $N\cap K$ es un subgrupo normal de $K$.
 	
@@ -751,14 +751,14 @@ Cuando se tiene un subgrupo normal $N$, por el teorema anterior, podemos omitir 
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}		(i) Sea $n\in N\cap K$ y $a\in G$. Entonces $ana^{-1}\in N$ (porque $N$ es normal) y $ana^{-1}\in K$ (ya que $K<G$). De este modo $a(N\cap K)a^{-1}\subseteq N\cap K$ y $N\cap K \vartriangleleft K$. (ii) Se sigue trivialmente de $N< N\bigvee K$. (iii) Es claro que $NK\subseteq N\bigvee K$; un elemento $b$ de $N\bigvee K$ es de la forma $b=n_{1}k_{1}n_{2}k_{2}\cdots n_{r}k_{r}$ donde $n_{i}\in N$ y $k_{i}\in K$. Como $N$ es normal en $G$, se tiene que $n_{i}k_{i}=k_{i}m$ para algún $m\in N$ y de este modo $b=n(k_{1}k_{2}\cdots k_{r})$ con $n\in N$, por lo que $N\bigvee K\subseteq NK$. De forma análoga se tiene que $N\bigvee K=KN$. (iv) Sea $k\in K$ y $n\in N$, entonces $nkn^{-1}\in K$ ya que $K$ es normal en $G$ y $kn^{-1}k^{-1}\in N$ ya que $N$ es normal en $G$. Entonces $(nkn^{-1})k^{-1}=n(kn^{-1}k^{-1})\in N\cap K=\left\langle e\right\rangle$, por lo tanto $kn=kn$.
 </div>\EndKnitrBlock{proof}
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-119"><strong>(\#thm:unnamed-chunk-119) </strong></span>	Sea $N$ un subgrupos normal en $G$. Sea $G/N$ el conjunto de coset (izquierdas) de $N$ en $G$. Entonces $G/N$ es un grupo de orden $[G:N]$ bajo la operación $(aN)(bN)=abN$.
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-118"><strong>(\#thm:unnamed-chunk-118) </strong></span>	Sea $N$ un subgrupos normal en $G$. Sea $G/N$ el conjunto de coset (izquierdas) de $N$ en $G$. Entonces $G/N$ es un grupo de orden $[G:N]$ bajo la operación $(aN)(bN)=abN$.
 </div>\EndKnitrBlock{theorem}
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Veamos que la congruencia módulo $N$ es una relación de congruencia. Sean $a_{1}\cong a mod N$ y $b_{1}\cong b mod N$. Sean $n_{1}=a_{1}a^{-1}$ y $n_{2}=b_{1}b^{-1}$ donde $n_{1}$ y $n_{2}\in N$. Se tiene que $(a_{1}b_{1})(ab)^{-1}=a_{1}b_{1}b^{-1}a^{-1}=a_{1}n_{2}a^{-1}$. Como $N$ es normal, $a_{2}N=Na_{1}$ por lo tanto $a_{1}n_{2}=ma_{1}$ para algún $m\in N$, de este modo $(a_{1}b_{1})(ab)^{-1}=(a_{1}n_{2})a^{-1}=ma_{1}a^{-1}=mn_{1}\in N$, de donde $a_{1}b_{1}\cong ab mod N$.
 </div>\EndKnitrBlock{proof}
 
 Si $N$ es un grupo normal, entonces el grupo $G/N$ es llamado **grupo cociente (o grupo factor) de $G$ por $N$**. Si $G$ es un grupo aditivo, entonces la operación de grupo en $G/N$ está dada por $(a+N)+(b+N)=(a+b)+N$.
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-121"><strong>(\#thm:unnamed-chunk-121) </strong></span>	Si $f:G\longrightarrow H$ es un homomorfismo de grupos. Entonces el núcleo de $f$ es un subgrupo normal de $G$. Inversamente, si $N$ es un subgrupo normal de $G$, entonces la función $\pi: G\longrightarrow G/N$ definida por $\pi(a)=aN$ es un epimorfismo de núcleo $N$.
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-120"><strong>(\#thm:unnamed-chunk-120) </strong></span>	Si $f:G\longrightarrow H$ es un homomorfismo de grupos. Entonces el núcleo de $f$ es un subgrupo normal de $G$. Inversamente, si $N$ es un subgrupo normal de $G$, entonces la función $\pi: G\longrightarrow G/N$ definida por $\pi(a)=aN$ es un epimorfismo de núcleo $N$.
 </div>\EndKnitrBlock{theorem}
 
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Sea $b\in Ker f$ y $a\in G$. Entonces $f(aba^{-1})=f(a)f(b)f(a^{-1})=f(a)ef(a)^{-1}=e$ por lo que $aba^{-1}\in Kerf$. Así $aKerfa^{-1}\subseteq Kerf$. Ya hemos visto que la función $\pi:G\longrightarrow G/N$ definida por $\pi(a)=aN$ es sobreyectiva. Luego $Ker\pi =\{a\in G: \pi(a)=eN=N \}=\{a\in G: aN=N \}=N$.
@@ -773,10 +773,26 @@ La función $\pi:G\longrightarrow G/N$ es llamada **epimorfismo can\'onico** (la
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Si $b\in aN$, $b=an$ para algún $n\in N$ y $f(b)=f(a)f(n)=f(a)$ por lo tanto para todo $b\in aN$, $f(b)=f(a)$, es decir la función $\hat{f}$ está bien definida. Ahora, $\hat{f}(aNbN)=\hat{f}(abN)=f(ab)=f(a)f(b)=\hat{f}(aN)\hat{f}(bN)$, luego $\hat{f}$ es un homomorfismo. Es evidente que $Im f=Im \hat{f}$ (ya que $\hat{f}(aN)=f(a)$) y $aN\in Ker\hat{f}\Leftrightarrow f(a)=e\Leftrightarrow a\in Ker f\Leftrightarrow Ker f/N=Ker\hat{f}$ ($Ker\hat{f}=\{aN: a\in Ker f \}=Ker f/N$). Al estar $\hat{f}$ definisa a partir de $f$, se tiene la unicidad. Es claro que $\hat{f}$ es un epimorfismo si y solo si $f$ lo es. Por el teorema \@ref(thm:1homomorfismo), $\hat{f}$ es un monomorfismo si y solo si $Ker\hat{f}(=Ker f/N)$ es el subgrupo trivial de $G/N$, esto es $\hat{f}$ es un monomorfismo si y solo si $Ker f=N$.
 </div>\EndKnitrBlock{proof}
 
+\BeginKnitrBlock{corollary}\iffalse{-91-80-114-105-109-101-114-32-116-101-111-114-101-109-97-32-100-101-32-105-115-111-109-111-114-102-105-115-109-111-93-}\fi{}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-123"><strong>(\#cor:unnamed-chunk-123)  \iffalse (Primer teorema de isomorfismo) \fi{} </strong></span>	Si $f:G\longrightarrow H$ es un homomorfismo de grupos, entonces $f$ induce un isomorfismo $G/Ker f\cong Im f$.
+</div>\EndKnitrBlock{corollary}
+
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Como $f$ es un epimorfismo, tomando $N=Ker f$ en el teorema anterior se tiene el resultado.
+</div>\EndKnitrBlock{proof}
+
+\BeginKnitrBlock{corollary}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-125"><strong>(\#cor:unnamed-chunk-125) </strong></span>	Si $f:G\longrightarrow H$ es un homomorfismo de grupos, $N$ es normal en $G$, $M$ es normal en $H$ y $f(N)$ es un subgrupo de $M$; entonces $f$ induce un homomorfismo $\hat{f}:G/N\longrightarrow H/M$ donde $\hat{f}(aN)=f(a)M$. $\hat{f}$ es un isomorfismo si y solo si $Im f\bigvee M=H$ y $f^{-1}(M)\subseteq N$. En particular, si $f$ es un epimorfismo tal que $f(N)=M$ y $Ker f\subseteq N$, entonces $\hat{f}$ es un isomorfismo.
+</div>\EndKnitrBlock{corollary}
+
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Haremos un esquema de la demostraci\'on. Dada la función $f:G\longrightarrow H$ y la proyección $\pi:H\longrightarrow H/M$, consideramos la  composición $\pi f:G\longrightarrow H/M$. Se tiene que $N\subseteq f^{-1}(M)=Ker \pi f$. Por el teorema anterior, se tiene que la función $g:G/N\longrightarrow H/M$ dada por $g(aN)=(\pi f)(a)=f(a)M$ es un homomorfismo que es un isomorfismo si y solo si $\pi f$ es un isomorfismo y $N=Ker f$. Pero la última condición es cierta si y solo si $Im f\bigvee M=H$ y $f^{-1}(M)\subseteq N$. Si $f$ es un epimorfismo, entonces $H=Im f=Im f\bigvee M$. Si $f(N)=M$ y $Ker f\subseteq N$, entonces $f^{-1}(M)\subseteq N$, de donde se tiene que $\hat{f}$ es un isomorfismo. 
+</div>\EndKnitrBlock{proof}
+
+\BeginKnitrBlock{corollary}<div class="corollary"><span class="corollary" id="cor:name"Segundo teorema de isomorfismo""><strong>(\#cor:name"Segundo teorema de isomorfismo") </strong></span>	Si $K$ y $N$ son subgrupos de un grupo $G$, donde $N$ es normal en $G$. Entonces $K/(N\cap K)\cong NK/N$.
+</div>\EndKnitrBlock{corollary}
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Del teorema \@ref(thm:teorema53) se tiene que $N\vartriangleleft NK=N\bigvee K$. Consideremos las funciones inclusión $i:K\longrightarrow NK$ y la proyección $\pi: NK\longrightarrow NK/K$; la composición $f:K\longrightarrow NK/K$ ($f=\pi i$) es un homomorfismo y su núcleo es $Ker f=K\cap N$, de donde $\hat{f}$ es un isomorfismo de $K/(K\cap N)$ en $Imf$, esto es $K/(K\cap N)\cong Imf$ (por el primer teorema de isomorfismo). Todo elemento en $NK/N$ tiene la forma $nkN$, con $n\in N$ y $k\in K$. Como $N$ es normal, se tiene que $nk=kn_{1}$ para algún $n_{1}\in N$, de donde $nkN=kn_{1}N=kN=f(k)$, por lo tanto $f$ es un epimorfismo y así $Im f=NK/N$.
+</div>\EndKnitrBlock{proof}
 
 ### Ejercicios
 
-\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-124"><strong>(\#exr:unnamed-chunk-124) </strong></span>Sea $G$ un grupo y $C$ un conjunto no vacío. Sea $M(C,G)$ el conjunto de todas las funciones $f:C\longrightarrow G$. Definamos la operación de grupo como la suma de funciones, es decir, para cada $f,g\in M(C,G)$, $f\ast g = f +g$. Demuestre que $M(C,G)$ es un grupo, es abeliano si $G$ lo es.
+\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-128"><strong>(\#exr:unnamed-chunk-128) </strong></span>Sea $G$ un grupo y $C$ un conjunto no vacío. Sea $M(C,G)$ el conjunto de todas las funciones $f:C\longrightarrow G$. Definamos la operación de grupo como la suma de funciones, es decir, para cada $f,g\in M(C,G)$, $f\ast g = f +g$. Demuestre que $M(C,G)$ es un grupo, es abeliano si $G$ lo es.
 
 Respuesta: Es claro que la suma de funciones es cerrada en $M(C,G)$. Sean $f,g,h\in M(C,G)$, para cada $a\in C$, $(f+(g+h))(a)=f(a)+((g+h)(a))=f(a)+(g(a)+h(a))$ como $G$ es un grupo, la suma es asociativa, luego $f(a)+(g(a)+h(a))=(f(a)+g(a))+h(a)=((f+g)(a))+h(a)=((f+g)+h)(a)$; por lo tanto la suma de funciones es asociativa.
 </div>\EndKnitrBlock{exercise}
@@ -790,7 +806,7 @@ Respuesta: Es claro que la suma de funciones es cerrada en $M(C,G)$. Sean $f,g,h
 	Análogamente, contar los elementos de $S_{n}$ es equivalente a contar las posibles permutaciones del conjunto $\{1,2,3,\cdots, n\}$.
 </div>\EndKnitrBlock{exercise}
 
-\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-125"><strong>(\#exr:unnamed-chunk-125) </strong></span>(1.) Demuestre que el grupo del ejemplo \@ref(exm:ejm1-21) es un grupo de orden $|G||H|$. Además muestre que $G\times H$ es un grupo abeliano si $G$ y $H$ lo son.
+\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-129"><strong>(\#exr:unnamed-chunk-129) </strong></span>(1.) Demuestre que el grupo del ejemplo \@ref(exm:ejm1-21) es un grupo de orden $|G||H|$. Además muestre que $G\times H$ es un grupo abeliano si $G$ y $H$ lo son.
 Respuesta: Sabemos que $|G\times H|=|G||H|$, lo que demuestra que el orden del grupo es el producto $|G||H|$. Ahora supongamos que $G$ y $H$ son abelianos, luego $(a,b)\ast (c,d)=(a\ast c,b\ast d)=(c\ast a,d\ast b)=(c,d)\ast (a,b)$.
 
 (2.) Demuestre que el grupo simétrico sobre $n$ letras es de orden $n!$.

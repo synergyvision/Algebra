@@ -1013,7 +1013,7 @@ Cuando se tiene un subgrupo normal $N$, por el teorema anterior, podemos omitir 
 
 ```
 
-```{theorem}
+```{theorem,label="teorema53"}
 	Sean $K$ y $N$ subgrupos de un grupo $G$, con $N$ normal en $G$. Entonces:
 
 		(i) $N\cap K$ es un subgrupo normal de $K$.
@@ -1062,6 +1062,34 @@ La función $\pi:G\longrightarrow G/N$ es llamada **epimorfismo can\'onico** (la
 
 ```
 
+```{corollary, name="Primer teorema de isomorfismo"}
+	Si $f:G\longrightarrow H$ es un homomorfismo de grupos, entonces $f$ induce un isomorfismo $G/Ker f\cong Im f$.
+
+```
+
+```{proof}
+	Como $f$ es un epimorfismo, tomando $N=Ker f$ en el teorema anterior se tiene el resultado.
+
+```
+
+```{corollary}
+	Si $f:G\longrightarrow H$ es un homomorfismo de grupos, $N$ es normal en $G$, $M$ es normal en $H$ y $f(N)$ es un subgrupo de $M$; entonces $f$ induce un homomorfismo $\hat{f}:G/N\longrightarrow H/M$ donde $\hat{f}(aN)=f(a)M$. $\hat{f}$ es un isomorfismo si y solo si $Im f\bigvee M=H$ y $f^{-1}(M)\subseteq N$. En particular, si $f$ es un epimorfismo tal que $f(N)=M$ y $Ker f\subseteq N$, entonces $\hat{f}$ es un isomorfismo.
+
+```
+
+```{proof}
+	Haremos un esquema de la demostraci\'on. Dada la función $f:G\longrightarrow H$ y la proyección $\pi:H\longrightarrow H/M$, consideramos la  composición $\pi f:G\longrightarrow H/M$. Se tiene que $N\subseteq f^{-1}(M)=Ker \pi f$. Por el teorema anterior, se tiene que la función $g:G/N\longrightarrow H/M$ dada por $g(aN)=(\pi f)(a)=f(a)M$ es un homomorfismo que es un isomorfismo si y solo si $\pi f$ es un isomorfismo y $N=Ker f$. Pero la última condición es cierta si y solo si $Im f\bigvee M=H$ y $f^{-1}(M)\subseteq N$. Si $f$ es un epimorfismo, entonces $H=Im f=Im f\bigvee M$. Si $f(N)=M$ y $Ker f\subseteq N$, entonces $f^{-1}(M)\subseteq N$, de donde se tiene que $\hat{f}$ es un isomorfismo. 
+
+```
+
+```{corollary, name"Segundo teorema de isomorfismo"}
+	Si $K$ y $N$ son subgrupos de un grupo $G$, donde $N$ es normal en $G$. Entonces $K/(N\cap K)\cong NK/N$.
+
+```
+```{proof}
+	Del teorema \@ref(thm:teorema53) se tiene que $N\vartriangleleft NK=N\bigvee K$. Consideremos las funciones inclusión $i:K\longrightarrow NK$ y la proyección $\pi: NK\longrightarrow NK/K$; la composición $f:K\longrightarrow NK/K$ ($f=\pi i$) es un homomorfismo y su núcleo es $Ker f=K\cap N$, de donde $\hat{f}$ es un isomorfismo de $K/(K\cap N)$ en $Imf$, esto es $K/(K\cap N)\cong Imf$ (por el primer teorema de isomorfismo). Todo elemento en $NK/N$ tiene la forma $nkN$, con $n\in N$ y $k\in K$. Como $N$ es normal, se tiene que $nk=kn_{1}$ para algún $n_{1}\in N$, de donde $nkN=kn_{1}N=kN=f(k)$, por lo tanto $f$ es un epimorfismo y así $Im f=NK/N$.
+
+```
 
 ### Ejercicios
 
