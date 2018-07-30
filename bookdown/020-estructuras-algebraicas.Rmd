@@ -1112,20 +1112,28 @@ Demuestre que el grupo simétrico sobre $n$ letras es de orden $n!$.
 ```
 
 ```{exercise}
-(1.) Demuestre que el grupo del ejemplo \@ref(exm:ejm1-21) es un grupo de orden $|G||H|$. Además muestre que $G\times H$ es un grupo abeliano si $G$ y $H$ lo son.
+Demuestre que el grupo del ejemplo \@ref(exm:ejm1-21) es un grupo de orden $|G||H|$. Además muestre que $G\times H$ es un grupo abeliano si $G$ y $H$ lo son.
 Respuesta: Sabemos que $|G\times H|=|G||H|$, lo que demuestra que el orden del grupo es el producto $|G||H|$. Ahora supongamos que $G$ y $H$ son abelianos, luego $(a,b)\ast (c,d)=(a\ast c,b\ast d)=(c\ast a,d\ast b)=(c,d)\ast (a,b)$.
 
-(2.) Demuestre que el grupo simétrico sobre $n$ letras es de orden $n!$.
+```
+
+```{exercise}
+Demuestre que el grupo simétrico sobre $n$ letras es de orden $n!$.
 	Respuesta: Pensemos en el grupo simétrico $S_{3}$. El orden del grupo es equivalente a contar todas las posibles biyecciones de un conjunto de $3$ elementos, a saber:\\
 	$\left(  {\begin{array}{ccc}
 		1 & 2 & 3\\
 		i_{1} & i_{2} & i_{3}\\
 		\end{array} } \right) $. Nótese que $1$ tiene $3$ posibles imágenes $i_{1}$, luego de fijada la imagen de $1$, restas $2$ posibles imágenes de $2$, $i_{2}$ y luego de fijadas las imágenes de $1$ y $2$, le queda una sola posibilidad a $3$. De donde podemos concluír que existen $3!$ posibles biyecciones de $\{1,2,3\}$ en sí mismo.
 	Análogamente, contar los elementos de $S_{n}$ es equivalente a contar las posibles permutaciones del conjunto $\{1,2,3,\cdots, n\}$.
-	(3.) Demuestre que el grupo del ejemplo \ref{ejm1-21} es un grupo de orden $|G||H|$. Además muestre que $G\times H$ es un grupo abeliano si $G$ y $H$ lo son.
+	
+```
+
+```{exercise}
+Demuestre que el grupo del ejemplo \ref{ejm1-21} es un grupo de orden $|G||H|$. Además muestre que $G\times H$ es un grupo abeliano si $G$ y $H$ lo son.
 	Respuesta: Sabemos que $|G\times H|=|G||H|$, lo que demuestra que el orden del grupo es el producto $|G||H|$. Ahora supongamos que $G$ y $H$ son abelianos, luego $(a,b)\ast (c,d)=(a\ast c,b\ast d)=(c\ast a,d\ast b)=(c,d)\ast (a,b)$.
 
-(4.) Demuestre que la intersección de subgrupos es un subgrupo.
+```{exercise}
+Demuestre que la intersección de subgrupos es un subgrupo.
 	Respuesta: Sea $G$ un grupo y sea $\{H_{i}|i\in I \}$ una familia no vacía de subgrupos de $G$. Sea $a,b\in\bigcap_{i\in I}H_{i}$. Entonces para cada $i\in I$, $a,b\in H_{i}$, como cada $H_{i}$ es un subgrupo de $G$, se tiene que $a^{-1}, ab\in H_{i}$, por lo tanto $a^{-1}, ab\in\bigcap_{i\in I} H_{i}$.
 	
 ```
@@ -1159,4 +1167,10 @@ Sea $G$ un grupo y $a,b\in G$ de orden finito. Demuestre que se cumplen las sigu
 	  
 		(6) Sean $n=|\langle a\rangle|$, $m=|\langle b\rangle|$, $s=|\langle (ab)\rangle|$ y $M=[n,m]$. Si $(ab)$ commuta, $(ab)^{M}=a^{M}b^{M}$. De la parte (a) se tiene que $(ab)^{M}=a^{M}b^{M}=e$ y que $s|M$. Si $(m,n)=1$, $(ab)^{s}=a^{s}b^{s}=e$ entonces $a^{s}=b^{-s}$ por lo tanto $|\langle a^{s}\rangle|=|\langle b^{s}\rangle|$; de los apartados anteriores se sigue que $\frac{n}{(n,s)}=\frac{m}{m,s}\Leftrightarrow n|s\mbox{ y }m|s$ de donde se tiene que $M|s$, y como $s|M$, entonces $s=M$.
 	
+```
+```{exercise}
+ Demuestre que si $f:G\longrightarrow H$ es un epimorfismo de grupos, entonces la signación $K\mapsto f(K)$ define una correspondencia uno a uno entre el conjunto $S_{f}(G)$ de todos los subgrupos $K$ de $G$ que contienen al núcleo de $f$ y el conjunto $S(H)$ de todos los subgrupos de $H$. Bajo esta correspondencia, subgrupos normales corresponden a subgrupos normales. Además, si $N$ es un  subgrupo normal de $G$, entonces todo subgrupo de $G/N$ es de la forma $K/N$, donde $K$ es un subgrupo de $G$ que contiene a $N$. Por lo tanto, $K/N$ es normal en $G/N$ si y solo si $K$ es normal en $G$.
+	Respuesta:
+	La asiganación $K\mapsto f(K)$ define una función $\phi: S_{f}(G)\longrightarrow S(H)$ y $f^{-}(J)$ es un subgrupo de $G$ para todo subgrupo $J$ de $H$. $J<H$ implica que $Ker f< f^{-1}(J)$ y $f(f^{-1}(J))=J$, $\phi$ es sobreyectiva. Como $f(f^{-1}(K))=K$ si y solo si $Ker f<K$, se tiene que $f$ es inyectiva. Si $K\vartriangleleft G$, entonces $f(K)\vartriangleleft H$, al igual que si $J\vartriangleleft H$ entonces $f^{-1}(J)\vartriangleleft G$, de donde se tiene el resultado. Adicionalmente, si se considera el epimorfismo canónico $\pi: G\longrightarrow G/N$, si $N<K<G$, entonces $\pi(K)=K/N$.
+
 ```
