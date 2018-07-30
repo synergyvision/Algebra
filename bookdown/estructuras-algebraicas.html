@@ -79,6 +79,7 @@
 <li class="chapter" data-level="1.5" data-path=""><a href="#teoria-de-grupos"><i class="fa fa-check"></i><b>1.5</b> Teoría de Grupos</a><ul>
 <li class="chapter" data-level="1.5.1" data-path=""><a href="#ejercicios-1"><i class="fa fa-check"></i><b>1.5.1</b> Ejercicios</a></li>
 </ul></li>
+<li class="chapter" data-level="1.6" data-path=""><a href="#anillos"><i class="fa fa-check"></i><b>1.6</b> Anillos</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://bookdown.org" target="blank">Publicado con bookdown</a></li>
@@ -616,7 +617,7 @@ Basta probar que <span class="math inline">\(\mathbb{Z}\sim \mathbb{N}\)</span> 
 
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-58" class="example"><strong>Ejemplo 1.28  </strong></span>Sea <span class="math inline">\(C\)</span> un conjunto no vacío y <span class="math inline">\(\mathcal{A}(C)\)</span> el conjunto de todas las biyecciones de <span class="math inline">\(C\)</span> en si mismo. Con la operación composición de funciones vista en la sección anterior, <span class="math inline">\(\mathcal{A}(C)\)</span> forma un grupo (no abeliano). En efecto, la composición de funciones biyectivas es asociativa, la identidad es una función biyectiva y toda biyección tiene una inversa. Los elementos de <span class="math inline">\(\mathcal{A}(C)\)</span> son llamados <strong>permutaciones</strong> y <span class="math inline">\(\mathcal{A}(C)\)</span> es llamado el grupo de permutaciones sobre <span class="math inline">\(C\)</span>. Si <span class="math inline">\(C=\{1,2, ..., n\}\)</span>, entonces <span class="math inline">\(\mathcal{A}(C)\)</span> es llamdo el <strong>grupo simétrico sobre <span class="math inline">\(n\)</span> letras</strong> y se denota <span class="math inline">\(S_{n}\)</span>. Se puede ver que <span class="math inline">\(|S_{n}|=n!\)</span> (ejercicio <a href="#exr:ejc3">1.4</a>).</p>
+<p><span id="exm:unnamed-chunk-58" class="example"><strong>Ejemplo 1.28  </strong></span>Sea <span class="math inline">\(C\)</span> un conjunto no vacío y <span class="math inline">\(\mathcal{A}(C)\)</span> el conjunto de todas las biyecciones de <span class="math inline">\(C\)</span> en si mismo. Con la operación composición de funciones vista en la sección anterior, <span class="math inline">\(\mathcal{A}(C)\)</span> forma un grupo (no abeliano). En efecto, la composición de funciones biyectivas es asociativa, la identidad es una función biyectiva y toda biyección tiene una inversa. Los elementos de <span class="math inline">\(\mathcal{A}(C)\)</span> son llamados <strong>permutaciones</strong> y <span class="math inline">\(\mathcal{A}(C)\)</span> es llamado el grupo de permutaciones sobre <span class="math inline">\(C\)</span>. Si <span class="math inline">\(C=\{1,2, ..., n\}\)</span>, entonces <span class="math inline">\(\mathcal{A}(C)\)</span> es llamdo el <strong>grupo simétrico sobre <span class="math inline">\(n\)</span> letras</strong> y se denota <span class="math inline">\(S_{n}\)</span>. Se puede ver que <span class="math inline">\(|S_{n}|=n!\)</span> (ejercicio <a href="#exr:ejc3">1.5</a>).</p>
 </div>
 
 
@@ -1036,7 +1037,7 @@ Para la congruencia por la izquierda se procede forma análoga.</code></pre>
 <p>Si <span class="math inline">\(N\)</span> es un grupo normal, entonces el grupo <span class="math inline">\(G/N\)</span> es llamado <strong>grupo cociente (o grupo factor) de <span class="math inline">\(G\)</span> por <span class="math inline">\(N\)</span></strong>. Si <span class="math inline">\(G\)</span> es un grupo aditivo, entonces la operación de grupo en <span class="math inline">\(G/N\)</span> está dada por <span class="math inline">\((a+N)+(b+N)=(a+b)+N\)</span>.</p>
 
 <div class="theorem">
-<p><span id="thm:unnamed-chunk-120" class="theorem"><strong>Teorema 1.22  </strong></span> Si <span class="math inline">\(f:G\longrightarrow H\)</span> es un homomorfismo de grupos. Entonces el núcleo de <span class="math inline">\(f\)</span> es un subgrupo normal de <span class="math inline">\(G\)</span>. Inversamente, si <span class="math inline">\(N\)</span> es un subgrupo normal de <span class="math inline">\(G\)</span>, entonces la función <span class="math inline">\(\pi: G\longrightarrow G/N\)</span> definida por <span class="math inline">\(\pi(a)=aN\)</span> es un epimorfismo de núcleo <span class="math inline">\(N\)</span>.</p>
+<p><span id="thm:teorema55" class="theorem"><strong>Teorema 1.22  </strong></span> Si <span class="math inline">\(f:G\longrightarrow H\)</span> es un homomorfismo de grupos. Entonces el núcleo de <span class="math inline">\(f\)</span> es un subgrupo normal de <span class="math inline">\(G\)</span>. Inversamente, si <span class="math inline">\(N\)</span> es un subgrupo normal de <span class="math inline">\(G\)</span>, entonces la función <span class="math inline">\(\pi: G\longrightarrow G/N\)</span> definida por <span class="math inline">\(\pi(a)=aN\)</span> es un epimorfismo de núcleo <span class="math inline">\(N\)</span>.</p>
 </div>
 
 
@@ -1053,7 +1054,7 @@ Para la congruencia por la izquierda se procede forma análoga.</code></pre>
 
 
 <div class="corollary">
-<p><span id="cor:unnamed-chunk-123" class="corollary"><strong>Corolario 1.3  (Primer teorema de isomorfismo)  </strong></span> Si <span class="math inline">\(f:G\longrightarrow H\)</span> es un homomorfismo de grupos, entonces <span class="math inline">\(f\)</span> induce un isomorfismo <span class="math inline">\(G/Ker f\cong Im f\)</span>.</p>
+<p><span id="cor:unnamed-chunk-122" class="corollary"><strong>Corolario 1.3  (Primer teorema de isomorfismo)  </strong></span> Si <span class="math inline">\(f:G\longrightarrow H\)</span> es un homomorfismo de grupos, entonces <span class="math inline">\(f\)</span> induce un isomorfismo <span class="math inline">\(G/Ker f\cong Im f\)</span>.</p>
 </div>
 
 
@@ -1063,7 +1064,7 @@ Para la congruencia por la izquierda se procede forma análoga.</code></pre>
 
 
 <div class="corollary">
-<p><span id="cor:unnamed-chunk-125" class="corollary"><strong>Corolario 1.4  </strong></span> Si <span class="math inline">\(f:G\longrightarrow H\)</span> es un homomorfismo de grupos, <span class="math inline">\(N\)</span> es normal en <span class="math inline">\(G\)</span>, <span class="math inline">\(M\)</span> es normal en <span class="math inline">\(H\)</span> y <span class="math inline">\(f(N)\)</span> es un subgrupo de <span class="math inline">\(M\)</span>; entonces <span class="math inline">\(f\)</span> induce un homomorfismo <span class="math inline">\(\hat{f}:G/N\longrightarrow H/M\)</span> donde <span class="math inline">\(\hat{f}(aN)=f(a)M\)</span>. <span class="math inline">\(\hat{f}\)</span> es un isomorfismo si y solo si <span class="math inline">\(Im f\bigvee M=H\)</span> y <span class="math inline">\(f^{-1}(M)\subseteq N\)</span>. En particular, si <span class="math inline">\(f\)</span> es un epimorfismo tal que <span class="math inline">\(f(N)=M\)</span> y <span class="math inline">\(Ker f\subseteq N\)</span>, entonces <span class="math inline">\(\hat{f}\)</span> es un isomorfismo.</p>
+<p><span id="cor:unnamed-chunk-124" class="corollary"><strong>Corolario 1.4  </strong></span> Si <span class="math inline">\(f:G\longrightarrow H\)</span> es un homomorfismo de grupos, <span class="math inline">\(N\)</span> es normal en <span class="math inline">\(G\)</span>, <span class="math inline">\(M\)</span> es normal en <span class="math inline">\(H\)</span> y <span class="math inline">\(f(N)\)</span> es un subgrupo de <span class="math inline">\(M\)</span>; entonces <span class="math inline">\(f\)</span> induce un homomorfismo <span class="math inline">\(\hat{f}:G/N\longrightarrow H/M\)</span> donde <span class="math inline">\(\hat{f}(aN)=f(a)M\)</span>. <span class="math inline">\(\hat{f}\)</span> es un isomorfismo si y solo si <span class="math inline">\(Im f\bigvee M=H\)</span> y <span class="math inline">\(f^{-1}(M)\subseteq N\)</span>. En particular, si <span class="math inline">\(f\)</span> es un epimorfismo tal que <span class="math inline">\(f(N)=M\)</span> y <span class="math inline">\(Ker f\subseteq N\)</span>, entonces <span class="math inline">\(\hat{f}\)</span> es un isomorfismo.</p>
 </div>
 
 
@@ -1073,24 +1074,38 @@ Para la congruencia por la izquierda se procede forma análoga.</code></pre>
 
 
 <div class="corollary">
-<p><span id="cor:name" class="corollary" segundo="" teorema="" de="" isomorfismo""=""><strong>(#cor:name“Segundo teorema de isomorfismo”) </strong></span> Si <span class="math inline">\(K\)</span> y <span class="math inline">\(N\)</span> son subgrupos de un grupo <span class="math inline">\(G\)</span>, donde <span class="math inline">\(N\)</span> es normal en <span class="math inline">\(G\)</span>. Entonces <span class="math inline">\(K/(N\cap K)\cong NK/N\)</span>.</p>
+<p><span id="cor:unnamed-chunk-126" class="corollary"><strong>Corolario 1.5  (Segundo teorema de isomorfismo)  </strong></span> Si <span class="math inline">\(K\)</span> y <span class="math inline">\(N\)</span> son subgrupos de un grupo <span class="math inline">\(G\)</span>, donde <span class="math inline">\(N\)</span> es normal en <span class="math inline">\(G\)</span>. Entonces <span class="math inline">\(K/(N\cap K)\cong NK/N\)</span>.</p>
 </div>
  
 <div class="proof">
 <p> <span class="proof"><em>Demostración. </em></span>  Del teorema <a href="#thm:teorema53">1.20</a> se tiene que <span class="math inline">\(N\vartriangleleft NK=N\bigvee K\)</span>. Consideremos las funciones inclusión <span class="math inline">\(i:K\longrightarrow NK\)</span> y la proyección <span class="math inline">\(\pi: NK\longrightarrow NK/K\)</span>; la composición <span class="math inline">\(f:K\longrightarrow NK/K\)</span> (<span class="math inline">\(f=\pi i\)</span>) es un homomorfismo y su núcleo es <span class="math inline">\(Ker f=K\cap N\)</span>, de donde <span class="math inline">\(\hat{f}\)</span> es un isomorfismo de <span class="math inline">\(K/(K\cap N)\)</span> en <span class="math inline">\(Imf\)</span>, esto es <span class="math inline">\(K/(K\cap N)\cong Imf\)</span> (por el primer teorema de isomorfismo). Todo elemento en <span class="math inline">\(NK/N\)</span> tiene la forma <span class="math inline">\(nkN\)</span>, con <span class="math inline">\(n\in N\)</span> y <span class="math inline">\(k\in K\)</span>. Como <span class="math inline">\(N\)</span> es normal, se tiene que <span class="math inline">\(nk=kn_{1}\)</span> para algún <span class="math inline">\(n_{1}\in N\)</span>, de donde <span class="math inline">\(nkN=kn_{1}N=kN=f(k)\)</span>, por lo tanto <span class="math inline">\(f\)</span> es un epimorfismo y así <span class="math inline">\(Im f=NK/N\)</span>.</p>
 </div>
 
+
+<div class="corollary">
+<p><span id="cor:unnamed-chunk-128" class="corollary"><strong>Corolario 1.6  (Tercer teorema de isomorfismo)  </strong></span> Si <span class="math inline">\(K\)</span> y <span class="math inline">\(H\)</span> son subgrupos normales de un grupo <span class="math inline">\(G\)</span>, donde <span class="math inline">\(K&lt; H\)</span>, entonces <span class="math inline">\(H/K\)</span> es un subgrupo normal de <span class="math inline">\(G/K\)</span> y <span class="math inline">\((G/K)/(H/K)\cong GH\)</span>.</p>
+</div>
+ 
+<div class="proof">
+ <span class="proof"><em>Demostración. </em></span>  Consideremos la función identidad <span class="math inline">\(i_{G}:G\longrightarrow G\)</span>, se tiene que <span class="math inline">\(i(K)&lt;H\)</span> y por lo tanto induce un epimorfismo <span class="math inline">\(I:G/K\longrightarrow G/H\)</span> con <span class="math inline">\(I(aK)=aH\)</span>. Como <span class="math inline">\(H=I(aK)\)</span> si y solo si <span class="math inline">\(a\in H\)</span>, <span class="math inline">\(Ker I=\{aK : a\in H \}=H/K\)</span>. Por lo tanto <span class="math inline">\(H/K\vartriangleleft G/K\)</span>; del teorema @ref{thm:teorema55} y el primer teorema de isomorfismo, como <span class="math inline">\(G/H=Im I\)</span> se tiene que <span class="math inline">\(G/H=Im I\cong (G/H)/Ker I=(G/K)/(H/K)\)</span>.
+</div>
+
 <div id="ejercicios-1" class="section level3">
 <h3><span class="header-section-number">1.5.1</span> Ejercicios</h3>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-128" class="exercise"><strong>Ejercicio 1.3  </strong></span>Sea <span class="math inline">\(G\)</span> un grupo y <span class="math inline">\(C\)</span> un conjunto no vacío. Sea <span class="math inline">\(M(C,G)\)</span> el conjunto de todas las funciones <span class="math inline">\(f:C\longrightarrow G\)</span>. Definamos la operación de grupo como la suma de funciones, es decir, para cada <span class="math inline">\(f,g\in M(C,G)\)</span>, <span class="math inline">\(f\ast g = f +g\)</span>. Demuestre que <span class="math inline">\(M(C,G)\)</span> es un grupo, es abeliano si <span class="math inline">\(G\)</span> lo es.</p>
+<p><span id="exr:unnamed-chunk-130" class="exercise"><strong>Ejercicio 1.3  </strong></span>Sea <span class="math inline">\(G\)</span> un grupo y <span class="math inline">\(C\)</span> un conjunto no vacío. Sea <span class="math inline">\(M(C,G)\)</span> el conjunto de todas las funciones <span class="math inline">\(f:C\longrightarrow G\)</span>. Definamos la operación de grupo como la suma de funciones, es decir, para cada <span class="math inline">\(f,g\in M(C,G)\)</span>, <span class="math inline">\(f\ast g = f +g\)</span>. Demuestre que <span class="math inline">\(M(C,G)\)</span> es un grupo, es abeliano si <span class="math inline">\(G\)</span> lo es.</p>
 <p>Respuesta: Es claro que la suma de funciones es cerrada en <span class="math inline">\(M(C,G)\)</span>. Sean <span class="math inline">\(f,g,h\in M(C,G)\)</span>, para cada <span class="math inline">\(a\in C\)</span>, <span class="math inline">\((f+(g+h))(a)=f(a)+((g+h)(a))=f(a)+(g(a)+h(a))\)</span> como <span class="math inline">\(G\)</span> es un grupo, la suma es asociativa, luego <span class="math inline">\(f(a)+(g(a)+h(a))=(f(a)+g(a))+h(a)=((f+g)(a))+h(a)=((f+g)+h)(a)\)</span>; por lo tanto la suma de funciones es asociativa.</p>
 </div>
 
 
 <div class="exercise">
-<span id="exr:ejc3" class="exercise"><strong>Ejercicio 1.4  </strong></span>Demuestre que el grupo simétrico sobre <span class="math inline">\(n\)</span> letras es de orden <span class="math inline">\(n!\)</span>. Respuesta: Pensemos en el grupo simétrico <span class="math inline">\(S_{3}\)</span>. El orden del grupo es equivalente a contar todas las posibles biyecciones de un conjunto de <span class="math inline">\(3\)</span> elementos, a saber:\ $( {
+<p><span id="exr:unnamed-chunk-131" class="exercise"><strong>Ejercicio 1.4  </strong></span>Demuestre que el grupo del ejemplo <a href="#exm:ejm1-21">1.29</a> es un grupo de orden <span class="math inline">\(|G||H|\)</span>. Además muestre que <span class="math inline">\(G\times H\)</span> es un grupo abeliano si <span class="math inline">\(G\)</span> y <span class="math inline">\(H\)</span> lo son. Respuesta: Sabemos que <span class="math inline">\(|G\times H|=|G||H|\)</span>, lo que demuestra que el orden del grupo es el producto <span class="math inline">\(|G||H|\)</span>. Ahora supongamos que <span class="math inline">\(G\)</span> y <span class="math inline">\(H\)</span> son abelianos, luego <span class="math inline">\((a,b)\ast (c,d)=(a\ast c,b\ast d)=(c\ast a,d\ast b)=(c,d)\ast (a,b)\)</span>.</p>
+</div>
+
+
+<div class="exercise">
+<span id="exr:ejc3" class="exercise"><strong>Ejercicio 1.5  </strong></span>Demuestre que el grupo simétrico sobre <span class="math inline">\(n\)</span> letras es de orden <span class="math inline">\(n!\)</span>. Respuesta: Pensemos en el grupo simétrico <span class="math inline">\(S_{3}\)</span>. El orden del grupo es equivalente a contar todas las posibles biyecciones de un conjunto de <span class="math inline">\(3\)</span> elementos, a saber:\ $( {
 <span class="math display">\[\begin{array}{ccc}
         1 &amp; 2 &amp; 3\\
         i_{1} &amp; i_{2} &amp; i_{3}\\
@@ -1100,12 +1115,7 @@ Para la congruencia por la izquierda se procede forma análoga.</code></pre>
 
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-129" class="exercise"><strong>Ejercicio 1.5  </strong></span>Demuestre que el grupo del ejemplo <a href="#exm:ejm1-21">1.29</a> es un grupo de orden <span class="math inline">\(|G||H|\)</span>. Además muestre que <span class="math inline">\(G\times H\)</span> es un grupo abeliano si <span class="math inline">\(G\)</span> y <span class="math inline">\(H\)</span> lo son. Respuesta: Sabemos que <span class="math inline">\(|G\times H|=|G||H|\)</span>, lo que demuestra que el orden del grupo es el producto <span class="math inline">\(|G||H|\)</span>. Ahora supongamos que <span class="math inline">\(G\)</span> y <span class="math inline">\(H\)</span> son abelianos, luego <span class="math inline">\((a,b)\ast (c,d)=(a\ast c,b\ast d)=(c\ast a,d\ast b)=(c,d)\ast (a,b)\)</span>.</p>
-</div>
-
-
-<div class="exercise">
-<span id="exr:unnamed-chunk-130" class="exercise"><strong>Ejercicio 1.6  </strong></span>Demuestre que el grupo simétrico sobre <span class="math inline">\(n\)</span> letras es de orden <span class="math inline">\(n!\)</span>. Respuesta: Pensemos en el grupo simétrico <span class="math inline">\(S_{3}\)</span>. El orden del grupo es equivalente a contar todas las posibles biyecciones de un conjunto de <span class="math inline">\(3\)</span> elementos, a saber:\ $( {
+<span id="exr:unnamed-chunk-132" class="exercise"><strong>Ejercicio 1.6  </strong></span>Demuestre que el grupo simétrico sobre <span class="math inline">\(n\)</span> letras es de orden <span class="math inline">\(n!\)</span>. Respuesta: Pensemos en el grupo simétrico <span class="math inline">\(S_{3}\)</span>. El orden del grupo es equivalente a contar todas las posibles biyecciones de un conjunto de <span class="math inline">\(3\)</span> elementos, a saber: $( {
 <span class="math display">\[\begin{array}{ccc}
         1 &amp; 2 &amp; 3\\
         i_{1} &amp; i_{2} &amp; i_{3}\\
@@ -1115,11 +1125,11 @@ Para la congruencia por la izquierda se procede forma análoga.</code></pre>
 
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-131" class="exercise"><strong>Ejercicio 1.7  </strong></span>Demuestre que el grupo del ejemplo  es un grupo de orden <span class="math inline">\(|G||H|\)</span>. Además muestre que <span class="math inline">\(G\times H\)</span> es un grupo abeliano si <span class="math inline">\(G\)</span> y <span class="math inline">\(H\)</span> lo son. Respuesta: Sabemos que <span class="math inline">\(|G\times H|=|G||H|\)</span>, lo que demuestra que el orden del grupo es el producto <span class="math inline">\(|G||H|\)</span>. Ahora supongamos que <span class="math inline">\(G\)</span> y <span class="math inline">\(H\)</span> son abelianos, luego <span class="math inline">\((a,b)\ast (c,d)=(a\ast c,b\ast d)=(c\ast a,d\ast b)=(c,d)\ast (a,b)\)</span>.</p>
+<p><span id="exr:unnamed-chunk-133" class="exercise"><strong>Ejercicio 1.7  </strong></span>Demuestre que el grupo del ejemplo  es un grupo de orden <span class="math inline">\(|G||H|\)</span>. Además muestre que <span class="math inline">\(G\times H\)</span> es un grupo abeliano si <span class="math inline">\(G\)</span> y <span class="math inline">\(H\)</span> lo son. Respuesta: Sabemos que <span class="math inline">\(|G\times H|=|G||H|\)</span>, lo que demuestra que el orden del grupo es el producto <span class="math inline">\(|G||H|\)</span>. Ahora supongamos que <span class="math inline">\(G\)</span> y <span class="math inline">\(H\)</span> son abelianos, luego <span class="math inline">\((a,b)\ast (c,d)=(a\ast c,b\ast d)=(c\ast a,d\ast b)=(c,d)\ast (a,b)\)</span>.</p>
 </div>
  
 <div class="exercise">
-<span id="exr:unnamed-chunk-132" class="exercise"><strong>Ejercicio 1.8  </strong></span>Demuestre que la intersección de subgrupos es un subgrupo. Respuesta: Sea <span class="math inline">\(G\)</span> un grupo y sea <span class="math inline">\(\{H_{i}|i\in I \}\)</span> una familia no vacía de subgrupos de <span class="math inline">\(G\)</span>. Sea <span class="math inline">\(a,b\in\bigcap_{i\in I}H_{i}\)</span>. Entonces para cada <span class="math inline">\(i\in I\)</span>, <span class="math inline">\(a,b\in H_{i}\)</span>, como cada <span class="math inline">\(H_{i}\)</span> es un subgrupo de <span class="math inline">\(G\)</span>, se tiene que <span class="math inline">\(a^{-1}, ab\in H_{i}\)</span>, por lo tanto <span class="math inline">\(a^{-1}, ab\in\bigcap_{i\in I} H_{i}\)</span>.
+<span id="exr:unnamed-chunk-134" class="exercise"><strong>Ejercicio 1.8  </strong></span>Demuestre que la intersección de subgrupos es un subgrupo. Respuesta: Sea <span class="math inline">\(G\)</span> un grupo y sea <span class="math inline">\(\{H_{i}|i\in I \}\)</span> una familia no vacía de subgrupos de <span class="math inline">\(G\)</span>. Sea <span class="math inline">\(a,b\in\bigcap_{i\in I}H_{i}\)</span>. Entonces para cada <span class="math inline">\(i\in I\)</span>, <span class="math inline">\(a,b\in H_{i}\)</span>, como cada <span class="math inline">\(H_{i}\)</span> es un subgrupo de <span class="math inline">\(G\)</span>, se tiene que <span class="math inline">\(a^{-1}, ab\in H_{i}\)</span>, por lo tanto <span class="math inline">\(a^{-1}, ab\in\bigcap_{i\in I} H_{i}\)</span>.
 </div>
 
 
@@ -1153,10 +1163,102 @@ Respuesta:
 &lt;/div&gt;\EndKnitrBlock{exercise}</code></pre>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-133" class="exercise"><strong>Ejercicio 1.10  </strong></span> Demuestre que si <span class="math inline">\(f:G\longrightarrow H\)</span> es un epimorfismo de grupos, entonces la signación <span class="math inline">\(K\mapsto f(K)\)</span> define una correspondencia uno a uno entre el conjunto <span class="math inline">\(S_{f}(G)\)</span> de todos los subgrupos <span class="math inline">\(K\)</span> de <span class="math inline">\(G\)</span> que contienen al núcleo de <span class="math inline">\(f\)</span> y el conjunto <span class="math inline">\(S(H)\)</span> de todos los subgrupos de <span class="math inline">\(H\)</span>. Bajo esta correspondencia, subgrupos normales corresponden a subgrupos normales. Además, si <span class="math inline">\(N\)</span> es un subgrupo normal de <span class="math inline">\(G\)</span>, entonces todo subgrupo de <span class="math inline">\(G/N\)</span> es de la forma <span class="math inline">\(K/N\)</span>, donde <span class="math inline">\(K\)</span> es un subgrupo de <span class="math inline">\(G\)</span> que contiene a <span class="math inline">\(N\)</span>. Por lo tanto, <span class="math inline">\(K/N\)</span> es normal en <span class="math inline">\(G/N\)</span> si y solo si <span class="math inline">\(K\)</span> es normal en <span class="math inline">\(G\)</span>. Respuesta: La asiganación <span class="math inline">\(K\mapsto f(K)\)</span> define una función <span class="math inline">\(\phi: S_{f}(G)\longrightarrow S(H)\)</span> y <span class="math inline">\(f^{-}(J)\)</span> es un subgrupo de <span class="math inline">\(G\)</span> para todo subgrupo <span class="math inline">\(J\)</span> de <span class="math inline">\(H\)</span>. <span class="math inline">\(J&lt;H\)</span> implica que <span class="math inline">\(Ker f&lt; f^{-1}(J)\)</span> y <span class="math inline">\(f(f^{-1}(J))=J\)</span>, <span class="math inline">\(\phi\)</span> es sobreyectiva. Como <span class="math inline">\(f(f^{-1}(K))=K\)</span> si y solo si <span class="math inline">\(Ker f&lt;K\)</span>, se tiene que <span class="math inline">\(f\)</span> es inyectiva. Si <span class="math inline">\(K\vartriangleleft G\)</span>, entonces <span class="math inline">\(f(K)\vartriangleleft H\)</span>, al igual que si <span class="math inline">\(J\vartriangleleft H\)</span> entonces <span class="math inline">\(f^{-1}(J)\vartriangleleft G\)</span>, de donde se tiene el resultado. Adicionalmente, si se considera el epimorfismo canónico <span class="math inline">\(\pi: G\longrightarrow G/N\)</span>, si <span class="math inline">\(N&lt;K&lt;G\)</span>, entonces <span class="math inline">\(\pi(K)=K/N\)</span>.</p>
+<p><span id="exr:unnamed-chunk-135" class="exercise"><strong>Ejercicio 1.10  </strong></span> Demuestre que si <span class="math inline">\(f:G\longrightarrow H\)</span> es un epimorfismo de grupos, entonces la signación <span class="math inline">\(K\mapsto f(K)\)</span> define una correspondencia uno a uno entre el conjunto <span class="math inline">\(S_{f}(G)\)</span> de todos los subgrupos <span class="math inline">\(K\)</span> de <span class="math inline">\(G\)</span> que contienen al núcleo de <span class="math inline">\(f\)</span> y el conjunto <span class="math inline">\(S(H)\)</span> de todos los subgrupos de <span class="math inline">\(H\)</span>. Bajo esta correspondencia, subgrupos normales corresponden a subgrupos normales. Además, si <span class="math inline">\(N\)</span> es un subgrupo normal de <span class="math inline">\(G\)</span>, entonces todo subgrupo de <span class="math inline">\(G/N\)</span> es de la forma <span class="math inline">\(K/N\)</span>, donde <span class="math inline">\(K\)</span> es un subgrupo de <span class="math inline">\(G\)</span> que contiene a <span class="math inline">\(N\)</span>. Por lo tanto, <span class="math inline">\(K/N\)</span> es normal en <span class="math inline">\(G/N\)</span> si y solo si <span class="math inline">\(K\)</span> es normal en <span class="math inline">\(G\)</span>. Respuesta: La asiganación <span class="math inline">\(K\mapsto f(K)\)</span> define una función <span class="math inline">\(\phi: S_{f}(G)\longrightarrow S(H)\)</span> y <span class="math inline">\(f^{-}(J)\)</span> es un subgrupo de <span class="math inline">\(G\)</span> para todo subgrupo <span class="math inline">\(J\)</span> de <span class="math inline">\(H\)</span>. <span class="math inline">\(J&lt;H\)</span> implica que <span class="math inline">\(Ker f&lt; f^{-1}(J)\)</span> y <span class="math inline">\(f(f^{-1}(J))=J\)</span>, <span class="math inline">\(\phi\)</span> es sobreyectiva. Como <span class="math inline">\(f(f^{-1}(K))=K\)</span> si y solo si <span class="math inline">\(Ker f&lt;K\)</span>, se tiene que <span class="math inline">\(f\)</span> es inyectiva. Si <span class="math inline">\(K\vartriangleleft G\)</span>, entonces <span class="math inline">\(f(K)\vartriangleleft H\)</span>, al igual que si <span class="math inline">\(J\vartriangleleft H\)</span> entonces <span class="math inline">\(f^{-1}(J)\vartriangleleft G\)</span>, de donde se tiene el resultado. Adicionalmente, si se considera el epimorfismo canónico <span class="math inline">\(\pi: G\longrightarrow G/N\)</span>, si <span class="math inline">\(N&lt;K&lt;G\)</span>, entonces <span class="math inline">\(\pi(K)=K/N\)</span>.</p>
 </div>
 
 </div>
+</div>
+<div id="anillos" class="section level2">
+<h2><span class="header-section-number">1.6</span> Anillos</h2>
+<p>En esta sección estudiaremos otro concepto fundamental para el álgebra, el concepto de <em>anillo</em>, concepto básico en el estudio de los temas mas actuales del álgebra moderna. Se estudiarán las definiciones de anillo, dominios de integridad y homomorfismo de anillos, así como la definici'on de subanillo, ideal y se presentar'an los resultados correspondientes a estos. Muchos de los resultados son una generalización directa de los vistos en la sección de grupos. Veremos algunos resultados sobre anillos commutativos, anillos euclideanos, divisibiliadad y factorización única. Por último, se verán algunos resultados sobre anillos cocientes.</p>
+
+<div class="definition">
+<p><span id="def:unnamed-chunk-136" class="definition"><strong>Definición 1.32  </strong></span> Un <strong>anillo</strong> es un conjunto no vacío <span class="math inline">\(A\)</span> junto con dos operaciones binarias (usualmente denotada por el símbolo de suma, <span class="math inline">\(+\)</span> y la multiplicación) tales que:</p>
+<pre><code>    (i) $(A,+)$ es un grupo abeliano.
+
+    (ii) $(ab)c=a(bc)$ para todo $a,b,c\in A$ (multiplicación asociativa).
+
+    (iii) $a(b+c)=ab+ac$ y $(a+b)c=ac+bc$, para todo $a,b,c\in A$ (leyes distributivas, izquierda y derecha).
+
+Si adicionalmente se tiene que:
+
+    (iv) $ab=ba$ para todo $a,b\in A$, se dice que $A$ es un **anillo commutativo**.
+
+    (v) Si existe un elemento $1_{A}\in A$ tal que $1_{A}a=a1_{A}=a$ para todo $a\in A$, entonces decimos que $A$ es un **anillo con identidad**.</code></pre>
+</div>
+
+
+<div class="remark">
+<p> <span class="remark"><em>Nota. </em></span>  La identidad para la suma en un anillo es llamado cero y denotado por <span class="math inline">\(0\)</span>. Si <span class="math inline">\(A\)</span> es un anillo, <span class="math inline">\(a\in A\)</span> y <span class="math inline">\(n\in\mathbb{Z}\)</span>, entonces <span class="math inline">\(na\)</span> denota la suma de de <span class="math inline">\(a\)</span> consigo mismo, <span class="math inline">\(n\)</span> veces, siempre que <span class="math inline">\(n&gt;0\)</span>.</p>
+</div>
+
+
+<div class="theorem">
+<p><span id="thm:teorema61" class="theorem"><strong>Teorema 1.23  </strong></span> Sea <span class="math inline">\(A\)</span> un anillo, entonces:</p>
+<pre><code>(1) $0a=a0=0$ para todo $a\in A$.
+
+    (2) $(-a)b=a(-b)=-(ab)$ para todo $a,b\in A$.
+
+    (3) $(-a)(-b)=ab$ para todo $a,b\in A$.
+
+    (4) $(na)b=a(nb)$ para todo $a,b\in A$.
+
+    (5) $(\sum_{i=1}^{n} a_{i})(\sum_{j=1}^{m}b_{j})=\sum_{i=1}^{n}\sum_{j=1}^{m}a_{i}b_{j}$ para todo $a_{i},b_{j}\in A$.</code></pre>
+</div>
+ 
+<div class="proof">
+<p> <span class="proof"><em>Demostración. </em></span>  (1) <span class="math inline">\(0a=(0+0)a=0a+0a\)</span>, por unicidad del elemento neutro se sigue que <span class="math inline">\(0a=0\)</span>.</p>
+<pre><code>    (2) $ab+(-a)b=(a-a)b=0b=0$, por unicidad del elemento inverso, se sigue que $(-a)b=-(ab)$.
+
+    (3) Por lo demostrado en (2) se tiene que $(-a)(-b)=-(-(ab))=ab$.
+
+    (4) Haciendo inducción sobre $n$ y de la propiedad distributiva, se obtiene el resultado.
+
+    (5) Haciendo inducción sobre $n$ y $m$ se obtiene el resultado.
+&lt;/div&gt;\EndKnitrBlock{proof}</code></pre>
+
+<div class="definition">
+<p><span id="def:unnamed-chunk-139" class="definition"><strong>Definición 1.33  </strong></span> Un elemento <span class="math inline">\(a\)</span> de un anillo <span class="math inline">\(A\)</span> no cero es un <strong>divisor izquierdo</strong> (respectivamente <strong>divisor derecho</strong>) <strong>de cero</strong> si existe un elemento <span class="math inline">\(b\in A\)</span> no cero tal que <span class="math inline">\(ab=0\)</span> (respectivamente <span class="math inline">\(ba=0\)</span>). Un <strong>divisor de cero</strong> es un elemento de un anillo <span class="math inline">\(A\)</span> que es a la vez un divisor izquierdo y derecho de cero.</p>
+</div>
+
+
+<div class="remark">
+<p> <span class="remark"><em>Nota. </em></span>  Es fácil verificar que en un anillo <span class="math inline">\(A\)</span> se cumples las leyes de cancelación izquierda y derecha si y solo si no tiene divisores de cero.</p>
+</div>
+
+
+<div class="definition">
+<p><span id="def:unnamed-chunk-141" class="definition"><strong>Definición 1.34  </strong></span> Un elemento <span class="math inline">\(a\)</span> en un anillo con identidad <span class="math inline">\(A\)</span> se dice que es <strong>invertible izquierdo</strong> (resp. <strong>invertible derecho</strong>) si existe <span class="math inline">\(c\in A\)</span> (resp. <span class="math inline">\(b\in A\)</span>) tal que <span class="math inline">\(ca=1_{A}\)</span> (resp. <span class="math inline">\(ab=1_{A}\)</span>). El elemento <span class="math inline">\(c\)</span> (resp. <span class="math inline">\(b\)</span>) es llamado <strong>inverso izquierdo</strong> (resp. <strong>inverso derecho</strong>) de <span class="math inline">\(a\)</span>. Si es es invertible izquierdo y derecho simultáneamente, se dice que es <strong>invertible</strong> o es una <strong>unidad</strong>.</p>
+</div>
+
+
+<div class="remark">
+<p> <span class="remark"><em>Nota. </em></span> <br />
+(i) Los inverso derechos e izquierdos de una unidad <span class="math inline">\(a\)</span> en un anillo con identidad <span class="math inline">\(A\)</span>, son necesariamente iguales.</p>
+<pre><code>    (ii) El conjunto de unidades de un anillo con identidad $A$, forma un grupo bajo la multiplicación.
+&lt;/div&gt;\EndKnitrBlock{remark}</code></pre>
+
+<div class="remark">
+<p> <span class="remark"><em>Nota. </em></span>  ### Ejercicios</p>
+</div>
+ 
+<div class="exercise">
+<span id="exr:unnamed-chunk-144" class="exercise"><strong>Ejercicio 1.11  </strong></span>Complete los detalles de la demostración de las partes (4) y (5) del teorema @ref{thm:teorema61}. Repuesta: (4) Obviamente la proposición es cierta si <span class="math inline">\(n=1\)</span>. Supongamos que <span class="math inline">\((ka)b=a(kb)\)</span> para todo <span class="math inline">\(k\leq n\)</span>, <span class="math inline">\(((k+1)a)b=((ka)+a)b=((ka)b+ab)=(a(kb)+ab)=a((kb)+b)=a((k+1)b)\)</span>. (5) De lo anterior tenemos que <span class="math inline">\((\sum_{i=1}^{n} a_{i})b=\sum_{i=1}^{n}a_{i}b\)</span> para todo <span class="math inline">\(a_{i},b\in A\)</span>. Haremos inducción sobre <span class="math inline">\(m\)</span>. Claramente la proposición es cierta para <span class="math inline">\(m=1\)</span>. Supongamos <span class="math inline">\((\sum_{i=1}^{n} a_{i})(\sum_{j=1}^{k}b_{j})=\sum_{i=1}^{n}\sum_{j=1}^{k}a_{i}b_{j}\)</span> para todo <span class="math inline">\(k\leq m\)</span>.
+<span class="math display">\[\begin{equation} 
+    \begin{split}
+    (\sum_{i=1}^{n} a_{i})(\sum_{j=1}^{k+1}b_{j}) &amp; = (\sum_{i=1}^{n} a_{i})(\sum_{j=1}^{k}b_{j}+b_{k+1}) \\
+    &amp; = ((\sum_{i=1}^{n} a_{i})(\sum_{j=1}^{k}b_{j}))+((\sum_{i=1}^{n} a_{i})b_{k+1})) \\
+    &amp; = (\sum_{i=1}^{n}\sum_{j=1}^{k}a_{i}b_{j})+(\sum_{i=1}^{n} a_{i}b_{k+1}) \\
+    &amp; = \sum_{i=1}^{n}(\sum_{j=1}^{k}a_{i}b_{j}+a_{i}b_{k+1}) \\
+    &amp; = \sum_{i=1}^{n}\sum_{j=1}^{k+1}a_{i}b_{j}
+    \end{split}
+    \end{equation}\]</span>
+</div>
+ 
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-145" class="exercise"><strong>Ejercicio 1.12  </strong></span>Sea <span class="math inline">\(A\)</span> un anillo. Demuestre que en <span class="math inline">\(A\)</span> se cumples las leyes de cancelación izquierda y derecha si y solo si <span class="math inline">\(A\)</span> no tiene divisores de cero. Respuesta: Supongamos que en <span class="math inline">\(A\)</span> se cumplen las leyes derechas e izquierdas de cancelación, sean <span class="math inline">\(a,b\in A\)</span>, tales que <span class="math inline">\(ab=0\)</span>, supongamos que <span class="math inline">\(a\neq 0\)</span>, entonces <span class="math inline">\(ab=0=a0=0b\)</span> por lo tanto <span class="math inline">\(b=0\)</span> (o <span class="math inline">\(a=0\)</span>). Por lo tanto <span class="math inline">\(A\)</span> no tiene divisores de cero. Inversamente, supongamos que <span class="math inline">\(A\)</span> no tiene divisores de cero. Sean <span class="math inline">\(a,b,c\in A\)</span>, supongamos que <span class="math inline">\(a\neq o\)</span>. Si <span class="math inline">\(ab=ac\)</span>, entonces <span class="math inline">\(a(b-c)=ab-ac=0\)</span>, por lo tanto <span class="math inline">\(b=c\)</span>. Análogamente se demuestra la ley de cancelación derecha.</p>
+</div>
+
 </div>
 </div>
 <script>
