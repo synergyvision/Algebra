@@ -922,10 +922,18 @@ En esta sección estudiaremos otro concepto fundamental para el álgebra, el con
 
 		(ii) El conjunto de unidades de un anillo con identidad $A$, forma un grupo bajo la multiplicación.
 	</div>\EndKnitrBlock{remark}
-\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}
-### Ejercicios
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}</div>\EndKnitrBlock{remark}
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-144"><strong>(\#def:unnamed-chunk-144) </strong></span>	Un anillo $A$ con identidad $1_{A}\neq 0$ y sin divisores de cero, se llama **dominio de identidad**. Un anillo $D$ con identidad $1_{D}\neq 0$ en el que todo elemento no cero es una unidad, se llama **anillo con división**. Un **campo** es un anillo commutativo con división.
+	</div>\EndKnitrBlock{definition}
+
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	(i) Todo dominio de integridad y todo anillo con división tiene al menos dos elementos, denotados $0$ y $1_{A}$.
+	(ii) Un anillo $A$ con identidad es un anillo con división si y solo si los elementos no nulos forman un grupo bajo la multiplicación.
+	(iii) Todo campo $F$ es un dominio de integridad ya que $ab=0$ y $a\neq 0$ implica que $b=1_{F}b=(a^{-1}a)b=a^{-1}(ab)=a^{-1}0=0$.
 </div>\EndKnitrBlock{remark}
-\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-144"><strong>(\#exr:unnamed-chunk-144) </strong></span>Complete los detalles de la demostración de las partes (4) y (5) del teorema \@ref{thm:teorema61}.
+
+### Ejercicios
+
+\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-146"><strong>(\#exr:unnamed-chunk-146) </strong></span>Complete los detalles de la demostración de las partes (4) y (5) del teorema \@ref{thm:teorema61}.
 	Repuesta: (4) Obviamente la proposición es cierta si $n=1$. Supongamos que $(ka)b=a(kb)$ para todo $k\leq n$, $((k+1)a)b=((ka)+a)b=((ka)b+ab)=(a(kb)+ab)=a((kb)+b)=a((k+1)b)$. (5) De lo anterior tenemos que $(\sum_{i=1}^{n} a_{i})b=\sum_{i=1}^{n}a_{i}b$ para todo $a_{i},b\in A$. Haremos inducción sobre $m$. Claramente la proposición es cierta para $m=1$. Supongamos $(\sum_{i=1}^{n} a_{i})(\sum_{j=1}^{k}b_{j})=\sum_{i=1}^{n}\sum_{j=1}^{k}a_{i}b_{j}$ para todo $k\leq m$. 
 	\begin{equation} 
 	\begin{split}
@@ -937,6 +945,8 @@ En esta sección estudiaremos otro concepto fundamental para el álgebra, el con
 	\end{split}
 	\end{equation}
 	</div>\EndKnitrBlock{exercise}
-\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-145"><strong>(\#exr:unnamed-chunk-145) </strong></span>Sea $A$ un anillo. Demuestre que en $A$ se cumples las leyes de cancelación izquierda y derecha si y solo si $A$ no tiene divisores de cero.
+\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-147"><strong>(\#exr:unnamed-chunk-147) </strong></span>Sea $A$ un anillo. Demuestre que en $A$ se cumples las leyes de cancelación izquierda y derecha si y solo si $A$ no tiene divisores de cero.
 	Respuesta: Supongamos que en $A$ se cumplen las leyes derechas e izquierdas de cancelación, sean $a,b\in A$, tales que $ab=0$, supongamos que $a\neq 0$, entonces $ab=0=a0=0b$ por lo tanto $b=0$ (o $a=0$). Por lo tanto $A$ no tiene divisores de cero. Inversamente, supongamos que $A$ no tiene divisores de cero. Sean $a,b,c\in A$, supongamos que $a\neq o$. Si $ab=ac$, entonces $a(b-c)=ab-ac=0$, por lo tanto $b=c$. Análogamente se demuestra la ley de cancelación derecha.
 </div>\EndKnitrBlock{exercise}
+\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-148"><strong>(\#exr:unnamed-chunk-148) </strong></span>Sea $A$ un anillo con identidad y sea $C=\{a\in A: a \mbox{ una identidad de } A \}$. Demuestre que $C$ junto con la multiplicación (definida en el anillo $A$) forman un grupo.
+	Respuesta: Claramente el producto es asociativo, el elemento identidad existe y por definición de unidad, los elementos de $C$ tienen inverso.</div>\EndKnitrBlock{exercise}

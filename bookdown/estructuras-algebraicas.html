@@ -79,7 +79,9 @@
 <li class="chapter" data-level="1.5" data-path=""><a href="#teoria-de-grupos"><i class="fa fa-check"></i><b>1.5</b> Teoría de Grupos</a><ul>
 <li class="chapter" data-level="1.5.1" data-path=""><a href="#ejercicios-1"><i class="fa fa-check"></i><b>1.5.1</b> Ejercicios</a></li>
 </ul></li>
-<li class="chapter" data-level="1.6" data-path=""><a href="#anillos"><i class="fa fa-check"></i><b>1.6</b> Anillos</a></li>
+<li class="chapter" data-level="1.6" data-path=""><a href="#anillos"><i class="fa fa-check"></i><b>1.6</b> Anillos</a><ul>
+<li class="chapter" data-level="1.6.1" data-path=""><a href="#ejercicios-2"><i class="fa fa-check"></i><b>1.6.1</b> Ejercicios</a></li>
+</ul></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://bookdown.org" target="blank">Publicado con bookdown</a></li>
@@ -1239,11 +1241,23 @@ Si adicionalmente se tiene que:
 &lt;/div&gt;\EndKnitrBlock{remark}</code></pre>
 
 <div class="remark">
-<p> <span class="remark"><em>Nota. </em></span>  ### Ejercicios</p>
+ <span class="remark"><em>Nota. </em></span> 
 </div>
  
+<div class="definition">
+<span id="def:unnamed-chunk-144" class="definition"><strong>Definición 1.35  </strong></span> Un anillo <span class="math inline">\(A\)</span> con identidad <span class="math inline">\(1_{A}\neq 0\)</span> y sin divisores de cero, se llama <strong>dominio de identidad</strong>. Un anillo <span class="math inline">\(D\)</span> con identidad <span class="math inline">\(1_{D}\neq 0\)</span> en el que todo elemento no cero es una unidad, se llama <strong>anillo con división</strong>. Un <strong>campo</strong> es un anillo commutativo con división.
+</div>
+
+
+<div class="remark">
+<p> <span class="remark"><em>Nota. </em></span>  (i) Todo dominio de integridad y todo anillo con división tiene al menos dos elementos, denotados <span class="math inline">\(0\)</span> y <span class="math inline">\(1_{A}\)</span>. (ii) Un anillo <span class="math inline">\(A\)</span> con identidad es un anillo con división si y solo si los elementos no nulos forman un grupo bajo la multiplicación. (iii) Todo campo <span class="math inline">\(F\)</span> es un dominio de integridad ya que <span class="math inline">\(ab=0\)</span> y <span class="math inline">\(a\neq 0\)</span> implica que <span class="math inline">\(b=1_{F}b=(a^{-1}a)b=a^{-1}(ab)=a^{-1}0=0\)</span>.</p>
+</div>
+
+<div id="ejercicios-2" class="section level3">
+<h3><span class="header-section-number">1.6.1</span> Ejercicios</h3>
+
 <div class="exercise">
-<span id="exr:unnamed-chunk-144" class="exercise"><strong>Ejercicio 1.11  </strong></span>Complete los detalles de la demostración de las partes (4) y (5) del teorema @ref{thm:teorema61}. Repuesta: (4) Obviamente la proposición es cierta si <span class="math inline">\(n=1\)</span>. Supongamos que <span class="math inline">\((ka)b=a(kb)\)</span> para todo <span class="math inline">\(k\leq n\)</span>, <span class="math inline">\(((k+1)a)b=((ka)+a)b=((ka)b+ab)=(a(kb)+ab)=a((kb)+b)=a((k+1)b)\)</span>. (5) De lo anterior tenemos que <span class="math inline">\((\sum_{i=1}^{n} a_{i})b=\sum_{i=1}^{n}a_{i}b\)</span> para todo <span class="math inline">\(a_{i},b\in A\)</span>. Haremos inducción sobre <span class="math inline">\(m\)</span>. Claramente la proposición es cierta para <span class="math inline">\(m=1\)</span>. Supongamos <span class="math inline">\((\sum_{i=1}^{n} a_{i})(\sum_{j=1}^{k}b_{j})=\sum_{i=1}^{n}\sum_{j=1}^{k}a_{i}b_{j}\)</span> para todo <span class="math inline">\(k\leq m\)</span>.
+<span id="exr:unnamed-chunk-146" class="exercise"><strong>Ejercicio 1.11  </strong></span>Complete los detalles de la demostración de las partes (4) y (5) del teorema @ref{thm:teorema61}. Repuesta: (4) Obviamente la proposición es cierta si <span class="math inline">\(n=1\)</span>. Supongamos que <span class="math inline">\((ka)b=a(kb)\)</span> para todo <span class="math inline">\(k\leq n\)</span>, <span class="math inline">\(((k+1)a)b=((ka)+a)b=((ka)b+ab)=(a(kb)+ab)=a((kb)+b)=a((k+1)b)\)</span>. (5) De lo anterior tenemos que <span class="math inline">\((\sum_{i=1}^{n} a_{i})b=\sum_{i=1}^{n}a_{i}b\)</span> para todo <span class="math inline">\(a_{i},b\in A\)</span>. Haremos inducción sobre <span class="math inline">\(m\)</span>. Claramente la proposición es cierta para <span class="math inline">\(m=1\)</span>. Supongamos <span class="math inline">\((\sum_{i=1}^{n} a_{i})(\sum_{j=1}^{k}b_{j})=\sum_{i=1}^{n}\sum_{j=1}^{k}a_{i}b_{j}\)</span> para todo <span class="math inline">\(k\leq m\)</span>.
 <span class="math display">\[\begin{equation} 
     \begin{split}
     (\sum_{i=1}^{n} a_{i})(\sum_{j=1}^{k+1}b_{j}) &amp; = (\sum_{i=1}^{n} a_{i})(\sum_{j=1}^{k}b_{j}+b_{k+1}) \\
@@ -1256,9 +1270,14 @@ Si adicionalmente se tiene que:
 </div>
  
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-145" class="exercise"><strong>Ejercicio 1.12  </strong></span>Sea <span class="math inline">\(A\)</span> un anillo. Demuestre que en <span class="math inline">\(A\)</span> se cumples las leyes de cancelación izquierda y derecha si y solo si <span class="math inline">\(A\)</span> no tiene divisores de cero. Respuesta: Supongamos que en <span class="math inline">\(A\)</span> se cumplen las leyes derechas e izquierdas de cancelación, sean <span class="math inline">\(a,b\in A\)</span>, tales que <span class="math inline">\(ab=0\)</span>, supongamos que <span class="math inline">\(a\neq 0\)</span>, entonces <span class="math inline">\(ab=0=a0=0b\)</span> por lo tanto <span class="math inline">\(b=0\)</span> (o <span class="math inline">\(a=0\)</span>). Por lo tanto <span class="math inline">\(A\)</span> no tiene divisores de cero. Inversamente, supongamos que <span class="math inline">\(A\)</span> no tiene divisores de cero. Sean <span class="math inline">\(a,b,c\in A\)</span>, supongamos que <span class="math inline">\(a\neq o\)</span>. Si <span class="math inline">\(ab=ac\)</span>, entonces <span class="math inline">\(a(b-c)=ab-ac=0\)</span>, por lo tanto <span class="math inline">\(b=c\)</span>. Análogamente se demuestra la ley de cancelación derecha.</p>
+<p><span id="exr:unnamed-chunk-147" class="exercise"><strong>Ejercicio 1.12  </strong></span>Sea <span class="math inline">\(A\)</span> un anillo. Demuestre que en <span class="math inline">\(A\)</span> se cumples las leyes de cancelación izquierda y derecha si y solo si <span class="math inline">\(A\)</span> no tiene divisores de cero. Respuesta: Supongamos que en <span class="math inline">\(A\)</span> se cumplen las leyes derechas e izquierdas de cancelación, sean <span class="math inline">\(a,b\in A\)</span>, tales que <span class="math inline">\(ab=0\)</span>, supongamos que <span class="math inline">\(a\neq 0\)</span>, entonces <span class="math inline">\(ab=0=a0=0b\)</span> por lo tanto <span class="math inline">\(b=0\)</span> (o <span class="math inline">\(a=0\)</span>). Por lo tanto <span class="math inline">\(A\)</span> no tiene divisores de cero. Inversamente, supongamos que <span class="math inline">\(A\)</span> no tiene divisores de cero. Sean <span class="math inline">\(a,b,c\in A\)</span>, supongamos que <span class="math inline">\(a\neq o\)</span>. Si <span class="math inline">\(ab=ac\)</span>, entonces <span class="math inline">\(a(b-c)=ab-ac=0\)</span>, por lo tanto <span class="math inline">\(b=c\)</span>. Análogamente se demuestra la ley de cancelación derecha.</p>
+</div>
+ 
+<div class="exercise">
+<span id="exr:unnamed-chunk-148" class="exercise"><strong>Ejercicio 1.13  </strong></span>Sea <span class="math inline">\(A\)</span> un anillo con identidad y sea <span class="math inline">\(C=\{a\in A: a \mbox{ una identidad de } A \}\)</span>. Demuestre que <span class="math inline">\(C\)</span> junto con la multiplicación (definida en el anillo <span class="math inline">\(A\)</span>) forman un grupo. Respuesta: Claramente el producto es asociativo, el elemento identidad existe y por definición de unidad, los elementos de <span class="math inline">\(C\)</span> tienen inverso.
 </div>
 
+</div>
 </div>
 </div>
 <script>

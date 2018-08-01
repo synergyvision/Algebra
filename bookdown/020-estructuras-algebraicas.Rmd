@@ -1259,6 +1259,18 @@ En esta sección estudiaremos otro concepto fundamental para el álgebra, el con
 	
 ```{remark}
 
+```{definition}
+	Un anillo $A$ con identidad $1_{A}\neq 0$ y sin divisores de cero, se llama **dominio de identidad**. Un anillo $D$ con identidad $1_{D}\neq 0$ en el que todo elemento no cero es una unidad, se llama **anillo con división**. Un **campo** es un anillo commutativo con división.
+	
+```
+
+```{remark}
+	(i) Todo dominio de integridad y todo anillo con división tiene al menos dos elementos, denotados $0$ y $1_{A}$.
+	(ii) Un anillo $A$ con identidad es un anillo con división si y solo si los elementos no nulos forman un grupo bajo la multiplicación.
+	(iii) Todo campo $F$ es un dominio de integridad ya que $ab=0$ y $a\neq 0$ implica que $b=1_{F}b=(a^{-1}a)b=a^{-1}(ab)=a^{-1}0=0$.
+
+```
+
 ### Ejercicios
 
 ```{exercise}
@@ -1279,3 +1291,6 @@ Sea $A$ un anillo. Demuestre que en $A$ se cumples las leyes de cancelación izq
 	Respuesta: Supongamos que en $A$ se cumplen las leyes derechas e izquierdas de cancelación, sean $a,b\in A$, tales que $ab=0$, supongamos que $a\neq 0$, entonces $ab=0=a0=0b$ por lo tanto $b=0$ (o $a=0$). Por lo tanto $A$ no tiene divisores de cero. Inversamente, supongamos que $A$ no tiene divisores de cero. Sean $a,b,c\in A$, supongamos que $a\neq o$. Si $ab=ac$, entonces $a(b-c)=ab-ac=0$, por lo tanto $b=c$. Análogamente se demuestra la ley de cancelación derecha.
 
 ```
+```{exercise} 
+Sea $A$ un anillo con identidad y sea $C=\{a\in A: a \mbox{ una identidad de } A \}$. Demuestre que $C$ junto con la multiplicación (definida en el anillo $A$) forman un grupo.
+	Respuesta: Claramente el producto es asociativo, el elemento identidad existe y por definición de unidad, los elementos de $C$ tienen inverso.
