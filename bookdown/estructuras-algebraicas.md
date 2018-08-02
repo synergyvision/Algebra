@@ -868,17 +868,14 @@ Respuesta: Sabemos que $|G\times H|=|G||H|$, lo que demuestra que el orden del g
 En esta sección estudiaremos otro concepto fundamental para el álgebra, el concepto de *anillo*, concepto básico en el estudio de los temas mas actuales del álgebra moderna. Se estudiarán las definiciones de anillo, dominios de integridad y homomorfismo de anillos, así como la definici\'on de subanillo, ideal y se presentar\'an los resultados correspondientes a estos. Muchos de los resultados son una generalización directa de los vistos en la sección de grupos. Veremos algunos resultados sobre anillos commutativos, anillos euclideanos, divisibiliadad y factorización única. Por último, se verán algunos resultados sobre anillos cocientes.
 
 \BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-136"><strong>(\#def:unnamed-chunk-136) </strong></span>	Un **anillo** es un conjunto no vacío $A$ junto con dos operaciones binarias (usualmente denotada por el símbolo de suma, $+$ y la multiplicación) tales que:
-	
+  
 		(i) $(A,+)$ es un grupo abeliano.
-
 		(ii) $(ab)c=a(bc)$ para todo $a,b,c\in A$ (multiplicación asociativa).
-
 		(iii) $a(b+c)=ab+ac$ y $(a+b)c=ac+bc$, para todo $a,b,c\in A$ (leyes distributivas, izquierda y derecha).
 
 	Si adicionalmente se tiene que:
-	
+	  
 		(iv) $ab=ba$ para todo $a,b\in A$, se dice que $A$ es un **anillo commutativo**.
-	
 		(v) Si existe un elemento $1_{A}\in A$ tal que $1_{A}a=a1_{A}=a$ para todo $a\in A$, entonces decimos que $A$ es un **anillo con identidad**.
 </div>\EndKnitrBlock{definition}
 
@@ -923,17 +920,58 @@ En esta sección estudiaremos otro concepto fundamental para el álgebra, el con
 		(ii) El conjunto de unidades de un anillo con identidad $A$, forma un grupo bajo la multiplicación.
 	</div>\EndKnitrBlock{remark}
 \BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}</div>\EndKnitrBlock{remark}
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-144"><strong>(\#def:unnamed-chunk-144) </strong></span>	Un anillo $A$ con identidad $1_{A}\neq 0$ y sin divisores de cero, se llama **dominio de identidad**. Un anillo $D$ con identidad $1_{D}\neq 0$ en el que todo elemento no cero es una unidad, se llama **anillo con división**. Un **campo** es un anillo commutativo con división.
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-144"><strong>(\#def:unnamed-chunk-144) </strong></span>	Un anillo $A$ con identidad $1_{A}\neq 0$ y sin divisores de cero, se llama **dominio de identidad**. Un anillo $D$ con identidad $1_{D}\neq 0$ en el que todo elemento no cero es una unidad, se llama **anillo con división**. Un **cuerpo (o campo)** es un anillo commutativo con división.
 	</div>\EndKnitrBlock{definition}
 
 \BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	(i) Todo dominio de integridad y todo anillo con división tiene al menos dos elementos, denotados $0$ y $1_{A}$.
 	(ii) Un anillo $A$ con identidad es un anillo con división si y solo si los elementos no nulos forman un grupo bajo la multiplicación.
-	(iii) Todo campo $F$ es un dominio de integridad ya que $ab=0$ y $a\neq 0$ implica que $b=1_{F}b=(a^{-1}a)b=a^{-1}(ab)=a^{-1}0=0$.
+	(iii) Todo cuerpo $F$ es un dominio de integridad ya que $ab=0$ y $a\neq 0$ implica que $b=1_{F}b=(a^{-1}a)b=a^{-1}(ab)=a^{-1}0=0$.
 </div>\EndKnitrBlock{remark}
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-146"><strong>(\#exm:unnamed-chunk-146) </strong></span>	El conjunto de los números enteros es un anillo, más aun, es un dominio de integridad. El conjunto de los enteros pares es un anillo commutativo sin identidad. Los conjuntos de los números racionales, $\mathbb{Q}$, de los números reales $\mathbb{R}$ y de los números complejos $\mathbb{C}$ con las operaciones usuales de suma y multiplicación, son cuerpos. 
+</div>\EndKnitrBlock{example}
+
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	Las matrices sobre $\mathbb{Q}$ (o sobre $\mathbb{R}$ o $\mathbb{C}$) con las operaciones suma y multiplicación de matrices, forman una anillos no commutativo con identidad. (más adelante se estudiará este tema).
+</div>\EndKnitrBlock{remark}
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-148"><strong>(\#exm:unnamed-chunk-148) </strong></span>	Dados $n\in \mathbb{Z}$ positivo, el conjunto de los enteros módulo $n$, $\mathbb{Z}_{n}$, con las operaciones usuales, es un anillo. Si $n$ no es un número primo, entonces $n=kr$ para enteros $k>1$ y $r>1$, por lo tanto $[k]\neq [0]$, $[r]\neq [0]$ y $[k][r]=[n]=[0]$, entonces $[k]$ y $[r]$ son divisores de cero. Si $n=p$ es un número primo, entonces $\mathbb{Z}_{p}$ es un cuerpo.
+</div>\EndKnitrBlock{example}
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-149"><strong>(\#exm:unnamed-chunk-149) </strong></span>	Sea $G$ un grupo abeliano. Sea $End(G)$ el conjunto de endomorfismos de $f:G\longrightarrow G$. Definimos la suma en $End(G)$ como $(f+g)(a)=f(a)+g(a)$, para todo $f,g\in End(G)$. Se verifica que $f+g\in End(G)$. De este modo $End(G)$ es un grupo abeliano. Si definimos la multiplicación en $End(G)$ como la composición de funciones, $(f\circ g)(a)=f(g(a))$ para todo $f,g\in End(G)$; claramente $f\circ g\in End(G)$. Con estas dos operaciones, $End(G)$ es un anillos con identidad $I_{G}:G\longrightarrow G$, $I_{G}(a)=a$ (no necesariamente commutativo).
+</div>\EndKnitrBlock{example}
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-150"><strong>(\#exm:unnamed-chunk-150) </strong></span>	Los **cuaterniones** (o **cuaternios**): Sea el conjunto $\mathcal{Q}$ de elementos de la forma $\alpha=a_{0}+a_{1}i+a_{2}j+a_{3}k$, con $a_{0}, a_{1}, a_{2}, a_{3}\in \mathbb{R}$, definimos a las operaciones:
+	(1) *Suma* definida por
+		\begin{equation*}
+		\begin{split}
+			\alpha+\beta&=(a_{0}+a_{1}i+a_{2}j+a_{3}k)+(b_{0}+b_{1}i+b_{2}j+b_{3}k)\\
+			&=(a_{0}+b_{0})+(a_{1}+b_{1})i+(a_{2}+b_{2})j+(a_{3}+b_{3})k
+		\end{split}
+		\end{equation*}
+	(2) *Multiplicación* definada por
+		\begin{equation*}
+			\begin{split}
+			\alpha\beta & =(a_{0}+a_{1}i+a_{2}j+a_{3}k)(b_{0}+b_{1}i+b_{2}j+b_{3}k)\\
+			&=(a_{1}b_{1}-a_{2}b_{2}-a_{3}b_{3}-a_{4}b_{4})+(a_{1}b_{2}+a_{2}b_{1}+a_{3}b_{4}-a_{4}b_{3})i\\
+			&+(a_{1}b_{3}-a_{2}b_{4}+a_{3}b_{1}+a_{4}b_{2})j+(a_{1}b_{4}+a_{2}b_{3}-a_{3}b_{2}+a_{4}b_{1})k
+			\end{split}
+		\end{equation*}
+	La multiplicación se puede hacer mediante la propiedad distributiva y usando las siguientes reglas:
+		
+			(1) $i^{2}=j^{2}=k^{2}=ijk=-1$;
+			(2) $ij=-ji=k$;
+			(3) $jk=-kj=i$:
+			(4) $ki=-ik=j$.
+		 
+		El conjunto de los elementos $\{\mbox{\textpm} 1,\mbox{\textpm} i, \mbox{\textpm} j,\mbox{\textpm} k \}$ forman un grupo no abeliano  de orden 8 con la multiplicación.
+		El conjunto $\mathcal{Q}$ junto a las operaciones suma y multiplicación antes definidas forman un anillos no commutativo con división, donde el elemento cero (nulo para la suma) es $0+0i+0j+0k$, la unidad es $1+0i+0j+0k$ y el inverso multiplicativo de un elemnto no nulo $\alpha=a_{0}+a_{1}i+a_{2}j+a_{3}k$ es $(a_{0}/d)+(a_{1}/d)i+(a_{2}/d)j+(a_{3}/d)k$ con $d=a_{0}^{2}+a_{1}^{2}+a_{2}^{2}+a_{3}^{2}$.
+</div>\EndKnitrBlock{example}
+
+Nóte que los elemento de un anillo $A$ bajo la operación de multiplicación, forman un semigrupo y si $A$ tiene unidad, forma un monoide. Por lo tanto puede definirse la potenciación. Para cada $a\in A$ y $n\in\mathbb{N}$ no nulo, $a^{n}=a\cdots a$ ($n$ factores) y $a^{0}=1_{A}$ si $A$ tiene identidad. Además $a^{m}a^{n}=a^{m+n}$ y $(a^{m})^{n}=a^{mn}$. 
 
 ### Ejercicios
 
-\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-146"><strong>(\#exr:unnamed-chunk-146) </strong></span>Complete los detalles de la demostración de las partes (4) y (5) del teorema \@ref{thm:teorema61}.
+\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-151"><strong>(\#exr:unnamed-chunk-151) </strong></span>Complete los detalles de la demostración de las partes (4) y (5) del teorema \@ref{thm:teorema61}.
 	Repuesta: (4) Obviamente la proposición es cierta si $n=1$. Supongamos que $(ka)b=a(kb)$ para todo $k\leq n$, $((k+1)a)b=((ka)+a)b=((ka)b+ab)=(a(kb)+ab)=a((kb)+b)=a((k+1)b)$. (5) De lo anterior tenemos que $(\sum_{i=1}^{n} a_{i})b=\sum_{i=1}^{n}a_{i}b$ para todo $a_{i},b\in A$. Haremos inducción sobre $m$. Claramente la proposición es cierta para $m=1$. Supongamos $(\sum_{i=1}^{n} a_{i})(\sum_{j=1}^{k}b_{j})=\sum_{i=1}^{n}\sum_{j=1}^{k}a_{i}b_{j}$ para todo $k\leq m$. 
 	\begin{equation} 
 	\begin{split}
@@ -945,8 +983,13 @@ En esta sección estudiaremos otro concepto fundamental para el álgebra, el con
 	\end{split}
 	\end{equation}
 	</div>\EndKnitrBlock{exercise}
-\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-147"><strong>(\#exr:unnamed-chunk-147) </strong></span>Sea $A$ un anillo. Demuestre que en $A$ se cumples las leyes de cancelación izquierda y derecha si y solo si $A$ no tiene divisores de cero.
+\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-152"><strong>(\#exr:unnamed-chunk-152) </strong></span>Sea $A$ un anillo. Demuestre que en $A$ se cumples las leyes de cancelación izquierda y derecha si y solo si $A$ no tiene divisores de cero.
 	Respuesta: Supongamos que en $A$ se cumplen las leyes derechas e izquierdas de cancelación, sean $a,b\in A$, tales que $ab=0$, supongamos que $a\neq 0$, entonces $ab=0=a0=0b$ por lo tanto $b=0$ (o $a=0$). Por lo tanto $A$ no tiene divisores de cero. Inversamente, supongamos que $A$ no tiene divisores de cero. Sean $a,b,c\in A$, supongamos que $a\neq o$. Si $ab=ac$, entonces $a(b-c)=ab-ac=0$, por lo tanto $b=c$. Análogamente se demuestra la ley de cancelación derecha.
 </div>\EndKnitrBlock{exercise}
-\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-148"><strong>(\#exr:unnamed-chunk-148) </strong></span>Sea $A$ un anillo con identidad y sea $C=\{a\in A: a \mbox{ una identidad de } A \}$. Demuestre que $C$ junto con la multiplicación (definida en el anillo $A$) forman un grupo.
-	Respuesta: Claramente el producto es asociativo, el elemento identidad existe y por definición de unidad, los elementos de $C$ tienen inverso.</div>\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-153"><strong>(\#exr:unnamed-chunk-153) </strong></span>Sea $A$ un anillo con identidad y sea $C=\{a\in A: a \mbox{ una identidad de } A \}$. Demuestre que $C$ junto con la multiplicación (definida en el anillo $A$) forman un grupo.
+	Respuesta: Claramente el producto es asociativo, el elemento identidad existe y por definición de unidad, los elementos de $C$ tienen inverso.
+	</div>\EndKnitrBlock{exercise}
+\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-154"><strong>(\#exr:unnamed-chunk-154) </strong></span>Si $p\in \mathbb{Z}$ es un número primo, demuestre que $\mathbb{Z}_{p}$ es un cuerpo.
+	Respuesta: $p$ es primo si y solo si $(m,p)=1$ si y solo si $[m]$ tiene inverso.
+	</div>\EndKnitrBlock{exercise}

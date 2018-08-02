@@ -1177,15 +1177,12 @@ Respuesta:
 <div class="definition">
 <p><span id="def:unnamed-chunk-136" class="definition"><strong>Definición 1.32  </strong></span> Un <strong>anillo</strong> es un conjunto no vacío <span class="math inline">\(A\)</span> junto con dos operaciones binarias (usualmente denotada por el símbolo de suma, <span class="math inline">\(+\)</span> y la multiplicación) tales que:</p>
 <pre><code>    (i) $(A,+)$ es un grupo abeliano.
-
     (ii) $(ab)c=a(bc)$ para todo $a,b,c\in A$ (multiplicación asociativa).
-
     (iii) $a(b+c)=ab+ac$ y $(a+b)c=ac+bc$, para todo $a,b,c\in A$ (leyes distributivas, izquierda y derecha).
 
 Si adicionalmente se tiene que:
-
+  
     (iv) $ab=ba$ para todo $a,b\in A$, se dice que $A$ es un **anillo commutativo**.
-
     (v) Si existe un elemento $1_{A}\in A$ tal que $1_{A}a=a1_{A}=a$ para todo $a\in A$, entonces decimos que $A$ es un **anillo con identidad**.</code></pre>
 </div>
 
@@ -1245,19 +1242,69 @@ Si adicionalmente se tiene que:
 </div>
  
 <div class="definition">
-<span id="def:unnamed-chunk-144" class="definition"><strong>Definición 1.35  </strong></span> Un anillo <span class="math inline">\(A\)</span> con identidad <span class="math inline">\(1_{A}\neq 0\)</span> y sin divisores de cero, se llama <strong>dominio de identidad</strong>. Un anillo <span class="math inline">\(D\)</span> con identidad <span class="math inline">\(1_{D}\neq 0\)</span> en el que todo elemento no cero es una unidad, se llama <strong>anillo con división</strong>. Un <strong>campo</strong> es un anillo commutativo con división.
+<span id="def:unnamed-chunk-144" class="definition"><strong>Definición 1.35  </strong></span> Un anillo <span class="math inline">\(A\)</span> con identidad <span class="math inline">\(1_{A}\neq 0\)</span> y sin divisores de cero, se llama <strong>dominio de identidad</strong>. Un anillo <span class="math inline">\(D\)</span> con identidad <span class="math inline">\(1_{D}\neq 0\)</span> en el que todo elemento no cero es una unidad, se llama <strong>anillo con división</strong>. Un <strong>cuerpo (o campo)</strong> es un anillo commutativo con división.
 </div>
 
 
 <div class="remark">
-<p> <span class="remark"><em>Nota. </em></span>  (i) Todo dominio de integridad y todo anillo con división tiene al menos dos elementos, denotados <span class="math inline">\(0\)</span> y <span class="math inline">\(1_{A}\)</span>. (ii) Un anillo <span class="math inline">\(A\)</span> con identidad es un anillo con división si y solo si los elementos no nulos forman un grupo bajo la multiplicación. (iii) Todo campo <span class="math inline">\(F\)</span> es un dominio de integridad ya que <span class="math inline">\(ab=0\)</span> y <span class="math inline">\(a\neq 0\)</span> implica que <span class="math inline">\(b=1_{F}b=(a^{-1}a)b=a^{-1}(ab)=a^{-1}0=0\)</span>.</p>
+<p> <span class="remark"><em>Nota. </em></span>  (i) Todo dominio de integridad y todo anillo con división tiene al menos dos elementos, denotados <span class="math inline">\(0\)</span> y <span class="math inline">\(1_{A}\)</span>. (ii) Un anillo <span class="math inline">\(A\)</span> con identidad es un anillo con división si y solo si los elementos no nulos forman un grupo bajo la multiplicación. (iii) Todo cuerpo <span class="math inline">\(F\)</span> es un dominio de integridad ya que <span class="math inline">\(ab=0\)</span> y <span class="math inline">\(a\neq 0\)</span> implica que <span class="math inline">\(b=1_{F}b=(a^{-1}a)b=a^{-1}(ab)=a^{-1}0=0\)</span>.</p>
 </div>
 
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-146" class="example"><strong>Ejemplo 1.35  </strong></span> El conjunto de los números enteros es un anillo, más aun, es un dominio de integridad. El conjunto de los enteros pares es un anillo commutativo sin identidad. Los conjuntos de los números racionales, <span class="math inline">\(\mathbb{Q}\)</span>, de los números reales <span class="math inline">\(\mathbb{R}\)</span> y de los números complejos <span class="math inline">\(\mathbb{C}\)</span> con las operaciones usuales de suma y multiplicación, son cuerpos.</p>
+</div>
+
+
+<div class="remark">
+<p> <span class="remark"><em>Nota. </em></span>  Las matrices sobre <span class="math inline">\(\mathbb{Q}\)</span> (o sobre <span class="math inline">\(\mathbb{R}\)</span> o <span class="math inline">\(\mathbb{C}\)</span>) con las operaciones suma y multiplicación de matrices, forman una anillos no commutativo con identidad. (más adelante se estudiará este tema).</p>
+</div>
+
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-148" class="example"><strong>Ejemplo 1.36  </strong></span> Dados <span class="math inline">\(n\in \mathbb{Z}\)</span> positivo, el conjunto de los enteros módulo <span class="math inline">\(n\)</span>, <span class="math inline">\(\mathbb{Z}_{n}\)</span>, con las operaciones usuales, es un anillo. Si <span class="math inline">\(n\)</span> no es un número primo, entonces <span class="math inline">\(n=kr\)</span> para enteros <span class="math inline">\(k&gt;1\)</span> y <span class="math inline">\(r&gt;1\)</span>, por lo tanto <span class="math inline">\([k]\neq [0]\)</span>, <span class="math inline">\([r]\neq [0]\)</span> y <span class="math inline">\([k][r]=[n]=[0]\)</span>, entonces <span class="math inline">\([k]\)</span> y <span class="math inline">\([r]\)</span> son divisores de cero. Si <span class="math inline">\(n=p\)</span> es un número primo, entonces <span class="math inline">\(\mathbb{Z}_{p}\)</span> es un cuerpo.</p>
+</div>
+
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-149" class="example"><strong>Ejemplo 1.37  </strong></span> Sea <span class="math inline">\(G\)</span> un grupo abeliano. Sea <span class="math inline">\(End(G)\)</span> el conjunto de endomorfismos de <span class="math inline">\(f:G\longrightarrow G\)</span>. Definimos la suma en <span class="math inline">\(End(G)\)</span> como <span class="math inline">\((f+g)(a)=f(a)+g(a)\)</span>, para todo <span class="math inline">\(f,g\in End(G)\)</span>. Se verifica que <span class="math inline">\(f+g\in End(G)\)</span>. De este modo <span class="math inline">\(End(G)\)</span> es un grupo abeliano. Si definimos la multiplicación en <span class="math inline">\(End(G)\)</span> como la composición de funciones, <span class="math inline">\((f\circ g)(a)=f(g(a))\)</span> para todo <span class="math inline">\(f,g\in End(G)\)</span>; claramente <span class="math inline">\(f\circ g\in End(G)\)</span>. Con estas dos operaciones, <span class="math inline">\(End(G)\)</span> es un anillos con identidad <span class="math inline">\(I_{G}:G\longrightarrow G\)</span>, <span class="math inline">\(I_{G}(a)=a\)</span> (no necesariamente commutativo).</p>
+</div>
+
+
+<div class="example">
+<span id="exm:unnamed-chunk-150" class="example"><strong>Ejemplo 1.38  </strong></span> Los <strong>cuaterniones</strong> (o <strong>cuaternios</strong>): Sea el conjunto <span class="math inline">\(\mathcal{Q}\)</span> de elementos de la forma <span class="math inline">\(\alpha=a_{0}+a_{1}i+a_{2}j+a_{3}k\)</span>, con <span class="math inline">\(a_{0}, a_{1}, a_{2}, a_{3}\in \mathbb{R}\)</span>, definimos a las operaciones: (1) <em>Suma</em> definida por
+<span class="math display">\[\begin{equation*}
+        \begin{split}
+            \alpha+\beta&amp;=(a_{0}+a_{1}i+a_{2}j+a_{3}k)+(b_{0}+b_{1}i+b_{2}j+b_{3}k)\\
+            &amp;=(a_{0}+b_{0})+(a_{1}+b_{1})i+(a_{2}+b_{2})j+(a_{3}+b_{3})k
+        \end{split}
+        \end{equation*}\]</span>
+<ol start="2" style="list-style-type: decimal">
+<li><em>Multiplicación</em> definada por
+<span class="math display">\[\begin{equation*}
+        \begin{split}
+        \alpha\beta &amp; =(a_{0}+a_{1}i+a_{2}j+a_{3}k)(b_{0}+b_{1}i+b_{2}j+b_{3}k)\\
+        &amp;=(a_{1}b_{1}-a_{2}b_{2}-a_{3}b_{3}-a_{4}b_{4})+(a_{1}b_{2}+a_{2}b_{1}+a_{3}b_{4}-a_{4}b_{3})i\\
+        &amp;+(a_{1}b_{3}-a_{2}b_{4}+a_{3}b_{1}+a_{4}b_{2})j+(a_{1}b_{4}+a_{2}b_{3}-a_{3}b_{2}+a_{4}b_{1})k
+        \end{split}
+    \end{equation*}\]</span>
+<p>La multiplicación se puede hacer mediante la propiedad distributiva y usando las siguientes reglas:</p>
+<pre><code>    (1) $i^{2}=j^{2}=k^{2}=ijk=-1$;
+    (2) $ij=-ji=k$;
+    (3) $jk=-kj=i$:
+    (4) $ki=-ik=j$.
+
+El conjunto de los elementos $\{\mbox{\textpm} 1,\mbox{\textpm} i, \mbox{\textpm} j,\mbox{\textpm} k \}$ forman un grupo no abeliano  de orden 8 con la multiplicación.
+El conjunto $\mathcal{Q}$ junto a las operaciones suma y multiplicación antes definidas forman un anillos no commutativo con división, donde el elemento cero (nulo para la suma) es $0+0i+0j+0k$, la unidad es $1+0i+0j+0k$ y el inverso multiplicativo de un elemnto no nulo $\alpha=a_{0}+a_{1}i+a_{2}j+a_{3}k$ es $(a_{0}/d)+(a_{1}/d)i+(a_{2}/d)j+(a_{3}/d)k$ con $d=a_{0}^{2}+a_{1}^{2}+a_{2}^{2}+a_{3}^{2}$.</code></pre></li>
+</ol>
+</div>
+
+<p>Nóte que los elemento de un anillo <span class="math inline">\(A\)</span> bajo la operación de multiplicación, forman un semigrupo y si <span class="math inline">\(A\)</span> tiene unidad, forma un monoide. Por lo tanto puede definirse la potenciación. Para cada <span class="math inline">\(a\in A\)</span> y <span class="math inline">\(n\in\mathbb{N}\)</span> no nulo, <span class="math inline">\(a^{n}=a\cdots a\)</span> (<span class="math inline">\(n\)</span> factores) y <span class="math inline">\(a^{0}=1_{A}\)</span> si <span class="math inline">\(A\)</span> tiene identidad. Además <span class="math inline">\(a^{m}a^{n}=a^{m+n}\)</span> y <span class="math inline">\((a^{m})^{n}=a^{mn}\)</span>.</p>
 <div id="ejercicios-2" class="section level3">
 <h3><span class="header-section-number">1.6.1</span> Ejercicios</h3>
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-146" class="exercise"><strong>Ejercicio 1.11  </strong></span>Complete los detalles de la demostración de las partes (4) y (5) del teorema @ref{thm:teorema61}. Repuesta: (4) Obviamente la proposición es cierta si <span class="math inline">\(n=1\)</span>. Supongamos que <span class="math inline">\((ka)b=a(kb)\)</span> para todo <span class="math inline">\(k\leq n\)</span>, <span class="math inline">\(((k+1)a)b=((ka)+a)b=((ka)b+ab)=(a(kb)+ab)=a((kb)+b)=a((k+1)b)\)</span>. (5) De lo anterior tenemos que <span class="math inline">\((\sum_{i=1}^{n} a_{i})b=\sum_{i=1}^{n}a_{i}b\)</span> para todo <span class="math inline">\(a_{i},b\in A\)</span>. Haremos inducción sobre <span class="math inline">\(m\)</span>. Claramente la proposición es cierta para <span class="math inline">\(m=1\)</span>. Supongamos <span class="math inline">\((\sum_{i=1}^{n} a_{i})(\sum_{j=1}^{k}b_{j})=\sum_{i=1}^{n}\sum_{j=1}^{k}a_{i}b_{j}\)</span> para todo <span class="math inline">\(k\leq m\)</span>.
+<span id="exr:unnamed-chunk-151" class="exercise"><strong>Ejercicio 1.11  </strong></span>Complete los detalles de la demostración de las partes (4) y (5) del teorema @ref{thm:teorema61}. Repuesta: (4) Obviamente la proposición es cierta si <span class="math inline">\(n=1\)</span>. Supongamos que <span class="math inline">\((ka)b=a(kb)\)</span> para todo <span class="math inline">\(k\leq n\)</span>, <span class="math inline">\(((k+1)a)b=((ka)+a)b=((ka)b+ab)=(a(kb)+ab)=a((kb)+b)=a((k+1)b)\)</span>. (5) De lo anterior tenemos que <span class="math inline">\((\sum_{i=1}^{n} a_{i})b=\sum_{i=1}^{n}a_{i}b\)</span> para todo <span class="math inline">\(a_{i},b\in A\)</span>. Haremos inducción sobre <span class="math inline">\(m\)</span>. Claramente la proposición es cierta para <span class="math inline">\(m=1\)</span>. Supongamos <span class="math inline">\((\sum_{i=1}^{n} a_{i})(\sum_{j=1}^{k}b_{j})=\sum_{i=1}^{n}\sum_{j=1}^{k}a_{i}b_{j}\)</span> para todo <span class="math inline">\(k\leq m\)</span>.
 <span class="math display">\[\begin{equation} 
     \begin{split}
     (\sum_{i=1}^{n} a_{i})(\sum_{j=1}^{k+1}b_{j}) &amp; = (\sum_{i=1}^{n} a_{i})(\sum_{j=1}^{k}b_{j}+b_{k+1}) \\
@@ -1270,11 +1317,16 @@ Si adicionalmente se tiene que:
 </div>
  
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-147" class="exercise"><strong>Ejercicio 1.12  </strong></span>Sea <span class="math inline">\(A\)</span> un anillo. Demuestre que en <span class="math inline">\(A\)</span> se cumples las leyes de cancelación izquierda y derecha si y solo si <span class="math inline">\(A\)</span> no tiene divisores de cero. Respuesta: Supongamos que en <span class="math inline">\(A\)</span> se cumplen las leyes derechas e izquierdas de cancelación, sean <span class="math inline">\(a,b\in A\)</span>, tales que <span class="math inline">\(ab=0\)</span>, supongamos que <span class="math inline">\(a\neq 0\)</span>, entonces <span class="math inline">\(ab=0=a0=0b\)</span> por lo tanto <span class="math inline">\(b=0\)</span> (o <span class="math inline">\(a=0\)</span>). Por lo tanto <span class="math inline">\(A\)</span> no tiene divisores de cero. Inversamente, supongamos que <span class="math inline">\(A\)</span> no tiene divisores de cero. Sean <span class="math inline">\(a,b,c\in A\)</span>, supongamos que <span class="math inline">\(a\neq o\)</span>. Si <span class="math inline">\(ab=ac\)</span>, entonces <span class="math inline">\(a(b-c)=ab-ac=0\)</span>, por lo tanto <span class="math inline">\(b=c\)</span>. Análogamente se demuestra la ley de cancelación derecha.</p>
+<p><span id="exr:unnamed-chunk-152" class="exercise"><strong>Ejercicio 1.12  </strong></span>Sea <span class="math inline">\(A\)</span> un anillo. Demuestre que en <span class="math inline">\(A\)</span> se cumples las leyes de cancelación izquierda y derecha si y solo si <span class="math inline">\(A\)</span> no tiene divisores de cero. Respuesta: Supongamos que en <span class="math inline">\(A\)</span> se cumplen las leyes derechas e izquierdas de cancelación, sean <span class="math inline">\(a,b\in A\)</span>, tales que <span class="math inline">\(ab=0\)</span>, supongamos que <span class="math inline">\(a\neq 0\)</span>, entonces <span class="math inline">\(ab=0=a0=0b\)</span> por lo tanto <span class="math inline">\(b=0\)</span> (o <span class="math inline">\(a=0\)</span>). Por lo tanto <span class="math inline">\(A\)</span> no tiene divisores de cero. Inversamente, supongamos que <span class="math inline">\(A\)</span> no tiene divisores de cero. Sean <span class="math inline">\(a,b,c\in A\)</span>, supongamos que <span class="math inline">\(a\neq o\)</span>. Si <span class="math inline">\(ab=ac\)</span>, entonces <span class="math inline">\(a(b-c)=ab-ac=0\)</span>, por lo tanto <span class="math inline">\(b=c\)</span>. Análogamente se demuestra la ley de cancelación derecha.</p>
+</div>
+
+
+<div class="exercise">
+<span id="exr:unnamed-chunk-153" class="exercise"><strong>Ejercicio 1.13  </strong></span>Sea <span class="math inline">\(A\)</span> un anillo con identidad y sea <span class="math inline">\(C=\{a\in A: a \mbox{ una identidad de } A \}\)</span>. Demuestre que <span class="math inline">\(C\)</span> junto con la multiplicación (definida en el anillo <span class="math inline">\(A\)</span>) forman un grupo. Respuesta: Claramente el producto es asociativo, el elemento identidad existe y por definición de unidad, los elementos de <span class="math inline">\(C\)</span> tienen inverso.
 </div>
  
 <div class="exercise">
-<span id="exr:unnamed-chunk-148" class="exercise"><strong>Ejercicio 1.13  </strong></span>Sea <span class="math inline">\(A\)</span> un anillo con identidad y sea <span class="math inline">\(C=\{a\in A: a \mbox{ una identidad de } A \}\)</span>. Demuestre que <span class="math inline">\(C\)</span> junto con la multiplicación (definida en el anillo <span class="math inline">\(A\)</span>) forman un grupo. Respuesta: Claramente el producto es asociativo, el elemento identidad existe y por definición de unidad, los elementos de <span class="math inline">\(C\)</span> tienen inverso.
+<span id="exr:unnamed-chunk-154" class="exercise"><strong>Ejercicio 1.14  </strong></span>Si <span class="math inline">\(p\in \mathbb{Z}\)</span> es un número primo, demuestre que <span class="math inline">\(\mathbb{Z}_{p}\)</span> es un cuerpo. Respuesta: <span class="math inline">\(p\)</span> es primo si y solo si <span class="math inline">\((m,p)=1\)</span> si y solo si <span class="math inline">\([m]\)</span> tiene inverso.
 </div>
 
 </div>
