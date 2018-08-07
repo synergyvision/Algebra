@@ -1317,7 +1317,94 @@ En esta sección estudiaremos otro concepto fundamental para el álgebra, el con
 
 ```
 
-Nóte que los elemento de un anillo $A$ bajo la operación de multiplicación, forman un semigrupo y si $A$ tiene unidad, forma un monoide. Por lo tanto puede definirse la potenciación. Para cada $a\in A$ y $n\in\mathbb{N}$ no nulo, $a^{n}=a\cdots a$ ($n$ factores) y $a^{0}=1_{A}$ si $A$ tiene identidad. Además $a^{m}a^{n}=a^{m+n}$ y $(a^{m})^{n}=a^{mn}$. 
+Nóte que los elemento de un anillo $A$ bajo la operación de multiplicación, forman un semigrupo y si $A$ tiene unidad, forman un monoide. Por lo tanto puede definirse la potenciación. Para cada $a\in A$ y $n\in\mathbb{N}$ no nulo, $a^{n}=a\cdots a$ ($n$ factores) y $a^{0}=1_{A}$ si $A$ tiene identidad. Además $a^{m}a^{n}=a^{m+n}$ y $(a^{m})^{n}=a^{mn}$.La resta en un anillo $A$ está definida como de la menera usual, $a-b=a+(-b)$, por lo tanto $a(b-c)=ab-ac$ y $(a+b)c=ac+bc$ para cualesquiera $a,b,c\in A$.
+
+```{definition}
+	Una aplicación $\phi$ de un anillo $A$ en un anillo $A´$ se dice que es un **homomorfismo** si:
+    (1) $\phi(a+b)=\phi(a)+\phi(b)$,
+		(2) $\phi(ab)=\phi(a)\phi(b)$.
+	
+	para cualesquiera $a,b\in A$.
+	Si la función $\phi$ es inyectiva, diremos que es un **isomorfismo**. en este caso se dice que los anillos $A$ y $A´$ son **isomorfos**.
+
+```
+Note que tal homomorfismo de anillos es un homormorfismo de grupos considerando $A$ como un grupo bajo la suma, por lo tanto todos los resultados para homomorfismo de grupos se aplican a los homomorfismo de anillos. En particular,
+
+```{theorem}
+	Si $\phi$ es un homomorfismo de anillos de $A$ en $A´$, entonces:
+	
+		(1) $\phi(0)=0$.
+		(2) $\phi(-a)=-\phi(a)$, para todo $a\in A$.
+	
+```
+
+```{remark}
+	Si los anillos $A$ y $A´$ tienen unidades $1_{A}$ y $1_{A´}$, no se tiene en general que $\phi(1_{A})=1_{A´}$. Pero si $A´$ es un dominio de integridad se tiene que $\phi(1_{A})=1_{A´}$. También, si $A´$ es cualquier anillo y $\phi$ es sobreyectiva, entonces $\phi(1_{A})=1_{A´}$. 
+
+```
+
+```{definition}
+	Si $\phi$ es un homomorfismo de anillos de $A$ en $A´$, el **núcleo** de $\phi$ es el conjunto $\{a\in A: \phi(a)=0 \mbox{ el elemento nulo de } A´\}$ y se denota $I(\phi)$.
+
+```
+
+```{lemma}
+	Si $\phi$ es un homomorfismo de anillo de $A$ en $A´$ con núcleo $I(\phi)$, entonces:
+	
+		(1) $I(\phi)$ es un subgrupo de $A$ bajo la suma.
+		(2) Si $r\in I(\phi)$ y $a\in A$, entonces $ra, ar\in I(\phi)$.
+	
+```
+```{proof}
+	La parte (1) se sigue de los resultados de homomorfismo de grupo. 
+	Veamos (2), sean $r\in I(\phi)$ y $a\in A$, entonces $\phi(ra)=\phi(r)\phi(a)=0\phi(a)=0$, por lo tanto $ra\in I(\phi)$. Análogamente se tiene que $ar\in I(\phi)$.
+
+```
+
+```{example}
+	Sea $\phi:A\longrightarrow A´$, donde $\phi(a)=0$ para todo $a\in A$. Claramente $\phi$ es un homomorfismo (de anillos) y $I(\phi)=A$. A tal función se le llama **homomorfismo cero**.
+
+```
+
+```{example}
+	Dada la función $\phi: A\longrightarrow A$, definida por $\phi(a)=a$ para todo $a\in A$. Es claramente un homomorfismo de anillos y su núcleo está formado por el cero $0$.
+	En general, a un homomorfismo de $A$ en si mismo se le llama **automorfismo** (al igual que en los grupos). 
+
+```
+
+```{example}
+	Sea $J(\sqrt{2})$ el conjunto de todos los números de la forma $m+n\sqrt{2}$, con $n,m\in\mathbb{Z}$. Verifique que $J(\sqrt{2})$ forman un anillo bajo la suma y la multiplicación usuales de los números reales. Definamos $\phi:J(\sqrt{2})\longrightarrow J(\sqrt{2})$ definida por $\phi(m+n\sqrt{2})=m-n\sqrt{2}$. $\phi$ es un homomorfismo de anillo y su núcleo solo contiene al elemento cero.
+
+```
+
+```{example}
+	La función canónica $\mathbb{Z}\longrightarrow \mathbb{Z}_{m}$ dada por $k\mapsto [k]$ es un **epimorfismo de anillo**, esto es un homomorfismo sobreyectivo.
+
+```
+
+Así como el lema anterios se obtiene directamente de los resultados de grupo, el teorema que sigue es la traduccción natural del correspondiente a la teoría de grupo, razón por la cual lo presentaremos sin demostración.
+
+```{theorem}
+	El homomorfismo $\phi$ de anillos de $A$ en $A´$ es un isomorfismo si y solo si $I(\phi)=\{0\}$.
+
+```
+
+```{definition}
+	Un subconjunto no vacío $I$ de $A$ se dice que es un ideal (bilateral) de $A$ si:
+
+		(1) $I$ es un subgrupo de $A$ bajo la suma.
+		(2) Para todo $u\in I$ y $a\in A$, tanto $ua$ como $au$ pertenecen a $I$.
+	
+```
+
+```{lemma}
+	Si $I$ es un ideal de un anillo $A$, entonces $A/I$ es un anillo y es una imagen homomorfa de $A$.
+
+```
+```{proof}
+	Recordemos que los elementos de $A/I$ son las clases laterales $a+I$, con $a\in A$, la suma está definida como $(a+I)+(b+I)=(a+b)+I$ y la multiplicación $(a+I)(b+I)= (ab)+I$ (ya demostramos que están bien definidas). Ver que $A/I$ es un anillo basta probar los axiomas que corresponden a la operación de multiplicación (para la suma ya lo demostramos antes). Se puede verificar fácilemente la propiedad asociativa, ya que $((a+I)(b+I))(c+I)=(((ab)c)+I)=((a(bc))+I)=(a+I)((bc)+I)$. La propiedad distributiva es igualmente sencilla, $(a+I)((b+I)+(c+I))=(a(b+c))+I=(ab+ac)+I=(ab+I)+(ac+I)=((a+I)(b+I))+((a+I)(c+I))$. Considerando la función que a cada $a$ le asigna $a+I$, por la definición de las operaciones se sigue que dicha función es un homomorfismo cuyo núcleo es exactamente $I$.
+
+```
 
 ### Ejercicios
 

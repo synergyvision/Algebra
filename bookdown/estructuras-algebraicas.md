@@ -967,11 +967,70 @@ En esta sección estudiaremos otro concepto fundamental para el álgebra, el con
 		El conjunto $\mathcal{Q}$ junto a las operaciones suma y multiplicación antes definidas forman un anillos no commutativo con división, donde el elemento cero (nulo para la suma) es $0+0i+0j+0k$, la unidad es $1+0i+0j+0k$ y el inverso multiplicativo de un elemnto no nulo $\alpha=a_{0}+a_{1}i+a_{2}j+a_{3}k$ es $(a_{0}/d)+(a_{1}/d)i+(a_{2}/d)j+(a_{3}/d)k$ con $d=a_{0}^{2}+a_{1}^{2}+a_{2}^{2}+a_{3}^{2}$.
 </div>\EndKnitrBlock{example}
 
-Nóte que los elemento de un anillo $A$ bajo la operación de multiplicación, forman un semigrupo y si $A$ tiene unidad, forma un monoide. Por lo tanto puede definirse la potenciación. Para cada $a\in A$ y $n\in\mathbb{N}$ no nulo, $a^{n}=a\cdots a$ ($n$ factores) y $a^{0}=1_{A}$ si $A$ tiene identidad. Además $a^{m}a^{n}=a^{m+n}$ y $(a^{m})^{n}=a^{mn}$. 
+Nóte que los elemento de un anillo $A$ bajo la operación de multiplicación, forman un semigrupo y si $A$ tiene unidad, forman un monoide. Por lo tanto puede definirse la potenciación. Para cada $a\in A$ y $n\in\mathbb{N}$ no nulo, $a^{n}=a\cdots a$ ($n$ factores) y $a^{0}=1_{A}$ si $A$ tiene identidad. Además $a^{m}a^{n}=a^{m+n}$ y $(a^{m})^{n}=a^{mn}$.La resta en un anillo $A$ está definida como de la menera usual, $a-b=a+(-b)$, por lo tanto $a(b-c)=ab-ac$ y $(a+b)c=ac+bc$ para cualesquiera $a,b,c\in A$.
+
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-151"><strong>(\#def:unnamed-chunk-151) </strong></span>	Una aplicación $\phi$ de un anillo $A$ en un anillo $A´$ se dice que es un **homomorfismo** si:
+    (1) $\phi(a+b)=\phi(a)+\phi(b)$,
+		(2) $\phi(ab)=\phi(a)\phi(b)$.
+	
+	para cualesquiera $a,b\in A$.
+	Si la función $\phi$ es inyectiva, diremos que es un **isomorfismo**. en este caso se dice que los anillos $A$ y $A´$ son **isomorfos**.
+</div>\EndKnitrBlock{definition}
+Note que tal homomorfismo de anillos es un homormorfismo de grupos considerando $A$ como un grupo bajo la suma, por lo tanto todos los resultados para homomorfismo de grupos se aplican a los homomorfismo de anillos. En particular,
+
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-152"><strong>(\#thm:unnamed-chunk-152) </strong></span>	Si $\phi$ es un homomorfismo de anillos de $A$ en $A´$, entonces:
+	
+		(1) $\phi(0)=0$.
+		(2) $\phi(-a)=-\phi(a)$, para todo $a\in A$.
+	</div>\EndKnitrBlock{theorem}
+
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	Si los anillos $A$ y $A´$ tienen unidades $1_{A}$ y $1_{A´}$, no se tiene en general que $\phi(1_{A})=1_{A´}$. Pero si $A´$ es un dominio de integridad se tiene que $\phi(1_{A})=1_{A´}$. También, si $A´$ es cualquier anillo y $\phi$ es sobreyectiva, entonces $\phi(1_{A})=1_{A´}$. 
+</div>\EndKnitrBlock{remark}
+
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-154"><strong>(\#def:unnamed-chunk-154) </strong></span>	Si $\phi$ es un homomorfismo de anillos de $A$ en $A´$, el **núcleo** de $\phi$ es el conjunto $\{a\in A: \phi(a)=0 \mbox{ el elemento nulo de } A´\}$ y se denota $I(\phi)$.
+</div>\EndKnitrBlock{definition}
+
+\BeginKnitrBlock{lemma}<div class="lemma"><span class="lemma" id="lem:unnamed-chunk-155"><strong>(\#lem:unnamed-chunk-155) </strong></span>	Si $\phi$ es un homomorfismo de anillo de $A$ en $A´$ con núcleo $I(\phi)$, entonces:
+	
+		(1) $I(\phi)$ es un subgrupo de $A$ bajo la suma.
+		(2) Si $r\in I(\phi)$ y $a\in A$, entonces $ra, ar\in I(\phi)$.
+	</div>\EndKnitrBlock{lemma}
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	La parte (1) se sigue de los resultados de homomorfismo de grupo. 
+	Veamos (2), sean $r\in I(\phi)$ y $a\in A$, entonces $\phi(ra)=\phi(r)\phi(a)=0\phi(a)=0$, por lo tanto $ra\in I(\phi)$. Análogamente se tiene que $ar\in I(\phi)$.
+</div>\EndKnitrBlock{proof}
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-157"><strong>(\#exm:unnamed-chunk-157) </strong></span>	Sea $\phi:A\longrightarrow A´$, donde $\phi(a)=0$ para todo $a\in A$. Claramente $\phi$ es un homomorfismo (de anillos) y $I(\phi)=A$. A tal función se le llama **homomorfismo cero**.
+</div>\EndKnitrBlock{example}
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-158"><strong>(\#exm:unnamed-chunk-158) </strong></span>	Dada la función $\phi: A\longrightarrow A$, definida por $\phi(a)=a$ para todo $a\in A$. Es claramente un homomorfismo de anillos y su núcleo está formado por el cero $0$.
+	En general, a un homomorfismo de $A$ en si mismo se le llama **automorfismo** (al igual que en los grupos). 
+</div>\EndKnitrBlock{example}
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-159"><strong>(\#exm:unnamed-chunk-159) </strong></span>	Sea $J(\sqrt{2})$ el conjunto de todos los números de la forma $m+n\sqrt{2}$, con $n,m\in\mathbb{Z}$. Verifique que $J(\sqrt{2})$ forman un anillo bajo la suma y la multiplicación usuales de los números reales. Definamos $\phi:J(\sqrt{2})\longrightarrow J(\sqrt{2})$ definida por $\phi(m+n\sqrt{2})=m-n\sqrt{2}$. $\phi$ es un homomorfismo de anillo y su núcleo solo contiene al elemento cero.
+</div>\EndKnitrBlock{example}
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-160"><strong>(\#exm:unnamed-chunk-160) </strong></span>	La función canónica $\mathbb{Z}\longrightarrow \mathbb{Z}_{m}$ dada por $k\mapsto [k]$ es un **epimorfismo de anillo**, esto es un homomorfismo sobreyectivo.
+</div>\EndKnitrBlock{example}
+
+Así como el lema anterios se obtiene directamente de los resultados de grupo, el teorema que sigue es la traduccción natural del correspondiente a la teoría de grupo, razón por la cual lo presentaremos sin demostración.
+
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-161"><strong>(\#thm:unnamed-chunk-161) </strong></span>	El homomorfismo $\phi$ de anillos de $A$ en $A´$ es un isomorfismo si y solo si $I(\phi)=\{0\}$.
+</div>\EndKnitrBlock{theorem}
+
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-162"><strong>(\#def:unnamed-chunk-162) </strong></span>	Un subconjunto no vacío $I$ de $A$ se dice que es un ideal (bilateral) de $A$ si:
+
+		(1) $I$ es un subgrupo de $A$ bajo la suma.
+		(2) Para todo $u\in I$ y $a\in A$, tanto $ua$ como $au$ pertenecen a $I$.
+	</div>\EndKnitrBlock{definition}
+
+\BeginKnitrBlock{lemma}<div class="lemma"><span class="lemma" id="lem:unnamed-chunk-163"><strong>(\#lem:unnamed-chunk-163) </strong></span>	Si $I$ es un ideal de un anillo $A$, entonces $A/I$ es un anillo y es una imagen homomorfa de $A$.
+</div>\EndKnitrBlock{lemma}
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Recordemos que los elementos de $A/I$ son las clases laterales $a+I$, con $a\in A$, la suma está definida como $(a+I)+(b+I)=(a+b)+I$ y la multiplicación $(a+I)(b+I)= (ab)+I$ (ya demostramos que están bien definidas). Ver que $A/I$ es un anillo basta probar los axiomas que corresponden a la operación de multiplicación (para la suma ya lo demostramos antes). Se puede verificar fácilemente la propiedad asociativa, ya que $((a+I)(b+I))(c+I)=(((ab)c)+I)=((a(bc))+I)=(a+I)((bc)+I)$. La propiedad distributiva es igualmente sencilla, $(a+I)((b+I)+(c+I))=(a(b+c))+I=(ab+ac)+I=(ab+I)+(ac+I)=((a+I)(b+I))+((a+I)(c+I))$. Considerando la función que a cada $a$ le asigna $a+I$, por la definición de las operaciones se sigue que dicha función es un homomorfismo cuyo núcleo es exactamente $I$.
+</div>\EndKnitrBlock{proof}
 
 ### Ejercicios
 
-\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-151"><strong>(\#exr:unnamed-chunk-151) </strong></span>Complete los detalles de la demostración de las partes (4) y (5) del teorema \@ref{thm:teorema61}.
+\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-165"><strong>(\#exr:unnamed-chunk-165) </strong></span>Complete los detalles de la demostración de las partes (4) y (5) del teorema \@ref{thm:teorema61}.
 	Repuesta: (4) Obviamente la proposición es cierta si $n=1$. Supongamos que $(ka)b=a(kb)$ para todo $k\leq n$, $((k+1)a)b=((ka)+a)b=((ka)b+ab)=(a(kb)+ab)=a((kb)+b)=a((k+1)b)$. (5) De lo anterior tenemos que $(\sum_{i=1}^{n} a_{i})b=\sum_{i=1}^{n}a_{i}b$ para todo $a_{i},b\in A$. Haremos inducción sobre $m$. Claramente la proposición es cierta para $m=1$. Supongamos $(\sum_{i=1}^{n} a_{i})(\sum_{j=1}^{k}b_{j})=\sum_{i=1}^{n}\sum_{j=1}^{k}a_{i}b_{j}$ para todo $k\leq m$. 
 	\begin{equation} 
 	\begin{split}
@@ -983,13 +1042,13 @@ Nóte que los elemento de un anillo $A$ bajo la operación de multiplicación, f
 	\end{split}
 	\end{equation}
 	</div>\EndKnitrBlock{exercise}
-\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-152"><strong>(\#exr:unnamed-chunk-152) </strong></span>Sea $A$ un anillo. Demuestre que en $A$ se cumples las leyes de cancelación izquierda y derecha si y solo si $A$ no tiene divisores de cero.
+\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-166"><strong>(\#exr:unnamed-chunk-166) </strong></span>Sea $A$ un anillo. Demuestre que en $A$ se cumples las leyes de cancelación izquierda y derecha si y solo si $A$ no tiene divisores de cero.
 	Respuesta: Supongamos que en $A$ se cumplen las leyes derechas e izquierdas de cancelación, sean $a,b\in A$, tales que $ab=0$, supongamos que $a\neq 0$, entonces $ab=0=a0=0b$ por lo tanto $b=0$ (o $a=0$). Por lo tanto $A$ no tiene divisores de cero. Inversamente, supongamos que $A$ no tiene divisores de cero. Sean $a,b,c\in A$, supongamos que $a\neq o$. Si $ab=ac$, entonces $a(b-c)=ab-ac=0$, por lo tanto $b=c$. Análogamente se demuestra la ley de cancelación derecha.
 </div>\EndKnitrBlock{exercise}
 
-\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-153"><strong>(\#exr:unnamed-chunk-153) </strong></span>Sea $A$ un anillo con identidad y sea $C=\{a\in A: a \mbox{ una identidad de } A \}$. Demuestre que $C$ junto con la multiplicación (definida en el anillo $A$) forman un grupo.
+\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-167"><strong>(\#exr:unnamed-chunk-167) </strong></span>Sea $A$ un anillo con identidad y sea $C=\{a\in A: a \mbox{ una identidad de } A \}$. Demuestre que $C$ junto con la multiplicación (definida en el anillo $A$) forman un grupo.
 	Respuesta: Claramente el producto es asociativo, el elemento identidad existe y por definición de unidad, los elementos de $C$ tienen inverso.
 	</div>\EndKnitrBlock{exercise}
-\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-154"><strong>(\#exr:unnamed-chunk-154) </strong></span>Si $p\in \mathbb{Z}$ es un número primo, demuestre que $\mathbb{Z}_{p}$ es un cuerpo.
+\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-168"><strong>(\#exr:unnamed-chunk-168) </strong></span>Si $p\in \mathbb{Z}$ es un número primo, demuestre que $\mathbb{Z}_{p}$ es un cuerpo.
 	Respuesta: $p$ es primo si y solo si $(m,p)=1$ si y solo si $[m]$ tiene inverso.
 	</div>\EndKnitrBlock{exercise}
