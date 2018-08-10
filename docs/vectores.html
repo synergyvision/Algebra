@@ -25,7 +25,7 @@
 <meta name="author" content="Synergy Vision">
 
 
-<meta name="date" content="2018-08-07">
+<meta name="date" content="2018-08-09">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -88,7 +88,7 @@ code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* Com
 code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 </style>
 
-<link rel="stylesheet" href="css/style.css" type="text/css" />
+<link rel="stylesheet" href="css\style.css" type="text/css" />
 </head>
 
 <body>
@@ -167,6 +167,22 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
             <section class="normal" id="section-">
 <div id="vectores" class="section level1">
 <h1><span class="header-section-number">Capítulo 3</span> Vectores</h1>
+<p>En este capítulo estudiaremos los vectores, objetos muy usados en la física para representar distintas nociones en las que se deben representar magnitudes y direcciones y orientación, como lo son el desplazamiento, la velocidad, la fuerza, etc. Sin embargo, se puden definir los vectores desde una perspectiva más abstracta, como los elementos de un espacio vectorial. En este capítulo nos centraremos en la noción más natural (la noción física) para desrrollar y mostrar las propiedades y operaciones de los vectores, usando principalmente los vectores en espacios euclideanos.</p>
+
+<div class="definition">
+<span id="def:unnamed-chunk-176" class="definition"><strong>Definición 3.1  </strong></span> Un <strong>vector</strong> <span class="math inline">\(v\)</span> en <span class="math inline">\(\mathbb{R}^{n}\)</span> de dimensión <span class="math inline">\(n\)</span> es una n-tupla de <span class="math inline">\(n\)</span> números reales, de la forma <span class="math inline">\(v=(a_{1}, a_{2},\cdots, a_{n})\)</span>. Llamaremos componente <span class="math inline">\(i-\)</span>ésima al número <span class="math inline">\(a_{i}\)</span> (<span class="math inline">\(1\leq i\leq n\)</span>).
+</div>
+
+
+<div class="remark">
+<p> <span class="remark"><em>Nota. </em></span>  Los vectores en <span class="math inline">\(\mathbb{R}^{2}\)</span> pueden representarse como un segmento de recta dirigido (una flecha) determinado por dos puntos en el espacio, <span class="math inline">\(A\)</span> de coordenadas <span class="math inline">\((x_{A},y_{A})\)</span> y <span class="math inline">\(B\)</span> de coordenadas <span class="math inline">\((x_{B},y_{B})\)</span>, en los que uno es el origen del vector y el otro el extremo, en este caso se denota <span class="math inline">\(\vec{AB}\)</span> y sus coordenadas en el plano serían <span class="math inline">\(\vec{AB}=(x_{B}-x_{A}, y_{B}-y_{A})\)</span>. también se puede denotar el vector con una letra minúscula <span class="math inline">\(v=\vec{AB}\)</span>. La recta por la que pasa el vector es la <strong>dirección</strong> del vector. La longitud del segmento de recta que define el vector (es decir, la flecha) es la <strong>magnitud</strong> del vector y se denota por <span class="math inline">\(|\vec{AB}|\)</span> (o <span class="math inline">\(|v|\)</span>). La <strong>orientación</strong> o <strong>sentido</strong> del vector representa el sentido en que se recorre el segmento de recta (determina hacia donde apunta la flecha), los vectores <span class="math inline">\(\vec{AB}\)</span> y <span class="math inline">\(\vec{BA}\)</span> tienen la misma magnitud, la misma dirección pero sentidos contarios. Las coordenadas de un vector describen un paralelogramo en el plano <span class="math inline">\(\mathbb{R}^{2}\)</span> en el que el vector es una de las diagonales (insertar imagen). Para el vector <span class="math inline">\(v\)</span> de coordenadas <span class="math inline">\((x,y)\)</span>, la magnitud puede calcularse usando el teorema de pitágoras, con <span class="math inline">\(|v|=\sqrt{x^{2}+Y^{2}}\)</span>; y el ángulo <span class="math inline">\(\theta\)</span>, que forma con el eje de las abscisas con <span class="math inline">\(\theta=\arctan(\frac{y}{x})\)</span></p>
+</div>
+
+
+<div class="definition">
+<p><span id="def:unnamed-chunk-178" class="definition"><strong>Definición 3.2  </strong></span> Dos <strong>vectores</strong> son <strong>paralelos</strong> si forman iguales ángulos con el eje de las abscisas. Es decir, <span class="math inline">\(v_{1}=(x_{1},y_{1})\)</span> y <span class="math inline">\(v_{2}=(x_{2},y_{2})\)</span> son paralelos si <span class="math inline">\(\theta_{1}=\arctan(\frac{y_{1}}{x_{2}})=\theta_{2}=\arctan(\frac{y_{2}}{x_{2}})\)</span>.</p>
+</div>
+
 
 </div>
 <script>
