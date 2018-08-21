@@ -67,7 +67,9 @@
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path=""><a href="#vectores"><i class="fa fa-check"></i><b>1</b> Vectores</a><ul>
 <li class="chapter" data-level="1.1" data-path=""><a href="#representacion-geometrica"><i class="fa fa-check"></i><b>1.1</b> Representación geométrica</a></li>
-<li class="chapter" data-level="1.2" data-path=""><a href="#operaciones-de-vectores"><i class="fa fa-check"></i><b>1.2</b> Operaciones de vectores</a></li>
+<li class="chapter" data-level="1.2" data-path=""><a href="#operaciones-vectoriales"><i class="fa fa-check"></i><b>1.2</b> Operaciones vectoriales</a><ul>
+<li class="chapter" data-level="1.2.1" data-path=""><a href="#producto-escalar-y-producto-vectorial"><i class="fa fa-check"></i><b>1.2.1</b> Producto escalar y producto vectorial</a></li>
+</ul></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://bookdown.org" target="blank">Publicado con bookdown</a></li>
@@ -103,36 +105,38 @@
 
 
 <div class="remark">
-<p> <span class="remark"><em>Nota. </em></span>  Los vectores en <span class="math inline">\(\mathbb{R}^{2}\)</span> pueden representarse como un segmento de recta dirigido (una flecha) determinado por dos puntos en el espacio, <span class="math inline">\(A\)</span> de coordenadas <span class="math inline">\((x_{A},y_{A})\)</span> y <span class="math inline">\(B\)</span> de coordenadas <span class="math inline">\((x_{B},y_{B})\)</span>, en los que uno es el origen del vector y el otro el extremo, en este caso se denota <span class="math inline">\(\vec{AB}\)</span> y sus coordenadas en el plano serían <span class="math inline">\(\vec{AB}=(x_{B}-x_{A}, y_{B}-y_{A})\)</span>. también se puede denotar el vector con una letra minúscula <span class="math inline">\(v=\vec{AB}\)</span>. La recta por la que pasa el vector es la <strong>dirección</strong> del vector.</p>
+<p> <span class="remark"><em>Nota. </em></span>  Nos centraremos en estuiar vectores en <span class="math inline">\(\mathbb{R}^{2}\)</span> o en <span class="math inline">\(\mathbb{R}^{3}\)</span>. Los vectores en <span class="math inline">\(\mathbb{R}^{2}\)</span> o en <span class="math inline">\(\mathbb{R}^{3}\)</span> pueden representarse como un segmento de recta dirigido (una flecha) determinado por dos puntos en el espacio, <span class="math inline">\(A\)</span> de coordenadas <span class="math inline">\((x_{A},y_{A})\)</span> y <span class="math inline">\(B\)</span> de coordenadas <span class="math inline">\((x_{B},y_{B})\)</span>, en los que uno es el origen del vector y el otro el extremo, en este caso se denota <span class="math inline">\(\vec{AB}\)</span> y sus coordenadas en el plano serían <span class="math inline">\(\vec{AB}=(x_{B}-x_{A}, y_{B}-y_{A})\)</span>. también se puede denotar el vector con una letra minúscula <span class="math inline">\(v=\vec{AB}\)</span>. La recta por la que pasa el vector es la <strong>dirección</strong> del vector.</p>
+</div>
+
+<p>La longitud del segmento de recta que define el vector (es decir, la flecha) es la <strong>magnitud</strong> del vector y se denota por <span class="math inline">\(|\vec{AB}|\)</span> (o <span class="math inline">\(|v|\)</span>). La <strong>dirección</strong> del vector corresponde a la inclinación de la recta sobre la cual está el vector, esto es el ángulo que forma el vector con la horizontal. La <strong>orientación</strong> o <strong>sentido</strong> del vector representa el sentido en que se recorre el segmento de recta (determina hacia donde apunta la flecha).</p>
+
+<div class="remark">
+<p> <span class="remark"><em>Nota. </em></span>  Los vectores <span class="math inline">\(\vec{AB}\)</span> y <span class="math inline">\(\vec{BA}\)</span> tienen la misma magnitud, la misma dirección pero sentidos contrarios, por lo que <span class="math inline">\(\vec{BA}=-\vec{AB}\)</span>. Las coordenadas de un vector describen un rectángulo en el plano <span class="math inline">\(\mathbb{R}^{2}\)</span> en el que el vector es una de las diagonales.</p>
 </div>
 
 
+
 <div class="definition">
-<p><span id="def:unnamed-chunk-3" class="definition"><strong>Definición 1.2  </strong></span> La longitud del segmento de recta que define el vector (es decir, la flecha) es la <strong>magnitud</strong> del vector y se denota por <span class="math inline">\(|\vec{AB}|\)</span> (o <span class="math inline">\(|v|\)</span>). La <strong>dirección</strong> del vector corresponde a la inclinación de la recta sobre la cual está el vector, esto es el ángulo que forma el vector con la horizontal. La <strong>orientación</strong> o <strong>sentido</strong> del vector representa el sentido en que se recorre el segmento de recta (determina hacia donde apunta la flecha).</p>
+<p><span id="def:unnamed-chunk-4" class="definition"><strong>Definición 1.2  </strong></span> Dado el vector <span class="math inline">\(v\)</span> de coordenadas <span class="math inline">\((x,y)\)</span>, <strong>la magnitud</strong> puede calcularse usando el teorema de pitágoras, con <span class="math inline">\(|v|=\sqrt{x^{2}+y^{2}}\)</span>, la dirección es el <strong>ángulo</strong> <span class="math inline">\(\theta\)</span> que forma con el eje de las abscisas y se calcula con <span class="math inline">\(\theta=\arctan(\frac{y}{x})\)</span>. El sentido es una noción referencial y se representan sentidos contrarios con los signos positivos (<span class="math inline">\(+\)</span>) y negativos (<span class="math inline">\(-\)</span>) (el signo <span class="math inline">\(+\)</span> suele omitirse)</p>
 </div>
 
 
 <div class="remark">
-<p> <span class="remark"><em>Nota. </em></span>  Los vectores <span class="math inline">\(\vec{AB}\)</span> y <span class="math inline">\(\vec{BA}\)</span> tienen la misma magnitud, la misma dirección pero sentidos contrarios, por lo que <span class="math inline">\(\vec{BA}=-\vec{AB}\)</span>. Los coordenadas de un vector describen un rectángulo en el plano <span class="math inline">\(\mathbb{R}^{2}\)</span> en el que el vector es una de las diagonales (insertar imagen).</p>
+<p> <span class="remark"><em>Nota. </em></span>  En general, la <strong>magnitud</strong> de un vector <span class="math inline">\(v\)</span> en <span class="math inline">\(\mathbb{R}^{n}\)</span> es <span class="math inline">\(|v|=\sqrt{\sum_{k=1}^{n}a_{k}^{2}}\)</span>.</p>
 </div>
 
 
 <div class="definition">
-<p><span id="def:unnamed-chunk-5" class="definition"><strong>Definición 1.3  </strong></span> Dado el vector <span class="math inline">\(v\)</span> de coordenadas <span class="math inline">\((x,y)\)</span>, la magnitud puede calcularse usando el teorema de pitágoras, con <span class="math inline">\(|v|=\sqrt{x^{2}+y^{2}}\)</span>; y el ángulo <span class="math inline">\(\theta\)</span> que forma con el eje de las abscisas con <span class="math inline">\(\theta=\arctan(\frac{y}{x})\)</span>. El sentido es una noción referencial y se representan sentidos contrarios con los signos positivos (<span class="math inline">\(+\)</span>) y negativos (<span class="math inline">\(-\)</span>) (el signo <span class="math inline">\(+\)</span> suele omitirse)</p>
+<p><span id="def:unnamed-chunk-6" class="definition"><strong>Definición 1.3  </strong></span> Dos <strong>vectores</strong> son <strong>paralelos</strong> si forman iguales ángulos con el eje de las abscisas. Es decir, <span class="math inline">\(v_{1}=(x_{1},y_{1})\)</span> y <span class="math inline">\(v_{2}=(x_{2},y_{2})\)</span> son paralelos si <span class="math inline">\(\theta_{1}=\arctan(\frac{y_{1}}{x_{2}})=\theta_{2}=\arctan(\frac{y_{2}}{x_{2}})\)</span>.</p>
 </div>
 
+</div>
+<div id="operaciones-vectoriales" class="section level2">
+<h2><span class="header-section-number">1.2</span> Operaciones vectoriales</h2>
+<p>Ya vimos que los vectores pueden representar conceptos físicos como lo son la distancia, la velocidad o la fuerza. Entonces es conveniente poder sumar estos objetos, para representar suma de distancias o suma de fuerzas, por ejemplo. También podemos pensar en multiplicar un vector por un escalar, como sería multiplicar la magnitud de una fuerza. En esta sección veremos que podemos definir varias operaciones entre vectores, sumar, restar y multiplicar vectores como lo hacemos con los números reales. Pero también definiremos operaciones propias de estos objetos, como lo son el producto punto y el producto cruz de vectores.</p>
 
 <div class="definition">
-<p><span id="def:unnamed-chunk-6" class="definition"><strong>Definición 1.4  </strong></span> Dos <strong>vectores</strong> son <strong>paralelos</strong> si forman iguales ángulos con el eje de las abscisas. Es decir, <span class="math inline">\(v_{1}=(x_{1},y_{1})\)</span> y <span class="math inline">\(v_{2}=(x_{2},y_{2})\)</span> son paralelos si <span class="math inline">\(\theta_{1}=\arctan(\frac{y_{1}}{x_{2}})=\theta_{2}=\arctan(\frac{y_{2}}{x_{2}})\)</span>.</p>
-</div>
-
-</div>
-<div id="operaciones-de-vectores" class="section level2">
-<h2><span class="header-section-number">1.2</span> Operaciones de vectores</h2>
-<p>Ya vimos que los que los vectores pueden representar conceptos físicos como lo son la distancia, la velocidad o la fuerza. Entonces es conveniente poder sumar estos objetos, para representar suma de distancias o suma de fuerzas, etc. También podemos pensar en multiplicar un vector por un escalar, como sería multiplicar la magnitud de una fuerza. En esta sección veremos que podemos definir varias operaciones entre vectores, sumar, restar y multiplicar vectores como lo hacemos con los números reales. Pero también definirimos operaciones propias de estos objetos, como lo son el producto punto y el producto cruz de vectores.</p>
-
-<div class="definition">
-<p><span id="def:unnamed-chunk-7" class="definition"><strong>Definición 1.5  </strong></span> Dados los vectores <span class="math inline">\(v_{1}=(x_{1},y_{1})\)</span> y <span class="math inline">\(v_{2}=(x_{2},y_{2})\)</span>, <strong>la suma</strong> de <span class="math inline">\(v_{1}\)</span> y <span class="math inline">\(v_{2}\)</span> está dada por la suma de las componentes correspondientes, es decir, <span class="math inline">\(v_{1}+v_{2}=(x_{1}+x_{2},y_{1}+y_{2})\)</span>.</p>
+<p><span id="def:unnamed-chunk-7" class="definition"><strong>Definición 1.4  </strong></span> Dados los vectores <span class="math inline">\(v_{1}=(x_{1},y_{1})\)</span> y <span class="math inline">\(v_{2}=(x_{2},y_{2})\)</span>, <strong>la suma</strong> de <span class="math inline">\(v_{1}\)</span> y <span class="math inline">\(v_{2}\)</span> está dada por la suma de las componentes correspondientes, es decir, <span class="math inline">\(v_{1}+v_{2}=(x_{1}+x_{2},y_{1}+y_{2})\)</span>. En general, la suma de dos vectores <span class="math inline">\(v=(a_{1}, a_{2},\cdots, a_{n})\)</span> y <span class="math inline">\(u=(b_{1}, b_{2},\cdots, b_{n})\)</span> en <span class="math inline">\(\mathbb{R}^{n}\)</span> se define como <span class="math inline">\(v+u=(a_{1}, a_{2},\cdots, a_{n})+(b_{1}, b_{2},\cdots, b_{n})=(a_{1}+b_{1},a_{2}+b_{2},\cdots a_{n}+b_{n})\)</span>.</p>
 </div>
 
 
@@ -141,57 +145,76 @@
 <pre><code>    (1) Es commutativa, es decir, $v_{1}+v_{2}=v_{2}+v_{1}$, para cuales quiera vectores $v_{1}, v_{2}$.
     (2) Es asociativa, esto es, $(v_{1}+v_{2})+v_{3}=v_{1}+(v_{2}+v_{3})$, para todo $v_{1}, v_{2}$ y $v_{3}$.
     (3) Existencia del elemento neutro o vector cero,  $v+\vec{0}=v$, para todo vector $v$. 
-    (4) Para todo vector $v$, existe un vector $v´$ tal que $v+(v´)=\vec{0}$. </code></pre>
+    (4) Para todo vector $v$, existe un vector $v´$ tal que $v+(v´)=\vec{0}$. 
+&lt;/div&gt;\EndKnitrBlock{remark}</code></pre>
+
+<div class="definition">
+<p><span id="def:unnamed-chunk-9" class="definition"><strong>Definición 1.5  </strong></span> Dado el vector <span class="math inline">\(v=(x,y)\)</span> y un escalar <span class="math inline">\(\lambda\in\mathbb{R}\)</span>, <strong>el producto</strong> de <span class="math inline">\(v\)</span> <strong>por un escalar</strong> <span class="math inline">\(\lambda\)</span> está dada por la multiplicaión de cada una de las componentes por el escalar, es decir, <span class="math inline">\(\lambda v=(\lambda x,\lambda y)\)</span>. En general, si <span class="math inline">\(v=(a_{1},a_{2},\cdots, a_{n})\)</span>, entonces <span class="math inline">\(\lambda v=(\lambda a_{1},\lambda a_{2},\cdots, \lambda a_{n})\)</span>.</p>
 </div>
 
 
 <div class="definition">
-<p><span id="def:unnamed-chunk-9" class="definition"><strong>Definición 1.6  </strong></span> Dado el vector <span class="math inline">\(v=(x,y)\)</span> , el <strong>vector opuesto</strong> a <span class="math inline">\(v\)</span> es el vector <span class="math inline">\(-v\)</span> dado por el producto de <span class="math inline">\(v\)</span> por el escalar <span class="math inline">\(-1\)</span>, es decir, <span class="math inline">\(-v=-1 v=(-x,-y)\)</span>.</p>
+<p><span id="def:unnamed-chunk-10" class="definition"><strong>Definición 1.6  </strong></span> Dado el vector <span class="math inline">\(v=(x,y)\)</span> , el vector opuesto a <span class="math inline">\(v\)</span> es el vector <span class="math inline">\(-v\)</span> dado por el producto de <span class="math inline">\(v\)</span> por el escalar <span class="math inline">\(-1\)</span>, es decir, <span class="math inline">\(-v=-1 v=(-x,-y)\)</span>. En general, si <span class="math inline">\(v=(a_{1},a_{2},\cdots, a_{n})\)</span>, entonces <span class="math inline">\(-v=(-a_{1},-a_{2},\cdots, -a_{n})\)</span>.</p>
 </div>
 
+<p>El producto de vectores por un escalar tiene las siguientes propiedades:</p>
+<pre><code>(1) Es commutativa, es decir, $\lambda v=v\lambda$, para cualquier vector $v$ y cualquier escalar $\lambda$.
+(2) Es distributiva, esto es, $\lambda(v_{1}+v_{2})=\lambda v_{1}+\lambda v_{2}$, para todo $v_{1}, v_{2}$ y todo $\lambda$.
+(3) Existencia del elemento neutro,  $1v=v$, para todo vector $v$. </code></pre>
 
 <div class="definition">
-<p><span id="def:unnamed-chunk-10" class="definition"><strong>Definición 1.7  </strong></span> Dado el vector <span class="math inline">\(v=(x,y)\)</span> y un escalar <span class="math inline">\(\lambda\in\mathbb{R}\)</span>, <strong>el producto</strong> de <span class="math inline">\(v\)</span> <strong>por un escalar</strong> <span class="math inline">\(\lambda\)</span> está dada por la multiplicación de cada una de las componentes por el escalar, es decir, <span class="math inline">\(\lambda v=(\lambda x,\lambda y)\)</span>.</p>
-</div>
-
-
-<div class="remark">
-<p> <span class="remark"><em>Nota. </em></span>  El producto de vectores por un escalar tiene las siguientes propiedades:</p>
-<pre><code>    (1) Es **commutativa**, es decir, $\lambda v=v\lambda$, para cualquier vector $v$ y cualquier escalar $\lambda$.
-    (2) Es **distributiva**, esto es, $\lambda(v_{1}+v_{2})=\lambda v_{1}+\lambda v_{2}$, para todo $v_{1}, v_{2}$ y todo $\lambda$.
-    (3) Existencia del **elemento neutro**,  $1v=v$, para todo vector $v$. </code></pre>
-</div>
-
-
-<div class="definition">
-<p><span id="def:unnamed-chunk-12" class="definition"><strong>Definición 1.8  </strong></span> Dados los vectores <span class="math inline">\(v_{1}=(x_{1},y_{1})\)</span> y <span class="math inline">\(v_{2}=(x_{2},y_{2})\)</span>, <strong>la resta</strong> de <span class="math inline">\(v_{1}\)</span> y <span class="math inline">\(v_{2}\)</span> está dada por la suma de <span class="math inline">\(v_{1}\)</span> con el opuesto de <span class="math inline">\(v_{2}\)</span>, es decir, <span class="math inline">\(v_{1}-v_{2}=(x_{1},y_{1})-(x_{2},y_{2})=(x_{1}-x_{2},y_{1}-y_{2})\)</span>.</p>
+<p><span id="def:unnamed-chunk-11" class="definition"><strong>Definición 1.7  </strong></span> Dados los vectores <span class="math inline">\(v_{1}=(x_{1},y_{1})\)</span> y <span class="math inline">\(v_{2}=(x_{2},y_{2})\)</span>, <strong>la resta</strong> de <span class="math inline">\(v_{1}\)</span> y <span class="math inline">\(v_{2}\)</span> está dada por la suma de <span class="math inline">\(v_{1}\)</span> con el opuesto de <span class="math inline">\(v_{2}\)</span>, es decir, <span class="math inline">\(v_{1}-v_{2}=(x_{1},y_{1})-(x_{2},y_{2})=(x_{1}-x_{2},y_{1}-y_{2})\)</span>. En general, <span class="math inline">\(v-u=(a_{1}, a_{2},\cdots, a_{n})-(b_{1}, b_{2},\cdots, b_{n})=(a_{1}-b_{1},a_{2}-b_{2},\cdots a_{n}-b_{n})\)</span>, cuando <span class="math inline">\(v=(a_{1}, a_{2},\cdots, a_{n})\)</span> y <span class="math inline">\(u=(b_{1}, b_{2},\cdots, b_{n})\)</span> son vectores de <span class="math inline">\(\mathbb{R}^{n}\)</span>.</p>
 </div>
 
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-13" class="example"><strong>Ejemplo 1.1  </strong></span> Dados los vectores <span class="math inline">\(v_{1}=(10,2)\)</span>, <span class="math inline">\(v_{2}=(-5,4)\)</span> y <span class="math inline">\(v_{3}=(-1,-2)\)</span>, entonces <span class="math display">\[v_{1}+v_{2}=(10,2)+(-5,4)=(10-5,2+4)=(5,6),\]</span> <span class="math display">\[v_{1}-v_{2}=(10,2)-(-5,4)=(10-(-5),2-4)=(15,-2) \mbox{ y}\]</span> <span class="math display">\[v_{3}+v_{2}-v_{1}=(-1,-2)+(-5,4)-(10,2)=(-1-5-10,-2+4-2)=(-16,0).\]</span> También<br />
+<p><span id="exm:unnamed-chunk-12" class="example"><strong>Ejemplo 1.1  </strong></span> Dados los vectores <span class="math inline">\(v_{1}=(10,2)\)</span>, <span class="math inline">\(v_{2}=(-5,4)\)</span> y <span class="math inline">\(v_{3}=(-1,-2)\)</span>, entonces <span class="math display">\[v_{1}+v_{2}=(10,2)+(-5,4)=(10-5,2+4)=(5,6),\]</span> <span class="math display">\[v_{1}-v_{2}=(10,2)-(-5,4)=(10-(-5),2-4)=(15,-2) \mbox{ y}\]</span> <span class="math display">\[v_{3}+v_{2}-v_{1}=(-1,-2)+(-5,4)-(10,2)=(-1-5-10,-2+4-2)=(-16,0).\]</span> También<br />
 <span class="math display">\[-2v_{1}=-2(10,2)=(-20,-4)\mbox{ y }\]</span> <span class="math display">\[-2v_{1}+3v_{2}-v_{3}=-2(10,2)+3(-5,4)-1(-1,-2)=(-20-15+1,-4+12+2)=(-34,10).\]</span></p>
 </div>
- 
+
+<div id="producto-escalar-y-producto-vectorial" class="section level3">
+<h3><span class="header-section-number">1.2.1</span> Producto escalar y producto vectorial</h3>
+<p>Las operaciones que definiremos en esta parte son propias de los vectores. En la mayor parte de los conceptos nos remitiremos a los espacios <span class="math inline">\(\mathbb{R}^{2}\)</span> y <span class="math inline">\(\mathbb{R}^{3}\)</span>.</p>
+
 <div class="definition">
-<p><span id="def:unnamed-chunk-14" class="definition"><strong>Definición 1.9  </strong></span> Sean <span class="math inline">\(v_{1}\)</span> y <span class="math inline">\(v_{2}\)</span> vectores, el <strong>producto escalar</strong> de <span class="math inline">\(v_{1}\)</span> y <span class="math inline">\(v_{2}\)</span> es el producto de los módulos <span class="math inline">\(|v_{1}|\)</span> y <span class="math inline">\(|v_{2}|\)</span> y el coseno del ángulo que forman los vectores y se denota <span class="math inline">\(v_{1}\cdot v_{2}\)</span>. Es decir, <span class="math inline">\(v_{1}\cdot v_{2}=|v_{1}||v_{2}|\cos \theta\)</span>, donde <span class="math inline">\(\theta\)</span> es el ángulo entre <span class="math inline">\(v_{1}\)</span> y <span class="math inline">\(v_{2}\)</span>.</p>
+<p><span id="def:unnamed-chunk-13" class="definition"><strong>Definición 1.8  </strong></span> Sean <span class="math inline">\(v_{1}\)</span> y <span class="math inline">\(v_{2}\)</span> vectores, el <strong>producto escalar</strong> de <span class="math inline">\(v_{1}\)</span> y <span class="math inline">\(v_{2}\)</span> es el producto de los módulos <span class="math inline">\(|v_{1}|\)</span> y <span class="math inline">\(|v_{2}|\)</span> y el coseno del ángulo que forman los vectores y se denota <span class="math inline">\(v_{1}\cdot v_{2}\)</span>. Es decir, <span class="math inline">\(v_{1}\cdot v_{2}=|v_{1}||v_{2}|\cos \theta\)</span>, donde <span class="math inline">\(\theta\)</span> es el 'angulo entre <span class="math inline">\(v_{1}\)</span> y <span class="math inline">\(v_{2}\)</span>.</p>
 </div>
 
 
 <div class="remark">
- <span class="remark"><em>Nota. </em></span>  La proyección de <span class="math inline">\(v_{1}\)</span> sobre <span class="math inline">\(v_{2}\)</span> es <span class="math inline">\(proy_{v_{2}} v_{1}=|v_{1}|\cos\theta\)</span> donde <span class="math inline">\(\theta\)</span> es el ángulo que forman ambos vectores. Por lo tanto, <span class="math inline">\(v_{1}\cdot v_{2}=|v_{2}| proy_{v_{2}} v_{1}\)</span>. También podemos calcular el producto escalar del siguiente modo: Sean <span class="math inline">\(v_{1}=(x_{1}, y_{1})\)</span> y <span class="math inline">\(v_{2}=(x_{2}, y_{2})\)</span> vectores, <span class="math inline">\(v_{1}\cdot v_{2}=x_{1}x_{2}+y_{1}y_{2}\)</span>. En general, si <span class="math inline">\(v_{1}\)</span> y <span class="math inline">\(v_{2}\)</span> son vectores en <span class="math inline">\(\mathbb{R}^{n}\)</span> tales que <span class="math inline">\(v_{1}=(x_{1},x_{2},\cdots, x_{n})\)</span> y <span class="math inline">\(v_{2}=(y_{1},y_{2},\cdots, y_{n})\)</span>, <span class="math inline">\(v_{1}\cdot v_{2}=\sum_{i=1}^{n} x_{i}y_{i}\)</span>.
+<p> <span class="remark"><em>Nota. </em></span>  La proyección de <span class="math inline">\(v_{1}\)</span> sobre <span class="math inline">\(v_{2}\)</span> es <span class="math inline">\(proy_{v_{2}} v_{1}=|v_{1}|\cos\theta\)</span> donde <span class="math inline">\(\theta\)</span> es el ángulo que forman ambos vectores. Por lo tanto, <span class="math inline">\(v_{1}\cdot v_{2}=|v_{2}| proy_{v_{2}} v_{1}\)</span>. También podemos calcular el producto escalar del siguiente modo: Sean <span class="math inline">\(v_{1}=(x_{1}, y_{1})\)</span> y <span class="math inline">\(v_{2}=(x_{2}, y_{2})\)</span> vectores, <span class="math inline">\(v_{1}\cdot v_{2}=x_{1}x_{2}+y_{1}y_{2}\)</span>. En general, si <span class="math inline">\(v_{1}\)</span> y <span class="math inline">\(v_{2}\)</span> son vectores en <span class="math inline">\(\mathbb{R}^{n}\)</span> tales que <span class="math inline">\(v_{1}=(x_{1},x_{2},\cdots, x_{n})\)</span> y <span class="math inline">\(v_{2}=(y_{1},y_{2},\cdots, y_{n})\)</span>, <span class="math inline">\(v_{1}\cdot v_{2}=\sum_{i=1}^{n} x_{i}y_{i}\)</span>.</p>
 </div>
 
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-16" class="example"><strong>Ejemplo 1.2  </strong></span> Dados los vectores <span class="math inline">\(v=(\sqrt{3},1)\)</span> y <span class="math inline">\(u=(\frac{3}{2},\frac{3\sqrt{3}}{2})\)</span>, y sabiendo que el ángulo que ellos forman es 30, entonces el producto escalar entre ellos <span class="math display">\[v\cdot u=|v||u|\cos 30=2\cdot 3\cdot\frac{\sqrt{3}}{2}=3\sqrt{3}\]</span>, ya que <span class="math inline">\(|v|=\sqrt{\sqrt{3}^{2}+1^{2}}=\sqrt{4}=2\)</span> y <span class="math inline">\(|u|=\sqrt{(\frac{3}{2}^{2})+(\frac{3\sqrt{3}}{2})^{2}}=\sqrt{\frac{36}{4}}=3\)</span>. Note que si usamos la fórmula analítica podemos calcular el producto escalar <span class="math inline">\(v\cdot u=(\sqrt{3}\cdot \frac{3}{2}) + (1\cdot \frac{3\sqrt{3}}{2})=3\sqrt{3}\)</span>.</p>
+<p><span id="exm:unnamed-chunk-15" class="example"><strong>Ejemplo 1.2  </strong></span> Dados los vectores <span class="math inline">\(v=(\sqrt{3},1)\)</span> y <span class="math inline">\(u=(\frac{3}{2},\frac{3\sqrt{3}}{2})\)</span>, y sabiendo que el ángulo que ellos forman es 30, entonces el producto escalar entre ellos <span class="math display">\[v\cdot u=|v||u|\cos 30^{o}=2\cdot 3\cdot\frac{\sqrt{3}}{2}=3\sqrt{3}\]</span> ya que <span class="math inline">\(|v|=\sqrt{\sqrt{3}^{2}+1^{2}}=\sqrt{4}=2\)</span> y <span class="math inline">\(|u|=\sqrt{(\frac{3}{2}^{2})+(\frac{3\sqrt{3}}{2})^{2}}=\sqrt{\frac{36}{4}}=3\)</span>. Note que si usamos la fórmula analítica podemos calcular el producto escalar <span class="math inline">\(v\cdot u=(\sqrt{3}\cdot \frac{3}{2}) + (1\cdot \frac{3\sqrt{3}}{2})=3\sqrt{3}\)</span>.</p>
 </div>
 
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-17" class="example"><strong>Ejemplo 1.3  </strong></span> Dados los vectores <span class="math inline">\(v=(1,2)\)</span> y <span class="math inline">\(u=(-3,4)\)</span>, el producto escalar es <span class="math inline">\(v\cdot u=1\cdot (-3)+(2\cdot 4)\)</span>. Si queremos calcular el ángulo <span class="math inline">\(\alpha\)</span> entre los vectores, usamos la fórmula <span class="math inline">\(v\cdot u=|v||u|\cos\alpha\)</span>, como <span class="math inline">\(|v|=\sqrt{1^{2}+2^{2}}=\sqrt{5}\)</span> y <span class="math inline">\(|v|=\sqrt{(-3)^{2}+4^{2}}=5\)</span>, entonces <span class="math inline">\(\cos\alpha=\frac{5}{\sqrt{5}\cdot 5}\)</span>, por lo tanto <span class="math inline">\(\alpha=\arccos\frac{1}{\sqrt{5}}\)</span>.</p>
+<p><span id="exm:unnamed-chunk-16" class="example"><strong>Ejemplo 1.3  </strong></span> Dados los vectores <span class="math inline">\(v=(1,2)\)</span> y <span class="math inline">\(u=(-3,4)\)</span>, el producto escalar es <span class="math inline">\(v\cdot u=1\cdot (-3)+(2\cdot 4)\)</span>. Si queremos calcular el ángulo <span class="math inline">\(\alpha\)</span> entre los vectores, usamos la fórmula <span class="math inline">\(v\cdot u=|v||u|\cos\alpha\)</span>, como <span class="math inline">\(|v|=\sqrt{1^{2}+2^{2}}=\sqrt{5}\)</span> y <span class="math inline">\(|v|=\sqrt{(-3)^{2}+4^{2}}=5\)</span>, entonces <span class="math inline">\(\cos\alpha=\frac{5}{\sqrt{5}\cdot 5}\)</span>, por lo tanto <span class="math inline">\(\alpha=\arccos\frac{1}{\sqrt{5}}\)</span>.</p>
 </div>
 
+
+<div class="remark">
+<p> <span class="remark"><em>Nota. </em></span>  Dos <strong>vectores</strong> <span class="math inline">\(v_{1}, v_{2}\)</span> son <strong>perpendiculares</strong> si y solo si forman un ángulo de <span class="math inline">\(90^{o}\)</span> entre ellos, esto lo denotamos con <span class="math inline">\(v_{1}\perp v_{2}\)</span>. Como <span class="math inline">\(\cos 90^{o}=0\)</span> se puede ver que dos vectores no nulos son perpendiculares si y solo si el producto escalar entre ellos es cero. Es decir <span class="math inline">\(v_{1}\perp v_{2}\)</span> si y solo si <span class="math inline">\(v_{1}\cdot v_{2}=0\)</span>, siempre que <span class="math inline">\(u\neq 0\)</span> o <span class="math inline">\(v\neq 0\)</span>.</p>
+</div>
+
+<p>El producto escalar tiene las siguientes propiedades:</p>
+<pre><code>(1) Conmutativa: Para todo par de vectores $v$ y $u$, se tiene $v\cdot u= u\cdot v$.
+(2) Distributiva respecto a la suma: Para cualesquiera vectores $u$, $v$ y $w$, se tiene que $u\cdot(v+w)=u\cdot v + u\cdot w$.
+(3) Asociatividad respecto al producto por un escalar: Para todo par de vectores $v$ y $u$ y todo escalar $\lambda$, se tiene que: $\lambda(u\cdot v)=(\lambda u)\cdot v=u\cdot (\lambda v)$.</code></pre>
+
+<div class="definition">
+<p><span id="def:unnamed-chunk-18" class="definition"><strong>Definición 1.9  </strong></span> Dados dos vectores, <span class="math inline">\(u\)</span> y <span class="math inline">\(v\)</span>, el producto vectorial de <span class="math inline">\(u\)</span> y <span class="math inline">\(v\)</span> está definido como <span class="math inline">\(u\times v=(|u||v| sen \theta) n\)</span>, donde <span class="math inline">\(n\)</span> es un vector de módulo uno (1) y perpendicular a los vectores <span class="math inline">\(u\)</span> y <span class="math inline">\(v\)</span>, cuya dirección está dada por la regla de la mano derecha y <span class="math inline">\(\theta\)</span> es el ángulo entre los vectores <span class="math inline">\(u\)</span> y <span class="math inline">\(v\)</span>.</p>
+</div>
+
+
+<div class="remark">
+<p> <span class="remark"><em>Nota. </em></span>  La regla de la mano derecha consiste en dar el mismo sentido al producto vectorial de <span class="math inline">\(u\times v\)</span> que el avance de un sacacorchos al girar desde el vector <span class="math inline">\(u\)</span> al vector <span class="math inline">\(v\)</span>. (insertar imagen) Desde el punto de vista geométrico, el módulo del producto vectorial corresponde al área del paralelogramo que forman los vectores <span class="math inline">\(u\)</span> y <span class="math inline">\(v\)</span> y las rectas paralelas a estos. (insertar imagen)</p>
+</div>
+
+</div>
 </div>
 </div>
 <script>
