@@ -95,3 +95,127 @@ El producto escalar tiene las siguientes propiedades:
 \BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	La regla de la mano derecha consiste en dar el mismo sentido al producto vectorial de $u\times v$ que el avance de un sacacorchos al girar desde el vector $u$ al vector $v$. (insertar imagen)
 	Desde el punto de vista geométrico, el módulo del producto vectorial corresponde al área del paralelogramo que forman los vectores $u$ y $v$ y las rectas paralelas a estos. (insertar imagen)
 </div>\EndKnitrBlock{remark}
+##Rectas y Planos
+
+###Rectas en el espacio
+
+En esta sección estudiaremos las rectas como objetos en el espacio $\mathbb{R}^{3}$. Una recta es un conjunto infinito de puntos que siguen una determinada  dirección y que pasa por un punto conocido en el espacio. Más formalmente:
+
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-20"><strong>(\#def:unnamed-chunk-20) </strong></span>	Dado un punto $P(x_{0},y_{0},z_{0})$ y un vector $u=(a,b,c)$, la recta que pasa por $P$ y está en la misma dirección que el vector $u$, es el conjunto de puntos $X(x,y,z)$ que cumplen que $\vec{PX}=\lambda u$, para algún número real $\lambda$, es decir, el vector $\vec{PX}$ es un múltiplo escalar del vector $u$. En este caso el vector $u$ se llamará **vector director** de la recta.
+</div>\EndKnitrBlock{definition}
+
+Note que la ecuación $\vec{PX}=\lambda u$ es equivalente a $X=P+\lambda u$, es decir 
+
+(x,y,z)=(x_{0},y_{0},z_{0})+\lambda(a,b,c)\label{ecvecesp}
+
+a la que llamaremos **ecuación vectorial** de la recta.
+
+De la ecuación vectorial\@ref{ecvecesp}, podemos deducir que un punto $X(x,y,z)$ pertenece a la recta si y solo si cumple simultaneamente las ecuaciones para cada una de sus componentes del vector:
+  
+
+```equation
+\left\{ \begin{array}{ll}
+x=&x_{0}+\lambda a\\
+y=&y_{0}\lambda b\\
+z=&z_{0}\lambda c  
+\end{array}
+\right.
+
+```\label{ecparesp}
+Estas se llaman \textit{ecuaciones param\'etricas} de la recta.\\
+Note que el escalar $\lambda$ es el mismo para todas las ecuaciones \ref{ecparesp}, para cada punto $X(x,y,z)$ sobre la recta. Si despejamos $\lambda$ de las ecuaciones param\'etricas e igualamos obtenemos la \textit{ecuaci\'on cont\'inua} de la recta: 
+\begin{equation}
+\frac{x-x_{0}}{a}=\frac{y-y_{0}}{b}=\frac{z-z_{0}}{c}
+\end{equation}\label{ecconesp}
+Otra manera de escribir esta cadena de desigualdades es como este sistema de ecuaciones:
+$$\left\{ \begin{array}{ll}
+\frac{x-x_{0}}{a}=&\frac{y-y_{0}}{b}\\
+\frac{x-x_{0}}{a}=&\frac{z-z_{0}}{c}  
+\end{array}
+\right.$$ 
+O equivalentemente, agrupando t\'erminos y renombrando los coeficientes, podemos escribirlo como:
+
+\begin{equation}
+\left\{ \begin{array}{ll}
+Ax+By+Cz+D=&0\\
+A'x+B'y+C'z+D'=&0  
+\end{array}
+\right.
+\end{equation}\label{eccaresp}
+
+Est\'as \'ultimas son las \textit{ecuaciones implicitas} de la recta o \textit{ecuaciones cartesianas}, las cuales representan la intersecci\'on de dos planos (veremos este tema m\'as adelante).
+
+\begin{example}
+	La recta que pasa por el punto $P(1,0,1)$ y tiene la direcci\'on del vector $u=(4,5,-1)$ tiene la siguiente ecuaci\'on vectorial:  $(x,y,z)=(1,0,1)+\lambda(4,5,-1)$.\\
+	La ecuaciones para m\'etricas son:
+	$$\left\{ \begin{array}{ll}
+	x=&1+4\lambda\\
+	y=&5\lambda\\
+	z=&1-\lambda
+	\end{array}
+	\right.$$ 
+	De d\'onde se tiene que la ecuaci\'on continua es $\frac{x-1}{4}=\frac{y}{5}=\frac{z-1}{-1}$ y de ac\'a se sigue que 
+		$$\left\{ \begin{array}{ll}
+		\frac{x-1}{4}=&\frac{y}{5}\\
+		\frac{x-1}{4}=&\frac{z-1}{-1}
+		\end{array}
+		\right. \Leftrightarrow
+		\left\{ \begin{array}{ll}
+		5x-4y-5=&0\\
+		x-4z-5=&0
+		\end{array}
+		\right.$$ 
+	corresponde a la ecuaci\'on cartesiana de la recta.
+\end{example}
+
+\begin{example}
+	La recta que pasa por los puntos $A(1,0,1)$ y $B(0,1,1)$ viene dada por la ecuaci\'on vectorial  $(x,y,z)=(1,0,1)+\lambda(-1,1,0)$, ya que un vector director es $\vec{AB}$.\\
+	La ecuaciones para m\'etricas son:
+	$$\left\{ \begin{array}{ll}
+	x=&1-\lambda\\
+	y=&\lambda\\
+	z=&1
+	\end{array}
+	\right.$$ 
+	Por lo tanto la ecuaci\'on cartesiana es 
+	$$\left\{ \begin{array}{ll}
+	1-x=&y\\
+	z=&1
+	\end{array}
+	\right. \Leftrightarrow
+	\left\{ \begin{array}{ll}
+	x+y-1=&0\\
+	z-1=&0
+	\end{array}
+	\right.$$ 
+	Note que la ecuaci\'on $z=1$ es el plano paralelo al plano $XY$ con altura en uno (1).
+\end{example}
+
+\subsection{Rectas en el plano}
+
+En esta parte describiremos como son las rectas en el plano cartesiano $\mathbb{R}^{2}$. Veremos como son las ecuaciones de las rectas en plano. Las caracteristicas de rectas paralelas y perpendiculares as\'i como el punto de intersecci\'on de dos rectas. 
+
+De la secci\'on anterior tenemos que una recta en $\mathbb{R}^{2}$ est\'a inequivocamente determinada por un punto en el plano $P(x_{0},y_{0})$ y un vector director $u=(a,b)$. La \textit{ecuaci\'on vectorial} de la recta es $\vec{PX}=\lambda u$, esto es 
+
+\begin{equation}
+(x-x_{0},y-y_{0})=\lambda(a,b)
+\end{equation}\label{ecvecpla}
+
+de donde se obtiene $(x,y)=(x_{0},y_{0})+\lambda(a,b)$, por lo tanto 
+$$\left\lbrace \begin{array}{ll} 
+x=&x_{0}+a\lambda\\ 
+y=&y_{0}+b\lambda
+\end{array} \right.$$
+De donde podemos obtener $\frac{x-x_{0}}{a}=\frac{y-y_{0}}{b}\Leftrightarrow b(x-x_{0})=a(y-y_{0})$. Si $a\neq 0$ se tiene que $y=\frac{b}{a}x+(y_{0}-\frac{b}{a}x_{0})$.
+Renombrando los coeficientes de la \'ultima ecuaci\'on, obtenemos la conocida \textit{ecuaci\'on expl\'icita} de la recta en el plano 
+
+\begin{equation}
+y=mx+n
+\end{equation}\label{ecexppla}
+
+donde el coeficiente $m$ corresponde a la \textit{pendiente de la recta} (la inclinaci\'on) y es igual a la tangente del \'angulo que forma la recta con el eje horizontal (abscisas o eje $x$). Note que si el vector director no es paralelo al eje vertical (las ordenadas o eje $Y$), entonces $a\neq 0$ en \ref{ecvecpla} y por lo tanto podemos dividir por $a$.\\
+Tambien podemos escribir la \textit{ecuaci\'on impl\'icita o cartesiana} de la recta renombrando los coeficientes y reordenando los t\'erminos de la ecuaci\'on \ref{ecvecpla} para obtener 
+\begin{equation}
+Ax+By+C=0
+\end{equation}\label{ecimppla}
+```

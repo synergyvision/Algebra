@@ -4,7 +4,7 @@
 title: "Álgebra Lineal"
 subtitle: "Ciencia de los Datos Financieros"
 author: "Synergy Vision"
-date: "2018-08-10"
+date: "2018-08-21"
 knit: "bookdown::render_book"
 documentclass: krantz
 bibliography: [book.bib, packages.bib]
@@ -1169,26 +1169,31 @@ En este capítulo estudiaremos los vectores, objetos muy usados en la física pa
 \BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-176"><strong>(\#def:unnamed-chunk-176) </strong></span>	Un **vector** $v$ en $\mathbb{R}^{n}$ de dimensión $n$ es una n-tupla de $n$ números reales, de la forma $v=(a_{1}, a_{2},\cdots, a_{n})$. Llamaremos componente $i-$ésima al número $a_{i}$ ($1\leq i\leq n$).
 </div>\EndKnitrBlock{definition}
 
-\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	Los vectores en $\mathbb{R}^{2}$ pueden representarse como un segmento de recta dirigido (una flecha) determinado por dos puntos en el espacio, $A$ de coordenadas $(x_{A},y_{A})$ y $B$ de coordenadas $(x_{B},y_{B})$, en los que uno es el origen del vector y el otro el extremo, en este caso se denota $\vec{AB}$ y sus coordenadas en el plano serían $\vec{AB}=(x_{B}-x_{A}, y_{B}-y_{A})$. también se puede denotar el vector con una letra minúscula $v=\vec{AB}$. La recta por la que pasa el vector es la **dirección** del vector. 
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	Nos centraremos en estuiar vectores en $\mathbb{R}^{2}$ o en $\mathbb{R}^{3}$. Los vectores en $\mathbb{R}^{2}$ o en $\mathbb{R}^{3}$ pueden representarse como un segmento de recta dirigido (una flecha) determinado por dos puntos en el espacio, $A$ de coordenadas $(x_{A},y_{A})$ y $B$ de coordenadas $(x_{B},y_{B})$, en los que uno es el origen del vector y el otro el extremo, en este caso se denota $\vec{AB}$ y sus coordenadas en el plano serían $\vec{AB}=(x_{B}-x_{A}, y_{B}-y_{A})$. también se puede denotar el vector con una letra minúscula $v=\vec{AB}$. La recta por la que pasa el vector es la **dirección** del vector.
 </div>\EndKnitrBlock{remark}
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-178"><strong>(\#def:unnamed-chunk-178) </strong></span>	La longitud del segmento de recta que define el vector (es decir, la flecha) es la **magnitud** del vector y se denota por $|\vec{AB}|$ (o $|v|$). La **dirección** del vector corresponde a la inclinación de la recta sobre la cual está el vector, esto es el ángulo que forma el vector con la horizontal. La **orientación** o **sentido** del vector representa el sentido en que se recorre el segmento de recta (determina hacia donde apunta la flecha). 
-</div>\EndKnitrBlock{definition}
+La longitud del segmento de recta que define el vector (es decir, la flecha) es la **magnitud** del vector y se denota por $|\vec{AB}|$ (o $|v|$). La **dirección** del vector corresponde a la inclinación de la recta sobre la cual está el vector, esto es el ángulo que forma el vector con la horizontal. La **orientación** o **sentido** del vector representa el sentido en que se recorre el segmento de recta (determina hacia donde apunta la flecha). 
 
-\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	Los vectores $\vec{AB}$ y $\vec{BA}$ tienen la misma magnitud, la misma dirección pero sentidos contrarios, por lo que $\vec{BA}=-\vec{AB}$. Los coordenadas de un vector describen un rectángulo en el plano $\mathbb{R}^{2}$ en el que el vector es una de las diagonales (insertar imagen). 
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	Los vectores $\vec{AB}$ y $\vec{BA}$ tienen la misma magnitud, la misma dirección pero sentidos contrarios, por lo que $\vec{BA}=-\vec{AB}$. 
+	Las coordenadas de un vector describen un rectángulo en el plano $\mathbb{R}^{2}$ en el que el vector es una de las diagonales.
 </div>\EndKnitrBlock{remark}
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-180"><strong>(\#def:unnamed-chunk-180) </strong></span>	Dado el vector $v$ de coordenadas $(x,y)$, la magnitud puede calcularse usando el teorema de pitágoras, con $|v|=\sqrt{x^{2}+Y^{2}}$; y el ángulo $\theta$ que forma con el eje de las abscisas con $\theta=\arctan(\frac{y}{x})$. El sentido es una noción referencial y se representan sentidos contrarios con los signos positivos ($+$) y negativos ($-$) (el signo $+$ suele omitirse)
+\includegraphics[width=0.5\textwidth]{suma-vectores.eps}
+
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-179"><strong>(\#def:unnamed-chunk-179) </strong></span>	Dado el vector $v$ de coordenadas $(x,y)$, **la magnitud** puede calcularse usando el teorema de pitágoras, con $|v|=\sqrt{x^{2}+y^{2}}$, la dirección es el **ángulo** $\theta$ que forma con el eje de las abscisas y se calcula con $\theta=\arctan(\frac{y}{x})$. El sentido es una noción referencial y se representan sentidos contrarios con los signos positivos ($+$) y negativos ($-$) (el signo $+$ suele omitirse)
 </div>\EndKnitrBlock{definition}
+
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	En general, la **magnitud** de un vector $v$ en $\mathbb{R}^{n}$ es $|v|=\sqrt{\sum_{k=1}^{n}a_{k}^{2}}$.
+</div>\EndKnitrBlock{remark}
 
 \BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-181"><strong>(\#def:unnamed-chunk-181) </strong></span>	Dos **vectores** son **paralelos** si forman iguales ángulos con el eje de las abscisas. Es decir, $v_{1}=(x_{1},y_{1})$ y $v_{2}=(x_{2},y_{2})$ son paralelos si $\theta_{1}=\arctan(\frac{y_{1}}{x_{2}})=\theta_{2}=\arctan(\frac{y_{2}}{x_{2}})$.
 </div>\EndKnitrBlock{definition}
 
-##Operaciones de vectores
+##Operaciones vectoriales
 
-Ya vimos que los que los vectores pueden representar conceptos físicos como lo son la distancia, la velocidad o la fuerza. Entonces es conveniente poder sumar estos objetos, para representar suma de distancias o suma de fuerzas, etc. También podemos pensar en multiplicar un vector por un escalar, como sería multiplicar la magnitud de una fuerza. En esta sección veremos que podemos definir varias operaciones entre vectores, sumar, restar y multiplicar vectores como lo hacemos con los números reales. Pero también definirimos operaciones propias de estos objetos, como lo son el producto punto y el producto cruz de vectores.
+Ya vimos que los vectores pueden representar conceptos físicos como lo son la distancia, la velocidad o la fuerza. Entonces es conveniente poder sumar estos objetos, para representar suma de distancias o suma de fuerzas, por ejemplo. También podemos pensar en multiplicar un vector por un escalar, como sería multiplicar la magnitud de una fuerza. En esta sección veremos que podemos definir varias operaciones entre vectores, sumar, restar y multiplicar vectores como lo hacemos con los números reales. Pero también definiremos operaciones propias de estos objetos, como lo son el producto punto y el producto cruz de vectores.
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-182"><strong>(\#def:unnamed-chunk-182) </strong></span>	Dados los vectores $v_{1}=(x_{1},y_{1})$ y $v_{2}=(x_{2},y_{2})$, **la suma** de $v_{1}$ y $v_{2}$ está dada por la suma de las componentes correspondientes, es decir, $v_{1}+v_{2}=(x_{1}+x_{2},y_{1}+y_{2})$.
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-182"><strong>(\#def:unnamed-chunk-182) </strong></span>	Dados los vectores $v_{1}=(x_{1},y_{1})$ y $v_{2}=(x_{2},y_{2})$, **la suma** de $v_{1}$ y $v_{2}$ está dada por la suma de las componentes correspondientes, es decir, $v_{1}+v_{2}=(x_{1}+x_{2},y_{1}+y_{2})$. En general, la suma de dos vectores $v=(a_{1}, a_{2},\cdots, a_{n})$ y $u=(b_{1}, b_{2},\cdots, b_{n})$ en $\mathbb{R}^{n}$ se define como $v+u=(a_{1}, a_{2},\cdots, a_{n})+(b_{1}, b_{2},\cdots, b_{n})=(a_{1}+b_{1},a_{2}+b_{2},\cdots a_{n}+b_{n})$.
 </div>\EndKnitrBlock{definition}
 
 \BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	La suma de vectores tiene las siguientes propiedades:
@@ -1197,29 +1202,171 @@ Ya vimos que los que los vectores pueden representar conceptos físicos como lo 
 		(2) Es asociativa, esto es, $(v_{1}+v_{2})+v_{3}=v_{1}+(v_{2}+v_{3})$, para todo $v_{1}, v_{2}$ y $v_{3}$.
 		(3) Existencia del elemento neutro o vector cero,  $v+\vec{0}=v$, para todo vector $v$. 
 		(4) Para todo vector $v$, existe un vector $v´$ tal que $v+(v´)=\vec{0}$. 
-</div>\EndKnitrBlock{remark}
+	</div>\EndKnitrBlock{remark}
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-184"><strong>(\#def:unnamed-chunk-184) </strong></span>	Dado el vector $v=(x,y)$ , el **vector opuesto** a $v$ es el vector $-v$ dado por el producto de $v$ por el escalar $-1$, es decir, $-v=-1 v=(-x,-y)$.
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-184"><strong>(\#def:unnamed-chunk-184) </strong></span>	Dado el vector $v=(x,y)$ y un escalar $\lambda\in\mathbb{R}$, **el producto** de $v$ **por un escalar** $\lambda$ está dada por la multiplicaión de cada una de las componentes por el escalar, es decir, $\lambda v=(\lambda x,\lambda y)$. En general, si $v=(a_{1},a_{2},\cdots, a_{n})$, entonces $\lambda v=(\lambda a_{1},\lambda a_{2},\cdots, \lambda a_{n})$.
 </div>\EndKnitrBlock{definition}
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-185"><strong>(\#def:unnamed-chunk-185) </strong></span>	Dado el vector $v=(x,y)$ y un escalar $\lambda\in\mathbb{R}$, **el producto** de $v$ **por un escalar** $\lambda$ está dada por la multiplicación de cada una de las componentes por el escalar, es decir, $\lambda v=(\lambda x,\lambda y)$.
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-185"><strong>(\#def:unnamed-chunk-185) </strong></span>	Dado el vector $v=(x,y)$ , el vector opuesto a $v$ es el vector $-v$ dado por el producto de $v$ por el escalar $-1$, es decir, $-v=-1 v=(-x,-y)$. En general, si $v=(a_{1},a_{2},\cdots, a_{n})$, entonces $-v=(-a_{1},-a_{2},\cdots, -a_{n})$.
 </div>\EndKnitrBlock{definition}
 
-\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	El producto de vectores por un escalar tiene las siguientes propiedades:
-	
-		(1) Es **commutativa**, es decir, $\lambda v=v\lambda$, para cualquier vector $v$ y cualquier escalar $\lambda$.
-		(2) Es **distributiva**, esto es, $\lambda(v_{1}+v_{2})=\lambda v_{1}+\lambda v_{2}$, para todo $v_{1}, v_{2}$ y todo $\lambda$.
-		(3) Existencia del **elemento neutro**,  $1v=v$, para todo vector $v$. 
-</div>\EndKnitrBlock{remark}
+El producto de vectores por un escalar tiene las siguientes propiedades:
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-187"><strong>(\#def:unnamed-chunk-187) </strong></span>		Dados los vectores $v_{1}=(x_{1},y_{1})$ y $v_{2}=(x_{2},y_{2})$, **la resta** de $v_{1}$ y $v_{2}$ está dada por la suma de $v_{1}$ con el opuesto de $v_{2}$, es decir, $v_{1}-v_{2}=(x_{1},y_{1})-(x_{2},y_{2})=(x_{1}-x_{2},y_{1}-y_{2})$.
+	(1) Es commutativa, es decir, $\lambda v=v\lambda$, para cualquier vector $v$ y cualquier escalar $\lambda$.
+	(2) Es distributiva, esto es, $\lambda(v_{1}+v_{2})=\lambda v_{1}+\lambda v_{2}$, para todo $v_{1}, v_{2}$ y todo $\lambda$.
+	(3) Existencia del elemento neutro,  $1v=v$, para todo vector $v$. 
+
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-186"><strong>(\#def:unnamed-chunk-186) </strong></span>		Dados los vectores $v_{1}=(x_{1},y_{1})$ y $v_{2}=(x_{2},y_{2})$, **la resta** de $v_{1}$ y $v_{2}$ está dada por la suma de $v_{1}$ con el opuesto de $v_{2}$, es decir, $v_{1}-v_{2}=(x_{1},y_{1})-(x_{2},y_{2})=(x_{1}-x_{2},y_{1}-y_{2})$. En general, $v-u=(a_{1}, a_{2},\cdots, a_{n})-(b_{1}, b_{2},\cdots, b_{n})=(a_{1}-b_{1},a_{2}-b_{2},\cdots a_{n}-b_{n})$, cuando $v=(a_{1}, a_{2},\cdots, a_{n})$ y $u=(b_{1}, b_{2},\cdots, b_{n})$ son vectores de $\mathbb{R}^{n}$.
 </div>\EndKnitrBlock{definition}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-188"><strong>(\#exm:unnamed-chunk-188) </strong></span>	Dados los vectores $v_{1}=(10,2)$, $v_{2}=(-5,4)$ y $v_{3}=(-1,-2)$, entonces $$v_{1}+v_{2}=(10,2)+(-5,4)=(10-5,2+4)=(5,6),$$
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-187"><strong>(\#exm:unnamed-chunk-187) </strong></span>	Dados los vectores $v_{1}=(10,2)$, $v_{2}=(-5,4)$ y $v_{3}=(-1,-2)$, entonces $$v_{1}+v_{2}=(10,2)+(-5,4)=(10-5,2+4)=(5,6),$$
 	 $$v_{1}-v_{2}=(10,2)-(-5,4)=(10-(-5),2-4)=(15,-2) \mbox{ y}$$ $$v_{3}+v_{2}-v_{1}=(-1,-2)+(-5,4)-(10,2)=(-1-5-10,-2+4-2)=(-16,0).$$ También	 
 	$$-2v_{1}=-2(10,2)=(-20,-4)\mbox{ y }$$ $$-2v_{1}+3v_{2}-v_{3}=-2(10,2)+3(-5,4)-1(-1,-2)=(-20-15+1,-4+12+2)=(-34,10).$$
 </div>\EndKnitrBlock{example}
 
+###Producto escalar y producto vectorial
+
+Las operaciones que definiremos en esta parte son propias de los vectores. En la mayor parte de los conceptos nos remitiremos a los espacios $\mathbb{R}^{2}$ y $\mathbb{R}^{3}$.
+
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-188"><strong>(\#def:unnamed-chunk-188) </strong></span>	Sean $v_{1}$ y $v_{2}$ vectores, el **producto escalar** de $v_{1}$ y $v_{2}$ es el producto de los módulos $|v_{1}|$ y $|v_{2}|$ y el coseno del ángulo que forman los vectores y se denota $v_{1}\cdot v_{2}$. Es decir, $v_{1}\cdot v_{2}=|v_{1}||v_{2}|\cos \theta$, donde $\theta$ es el \'angulo entre $v_{1}$ y $v_{2}$.
+</div>\EndKnitrBlock{definition}
+
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	La proyección de $v_{1}$ sobre $v_{2}$ es $proy_{v_{2}} v_{1}=|v_{1}|\cos\theta$ donde $\theta$ es el ángulo que forman ambos vectores. Por lo tanto, $v_{1}\cdot v_{2}=|v_{2}| proy_{v_{2}} v_{1}$.
+	También podemos calcular el producto escalar del siguiente modo: Sean $v_{1}=(x_{1}, y_{1})$ y $v_{2}=(x_{2}, y_{2})$ vectores, $v_{1}\cdot v_{2}=x_{1}x_{2}+y_{1}y_{2}$. En general, si $v_{1}$ y $v_{2}$ son vectores en $\mathbb{R}^{n}$ tales que $v_{1}=(x_{1},x_{2},\cdots, x_{n})$ y $v_{2}=(y_{1},y_{2},\cdots, y_{n})$, $v_{1}\cdot v_{2}=\sum_{i=1}^{n} x_{i}y_{i}$.
+</div>\EndKnitrBlock{remark}
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-190"><strong>(\#exm:unnamed-chunk-190) </strong></span>	Dados los vectores $v=(\sqrt{3},1)$ y $u=(\frac{3}{2},\frac{3\sqrt{3}}{2})$, y sabiendo que el ángulo que ellos forman es 30\textdegree, entonces el producto escalar entre ellos $$v\cdot u=|v||u|\cos 30^{o}=2\cdot 3\cdot\frac{\sqrt{3}}{2}=3\sqrt{3}$$ ya que $|v|=\sqrt{\sqrt{3}^{2}+1^{2}}=\sqrt{4}=2$ y $|u|=\sqrt{(\frac{3}{2}^{2})+(\frac{3\sqrt{3}}{2})^{2}}=\sqrt{\frac{36}{4}}=3$. Note que si usamos la fórmula analítica podemos calcular el producto escalar $v\cdot u=(\sqrt{3}\cdot \frac{3}{2}) + (1\cdot \frac{3\sqrt{3}}{2})=3\sqrt{3}$.
+</div>\EndKnitrBlock{example}
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-191"><strong>(\#exm:unnamed-chunk-191) </strong></span>	Dados los vectores $v=(1,2)$ y $u=(-3,4)$, el producto escalar es $v\cdot u=1\cdot (-3)+(2\cdot 4)$. Si queremos calcular el ángulo $\alpha$ entre los vectores, usamos la fórmula $v\cdot u=|v||u|\cos\alpha$, como $|v|=\sqrt{1^{2}+2^{2}}=\sqrt{5}$ y $|v|=\sqrt{(-3)^{2}+4^{2}}=5$, entonces $\cos\alpha=\frac{5}{\sqrt{5}\cdot 5}$, por lo tanto $\alpha=\arccos\frac{1}{\sqrt{5}}$.
+</div>\EndKnitrBlock{example}
+
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	Dos **vectores** $v_{1}, v_{2}$ son **perpendiculares** si y solo si forman un ángulo de $90^{o}$ entre ellos, esto lo denotamos con $v_{1}\perp v_{2}$. Como $\cos 90^{o}=0$ se puede ver que dos vectores no nulos son perpendiculares si y solo si el producto escalar entre ellos es cero. Es decir $v_{1}\perp v_{2}$ si y solo si $v_{1}\cdot v_{2}=0$, siempre que $u\neq 0$ o $v\neq 0$.
+</div>\EndKnitrBlock{remark}
+
+El producto escalar tiene las siguientes propiedades:
+
+	(1) Conmutativa: Para todo par de vectores $v$ y $u$, se tiene $v\cdot u= u\cdot v$.
+	(2) Distributiva respecto a la suma: Para cualesquiera vectores $u$, $v$ y $w$, se tiene que $u\cdot(v+w)=u\cdot v + u\cdot w$.
+	(3) Asociatividad respecto al producto por un escalar: Para todo par de vectores $v$ y $u$ y todo escalar $\lambda$, se tiene que: $\lambda(u\cdot v)=(\lambda u)\cdot v=u\cdot (\lambda v)$.
+
+
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-193"><strong>(\#def:unnamed-chunk-193) </strong></span>	Dados dos vectores, $u$ y $v$, el producto vectorial de $u$ y $v$ está definido como $u\times v=(|u||v| sen \theta) n$, donde $n$ es un vector de módulo uno (1) y perpendicular a los vectores $u$ y $v$, cuya dirección está dada por la regla de la mano derecha y $\theta$ es el ángulo entre los vectores $u$ y $v$.
+</div>\EndKnitrBlock{definition}
+
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	La regla de la mano derecha consiste en dar el mismo sentido al producto vectorial de $u\times v$ que el avance de un sacacorchos al girar desde el vector $u$ al vector $v$. (insertar imagen)
+	Desde el punto de vista geométrico, el módulo del producto vectorial corresponde al área del paralelogramo que forman los vectores $u$ y $v$ y las rectas paralelas a estos. (insertar imagen)
+</div>\EndKnitrBlock{remark}
+##Rectas y Planos
+
+###Rectas en el espacio
+
+En esta sección estudiaremos las rectas como objetos en el espacio $\mathbb{R}^{3}$. Una recta es un conjunto infinito de puntos que siguen una determinada  dirección y que pasa por un punto conocido en el espacio. Más formalmente:
+
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-195"><strong>(\#def:unnamed-chunk-195) </strong></span>	Dado un punto $P(x_{0},y_{0},z_{0})$ y un vector $u=(a,b,c)$, la recta que pasa por $P$ y está en la misma dirección que el vector $u$, es el conjunto de puntos $X(x,y,z)$ que cumplen que $\vec{PX}=\lambda u$, para algún número real $\lambda$, es decir, el vector $\vec{PX}$ es un múltiplo escalar del vector $u$. En este caso el vector $u$ se llamará **vector director** de la recta.
+</div>\EndKnitrBlock{definition}
+
+Note que la ecuación $\vec{PX}=\lambda u$ es equivalente a $X=P+\lambda u$, es decir 
+
+$$(x,y,z)=(x_{0},y_{0},z_{0})+\lambda(a,b,c)$$
+
+a la que llamaremos **ecuación vectorial** de la recta.
+
+De la ecuación vectorial, podemos deducir que un punto $X(x,y,z)$ pertenece a la recta si y solo si cumple simultaneamente las ecuaciones para cada una de sus componentes del vector:
+  
+$$\left\{ \begin{array}{ll}
+x=&x_{0}+\lambda a\\
+y=&y_{0}\lambda b\\
+z=&z_{0}\lambda c  
+\end{array}
+\right.$$
+
+Estas se llaman **ecuaciones param\'etricas** de la recta.
+
+Note que el escalar $\lambda$ es el mismo para todas las ecuaciones anteriores, para cada punto $X(x,y,z)$ sobre la recta. Si despejamos $\lambda$ de las ecuaciones paramétricas e igualamos obtenemos la **ecuación continua** de la recta: 
+
+$$\frac{x-x_{0}}{a}=\frac{y-y_{0}}{b}=\frac{z-z_{0}}{c}$$
+
+Otra manera de escribir esta cadena de desigualdades es como este sistema de ecuaciones:
+$$\left\{ \begin{array}{ll}
+\frac{x-x_{0}}{a}=&\frac{y-y_{0}}{b}\\
+\frac{x-x_{0}}{a}=&\frac{z-z_{0}}{c}  
+\end{array}
+\right.$$ 
+
+O equivalentemente, agrupando términos y renombrando los coeficientes, podemos escribirlo como:
+
+$$\left\{ \begin{array}{ll}
+Ax+By+Cz+D=&0\\
+A'x+B'y+C'z+D'=&0  
+\end{array}
+\right.$$
+
+Estás últimas son las **ecuaciones implícitas** de la recta o **ecuaciones cartesianas**, las cuales representan la intersección de dos planos (veremos este tema más adelante).
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-196"><strong>(\#exm:unnamed-chunk-196) </strong></span>	La recta que pasa por el punto $P(1,0,1)$ y tiene la dirección del vector $u=(4,5,-1)$ tiene la siguiente ecuación vectorial:  $(x,y,z)=(1,0,1)+\lambda(4,5,-1)$.
+	La ecuaciones paramétricas son:
+	$$\left\{ \begin{array}{ll}
+	x=&1+4\lambda\\
+	y=&5\lambda\\
+	z=&1-\lambda
+	\end{array}
+	\right.$$ 
+	De dónde se tiene que la ecuación continua es $\frac{x-1}{4}=\frac{y}{5}=\frac{z-1}{-1}$ y de acá se sigue que 
+		$$\left\{ \begin{array}{ll}
+		\frac{x-1}{4}=&\frac{y}{5}\\
+		\frac{x-1}{4}=&\frac{z-1}{-1}
+		\end{array}
+		\right. \Leftrightarrow
+		\left\{ \begin{array}{ll}
+		5x-4y-5=&0\\
+		x-4z-5=&0
+		\end{array}
+		\right.$$ 
+	corresponde a la ecuación cartesiana de la recta.</div>\EndKnitrBlock{example}
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-197"><strong>(\#exm:unnamed-chunk-197) </strong></span>	La recta que pasa por los puntos $A(1,0,1)$ y $B(0,1,1)$ viene dada por la ecuación vectorial  $(x,y,z)=(1,0,1)+\lambda(-1,1,0)$, ya que un vector director es $\vec{AB}$.
+	La ecuaciones paramétricas son:
+	$$\left\{ \begin{array}{ll}
+	x=&1-\lambda\\
+	y=&\lambda\\
+	z=&1
+	\end{array}
+	\right.$$ 
+	Por lo tanto la ecuación cartesiana es 
+	$$\left\{ \begin{array}{ll}
+	1-x=&y\\
+	z=&1
+	\end{array}
+	\right. \Leftrightarrow
+	\left\{ \begin{array}{ll}
+	x+y-1=&0\\
+	z-1=&0
+	\end{array}
+	\right.$$ 
+	Note que la ecuación $z=1$ es el plano paralelo al plano $XY$ con altura en uno (1).</div>\EndKnitrBlock{example}
+
+##Rectas en el plano
+
+En esta parte describiremos como son las rectas en el plano cartesiano $\mathbb{R}^{2}$. Veremos como son las ecuaciones de las rectas en plano. Las características de rectas paralelas y perpendiculares así como el punto de intersección de dos rectas. 
+
+De la sección anterior tenemos que una recta en $\mathbb{R}^{2}$ está inequivocamente determinada por un punto en el plano $P(x_{0},y_{0})$ y un vector director $u=(a,b)$. La **ecuación vectorial** de la recta es $\vec{PX}=\lambda u$, esto es 
+
+$$(x-x_{0},y-y_{0})=\lambda(a,b)$$
+
+de donde se obtiene $(x,y)=(x_{0},y_{0})+\lambda(a,b)$, por lo tanto 
+$$\left\lbrace \begin{array}{ll} 
+x=&x_{0}+a\lambda\\ 
+y=&y_{0}+b\lambda
+\end{array} \right.$$
+De donde podemos obtener $\frac{x-x_{0}}{a}=\frac{y-y_{0}}{b}\Leftrightarrow b(x-x_{0})=a(y-y_{0})$. Si $a\neq 0$ se tiene que $y=\frac{b}{a}x+(y_{0}-\frac{b}{a}x_{0})$.
+Renombrando los coeficientes de la última ecuación, obtenemos la conocida **ecuación explícita** de la recta en el plano 
+
+$$y=mx+n$$
+donde el coeficiente $m$ corresponde a la **pendiente de la recta** (la inclinación) y es igual a la tangente del ángulo que forma la recta con el eje horizontal (eje de las abscisas o eje $x$). Note que si el vector director no es paralelo al eje vertical (las ordenadas o eje $Y$), entonces $a\neq 0$ en la ecuaci\'on vectorial y por lo tanto podemos dividir por $a$.
+
+También podemos escribir la **ecuación implícita o cartesiana** de la recta renombrando los coeficientes y reordenando los términos de la ecuación vectorial para obtener 
+$$Ax+By+C=0$$
 
 <!--chapter:end:030-vectores.Rmd-->
 
