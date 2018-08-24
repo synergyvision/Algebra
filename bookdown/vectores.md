@@ -203,10 +203,10 @@ Estás últimas son las **ecuaciones implícitas** de la recta o **ecuaciones ca
 
 En esta parte describiremos como son las rectas en el plano cartesiano $\mathbb{R}^{2}$. Veremos como son las ecuaciones de las rectas en plano. Las características de rectas paralelas y perpendiculares así como el punto de intersección de dos rectas. 
 
-De la sección anterior tenemos que una recta en $\mathbb{R}^{2}$ está inequivocamente determinada por un punto en el plano $P(x_{0},y_{0})$ y un vector director $u=(a,b)$. La **ecuación vectorial** de la recta es $\vec{PX}=\lambda u$, esto es 
+De la sección anterior tenemos que una recta en $\mathbb{R}^{2}$ está inequivocamente determinada por un punto en el plano $P(x_{0},y_{0})$ y un vector director $u=(a,b)$. La **ecuación vectorial** de la recta es $\vec{PX}=\lambda u$, esto es $(x-x_{0},y-y_{0})=\lambda(a,b)$, es decir
 
 \begin{equation}
-(x-x_{0},y-y_{0})=\lambda(a,b)
+(x,y)=(x_{0},y_{0})+\lambda(a,b)
 (\#eq:ecvecpla)
 \end{equation}
 
@@ -223,12 +223,45 @@ y=mx+n
 (\#eq:ecexppla)
 \end{equation}
 
-donde el coeficiente $m$ corresponde a la **pendiente de la recta** (la inclinación) y es igual a la tangente del ángulo que forma la recta con el eje horizontal (eje de las abscisas o eje $x$). Note que si el vector director no es paralelo al eje vertical (las ordenadas o eje $Y$), entonces $a\neq 0$ en la ecuación vectorial y por lo tanto podemos dividir por $a$.
-
-También podemos escribir la **ecuación implícita o cartesiana** de la recta renombrando los coeficientes y reordenando los términos de la ecuación vectorial \@ref(eq:ecvecpla) para obtener 
+donde el coeficiente $m$ corresponde a la **pendiente de la recta** (la inclinación) y es igual a la tangente del ángulo que forma la recta con el eje horizontal (abscisas o eje $x$). Note que si el vector director no es paralelo al eje vertical (las ordenadas o eje $Y$), entonces $a\neq 0$ en \ref{ecvecpla} y por lo tanto podemos dividir por $a$. Además, si $x=0$, se tiene que $y=m(0)+n$, es decir $y=n$, de donde se sigue que el **punto de corte de la recta con el eje de las abscisas** (o eje $Y$) es el coeficiente $n$ de la ecuación explícita \@ref{eq:ecexppla}. Por otro lado el **punto de corte de la recta con el eje de las ordenadas** (eje $X$) es un punto cuya segunda coordenada es cero, esto es $(x,0)$, por lo tanto $0=mx+n$, entonces $x=\frac{n}{m}$.
+También podemos escribir la **ecuación implícita o cartesiana** de la recta renombrando los coeficientes y reordenando los términos de la ecuación \@ref{eq:ecvecpla} para obtener 
 
 \begin{equation}
 Ax+By+C=0
-(\#eq:eccarpla)
+(\#eq:ecimppla)
 \end{equation}
 
+Si sabemos que una recta $y=mx+n$ pasa por dos puntos conocidos del plano $A(x_{1},y_{1})$ y $B(x_{2},y_{2})$, podemos calcular la pendiente de la recta calculando la tangente del ángulo que forma el segmento de recta que une los puntos $A$ y $B$ como lo muestra la figura (INSERTAR FIGURA). De este modo 
+
+\begin{equation}
+m=tang(\alpha)=\frac{y_{2}-y_{1}}{x_{1}-x_{2}}
+(\#eq:pendiente)
+\end{equation}
+
+La ecuanción antes descrita es cierta para todo par de puntos sobre la recta, por lo tanto, si $A(x_{0},y_{0})$ es un punto conocido y $X(x,y)$ es un punto arbitrario sobre la recta, se tiene que $m=\frac{y-y_{0}}{x-x_{0}}$. Si conocemos la pendiente de la recta, podemos despejar $y$ en término de la pendiente y las coordenadas del punto conocido, obteniendo así la **ecuación punto-pendiente** de la recta:
+
+\begin{equation}
+y=m(x-x_{0})+y_{0}
+(\#eq:puntopend)
+\end{equation}
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-22"><strong>(\#exm:unnamed-chunk-22) </strong></span>	Para hallar la ecuación de la recta que pasa por el punto $A(3,1)$ y tiene pendiente $m=\frac{1}{2}$ usamos la ecuación punto pediente \@ref(eq:puntopend),
+	$y=\frac{1}{2}(x-3)+1$ por lo tanto $y=\frac{1}{2}x-\frac{1}{2}$. Reagrupando términos y multiplicando por $2$, obtenemos la ecuación implícita \@ref(eq:ecimppla): $x-2y-1=0$.
+</div>\EndKnitrBlock{example}
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-23"><strong>(\#exm:unnamed-chunk-23) </strong></span>	Dada la ecuación cartesiana de la recta $5x-3y+1=0$, podemos hallar la pendiente de la recta despejando $y$ de la ecuación cartesiana, de la siguiente forma: $y=\frac{5}{3}x+\frac{1}{3}$. De donde se sigue que la pendiente es $m=\frac{5}{3}$. Además, directamente de la ecuación explícita, podemos decir que el punto de corte con el eje $Y$ es $n=\frac{1}{3}$. Para hallar el punto de corte con el eje $X$, despejamos $x$ de $0=\frac{5}{3}x+\frac{1}{3}$, así $x=\frac{-1}{5}$.
+</div>\EndKnitrBlock{example}
+Dos rectas en plano pueden ser **rectas paralelas**, en ese caso tienen la misma pendiente (forman el mismo ángulo con el eje $X$), es decir, si la recta $\mathit{l}_{1}$ tiene ecuación $y=mx+n$ y la recta $\mathit{l}_{2}$ tiene ecuación $y=px+q$, entonces $\mathit{l}_{1}$ es paralela a $\mathit{l}_{2}$ si y solo si $m=p$, esto se denota $\mathit{l}_{1} \parallel \mathit{l}_{2}$.
+
+Si dos rectas $\mathit{l}_{1}$ y $\mathit{l}_{2}$ de ecuaciones $y=mx+n$ y $y=px+q$ respectivamente, forman un ángulo de $90^{o}$ entre ellas se dice que son **perpendiculares** y se denota $\mathit{l}_{1} \perp \mathit{l}_{2}$, en este caso se puede ver que las pendientes guardan la siguiente relación: $mp=-1$.
+
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	Note que si una recta es horizontal, su pendiente es igual a cero, esto es $y=0x+n$ y cualquier recta perpendicular a ella es paralela al eje $Y$ y por lo tanto no es función.
+</div>\EndKnitrBlock{remark}
+
+Dos rectas no paralelas $\mathit{l}_{1}$ y $\mathit{l}_{2}$ de ecuaciones $y=mx+n$ y $y=px+q$ respectivamente, se intersectan en un punto del plano $(x_{0},y_{0})$, por lo tanto satisface ambas ecuaciones simultaneamente, es decir, $y_{0}=mx_{0}+n$ y $y_{0}=px_{0}+q$. Luego $mx_{0}+n=y_{0}=px_{0}+q$ por lo tanto $mx_{0}-px_{0}=q-n\Leftrightarrow x_{0}=\frac{q-n}{m-p}$ y así, $y_{0}=m(\frac{q-n}{m-p})+n$. En este caso el punto de intersección entre las rectas es $$\left( \frac{q-n}{m-p},m(\frac{q-n}{m-p})+n\right) .$$
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-25"><strong>(\#exm:unnamed-chunk-25) </strong></span>	Las rectas $\mathit{l}_{1}:y=2x+3$ y $\mathit{l}_{2}:y=2x-1$ son rectas paralelas. Y son perpendiculares a $\mathit{l}_{3}: y=-\frac{1}{2}x+1$. Además, el punto de intersección entre $\mathit{l}_{1}$ y $\mathit{l}_{2}$ es $x_{0}=\frac{1-3}{2+\frac{1}{2}}=\frac{-4}{5}$ y $y_{0}=2(\frac{-4}{5})+3=\frac{7}{5}$.
+</div>\EndKnitrBlock{example}
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-26"><strong>(\#exm:unnamed-chunk-26) </strong></span>	La recta perpendicular a $\mathit{l}_{1}:\frac{-2}{3}x+3$ que pasa por el punto $A(-2,1)$ tiene por ecuación $y=\frac{3}{2}(x-(-2))+1$ es decir $y=\frac{-3}{2}x+4$.
+</div>\EndKnitrBlock{example}
