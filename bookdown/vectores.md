@@ -98,6 +98,64 @@ El producto escalar tiene las siguientes propiedades:
 	Desde el punto de vista geométrico, el módulo del producto vectorial corresponde al área del paralelogramo que forman los vectores $u$ y $v$ y las rectas paralelas a estos. (insertar imagen)
 </div>\EndKnitrBlock{remark}
 
+Otra forma de calcular el producto vectorial entre dos vectores $u=(a_{1},a_{2}, a_{3})$ y $v=(b_{1}, b_{2}, b_{3})$ es esta $u\times v=(a_{2}b_{3}-a_{3}b_{2}, a_{3}b_{1}-a_{1}b_{3}, a_{1}b_{2}-a_{2}b_{1})$, la cual resulta muy práctica en el caso de conocer las componetes de los vectores. 
+
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	Si definimos el determinante de una matriz $2x2$ como sigue: 
+	$$\left|  \begin{array}{ll} 
+	a & b\\ 
+	c & d
+	\end{array} \right| = ad-bc$$, entonces el producto vectorial se pude calcular como sigue:\\
+	$u\times v=(x,y,z)$ donde 
+	$x=\left|  \begin{array}{ll} 
+	a_{2} & a_{3}\\ 
+	b_{2} & b_{3}
+	\end{array} \right|$, $x=\left|  \begin{array}{ll} 
+	a_{1} & a_{3}\\ 
+	b_{1} & b_{3}
+	\end{array} \right|$, $x=\left|  \begin{array}{ll} 
+	a_{1} & a_{2}\\ 
+	b_{1} & b_{2}
+	\end{array} \right|$.\\
+	
+	En el capítulo de matrices veremos mas formalmente el concepto de determinante de una matriz.
+</div>\EndKnitrBlock{remark}
+
+Note que $u\cdot (u\times v)=a_{1}(a_{2}b_{3}-a_{3}b_{2})+ a_{2}(a_{3}b_{1}-a_{1}b_{3})+ a_{3}(a_{1}b_{2}-a_{2}b_{1})=0$ lo que implica que $u\perp u\times v$. De forma análoga se muestra que $v\perp u\times v$.
+
+El producto vectorial tiene las siguientes propiedades:
+Sean $u,v, w\in \mathbb{R}^{3}$ vectores en el espacio y $\lambda\in \mathbb{R}$ un escalar, se tiene que:
+
+	(1) $u\times \vec{0}=\vec{0}$,
+	(2) $u\times u=\vec{0}$,
+	(3) $u\times v= -(v\times u)$,
+	(4) $\lambda (u\times v)= (\lambda u)\times v=u\times (\lambda v)$,
+	(5) $u\times (v+w)=(u\times v) + (u\times w)$,
+	(6) $u\times (v\times w)=(u\cdot w)v-(u\cdot v)w$,
+	(7) $u\cdot (v\times w)=(u\times v)\cdot w$.
+
+
+Por último definiremos el *producto mixto* o *triple producto escalar*:
+
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-20"><strong>(\#def:unnamed-chunk-20) </strong></span>	Dados los vectores $u,v, w\in \mathbb{R}^{3}$, el **producto mixto** es la operación que denotaremos $[u,v,w]=u\cdot(v\times w)$.
+</div>\EndKnitrBlock{definition}
+
+El producto mixto tiene las siguientes propiedades:
+Sean $u,v, w,\in \mathbb{R}^{3}$ vectores en el espacio, se tiene que:
+
+	(1) $[u,v,w]=[v,w,u]=[w,u,v]$,
+	(2) $[u,v,w]=u\cdot(v\times w)=v\cdot(w\times u)=w\cdot(u\times v)$,
+	(3) $[u,v,w]=0$ si y solo si $u$, $v$ y $w$ son coplanares,
+	(4) es trilineal, es decir: 
+			(i) $[(\lambda u+ \delta u'),v,w]=[\lambda u,v,w]+[\delta u',v,w]$, para cualquier vector $u'$ y cualesquiera escalares $\lambda$ y $\delta$.
+		  (ii) $[u,(\lambda v+ \delta v'),w]=[u,\lambda v,w]+[u,\delta v',w]$, para cualquier vector $v'$ y cualesquiera escalares $\lambda$ y $\delta$.
+		  (iii) $[u,v,(\lambda w+ \delta w')]=[u,v,\lambda w]+[u,v,\delta w']$, para cualquier vector $w'$ y cualesquiera escalares $\lambda$ y $\delta$.
+  (5) es antisimétrica: $[u,v,w]=-[v,u,w]=-[u,w,v]=[w,v,u]$.
+
+
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	Interpretación geométrica del producto mixto: así como el módulo del producto vectorial $u\times v$ corresponde al área del paralelogramo que forman los vectores $u$ y $u$; el producto mixto $[u,v,w]$ es igual al volumen del paralelepípedo que ellos forman. Esto es fácil de demostrar pues el  volumen $V$ es igual a la base del paralelogramo, que es igual al módulo del producto vectorial, por la altura $h$ que es igual a $|w|\cos\theta$, por lo tanto $V=A h=|(u\times v)||w|\cos\theta=|(u\times v)\cdot w|=|[u,v,w]|$.
+	(INSERTAR IMAGEN)
+</div>\EndKnitrBlock{remark}
+
 ##Rectas y Planos
 
 
@@ -105,7 +163,7 @@ El producto escalar tiene las siguientes propiedades:
 
 En esta sección estudiaremos las rectas como objetos en el espacio $\mathbb{R}^{3}$. Una recta es un conjunto infinito de puntos que siguen una determinada  dirección y que pasa por un punto conocido en el espacio. Más formalmente:
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-19"><strong>(\#def:unnamed-chunk-19) </strong></span>	Dado un punto $P(x_{0},y_{0},z_{0})$ y un vector $u=(a,b,c)$, la recta que pasa por $P$ y está en la misma dirección que el vector $u$, es el conjunto de puntos $X(x,y,z)$ que cumplen que $\vec{PX}=\lambda u$, para algún número real $\lambda$, es decir, el vector $\vec{PX}$ es un múltiplo escalar del vector $u$. En este caso el vector $u$ se llamará **vector director** de la recta.
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-22"><strong>(\#def:unnamed-chunk-22) </strong></span>	Dado un punto $P(x_{0},y_{0},z_{0})$ y un vector $u=(a,b,c)$, la recta que pasa por $P$ y está en la misma dirección que el vector $u$, es el conjunto de puntos $X(x,y,z)$ que cumplen que $\vec{PX}=\lambda u$, para algún número real $\lambda$, es decir, el vector $\vec{PX}$ es un múltiplo escalar del vector $u$. En este caso el vector $u$ se llamará **vector director** de la recta.
 </div>\EndKnitrBlock{definition}
 
 Note que la ecuación $\vec{PX}=\lambda u$ es equivalente a $X=P+\lambda u$, es decir 
@@ -157,7 +215,7 @@ A'x+B'y+C'z+D'=&0
 
 Estás últimas son las **ecuaciones implícitas** de la recta o **ecuaciones cartesianas**, las cuales representan la intersección de dos planos (veremos este tema más adelante).
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-20"><strong>(\#exm:unnamed-chunk-20) </strong></span>	La recta que pasa por el punto $P(1,0,1)$ y tiene la dirección del vector $u=(4,5,-1)$ tiene la siguiente ecuación vectorial:  $(x,y,z)=(1,0,1)+\lambda(4,5,-1)$.
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-23"><strong>(\#exm:unnamed-chunk-23) </strong></span>	La recta que pasa por el punto $P(1,0,1)$ y tiene la dirección del vector $u=(4,5,-1)$ tiene la siguiente ecuación vectorial:  $(x,y,z)=(1,0,1)+\lambda(4,5,-1)$.
 	La ecuaciones paramétricas son:
 	$$\left\{ \begin{array}{ll}
 	x=&1+4\lambda\\
@@ -178,7 +236,7 @@ Estás últimas son las **ecuaciones implícitas** de la recta o **ecuaciones ca
 		\right.$$ 
 	corresponde a la ecuación cartesiana de la recta.</div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-21"><strong>(\#exm:unnamed-chunk-21) </strong></span>	La recta que pasa por los puntos $A(1,0,1)$ y $B(0,1,1)$ viene dada por la ecuación vectorial  $(x,y,z)=(1,0,1)+\lambda(-1,1,0)$, ya que un vector director es $\vec{AB}$.
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-24"><strong>(\#exm:unnamed-chunk-24) </strong></span>	La recta que pasa por los puntos $A(1,0,1)$ y $B(0,1,1)$ viene dada por la ecuación vectorial  $(x,y,z)=(1,0,1)+\lambda(-1,1,0)$, ya que un vector director es $\vec{AB}$.
 	La ecuaciones paramétricas son:
 	$$\left\{ \begin{array}{ll}
 	x=&1-\lambda\\
@@ -198,6 +256,27 @@ Estás últimas son las **ecuaciones implícitas** de la recta o **ecuaciones ca
 	\end{array}
 	\right.$$ 
 	Note que la ecuación $z=1$ es el plano paralelo al plano $XY$ con altura en uno (1).</div>\EndKnitrBlock{example}
+**Posici\'on relativa de dos rectas en el espacio.**
+
+Dos rectas en el espacio pueden intersectarse o no. En el caso que se intersecten, estas forman un ángulo entre ellas pues estarían en el mismo plano, este ángulo pudiese ser un ángulo recto, lo que las haría perpendiculares entre sí. En el caso que no se intersecten, puede que sean paralelas entre sí o simplemente cruzarse sin tocarse (también se les dice alabeadas). Veamos esto en detalle:
+
+Dadas dos rectas $\mathit{l}_{1}$ y $\mathit{l}_{2}$ de ecuacines $P+\lambda u$ y $Q+\delta v$, con $\lambda, \delta\in\mathbb{R}$, se tiene que:
+
+	(1) $\mathit{l}_{1}$ y $\mathit{l}_{2}$ son paralelas si y solo si sus vectores directores $u$ y $v$ son paralelos. Lo denotamos por $\mathit{l}_{1}\parallel \mathit{l}_{2}$.
+	(2) $\mathit{l}_{1}$ y $\mathit{l}_{2}$ son perpendiculares (u ortogonales) si y solo si sus vectores directores $u$ y $v$ lo son. Esto lo denotamos por $\mathit{l}_{1}\perp\mathit{l}_{2}$.
+	(3) $\mathit{l}_{1}$ y $\mathit{l}_{2}$ se intersectan si y solo si $[u,v,\vec{PQ}]=(u\times v)\cdot \vec{PQ}=0$, ya que el vector $u\times v$ es perpendicular al plano que forman las rectas y como el vector $\vec{PQ}$ pertenece a este plano, es también perpendicular a $u\times v$.
+	(4) $\mathit{l}_{1}$ y $\mathit{l}_{2}$ se cruzan sin intersectarse si y solo si $[u,v,\vec{PQ}]=(u\times v)\cdot \vec{PQ}\neq0$. No son paralelas y no pertenecen al mismo plano.
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-25"><strong>(\#exm:unnamed-chunk-25) </strong></span>	Dadas las rectas $\mathit{l}_{1}: (0,1,2)+\lambda(1,1,1)$, $\lambda\in \mathbb{R}$ y 
+	$\mathit{l}_{2}:\left\lbrace \begin{array}{ll}
+	x=& \delta\\
+	y=& \delta\\
+	z=& 0
+	\end{array}
+	\right.$, con $\delta\in\mathbb{R}.$
+Se tiene que el vector director de $\mathit{l}_{1}$ es $(1,1,1)$ y el vector director de $\mathit{l}_{2}$ es $(1,1,0)$ no son paralelos, por lo tanto las rectas no son paralelas. Tampoco son perpendiculares ya que $u\cdot v=|u||v|\cos\theta$, donde $\theta$ es el ángulo que forman los vectores $u$ y $v$. Por lo tanto $\cos\theta=\frac{u\cdot v}{|u||v|}=\frac{\sqrt{6}}{3}$, por lo tanto $\theta\neq0$. las rectas pueden ser rectas que se intersecten o que solo se crucen, para ver esto calculemos $[u,v,\vec{PQ}]={(1,1,1)\times(1,1,0)}\cdot (0,-1,-2)=(-1,1,0)\cdot(0,-1,-2)=0-1+0=-1\neq0$ por lo tanto las rectas se cruzan (no se intesectan).
+</div>\EndKnitrBlock{example}
+
 
 ###Rectas en el plano
 
@@ -245,11 +324,11 @@ y=m(x-x_{0})+y_{0}
 (\#eq:puntopend)
 \end{equation}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-22"><strong>(\#exm:unnamed-chunk-22) </strong></span>	Para hallar la ecuación de la recta que pasa por el punto $A(3,1)$ y tiene pendiente $m=\frac{1}{2}$ usamos la ecuación punto pediente \@ref(eq:puntopend),
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-26"><strong>(\#exm:unnamed-chunk-26) </strong></span>	Para hallar la ecuación de la recta que pasa por el punto $A(3,1)$ y tiene pendiente $m=\frac{1}{2}$ usamos la ecuación punto pediente \@ref(eq:puntopend),
 	$y=\frac{1}{2}(x-3)+1$ por lo tanto $y=\frac{1}{2}x-\frac{1}{2}$. Reagrupando términos y multiplicando por $2$, obtenemos la ecuación implícita \@ref(eq:ecimppla): $x-2y-1=0$.
 </div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-23"><strong>(\#exm:unnamed-chunk-23) </strong></span>	Dada la ecuación cartesiana de la recta $5x-3y+1=0$, podemos hallar la pendiente de la recta despejando $y$ de la ecuación cartesiana, de la siguiente forma: $y=\frac{5}{3}x+\frac{1}{3}$. De donde se sigue que la pendiente es $m=\frac{5}{3}$. Además, directamente de la ecuación explícita, podemos decir que el punto de corte con el eje $Y$ es $n=\frac{1}{3}$. Para hallar el punto de corte con el eje $X$, despejamos $x$ de $0=\frac{5}{3}x+\frac{1}{3}$, así $x=\frac{-1}{5}$.
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-27"><strong>(\#exm:unnamed-chunk-27) </strong></span>	Dada la ecuación cartesiana de la recta $5x-3y+1=0$, podemos hallar la pendiente de la recta despejando $y$ de la ecuación cartesiana, de la siguiente forma: $y=\frac{5}{3}x+\frac{1}{3}$. De donde se sigue que la pendiente es $m=\frac{5}{3}$. Además, directamente de la ecuación explícita, podemos decir que el punto de corte con el eje $Y$ es $n=\frac{1}{3}$. Para hallar el punto de corte con el eje $X$, despejamos $x$ de $0=\frac{5}{3}x+\frac{1}{3}$, así $x=\frac{-1}{5}$.
 </div>\EndKnitrBlock{example}
 Dos rectas en plano pueden ser **rectas paralelas**, en ese caso tienen la misma pendiente (forman el mismo ángulo con el eje $X$), es decir, si la recta $\mathit{l}_{1}$ tiene ecuación $y=mx+n$ y la recta $\mathit{l}_{2}$ tiene ecuación $y=px+q$, entonces $\mathit{l}_{1}$ es paralela a $\mathit{l}_{2}$ si y solo si $m=p$, esto se denota $\mathit{l}_{1} \parallel \mathit{l}_{2}$.
 
@@ -260,8 +339,8 @@ Si dos rectas $\mathit{l}_{1}$ y $\mathit{l}_{2}$ de ecuaciones $y=mx+n$ y $y=px
 
 Dos rectas no paralelas $\mathit{l}_{1}$ y $\mathit{l}_{2}$ de ecuaciones $y=mx+n$ y $y=px+q$ respectivamente, se intersectan en un punto del plano $(x_{0},y_{0})$, por lo tanto satisface ambas ecuaciones simultaneamente, es decir, $y_{0}=mx_{0}+n$ y $y_{0}=px_{0}+q$. Luego $mx_{0}+n=y_{0}=px_{0}+q$ por lo tanto $mx_{0}-px_{0}=q-n\Leftrightarrow x_{0}=\frac{q-n}{m-p}$ y así, $y_{0}=m(\frac{q-n}{m-p})+n$. En este caso el punto de intersección entre las rectas es $$\left( \frac{q-n}{m-p},m(\frac{q-n}{m-p})+n\right) .$$
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-25"><strong>(\#exm:unnamed-chunk-25) </strong></span>	Las rectas $\mathit{l}_{1}:y=2x+3$ y $\mathit{l}_{2}:y=2x-1$ son rectas paralelas. Y son perpendiculares a $\mathit{l}_{3}: y=-\frac{1}{2}x+1$. Además, el punto de intersección entre $\mathit{l}_{1}$ y $\mathit{l}_{2}$ es $x_{0}=\frac{1-3}{2+\frac{1}{2}}=\frac{-4}{5}$ y $y_{0}=2(\frac{-4}{5})+3=\frac{7}{5}$.
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-29"><strong>(\#exm:unnamed-chunk-29) </strong></span>	Las rectas $\mathit{l}_{1}:y=2x+3$ y $\mathit{l}_{2}:y=2x-1$ son rectas paralelas. Y son perpendiculares a $\mathit{l}_{3}: y=-\frac{1}{2}x+1$. Además, el punto de intersección entre $\mathit{l}_{1}$ y $\mathit{l}_{2}$ es $x_{0}=\frac{1-3}{2+\frac{1}{2}}=\frac{-4}{5}$ y $y_{0}=2(\frac{-4}{5})+3=\frac{7}{5}$.
 </div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-26"><strong>(\#exm:unnamed-chunk-26) </strong></span>	La recta perpendicular a $\mathit{l}_{1}:\frac{-2}{3}x+3$ que pasa por el punto $A(-2,1)$ tiene por ecuación $y=\frac{3}{2}(x-(-2))+1$ es decir $y=\frac{-3}{2}x+4$.
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-30"><strong>(\#exm:unnamed-chunk-30) </strong></span>	La recta perpendicular a $\mathit{l}_{1}:\frac{-2}{3}x+3$ que pasa por el punto $A(-2,1)$ tiene por ecuación $y=\frac{3}{2}(x-(-2))+1$ es decir $y=\frac{-3}{2}x+4$.
 </div>\EndKnitrBlock{example}
