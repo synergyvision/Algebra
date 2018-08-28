@@ -1435,11 +1435,34 @@ Dadas dos rectas $\mathit{l}_{1}$ y $\mathit{l}_{2}$ de ecuacines $P+\lambda u$ 
 	y=& \delta\\
 	z=& 0
 	\end{array}
-	\right.$, con $\delta\in\mathbb{R}$.
-	
-	Se tiene que el vector director de $\mathit{l}_{1}$ es $(1,1,1)$ y el vector director de $\mathit{l}_{2}$ es $(1,1,0)$ no son paralelos, por lo tanto las rectas no son paralelas. Tampoco son perpendiculares ya que $u\cdot v=|u||v|\cos\theta$, donde $\theta$ es el ángulo que forman los vectores $u$ y $v$. Por lo tanto $\cos\theta=\frac{u\cdot v}{|u||v|}=\frac{\sqrt{6}}{3}$, por lo tanto $\theta\neq0$. las rectas pueden ser rectas que se intersecten o que solo se crucen, para ver esto calculemos $[u,v,\vec{PQ}]={(1,1,1)\times(1,1,0)}\cdot (0,-1,-2)=(-1,1,0)\cdot(0,-1,-2)=0-1+0=-1\neq0$ por lo tanto las rectas se cruzan (no se intesectan).
+	\right.$, con $\delta\in\mathbb{R}.$
+Se tiene que el vector director de $\mathit{l}_{1}$ es $(1,1,1)$ y el vector director de $\mathit{l}_{2}$ es $(1,1,0)$ no son paralelos, por lo tanto las rectas no son paralelas. Tampoco son perpendiculares ya que $u\cdot v=|u||v|\cos\theta$, donde $\theta$ es el ángulo que forman los vectores $u$ y $v$. Por lo tanto $\cos\theta=\frac{u\cdot v}{|u||v|}=\frac{\sqrt{6}}{3}$, por lo tanto $\theta\neq0$. las rectas pueden ser rectas que se intersecten o que solo se crucen, para ver esto calculemos $[u,v,\vec{PQ}]={(1,1,1)\times(1,1,0)}\cdot (0,-1,-2)=(-1,1,0)\cdot(0,-1,-2)=0-1+0=-1\neq0$ por lo tanto las rectas se cruzan (no se intesectan).
 </div>\EndKnitrBlock{example}
 
+**Distancia de un punto a una recta**
+
+Dada la recta $\mathit{l}: P_{0}+\lambda u$, con $\lambda\in \mathbb{R}$ y un punto en el espacio $Q\in \mathbb{R}^{3}$, el área $A$ del paralelogramo que forman los puntos $P_{0}$, $Q$ y el vector $u$ viene dada por el valor absoluto del producto vectorial entre $\vec{P_{0}Q}$ y $u$, es decir, $A=|\vec{P_{0}Q}\times u|$. Si tomamos el vector $u$ como base y llamamos $h$ a la altura del paralelogramo (y la distancia de la recta al punto $Q$), entonces $A=|u|h$, como lo muestra la figura (INSERTAR FIGURA). Pero $h=|\vec{P_{0}Q}|\sen\theta$, donde $\theta$ es el ángulo que forman los vectores $\vec{P_{0}Q}$ y $u$. Por lo tanto $A=|\vec{P_{0}Q}\times u|=|u||\vec{P_{0}Q}|\sen\theta=|u|h$, despejando $h$, se tiene que $h=\frac{|\vec{P_{0}Q}\times u|}{|u|}$, es decir,
+
+\begin{equation}
+	d(\mathit{l},Q)=\frac{|\vec{P_{0}Q}\times u|}{|u|}
+	(\#eq:dpuntorecta)
+\end{equation}
+
+**Distancia entre dos rectas**
+
+La distacia entre dos rectas es la menor distancia entre los puntos entre ellas, es decir, dadas las rectas $\mathit{l}_{1}$ y $\mathit{l}_{2}$, la distancia entre ellas vienen dada por la menor distancia entre los puntos de ambas, es decir $d(\mathit{l}_{1},\mathit{l}_{2})$ es la menor distancia $d(P,Q)$, donde $P\in\mathit{l}_{1}$ y $Q\in\mathit{l}_{2}$. Es claro que la distancia entre dos rectas es cero si estas se intersectan. Pero si son paralelas o se cruzan, podemos calcular la distancia entre ellas haciendo uso de la ecuación anterior \ref@{eq=dpuntorecta}, considerando una de las rectas y escogiendo un punto en la otra recta. La elección del punto debe hacerse de forma tal que la distancia del punto a la recta sea mínima.
+Cuando las rectas son paralelas, cualquier punto sobre la otra recta servirá y por lo tanto se usará la misma ecuación \ref@{eq=dpuntorecta}.
+Pero en el caso de que sean rectas que se cruzan, el punto debe ser elegido sobre la recta perpendicular a ambas rectas. Mas específicamente, dadas las rectas $\mathit{l}_{1}:P_{0}+\lambda u$ y $\mathit{l}_{2}:Q_{0}+\delta v$. Sea $\mathit{l}$ una recta perpendicular a $\mathit{l}_{1}$ y $\mathit{l}_{2}$ y que las intersectan. Sean $P$ y $Q$ los puntos de intersección de la recta $\mathit{l}$ con las rectas $\mathit{l}_{1}$ y $\mathit{l}_{2}$ respectivamente. El volumen $V$ del paralelepípedo que se forma con las rectas es igual a módulo de producto mixto, esto es, $V=|[\vec{PQ},u,v]|$. Por otro lado, el volumen es igual al producto de $|u\times v|$ por la distancia entre las rectas, es decir, $V=|u\times v|d(\mathit{l}_{1},\mathit{l}_{2})$ (INSERTAR IMAGEN). Por lo tanto, $V=|[\vec{PQ},u,v]|=|u\times v|d(\mathit{l}_{1},\mathit{l}_{2})$, despejando $d(\mathit{l}_{1},\mathit{l}_{2})$, se sigue que 
+\begin{equation}
+	d(\mathit{l}_{1},\mathit{l}_{2})=\frac{|[\vec{PQ},u,v]|}{|u\times v|}
+	(\#eq:drectas)
+\end{equation}
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-201"><strong>(\#exm:unnamed-chunk-201) </strong></span>	La distancia entre las rectas $\mathit{l}_{1}:x-1=7(z-3), y=6$ y $\mathit{l}_{2}:(4,2,7)+\lambda (-7,0,-1)$ se puede calcular tomando un punto de $\mathit{l}_{2}$, digamos $Q_{0}=(4,2,7)$ y calculando $d(\mathit{l}_{1}, Q_{0})$. Hallemos la ecuación vectorial de la recta $\mathit{l}_{1}$, de la ecuación continua de la recta, deducimos que $\mathit{l}_{1}:(1,6,3)+\lambda(7,0,1)$. Note que las rectas son paralelas (los vectores directores son paralelos). Luego la distancia entre las rectas $d(\mathit{l}_{1},\mathit{l}_{2})$ es igual a $d(\mathit{l}_{1},Q_{0})$, es decir $$d(\mathit{l}_{1},\mathit{l}_{2})=d(\mathit{l}_{1},Q_{0})=d(\mathit{l}_{1},(4,2,7))=\frac{|\vec{P_{0}Q_{0}\times (7,0,1)|}}{|(7,0,1)|}$$ sabemos que $\vec{P_{0}Q_{0}}=(4-1,2-6,7-3)=(3,-4,4)$, por lo tanto $$d(\mathit{l}_{1},Q_{0})=\frac{|(3,-4,4)\times(7,0,1)|}{|(7,0,1)|=\frac{|(-4,25,28)|}{\sqrt{50}}}=\frac{\sqrt{1425}}{5\sqrt{2}}=\frac{\sqrt{114}}{2}$$.
+</div>\EndKnitrBlock{example}
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-202"><strong>(\#exm:unnamed-chunk-202) </strong></span>	Para calcular la distancia entre las rectas $\mathit{l}_{1}:x-2=\frac{y+3}{2}=z$ y $\mathit{l}_{2}:x=y=z$ usaremos la ecuación \@ref{eq=drectas}. Comenzamos por calcular $\vec{PQ}$, donde $P$ es un punto sobre $\mathit{l}_{1}$ y $Q$ un punto sobre $\mathit{l}_{2}$, $\vec{PQ}= (-2,3,0)$, ya que $\mathit{l}_{1}: (2,-3,0)+\lambda(1,2,1)$ y $\mathit{l}_{2}:(0,0,0)=\delta(1,1,1)$. Note que efectivamente las rectas son alabeadas ya que $[\vec{PQ},u,v]=(u\times v)\cdot\vec{PQ}=(1,0,-1)\cdot(-2,3,0)=-2\neq 0$. Ahora, $d(\mathit{l}_{1},\mathit{l}_{2})=\frac{|[\vec{PQ},u,v]|}{|u\times v|}=\frac{|-2|}{|\sqrt{2}|}=\sqrt{2}$.
+</div>\EndKnitrBlock{example}
 
 ###Rectas en el plano
 
@@ -1487,11 +1510,11 @@ y=m(x-x_{0})+y_{0}
 (\#eq:puntopend)
 \end{equation}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-201"><strong>(\#exm:unnamed-chunk-201) </strong></span>	Para hallar la ecuación de la recta que pasa por el punto $A(3,1)$ y tiene pendiente $m=\frac{1}{2}$ usamos la ecuación punto pediente \@ref(eq:puntopend),
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-203"><strong>(\#exm:unnamed-chunk-203) </strong></span>	Para hallar la ecuación de la recta que pasa por el punto $A(3,1)$ y tiene pendiente $m=\frac{1}{2}$ usamos la ecuación punto pediente \@ref(eq:puntopend),
 	$y=\frac{1}{2}(x-3)+1$ por lo tanto $y=\frac{1}{2}x-\frac{1}{2}$. Reagrupando términos y multiplicando por $2$, obtenemos la ecuación implícita \@ref(eq:ecimppla): $x-2y-1=0$.
 </div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-202"><strong>(\#exm:unnamed-chunk-202) </strong></span>	Dada la ecuación cartesiana de la recta $5x-3y+1=0$, podemos hallar la pendiente de la recta despejando $y$ de la ecuación cartesiana, de la siguiente forma: $y=\frac{5}{3}x+\frac{1}{3}$. De donde se sigue que la pendiente es $m=\frac{5}{3}$. Además, directamente de la ecuación explícita, podemos decir que el punto de corte con el eje $Y$ es $n=\frac{1}{3}$. Para hallar el punto de corte con el eje $X$, despejamos $x$ de $0=\frac{5}{3}x+\frac{1}{3}$, así $x=\frac{-1}{5}$.
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-204"><strong>(\#exm:unnamed-chunk-204) </strong></span>	Dada la ecuación cartesiana de la recta $5x-3y+1=0$, podemos hallar la pendiente de la recta despejando $y$ de la ecuación cartesiana, de la siguiente forma: $y=\frac{5}{3}x+\frac{1}{3}$. De donde se sigue que la pendiente es $m=\frac{5}{3}$. Además, directamente de la ecuación explícita, podemos decir que el punto de corte con el eje $Y$ es $n=\frac{1}{3}$. Para hallar el punto de corte con el eje $X$, despejamos $x$ de $0=\frac{5}{3}x+\frac{1}{3}$, así $x=\frac{-1}{5}$.
 </div>\EndKnitrBlock{example}
 Dos rectas en plano pueden ser **rectas paralelas**, en ese caso tienen la misma pendiente (forman el mismo ángulo con el eje $X$), es decir, si la recta $\mathit{l}_{1}$ tiene ecuación $y=mx+n$ y la recta $\mathit{l}_{2}$ tiene ecuación $y=px+q$, entonces $\mathit{l}_{1}$ es paralela a $\mathit{l}_{2}$ si y solo si $m=p$, esto se denota $\mathit{l}_{1} \parallel \mathit{l}_{2}$.
 
@@ -1502,10 +1525,10 @@ Si dos rectas $\mathit{l}_{1}$ y $\mathit{l}_{2}$ de ecuaciones $y=mx+n$ y $y=px
 
 Dos rectas no paralelas $\mathit{l}_{1}$ y $\mathit{l}_{2}$ de ecuaciones $y=mx+n$ y $y=px+q$ respectivamente, se intersectan en un punto del plano $(x_{0},y_{0})$, por lo tanto satisface ambas ecuaciones simultaneamente, es decir, $y_{0}=mx_{0}+n$ y $y_{0}=px_{0}+q$. Luego $mx_{0}+n=y_{0}=px_{0}+q$ por lo tanto $mx_{0}-px_{0}=q-n\Leftrightarrow x_{0}=\frac{q-n}{m-p}$ y así, $y_{0}=m(\frac{q-n}{m-p})+n$. En este caso el punto de intersección entre las rectas es $$\left( \frac{q-n}{m-p},m(\frac{q-n}{m-p})+n\right) .$$
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-204"><strong>(\#exm:unnamed-chunk-204) </strong></span>	Las rectas $\mathit{l}_{1}:y=2x+3$ y $\mathit{l}_{2}:y=2x-1$ son rectas paralelas. Y son perpendiculares a $\mathit{l}_{3}: y=-\frac{1}{2}x+1$. Además, el punto de intersección entre $\mathit{l}_{1}$ y $\mathit{l}_{2}$ es $x_{0}=\frac{1-3}{2+\frac{1}{2}}=\frac{-4}{5}$ y $y_{0}=2(\frac{-4}{5})+3=\frac{7}{5}$.
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-206"><strong>(\#exm:unnamed-chunk-206) </strong></span>	Las rectas $\mathit{l}_{1}:y=2x+3$ y $\mathit{l}_{2}:y=2x-1$ son rectas paralelas. Y son perpendiculares a $\mathit{l}_{3}: y=-\frac{1}{2}x+1$. Además, el punto de intersección entre $\mathit{l}_{1}$ y $\mathit{l}_{2}$ es $x_{0}=\frac{1-3}{2+\frac{1}{2}}=\frac{-4}{5}$ y $y_{0}=2(\frac{-4}{5})+3=\frac{7}{5}$.
 </div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-205"><strong>(\#exm:unnamed-chunk-205) </strong></span>	La recta perpendicular a $\mathit{l}_{1}:\frac{-2}{3}x+3$ que pasa por el punto $A(-2,1)$ tiene por ecuación $y=\frac{3}{2}(x-(-2))+1$ es decir $y=\frac{-3}{2}x+4$.
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-207"><strong>(\#exm:unnamed-chunk-207) </strong></span>	La recta perpendicular a $\mathit{l}_{1}:\frac{-2}{3}x+3$ que pasa por el punto $A(-2,1)$ tiene por ecuación $y=\frac{3}{2}(x-(-2))+1$ es decir $y=\frac{-3}{2}x+4$.
 </div>\EndKnitrBlock{example}
 
 <!--chapter:end:030-vectores.Rmd-->
