@@ -134,6 +134,70 @@ El producto escalar tiene las siguientes propiedades:
 
 ```
 
+Otra forma de calcular el producto vectorial entre dos vectores $u=(a_{1},a_{2}, a_{3})$ y $v=(b_{1}, b_{2}, b_{3})$ es esta $u\times v=(a_{2}b_{3}-a_{3}b_{2}, a_{3}b_{1}-a_{1}b_{3}, a_{1}b_{2}-a_{2}b_{1})$, la cual resulta muy práctica en el caso de conocer las componetes de los vectores. 
+
+```{remark}
+	Si definimos el determinante de una matriz $2x2$ como sigue: 
+	$$\left|  \begin{array}{ll} 
+	a & b\\ 
+	c & d
+	\end{array} \right| = ad-bc$$, entonces el producto vectorial se pude calcular como sigue:\\
+	$u\times v=(x,y,z)$ donde 
+	$x=\left|  \begin{array}{ll} 
+	a_{2} & a_{3}\\ 
+	b_{2} & b_{3}
+	\end{array} \right|$, $x=\left|  \begin{array}{ll} 
+	a_{1} & a_{3}\\ 
+	b_{1} & b_{3}
+	\end{array} \right|$, $x=\left|  \begin{array}{ll} 
+	a_{1} & a_{2}\\ 
+	b_{1} & b_{2}
+	\end{array} \right|$.\\
+	
+	En el capítulo de matrices veremos mas formalmente el concepto de determinante de una matriz.
+
+```
+
+Note que $u\cdot (u\times v)=a_{1}(a_{2}b_{3}-a_{3}b_{2})+ a_{2}(a_{3}b_{1}-a_{1}b_{3})+ a_{3}(a_{1}b_{2}-a_{2}b_{1})=0$ lo que implica que $u\perp u\times v$. De forma análoga se muestra que $v\perp u\times v$.
+
+El producto vectorial tiene las siguientes propiedades:
+Sean $u,v, w\in \mathbb{R}^{3}$ vectores en el espacio y $\lambda\in \mathbb{R}$ un escalar, se tiene que:
+
+	(1) $u\times \vec{0}=\vec{0}$,
+	(2) $u\times u=\vec{0}$,
+	(3) $u\times v= -(v\times u)$,
+	(4) $\lambda (u\times v)= (\lambda u)\times v=u\times (\lambda v)$,
+	(5) $u\times (v+w)=(u\times v) + (u\times w)$,
+	(6) $u\times (v\times w)=(u\cdot w)v-(u\cdot v)w$,
+	(7) $u\cdot (v\times w)=(u\times v)\cdot w$.
+
+
+Por último definiremos el *producto mixto* o *triple producto escalar*:
+
+```{definition}
+	Dados los vectores $u,v, w\in \mathbb{R}^{3}$, el **producto mixto** es la operación que denotaremos $[u,v,w]=u\cdot(v\times w)$.
+
+```
+
+El producto mixto tiene las siguientes propiedades:
+Sean $u,v, w,\in \mathbb{R}^{3}$ vectores en el espacio, se tiene que:
+
+	(1) $[u,v,w]=[v,w,u]=[w,u,v]$,
+	(2) $[u,v,w]=u\cdot(v\times w)=v\cdot(w\times u)=w\cdot(u\times v)$,
+	(3) $[u,v,w]=0$ si y solo si $u$, $v$ y $w$ son coplanares,
+	(4) es trilineal, es decir: 
+			(i) $[(\lambda u+ \delta u'),v,w]=[\lambda u,v,w]+[\delta u',v,w]$, para cualquier vector $u'$ y cualesquiera escalares $\lambda$ y $\delta$.
+		  (ii) $[u,(\lambda v+ \delta v'),w]=[u,\lambda v,w]+[u,\delta v',w]$, para cualquier vector $v'$ y cualesquiera escalares $\lambda$ y $\delta$.
+		  (iii) $[u,v,(\lambda w+ \delta w')]=[u,v,\lambda w]+[u,v,\delta w']$, para cualquier vector $w'$ y cualesquiera escalares $\lambda$ y $\delta$.
+  (5) es antisimétrica: $[u,v,w]=-[v,u,w]=-[u,w,v]=[w,v,u]$.
+
+
+```{remark}
+	Interpretación geométrica del producto mixto: así como el módulo del producto vectorial $u\times v$ corresponde al área del paralelogramo que forman los vectores $u$ y $u$; el producto mixto $[u,v,w]$ es igual al volumen del paralelepípedo que ellos forman. Esto es fácil de demostrar pues el  volumen $V$ es igual a la base del paralelogramo, que es igual al módulo del producto vectorial, por la altura $h$ que es igual a $|w|\cos\theta$, por lo tanto $V=A h=|(u\times v)||w|\cos\theta=|(u\times v)\cdot w|=|[u,v,w]|$.
+	(INSERTAR IMAGEN)
+
+```
+
 ##Rectas y Planos
 
 

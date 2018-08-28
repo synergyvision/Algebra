@@ -25,7 +25,7 @@
 <meta name="author" content="Synergy Vision">
 
 
-<meta name="date" content="2018-08-22">
+<meta name="date" content="2018-08-27">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -294,6 +294,47 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p> <span class="remark"><em>Nota. </em></span>  La regla de la mano derecha consiste en dar el mismo sentido al producto vectorial de <span class="math inline">\(u\times v\)</span> que el avance de un sacacorchos al girar desde el vector <span class="math inline">\(u\)</span> al vector <span class="math inline">\(v\)</span>. (insertar imagen) Desde el punto de vista geométrico, el módulo del producto vectorial corresponde al área del paralelogramo que forman los vectores <span class="math inline">\(u\)</span> y <span class="math inline">\(v\)</span> y las rectas paralelas a estos. (insertar imagen)</p>
 </div>
 
+<p>Otra forma de calcular el producto vectorial entre dos vectores <span class="math inline">\(u=(a_{1},a_{2}, a_{3})\)</span> y <span class="math inline">\(v=(b_{1}, b_{2}, b_{3})\)</span> es esta <span class="math inline">\(u\times v=(a_{2}b_{3}-a_{3}b_{2}, a_{3}b_{1}-a_{1}b_{3}, a_{1}b_{2}-a_{2}b_{1})\)</span>, la cual resulta muy práctica en el caso de conocer las componetes de los vectores.</p>
+
+<div class="remark">
+<p> <span class="remark"><em>Nota. </em></span>  Si definimos el determinante de una matriz <span class="math inline">\(2x2\)</span> como sigue: <span class="math display">\[\left|  \begin{array}{ll} 
+    a &amp; b\\ 
+    c &amp; d
+    \end{array} \right| = ad-bc\]</span>, entonces el producto vectorial se pude calcular como sigue:\ <span class="math inline">\(u\times v=(x,y,z)\)</span> donde <span class="math inline">\(x=\left| \begin{array}{ll}  a_{2} &amp; a_{3}\\  b_{2} &amp; b_{3}  \end{array} \right|\)</span>, <span class="math inline">\(x=\left| \begin{array}{ll}  a_{1} &amp; a_{3}\\  b_{1} &amp; b_{3}  \end{array} \right|\)</span>, <span class="math inline">\(x=\left| \begin{array}{ll}  a_{1} &amp; a_{2}\\  b_{1} &amp; b_{2}  \end{array} \right|\)</span>.\</p>
+<pre><code>En el capítulo de matrices veremos mas formalmente el concepto de determinante de una matriz.</code></pre>
+</div>
+
+<p>Note que <span class="math inline">\(u\cdot (u\times v)=a_{1}(a_{2}b_{3}-a_{3}b_{2})+ a_{2}(a_{3}b_{1}-a_{1}b_{3})+ a_{3}(a_{1}b_{2}-a_{2}b_{1})=0\)</span> lo que implica que <span class="math inline">\(u\perp u\times v\)</span>. De forma análoga se muestra que <span class="math inline">\(v\perp u\times v\)</span>.</p>
+<p>El producto vectorial tiene las siguientes propiedades: Sean <span class="math inline">\(u,v, w\in \mathbb{R}^{3}\)</span> vectores en el espacio y <span class="math inline">\(\lambda\in \mathbb{R}\)</span> un escalar, se tiene que:</p>
+<pre><code>(1) $u\times \vec{0}=\vec{0}$,
+(2) $u\times u=\vec{0}$,
+(3) $u\times v= -(v\times u)$,
+(4) $\lambda (u\times v)= (\lambda u)\times v=u\times (\lambda v)$,
+(5) $u\times (v+w)=(u\times v) + (u\times w)$,
+(6) $u\times (v\times w)=(u\cdot w)v-(u\cdot v)w$,
+(7) $u\cdot (v\times w)=(u\times v)\cdot w$.</code></pre>
+<p>Por último definiremos el <em>producto mixto</em> o <em>triple producto escalar</em>:</p>
+
+<div class="definition">
+<p><span id="def:unnamed-chunk-195" class="definition"><strong>Definición 3.10  </strong></span> Dados los vectores <span class="math inline">\(u,v, w\in \mathbb{R}^{3}\)</span>, el <strong>producto mixto</strong> es la operación que denotaremos <span class="math inline">\([u,v,w]=u\cdot(v\times w)\)</span>.</p>
+</div>
+
+<p>El producto mixto tiene las siguientes propiedades: Sean <span class="math inline">\(u,v, w,\in \mathbb{R}^{3}\)</span> vectores en el espacio, se tiene que:</p>
+<pre><code>(1) $[u,v,w]=[v,w,u]=[w,u,v]$,
+(2) $[u,v,w]=u\cdot(v\times w)=v\cdot(w\times u)=w\cdot(u\times v)$,
+(3) $[u,v,w]=0$ si y solo si $u$, $v$ y $w$ son coplanares,
+(4) es trilineal, es decir: 
+        (i) $[(\lambda u+ \delta u&#39;),v,w]=[\lambda u,v,w]+[\delta u&#39;,v,w]$, para cualquier vector $u&#39;$ y cualesquiera escalares $\lambda$ y $\delta$.
+      (ii) $[u,(\lambda v+ \delta v&#39;),w]=[u,\lambda v,w]+[u,\delta v&#39;,w]$, para cualquier vector $v&#39;$ y cualesquiera escalares $\lambda$ y $\delta$.
+      (iii) $[u,v,(\lambda w+ \delta w&#39;)]=[u,v,\lambda w]+[u,v,\delta w&#39;]$, para cualquier vector $w&#39;$ y cualesquiera escalares $\lambda$ y $\delta$.</code></pre>
+<ol start="5" style="list-style-type: decimal">
+<li>es antisimétrica: <span class="math inline">\([u,v,w]=-[v,u,w]=-[u,w,v]=[w,v,u]\)</span>.</li>
+</ol>
+
+<div class="remark">
+<p> <span class="remark"><em>Nota. </em></span>  Interpretación geométrica del producto mixto: así como el módulo del producto vectorial <span class="math inline">\(u\times v\)</span> corresponde al área del paralelogramo que forman los vectores <span class="math inline">\(u\)</span> y <span class="math inline">\(u\)</span>; el producto mixto <span class="math inline">\([u,v,w]\)</span> es igual al volumen del paralelepípedo que ellos forman. Esto es fácil de demostrar pues el volumen <span class="math inline">\(V\)</span> es igual a la base del paralelogramo, que es igual al módulo del producto vectorial, por la altura <span class="math inline">\(h\)</span> que es igual a <span class="math inline">\(|w|\cos\theta\)</span>, por lo tanto <span class="math inline">\(V=A h=|(u\times v)||w|\cos\theta=|(u\times v)\cdot w|=|[u,v,w]|\)</span>. (INSERTAR IMAGEN)</p>
+</div>
+
 </div>
 </div>
 <div id="rectas-y-planos" class="section level2">
@@ -303,7 +344,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>En esta sección estudiaremos las rectas como objetos en el espacio <span class="math inline">\(\mathbb{R}^{3}\)</span>. Una recta es un conjunto infinito de puntos que siguen una determinada dirección y que pasa por un punto conocido en el espacio. Más formalmente:</p>
 
 <div class="definition">
-<p><span id="def:unnamed-chunk-194" class="definition"><strong>Definición 3.10  </strong></span> Dado un punto <span class="math inline">\(P(x_{0},y_{0},z_{0})\)</span> y un vector <span class="math inline">\(u=(a,b,c)\)</span>, la recta que pasa por <span class="math inline">\(P\)</span> y está en la misma dirección que el vector <span class="math inline">\(u\)</span>, es el conjunto de puntos <span class="math inline">\(X(x,y,z)\)</span> que cumplen que <span class="math inline">\(\vec{PX}=\lambda u\)</span>, para algún número real <span class="math inline">\(\lambda\)</span>, es decir, el vector <span class="math inline">\(\vec{PX}\)</span> es un múltiplo escalar del vector <span class="math inline">\(u\)</span>. En este caso el vector <span class="math inline">\(u\)</span> se llamará <strong>vector director</strong> de la recta.</p>
+<p><span id="def:unnamed-chunk-197" class="definition"><strong>Definición 3.11  </strong></span> Dado un punto <span class="math inline">\(P(x_{0},y_{0},z_{0})\)</span> y un vector <span class="math inline">\(u=(a,b,c)\)</span>, la recta que pasa por <span class="math inline">\(P\)</span> y está en la misma dirección que el vector <span class="math inline">\(u\)</span>, es el conjunto de puntos <span class="math inline">\(X(x,y,z)\)</span> que cumplen que <span class="math inline">\(\vec{PX}=\lambda u\)</span>, para algún número real <span class="math inline">\(\lambda\)</span>, es decir, el vector <span class="math inline">\(\vec{PX}\)</span> es un múltiplo escalar del vector <span class="math inline">\(u\)</span>. En este caso el vector <span class="math inline">\(u\)</span> se llamará <strong>vector director</strong> de la recta.</p>
 </div>
 
 <p>Note que la ecuación <span class="math inline">\(\vec{PX}=\lambda u\)</span> es equivalente a <span class="math inline">\(X=P+\lambda u\)</span>, es decir</p>
@@ -345,7 +386,7 @@ A&#39;x+B&#39;y+C&#39;z+D&#39;=&amp;0
 <p>Estás últimas son las <strong>ecuaciones implícitas</strong> de la recta o <strong>ecuaciones cartesianas</strong>, las cuales representan la intersección de dos planos (veremos este tema más adelante).</p>
 
 <div class="example">
-<span id="exm:unnamed-chunk-195" class="example"><strong>Ejemplo 3.4  </strong></span> La recta que pasa por el punto <span class="math inline">\(P(1,0,1)\)</span> y tiene la dirección del vector <span class="math inline">\(u=(4,5,-1)\)</span> tiene la siguiente ecuación vectorial: <span class="math inline">\((x,y,z)=(1,0,1)+\lambda(4,5,-1)\)</span>. La ecuaciones paramétricas son: <span class="math display">\[\left\{ \begin{array}{ll}
+<span id="exm:unnamed-chunk-198" class="example"><strong>Ejemplo 3.4  </strong></span> La recta que pasa por el punto <span class="math inline">\(P(1,0,1)\)</span> y tiene la dirección del vector <span class="math inline">\(u=(4,5,-1)\)</span> tiene la siguiente ecuación vectorial: <span class="math inline">\((x,y,z)=(1,0,1)+\lambda(4,5,-1)\)</span>. La ecuaciones paramétricas son: <span class="math display">\[\left\{ \begin{array}{ll}
     x=&amp;1+4\lambda\\
     y=&amp;5\lambda\\
     z=&amp;1-\lambda
@@ -364,7 +405,7 @@ A&#39;x+B&#39;y+C&#39;z+D&#39;=&amp;0
 
 
 <div class="example">
-<span id="exm:unnamed-chunk-196" class="example"><strong>Ejemplo 3.5  </strong></span> La recta que pasa por los puntos <span class="math inline">\(A(1,0,1)\)</span> y <span class="math inline">\(B(0,1,1)\)</span> viene dada por la ecuación vectorial <span class="math inline">\((x,y,z)=(1,0,1)+\lambda(-1,1,0)\)</span>, ya que un vector director es <span class="math inline">\(\vec{AB}\)</span>. La ecuaciones paramétricas son: <span class="math display">\[\left\{ \begin{array}{ll}
+<span id="exm:unnamed-chunk-199" class="example"><strong>Ejemplo 3.5  </strong></span> La recta que pasa por los puntos <span class="math inline">\(A(1,0,1)\)</span> y <span class="math inline">\(B(0,1,1)\)</span> viene dada por la ecuación vectorial <span class="math inline">\((x,y,z)=(1,0,1)+\lambda(-1,1,0)\)</span>, ya que un vector director es <span class="math inline">\(\vec{AB}\)</span>. La ecuaciones paramétricas son: <span class="math display">\[\left\{ \begin{array}{ll}
     x=&amp;1-\lambda\\
     y=&amp;\lambda\\
     z=&amp;1
@@ -415,12 +456,29 @@ y=m(x-x_{0})+y_{0}
 \end{equation}\]</span>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-197" class="example"><strong>Ejemplo 3.6  </strong></span> Para hallar la ecuación de la recta que pasa por el punto <span class="math inline">\(A(3,1)\)</span> y tiene pendiente <span class="math inline">\(m=\frac{1}{2}\)</span> usamos la ecuación punto pediente <a href="vectores.html#eq:puntopend">(3.9)</a>, <span class="math inline">\(y=\frac{1}{2}(x-3)+1\)</span> por lo tanto <span class="math inline">\(y=\frac{1}{2}x-\frac{1}{2}\)</span>. Reagrupando términos y multiplicando por <span class="math inline">\(2\)</span>, obtenemos la ecuación implícita <a href="vectores.html#eq:ecimppla">(3.7)</a>: <span class="math inline">\(x-2y-1=0\)</span>.</p>
+<p><span id="exm:unnamed-chunk-200" class="example"><strong>Ejemplo 3.6  </strong></span> Para hallar la ecuación de la recta que pasa por el punto <span class="math inline">\(A(3,1)\)</span> y tiene pendiente <span class="math inline">\(m=\frac{1}{2}\)</span> usamos la ecuación punto pediente <a href="vectores.html#eq:puntopend">(3.9)</a>, <span class="math inline">\(y=\frac{1}{2}(x-3)+1\)</span> por lo tanto <span class="math inline">\(y=\frac{1}{2}x-\frac{1}{2}\)</span>. Reagrupando términos y multiplicando por <span class="math inline">\(2\)</span>, obtenemos la ecuación implícita <a href="vectores.html#eq:ecimppla">(3.7)</a>: <span class="math inline">\(x-2y-1=0\)</span>.</p>
 </div>
 
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-198" class="example"><strong>Ejemplo 3.7  </strong></span> Dada la ecuación cartesiana de la recta <span class="math inline">\(5x-3y+1=0\)</span>, podemos hallar la pendiente de la recta despejando <span class="math inline">\(y\)</span> de la ecuación cartesiana, de la siguiente forma: <span class="math inline">\(y=\frac{5}{3}x+\frac{1}{3}\)</span>. De donde se sigue que la pendiente es <span class="math inline">\(m=\frac{5}{3}\)</span>. Además, directamente de la ecuación explícita, podemos decir que el punto de corte con el eje <span class="math inline">\(Y\)</span> es <span class="math inline">\(n=\frac{1}{3}\)</span>. Para hallar el punto de corte con el eje <span class="math inline">\(X\)</span>, despejamos <span class="math inline">\(x\)</span> de <span class="math inline">\(0=\frac{5}{3}x+\frac{1}{3}\)</span>, así <span class="math inline">\(x=\frac{-1}{5}\)</span>.</p>
+<p><span id="exm:unnamed-chunk-201" class="example"><strong>Ejemplo 3.7  </strong></span> Dada la ecuación cartesiana de la recta <span class="math inline">\(5x-3y+1=0\)</span>, podemos hallar la pendiente de la recta despejando <span class="math inline">\(y\)</span> de la ecuación cartesiana, de la siguiente forma: <span class="math inline">\(y=\frac{5}{3}x+\frac{1}{3}\)</span>. De donde se sigue que la pendiente es <span class="math inline">\(m=\frac{5}{3}\)</span>. Además, directamente de la ecuación explícita, podemos decir que el punto de corte con el eje <span class="math inline">\(Y\)</span> es <span class="math inline">\(n=\frac{1}{3}\)</span>. Para hallar el punto de corte con el eje <span class="math inline">\(X\)</span>, despejamos <span class="math inline">\(x\)</span> de <span class="math inline">\(0=\frac{5}{3}x+\frac{1}{3}\)</span>, así <span class="math inline">\(x=\frac{-1}{5}\)</span>.</p>
+</div>
+<p> Dos rectas en plano pueden ser <strong>rectas paralelas</strong>, en ese caso tienen la misma pendiente (forman el mismo ángulo con el eje <span class="math inline">\(X\)</span>), es decir, si la recta <span class="math inline">\(\mathit{l}_{1}\)</span> tiene ecuación <span class="math inline">\(y=mx+n\)</span> y la recta <span class="math inline">\(\mathit{l}_{2}\)</span> tiene ecuación <span class="math inline">\(y=px+q\)</span>, entonces <span class="math inline">\(\mathit{l}_{1}\)</span> es paralela a <span class="math inline">\(\mathit{l}_{2}\)</span> si y solo si <span class="math inline">\(m=p\)</span>, esto se denota <span class="math inline">\(\mathit{l}_{1} \parallel \mathit{l}_{2}\)</span>.</p>
+<p>Si dos rectas <span class="math inline">\(\mathit{l}_{1}\)</span> y <span class="math inline">\(\mathit{l}_{2}\)</span> de ecuaciones <span class="math inline">\(y=mx+n\)</span> y <span class="math inline">\(y=px+q\)</span> respectivamente, forman un ángulo de <span class="math inline">\(90^{o}\)</span> entre ellas se dice que son <strong>perpendiculares</strong> y se denota <span class="math inline">\(\mathit{l}_{1} \perp \mathit{l}_{2}\)</span>, en este caso se puede ver que las pendientes guardan la siguiente relación: <span class="math inline">\(mp=-1\)</span>.</p>
+
+<div class="remark">
+<p> <span class="remark"><em>Nota. </em></span>  Note que si una recta es horizontal, su pendiente es igual a cero, esto es <span class="math inline">\(y=0x+n\)</span> y cualquier recta perpendicular a ella es paralela al eje <span class="math inline">\(Y\)</span> y por lo tanto no es función.</p>
+</div>
+
+<p>Dos rectas no paralelas <span class="math inline">\(\mathit{l}_{1}\)</span> y <span class="math inline">\(\mathit{l}_{2}\)</span> de ecuaciones <span class="math inline">\(y=mx+n\)</span> y <span class="math inline">\(y=px+q\)</span> respectivamente, se intersectan en un punto del plano <span class="math inline">\((x_{0},y_{0})\)</span>, por lo tanto satisface ambas ecuaciones simultaneamente, es decir, <span class="math inline">\(y_{0}=mx_{0}+n\)</span> y <span class="math inline">\(y_{0}=px_{0}+q\)</span>. Luego <span class="math inline">\(mx_{0}+n=y_{0}=px_{0}+q\)</span> por lo tanto <span class="math inline">\(mx_{0}-px_{0}=q-n\Leftrightarrow x_{0}=\frac{q-n}{m-p}\)</span> y así, <span class="math inline">\(y_{0}=m(\frac{q-n}{m-p})+n\)</span>. En este caso el punto de intersección entre las rectas es <span class="math display">\[\left( \frac{q-n}{m-p},m(\frac{q-n}{m-p})+n\right) .\]</span></p>
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-203" class="example"><strong>Ejemplo 3.8  </strong></span> Las rectas <span class="math inline">\(\mathit{l}_{1}:y=2x+3\)</span> y <span class="math inline">\(\mathit{l}_{2}:y=2x-1\)</span> son rectas paralelas. Y son perpendiculares a <span class="math inline">\(\mathit{l}_{3}: y=-\frac{1}{2}x+1\)</span>. Además, el punto de intersección entre <span class="math inline">\(\mathit{l}_{1}\)</span> y <span class="math inline">\(\mathit{l}_{2}\)</span> es <span class="math inline">\(x_{0}=\frac{1-3}{2+\frac{1}{2}}=\frac{-4}{5}\)</span> y <span class="math inline">\(y_{0}=2(\frac{-4}{5})+3=\frac{7}{5}\)</span>.</p>
+</div>
+
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-204" class="example"><strong>Ejemplo 3.9  </strong></span> La recta perpendicular a <span class="math inline">\(\mathit{l}_{1}:\frac{-2}{3}x+3\)</span> que pasa por el punto <span class="math inline">\(A(-2,1)\)</span> tiene por ecuación <span class="math inline">\(y=\frac{3}{2}(x-(-2))+1\)</span> es decir <span class="math inline">\(y=\frac{-3}{2}x+4\)</span>.</p>
 </div>
 
 
