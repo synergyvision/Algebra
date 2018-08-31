@@ -4,7 +4,7 @@
 title: "Álgebra Lineal"
 subtitle: "Ciencia de los Datos Financieros"
 author: "Synergy Vision"
-date: "2018-08-28"
+date: "2018-08-31"
 knit: "bookdown::render_book"
 documentclass: krantz
 bibliography: [book.bib, packages.bib]
@@ -1417,7 +1417,9 @@ Estás últimas son las **ecuaciones implícitas** de la recta o **ecuaciones ca
 	z-1=&0
 	\end{array}
 	\right.$$ 
-	Note que la ecuación $z=1$ es el plano paralelo al plano $XY$ con altura en uno (1).</div>\EndKnitrBlock{example}
+	Note que la ecuación $z=1$ es el plano paralelo al plano $XY$ con altura en uno (1).
+	</div>\EndKnitrBlock{example}
+
 **Posici\'on relativa de dos rectas en el espacio.**
 
 Dos rectas en el espacio pueden intersectarse o no. En el caso que se intersecten, estas forman un ángulo entre ellas pues estarían en el mismo plano, este ángulo pudiese ser un ángulo recto, lo que las haría perpendiculares entre sí. En el caso que no se intersecten, puede que sean paralelas entre sí o simplemente cruzarse sin tocarse (también se les dice alabeadas). Veamos esto en detalle:
@@ -1530,6 +1532,65 @@ Dos rectas no paralelas $\mathit{l}_{1}$ y $\mathit{l}_{2}$ de ecuaciones $y=mx+
 
 \BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-207"><strong>(\#exm:unnamed-chunk-207) </strong></span>	La recta perpendicular a $\mathit{l}_{1}:\frac{-2}{3}x+3$ que pasa por el punto $A(-2,1)$ tiene por ecuación $y=\frac{3}{2}(x-(-2))+1$ es decir $y=\frac{-3}{2}x+4$.
 </div>\EndKnitrBlock{example}
+###Planos
+
+En este capítulo volvemos al ámbito del espacio $\mathbb{R}^{3}$. Estudiaremos todo lo relativo a los planos en el espacio, las distintas ecuaciones para un plano, como determinar un plano a partir de dos rectas dadas, la posición relativa de dos planos, de una recta y un plano, así como la distancia entre dos planos y entre un plano y un puntos.
+
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-208"><strong>(\#def:unnamed-chunk-208) </strong></span>	Un plano $\pi$ está determinado por dos vectores no paralelos, $u$ y $v$ y un punto $P_{0}$ por donde pasa el plano (es decir un punto contenido en el plano, $P_{0}\in\pi$). Mas formalmente: 
+\begin{equation}
+	\pi=\{P_{0}\in\mathbb{R}^{3}| P=P_{0}+\lambda u + \delta v,\mbox{ con } \lambda,\delta\in\mathbb{R} \}.
+  (\#eq:ecplanovec)
+	\end{equation}
+	La anterior es la **ecuación vectorial del plano** $\pi$, generado por los vectores $u$ y $v$ que pasa por el punto $P_{0}$.
+</div>\EndKnitrBlock{definition}
+
+Suponiendo que $P_{0}=(x_{0},y_{0},z_{0})$, $u=(a_{0},b_{0},c_{0})$ y $v=(a_{1},b_{1},c_{1})$. Dado un punto genérico $P=(x,y,z)$, $P$ pertenece al plano $\pi$ si y solo si $P=P_{0}+\lambda u+\delta v\Leftrightarrow (x,y,z)=(x_{0},y_{0},z_{0})+\lambda(a_{0},b_{0},c_{0})+\delta(a_{1},b_{1},c_{1})$, de donde se tiene que:
+\begin{equation}
+	\left\{ 
+	 \begin{array}{ll}
+		x=& x_{0}+\lambda a_{0}+ \delta a_{1}\\
+		y=& y_{0}+\lambda b_{0}+ \delta b_{1}\\
+		z=& z_{0}+\lambda c_{0}+ \delta c_{1}
+	\end{array}
+	\right. 
+	(\#eq:ecplanopara)
+\end{equation}
+
+Un vector no nulo $w$ es un **vector ortogonal al plano** siempre que sea ortogonal a los vectores $u$ y $v$, es decir $w\perp \pi$ si y solo si $w=\gamma u\times v$, en particular $u\times v$ es un vector ortogonal al plano $\pi$. De este modo, para un punto cualquiera $P$, del plano, se tiene que $\vec{P_{0}P}\perp w$, por lo tanto \begin{equation}
+(\vec{P_{0}P})\cdot w=0 \mbox{ para todo } P\in\pi.
+(\#eq:ecplanonormal)
+\end{equation}
+Esto es, $(x-x_{0},y-y_{0},z-z_{0})\cdot (a,b,c)=0$, donde $w=(a,b,c)$. Así 
+\begin{equation}
+	ax+bc+cz+d=0, \mbox{ donde } d=-ax_{0}-by_{0}-cz_{0}.
+	(\#eq:ecplanogeneral)
+\end{equation}
+
+La cual es la **ecuación general del plano**.
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-209"><strong>(\#exm:unnamed-chunk-209) </strong></span>	Dadas las rectas $\mathit{l}_{1}:\frac{x-1}{3}=\frac{y-2}{-1}=\frac{z-3}{2}$ y $\mathit{l}_{2}:\frac{x-1}{2}=\frac{y+2}{5}=\frac{z+3}{-3}$ y el punto $P_{0}=(1,2,3)$, el plano $\pi$, paralelo a las rectas $\mathit{l}_{1}$ y $\mathit{l}_{2}$ y que pasa por el punto $P$ viene dado por la ecuación: 
+	$\pi: (1,2,3)+\lambda(3,-1,2)+\delta(2,5,-3)$, con $\lambda, \delta\in \mathbb{R}$ (ecuación vectorial). De donde podemos deducir su ecuación paramétrica:
+	\begin{equation}
+		\left\{ 
+		\begin{array}{ll}
+		x=& 1+3\lambda+ 2\delta\\
+		y=& 2+\lambda b_{0}+ \delta b_{1}\\
+		z=& 3+\lambda c_{0}+ \delta c_{1}
+		\end{array}
+		\right. , \lambda,\delta\in\mathbb{R}
+	\end{equation}	
+	La ecuación normal del plano es: $(\vec{P_{0}P})\cdot w=0$, donde $\vec{P_{0}P}=(x-1,y-2,z-3)$ y $w=(3,-1,2)\times(2,5,-3)=(-7,13,17)$, es decir, 
+	$$(x-1,y-2,z-3)\cdot (-7,13,17)=0\Leftrightarrow 7x-13y-17z+70=0$$</div>\EndKnitrBlock{example}
+
+**Posición relativa entre dos planos**
+Dos planos del espacio $\pi_{1}:(\vec{P_{0}P})\cdot w_{1}$ y $\pi_{2}:(\vec{Q_{0}P})\cdot w_{2}$ son planos paralelos si y solo si sus vectores normales son paralelos. Y son perpendiculares si y solo si sus vectores normales también lo son. Esto es:
+
+(1) $\pi_{1}\parallel\pi_{2}$ si y solo si $w_{1}\parallel w_{2}$.
+(2) $\pi_{1}\perp\pi_{2}$ si y solo si $w_{1}\perp w_{2}$.
+
+
+Dos planos paralelos no tienen puntos en común (no se intesctan). Pero si no son paralelos, entonces se intersectan en mas de un punto, de hecho la intersección es una recta, además forman un ángulo (distinto de cero).
+Dados los planos $\pi_{1}:(\vec{P_{0}P})\cdot w_{1}=0$ y $\pi_{2}:(\vec{Q_{0}P})\cdot w_{2}=0$ no paralelos, el ángulo entre ellos es igual al ángulo que forman $w_{1}$ y $w_{2}$, es decir $\cos(\theta)=\frac{w_{1}\cdot w_{2}}{|w_{1}||w_{2}|}$.
 
 <!--chapter:end:030-vectores.Rmd-->
 

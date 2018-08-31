@@ -25,7 +25,7 @@
 <meta name="author" content="Synergy Vision">
 
 
-<meta name="date" content="2018-08-28">
+<meta name="date" content="2018-08-31">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -421,7 +421,8 @@ A&#39;x+B&#39;y+C&#39;z+D&#39;=&amp;0
     \end{array}
     \right.\]</span> Note que la ecuación <span class="math inline">\(z=1\)</span> es el plano paralelo al plano <span class="math inline">\(XY\)</span> con altura en uno (1).
 </div>
-<p> <strong>Posici'on relativa de dos rectas en el espacio.</strong></p>
+
+<p><strong>Posici'on relativa de dos rectas en el espacio.</strong></p>
 <p>Dos rectas en el espacio pueden intersectarse o no. En el caso que se intersecten, estas forman un ángulo entre ellas pues estarían en el mismo plano, este ángulo pudiese ser un ángulo recto, lo que las haría perpendiculares entre sí. En el caso que no se intersecten, puede que sean paralelas entre sí o simplemente cruzarse sin tocarse (también se les dice alabeadas). Veamos esto en detalle:</p>
 <p>Dadas dos rectas <span class="math inline">\(\mathit{l}_{1}\)</span> y <span class="math inline">\(\mathit{l}_{2}\)</span> de ecuacines <span class="math inline">\(P+\lambda u\)</span> y <span class="math inline">\(Q+\delta v\)</span>, con <span class="math inline">\(\lambda, \delta\in\mathbb{R}\)</span>, se tiene que:</p>
 <pre><code>(1) $\mathit{l}_{1}$ y $\mathit{l}_{2}$ son paralelas si y solo si sus vectores directores $u$ y $v$ son paralelos. Lo denotamos por $\mathit{l}_{1}\parallel \mathit{l}_{2}$.
@@ -513,7 +514,61 @@ y=m(x-x_{0})+y_{0}
 <div class="example">
 <p><span id="exm:unnamed-chunk-207" class="example"><strong>Ejemplo 3.12  </strong></span> La recta perpendicular a <span class="math inline">\(\mathit{l}_{1}:\frac{-2}{3}x+3\)</span> que pasa por el punto <span class="math inline">\(A(-2,1)\)</span> tiene por ecuación <span class="math inline">\(y=\frac{3}{2}(x-(-2))+1\)</span> es decir <span class="math inline">\(y=\frac{-3}{2}x+4\)</span>.</p>
 </div>
+<p> ###Planos</p>
+<p>En este capítulo volvemos al ámbito del espacio <span class="math inline">\(\mathbb{R}^{3}\)</span>. Estudiaremos todo lo relativo a los planos en el espacio, las distintas ecuaciones para un plano, como determinar un plano a partir de dos rectas dadas, la posición relativa de dos planos, de una recta y un plano, así como la distancia entre dos planos y entre un plano y un puntos.</p>
 
+<div class="definition">
+<span id="def:unnamed-chunk-208" class="definition"><strong>Definición 3.12  </strong></span> Un plano <span class="math inline">\(\pi\)</span> está determinado por dos vectores no paralelos, <span class="math inline">\(u\)</span> y <span class="math inline">\(v\)</span> y un punto <span class="math inline">\(P_{0}\)</span> por donde pasa el plano (es decir un punto contenido en el plano, <span class="math inline">\(P_{0}\in\pi\)</span>). Mas formalmente:
+<span class="math display" id="eq:ecplanovec">\[\begin{equation}
+    \pi=\{P_{0}\in\mathbb{R}^{3}| P=P_{0}+\lambda u + \delta v,\mbox{ con } \lambda,\delta\in\mathbb{R} \}.
+  \tag{3.12}
+    \end{equation}\]</span>
+<p>La anterior es la <strong>ecuación vectorial del plano</strong> <span class="math inline">\(\pi\)</span>, generado por los vectores <span class="math inline">\(u\)</span> y <span class="math inline">\(v\)</span> que pasa por el punto <span class="math inline">\(P_{0}\)</span>.</p>
+</div>
+
+Suponiendo que <span class="math inline">\(P_{0}=(x_{0},y_{0},z_{0})\)</span>, <span class="math inline">\(u=(a_{0},b_{0},c_{0})\)</span> y <span class="math inline">\(v=(a_{1},b_{1},c_{1})\)</span>. Dado un punto genérico <span class="math inline">\(P=(x,y,z)\)</span>, <span class="math inline">\(P\)</span> pertenece al plano <span class="math inline">\(\pi\)</span> si y solo si <span class="math inline">\(P=P_{0}+\lambda u+\delta v\Leftrightarrow (x,y,z)=(x_{0},y_{0},z_{0})+\lambda(a_{0},b_{0},c_{0})+\delta(a_{1},b_{1},c_{1})\)</span>, de donde se tiene que:
+<span class="math display" id="eq:ecplanopara">\[\begin{equation}
+    \left\{ 
+     \begin{array}{ll}
+        x=&amp; x_{0}+\lambda a_{0}+ \delta a_{1}\\
+        y=&amp; y_{0}+\lambda b_{0}+ \delta b_{1}\\
+        z=&amp; z_{0}+\lambda c_{0}+ \delta c_{1}
+    \end{array}
+    \right. 
+    \tag{3.13}
+\end{equation}\]</span>
+Un vector no nulo <span class="math inline">\(w\)</span> es un <strong>vector ortogonal al plano</strong> siempre que sea ortogonal a los vectores <span class="math inline">\(u\)</span> y <span class="math inline">\(v\)</span>, es decir <span class="math inline">\(w\perp \pi\)</span> si y solo si <span class="math inline">\(w=\gamma u\times v\)</span>, en particular <span class="math inline">\(u\times v\)</span> es un vector ortogonal al plano <span class="math inline">\(\pi\)</span>. De este modo, para un punto cualquiera <span class="math inline">\(P\)</span>, del plano, se tiene que <span class="math inline">\(\vec{P_{0}P}\perp w\)</span>, por lo tanto
+<span class="math display" id="eq:ecplanonormal">\[\begin{equation}
+(\vec{P_{0}P})\cdot w=0 \mbox{ para todo } P\in\pi.
+\tag{3.14}
+\end{equation}\]</span>
+Esto es, <span class="math inline">\((x-x_{0},y-y_{0},z-z_{0})\cdot (a,b,c)=0\)</span>, donde <span class="math inline">\(w=(a,b,c)\)</span>. Así
+<span class="math display" id="eq:ecplanogeneral">\[\begin{equation}
+    ax+bc+cz+d=0, \mbox{ donde } d=-ax_{0}-by_{0}-cz_{0}.
+    \tag{3.15}
+\end{equation}\]</span>
+<p>La cual es la <strong>ecuación general del plano</strong>.</p>
+
+<div class="example">
+<span id="exm:unnamed-chunk-209" class="example"><strong>Ejemplo 3.13  </strong></span> Dadas las rectas <span class="math inline">\(\mathit{l}_{1}:\frac{x-1}{3}=\frac{y-2}{-1}=\frac{z-3}{2}\)</span> y <span class="math inline">\(\mathit{l}_{2}:\frac{x-1}{2}=\frac{y+2}{5}=\frac{z+3}{-3}\)</span> y el punto <span class="math inline">\(P_{0}=(1,2,3)\)</span>, el plano <span class="math inline">\(\pi\)</span>, paralelo a las rectas <span class="math inline">\(\mathit{l}_{1}\)</span> y <span class="math inline">\(\mathit{l}_{2}\)</span> y que pasa por el punto <span class="math inline">\(P\)</span> viene dado por la ecuación: <span class="math inline">\(\pi: (1,2,3)+\lambda(3,-1,2)+\delta(2,5,-3)\)</span>, con <span class="math inline">\(\lambda, \delta\in \mathbb{R}\)</span> (ecuación vectorial). De donde podemos deducir su ecuación paramétrica:
+<span class="math display">\[\begin{equation}
+        \left\{ 
+        \begin{array}{ll}
+        x=&amp; 1+3\lambda+ 2\delta\\
+        y=&amp; 2+\lambda b_{0}+ \delta b_{1}\\
+        z=&amp; 3+\lambda c_{0}+ \delta c_{1}
+        \end{array}
+        \right. , \lambda,\delta\in\mathbb{R}
+    \end{equation}\]</span>
+La ecuación normal del plano es: <span class="math inline">\((\vec{P_{0}P})\cdot w=0\)</span>, donde <span class="math inline">\(\vec{P_{0}P}=(x-1,y-2,z-3)\)</span> y <span class="math inline">\(w=(3,-1,2)\times(2,5,-3)=(-7,13,17)\)</span>, es decir, <span class="math display">\[(x-1,y-2,z-3)\cdot (-7,13,17)=0\Leftrightarrow 7x-13y-17z+70=0\]</span>
+</div>
+
+<p><strong>Posición relativa entre dos planos</strong> Dos planos del espacio <span class="math inline">\(\pi_{1}:(\vec{P_{0}P})\cdot w_{1}\)</span> y <span class="math inline">\(\pi_{2}:(\vec{Q_{0}P})\cdot w_{2}\)</span> son planos paralelos si y solo si sus vectores normales son paralelos. Y son perpendiculares si y solo si sus vectores normales también lo son. Esto es:</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\pi_{1}\parallel\pi_{2}\)</span> si y solo si <span class="math inline">\(w_{1}\parallel w_{2}\)</span>.</li>
+<li><span class="math inline">\(\pi_{1}\perp\pi_{2}\)</span> si y solo si <span class="math inline">\(w_{1}\perp w_{2}\)</span>.</li>
+</ol>
+<p>Dos planos paralelos no tienen puntos en común (no se intesctan). Pero si no son paralelos, entonces se intersectan en mas de un punto, de hecho la intersección es una recta, además forman un ángulo (distinto de cero). Dados los planos <span class="math inline">\(\pi_{1}:(\vec{P_{0}P})\cdot w_{1}=0\)</span> y <span class="math inline">\(\pi_{2}:(\vec{Q_{0}P})\cdot w_{2}=0\)</span> no paralelos, el ángulo entre ellos es igual al ángulo que forman <span class="math inline">\(w_{1}\)</span> y <span class="math inline">\(w_{2}\)</span>, es decir <span class="math inline">\(\cos(\theta)=\frac{w_{1}\cdot w_{2}}{|w_{1}||w_{2}|}\)</span>.</p>
 
 </div>
 </div>
