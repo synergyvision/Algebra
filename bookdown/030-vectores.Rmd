@@ -5,7 +5,7 @@ En este capítulo estudiaremos los vectores, objetos muy usados en la física pa
 ##Representación geométrica
 
 ```{definition}
-	Un **vector** $v$ en $\mathbb{R}^{n}$ de dimensión $n$ es una n-tupla de $n$ números reales, de la forma $v=(a_{1}, a_{2},\cdots, a_{n})$. Llamaremos componente $i-$ésima al número $a_{i}$ ($1\leq i\leq n$).
+	Un *vector* $v$ en $\mathbb{R}^{n}$ de dimensión $n$ es una n-tupla de $n$ números reales, de la forma $v=(a_{1}, a_{2},\cdots, a_{n})$. Llamaremos componente $i-$ésima al número $a_{i}$ ($1\leq i\leq n$).
 
 ```
 
@@ -14,7 +14,7 @@ En este capítulo estudiaremos los vectores, objetos muy usados en la física pa
 
 ```
 
-La longitud del segmento de recta que define el vector (es decir, la flecha) es la **magnitud** del vector y se denota por $|\vec{AB}|$ (o $|v|$). La **dirección** del vector corresponde a la inclinación de la recta sobre la cual está el vector, esto es el ángulo que forma el vector con la horizontal. La **orientación** o **sentido** del vector representa el sentido en que se recorre el segmento de recta (determina hacia donde apunta la flecha). 
+La longitud del segmento de recta que define el vector (es decir, la flecha) es la *magnitud* del vector y se denota por $|\vec{AB}|$ (o $|v|$). La *dirección* del vector corresponde a la inclinación de la recta sobre la cual está el vector, esto es el ángulo que forma el vector con la horizontal. La *orientación* o *sentido* del vector representa el sentido en que se recorre el segmento de recta (determina hacia donde apunta la flecha). 
 
 ```{remark}
 	Los vectores $\vec{AB}$ y $\vec{BA}$ tienen la misma magnitud, la misma dirección pero sentidos contrarios, por lo que $\vec{BA}=-\vec{AB}$. 
@@ -25,26 +25,26 @@ La longitud del segmento de recta que define el vector (es decir, la flecha) es 
 \includegraphics[width=0.5\textwidth]{suma-vectores.eps}
 
 ```{definition}
-	Dado el vector $v$ de coordenadas $(x,y)$, **la magnitud** puede calcularse usando el teorema de pitágoras, con $|v|=\sqrt{x^{2}+y^{2}}$, la dirección es el **ángulo** $\theta$ que forma con el eje de las abscisas y se calcula con $\theta=\arctan(\frac{y}{x})$. El sentido es una noción referencial y se representan sentidos contrarios con los signos positivos ($+$) y negativos ($-$) (el signo $+$ suele omitirse)
+	Dado el vector $v$ de coordenadas $(x,y)$, *la magnitud* puede calcularse usando el teorema de pitágoras, con $|v|=\sqrt{x^{2}+y^{2}}$, la dirección es el *ángulo* $\theta$ que forma con el eje de las abscisas y se calcula con $\theta=\arctan(\frac{y}{x})$. El sentido es una noción referencial y se representan sentidos contrarios con los signos positivos ($+$) y negativos ($-$) (el signo $+$ suele omitirse)
 
 ```
 
 ```{remark}
-	En general, la **magnitud** de un vector $v$ en $\mathbb{R}^{n}$ es $|v|=\sqrt{\sum_{k=1}^{n}a_{k}^{2}}$.
+	En general, la *magnitud* de un vector $v$ en $\mathbb{R}^{n}$ es $|v|=\sqrt{\sum_{k=1}^{n}a_{k}^{2}}$.
 
 ```
 
 ```{definition}
-	Dos **vectores** son **paralelos** si forman iguales ángulos con el eje de las abscisas. Es decir, $v_{1}=(x_{1},y_{1})$ y $v_{2}=(x_{2},y_{2})$ son paralelos si $\theta_{1}=\arctan(\frac{y_{1}}{x_{2}})=\theta_{2}=\arctan(\frac{y_{2}}{x_{2}})$.
+	Dos *vectores* son *paralelos* si forman iguales ángulos con el eje de las abscisas. Es decir, $v_{1}=(x_{1},y_{1})$ y $v_{2}=(x_{2},y_{2})$ son paralelos si $\theta_{1}=\arctan(\frac{y_{1}}{x_{2}})=\theta_{2}=\arctan(\frac{y_{2}}{x_{2}})$.
 
 ```
 
-##Operaciones vectoriales
+##Operaciones entre vectores
 
 Ya vimos que los vectores pueden representar conceptos físicos como lo son la distancia, la velocidad o la fuerza. Entonces es conveniente poder sumar estos objetos, para representar suma de distancias o suma de fuerzas, por ejemplo. También podemos pensar en multiplicar un vector por un escalar, como sería multiplicar la magnitud de una fuerza. En esta sección veremos que podemos definir varias operaciones entre vectores, sumar, restar y multiplicar vectores como lo hacemos con los números reales. Pero también definiremos operaciones propias de estos objetos, como lo son el producto punto y el producto cruz de vectores.
 
 ```{definition}
-	Dados los vectores $v_{1}=(x_{1},y_{1})$ y $v_{2}=(x_{2},y_{2})$, **la suma** de $v_{1}$ y $v_{2}$ está dada por la suma de las componentes correspondientes, es decir, $v_{1}+v_{2}=(x_{1}+x_{2},y_{1}+y_{2})$. En general, la suma de dos vectores $v=(a_{1}, a_{2},\cdots, a_{n})$ y $u=(b_{1}, b_{2},\cdots, b_{n})$ en $\mathbb{R}^{n}$ se define como $v+u=(a_{1}, a_{2},\cdots, a_{n})+(b_{1}, b_{2},\cdots, b_{n})=(a_{1}+b_{1},a_{2}+b_{2},\cdots a_{n}+b_{n})$.
+	Dados los vectores $v_{1}=(x_{1},y_{1})$ y $v_{2}=(x_{2},y_{2})$, *la suma* de $v_{1}$ y $v_{2}$ está dada por la suma de las componentes correspondientes, es decir, $v_{1}+v_{2}=(x_{1}+x_{2},y_{1}+y_{2})$. En general, la suma de dos vectores $v=(a_{1}, a_{2},\cdots, a_{n})$ y $u=(b_{1}, b_{2},\cdots, b_{n})$ en $\mathbb{R}^{n}$ se define como $v+u=(a_{1}, a_{2},\cdots, a_{n})+(b_{1}, b_{2},\cdots, b_{n})=(a_{1}+b_{1},a_{2}+b_{2},\cdots a_{n}+b_{n})$.
 
 ```
 La suma de vectores tiene las siguientes propiedades:
@@ -59,12 +59,12 @@ La suma de vectores tiene las siguientes propiedades:
 
 
 ```{definition}
-	Dado el vector $v=(x,y)$ y un escalar $\lambda\in\mathbb{R}$, **el producto** de $v$ **por un escalar** $\lambda$ está dada por la multiplicaión de cada una de las componentes por el escalar, es decir, $\lambda v=(\lambda x,\lambda y)$. En general, si $v=(a_{1},a_{2},\cdots, a_{n})$, entonces $\lambda v=(\lambda a_{1},\lambda a_{2},\cdots, \lambda a_{n})$.
+	Dado el vector $v=(x,y)$ y un escalar $\lambda\in\mathbb{R}$, *el producto* de $v$ *por un escalar* $\lambda$ está dada por la multiplicaión de cada una de las componentes por el escalar, es decir, $\lambda v=(\lambda x,\lambda y)$. En general, si $v=(a_{1},a_{2},\cdots, a_{n})$, entonces $\lambda v=(\lambda a_{1},\lambda a_{2},\cdots, \lambda a_{n})$.
 
 ```
 
 ```{definition}
-	Dado el vector $v=(x,y)$ , el vector opuesto a $v$ es el vector $-v$ dado por el producto de $v$ por el escalar $-1$, es decir, $-v=-1 v=(-x,-y)$. En general, si $v=(a_{1},a_{2},\cdots, a_{n})$, entonces $-v=(-a_{1},-a_{2},\cdots, -a_{n})$.
+	Dado el vector $v=(x,y)$ , el *vector opuesto* a $v$ es el vector $-v$ dado por el producto de $v$ por el escalar $-1$, es decir, $-v=-1 v=(-x,-y)$. En general, si $v=(a_{1},a_{2},\cdots, a_{n})$, entonces $-v=(-a_{1},-a_{2},\cdots, -a_{n})$.
 
 ```
 
@@ -75,7 +75,7 @@ El producto de vectores por un escalar tiene las siguientes propiedades:
 	(3) Existencia del elemento neutro,  $1v=v$, para todo vector $v$. 
 
 ```{definition}
-		Dados los vectores $v_{1}=(x_{1},y_{1})$ y $v_{2}=(x_{2},y_{2})$, **la resta** de $v_{1}$ y $v_{2}$ está dada por la suma de $v_{1}$ con el opuesto de $v_{2}$, es decir, $v_{1}-v_{2}=(x_{1},y_{1})-(x_{2},y_{2})=(x_{1}-x_{2},y_{1}-y_{2})$. En general, $v-u=(a_{1}, a_{2},\cdots, a_{n})-(b_{1}, b_{2},\cdots, b_{n})=(a_{1}-b_{1},a_{2}-b_{2},\cdots a_{n}-b_{n})$, cuando $v=(a_{1}, a_{2},\cdots, a_{n})$ y $u=(b_{1}, b_{2},\cdots, b_{n})$ son vectores de $\mathbb{R}^{n}$.
+		Dados los vectores $v_{1}=(x_{1},y_{1})$ y $v_{2}=(x_{2},y_{2})$, *la resta* de $v_{1}$ y $v_{2}$ está dada por la suma de $v_{1}$ con el opuesto de $v_{2}$, es decir, $v_{1}-v_{2}=(x_{1},y_{1})-(x_{2},y_{2})=(x_{1}-x_{2},y_{1}-y_{2})$. En general, $v-u=(a_{1}, a_{2},\cdots, a_{n})-(b_{1}, b_{2},\cdots, b_{n})=(a_{1}-b_{1},a_{2}-b_{2},\cdots a_{n}-b_{n})$, cuando $v=(a_{1}, a_{2},\cdots, a_{n})$ y $u=(b_{1}, b_{2},\cdots, b_{n})$ son vectores de $\mathbb{R}^{n}$.
 
 ```
 
@@ -91,7 +91,7 @@ El producto de vectores por un escalar tiene las siguientes propiedades:
 Las operaciones que definiremos en esta parte son propias de los vectores. En la mayor parte de los conceptos nos remitiremos a los espacios $\mathbb{R}^{2}$ y $\mathbb{R}^{3}$.
 
 ```{definition}
-	Sean $v_{1}$ y $v_{2}$ vectores, el **producto escalar** de $v_{1}$ y $v_{2}$ es el producto de los módulos $|v_{1}|$ y $|v_{2}|$ y el coseno del ángulo que forman los vectores y se denota $v_{1}\cdot v_{2}$. Es decir, $v_{1}\cdot v_{2}=|v_{1}||v_{2}|\cos \theta$, donde $\theta$ es el \'angulo entre $v_{1}$ y $v_{2}$.
+	Sean $v_{1}$ y $v_{2}$ vectores, el *producto escalar* de $v_{1}$ y $v_{2}$ es el producto de los módulos $|v_{1}|$ y $|v_{2}|$ y el coseno del ángulo que forman los vectores y se denota $v_{1}\cdot v_{2}$. Es decir, $v_{1}\cdot v_{2}=|v_{1}||v_{2}|\cos \theta$, donde $\theta$ es el ángulo entre $v_{1}$ y $v_{2}$.
 
 ```
 
@@ -112,7 +112,7 @@ Las operaciones que definiremos en esta parte son propias de los vectores. En la
 ```
 
 ```{remark}
-	Dos **vectores** $v_{1}, v_{2}$ son **perpendiculares** si y solo si forman un ángulo de $90^{o}$ entre ellos, esto lo denotamos con $v_{1}\perp v_{2}$. Como $\cos 90^{o}=0$ se puede ver que dos vectores no nulos son perpendiculares si y solo si el producto escalar entre ellos es cero. Es decir $v_{1}\perp v_{2}$ si y solo si $v_{1}\cdot v_{2}=0$, siempre que $u\neq 0$ o $v\neq 0$.
+	Dos *vectores* $v_{1}, v_{2}$ son *perpendiculares* si y solo si forman un ángulo de $90^{o}$ entre ellos, esto lo denotamos con $v_{1}\perp v_{2}$. Como $\cos 90^{o}=0$ se puede ver que dos vectores no nulos son perpendiculares si y solo si el producto escalar entre ellos es cero. Es decir $v_{1}\perp v_{2}$ si y solo si $v_{1}\cdot v_{2}=0$, siempre que $u\neq 0$ o $v\neq 0$.
 
 ```
 
@@ -141,7 +141,7 @@ Otra forma de calcular el producto vectorial entre dos vectores $u=(a_{1},a_{2},
 	$$\left|  \begin{array}{ll} 
 	a & b\\ 
 	c & d
-	\end{array} \right| = ad-bc$$, entonces el producto vectorial se pude calcular como sigue:\\
+	\end{array} \right| = ad-bc$$, entonces el producto vectorial se pude calcular como sigue:
 	$u\times v=(x,y,z)$ donde 
 	$x=\left|  \begin{array}{ll} 
 	a_{2} & a_{3}\\ 
@@ -152,7 +152,7 @@ Otra forma de calcular el producto vectorial entre dos vectores $u=(a_{1},a_{2},
 	\end{array} \right|$, $x=\left|  \begin{array}{ll} 
 	a_{1} & a_{2}\\ 
 	b_{1} & b_{2}
-	\end{array} \right|$.\\
+	\end{array} \right|$.
 	
 	En el capítulo de matrices veremos mas formalmente el concepto de determinante de una matriz.
 
@@ -161,6 +161,7 @@ Otra forma de calcular el producto vectorial entre dos vectores $u=(a_{1},a_{2},
 Note que $u\cdot (u\times v)=a_{1}(a_{2}b_{3}-a_{3}b_{2})+ a_{2}(a_{3}b_{1}-a_{1}b_{3})+ a_{3}(a_{1}b_{2}-a_{2}b_{1})=0$ lo que implica que $u\perp u\times v$. De forma análoga se muestra que $v\perp u\times v$.
 
 El producto vectorial tiene las siguientes propiedades:
+
 Sean $u,v, w\in \mathbb{R}^{3}$ vectores en el espacio y $\lambda\in \mathbb{R}$ un escalar, se tiene que:
 
 	(1) $u\times \vec{0}=\vec{0}$,
@@ -331,7 +332,7 @@ Se tiene que el vector director de $\mathit{l}_{1}$ es $(1,1,1)$ y el vector dir
 
 **Distancia de un punto a una recta**
 
-Dada la recta $\mathit{l}: P_{0}+\lambda u$, con $\lambda\in \mathbb{R}$ y un punto en el espacio $Q\in \mathbb{R}^{3}$, el área $A$ del paralelogramo que forman los puntos $P_{0}$, $Q$ y el vector $u$ viene dada por el valor absoluto del producto vectorial entre $\vec{P_{0}Q}$ y $u$, es decir, $A=|\vec{P_{0}Q}\times u|$. Si tomamos el vector $u$ como base y llamamos $h$ a la altura del paralelogramo (y la distancia de la recta al punto $Q$), entonces $A=|u|h$, como lo muestra la figura (INSERTAR FIGURA). Pero $h=|\vec{P_{0}Q}|\sen\theta$, donde $\theta$ es el ángulo que forman los vectores $\vec{P_{0}Q}$ y $u$. Por lo tanto $A=|\vec{P_{0}Q}\times u|=|u||\vec{P_{0}Q}|\sen\theta=|u|h$, despejando $h$, se tiene que $h=\frac{|\vec{P_{0}Q}\times u|}{|u|}$, es decir,
+Dada la recta $\mathit{l}: P_{0}+\lambda u$, con $\lambda\in \mathbb{R}$ y un punto en el espacio $Q\in \mathbb{R}^{3}$, el área $A$ del paralelogramo que forman los puntos $P_{0}$, $Q$ y el vector $u$ viene dada por el valor absoluto del producto vectorial entre $\vec{P_{0}Q}$ y $u$, es decir, $A=|\vec{P_{0}Q}\times u|$. Si tomamos el vector $u$ como base y llamamos $h$ a la altura del paralelogramo (y la distancia de la recta al punto $Q$), entonces $A=|u|h$, como lo muestra la figura (INSERTAR FIGURA). Pero $h=|\vec{P_{0}Q}|sen\theta$, donde $\theta$ es el ángulo que forman los vectores $\vec{P_{0}Q}$ y $u$. Por lo tanto $A=|\vec{P_{0}Q}\times u|=|u||\vec{P_{0}Q}|sen\theta=|u|h$, despejando $h$, se tiene que $h=\frac{|\vec{P_{0}Q}\times u|}{|u|}$, es decir,
 
 \begin{equation}
 	d(\mathit{l},Q)=\frac{|\vec{P_{0}Q}\times u|}{|u|}
@@ -434,6 +435,7 @@ Dos rectas no paralelas $\mathit{l}_{1}$ y $\mathit{l}_{2}$ de ecuaciones $y=mx+
 	La recta perpendicular a $\mathit{l}_{1}:\frac{-2}{3}x+3$ que pasa por el punto $A(-2,1)$ tiene por ecuación $y=\frac{3}{2}(x-(-2))+1$ es decir $y=\frac{-3}{2}x+4$.
 
 ```
+
 ###Planos
 
 En este capítulo volvemos al ámbito del espacio $\mathbb{R}^{3}$. Estudiaremos todo lo relativo a los planos en el espacio, las distintas ecuaciones para un plano, como determinar un plano a partir de dos rectas dadas, la posición relativa de dos planos, de una recta y un plano, así como la distancia entre dos planos y entre un plano y un puntos.
@@ -470,7 +472,7 @@ Esto es, $(x-x_{0},y-y_{0},z-z_{0})\cdot (a,b,c)=0$, donde $w=(a,b,c)$. Así
 	(\#eq:ecplanogeneral)
 \end{equation}
 
-La cual es la **ecuación general del plano**.
+La cual es la *ecuación general del plano*.
 
 ```{example}
 	Dadas las rectas $\mathit{l}_{1}:\frac{x-1}{3}=\frac{y-2}{-1}=\frac{z-3}{2}$ y $\mathit{l}_{2}:\frac{x-1}{2}=\frac{y+2}{5}=\frac{z+3}{-3}$ y el punto $P_{0}=(1,2,3)$, el plano $\pi$, paralelo a las rectas $\mathit{l}_{1}$ y $\mathit{l}_{2}$ y que pasa por el punto $P$ viene dado por la ecuación: 
@@ -485,15 +487,91 @@ La cual es la **ecuación general del plano**.
 		\right. , \lambda,\delta\in\mathbb{R}
 	\end{equation}	
 	La ecuación normal del plano es: $(\vec{P_{0}P})\cdot w=0$, donde $\vec{P_{0}P}=(x-1,y-2,z-3)$ y $w=(3,-1,2)\times(2,5,-3)=(-7,13,17)$, es decir, 
-	$$(x-1,y-2,z-3)\cdot (-7,13,17)=0\Leftrightarrow 7x-13y-17z+70=0$$
+	$$(x-1,y-2,z-3)\cdot (-7,13,17)=0\Leftrightarrow 7x-13y-17z+70=0.$$
+
 ```
 
-**Posición relativa entre dos planos**
+*Posición relativa entre dos planos*
+
 Dos planos del espacio $\pi_{1}:(\vec{P_{0}P})\cdot w_{1}$ y $\pi_{2}:(\vec{Q_{0}P})\cdot w_{2}$ son planos paralelos si y solo si sus vectores normales son paralelos. Y son perpendiculares si y solo si sus vectores normales también lo son. Esto es:
 
 (1) $\pi_{1}\parallel\pi_{2}$ si y solo si $w_{1}\parallel w_{2}$.
 (2) $\pi_{1}\perp\pi_{2}$ si y solo si $w_{1}\perp w_{2}$.
 
 
-Dos planos paralelos no tienen puntos en común (no se intesctan). Pero si no son paralelos, entonces se intersectan en mas de un punto, de hecho la intersección es una recta, además forman un ángulo (distinto de cero).
+Dos planos distintos y paralelos no tienen puntos en común (no se intesctan). Pero si no son paralelos, entonces se intersectan en mas de un punto, de hecho la intersección es una recta, además forman un ángulo (distinto de cero).
 Dados los planos $\pi_{1}:(\vec{P_{0}P})\cdot w_{1}=0$ y $\pi_{2}:(\vec{Q_{0}P})\cdot w_{2}=0$ no paralelos, el ángulo entre ellos es igual al ángulo que forman $w_{1}$ y $w_{2}$, es decir $\cos(\theta)=\frac{w_{1}\cdot w_{2}}{|w_{1}||w_{2}|}$.
+
+```{example}
+	La intersección de los planos $\pi_{1}:3x+3y-4z+7=0$ y el plano $\pi_{2}:x+6y+2z-6=0$ es una recta, note que los planos no son paralelos (y por lo tanto no son coincidentes). Hallemos dicha recta, para ellos debemos hallar los puntos del espacio que pertenecen a ambos planos simultaneamente, es decir, los puntos $P(x,y,z)$ que se satisfacen ambas ecuaciones, 
+	\begin{equation*}
+		\left\{
+		\begin{array}{ll}
+			3x+3y-4z+7=&0\\
+			x+6y+2z-6=&0
+		\end{array}
+		\right.
+	\end{equation*}
+	resolviendo el sistema de ecuaciones se obtiene que el conjunto solución es 
+	\begin{equation*}
+		\left\{
+		\begin{array}{ll}
+		x=&5-3\lambda\\
+		y=&\lambda\\
+		z=&\frac{1}{2}+\frac{-3}{2}\lambda
+		\end{array}
+		\right.
+	\end{equation*}
+
+```
+
+*Distancia de un punto a un plano.*
+
+Dado un plano $\pi$ de vector normal $w=u\times v$, que pasa por el punto $P_{0}$, es decir $\pi: (\vec{P_{0}P})\cdot w$, y sea $Q$ exterior al plano, la distancia de $Q$ al plano $\pi$ es la proyecci\'on del vector $\vec{P_{0}Q}$ sobre $u\times v$ tal como lo muestra la imagen (INSERTAR IMAGEN). Así
+\begin{equation}
+d(Q,\pi)=|Proy_{w}\vec{P_{0}Q}|=\frac{|(\vec{P_{0}}Q)\cdot w|}{|w|}=\frac{|(\vec{P_{0}}Q)\cdot(u\times v)|}{|u\times v|}.
+(\#eq:distplanopunto)
+\end{equation}
+Suponiendo que $P_{0}$ y $Q$ son los puntos $(x_{0},y_{0},z_{0})$, $(x_{1},y_{1},z_{1})$ respectivamente y que $w=(a,b,c)$, entonces 
+\begin{equation*}
+	\begin{split}
+		(\vec{P_{0}Q})\cdot w& = (x_{1}-x_{0},y_{1}-y_{0},z_{1}-z_{0})\cdot (a,b,c)\\
+		& = ax_{1}+by_{1}+cz_{1}+d
+	\end{split}, 
+	\mbox{  con } d=-ax_{0}-by_{0}-cz_{0}
+\end{equation*} 
+y de este modo la ecuación de la distancia de un punto a un plano \@ref{eq=distplanopunto} podría reescribirse como sigue:
+\begin{equation}
+	d(Q,\pi)=\frac{|ax_{1}+by_{1}+cz_{1}+d|}{\sqrt{a^{2}+b^{2},c^{2}}}
+	(\#eq:distplanopunto2)
+\end{equation}
+
+```{example}
+	La distancia desde $Q(-2,1,2)$ al plano $\pi$ de ecuación $3x-y+2z-5=0$ es $d(Q,\pi)=\frac{|(3)(-2)+(-1)(1)+(2)(2)-5|}{\sqrt{3^{2}+1^{2}+2^{2}}}=\frac{8}{\sqrt{14}}=\frac{4\sqrt{14}}{7}$
+
+```
+
+```{example}
+	Dado el plano $\pi:(1,2,3)+\lambda(3,-1,2)+\delta(2,5,-3)$ y el punto $Q(1,1,1)$, para calcular la distancia del punto $Q$ al plano $\pi$ hallaremos el vector normal al plano $w=(3,-1,2)\times (2,5,-3)=(-7,13,17)$, para así finalmente calcular 
+\begin{equation*}
+	\begin{split}
+		d(Q,\pi)&=|Proy_{(3,-1,2)\times(2,5,-3)}(0,-1,-2)\\
+		&=\frac{|(0,-1,-2)\cdot(-7,13,17)|}{|(-7,13,17)|}\\
+		&=\frac{|0-13-34|}{\sqrt{49+169+289}}\\
+		&=\frac{47\sqrt{507}}{507}.
+	\end{split}
+\end{equation*}
+
+```
+
+*Posición relativa de una recta respecto de un plano*
+
+Dada la recta $\mathit{l}:Q_{0}+\lambda u$ y el plano $\pi:(\vec{P_{0}P})\cdot w=0$, es fácil ver que la recta $\mathit{l}$ es paralela al plano $\pi$, lo que se denota $\mathit{l}\parallel \pi$ si y solo si $u\perp w$. Y que la recta $\mathit{l}$ es perpendicular al plano $\pi$, lo que se denota $\mathit{l}\perp \pi$ si y solo si $u\parallel w$.
+Si la resta $\mathit{l}$ no es paralela al plano $\pi$ ($\mathit{l}\nparallel\pi$), entoncen se intersectan en un punto $A$ como se ilustra en la figura (INSERTAR IMAGEN).
+Note que $\vec{Q_{0}P_{0}}+\vec{P_{0}A}=\vec{Q_{0}A}$. Como $\vec{Q_{0}A}=\lambda u$, se tiene que $\vec{Q_{0}P_{0}}+\vec{P_{0}A}=\lambda u$. Si multiplicamos por $w$, se tiene que $\vec{Q_{0}P_{0}}\cdot w+\vec{P_{0}A}\cdot w=\lambda u\cdot w$. Pero $\vec{P_{0}A}\perp w$ por lo que $\vec{P_{0}A}=0$ y así $\vec{Q_{0}P_{0}}\cdot w=\lambda u\cdot w$, de donde se sigue que $\lambda=\frac{\vec{Q_{0}P_{0}}\cdot w}{u\cdot w}$ y así $\vec{Q_{0}A}=(\frac{\vec{Q_{0}P_{0}}\cdot w}{u\cdot w})u$. De donde se deduce que el vector $\vec{Q_{0}A}$ es un múltiplo escalar del vector $u$, por lo tanto
+\begin{equation}
+	A=Q_{0}+(\frac{\vec{Q_{0}P_{0}}\cdot w}{u\cdot w})u
+	(\#eq:ptointersecplanorecta)
+\end{equation}
+
+Con la ecuación anterior podemos calcular la distancia entre dos planos que no se intersectan. Dados los planos $\pi_{1}$ y $\pi_{2}$, si se intersectan, la distancia entre ellos es cero, es decir $d(\pi_{1}),\pi_{2})=0$. Si los planos $\pi_{1}$ y $\pi_{2}$ no se intersectan, entonces estos son paralelos, es decir $\pi_{1}\parallel\pi_{2}$ y la distancia entre ellos es $d(\pi_{1}),\pi_{2})=d(\pi_{1},P)$ donde $P$ es un punto del plano $\pi_{2}$.
