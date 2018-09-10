@@ -4,7 +4,7 @@
 title: "Álgebra Lineal"
 subtitle: "Ciencia de los Datos Financieros"
 author: "Synergy Vision"
-date: "2018-09-08"
+date: "2018-09-10"
 knit: "bookdown::render_book"
 documentclass: krantz
 bibliography: [book.bib, packages.bib]
@@ -1682,7 +1682,7 @@ Sea $\mathbb{F}$ un cuerpo. Supongamos que queremos hallar $n$ escalares (elemen
 	\end{array}
 	(\#eq:sistemalineal)
 \end{equation}
-donde $b_{i}\in\mathbb{F}$  así como $A_{ij}\in \mathbb{F}$ para todo $1\leq i\leq m$ y $1\leq j\leq n$. Al conjunto de ecuaciones expresadas en \@ref(eq=sistemalineal) se le llama *sistema de $m$ ecuaciones lineales con $n$ incognitas*. A los elementos $A_{ij}$ se les conoce como *coeficientes* del sistema de ecuaciones, siendo espesíficamente el coeficiente de la $i$-ésima fila y la $j$-ésima columna. Una *solución* del sistema es una $n$-tupla $(x_{1},x_{2},\cdots,x_{n})$ (un vector del espacio $\mathbb{R}^{n}$) que satisfaga las ecuaciones \@ref(eq=sistemalineal). Cuando $b_{1}=b_{2}=\cdots b_{m}=0$ se dice que el *sistema de ecuaciones es homogéneo* (cada ecuación es homogénea).
+donde $b_{i}\in\mathbb{F}$  así como $A_{ij}\in \mathbb{F}$ para todo $1\leq i\leq m$ y $1\leq j\leq n$. Al conjunto de ecuaciones expresadas en \@ref(eq:sistemalineal) se le llama *sistema de $m$ ecuaciones lineales con $n$ incognitas*. A los elementos $A_{ij}$ se les conoce como *coeficientes* del sistema de ecuaciones, siendo específicamente el coeficiente de la $i$-ésima fila y la $j$-ésima columna. Una *solución* del sistema es una $n$-tupla $(x_{1},x_{2},\cdots,x_{n})$ (un vector del espacio $\mathbb{R}^{n}$) que satisfaga las ecuaciones \@ref(eq:sistemalineal). Cuando $b_{1}=b_{2}=\cdots b_{m}=0$ se dice que el *sistema de ecuaciones es homogéneo* (cada ecuación es homogénea).
 
 Una forma de resolver un sistema de ecuaciones es con la técnica de eliminación de incógnitas, el cual consiste en multiplicar algunas de las ecuaciones por un escalar de forma que al sumar las ecuaciones se elimine algunas de las incógnitas. Veamos esto con un ejemplo.
 
@@ -1696,7 +1696,7 @@ Una forma de resolver un sistema de ecuaciones es con la técnica de eliminació
 	Multiplicamos la primera ecuación por el escalar $-3$ y la sumamos a la segunda ecuación, para obtener $-3(x_{1}-4x_{2}+x_{3})+(3x_{1}-11x_{2}+2x_{3})=0$, lo que queda como la siguiente $-3x_{1}+12x_{2}-3x_{3}+3x_{1}-11x_{2}+2x_{3}=0$, sumando términos independientes, obtenemos $x_{2}-x_{3}=0$ por lo tanto $x_{2}=x_{3}$. Ahora, multiplicando por $-2$ la primera ecuación y sumándola a la segunda, se obtiene $-2(x_{1}-4x_{2}+x_{3})+(3x_{1}-11x_{2}+2x_{3})=0$ lo que equivale a $-2x_{1}+8x_{2}-2x_{3}+3x_{1}-11x_{2}+2x_{3}=0$ al sumar los términos semejantes se obtiene que $x_{1}-3x_{2}=0$ por lo que $x_{1}=3x_{2}$. Luego cualquier vector de la forma $(3\lambda,\lambda,\lambda)$ con $\lambda\in\mathbb{R}$ es una solución del sistema homogéneo.
 </div>\EndKnitrBlock{example}
 
-En general, este método para resolver un sistema de ecuaciones como \@ref(eq=sistemalineal) consiste en multiplicar por $m$ escalares $c_{1}, c_{2},\cdots ,c_{m}$ cada ecuación del sistema y sumarlas entre si para obtener una *combinación lineal* de las ecuaciones:
+En general, este método para resolver un sistema de ecuaciones como \@ref(eq:sistemalineal) consiste en multiplicar por $m$ escalares $c_{1}, c_{2},\cdots ,c_{m}$ cada ecuación del sistema y sumarlas entre si para obtener una *combinación lineal* de las ecuaciones:
 \begin{equation}
 \begin{array}{ccccccc}
 &c_{1}(A_{11}x_{1}&+&\cdots &+&A_{1n}x_{n})=&c_{1}b_{1}\\
@@ -1708,18 +1708,18 @@ En general, este método para resolver un sistema de ecuaciones como \@ref(eq=si
 \end{array}
 \end{equation}
 
-Es claro que cualquier solución del sistema \@ref(eq=sistemalineal) es solución de la combinación lineal antes descrita.
+Es claro que cualquier solución del sistema \@ref(eq:sistemalineal) es solución de la combinación lineal antes descrita.
 Ahora bien, si formamos un sistema de $k$ ecuaciones lineales en las que cada una de ellas es una combinación lineal de las $m$ ecuaciones del sistema original, como sigue:
-\begin{equation*}
+\begin{equation}
 \begin{array}{ccccc}
 B_{11}x_{1}+&B_{12}x_{2}+&\cdots +&B_{1n}x_{n}=&d_{1}\\
 B_{21}x_{1}+&B_{22}x_{2}+&\cdots +&B_{2n}x_{n}=&d_{2}\\
 \vdots& &\ddots& \vdots& \vdots	\\
 B_{k1}x_{1}+&B_{k2}x_{2}+&\cdots +&B_{kn}x_{n}=&d_{k}
 \end{array}
-\end{equation*}\label{sistema2}
+\end{equation}(\#eq:sistema2)
 
-se tiene que $(x_{1},x_{2},\cdots, x_{n})$ es solución de \@ref(eq=sistema2) si lo es del sistema \@ref(eq=sistemalineal). Lo contrario no es necesariamente cierto, sin embargo si las ecuaciones de \@ref(eq=sistemalineal) son combinación lineal de las ecuaciones \@ref(eq=sistema2) entonces podemos estar seguros que toda solución del sistema \@ref(eq=sistema2) es también solución de \@ref(eq=sistemalineal). En este caso diremos que *son sistemas de ecuaciones equivalentes*. Y la observación podemos señalarla así:
+se tiene que $(x_{1},x_{2},\cdots, x_{n})$ es solución de \@ref(eq:sistema2) si lo es del sistema \@ref(eq:sistemalineal). Lo contrario no es necesariamente cierto, sin embargo si las ecuaciones de \@ref(eq:sistemalineal) son combinación lineal de las ecuaciones \@ref(eq:sistema2) entonces podemos estar seguros que toda solución del sistema \@ref(eq:sistema2) es también solución de \@ref(eq:sistemalineal). En este caso diremos que *son sistemas de ecuaciones equivalentes*. Y la observación podemos señalarla así:
 
 \BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-214"><strong>(\#thm:unnamed-chunk-214) </strong></span>	Sistemas de ecuaciones lineales equivalentes tienen exactamente las mismas soluciones.</div>\EndKnitrBlock{theorem}
 
@@ -1767,10 +1767,117 @@ En la sección anterior vimos que cuando realizamos combinaciones lineales de ec
 		\end{array}\right]
 	\end{equation*}
 </div>\EndKnitrBlock{definition}
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-217"><strong>(\#def:unnamed-chunk-217) </strong></span>	Dada una matriz $A$ de orden $m\times n$ sobre el cuerpo $\mathbb{F}$ y un escalar $\lambda\in\mathbb{F}$. El *producto de la matriz $A$ por el escalar $\lambda$* es la matriz $\lambda A$, donde cada elemento $[\lambda A]_{ij}=\lambda a_{ij}$, es decir:
+	\begin{equation*}
+		\lambda A=
+		\lambda \left[ \begin{array}{cccc}
+			a_{11} & a_{12} & \cdots & a_{1n}\\
+			a_{21} & a_{22} & \cdots & a_{2n}\\
+			\vdots & \vdots & \ddots & \vdots\\
+			a_{m1} & a_{m2} & \cdots & a_{mn}\\
+		\end{array}\right]=
+		\left[ \begin{array}{cccc}
+			\lambda a_{11}& \lambda a_{12}& \cdots & \lambda a_{1n}\\
+			\lambda a_{21}& \lambda a_{22}& \cdots & \lambda a_{2n}\\
+			\vdots & \vdots & \ddots & \vdots\\
+			\lambda a_{m1}& \lambda a_{m2}& \cdots & \lambda a_{mn}\\
+		\end{array}\right]
+	\end{equation*}
+</div>\EndKnitrBlock{definition}
+
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-218"><strong>(\#def:unnamed-chunk-218) </strong></span>	Sean $A$ y $B$ matrices de orden $m\times n$ y $n\times p$ respectivamente, el *producto $AB$* es la matriz $C$ de orden $m\times p$ cuyos elementos $ij$ son $[C]_{ij}=\sum_{k=1}^{n} A_{ik}B_{kj}$.
+</div>\EndKnitrBlock{definition}
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-219"><strong>(\#exm:unnamed-chunk-219) </strong></span>	Dadas las matrices $A=\left[ \begin{array}{cc}
+	1 & 0 \\
+	-3 & 1
+	\end{array}\right]$, $B=\left[ \begin{array}{ccc}
+	5 & -1 & 2 \\
+	15 & 4 & 8
+	\end{array}\right]$ y $C=\left[ \begin{array}{ccc}
+	-2 & 1 & 5\\
+	-1 & -5 & 1
+	\end{array}\right]$, entonces el producto de la matriz $C$ por el escalar $-2$ es: 
+	$$-2 C=\left[ \begin{array}{ccc}
+	(-2)(-2) & (-2)(1) & (-2)(5)\\
+	(-2)(-1) & (-2)(-5) & (-2)(1)
+	\end{array}\right]=\left[ \begin{array}{ccc}
+	4 & -2 & -10\\
+	2 & 10 & -2
+	\end{array}\right]$$.
+	El producto $AB$ es la matriz: 
+	$$\left[ \begin{array}{cc}
+	1 & 0 \\
+	-3 & 1
+	\end{array}\right]\left[ \begin{array}{ccc}
+	5 & -1 & 2 \\
+	15 & 4 & 8
+	\end{array}\right]=\left[ \begin{array}{ccc}
+		5 & -1 & 2\\
+		0 & 7 & 2
+	\end{array}\right]$$
+	Y la suma $$AB+C=\left[ \begin{array}{ccc}
+		3 & 0 & 7\\
+		-1 & 2 & 3
+	\end{array}\right]$$
+	Note que no podemos realizar el producto $BA$, pues no está definido. Para realizar un producto de matrices, el número de columnas del primer factor debe ser igual al número de filas del segundo factor.
+</div>\EndKnitrBlock{example}
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-220"><strong>(\#exm:unnamed-chunk-220) </strong></span>	Dadas las matrices $A=\left[ \begin{array}{cc}
+	1 & -2 \\
+	0 & 1 \\
+	-2 & 0
+	\end{array}\right]$ y $B=\left[ \begin{array}{ccc}
+	1 & 0 & 1 \\
+	0 & 2 & 1
+	\end{array}\right]$, entonces los productos:
+	$AB=\left[ \begin{array}{ccc}
+	1 & -4 & -1\\
+	0 & 2 & 1 \\
+	-2 & 0 & -2
+	\end{array}\right]$ y $BA=\left[ \begin{array}{cc}
+	-1 & -2  \\
+	-2 & 2  
+	\end{array}\right]$.\\
+	Por otro lado, si se tienen las matrices $C=\left[ \begin{array}{cc}
+	1 & -2 \\
+	3 & -1 \\
+	\end{array}\right]$ y 
+	$D=\left[ \begin{array}{cc}
+	1 & -2  \\
+	-1 & 2 
+	\end{array}\right]$, entonces los productos:
+	$CD=\left[ \begin{array}{cc}
+	3 & -6 \\
+	4 & -7 
+	\end{array}\right]$ y $DC=\left[ \begin{array}{cc}
+	-5 & 0  \\
+	5 & 0  
+	\end{array}\right]$
+</div>\EndKnitrBlock{example}
+
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	En los casos en que expresemos el producto $AB$ sin detallar el orden de las matrices, supondremos que el producto está bien definido. De los ejemplos anteriores podemos ver que aunque los productos $AB$ y $BA$ esten bien definidos, no necesariamente se tiene que $AB=BA$, esto es, el producto de matrices no es conmutativo.
+</div>\EndKnitrBlock{remark}
+
+Ahora estudiaremos las *operaciones elementales de filas* que pueden aplicarse a una matriz, el fin de aplicar estas operaciones es obtener una matriz equivalente a la original (para obtener sistemas de ecuaciones lineales equivalentes) que corresponda a los coeficientes de un sistema lineal sencillo de resolver. 
+
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-222"><strong>(\#def:unnamed-chunk-222) </strong></span>	Una matriz $R$ de orden $m\times n$ se llama una *matriz escalón reducida por filas* si:
+
+		(1) El primer elemento no nulo de cada fila no nula es igual a $1$, al cual llamaremos *pivote*.
+
+		(2) las columnas que contienen a un pivote (de cualquier fila), tienen el restos de sus elemento igual a cero.
+
+		(3) toda fila nula de $R$, está debajo de las filas con elementos no nulos.
+
+		(4) suponiendo que las filas no nulas de $R$ son las filas $1,2,\cdots, r$ y que el pivote de la fila $i\leq r$ está en la columna $k_{i}$, entonces $k_{1}< k_{2}< \cdots < k_{r}$.
+</div>\EndKnitrBlock{definition}
+
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	Una matriz que cumpla las primeras dos condiciones se llama *matriz reducida por filas*.
+</div>\EndKnitrBlock{remark}
 
 ## Ecuaciones lineales y matrices
 
-Dado un sistema de ecuaciones lineales como \@ref(eq=sistemalineal)
+Dado un sistema de ecuaciones lineales como \@ref(eq:sistemalineal)
 \begin{equation}
 \begin{array}{ccccc}
 A_{11}x_{1}+&A_{12}x_{2}+&\cdots +&A_{1n}x_{n}=&b_{1}\\

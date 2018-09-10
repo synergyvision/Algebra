@@ -25,7 +25,7 @@
 <meta name="author" content="Synergy Vision">
 
 
-<meta name="date" content="2018-09-08">
+<meta name="date" content="2018-09-10">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -195,7 +195,7 @@ Sea <span class="math inline">\(\mathbb{F}\)</span> un cuerpo. Supongamos que qu
     \end{array}
     \tag{4.1}
 \end{equation}\]</span>
-<p>donde <span class="math inline">\(b_{i}\in\mathbb{F}\)</span> así como <span class="math inline">\(A_{ij}\in \mathbb{F}\)</span> para todo <span class="math inline">\(1\leq i\leq m\)</span> y <span class="math inline">\(1\leq j\leq n\)</span>. Al conjunto de ecuaciones expresadas en @ref(eq=sistemalineal) se le llama <em>sistema de <span class="math inline">\(m\)</span> ecuaciones lineales con <span class="math inline">\(n\)</span> incognitas</em>. A los elementos <span class="math inline">\(A_{ij}\)</span> se les conoce como <em>coeficientes</em> del sistema de ecuaciones, siendo espesíficamente el coeficiente de la <span class="math inline">\(i\)</span>-ésima fila y la <span class="math inline">\(j\)</span>-ésima columna. Una <em>solución</em> del sistema es una <span class="math inline">\(n\)</span>-tupla <span class="math inline">\((x_{1},x_{2},\cdots,x_{n})\)</span> (un vector del espacio <span class="math inline">\(\mathbb{R}^{n}\)</span>) que satisfaga las ecuaciones @ref(eq=sistemalineal). Cuando <span class="math inline">\(b_{1}=b_{2}=\cdots b_{m}=0\)</span> se dice que el <em>sistema de ecuaciones es homogéneo</em> (cada ecuación es homogénea).</p>
+<p>donde <span class="math inline">\(b_{i}\in\mathbb{F}\)</span> así como <span class="math inline">\(A_{ij}\in \mathbb{F}\)</span> para todo <span class="math inline">\(1\leq i\leq m\)</span> y <span class="math inline">\(1\leq j\leq n\)</span>. Al conjunto de ecuaciones expresadas en <a href="espacios-vectoriales.html#eq:sistemalineal">(4.1)</a> se le llama <em>sistema de <span class="math inline">\(m\)</span> ecuaciones lineales con <span class="math inline">\(n\)</span> incognitas</em>. A los elementos <span class="math inline">\(A_{ij}\)</span> se les conoce como <em>coeficientes</em> del sistema de ecuaciones, siendo específicamente el coeficiente de la <span class="math inline">\(i\)</span>-ésima fila y la <span class="math inline">\(j\)</span>-ésima columna. Una <em>solución</em> del sistema es una <span class="math inline">\(n\)</span>-tupla <span class="math inline">\((x_{1},x_{2},\cdots,x_{n})\)</span> (un vector del espacio <span class="math inline">\(\mathbb{R}^{n}\)</span>) que satisfaga las ecuaciones <a href="espacios-vectoriales.html#eq:sistemalineal">(4.1)</a>. Cuando <span class="math inline">\(b_{1}=b_{2}=\cdots b_{m}=0\)</span> se dice que el <em>sistema de ecuaciones es homogéneo</em> (cada ecuación es homogénea).</p>
 <p>Una forma de resolver un sistema de ecuaciones es con la técnica de eliminación de incógnitas, el cual consiste en multiplicar algunas de las ecuaciones por un escalar de forma que al sumar las ecuaciones se elimine algunas de las incógnitas. Veamos esto con un ejemplo.</p>
 
 <div class="example">
@@ -209,7 +209,7 @@ Sea <span class="math inline">\(\mathbb{F}\)</span> un cuerpo. Supongamos que qu
 <p>Multiplicamos la primera ecuación por el escalar <span class="math inline">\(-3\)</span> y la sumamos a la segunda ecuación, para obtener <span class="math inline">\(-3(x_{1}-4x_{2}+x_{3})+(3x_{1}-11x_{2}+2x_{3})=0\)</span>, lo que queda como la siguiente <span class="math inline">\(-3x_{1}+12x_{2}-3x_{3}+3x_{1}-11x_{2}+2x_{3}=0\)</span>, sumando términos independientes, obtenemos <span class="math inline">\(x_{2}-x_{3}=0\)</span> por lo tanto <span class="math inline">\(x_{2}=x_{3}\)</span>. Ahora, multiplicando por <span class="math inline">\(-2\)</span> la primera ecuación y sumándola a la segunda, se obtiene <span class="math inline">\(-2(x_{1}-4x_{2}+x_{3})+(3x_{1}-11x_{2}+2x_{3})=0\)</span> lo que equivale a <span class="math inline">\(-2x_{1}+8x_{2}-2x_{3}+3x_{1}-11x_{2}+2x_{3}=0\)</span> al sumar los términos semejantes se obtiene que <span class="math inline">\(x_{1}-3x_{2}=0\)</span> por lo que <span class="math inline">\(x_{1}=3x_{2}\)</span>. Luego cualquier vector de la forma <span class="math inline">\((3\lambda,\lambda,\lambda)\)</span> con <span class="math inline">\(\lambda\in\mathbb{R}\)</span> es una solución del sistema homogéneo.</p>
 </div>
 
-En general, este método para resolver un sistema de ecuaciones como @ref(eq=sistemalineal) consiste en multiplicar por <span class="math inline">\(m\)</span> escalares <span class="math inline">\(c_{1}, c_{2},\cdots ,c_{m}\)</span> cada ecuación del sistema y sumarlas entre si para obtener una <em>combinación lineal</em> de las ecuaciones:
+En general, este método para resolver un sistema de ecuaciones como <a href="espacios-vectoriales.html#eq:sistemalineal">(4.1)</a> consiste en multiplicar por <span class="math inline">\(m\)</span> escalares <span class="math inline">\(c_{1}, c_{2},\cdots ,c_{m}\)</span> cada ecuación del sistema y sumarlas entre si para obtener una <em>combinación lineal</em> de las ecuaciones:
 <span class="math display">\[\begin{equation}
 \begin{array}{ccccccc}
 &amp;c_{1}(A_{11}x_{1}&amp;+&amp;\cdots &amp;+&amp;A_{1n}x_{n})=&amp;c_{1}b_{1}\\
@@ -220,17 +220,17 @@ En general, este método para resolver un sistema de ecuaciones como @ref(eq=sis
 &amp;(c_{1}A_{11}+\cdots+c_{m}A_{m1})x_{1}&amp;+&amp;\cdots&amp;+&amp;(c_{1}A_{1n}+\cdots +c_{m}A_{mn})x_{n}&amp;=c_{1}b_{1}+\cdots+c_{m}b_{m}
 \end{array}
 \end{equation}\]</span>
-Es claro que cualquier solución del sistema @ref(eq=sistemalineal) es solución de la combinación lineal antes descrita. Ahora bien, si formamos un sistema de <span class="math inline">\(k\)</span> ecuaciones lineales en las que cada una de ellas es una combinación lineal de las <span class="math inline">\(m\)</span> ecuaciones del sistema original, como sigue:
-<span class="math display">\[\begin{equation*}
+Es claro que cualquier solución del sistema <a href="espacios-vectoriales.html#eq:sistemalineal">(4.1)</a> es solución de la combinación lineal antes descrita. Ahora bien, si formamos un sistema de <span class="math inline">\(k\)</span> ecuaciones lineales en las que cada una de ellas es una combinación lineal de las <span class="math inline">\(m\)</span> ecuaciones del sistema original, como sigue:
+<span class="math display" id="eq:sistema2">\[\begin{equation}
 \begin{array}{ccccc}
 B_{11}x_{1}+&amp;B_{12}x_{2}+&amp;\cdots +&amp;B_{1n}x_{n}=&amp;d_{1}\\
 B_{21}x_{1}+&amp;B_{22}x_{2}+&amp;\cdots +&amp;B_{2n}x_{n}=&amp;d_{2}\\
 \vdots&amp; &amp;\ddots&amp; \vdots&amp; \vdots \\
 B_{k1}x_{1}+&amp;B_{k2}x_{2}+&amp;\cdots +&amp;B_{kn}x_{n}=&amp;d_{k}
 \end{array}
-\end{equation*}\]</span>
-
-<p>se tiene que <span class="math inline">\((x_{1},x_{2},\cdots, x_{n})\)</span> es solución de @ref(eq=sistema2) si lo es del sistema @ref(eq=sistemalineal). Lo contrario no es necesariamente cierto, sin embargo si las ecuaciones de @ref(eq=sistemalineal) son combinación lineal de las ecuaciones @ref(eq=sistema2) entonces podemos estar seguros que toda solución del sistema @ref(eq=sistema2) es también solución de @ref(eq=sistemalineal). En este caso diremos que <em>son sistemas de ecuaciones equivalentes</em>. Y la observación podemos señalarla así:</p>
+\end{equation}\]</span>
+<p>\tag{4.2}</p>
+<p>se tiene que <span class="math inline">\((x_{1},x_{2},\cdots, x_{n})\)</span> es solución de <a href="espacios-vectoriales.html#eq:sistema2">(4.2)</a> si lo es del sistema <a href="espacios-vectoriales.html#eq:sistemalineal">(4.1)</a>. Lo contrario no es necesariamente cierto, sin embargo si las ecuaciones de <a href="espacios-vectoriales.html#eq:sistemalineal">(4.1)</a> son combinación lineal de las ecuaciones <a href="espacios-vectoriales.html#eq:sistema2">(4.2)</a> entonces podemos estar seguros que toda solución del sistema <a href="espacios-vectoriales.html#eq:sistema2">(4.2)</a> es también solución de <a href="espacios-vectoriales.html#eq:sistemalineal">(4.1)</a>. En este caso diremos que <em>son sistemas de ecuaciones equivalentes</em>. Y la observación podemos señalarla así:</p>
 
 <div class="theorem">
 <span id="thm:unnamed-chunk-214" class="theorem"><strong>Teorema 4.1  </strong></span> Sistemas de ecuaciones lineales equivalentes tienen exactamente las mismas soluciones.
@@ -279,11 +279,86 @@ B_{k1}x_{1}+&amp;B_{k2}x_{2}+&amp;\cdots +&amp;B_{kn}x_{n}=&amp;d_{k}
         \end{array}\right]
     \end{equation*}\]</span>
 </div>
+ 
+<div class="definition">
+<span id="def:unnamed-chunk-217" class="definition"><strong>Definición 4.3  </strong></span> Dada una matriz <span class="math inline">\(A\)</span> de orden <span class="math inline">\(m\times n\)</span> sobre el cuerpo <span class="math inline">\(\mathbb{F}\)</span> y un escalar <span class="math inline">\(\lambda\in\mathbb{F}\)</span>. El <em>producto de la matriz <span class="math inline">\(A\)</span> por el escalar <span class="math inline">\(\lambda\)</span></em> es la matriz <span class="math inline">\(\lambda A\)</span>, donde cada elemento <span class="math inline">\([\lambda A]_{ij}=\lambda a_{ij}\)</span>, es decir:
+<span class="math display">\[\begin{equation*}
+        \lambda A=
+        \lambda \left[ \begin{array}{cccc}
+            a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n}\\
+            a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n}\\
+            \vdots &amp; \vdots &amp; \ddots &amp; \vdots\\
+            a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}\\
+        \end{array}\right]=
+        \left[ \begin{array}{cccc}
+            \lambda a_{11}&amp; \lambda a_{12}&amp; \cdots &amp; \lambda a_{1n}\\
+            \lambda a_{21}&amp; \lambda a_{22}&amp; \cdots &amp; \lambda a_{2n}\\
+            \vdots &amp; \vdots &amp; \ddots &amp; \vdots\\
+            \lambda a_{m1}&amp; \lambda a_{m2}&amp; \cdots &amp; \lambda a_{mn}\\
+        \end{array}\right]
+    \end{equation*}\]</span>
+</div>
+
+
+<div class="definition">
+<p><span id="def:unnamed-chunk-218" class="definition"><strong>Definición 4.4  </strong></span> Sean <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> matrices de orden <span class="math inline">\(m\times n\)</span> y <span class="math inline">\(n\times p\)</span> respectivamente, el <em>producto <span class="math inline">\(AB\)</span></em> es la matriz <span class="math inline">\(C\)</span> de orden <span class="math inline">\(m\times p\)</span> cuyos elementos <span class="math inline">\(ij\)</span> son <span class="math inline">\([C]_{ij}=\sum_{k=1}^{n} A_{ik}B_{kj}\)</span>.</p>
+</div>
+
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-219" class="example"><strong>Ejemplo 4.2  </strong></span> Dadas las matrices <span class="math inline">\(A=\left[ \begin{array}{cc}  1 &amp; 0 \\  -3 &amp; 1  \end{array}\right]\)</span>, <span class="math inline">\(B=\left[ \begin{array}{ccc}  5 &amp; -1 &amp; 2 \\  15 &amp; 4 &amp; 8  \end{array}\right]\)</span> y <span class="math inline">\(C=\left[ \begin{array}{ccc}  -2 &amp; 1 &amp; 5\\  -1 &amp; -5 &amp; 1  \end{array}\right]\)</span>, entonces el producto de la matriz <span class="math inline">\(C\)</span> por el escalar <span class="math inline">\(-2\)</span> es: <span class="math display">\[-2 C=\left[ \begin{array}{ccc}
+    (-2)(-2) &amp; (-2)(1) &amp; (-2)(5)\\
+    (-2)(-1) &amp; (-2)(-5) &amp; (-2)(1)
+    \end{array}\right]=\left[ \begin{array}{ccc}
+    4 &amp; -2 &amp; -10\\
+    2 &amp; 10 &amp; -2
+    \end{array}\right]\]</span>. El producto <span class="math inline">\(AB\)</span> es la matriz: <span class="math display">\[\left[ \begin{array}{cc}
+    1 &amp; 0 \\
+    -3 &amp; 1
+    \end{array}\right]\left[ \begin{array}{ccc}
+    5 &amp; -1 &amp; 2 \\
+    15 &amp; 4 &amp; 8
+    \end{array}\right]=\left[ \begin{array}{ccc}
+        5 &amp; -1 &amp; 2\\
+        0 &amp; 7 &amp; 2
+    \end{array}\right]\]</span> Y la suma <span class="math display">\[AB+C=\left[ \begin{array}{ccc}
+        3 &amp; 0 &amp; 7\\
+        -1 &amp; 2 &amp; 3
+    \end{array}\right]\]</span> Note que no podemos realizar el producto <span class="math inline">\(BA\)</span>, pues no está definido. Para realizar un producto de matrices, el número de columnas del primer factor debe ser igual al número de filas del segundo factor.</p>
+</div>
+
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-220" class="example"><strong>Ejemplo 4.3  </strong></span> Dadas las matrices <span class="math inline">\(A=\left[ \begin{array}{cc}  1 &amp; -2 \\  0 &amp; 1 \\  -2 &amp; 0  \end{array}\right]\)</span> y <span class="math inline">\(B=\left[ \begin{array}{ccc}  1 &amp; 0 &amp; 1 \\  0 &amp; 2 &amp; 1  \end{array}\right]\)</span>, entonces los productos: <span class="math inline">\(AB=\left[ \begin{array}{ccc}  1 &amp; -4 &amp; -1\\  0 &amp; 2 &amp; 1 \\  -2 &amp; 0 &amp; -2  \end{array}\right]\)</span> y <span class="math inline">\(BA=\left[ \begin{array}{cc}  -1 &amp; -2 \\  -2 &amp; 2  \end{array}\right]\)</span>.\ Por otro lado, si se tienen las matrices <span class="math inline">\(C=\left[ \begin{array}{cc}  1 &amp; -2 \\  3 &amp; -1 \\  \end{array}\right]\)</span> y <span class="math inline">\(D=\left[ \begin{array}{cc}  1 &amp; -2 \\  -1 &amp; 2  \end{array}\right]\)</span>, entonces los productos: <span class="math inline">\(CD=\left[ \begin{array}{cc}  3 &amp; -6 \\  4 &amp; -7  \end{array}\right]\)</span> y <span class="math inline">\(DC=\left[ \begin{array}{cc}  -5 &amp; 0 \\  5 &amp; 0  \end{array}\right]\)</span></p>
+</div>
+
+
+<div class="remark">
+<p> <span class="remark"><em>Nota. </em></span>  En los casos en que expresemos el producto <span class="math inline">\(AB\)</span> sin detallar el orden de las matrices, supondremos que el producto está bien definido. De los ejemplos anteriores podemos ver que aunque los productos <span class="math inline">\(AB\)</span> y <span class="math inline">\(BA\)</span> esten bien definidos, no necesariamente se tiene que <span class="math inline">\(AB=BA\)</span>, esto es, el producto de matrices no es conmutativo.</p>
+</div>
+
+<p>Ahora estudiaremos las <em>operaciones elementales de filas</em> que pueden aplicarse a una matriz, el fin de aplicar estas operaciones es obtener una matriz equivalente a la original (para obtener sistemas de ecuaciones lineales equivalentes) que corresponda a los coeficientes de un sistema lineal sencillo de resolver.</p>
+
+<div class="definition">
+<p><span id="def:unnamed-chunk-222" class="definition"><strong>Definición 4.5  </strong></span> Una matriz <span class="math inline">\(R\)</span> de orden <span class="math inline">\(m\times n\)</span> se llama una <em>matriz escalón reducida por filas</em> si:</p>
+<pre><code>    (1) El primer elemento no nulo de cada fila no nula es igual a $1$, al cual llamaremos *pivote*.
+
+    (2) las columnas que contienen a un pivote (de cualquier fila), tienen el restos de sus elemento igual a cero.
+
+    (3) toda fila nula de $R$, está debajo de las filas con elementos no nulos.
+
+    (4) suponiendo que las filas no nulas de $R$ son las filas $1,2,\cdots, r$ y que el pivote de la fila $i\leq r$ está en la columna $k_{i}$, entonces $k_{1}&lt; k_{2}&lt; \cdots &lt; k_{r}$.</code></pre>
+</div>
+
+
+<div class="remark">
+<p> <span class="remark"><em>Nota. </em></span>  Una matriz que cumpla las primeras dos condiciones se llama <em>matriz reducida por filas</em>.</p>
+</div>
 
 </div>
 <div id="ecuaciones-lineales-y-matrices" class="section level2">
 <h2><span class="header-section-number">4.3</span> Ecuaciones lineales y matrices</h2>
-Dado un sistema de ecuaciones lineales como @ref(eq=sistemalineal)
+Dado un sistema de ecuaciones lineales como <a href="espacios-vectoriales.html#eq:sistemalineal">(4.1)</a>
 <span class="math display">\[\begin{equation}
 \begin{array}{ccccc}
 A_{11}x_{1}+&amp;A_{12}x_{2}+&amp;\cdots +&amp;A_{1n}x_{n}=&amp;b_{1}\\
