@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+
+  <meta property="og:title" content="" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+<script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+
+
+
+<link rel="stylesheet" href="css\style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"><img src="images/logovision-black.png" width="160"></img></a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path=""><a href="#espacios-vectoriales"><i class="fa fa-check"></i><b>1</b> Espacios vectoriales</a><ul>
+<li class="chapter" data-level="1.1" data-path=""><a href="#ecuaciones-lineales"><i class="fa fa-check"></i><b>1.1</b> Ecuaciones lineales</a></li>
+<li class="chapter" data-level="1.2" data-path=""><a href="#matrices"><i class="fa fa-check"></i><b>1.2</b> Matrices</a></li>
+<li class="chapter" data-level="1.3" data-path=""><a href="#ecuaciones-lineales-y-matrices"><i class="fa fa-check"></i><b>1.3</b> Ecuaciones lineales y matrices</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://bookdown.org" target="blank">Publicado con bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<!--bookdown:title:end-->
+<!--bookdown:title:start-->
+<div id="espacios-vectoriales" class="section level1">
+<h1><span class="header-section-number">Capítulo 1</span> Espacios vectoriales</h1>
+<p>En este capítulo estudiaremos los espacios vectoriales, un concepto abstrato de una estructura cerrada bajo combinaciones lineales. Veremos que las matrices son objetos muy útiles para trabajar en espacios vectoriales. Por esta razón estudiaremos algunos aspectos básicos de estos objetos. Como motivación para el estudio de las matrices iniciaremos el capítulo estudiando las ecuaciones lineales y poco a poco iremos acercándonos al estudio de los espacios vectoriales.</p>
+<div id="ecuaciones-lineales" class="section level2">
+<h2><span class="header-section-number">1.1</span> Ecuaciones lineales</h2>
+<p>En este sección estudiaremos las ecuaciones lineales como motivación para el estudio de los conceptos iniciales de matrices. Además estudiaremos las operaciones básicas de suma y producto por un escalar así como el producto de matrices. Luego estudiaremos el concepto de invertibilidad de matrices, para ello definiremos las operaciones elementales por filas.</p>
+Sea <span class="math inline">\(\mathbb{F}\)</span> un cuerpo. Supongamos que queremos hallar <span class="math inline">\(n\)</span> escalares (elementos del cuerpo <span class="math inline">\(\mathbb{F}\)</span>) <span class="math inline">\(x_{1},x_{2}, \cdots, x_{n}\)</span> que satisfagan las condiciones:
+<span class="math display" id="eq:sistemalineal">\[\begin{equation}
+    \begin{array}{ccccc}
+        A_{11}x_{1}+&amp;A_{12}x_{2}+&amp;\cdots +&amp;A_{1n}x_{n}=&amp;b_{1}\\
+        A_{21}x_{1}+&amp;A_{22}x_{2}+&amp;\cdots +&amp;A_{2n}x_{n}=&amp;b_{2}\\
+        \vdots&amp; &amp;\ddots&amp; \vdots&amp; \vdots \\
+        A_{m1}x_{1}+&amp;A_{m2}x_{2}+&amp;\cdots +&amp;A_{mn}x_{n}=&amp;b_{m}
+    \end{array}
+    \tag{1.1}
+\end{equation}\]</span>
+<p>donde <span class="math inline">\(b_{i}\in\mathbb{F}\)</span> así como <span class="math inline">\(A_{ij}\in \mathbb{F}\)</span> para todo <span class="math inline">\(1\leq i\leq m\)</span> y <span class="math inline">\(1\leq j\leq n\)</span>. Al conjunto de ecuaciones expresadas en <a href="#eq:sistemalineal">(1.1)</a> se le llama <em>sistema de <span class="math inline">\(m\)</span> ecuaciones lineales con <span class="math inline">\(n\)</span> incognitas</em>. A los elementos <span class="math inline">\(A_{ij}\)</span> se les conoce como <em>coeficientes</em> del sistema de ecuaciones, siendo específicamente el coeficiente de la <span class="math inline">\(i\)</span>-ésima fila y la <span class="math inline">\(j\)</span>-ésima columna. Una <em>solución</em> del sistema es una <span class="math inline">\(n\)</span>-tupla <span class="math inline">\((x_{1},x_{2},\cdots,x_{n})\)</span> (un vector del espacio <span class="math inline">\(\mathbb{R}^{n}\)</span>) que satisfaga las ecuaciones <a href="#eq:sistemalineal">(1.1)</a>. Cuando <span class="math inline">\(b_{1}=b_{2}=\cdots b_{m}=0\)</span> se dice que el <em>sistema de ecuaciones es homogéneo</em> (cada ecuación es homogénea).</p>
+<p>Una forma de resolver un sistema de ecuaciones es con la técnica de eliminación de incógnitas, el cual consiste en multiplicar algunas de las ecuaciones por un escalar de forma que al sumar las ecuaciones se elimine algunas de las incógnitas. Veamos esto con un ejemplo.</p>
+
+<div class="example">
+<span id="exm:unnamed-chunk-1" class="example"><strong>Ejemplo 1.1  </strong></span> Dado el siguiente sistema homogéneo, sobre el cuerpo de los números reales <span class="math inline">\(\mathbb{R}\)</span>
+<span class="math display">\[\begin{eqnarray*}
+    \begin{array}{cc}
+        x_{1}-4x_{2}+x_{3}&amp;=0\\
+        3x_{1}-11x_{2}+2x_{3}&amp;=0
+    \end{array}
+    \end{eqnarray*}\]</span>
+<p>Multiplicamos la primera ecuación por el escalar <span class="math inline">\(-3\)</span> y la sumamos a la segunda ecuación, para obtener <span class="math inline">\(-3(x_{1}-4x_{2}+x_{3})+(3x_{1}-11x_{2}+2x_{3})=0\)</span>, lo que queda como la siguiente <span class="math inline">\(-3x_{1}+12x_{2}-3x_{3}+3x_{1}-11x_{2}+2x_{3}=0\)</span>, sumando términos independientes, obtenemos <span class="math inline">\(x_{2}-x_{3}=0\)</span> por lo tanto <span class="math inline">\(x_{2}=x_{3}\)</span>. Ahora, multiplicando por <span class="math inline">\(-2\)</span> la primera ecuación y sumándola a la segunda, se obtiene <span class="math inline">\(-2(x_{1}-4x_{2}+x_{3})+(3x_{1}-11x_{2}+2x_{3})=0\)</span> lo que equivale a <span class="math inline">\(-2x_{1}+8x_{2}-2x_{3}+3x_{1}-11x_{2}+2x_{3}=0\)</span> al sumar los términos semejantes se obtiene que <span class="math inline">\(x_{1}-3x_{2}=0\)</span> por lo que <span class="math inline">\(x_{1}=3x_{2}\)</span>. Luego cualquier vector de la forma <span class="math inline">\((3\lambda,\lambda,\lambda)\)</span> con <span class="math inline">\(\lambda\in\mathbb{R}\)</span> es una solución del sistema homogéneo.</p>
+</div>
+
+En general, este método para resolver un sistema de ecuaciones como <a href="#eq:sistemalineal">(1.1)</a> consiste en multiplicar por <span class="math inline">\(m\)</span> escalares <span class="math inline">\(c_{1}, c_{2},\cdots ,c_{m}\)</span> cada ecuación del sistema y sumarlas entre si para obtener una <em>combinación lineal</em> de las ecuaciones:
+<span class="math display">\[\begin{equation}
+\begin{array}{ccccccc}
+&amp;c_{1}(A_{11}x_{1}&amp;+&amp;\cdots &amp;+&amp;A_{1n}x_{n})=&amp;c_{1}b_{1}\\
+&amp;c_{2}(A_{21}x_{1}&amp;+&amp;\cdots &amp;+&amp;A_{2n}x_{n})=&amp;c_{2}b_{2}\\
++&amp;\vdots&amp; &amp;\ddots&amp; &amp;\vdots&amp; \vdots  \\
+&amp;c_{m}(A_{m1}x_{1}&amp;+&amp;\cdots &amp;+&amp;A_{mn}x_{n})=&amp;c_{m}b_{m}\\
+\cline{2-7}
+&amp;(c_{1}A_{11}+\cdots+c_{m}A_{m1})x_{1}&amp;+&amp;\cdots&amp;+&amp;(c_{1}A_{1n}+\cdots +c_{m}A_{mn})x_{n}&amp;=c_{1}b_{1}+\cdots+c_{m}b_{m}
+\end{array}
+\end{equation}\]</span>
+Es claro que cualquier solución del sistema <a href="#eq:sistemalineal">(1.1)</a> es solución de la combinación lineal antes descrita. Ahora bien, si formamos un sistema de <span class="math inline">\(k\)</span> ecuaciones lineales en las que cada una de ellas es una combinación lineal de las <span class="math inline">\(m\)</span> ecuaciones del sistema original, como sigue:
+<span class="math display" id="eq:sistema2">\[\begin{equation}
+\begin{array}{ccccc}
+B_{11}x_{1}+&amp;B_{12}x_{2}+&amp;\cdots +&amp;B_{1n}x_{n}=&amp;d_{1}\\
+B_{21}x_{1}+&amp;B_{22}x_{2}+&amp;\cdots +&amp;B_{2n}x_{n}=&amp;d_{2}\\
+\vdots&amp; &amp;\ddots&amp; \vdots&amp; \vdots \\
+B_{k1}x_{1}+&amp;B_{k2}x_{2}+&amp;\cdots +&amp;B_{kn}x_{n}=&amp;d_{k}
+\end{array}
+\end{equation}\]</span>
+<p>\tag{1.2}</p>
+<p>se tiene que <span class="math inline">\((x_{1},x_{2},\cdots, x_{n})\)</span> es solución de <a href="#eq:sistema2">(1.2)</a> si lo es del sistema <a href="#eq:sistemalineal">(1.1)</a>. Lo contrario no es necesariamente cierto, sin embargo si las ecuaciones de <a href="#eq:sistemalineal">(1.1)</a> son combinación lineal de las ecuaciones <a href="#eq:sistema2">(1.2)</a> entonces podemos estar seguros que toda solución del sistema <a href="#eq:sistema2">(1.2)</a> es también solución de <a href="#eq:sistemalineal">(1.1)</a>. En este caso diremos que <em>son sistemas de ecuaciones equivalentes</em>. Y la observación podemos señalarla así:</p>
+
+<div class="theorem">
+<span id="thm:unnamed-chunk-2" class="theorem"><strong>Teorema 1.1  </strong></span> Sistemas de ecuaciones lineales equivalentes tienen exactamente las mismas soluciones.
+</div>
+
+<p>Lo anterior nos permite buscar las soluciones de cualquier sistema de ecuaciones lineales, buscando un sistema equivalente que sea mas fácil de resolver (por excelencia, trivial). Este método lo explicaremos en la siguiente sección.</p>
+</div>
+<div id="matrices" class="section level2">
+<h2><span class="header-section-number">1.2</span> Matrices</h2>
+<p>En la sección anterior vimos que cuando realizamos combinaciones lineales de ecuaciones lineales, lo que importa son los coeficientes de las ecuaciones originales, siendo las incógnitas prescindibles. Esto nos permite trabajar directamente con los coeficientes para hallar un nuevo sistema lineal equivalente mas sencillo. Por esta razón arreglaremos tales coeficientes en forma rectángular para trabajar con ellos de forma directa. Estos objetos se llaman <em>matrices</em>. En la primera parte de esta sección se dará una definición formal y mas general de estos objetos, se definiran algunas operaciones con estos objetos. Para luego volver al problema original, la resolución de sistemas de ecuaciones lineales.</p>
+
+<div class="definition">
+<span id="def:unnamed-chunk-3" class="definition"><strong>Definición 1.1  </strong></span> Para enteros positivos <span class="math inline">\(m\)</span> y <span class="math inline">\(n\)</span>, <em>una matriz <span class="math inline">\(m\times n\)</span> sobre el cuerpo <span class="math inline">\(\mathbb{F}\)</span></em> es una función <span class="math inline">\(A\)</span> del conjunto de los pares <span class="math inline">\((i,j)\in\{1,2,\cdots m\}\times\{1,2,\cdots n\}\)</span> en el cuerpo <span class="math inline">\(\mathbb{F}\)</span>. El <em>orden de la matriz <span class="math inline">\(A\)</span></em> es <span class="math inline">\(m\times n\)</span>. Los <em>elementos de la matriz <span class="math inline">\(A\)</span></em> son los escalares <span class="math inline">\(A(i,j)=a_{ij}\)</span>. Suele representarse como un arreglo rectángular de <span class="math inline">\(m\)</span> filas y <span class="math inline">\(n\)</span> columnas, donde el elemento <span class="math inline">\(a_{ij}\)</span> ocupa el puesto en la fila <span class="math inline">\(i\)</span> y la columna <span class="math inline">\(j\)</span> del arreglo, como sigue
+<span class="math display">\[\begin{equation*}
+        \left[ \begin{array}{cccc}
+        a_{11}&amp;a_{12}&amp;\cdots &amp;a_{1n}\\
+        a_{21}&amp;a_{22}&amp;\cdots &amp;a_{2n}\\
+        \vdots&amp; \ddots&amp; \vdots&amp; \vdots\\
+        a_{m1}&amp;a_{m2}&amp;\cdots &amp;a_{mn}
+        \end{array}\right] 
+    \end{equation*}\]</span>
+<p>La <em><span class="math inline">\(i\)</span>-ésima fila de la matriz <span class="math inline">\(A\)</span></em> es el arreglo <span class="math inline">\(A_{i*}=[a_{i1}\; a_{i2}\;\cdots\; a_{in}]\)</span> (puede entenderse como un vector de <span class="math inline">\(\mathbb{R}^{n}\)</span>) y la  es el arreglo <span class="math inline">\(A_{*j}=\left[ \begin{array}{c}a_{1j}\\  a_{2j}\\  \vdots\\  a_{mj}  \end{array}\right]\)</span>.</p>
+</div>
+
+
+<div class="definition">
+<span id="def:unnamed-chunk-4" class="definition"><strong>Definición 1.2  </strong></span> Dadas las matrices <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> de orden <span class="math inline">\(n\times m\)</span>, sobre el cuerpo <span class="math inline">\(\mathbb{F}\)</span>, <em>la suma de las matrices <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span></em>, es la matriz <span class="math inline">\(A+B\)</span> formada por los elementos <span class="math inline">\((a+b)_{ij}=a_{ij}+b_{ij}\)</span> (la función suma <span class="math inline">\((A+B)(i,j)=A(i,j)+B(i,j)\)</span>). También se puede expresar como:
+<span class="math display">\[\begin{equation*}
+        \left[ \begin{array}{cccc}
+            a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n}\\
+            a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n}\\
+            \vdots &amp; \vdots &amp; \ddots &amp; \vdots\\
+            a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}\\
+        \end{array}\right]+
+        \left[ \begin{array}{cccc}
+        b_{11} &amp; b_{12} &amp; \cdots &amp; b_{1n}\\
+        b_{21} &amp; b_{22} &amp; \cdots &amp; b_{2n}\\
+        \vdots &amp; \vdots &amp; \ddots &amp; \vdots\\
+        b_{m1} &amp; b_{m2} &amp; \cdots &amp; b_{mn}\\
+        \end{array}\right]=
+        \left[ \begin{array}{cccc}
+        a_{11} + b_{11}&amp; a_{12} + b_{12}&amp; \cdots &amp; a_{1n}+ b_{1n}\\
+        a_{21} + b_{21} &amp; a_{22} + b_{22} &amp; \cdots &amp; a_{2n} + b_{2n}\\
+        \vdots &amp; \vdots &amp; \ddots &amp; \vdots\\
+        a_{m1} + b_{m1} &amp; a_{m2} + b_{m2} &amp; \cdots &amp; a_{mn} + b_{mn}\\
+        \end{array}\right]
+    \end{equation*}\]</span>
+</div>
+ 
+<div class="definition">
+<span id="def:unnamed-chunk-5" class="definition"><strong>Definición 1.3  </strong></span> Dada una matriz <span class="math inline">\(A\)</span> de orden <span class="math inline">\(m\times n\)</span> sobre el cuerpo <span class="math inline">\(\mathbb{F}\)</span> y un escalar <span class="math inline">\(\lambda\in\mathbb{F}\)</span>. El <em>producto de la matriz <span class="math inline">\(A\)</span> por el escalar <span class="math inline">\(\lambda\)</span></em> es la matriz <span class="math inline">\(\lambda A\)</span>, donde cada elemento <span class="math inline">\([\lambda A]_{ij}=\lambda a_{ij}\)</span>, es decir:
+<span class="math display">\[\begin{equation*}
+        \lambda A=
+        \lambda \left[ \begin{array}{cccc}
+            a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n}\\
+            a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n}\\
+            \vdots &amp; \vdots &amp; \ddots &amp; \vdots\\
+            a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}\\
+        \end{array}\right]=
+        \left[ \begin{array}{cccc}
+            \lambda a_{11}&amp; \lambda a_{12}&amp; \cdots &amp; \lambda a_{1n}\\
+            \lambda a_{21}&amp; \lambda a_{22}&amp; \cdots &amp; \lambda a_{2n}\\
+            \vdots &amp; \vdots &amp; \ddots &amp; \vdots\\
+            \lambda a_{m1}&amp; \lambda a_{m2}&amp; \cdots &amp; \lambda a_{mn}\\
+        \end{array}\right]
+    \end{equation*}\]</span>
+</div>
+
+
+<div class="definition">
+<p><span id="def:unnamed-chunk-6" class="definition"><strong>Definición 1.4  </strong></span> Sean <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> matrices de orden <span class="math inline">\(m\times n\)</span> y <span class="math inline">\(n\times p\)</span> respectivamente, el <em>producto <span class="math inline">\(AB\)</span></em> es la matriz <span class="math inline">\(C\)</span> de orden <span class="math inline">\(m\times p\)</span> cuyos elementos <span class="math inline">\(ij\)</span> son <span class="math inline">\([C]_{ij}=\sum_{k=1}^{n} A_{ik}B_{kj}\)</span>.</p>
+</div>
+
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-7" class="example"><strong>Ejemplo 1.2  </strong></span> Dadas las matrices <span class="math inline">\(A=\left[ \begin{array}{cc}  1 &amp; 0 \\  -3 &amp; 1  \end{array}\right]\)</span>, <span class="math inline">\(B=\left[ \begin{array}{ccc}  5 &amp; -1 &amp; 2 \\  15 &amp; 4 &amp; 8  \end{array}\right]\)</span> y <span class="math inline">\(C=\left[ \begin{array}{ccc}  -2 &amp; 1 &amp; 5\\  -1 &amp; -5 &amp; 1  \end{array}\right]\)</span>, entonces el producto de la matriz <span class="math inline">\(C\)</span> por el escalar <span class="math inline">\(-2\)</span> es: <span class="math display">\[-2 C=\left[ \begin{array}{ccc}
+    (-2)(-2) &amp; (-2)(1) &amp; (-2)(5)\\
+    (-2)(-1) &amp; (-2)(-5) &amp; (-2)(1)
+    \end{array}\right]=\left[ \begin{array}{ccc}
+    4 &amp; -2 &amp; -10\\
+    2 &amp; 10 &amp; -2
+    \end{array}\right]\]</span>. El producto <span class="math inline">\(AB\)</span> es la matriz: <span class="math display">\[\left[ \begin{array}{cc}
+    1 &amp; 0 \\
+    -3 &amp; 1
+    \end{array}\right]\left[ \begin{array}{ccc}
+    5 &amp; -1 &amp; 2 \\
+    15 &amp; 4 &amp; 8
+    \end{array}\right]=\left[ \begin{array}{ccc}
+        5 &amp; -1 &amp; 2\\
+        0 &amp; 7 &amp; 2
+    \end{array}\right]\]</span> Y la suma <span class="math display">\[AB+C=\left[ \begin{array}{ccc}
+        3 &amp; 0 &amp; 7\\
+        -1 &amp; 2 &amp; 3
+    \end{array}\right]\]</span> Note que no podemos realizar el producto <span class="math inline">\(BA\)</span>, pues no está definido. Para realizar un producto de matrices, el número de columnas del primer factor debe ser igual al número de filas del segundo factor.</p>
+</div>
+
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-8" class="example"><strong>Ejemplo 1.3  </strong></span> Dadas las matrices <span class="math inline">\(A=\left[ \begin{array}{cc}  1 &amp; -2 \\  0 &amp; 1 \\  -2 &amp; 0  \end{array}\right]\)</span> y <span class="math inline">\(B=\left[ \begin{array}{ccc}  1 &amp; 0 &amp; 1 \\  0 &amp; 2 &amp; 1  \end{array}\right]\)</span>, entonces los productos: <span class="math inline">\(AB=\left[ \begin{array}{ccc}  1 &amp; -4 &amp; -1\\  0 &amp; 2 &amp; 1 \\  -2 &amp; 0 &amp; -2  \end{array}\right]\)</span> y <span class="math inline">\(BA=\left[ \begin{array}{cc}  -1 &amp; -2 \\  -2 &amp; 2  \end{array}\right]\)</span>.\ Por otro lado, si se tienen las matrices <span class="math inline">\(C=\left[ \begin{array}{cc}  1 &amp; -2 \\  3 &amp; -1 \\  \end{array}\right]\)</span> y <span class="math inline">\(D=\left[ \begin{array}{cc}  1 &amp; -2 \\  -1 &amp; 2  \end{array}\right]\)</span>, entonces los productos: <span class="math inline">\(CD=\left[ \begin{array}{cc}  3 &amp; -6 \\  4 &amp; -7  \end{array}\right]\)</span> y <span class="math inline">\(DC=\left[ \begin{array}{cc}  -5 &amp; 0 \\  5 &amp; 0  \end{array}\right]\)</span></p>
+</div>
+
+
+<div class="remark">
+<p> <span class="remark"><em>Nota. </em></span>  En los casos en que expresemos el producto <span class="math inline">\(AB\)</span> sin detallar el orden de las matrices, supondremos que el producto está bien definido. De los ejemplos anteriores podemos ver que aunque los productos <span class="math inline">\(AB\)</span> y <span class="math inline">\(BA\)</span> esten bien definidos, no necesariamente se tiene que <span class="math inline">\(AB=BA\)</span>, esto es, el producto de matrices no es conmutativo.</p>
+</div>
+
+<p>Ahora estudiaremos las <em>operaciones elementales de filas</em> que pueden aplicarse a una matriz, el fin de aplicar estas operaciones es obtener una matriz equivalente a la original (para obtener sistemas de ecuaciones lineales equivalentes) que corresponda a los coeficientes de un sistema lineal sencillo de resolver.</p>
+
+<div class="definition">
+<p><span id="def:unnamed-chunk-10" class="definition"><strong>Definición 1.5  </strong></span> Una matriz <span class="math inline">\(R\)</span> de orden <span class="math inline">\(m\times n\)</span> se llama una <em>matriz escalón reducida por filas</em> si:</p>
+<pre><code>    (1) El primer elemento no nulo de cada fila no nula es igual a $1$, al cual llamaremos *pivote*.
+
+    (2) las columnas que contienen a un pivote (de cualquier fila), tienen el restos de sus elemento igual a cero.
+
+    (3) toda fila nula de $R$, está debajo de las filas con elementos no nulos.
+
+    (4) suponiendo que las filas no nulas de $R$ son las filas $1,2,\cdots, r$ y que el pivote de la fila $i\leq r$ está en la columna $k_{i}$, entonces $k_{1}&lt; k_{2}&lt; \cdots &lt; k_{r}$.</code></pre>
+</div>
+
+
+<div class="remark">
+<p> <span class="remark"><em>Nota. </em></span>  Una matriz que cumpla las primeras dos condiciones se llama <em>matriz reducida por filas</em>.</p>
+</div>
+
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-12" class="example"><strong>Ejemplo 1.4  </strong></span> La <em>matriz identidad</em> <span class="math inline">\(n\times n\)</span> (cuadrada), definida por la función <span class="math display">\[[I]_{ij}=delta_{ij}=\left\{ \begin{array}{cc}
+    1 &amp;\mbox{ si } i=j\\
+    0 &amp;\mbox{ si } i\neq j
+    \end{array}\right. \]</span> La función <span class="math inline">\(\delta_{ij}\)</span> es conocida como la <em>delta de Kronecker</em>. Es de hacer notar que la matriz identidad se define como una matriz de cualquier orden, mientras que sea cuadrada, es decir, el número de filas es igual al número de columnas.Por ejemplo la matriz identidad de orden <span class="math inline">\(4\times 4\)</span> luce así: <span class="math display">\[\left[\begin{array}{cccc}
+    1 &amp; 0 &amp; 0 &amp; 0\\
+    0 &amp; 1 &amp; 0 &amp; 0\\
+    0 &amp; 0 &amp; 1 &amp; 0\\
+    0 &amp; 0 &amp; 0 &amp; 1
+    \end{array} \right]\]</span> Las matrices <span class="math display">\[\left[\begin{array}{cccc}
+    0 &amp; 1 &amp; 0 &amp; 4\\
+    0 &amp; 0 &amp; 1 &amp; 5\\
+    0 &amp; 0 &amp; 0 &amp; 0
+    \end{array} \right] \mbox{ y }
+    \left[\begin{array}{ccccc}
+    0 &amp; 1 &amp; -3 &amp; 0 &amp; \frac{1}{2}\\
+    0 &amp; 0 &amp; 0 &amp; 1 &amp; 2\\
+    0 &amp; 0 &amp; 0 &amp; 0 &amp; 0
+    \end{array} \right] \]</span> son matrices escalonadas reducidas. Pero estas matrices<br />
+<span class="math display">\[\left[\begin{array}{cccc}
+    0 &amp; 1 &amp; 0 &amp; 4\\
+    0 &amp; 0 &amp; 1 &amp; 5\\
+    0 &amp; 0 &amp; 0 &amp; 2
+    \end{array} \right] \mbox{ y }\left[\begin{array}{cccc}
+    0 &amp; 1 &amp; 0 &amp; \frac{4}{3}\\
+    0 &amp; 0 &amp; 1 &amp; 5\\
+    1 &amp; 0 &amp; 0 &amp; -1
+    \end{array} \right]\]</span> no lo son. La primera no lo es ya que el primer elemento no nulo de la última fila no es <span class="math inline">\(1\)</span>. La segunda matriz no cumple la definición, el pivote de la tercera fila está en la columna <span class="math inline">\(1\)</span>, mientras que el de la primera primera fila está en la columna <span class="math inline">\(2\)</span> (<span class="math inline">\(2\nless 1\)</span>).</p>
+</div>
+
+<p>Podremos ver mas adelante que los sistemas de ecuaciones asociadas a matrices escalonadas reducidas son mas fáciles de resolver. Entonces es conveniente hallar una matriz escalonada reducida que tenga un sistema de ecuaciones equivalente al original para así resolver el sistema fácilmente.</p>
+</div>
+<div id="ecuaciones-lineales-y-matrices" class="section level2">
+<h2><span class="header-section-number">1.3</span> Ecuaciones lineales y matrices</h2>
+Dado un sistema de ecuaciones lineales como <a href="#eq:sistemalineal">(1.1)</a>
+<span class="math display">\[\begin{equation}
+\begin{array}{ccccc}
+A_{11}x_{1}+&amp;A_{12}x_{2}+&amp;\cdots +&amp;A_{1n}x_{n}=&amp;b_{1}\\
+A_{21}x_{1}+&amp;A_{22}x_{2}+&amp;\cdots +&amp;A_{2n}x_{n}=&amp;b_{2}\\
+\vdots&amp; &amp;\ddots&amp; \vdots&amp; \vdots \\
+A_{m1}x_{1}+&amp;A_{m2}x_{2}+&amp;\cdots +&amp;A_{mn}x_{n}=&amp;b_{m}
+\end{array}
+\end{equation}\]</span>
+Podemos representar este sistema de ecuaciones como un sistema matricial <span class="math inline">\(AX=B\)</span>, donde <span class="math inline">\(A\)</span> es la matriz de los coeficientes del sistema de ecuaciones, <span class="math inline">\(X\)</span> es una matriz de incógnitas y <span class="math inline">\(B\)</span> una matriz de términos independientes de la siguiente forma:
+<span class="math display">\[\begin{equation}
+    \left[ \begin{array}{cccc}
+        A_{11}&amp;A_{12}&amp;\cdots &amp;A_{1n}\\
+        A_{21}&amp;A_{22}&amp;\cdots &amp;A_{2n}\\
+        \vdots&amp; \ddots&amp; \vdots&amp; \vdots\\
+        A_{m1}&amp;A_{m2}&amp;\cdots &amp;A_{mn}
+    \end{array}\right] 
+    \cdot
+    \left[ \begin{array}{c}
+        x_{1}\\
+        x_{2}\\
+        \vdots\\
+        x_{n}
+    \end{array}\right] =
+    \left[ \begin{array}{c}
+        b_{1}\\
+        b_{2}\\
+        \vdots\\
+        b_{n}
+    \end{array}\right] 
+\end{equation}\]</span>
+</div>
+</div>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-78759535-1', 'auto');
+ga('send', 'pageview');  
+</script>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/synergyvision/Algebra/edit/master/bookdown/%s",
+"text": "Edit"
+},
+"download": null,
+"toc": {
+"collapse": "none"
+},
+"search": false
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

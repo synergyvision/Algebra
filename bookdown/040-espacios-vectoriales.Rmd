@@ -229,6 +229,43 @@ Ahora estudiaremos las *operaciones elementales de filas* que pueden aplicarse a
 
 ```
 
+```{example}
+	La *matriz identidad* $n\times n$ (cuadrada), definida por la función $$[I]_{ij}=delta_{ij}=\left\{ \begin{array}{cc}
+	1 &\mbox{ si } i=j\\
+	0 &\mbox{ si } i\neq j
+	\end{array}\right. $$
+	La función $\delta_{ij}$ es conocida como la *delta de Kronecker*. Es de hacer notar que la matriz identidad se define como una matriz de cualquier orden, mientras que sea cuadrada, es decir, el número de filas es igual al número de columnas.Por ejemplo la matriz identidad de orden $4\times 4$ luce así:
+	$$\left[\begin{array}{cccc}
+	1 & 0 & 0 & 0\\
+	0 & 1 & 0 & 0\\
+	0 & 0 & 1 & 0\\
+	0 & 0 & 0 & 1
+	\end{array} \right]$$
+	Las matrices $$\left[\begin{array}{cccc}
+	0 & 1 & 0 & 4\\
+	0 & 0 & 1 & 5\\
+	0 & 0 & 0 & 0
+	\end{array} \right] \mbox{ y }
+	\left[\begin{array}{ccccc}
+	0 & 1 & -3 & 0 & \frac{1}{2}\\
+	0 & 0 & 0 & 1 & 2\\
+	0 & 0 & 0 & 0 & 0
+	\end{array} \right] $$  son matrices escalonadas reducidas.
+	Pero estas matrices  
+	$$\left[\begin{array}{cccc}
+	0 & 1 & 0 & 4\\
+	0 & 0 & 1 & 5\\
+	0 & 0 & 0 & 2
+	\end{array} \right] \mbox{ y }\left[\begin{array}{cccc}
+	0 & 1 & 0 & \frac{4}{3}\\
+	0 & 0 & 1 & 5\\
+	1 & 0 & 0 & -1
+	\end{array} \right]$$ no lo son. La primera no lo es ya que el primer elemento no nulo de la última fila no es $1$. La segunda matriz no cumple la definición, el pivote de la tercera fila está en la columna $1$, mientras que el de la primera primera fila está en la columna $2$ ($2\nless 1$).
+
+```
+
+Podremos ver mas adelante que los sistemas de ecuaciones asociadas a matrices escalonadas reducidas son mas fáciles de resolver. Entonces es conveniente hallar una  matriz escalonada reducida que tenga un sistema de ecuaciones equivalente al original para así resolver el sistema fácilmente. 
+
 ## Ecuaciones lineales y matrices
 
 Dado un sistema de ecuaciones lineales como \@ref(eq:sistemalineal)
