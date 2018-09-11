@@ -299,3 +299,50 @@ Podemos representar este sistema de ecuaciones como un sistema matricial $AX=B$,
 		b_{n}
 	\end{array}\right] 
 \end{equation}
+
+Ahora veremos las operaciones elementales por filas que corresponden a hacer combinaciones lineales entre las filas de la matriz de coeficientes (equivalente a hacerlo con las ecuaciones del sistema). Las *\textit{*operaciones elementales por filas* son tres:
+
+	(1) Multiplicar una fila de la matriz $A$ por un escalar no nulo $\lambda$.
+	
+	(2) Intercambio de dos filas de la matriz $A$.
+	
+	(3) Sustituír la $i$-\'esima fila de la matriz $A$, por la suma de la fila $r$ mas un múltiplo de la fila $s$-ésima.
+
+Podemos denotar en forma de función (entre fila) las operaciones elementales por fila del siguiente modo.
+Si $A$ es una matriz $m\times n$, una operación elemental de filas es una función $e$ que se le aplica a la matriz $A$, asociándole la matriz $e(A)$, que corresponde al resultado de alguna de las operaciones antes descritas. esto es:
+
+	(1) Denotaremos $\lambda A_{r}$ a la operación 
+	$[e(A)]_{ij}=\left\{ \begin{array}{cc}
+	\lambda [A]_{ij} & \mbox{ si } i=r \\
+	\left[A\right]_{ij} & \mbox{ si } i\neq r
+	\end{array}\right.$, con $r\leq m$ y $\lambda\neq 0$.
+	
+	(2) Denotaremos $A_{rs}$ a la operación 
+	$[e(A)]_{ij}=\left\{ \begin{array}{cc}
+	[A]_{sj} & \mbox{ si } i=r \\
+	\left[ A\right]_{rj} & \mbox{ si } i=s \\
+	\left[A\right]_{ij} & \mbox{ en otro caso } 
+	\end{array}\right.$, con $r\neq s \leq m$.
+	
+	(3) Denotaremos $\lambda A_{rs}$ a la operación 
+	$[e(A)]_{ij}=\left\{ \begin{array}{cc}
+	[A]_{ij}+\lambda [A]_{sj} & \mbox{ si } i=r \\
+	\left[A\right]_{ij} & \mbox{ si } i\neq r
+	\end{array}\right.$, con $r\neq s \leq m$.
+
+Note que cualquieras de las tres operaciones elementales por filas se puede "revertir" con una operación del mismo tipo. Para el primer tipo, basta con multiplicar la misma fila por el inverso de $\lambda$, $\frac{1}{\lambda}$. Para el intercambio de las filas $r$ y $s$ basta volver a intercambiar las filas. Para el tercer tipo de operación, $\lambda A_{rs}$, debemos aplicar $-\lambda A_{rs}$ y regresaremos a la matriz original. Esto es la demostración del siguiente teorema.
+
+```{theorem}
+	Para cada operación elemental de filas $e$ existe una operación elemental de filas $e_{1}$ del mismo tipo tal que $e_{1}(e(A))=e(e_{1}(A))=A$. Es decir, cada operación elemental de filas, tiene una operación inversa del mismo tipo.
+
+```
+
+```{definition}
+	Si $A$ y $B$ son dos matrices del mismo orden sobre el mismo cuerpo de escalares y $B$ se obtiene de aplicar una cantidad finita de operaciones elementales por filas a la matriz $A$, entonces decimos que *$B$ es equivalente por filas a $A$*.
+
+```
+
+```{remark}
+	Del teorema anterior se puede verificar que si una matriz $B$ es equivalente por filas a otra matriz $A$, entonces $A$ es equivalente por filas con $B$. También se puede ver que toda matriz es equivalente por filas a si misma. Por último se puede demostrar que si $A$ es equivalente por filas a $B$ y $B$ es equivalente por filas a $C$, entonces $A$ es equivalente por filas a $C$. De lo anterior, se tiene que la equivalencia por filas es una relación de equivalencia.
+
+```
