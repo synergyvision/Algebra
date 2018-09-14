@@ -356,3 +356,100 @@ Como ya lo hemos mencionado, aplicar una operación elemental por filas es equiv
 	Basta suponer que $B$ se obtiene de aplicar una operación elemental $e$ a la matriz $A$. Luego, las ecuaciones del sistema $BX=0$ son combinaciones lineales de las ecuaciones del sistema $AX=0$, por lo que cada solución de $AX=0$ es solución de $BX=0$. Análogamente,  cada solución de $BX=0$ es solución de $AX=0$, ya que $A$ se obtiene al aplicar la operación elemental inversa de $e$ a la matriz $B$.
 
 ```
+```{example}
+	Dada la matriz de coeficientes $$A=\left[  \begin{array}{cccc}
+	2 & -1 & 3 & 2 \\
+	1 & 4 & 0 & -1 \\
+	2 & 6 & -1 & 5
+	\end{array}\right]$$ podemos hallar una matriz escalonada reducida por fila equivalente a $A$, de la siguiente forma:
+	
+	$\left[  \begin{array}{cccc}
+	2 & -1 & 3 & 2 \\
+	1 & 4 & 0 & -1 \\
+	2 & 6 & -1 & 5
+	\end{array}\right]   \stackrel{-2 e_{21}}{\longrightarrow}
+	\left[	\begin{array}{cccc}
+	0 & -9 & 3 & 4 \\
+	1 & 4 & 0 & -1 \\
+	2 & 6 & -1 & 5
+	\end{array}\right]  \stackrel{-2 e_{23}}{\longrightarrow}
+	\left[ 
+	\begin{array}{cccc}
+	0 & -9 & 3 & 4 \\
+	1 & 4 & 0 & -1 \\
+	0 & -2 & -1 & 7
+	\end{array}\right] \stackrel{\frac{-1}{2} e_{3}}{\longrightarrow}$
+	
+	$\left[ 
+	\begin{array}{cccc}
+		0 & -9 & 3 & 4 \\
+		1 & 4 & 0 & -1 \\
+		0 & 1 & \frac{1}{2} & \frac{-7}{2}
+	\end{array}\right] \stackrel{-4 e_{32}}{\longrightarrow}
+	\left[ 
+	\begin{array}{cccc}
+		0 & -9 & 3 & 4 \\
+		1 & 0 & -2 & 13 \\
+		0 & 1 & \frac{1}{2} & \frac{-7}{2}
+	\end{array}\right] \stackrel{9 e_{31}}{\longrightarrow}
+	\left[ 
+	\begin{array}{cccc}
+		0 & 0 & \frac{15}{2} & \frac{-55}{2} \\
+		1 & 0 & -2 & 13 \\
+		0 & 1 & \frac{1}{2} & \frac{-7}{2}
+	\end{array}\right] \stackrel{\frac{2}{15} e_{1}}{\longrightarrow}$
+	
+	$\left[ 
+	\begin{array}{cccc}
+		0 & 0 & 1 & \frac{-11}{3} \\
+		1 & 0 & -2 & 13 \\
+		0 & 1 & \frac{1}{2} & \frac{-7}{2}
+	\end{array}\right] \stackrel{2 e_{12}}{\longrightarrow}
+	\left[ 
+	\begin{array}{cccc}
+		0 & 0 & 1 & \frac{-11}{3} \\
+		1 & 0 & 0 & \frac{17}{3} \\
+		0 & 1 & \frac{1}{2} & \frac{-7}{2}
+	\end{array}\right] \stackrel{\frac{-1}{2} e_{13}}{\longrightarrow}
+	\left[ 
+	\begin{array}{cccc}
+	0 & 0 & 1 & \frac{-11}{3} \\
+	1 & 0 & 0 & \frac{17}{3} \\
+	0 & 1 & 0 & \frac{-5}{3}
+	\end{array}\right] \stackrel{e_{12}}{\longrightarrow}$
+
+	$\left[ 
+	\begin{array}{cccc}
+	1 & 0 & 0 & \frac{17}{3} \\
+	0 & 0 & 1 & \frac{-11}{3} \\
+	0 & 1 & 0 & \frac{-5}{3}
+	\end{array}\right] \stackrel{e_{32}}{\longrightarrow}
+	\left[ 
+	\begin{array}{cccc}
+	1 & 0 & 0 & \frac{17}{3} \\
+	0 & 1 & 0 & \frac{-5}{3} \\
+	0 & 0 & 1 & \frac{-11}{3}
+	\end{array}\right]$\\
+	
+De donde se tiene que los sistemas de ecuaciones lineales
+
+$$ 
+\left\lbrace 
+\begin{array}{ccccc}
+2x_{1} & -x_{2} & +3x_{3} & +2x_{4} & =0\\
+x_{1} & +4x_{2} &  & -x_{4} &=0\\
+2x_{1} & +6x_{2} & -x_{3} & +5x_{4} & =0
+\end{array}
+\right.  $$ y
+
+$$
+\left\lbrace 
+\begin{array}{ccccc}
+	x_{1} &  &  & +\frac{17}{3}x_{4} &=0 \\
+ & x_{2} &  & +\frac{-5}{3}x_{4} &=0 \\
+  &  & x_{3} & +\frac{-11}{3}x_{4} &=0 
+\end{array} 
+\right. $$ 
+son equivalentes y por lo tanto tienen las mismas soluciones. Del segundo sistema salta a la vista que una solución es de la forma $(\frac{-17}{3}\lambda,\frac{5}{3}\lambda,\frac{11}{3}\lambda,\lambda)$ para cualquier número real $\lambda$.
+
+```
