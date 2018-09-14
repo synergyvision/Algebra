@@ -275,3 +275,50 @@ Podemos representar este sistema de ecuaciones como un sistema matricial $AX=B$,
 		b_{n}
 	\end{array}\right] 
 \end{equation}
+
+Ahora veremos las operaciones elementales por filas que corresponden a hacer combinaciones lineales entre las filas de la matriz de coeficientes (equivalente a hacerlo con las ecuaciones del sistema). Las *\textit{*operaciones elementales por filas* son tres:
+
+	(1) Multiplicar una fila de la matriz $A$ por un escalar no nulo $\lambda$.
+	
+	(2) Intercambio de dos filas de la matriz $A$.
+	
+	(3) Sustituír la $i$-\'esima fila de la matriz $A$, por la suma de la fila $r$ mas un múltiplo de la fila $s$-ésima.
+
+Podemos denotar en forma de función (entre fila) las operaciones elementales por fila del siguiente modo.
+Si $A$ es una matriz $m\times n$, una operación elemental de filas es una función $e$ que se le aplica a la matriz $A$, asociándole la matriz $e(A)$, que corresponde al resultado de alguna de las operaciones antes descritas. esto es:
+
+	(1) Denotaremos $\lambda A_{r}$ a la operación 
+	$[e(A)]_{ij}=\left\{ \begin{array}{cc}
+	\lambda [A]_{ij} & \mbox{ si } i=r \\
+	\left[A\right]_{ij} & \mbox{ si } i\neq r
+	\end{array}\right.$, con $r\leq m$ y $\lambda\neq 0$.
+	
+	(2) Denotaremos $A_{rs}$ a la operación 
+	$[e(A)]_{ij}=\left\{ \begin{array}{cc}
+	[A]_{sj} & \mbox{ si } i=r \\
+	\left[ A\right]_{rj} & \mbox{ si } i=s \\
+	\left[A\right]_{ij} & \mbox{ en otro caso } 
+	\end{array}\right.$, con $r\neq s \leq m$.
+	
+	(3) Denotaremos $\lambda A_{rs}$ a la operación 
+	$[e(A)]_{ij}=\left\{ \begin{array}{cc}
+	[A]_{ij}+\lambda [A]_{sj} & \mbox{ si } i=r \\
+	\left[A\right]_{ij} & \mbox{ si } i\neq r
+	\end{array}\right.$, con $r\neq s \leq m$.
+
+Note que cualquieras de las tres operaciones elementales por filas se puede "revertir" con una operación del mismo tipo. Para el primer tipo, basta con multiplicar la misma fila por el inverso de $\lambda$, $\frac{1}{\lambda}$. Para el intercambio de las filas $r$ y $s$ basta volver a intercambiar las filas. Para el tercer tipo de operación, $\lambda A_{rs}$, debemos aplicar $-\lambda A_{rs}$ y regresaremos a la matriz original. Esto es la demostración del siguiente teorema.
+
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-13"><strong>(\#thm:unnamed-chunk-13) </strong></span>	Para cada operación elemental de filas $e$ existe una operación elemental de filas $e_{1}$ del mismo tipo tal que $e_{1}(e(A))=e(e_{1}(A))=A$. Es decir, cada operación elemental de filas, tiene una operación inversa del mismo tipo.
+</div>\EndKnitrBlock{theorem}
+
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-14"><strong>(\#def:unnamed-chunk-14) </strong></span>	Si $A$ y $B$ son dos matrices del mismo orden sobre el mismo cuerpo de escalares y $B$ se obtiene de aplicar una cantidad finita de operaciones elementales por filas a la matriz $A$, entonces decimos que *$B$ es equivalente por filas a $A$*.
+</div>\EndKnitrBlock{definition}
+
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	Del teorema anterior se puede verificar que si una matriz $B$ es equivalente por filas a otra matriz $A$, entonces $A$ es equivalente por filas con $B$. También se puede ver que toda matriz es equivalente por filas a si misma. Por último se puede demostrar que si $A$ es equivalente por filas a $B$ y $B$ es equivalente por filas a $C$, entonces $A$ es equivalente por filas a $C$. De lo anterior, se tiene que la equivalencia por filas es una relación de equivalencia.
+</div>\EndKnitrBlock{remark}
+Como ya lo hemos mencionado, aplicar una operación elemental por filas es equivalente a hacer combinaciones lineales con las ecuaciones del sistema, por lo tanto al obtener matrices equivalentes por filas tendremos sistemas de ecuaciones equivalentes.
+
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-16"><strong>(\#thm:unnamed-chunk-16) </strong></span>	Si $A$ y $B$ son matrices equivalentes por filas, los sistemas homogeneos de ecuaciones lineales $AX=0$ y $BX=0$ tinen exactamente las mismas soluciones.
+</div>\EndKnitrBlock{theorem}
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Basta suponer que $B$ se obtiene de aplicar una operación elemental $e$ a la matriz $A$. Luego, las ecuaciones del sistema $BX=0$ son combinaciones lineales de las ecuaciones del sistema $AX=0$, por lo que cada solución de $AX=0$ es solución de $BX=0$. Análogamente,  cada solución de $BX=0$ es solución de $AX=0$, ya que $A$ se obtiene al aplicar la operación elemental inversa de $e$ a la matriz $B$.
+</div>\EndKnitrBlock{proof}

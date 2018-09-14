@@ -334,6 +334,56 @@ Podemos representar este sistema de ecuaciones como un sistema matricial <span c
         b_{n}
     \end{array}\right] 
 \end{equation}\]</span>
+<p>Ahora veremos las operaciones elementales por filas que corresponden a hacer combinaciones lineales entre las filas de la matriz de coeficientes (equivalente a hacerlo con las ecuaciones del sistema). Las <em>\textit{</em>operaciones elementales por filas* son tres:</p>
+<pre><code>(1) Multiplicar una fila de la matriz $A$ por un escalar no nulo $\lambda$.
+
+(2) Intercambio de dos filas de la matriz $A$.
+
+(3) Sustituír la $i$-\&#39;esima fila de la matriz $A$, por la suma de la fila $r$ mas un múltiplo de la fila $s$-ésima.</code></pre>
+<p>Podemos denotar en forma de función (entre fila) las operaciones elementales por fila del siguiente modo. Si <span class="math inline">\(A\)</span> es una matriz <span class="math inline">\(m\times n\)</span>, una operación elemental de filas es una función <span class="math inline">\(e\)</span> que se le aplica a la matriz <span class="math inline">\(A\)</span>, asociándole la matriz <span class="math inline">\(e(A)\)</span>, que corresponde al resultado de alguna de las operaciones antes descritas. esto es:</p>
+<pre><code>(1) Denotaremos $\lambda A_{r}$ a la operación 
+$[e(A)]_{ij}=\left\{ \begin{array}{cc}
+\lambda [A]_{ij} &amp; \mbox{ si } i=r \\
+\left[A\right]_{ij} &amp; \mbox{ si } i\neq r
+\end{array}\right.$, con $r\leq m$ y $\lambda\neq 0$.
+
+(2) Denotaremos $A_{rs}$ a la operación 
+$[e(A)]_{ij}=\left\{ \begin{array}{cc}
+[A]_{sj} &amp; \mbox{ si } i=r \\
+\left[ A\right]_{rj} &amp; \mbox{ si } i=s \\
+\left[A\right]_{ij} &amp; \mbox{ en otro caso } 
+\end{array}\right.$, con $r\neq s \leq m$.
+
+(3) Denotaremos $\lambda A_{rs}$ a la operación 
+$[e(A)]_{ij}=\left\{ \begin{array}{cc}
+[A]_{ij}+\lambda [A]_{sj} &amp; \mbox{ si } i=r \\
+\left[A\right]_{ij} &amp; \mbox{ si } i\neq r
+\end{array}\right.$, con $r\neq s \leq m$.</code></pre>
+<p>Note que cualquieras de las tres operaciones elementales por filas se puede “revertir” con una operación del mismo tipo. Para el primer tipo, basta con multiplicar la misma fila por el inverso de <span class="math inline">\(\lambda\)</span>, <span class="math inline">\(\frac{1}{\lambda}\)</span>. Para el intercambio de las filas <span class="math inline">\(r\)</span> y <span class="math inline">\(s\)</span> basta volver a intercambiar las filas. Para el tercer tipo de operación, <span class="math inline">\(\lambda A_{rs}\)</span>, debemos aplicar <span class="math inline">\(-\lambda A_{rs}\)</span> y regresaremos a la matriz original. Esto es la demostración del siguiente teorema.</p>
+
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-13" class="theorem"><strong>Teorema 1.2  </strong></span> Para cada operación elemental de filas <span class="math inline">\(e\)</span> existe una operación elemental de filas <span class="math inline">\(e_{1}\)</span> del mismo tipo tal que <span class="math inline">\(e_{1}(e(A))=e(e_{1}(A))=A\)</span>. Es decir, cada operación elemental de filas, tiene una operación inversa del mismo tipo.</p>
+</div>
+
+
+<div class="definition">
+<p><span id="def:unnamed-chunk-14" class="definition"><strong>Definición 1.6  </strong></span> Si <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> son dos matrices del mismo orden sobre el mismo cuerpo de escalares y <span class="math inline">\(B\)</span> se obtiene de aplicar una cantidad finita de operaciones elementales por filas a la matriz <span class="math inline">\(A\)</span>, entonces decimos que <em><span class="math inline">\(B\)</span> es equivalente por filas a <span class="math inline">\(A\)</span></em>.</p>
+</div>
+
+
+<div class="remark">
+<p> <span class="remark"><em>Nota. </em></span>  Del teorema anterior se puede verificar que si una matriz <span class="math inline">\(B\)</span> es equivalente por filas a otra matriz <span class="math inline">\(A\)</span>, entonces <span class="math inline">\(A\)</span> es equivalente por filas con <span class="math inline">\(B\)</span>. También se puede ver que toda matriz es equivalente por filas a si misma. Por último se puede demostrar que si <span class="math inline">\(A\)</span> es equivalente por filas a <span class="math inline">\(B\)</span> y <span class="math inline">\(B\)</span> es equivalente por filas a <span class="math inline">\(C\)</span>, entonces <span class="math inline">\(A\)</span> es equivalente por filas a <span class="math inline">\(C\)</span>. De lo anterior, se tiene que la equivalencia por filas es una relación de equivalencia.</p>
+</div>
+<p> Como ya lo hemos mencionado, aplicar una operación elemental por filas es equivalente a hacer combinaciones lineales con las ecuaciones del sistema, por lo tanto al obtener matrices equivalentes por filas tendremos sistemas de ecuaciones equivalentes.</p>
+
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-16" class="theorem"><strong>Teorema 1.3  </strong></span> Si <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> son matrices equivalentes por filas, los sistemas homogeneos de ecuaciones lineales <span class="math inline">\(AX=0\)</span> y <span class="math inline">\(BX=0\)</span> tinen exactamente las mismas soluciones.</p>
+</div>
+ 
+<div class="proof">
+<p> <span class="proof"><em>Demostración. </em></span>  Basta suponer que <span class="math inline">\(B\)</span> se obtiene de aplicar una operación elemental <span class="math inline">\(e\)</span> a la matriz <span class="math inline">\(A\)</span>. Luego, las ecuaciones del sistema <span class="math inline">\(BX=0\)</span> son combinaciones lineales de las ecuaciones del sistema <span class="math inline">\(AX=0\)</span>, por lo que cada solución de <span class="math inline">\(AX=0\)</span> es solución de <span class="math inline">\(BX=0\)</span>. Análogamente, cada solución de <span class="math inline">\(BX=0\)</span> es solución de <span class="math inline">\(AX=0\)</span>, ya que <span class="math inline">\(A\)</span> se obtiene al aplicar la operación elemental inversa de <span class="math inline">\(e\)</span> a la matriz <span class="math inline">\(B\)</span>.</p>
+</div>
+
 </div>
 </div>
 <script>
