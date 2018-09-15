@@ -311,26 +311,26 @@ Ahora veremos las operaciones elementales por filas que corresponden a hacer com
 Podemos denotar en forma de función (entre fila) las operaciones elementales por fila del siguiente modo.
 Si $A$ es una matriz $m\times n$, una operación elemental de filas es una función $e$ que se le aplica a la matriz $A$, asociándole la matriz $e(A)$, que corresponde al resultado de alguna de las operaciones antes descritas. esto es:
 
-	(1) Denotaremos $\lambda A_{r}$ a la operación 
+	(1) Denotaremos $\lambda e_{r}$ a la operación 
 	$[e(A)]_{ij}=\left\{ \begin{array}{cc}
 	\lambda [A]_{ij} & \mbox{ si } i=r \\
 	\left[A\right]_{ij} & \mbox{ si } i\neq r
 	\end{array}\right.$, con $r\leq m$ y $\lambda\neq 0$.
 	
-	(2) Denotaremos $A_{rs}$ a la operación 
+	(2) Denotaremos $e_{rs}$ a la operación 
 	$[e(A)]_{ij}=\left\{ \begin{array}{cc}
 	[A]_{sj} & \mbox{ si } i=r \\
 	\left[ A\right]_{rj} & \mbox{ si } i=s \\
 	\left[A\right]_{ij} & \mbox{ en otro caso } 
 	\end{array}\right.$, con $r\neq s \leq m$.
 	
-	(3) Denotaremos $\lambda A_{rs}$ a la operación 
+	(3) Denotaremos $\lambda e_{rs}$ a la operación 
 	$[e(A)]_{ij}=\left\{ \begin{array}{cc}
 	[A]_{ij}+\lambda [A]_{sj} & \mbox{ si } i=r \\
 	\left[A\right]_{ij} & \mbox{ si } i\neq r
 	\end{array}\right.$, con $r\neq s \leq m$.
 
-Note que cualquieras de las tres operaciones elementales por filas se puede "revertir" con una operación del mismo tipo. Para el primer tipo, basta con multiplicar la misma fila por el inverso de $\lambda$, $\frac{1}{\lambda}$. Para el intercambio de las filas $r$ y $s$ basta volver a intercambiar las filas. Para el tercer tipo de operación, $\lambda A_{rs}$, debemos aplicar $-\lambda A_{rs}$ y regresaremos a la matriz original. Esto es la demostración del siguiente teorema.
+Note que cualquiera de las tres operaciones elementales por filas se puede "revertir" con una operación del mismo tipo. Para el primer tipo, basta con multiplicar la misma fila por el inverso de $\lambda$, $\frac{1}{\lambda}$. Para el intercambio de las filas $r$ y $s$ basta volver a intercambiar las filas. Para el tercer tipo de operación, $\lambda A_{rs}$, debemos aplicar $-\lambda A_{rs}$ y regresaremos a la matriz original. Esto es la demostración del siguiente teorema.
 
 ```{theorem}
 	Para cada operación elemental de filas $e$ existe una operación elemental de filas $e_{1}$ del mismo tipo tal que $e_{1}(e(A))=e(e_{1}(A))=A$. Es decir, cada operación elemental de filas, tiene una operación inversa del mismo tipo.
@@ -429,27 +429,100 @@ Como ya lo hemos mencionado, aplicar una operación elemental por filas es equiv
 	1 & 0 & 0 & \frac{17}{3} \\
 	0 & 1 & 0 & \frac{-5}{3} \\
 	0 & 0 & 1 & \frac{-11}{3}
-	\end{array}\right]$\\
+	\end{array}\right]$
 	
 De donde se tiene que los sistemas de ecuaciones lineales
 
-$$ 
+$ 
 \left\lbrace 
 \begin{array}{ccccc}
 2x_{1} & -x_{2} & +3x_{3} & +2x_{4} & =0\\
 x_{1} & +4x_{2} &  & -x_{4} &=0\\
 2x_{1} & +6x_{2} & -x_{3} & +5x_{4} & =0
 \end{array}
-\right.  $$ y
+\right.  $ y
 
-$$
+$
 \left\lbrace 
 \begin{array}{ccccc}
 	x_{1} &  &  & +\frac{17}{3}x_{4} &=0 \\
  & x_{2} &  & +\frac{-5}{3}x_{4} &=0 \\
   &  & x_{3} & +\frac{-11}{3}x_{4} &=0 
 \end{array} 
-\right. $$ 
+\right. $ 
 son equivalentes y por lo tanto tienen las mismas soluciones. Del segundo sistema salta a la vista que una solución es de la forma $(\frac{-17}{3}\lambda,\frac{5}{3}\lambda,\frac{11}{3}\lambda,\lambda)$ para cualquier número real $\lambda$.
+
+```
+
+```{example}
+	Dada la ecuación con coeficientes en el cuerpo de los números complejos $\mathbb{C}$:
+	$ 
+	\left\lbrace 
+	\begin{array}{ccc}
+	-x_{1} & +ix_{2} &=0\\
+	-ix_{1} & +3x_{2} &=0\\
+	x_{1} & +2x_{2} & =0
+	\end{array}
+	\right.  $
+	
+	La matriz de coeficientes es $A=\left[  \begin{array}{cc}
+	-1 & i \\
+	-i & 3 \\
+	1 & 2 
+	\end{array}\right]$$ 
+	Hallemos una matriz escalonada reducida por fila equivalente a $A$:
+	$$\left[  \begin{array}{cc}
+	-1 & i \\
+	-i & 3 \\
+	1 & 2 
+	\end{array}\right]   \stackrel{e_{13}}{\longrightarrow}
+	\left[	\begin{array}{cc}
+	1 & 2 \\
+	-i & 3 \\
+	-1 & i 
+	\end{array}\right]  \stackrel{i e_{12}}{\longrightarrow}
+	\left[ 
+	\begin{array}{cc}
+	1 & 2 \\
+	0 & 3+2i \\
+	-1 & i 
+	\end{array}\right] \stackrel{1 e_{13}}{\longrightarrow}
+	\left[ 
+	\begin{array}{cc}
+	1 & 2 \\
+	0 & 3+2i \\
+	0 & 2+i 
+	\end{array}\right] \stackrel{\frac{1}{3+2i} e_{2}}{\longrightarrow}$
+	
+	$\left[ 
+	\begin{array}{cc}
+	1 & 2 \\
+	0 & 1 \\
+	0 & 2+i 
+	\end{array}\right] \stackrel{-2 e_{21}}{\longrightarrow}
+	\left[ 
+	\begin{array}{cc}
+	1 & 0 \\
+	0 & 1 \\
+	0 & 2+i 
+	\end{array}\right] \stackrel{-2-i e_{23}}{\longrightarrow}
+	\left[ 
+	\begin{array}{cc}
+	1 & 0 \\
+	0 & 1 \\
+	0 & 2+i 
+	\end{array}\right]$
+	
+De donde se tiene que la solución del sistema $AX=0$ es la trivial $(0,0,0)$, ya que $AX=0$ es equivalente al sistema $\left[ \begin{array}{cc}
+1 & 0 \\
+0 & 1 \\
+0 & 2+i 
+\end{array}\right] \cdot \left[ \begin{array}{c}
+x_{1} \\
+x_{2} 
+\end{array}\right] = \left[ \begin{array}{c}
+0 \\
+0 
+\end{array}\right]$
 
 ```
