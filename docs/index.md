@@ -4,7 +4,7 @@
 title: "Álgebra Lineal"
 subtitle: "Ciencia de los Datos Financieros"
 author: "Synergy Vision"
-date: "2018-09-10"
+date: "2018-09-17"
 knit: "bookdown::render_book"
 documentclass: krantz
 bibliography: [book.bib, packages.bib]
@@ -1875,6 +1875,41 @@ Ahora estudiaremos las *operaciones elementales de filas* que pueden aplicarse a
 \BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	Una matriz que cumpla las primeras dos condiciones se llama *matriz reducida por filas*.
 </div>\EndKnitrBlock{remark}
 
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-224"><strong>(\#exm:unnamed-chunk-224) </strong></span>	La *matriz identidad* $n\times n$ (cuadrada), definida por la función $$[I]_{ij}=delta_{ij}=\left\{ \begin{array}{cc}
+	1 &\mbox{ si } i=j\\
+	0 &\mbox{ si } i\neq j
+	\end{array}\right. $$
+	La función $\delta_{ij}$ es conocida como la *delta de Kronecker*. Es de hacer notar que la matriz identidad se define como una matriz de cualquier orden, mientras que sea cuadrada, es decir, el número de filas es igual al número de columnas.Por ejemplo la matriz identidad de orden $4\times 4$ luce así:
+	$$\left[\begin{array}{cccc}
+	1 & 0 & 0 & 0\\
+	0 & 1 & 0 & 0\\
+	0 & 0 & 1 & 0\\
+	0 & 0 & 0 & 1
+	\end{array} \right]$$
+	Las matrices $$\left[\begin{array}{cccc}
+	0 & 1 & 0 & 4\\
+	0 & 0 & 1 & 5\\
+	0 & 0 & 0 & 0
+	\end{array} \right] \mbox{ y }
+	\left[\begin{array}{ccccc}
+	0 & 1 & -3 & 0 & \frac{1}{2}\\
+	0 & 0 & 0 & 1 & 2\\
+	0 & 0 & 0 & 0 & 0
+	\end{array} \right] $$  son matrices escalonadas reducidas.
+	Pero estas matrices  
+	$$\left[\begin{array}{cccc}
+	0 & 1 & 0 & 4\\
+	0 & 0 & 1 & 5\\
+	0 & 0 & 0 & 2
+	\end{array} \right] \mbox{ y }\left[\begin{array}{cccc}
+	0 & 1 & 0 & \frac{4}{3}\\
+	0 & 0 & 1 & 5\\
+	1 & 0 & 0 & -1
+	\end{array} \right]$$ no lo son. La primera no lo es ya que el primer elemento no nulo de la última fila no es $1$. La segunda matriz no cumple la definición, el pivote de la tercera fila está en la columna $1$, mientras que el de la primera primera fila está en la columna $2$ ($2\nless 1$).
+</div>\EndKnitrBlock{example}
+
+Podremos ver mas adelante que los sistemas de ecuaciones asociadas a matrices escalonadas reducidas son mas fáciles de resolver. Entonces es conveniente hallar una  matriz escalonada reducida que tenga un sistema de ecuaciones equivalente al original para así resolver el sistema fácilmente. 
+
 ## Ecuaciones lineales y matrices
 
 Dado un sistema de ecuaciones lineales como \@ref(eq:sistemalineal)
@@ -1908,6 +1943,309 @@ Podemos representar este sistema de ecuaciones como un sistema matricial $AX=B$,
 		b_{n}
 	\end{array}\right] 
 \end{equation}
+
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-225"><strong>(\#thm:unnamed-chunk-225) </strong></span>	Sean $A$, $B$ y $C$ matrices sobre el cuerpo de escalares $\mathbb{F}$. Supongamos que los productos $BC$ y $A(BC)$ están definidos. Entonces, $AB$ y $(AB)C$ también están definidos y $A(BC)=(AB)C$.
+</div>\EndKnitrBlock{theorem}
+
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Como $BC$ y $A(BC)$ están definidos, se tiene que el número de columnas de $B$ es igual al número de filas de $C$ y que el número de columnas de $A$ es igual al número de filas de $BC$ (y por lo tanto, igual al número de filas de $B$). Supongamos que $B$ es de orden $n\times p$, $C$ es de orden $p\times q$ y $A$ de orden $m\times n$, así $A(BC)$ es de orden $m\times q$. Claramente, $AB$ está definida y será de orden $m\times p$, como $C$ es de orden $p\times q$, $(AB)C$ está bien definido y será de orden $m\times q$. Ahora veamos que los productos $A(BC)$ y $(AB)C$ además de tener el mismo orden, coinciden en cada elemento.
+	$\begin{array}{rl}
+	[A(BC)]_{ij} & =\sum_{r=1}^{n} [A]_{ir}[BC]_{rj}\\
+	             & =\sum_{r=1}^{n} [A]_{ir} \sum_{s=1}^{p} [B]_{rs} [C]_{sj}\\
+	             & =\sum_{r=1}^{n}\sum_{s=1}^{p} [A]_{ir}[B]_{rs} [C]_{sj}\\
+	             & =\sum_{s=1}^{p}\sum_{r=1}^{n} [A]_{ir}[B]_{rs} [C]_{sj}\\
+	             & =\sum_{s=1}^{p}(\sum_{r=1}^{n} [A]_{ir}[B]_{rs}) [C]_{sj}\\
+	             & =\sum_{s=1}^{p} [AB]_{is} [C]_{sj}\\
+	             & =[(AB)C]_{ij}
+	\end{array}$
+</div>\EndKnitrBlock{proof}
+
+Ahora veremos las operaciones elementales por filas que corresponden a hacer combinaciones lineales entre las filas de la matriz de coeficientes (equivalente a hacerlo con las ecuaciones del sistema). Las *\textit{*operaciones elementales por filas* son tres:
+
+	(1) Multiplicar una fila de la matriz $A$ por un escalar no nulo $\lambda$.
+	
+	(2) Intercambio de dos filas de la matriz $A$.
+	
+	(3) Sustituír la $i$-\'esima fila de la matriz $A$, por la suma de la fila $r$ mas un múltiplo de la fila $s$-ésima.
+
+Podemos denotar en forma de función (entre fila) las operaciones elementales por fila del siguiente modo.
+Si $A$ es una matriz $m\times n$, una operación elemental de filas es una función $e$ que se le aplica a la matriz $A$, asociándole la matriz $e(A)$, que corresponde al resultado de alguna de las operaciones antes descritas. esto es:
+
+	(1) Denotaremos $\lambda e_{r}$ a la operación 
+	$[e(A)]_{ij}=\left\{ \begin{array}{cc}
+	\lambda [A]_{ij} & \mbox{ si } i=r \\
+	\left[A\right]_{ij} & \mbox{ si } i\neq r
+	\end{array}\right.$, con $r\leq m$ y $\lambda\neq 0$.
+	
+	(2) Denotaremos $e_{rs}$ a la operación 
+	$[e(A)]_{ij}=\left\{ \begin{array}{cc}
+	[A]_{sj} & \mbox{ si } i=r \\
+	\left[ A\right]_{rj} & \mbox{ si } i=s \\
+	\left[A\right]_{ij} & \mbox{ en otro caso } 
+	\end{array}\right.$, con $r\neq s \leq m$.
+	
+	(3) Denotaremos $\lambda e_{rs}$ a la operación 
+	$[e(A)]_{ij}=\left\{ \begin{array}{cc}
+	[A]_{ij}+\lambda [A]_{sj} & \mbox{ si } i=r \\
+	\left[A\right]_{ij} & \mbox{ si } i\neq r
+	\end{array}\right.$, con $r\neq s \leq m$.
+
+Note que cualquiera de las tres operaciones elementales por filas se puede "revertir" con una operación del mismo tipo. Para el primer tipo, basta con multiplicar la misma fila por el inverso de $\lambda$, $\frac{1}{\lambda}$. Para el intercambio de las filas $r$ y $s$ basta volver a intercambiar las filas. Para el tercer tipo de operación, $\lambda A_{rs}$, debemos aplicar $-\lambda A_{rs}$ y regresaremos a la matriz original. Esto es la demostración del siguiente teorema.
+
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-227"><strong>(\#thm:unnamed-chunk-227) </strong></span>	Para cada operación elemental de filas $e$ existe una operación elemental de filas $e_{1}$ del mismo tipo tal que $e_{1}(e(A))=e(e_{1}(A))=A$. Es decir, cada operación elemental de filas, tiene una operación inversa del mismo tipo.
+</div>\EndKnitrBlock{theorem}
+
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-228"><strong>(\#def:unnamed-chunk-228) </strong></span>	Si $A$ y $B$ son dos matrices del mismo orden sobre el mismo cuerpo de escalares y $B$ se obtiene de aplicar una cantidad finita de operaciones elementales por filas a la matriz $A$, entonces decimos que *$B$ es equivalente por filas a $A$*.
+</div>\EndKnitrBlock{definition}
+
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	Del teorema anterior se puede verificar que si una matriz $B$ es equivalente por filas a otra matriz $A$, entonces $A$ es equivalente por filas con $B$. También se puede ver que toda matriz es equivalente por filas a si misma. Por último se puede demostrar que si $A$ es equivalente por filas a $B$ y $B$ es equivalente por filas a $C$, entonces $A$ es equivalente por filas a $C$. De lo anterior, se tiene que la equivalencia por filas es una relación de equivalencia.
+</div>\EndKnitrBlock{remark}
+Como ya lo hemos mencionado, aplicar una operación elemental por filas es equivalente a hacer combinaciones lineales con las ecuaciones del sistema, por lo tanto al obtener matrices equivalentes por filas tendremos sistemas de ecuaciones equivalentes.
+
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-230"><strong>(\#thm:unnamed-chunk-230) </strong></span>	Si $A$ y $B$ son matrices equivalentes por filas, los sistemas homogeneos de ecuaciones lineales $AX=0$ y $BX=0$ tinen exactamente las mismas soluciones.
+</div>\EndKnitrBlock{theorem}
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Basta suponer que $B$ se obtiene de aplicar una operación elemental $e$ a la matriz $A$. Luego, las ecuaciones del sistema $BX=0$ son combinaciones lineales de las ecuaciones del sistema $AX=0$, por lo que cada solución de $AX=0$ es solución de $BX=0$. Análogamente,  cada solución de $BX=0$ es solución de $AX=0$, ya que $A$ se obtiene al aplicar la operación elemental inversa de $e$ a la matriz $B$.
+</div>\EndKnitrBlock{proof}
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-232"><strong>(\#exm:unnamed-chunk-232) </strong></span>	Dada la matriz de coeficientes 
+$A=\left[  \begin{array}{cccc}
+	2 & -1 & 3 & 2 \\
+	1 & 4 & 0 & -1 \\
+	2 & 6 & -1 & 5
+	\end{array}\right]$
+podemos hallar una matriz escalonada reducida por fila equivalente a $A$, de la siguiente forma:
+	
+	$\left[  \begin{array}{cccc}
+	2 & -1 & 3 & 2 \\
+	1 & 4 & 0 & -1 \\
+	2 & 6 & -1 & 5
+	\end{array}\right]   \stackrel{-2 e_{21}}{\longrightarrow}
+	\left[	\begin{array}{cccc}
+	0 & -9 & 3 & 4 \\
+	1 & 4 & 0 & -1 \\
+	2 & 6 & -1 & 5
+	\end{array}\right]  \stackrel{-2 e_{23}}{\longrightarrow}
+	\left[ 
+	\begin{array}{cccc}
+	0 & -9 & 3 & 4 \\
+	1 & 4 & 0 & -1 \\
+	0 & -2 & -1 & 7
+	\end{array}\right] \stackrel{\frac{-1}{2} e_{3}}{\longrightarrow}
+	\left[ 
+	\begin{array}{cccc}
+		0 & -9 & 3 & 4 \\
+		1 & 4 & 0 & -1 \\
+		0 & 1 & \frac{1}{2} & \frac{-7}{2}
+	\end{array}\right] \stackrel{-4 e_{32}}{\longrightarrow}
+	\left[ 
+	\begin{array}{cccc}
+		0 & -9 & 3 & 4 \\
+		1 & 0 & -2 & 13 \\
+		0 & 1 & \frac{1}{2} & \frac{-7}{2}
+	\end{array}\right] \stackrel{9 e_{31}}{\longrightarrow}
+	\left[ 
+	\begin{array}{cccc}
+		0 & 0 & \frac{15}{2} & \frac{-55}{2} \\
+		1 & 0 & -2 & 13 \\
+		0 & 1 & \frac{1}{2} & \frac{-7}{2}
+	\end{array}\right] \stackrel{\frac{2}{15} e_{1}}{\longrightarrow}
+  \left[ 
+	\begin{array}{cccc}
+		0 & 0 & 1 & \frac{-11}{3} \\
+		1 & 0 & -2 & 13 \\
+		0 & 1 & \frac{1}{2} & \frac{-7}{2}
+	\end{array}\right] \stackrel{2 e_{12}}{\longrightarrow}
+	\left[ 
+	\begin{array}{cccc}
+		0 & 0 & 1 & \frac{-11}{3} \\
+		1 & 0 & 0 & \frac{17}{3} \\
+		0 & 1 & \frac{1}{2} & \frac{-7}{2}
+	\end{array}\right] \stackrel{\frac{-1}{2} e_{13}}{\longrightarrow}
+	\left[ 
+	\begin{array}{cccc}
+	0 & 0 & 1 & \frac{-11}{3} \\
+	1 & 0 & 0 & \frac{17}{3} \\
+	0 & 1 & 0 & \frac{-5}{3}
+	\end{array}\right] \stackrel{e_{12}}{\longrightarrow}
+  \left[ 
+	\begin{array}{cccc}
+	1 & 0 & 0 & \frac{17}{3} \\
+	0 & 0 & 1 & \frac{-11}{3} \\
+	0 & 1 & 0 & \frac{-5}{3}
+	\end{array}\right] \stackrel{e_{32}}{\longrightarrow}
+	\left[ 
+	\begin{array}{cccc}
+	1 & 0 & 0 & \frac{17}{3} \\
+	0 & 1 & 0 & \frac{-5}{3} \\
+	0 & 0 & 1 & \frac{-11}{3}
+	\end{array}\right]$
+	
+De donde se tiene que los sistemas de ecuaciones lineales
+
+ 
+$\left\lbrace 
+\begin{array}{ccccc}
+2x_{1} & -x_{2} & +3x_{3} & +2x_{4} & =0\\
+x_{1} & +4x_{2} &  & -x_{4} &=0\\
+2x_{1} & +6x_{2} & -x_{3} & +5x_{4} & =0
+\end{array}
+\right.  $
+y
+
+$
+\left\lbrace 
+\begin{array}{ccccc}
+	x_{1} &  &  & +\frac{17}{3}x_{4} &=0 \\
+ & x_{2} &  & +\frac{-5}{3}x_{4} &=0 \\
+  &  & x_{3} & +\frac{-11}{3}x_{4} &=0 
+\end{array} 
+\right. $ 
+son equivalentes y por lo tanto tienen las mismas soluciones. Del segundo sistema salta a la vista que una solución es de la forma $(\frac{-17}{3}\lambda,\frac{5}{3}\lambda,\frac{11}{3}\lambda,\lambda)$ para cualquier número real $\lambda$.
+</div>\EndKnitrBlock{example}
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-233"><strong>(\#exm:unnamed-chunk-233) </strong></span>	Dada la ecuación con coeficientes en el cuerpo de los números complejos $\mathbb{C}$:
+	$ 
+	\left\lbrace 
+	\begin{array}{ccc}
+	-x_{1} & +ix_{2} &=0\\
+	-ix_{1} & +3x_{2} &=0\\
+	x_{1} & +2x_{2} & =0
+	\end{array}
+	\right.  $
+	
+	La matriz de coeficientes es $A=\left[  \begin{array}{cc}
+	-1 & i \\
+	-i & 3 \\
+	1 & 2 
+	\end{array}\right]$$ 
+	Hallemos una matriz escalonada reducida por fila equivalente a $A$:
+	$$\left[  \begin{array}{cc}
+	-1 & i \\
+	-i & 3 \\
+	1 & 2 
+	\end{array}\right]   \stackrel{e_{13}}{\longrightarrow}
+	\left[	\begin{array}{cc}
+	1 & 2 \\
+	-i & 3 \\
+	-1 & i 
+	\end{array}\right]  \stackrel{i e_{12}}{\longrightarrow}
+	\left[ 
+	\begin{array}{cc}
+	1 & 2 \\
+	0 & 3+2i \\
+	-1 & i 
+	\end{array}\right] \stackrel{1 e_{13}}{\longrightarrow}
+	\left[ 
+	\begin{array}{cc}
+	1 & 2 \\
+	0 & 3+2i \\
+	0 & 2+i 
+	\end{array}\right] \stackrel{\frac{1}{3+2i} e_{2}}{\longrightarrow}$
+	
+	$\left[ 
+	\begin{array}{cc}
+	1 & 2 \\
+	0 & 1 \\
+	0 & 2+i 
+	\end{array}\right] \stackrel{-2 e_{21}}{\longrightarrow}
+	\left[ 
+	\begin{array}{cc}
+	1 & 0 \\
+	0 & 1 \\
+	0 & 2+i 
+	\end{array}\right] \stackrel{-2-i e_{23}}{\longrightarrow}
+	\left[ 
+	\begin{array}{cc}
+	1 & 0 \\
+	0 & 1 \\
+	0 & 2+i 
+	\end{array}\right]$
+	
+De donde se tiene que la solución del sistema $AX=0$ es la trivial $(0,0,0)$, ya que $AX=0$ es equivalente al sistema $\left[ \begin{array}{cc}
+1 & 0 \\
+0 & 1 \\
+0 & 2+i 
+\end{array}\right] \cdot \left[ \begin{array}{c}
+x_{1} \\
+x_{2} 
+\end{array}\right] = \left[ \begin{array}{c}
+0 \\
+0 
+\end{array}\right]$
+</div>\EndKnitrBlock{example}
+
+Dada cualquier matriz $A$ de orden $m\times n$, podemos hallar una matriz equivalente por filas que sea escalonda reducida por filas, realizando un número finito de operaciones por filas según el siguiente algoritmo. Toda fila nula de la matriz se mueven hacia abajo de la matriz por medio de la operación intercambio de filas, de forma que todas ellas queden en las últimas filas de la matriz, es decir, supongamos que existen $r\leq m$ filas no nulas, entonces las últimas filas $r+1, r+2, \cdots, m$ serán las filas de ceros, de forma que el bloque superior $1,2,\cdots, r$ serán las filas no nulas. Luego, considerando esta nueva matriz (la llamaremos $A$, por comodidad). Sea $a_{1k_{1}}$ el primer elemento no nulo de la primera fila ($k_{1}$ es la columna donde aparece el primer elemento no nulo de la fila $1$), si $a_{1k_{1}}=1$, se cumple la condición (1), si no es así, aplicamos la operación $\frac{1}{a_{1k_{1}}} e_{1}$ para hacer que el pivote sea $1$. Ahora, debemos hacer que todo elemento en esa columna sea cero  si está en otra fila (condición (2)), para esto aplicamos la operación $-a_{ik_{1}}e_{i}$ para cada fila $1\neq i\leq r$. Pasamos a la siguiente fila, $A_{2\ast}$, consideramos el primer elemento no nulo de dicha fila, $a_{2k_{2}}$, donde $k_{2}$ es la columna que ocupa. Si $a_{2k_{2}}=1$, no haremos nada, en otro caso, aplicamos la operación $\frac{1}{a_{2k_{2}}} e_{2}$, con esto se cumple la condición (1) para esta fila. Ahora aplicamos $-a_{ik_{2}}e_{i}$ para cada fila $2\neq i\leq r$, con esto se cumple la condición (2). Repetimos este proceso para cada una de las filas no nulas de $A$, es decir, para las filas $1,2,\cdots, r$. Ahora ordenamos las filas no nulas intercambiando filas para lograr que se cumpla la condición (4), es decir, que se cumpla que $p_{1}< p_{2}< \cdots < p_{r}$, llamando $p_{i}$ a la columna del pivote de la fila $i$ luego de aplicar las operaciones elementales por filas. Es claro que estas operaciones son siempre posibles de aplicar a cualquier matriz, en un número finito de pasos.
+De lo anterior podemos concluir que siempre podemos reducir una matriz a una escalonada. Podemos expresarlo como un teorema, cuya demostración es el algoritmo anterior.
+
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-234"><strong>(\#thm:unnamed-chunk-234) </strong></span>	Toda matriz $m\times n$ sobre el cuerpo $\mathbb{F}$ es equivalente por filas a una matriz escalonada reducida por filas.
+</div>\EndKnitrBlock{theorem}
+
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-235"><strong>(\#thm:unnamed-chunk-235) </strong></span>	Si $A$ es una matriz $m\times n$ con $m<n$, el sistema homogéneo de ecuaciones lineales $AX=0$ tiene una solución no trivial.
+</div>\EndKnitrBlock{theorem}
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Sea $R$ una matriz escalón reducida por filas equivalente por filas a la matriz $A$. Entonces $AX=0$ y $RX=0$ tienen exactamente las mismas soluciones. Supongamos que $R$ tiene $r$ filas no nulas, luego $r<n$, luego el sistema de ecuaciones $RX=0$ consta de $r$ ecuaciones no triviales, a saber, suponiendo que $x_{k_{i}}$ es la incógnita que aparece en la posición del pivote de la fila $i$,
+	$$\begin{array}{ccc}
+	x_{k_{1}}+& \sum_{j=1}^{n-r}c_{1j}u_{j}=&0\\
+	\vdots & & \vdots\\
+	x_{k_{r}}+& \sum_{j=1}^{n-r}c_{rj}u_{j}=&0
+	\end{array}$$ 
+	donde las $n-r$ incógnitas diferentes de $x_{k_{1}}, x_{k_{2}},\cdots, x_{k_{r}}$ las denotamos $u_{1}, u_{2}, \cdots, u_{n-r}$. Note que la incógnita $x_{k_{i}}$ aparece solo en la $i$-ésima ecuación. De esta forma, podemos dar valores arbitrarios a $u_{1}, u_{2}, \cdots, u_{n-r}$ y así hallar una solución no trivial, que a su vez es solución del sistema $AX=0$.
+</div>\EndKnitrBlock{proof}
+
+Todos los teoremas anteriores hacen referencia a sistemas homogéneos $AX=0$, el cual siempre tiene solución, la solución trivial $X=0$. Cabe preguntar que sucede con los sistemas no homogéneos $AX=B$. Un sistema no homogéneo no tiene necesariamente solución. Estudiemos esto a continuación.
+Dado el sistema no homogéneo $AX=B$, con $A$ de orden $m\times n$; consideramos la *matriz aumentada*, $\hat{A}$ de orden $m\times (n+1)$, cuyas primeras $n$ columnas son iguales a las columnas de $A$ y la columna $n+1$ corresponde a $B$, es decir, $\hat{A}_{\ast j}=A_{\ast j}$ para $j\leq n$ y $\hat{A}_{\ast n+1}=B_{1}$. Se aplicará a esta matriz, $\hat{A}$ las mismas operaciones elementales por filas que se le aplican a la matriz $A$ para llevarla a una matriz escalonada reducidas por filas $R$, y así se obtendrá una matriz $\hat{R}$ cuya última fila son los escalares $z_{1}, z_{2},\cdots z_{m}$ (que serán combinaciones lineales de los coeficientes $b_{1}, b_{2},\cdots, b_{m}$). Es claro que los sistemas $AX=B$ y $RX=Z$ tienen las mismas soluciones (la demostración es análoga al de los sistemas homogéneos). Es fácil ver cuando el sistema $\hat{R}X=Z$ tiene solución. Si $\hat{R}$ tiene $r$ filas no nulas, donde el pivote de la fila $i$ está en la columna $k_{i}$ entonces las primeras $r$ ecuaciones expresarán las primeras $r$ incógnitas, $x_{k_{1}}, x_{k_{2}}, \cdots, x_{k_{r}}$ por las $n-r$ incógnitas restantes, $x_{j}$ y los escalares $z_{1}, z_{2},\cdots, z_{r}$. Y las últimas $m-r$ ecuaciones son:
+$$\begin{array}{cc}
+0= & z_{r+1}\\
+\vdots & \vdots\\
+0= & z_{m}
+\end{array}$$
+Por lo tanto, para que el sistema tenga solución debe suceder que $z_{r+1}=z_{r+2}=\cdots=z_{m}=0$. Si esto ocurre entonces las soluciones del sistema se obtienen dando valores arbitrarios a la $n-j$ incógnitas $x_{j}$.
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-237"><strong>(\#exm:unnamed-chunk-237) </strong></span>	Sea $$A=\left[\begin{array}{ccc}
+	1 & -2 & 1\\
+	2 & 1 & 1\\
+	0 & 5 & -1
+	\end{array} \right] $$ la matriz de coeficientes del sistema $AX=B$, donde $B=\left[\begin{array}{c}
+	b_{1}\\
+	b_{2}\\
+	b_{3}
+	\end{array} \right]$. Luego la matriz extendida es 
+  $\hat{A}=\left[\begin{array}{ccc|c}
+	1 & -2 & 1 & b_{1}\\
+	2 & 1 & 1 & b_{2}\\
+	0 & 5 & -1 & b_{3}
+	\end{array} \right]$
+  
+	Reducimos la matriz:
+  
+	$\left[\begin{array}{ccc|c}
+	1 & -2 & 1 & b_{1}\\
+	2 & 1 & 1 & b_{2}\\
+	0 & 5 & -1 & b_{3}
+	\end{array} \right] \stackrel{-2 e_{12}}{\longrightarrow} 
+	\left[\begin{array}{ccc|c}
+	1 & -2 & 1 & b_{1}\\
+	0 & 5 & -1 & b_{2}-2b_{1}\\
+	0 & 5 & -1 & b_{3}
+	\end{array} \right] \stackrel{\frac{1}{5} e_{2}}{\longrightarrow}
+	\left[\begin{array}{ccc|c}
+	1 & -2 & 1 & b_{1}\\
+	0 & 1 & -\frac{1}{5} & \frac{1}{5}(b_{2}-2b_{1})\\
+	0 & 5 & -1 & b_{3}
+	\end{array} \right] \stackrel{ 2e_{21}}{\longrightarrow}
+  \left[\begin{array}{ccc|c}
+	1 & 0 & \frac{3}{5} & \frac{1}{5}(b_{1}+2b_{2})\\
+	0 & 1 & -\frac{1}{5} & \frac{1}{5}(b_{2}-2b_{1})\\
+	0 & 5 & -1 & b_{3}
+	\end{array} \right] \stackrel{ -5e_{23}}{\longrightarrow}
+	\left[\begin{array}{ccc|c}
+	1 & 0 & \frac{3}{5} & \frac{1}{5}(b_{1}+2b_{2})\\
+	0 & 1 & -\frac{1}{5} & \frac{1}{5}(b_{2}-2b_{1})\\
+	0 & 0 & 0 & b_{3}-b_{2}+2b_{1}
+	\end{array} \right]$
+	Luego, el sistema tiene solución solo si $2b_{1}-b_{2}+b_{3}=0$. Si esta condición se cumple, entonces una solución para el sistema es de la forma:
+	$\begin{array}{cc}
+	x_{1}= &-\frac{3}{5}x_{3}+\frac{1}{5}(b_{1}+2b_{2})\\
+	x_{2}= &\frac{1}{5}x_{3}+\frac{1}{5}(b_{2}-2b_{1})
+	\end{array}$ para cualquier valor de $x_{3}$.
+</div>\EndKnitrBlock{example}
 
 <!--chapter:end:040-espacios-vectoriales.Rmd-->
 

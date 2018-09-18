@@ -300,6 +300,25 @@ Podemos representar este sistema de ecuaciones como un sistema matricial $AX=B$,
 	\end{array}\right] 
 \end{equation}
 
+```{theorem}
+	Sean $A$, $B$ y $C$ matrices sobre el cuerpo de escalares $\mathbb{F}$. Supongamos que los productos $BC$ y $A(BC)$ están definidos. Entonces, $AB$ y $(AB)C$ también están definidos y $A(BC)=(AB)C$.
+
+```
+
+```{proof}
+	Como $BC$ y $A(BC)$ están definidos, se tiene que el número de columnas de $B$ es igual al número de filas de $C$ y que el número de columnas de $A$ es igual al número de filas de $BC$ (y por lo tanto, igual al número de filas de $B$). Supongamos que $B$ es de orden $n\times p$, $C$ es de orden $p\times q$ y $A$ de orden $m\times n$, así $A(BC)$ es de orden $m\times q$. Claramente, $AB$ está definida y será de orden $m\times p$, como $C$ es de orden $p\times q$, $(AB)C$ está bien definido y será de orden $m\times q$. Ahora veamos que los productos $A(BC)$ y $(AB)C$ además de tener el mismo orden, coinciden en cada elemento.
+	$\begin{array}{rl}
+	[A(BC)]_{ij} & =\sum_{r=1}^{n} [A]_{ir}[BC]_{rj}\\
+	             & =\sum_{r=1}^{n} [A]_{ir} \sum_{s=1}^{p} [B]_{rs} [C]_{sj}\\
+	             & =\sum_{r=1}^{n}\sum_{s=1}^{p} [A]_{ir}[B]_{rs} [C]_{sj}\\
+	             & =\sum_{s=1}^{p}\sum_{r=1}^{n} [A]_{ir}[B]_{rs} [C]_{sj}\\
+	             & =\sum_{s=1}^{p}(\sum_{r=1}^{n} [A]_{ir}[B]_{rs}) [C]_{sj}\\
+	             & =\sum_{s=1}^{p} [AB]_{is} [C]_{sj}\\
+	             & =[(AB)C]_{ij}
+	\end{array}$
+
+```
+
 Ahora veremos las operaciones elementales por filas que corresponden a hacer combinaciones lineales entre las filas de la matriz de coeficientes (equivalente a hacerlo con las ecuaciones del sistema). Las *\textit{*operaciones elementales por filas* son tres:
 
 	(1) Multiplicar una fila de la matriz $A$ por un escalar no nulo $\lambda$.
