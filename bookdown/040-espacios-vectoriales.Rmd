@@ -633,3 +633,73 @@ Por lo tanto, para que el sistema tenga solución debe suceder que $z_{r+1}=z_{r
 	\end{array}$ para cualquier valor de $x_{3}$.
 
 ```
+
+Note que la igualdad $A(BC)=(AB)C$ implica, entre otras cosas, que combinaciones lineales de combinaciones lineales de las filas de $C$, son otra vez combinaciones lineales de las filas de $C$.
+Si $C$ es una matriz que se obtiene de aplicar una operación elemental de fila a $B$, entonces las filas de $C$ son combinación lineal de las filas de $B$, por lo tanto debe existir una matriz $A$, tal que $C=AB$. Pueden existir muchas matrices con tal propiedad; veremos como escoger una de ellas.
+
+```{definition}
+	Una matriz $m\times m$ es una *matriz elemental* si se obtiene de aplicar una sola operación elemental de filas a la matriz identidad (de orden $m\times m$).
+
+```
+
+```{example}
+	Una matriz elementa de orden $2\times 2$ es necesariamente como alguna de las siguientes: 
+	$$ \left[ \begin{array}{cc}
+	0 & 1\\
+	1 & 0
+	\end{array} \right] , 
+	\left[ \begin{array}{cc}
+	1 & \lambda\\
+	0 & 1
+	\end{array} \right] ,
+	\left[ \begin{array}{cc}
+	1 & 0\\
+	\lambda & 1
+	\end{array} \right]  \mbox{ con }\lambda\in \mathbb{F}$$ 
+	o
+	
+	$$\left[ \begin{array}{cc}
+	\delta & 0\\
+	0 & 1
+	\end{array} \right] , 
+	\left[ \begin{array}{cc}
+	1 & 0\\
+	0 & \delta
+	\end{array} \right] \mbox{ con } \delta\neq 0$$
+
+```
+
+```{theorem}
+	Sea $E$ una matriz elemental que corresponde a la operación elemental por filas $e$. Sea $A$ una matriz $m\times n$. Entonces $e(A)=EA$.
+
+```
+
+```{proof}
+	Note que el elemento $[EA]_{ij}$ se obtien de la $i$-ésima fila de $E$ y la $j$-ésima columna de $A$. Estudiemos cada tipo de operación por separado, comenzaremos con la mas complicada y las otras dos se dejan como ejercicio. Supongamos que $e= \lambda e_{sr}$ (se sustituye la fila $r$ por la fila $r$ mas $\lambda$ veces la fila $s$). Se tiene que $E=\lambda e_{sr}(I)$, por lo tanto:
+	$$[E]_{ik}=
+		\left\{ \begin{array}{lc}
+		\delta_{ik} & i\neq r\\
+		\delta_{rk}+\lambda \delta_{sk} & i=r
+		\end{array} 
+		\right.$$
+	Luego
+	$$ [EA]_{ij}=\sum_{k=1}^{m} [E]_{ik}[A]_{kj}=
+	\left\{ \begin{array}{lc}
+		a_{ik} & i\neq r \\
+		a_{rk}+\lambda a_{sk} & i=r
+		\end{array} 
+	\right. 
+$$
+	Por lo tanto $EA=e(A)$.
+
+```
+
+```{corollary}
+	Sean $A$ y $B$ matrices de orden $m\times n$ sobre el cuerpo $\mathbb{F}$. Entonces $B$ es equivalente por filas a $A$ si y solo si $B=PA$, donde $P$ es un producto de matrices elementales $m\times m$.
+
+```
+
+```{proof}
+	Supongamos que $E_{1}, E_{2},\cdots, E_{k}$ matrices elementales correspondientes a las operaciones elementales por fila $e_{1}, e_{2},\cdots, e_{k}$. Entonces $B=e_{1}\circ e_{2}\circ\cdots \circ e_{k}(A)$ si y solo si $B=E_{1} E_{2} \cdots E_{k} A=PA$, con $P=E_{1} E_{2} \cdots E_{k}$.
+
+```

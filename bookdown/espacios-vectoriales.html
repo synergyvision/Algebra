@@ -563,6 +563,67 @@ $\left[\begin{array}{ccc|c}
 <p> $ Luego, el sistema tiene solución solo si <span class="math inline">\(2b_{1}-b_{2}+b_{3}=0\)</span>. Si esta condición se cumple, entonces una solución para el sistema es de la forma: <span class="math inline">\(\begin{array}{cc}  x_{1}= &amp;-\frac{3}{5}x_{3}+\frac{1}{5}(b_{1}+2b_{2})\\  x_{2}= &amp;\frac{1}{5}x_{3}+\frac{1}{5}(b_{2}-2b_{1})  \end{array}\)</span> para cualquier valor de <span class="math inline">\(x_{3}\)</span>.</p>
 </div>
 
+<p>Note que la igualdad <span class="math inline">\(A(BC)=(AB)C\)</span> implica, entre otras cosas, que combinaciones lineales de combinaciones lineales de las filas de <span class="math inline">\(C\)</span>, son otra vez combinaciones lineales de las filas de <span class="math inline">\(C\)</span>. Si <span class="math inline">\(C\)</span> es una matriz que se obtiene de aplicar una operación elemental de fila a <span class="math inline">\(B\)</span>, entonces las filas de <span class="math inline">\(C\)</span> son combinación lineal de las filas de <span class="math inline">\(B\)</span>, por lo tanto debe existir una matriz <span class="math inline">\(A\)</span>, tal que <span class="math inline">\(C=AB\)</span>. Pueden existir muchas matrices con tal propiedad; veremos como escoger una de ellas.</p>
+
+<div class="definition">
+<p><span id="def:unnamed-chunk-27" class="definition"><strong>Definición 1.7  </strong></span> Una matriz <span class="math inline">\(m\times m\)</span> es una <em>matriz elemental</em> si se obtiene de aplicar una sola operación elemental de filas a la matriz identidad (de orden <span class="math inline">\(m\times m\)</span>).</p>
+</div>
+
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-28" class="example"><strong>Ejemplo 1.8  </strong></span> Una matriz elementa de orden <span class="math inline">\(2\times 2\)</span> es necesariamente como alguna de las siguientes: <span class="math display">\[ \left[ \begin{array}{cc}
+    0 &amp; 1\\
+    1 &amp; 0
+    \end{array} \right] , 
+    \left[ \begin{array}{cc}
+    1 &amp; \lambda\\
+    0 &amp; 1
+    \end{array} \right] ,
+    \left[ \begin{array}{cc}
+    1 &amp; 0\\
+    \lambda &amp; 1
+    \end{array} \right]  \mbox{ con }\lambda\in \mathbb{F}\]</span> o</p>
+<pre><code>$$\left[ \begin{array}{cc}
+\delta &amp; 0\\
+0 &amp; 1
+\end{array} \right] , 
+\left[ \begin{array}{cc}
+1 &amp; 0\\
+0 &amp; \delta
+\end{array} \right] \mbox{ con } \delta\neq 0$$</code></pre>
+</div>
+
+
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-29" class="theorem"><strong>Teorema 1.7  </strong></span> Sea <span class="math inline">\(E\)</span> una matriz elemental que corresponde a la operación elemental por filas <span class="math inline">\(e\)</span>. Sea <span class="math inline">\(A\)</span> una matriz <span class="math inline">\(m\times n\)</span>. Entonces <span class="math inline">\(e(A)=EA\)</span>.</p>
+</div>
+
+
+<div class="proof">
+<p> <span class="proof"><em>Demostración. </em></span>  Note que el elemento <span class="math inline">\([EA]_{ij}\)</span> se obtien de la <span class="math inline">\(i\)</span>-ésima fila de <span class="math inline">\(E\)</span> y la <span class="math inline">\(j\)</span>-ésima columna de <span class="math inline">\(A\)</span>. Estudiemos cada tipo de operación por separado, comenzaremos con la mas complicada y las otras dos se dejan como ejercicio. Supongamos que <span class="math inline">\(e= \lambda e_{sr}\)</span> (se sustituye la fila <span class="math inline">\(r\)</span> por la fila <span class="math inline">\(r\)</span> mas <span class="math inline">\(\lambda\)</span> veces la fila <span class="math inline">\(s\)</span>). Se tiene que <span class="math inline">\(E=\lambda e_{sr}(I)\)</span>, por lo tanto: <span class="math display">\[[E]_{ik}=
+        \left\{ \begin{array}{lc}
+        \delta_{ik} &amp; i\neq r\\
+        \delta_{rk}+\lambda \delta_{sk} &amp; i=r
+        \end{array} 
+        \right.\]</span> Luego <span class="math display">\[ [EA]_{ij}=\sum_{k=1}^{m} [E]_{ik}[A]_{kj}=
+    \left\{ \begin{array}{lc}
+        a_{ik} &amp; i\neq r \\
+        a_{rk}+\lambda a_{sk} &amp; i=r
+        \end{array} 
+    \right. 
+\]</span> Por lo tanto <span class="math inline">\(EA=e(A)\)</span>.</p>
+</div>
+
+
+<div class="corollary">
+<p><span id="cor:unnamed-chunk-31" class="corollary"><strong>Corolario 1.1  </strong></span> Sean <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> matrices de orden <span class="math inline">\(m\times n\)</span> sobre el cuerpo <span class="math inline">\(\mathbb{F}\)</span>. Entonces <span class="math inline">\(B\)</span> es equivalente por filas a <span class="math inline">\(A\)</span> si y solo si <span class="math inline">\(B=PA\)</span>, donde <span class="math inline">\(P\)</span> es un producto de matrices elementales <span class="math inline">\(m\times m\)</span>.</p>
+</div>
+
+
+<div class="proof">
+<p> <span class="proof"><em>Demostración. </em></span>  Supongamos que <span class="math inline">\(E_{1}, E_{2},\cdots, E_{k}\)</span> matrices elementales correspondientes a las operaciones elementales por fila <span class="math inline">\(e_{1}, e_{2},\cdots, e_{k}\)</span>. Entonces <span class="math inline">\(B=e_{1}\circ e_{2}\circ\cdots \circ e_{k}(A)\)</span> si y solo si <span class="math inline">\(B=E_{1} E_{2} \cdots E_{k} A=PA\)</span>, con <span class="math inline">\(P=E_{1} E_{2} \cdots E_{k}\)</span>.</p>
+</div>
+
 </div>
 </div>
 <script>
