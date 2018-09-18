@@ -319,6 +319,11 @@ Podemos representar este sistema de ecuaciones como un sistema matricial $AX=B$,
 
 ```
 
+```{remark}
+	El producto de una matriz cuadrada $A$ de orden $n\times n$, consigo misma, se puede denotar por $A^{2}=AA$. Note que $A^{2}$ es de orden $n\times n$, luego el producto $AA^{2}$ está defindo y se denotará $A^{3}$. En general, el producto de cualquier matriz cuadrada consigo misma, $r$ veces, está definida y se denota $A^{r}=AA\cdots A$.
+
+```
+
 Ahora veremos las operaciones elementales por filas que corresponden a hacer combinaciones lineales entre las filas de la matriz de coeficientes (equivalente a hacerlo con las ecuaciones del sistema). Las *\textit{*operaciones elementales por filas* son tres:
 
 	(1) Multiplicar una fila de la matriz $A$ por un escalar no nulo $\lambda$.
