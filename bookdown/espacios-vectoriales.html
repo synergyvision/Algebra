@@ -640,6 +640,27 @@ $\left[\begin{array}{ccc|c}
 </div>
 
 <p>Del corolario anterior tenemos que si <span class="math inline">\(A\)</span> tiene una inversa derecha y una inversa izquierda, entonces son iguales, la llamos <em>la inversa de <span class="math inline">\(A\)</span></em> y la denotámos <span class="math inline">\(A^{-1}\)</span>.</p>
+
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-36" class="theorem"><strong>Teorema 1.8  </strong></span> Dadas las matrices <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> de orden <span class="math inline">\(n\times n\)</span> sobre el cuerpo <span class="math inline">\(\mathbb{F}\)</span>. Se tiene que:</p>
+<pre><code>    (1) Si $A$ es invertible, entonces $A^{-1}$ también lo es y $(A^{-1})^{-1}=A$.
+    (2) Si $A$ y $B$ son invertibles, entonces $AB$ también lo es y $(AB)^{-1}=B^{-1}A^{-1}$.
+&lt;/div&gt;\EndKnitrBlock{theorem}</code></pre>
+
+<div class="proof">
+<p> <span class="proof"><em>Demostración. </em></span>  De la simetría de la definición de inversa, se sigue la parte <span class="math inline">\(1\)</span>. Para la segunda parte se sigue de <span class="math inline">\((AB)(B^{-1}A^{-1})=A(BB^{-1})A^{-1}=AIA^{-1}=AA^{-1}=I\)</span> y <span class="math inline">\((B^{-1}A^{-1})(AB)=B^{-1}(A^{-1}A)B=B^{-1}IB=B^{-1}B=I\)</span>.</p>
+</div>
+
+<p>Del resultado anterior se tiene que el producto de matrices invertible, es invertible.</p>
+
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-38" class="theorem"><strong>Teorema 1.9  </strong></span> Toda matriz elemental es invertible.</p>
+</div>
+ 
+<div class="proof">
+<p> <span class="proof"><em>Demostración. </em></span>  Sea <span class="math inline">\(E\)</span> una matriz elemental y sea <span class="math inline">\(e\)</span> la operación elemental de filas que corresponde a <span class="math inline">\(E\)</span>, es decir, <span class="math inline">\(E=e(I)\)</span>. Sea <span class="math inline">\(\hat{e}\)</span> la operación inversa de <span class="math inline">\(e\)</span>, y <span class="math inline">\(\hat{E}=\hat{e}(I)\)</span>. Entonces <span class="math inline">\(\hat{E}E=\hat{e}(E)=\hat{e}(e(I))=(\hat{e}\circ e) (I)= I\)</span>. Análogamente se tiene que <span class="math inline">\(E\hat{E}=I\)</span>. Luego <span class="math inline">\(\hat{E}=E^{-1}\)</span>.</p>
+</div>
+
 </div>
 </div>
 <script>
