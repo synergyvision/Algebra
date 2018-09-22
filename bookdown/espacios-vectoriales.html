@@ -623,7 +623,23 @@ $\left[\begin{array}{ccc|c}
 <div class="proof">
 <p> <span class="proof"><em>Demostración. </em></span>  Supongamos que <span class="math inline">\(E_{1}, E_{2},\cdots, E_{k}\)</span> matrices elementales correspondientes a las operaciones elementales por fila <span class="math inline">\(e_{1}, e_{2},\cdots, e_{k}\)</span>. Entonces <span class="math inline">\(B=e_{1}\circ e_{2}\circ\cdots \circ e_{k}(A)\)</span> si y solo si <span class="math inline">\(B=E_{1} E_{2} \cdots E_{k} A=PA\)</span>, con <span class="math inline">\(P=E_{1} E_{2} \cdots E_{k}\)</span>.</p>
 </div>
+<p> Si <span class="math inline">\(A\)</span> es una matriz equivalente por filas a <span class="math inline">\(B\)</span>, el corolario anterior asegura que existe <span class="math inline">\(P\)</span>, tal que <span class="math inline">\(B=PA\)</span>, donde <span class="math inline">\(P\)</span> es producto de matrices elementales. Por otro lado se tiene que <span class="math inline">\(B\)</span> es equivalente por filas a <span class="math inline">\(A\)</span>, luego existe una matriz <span class="math inline">\(Q\)</span>, producto de matrices elementales, tal que <span class="math inline">\(A=QB\)</span>. En particular, esto es cierto para la matriz identidad, es decir <span class="math inline">\(I=QB=QP\)</span>. Veremos que la existencia de la matriz <span class="math inline">\(Q\)</span>, tal que <span class="math inline">\(QP=I\)</span> es equivalente al hecho de que <span class="math inline">\(P\)</span> es producto de matrices elementales.</p>
 
+<div class="definition">
+<p><span id="def:unnamed-chunk-33" class="definition"><strong>Definición 1.8  </strong></span> Sea <span class="math inline">\(A\)</span> una matriz (cuadrada) <span class="math inline">\(n\times n\)</span> sobre el cuerpo <span class="math inline">\(\mathbb{F}\)</span>. Una matriz <span class="math inline">\(B\)</span> <span class="math inline">\(n\times n\)</span>, tal que <span class="math inline">\(BA=I\)</span> se llama <em>inversa izquierda</em> de <span class="math inline">\(A\)</span>; una matriz <span class="math inline">\(B\)</span> <span class="math inline">\(n\times n\)</span>, tal que <span class="math inline">\(AB=I\)</span> se llama <em>inversa derecha</em> de <span class="math inline">\(A\)</span>. Si <span class="math inline">\(AB=BA=I\)</span>, entonces <span class="math inline">\(B\)</span> se llama <em>inversa bilateral</em> de <span class="math inline">\(A\)</span> y en este caso se dice que <span class="math inline">\(A\)</span> es <em>invertible</em>.</p>
+</div>
+
+
+<div class="lemma">
+<p><span id="lem:unnamed-chunk-34" class="lemma"><strong>Lema 1.1  </strong></span> Si una matriz <span class="math inline">\(A\)</span> tiene una inversa izquierda <span class="math inline">\(B\)</span> y una inversa derecha <span class="math inline">\(C\)</span>, entonces <span class="math inline">\(B=C\)</span>.</p>
+</div>
+
+
+<div class="proof">
+<p> <span class="proof"><em>Demostración. </em></span>  Suponga que <span class="math inline">\(BA=I\)</span> y <span class="math inline">\(AC=I\)</span>. Entonces <span class="math inline">\(B=BI=B(AC)=(BA)C=IC=C\)</span></p>
+</div>
+
+<p>Del corolario anterior tenemos que si <span class="math inline">\(A\)</span> tiene una inversa derecha y una inversa izquierda, entonces son iguales, la llamos <em>la inversa de <span class="math inline">\(A\)</span></em> y la denotámos <span class="math inline">\(A^{-1}\)</span>.</p>
 </div>
 </div>
 <script>

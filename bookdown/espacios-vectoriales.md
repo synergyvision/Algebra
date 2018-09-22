@@ -639,3 +639,15 @@ $$
 
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Supongamos que $E_{1}, E_{2},\cdots, E_{k}$ matrices elementales correspondientes a las operaciones elementales por fila $e_{1}, e_{2},\cdots, e_{k}$. Entonces $B=e_{1}\circ e_{2}\circ\cdots \circ e_{k}(A)$ si y solo si $B=E_{1} E_{2} \cdots E_{k} A=PA$, con $P=E_{1} E_{2} \cdots E_{k}$.
 </div>\EndKnitrBlock{proof}
+Si $A$ es una matriz equivalente por filas a $B$, el corolario anterior asegura que existe $P$, tal que $B=PA$, donde $P$ es producto de matrices elementales. Por otro lado se tiene que $B$ es equivalente por filas a $A$, luego existe una matriz $Q$, producto de matrices elementales, tal que $A=QB$. En particular, esto es cierto para la matriz identidad, es decir $I=QB=QP$. Veremos que la existencia de la matriz $Q$, tal que $QP=I$ es equivalente al hecho de que $P$ es producto de matrices elementales.
+
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-33"><strong>(\#def:unnamed-chunk-33) </strong></span>	Sea $A$ una matriz (cuadrada) $n\times n$ sobre el cuerpo $\mathbb{F}$. Una matriz $B$ $n\times n$, tal que $BA=I$ se llama *inversa izquierda* de $A$; una matriz $B$ $n\times n$, tal que $AB=I$ se llama *inversa derecha* de $A$. Si $AB=BA=I$, entonces $B$ se llama *inversa bilateral* de $A$ y en este caso se dice que $A$ es *invertible*.
+</div>\EndKnitrBlock{definition}
+
+\BeginKnitrBlock{lemma}<div class="lemma"><span class="lemma" id="lem:unnamed-chunk-34"><strong>(\#lem:unnamed-chunk-34) </strong></span>	Si una matriz $A$ tiene una inversa izquierda $B$ y una inversa derecha $C$, entonces $B=C$.
+</div>\EndKnitrBlock{lemma}
+
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Suponga que $BA=I$ y $AC=I$. Entonces $B=BI=B(AC)=(BA)C=IC=C$
+</div>\EndKnitrBlock{proof}
+
+Del corolario anterior tenemos que si $A$ tiene una inversa derecha y una inversa izquierda, entonces son iguales, la llamos *la inversa de $A$* y la denotámos $A^{-1}$.
