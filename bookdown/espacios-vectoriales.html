@@ -661,6 +661,28 @@ $\left[\begin{array}{ccc|c}
 <p> <span class="proof"><em>Demostración. </em></span>  Sea <span class="math inline">\(E\)</span> una matriz elemental y sea <span class="math inline">\(e\)</span> la operación elemental de filas que corresponde a <span class="math inline">\(E\)</span>, es decir, <span class="math inline">\(E=e(I)\)</span>. Sea <span class="math inline">\(\hat{e}\)</span> la operación inversa de <span class="math inline">\(e\)</span>, y <span class="math inline">\(\hat{E}=\hat{e}(I)\)</span>. Entonces <span class="math inline">\(\hat{E}E=\hat{e}(E)=\hat{e}(e(I))=(\hat{e}\circ e) (I)= I\)</span>. Análogamente se tiene que <span class="math inline">\(E\hat{E}=I\)</span>. Luego <span class="math inline">\(\hat{E}=E^{-1}\)</span>.</p>
 </div>
 
+
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-40" class="theorem"><strong>Teorema 1.10  </strong></span> Sea <span class="math inline">\(A\)</span> una matriz <span class="math inline">\(n\times n\)</span>. Entonces los siguientes enunciados son equivalentes:</p>
+<pre><code>    (1) $A$ es invertible.
+    (2) $A$ es equivalente por filas a la identidad (de orden $n\times n$).
+    (3) $A$ es producto de matrices elementales.</code></pre>
+</div>
+ 
+<div class="proof">
+<p> <span class="proof"><em>Demostración. </em></span>  Sea <span class="math inline">\(R=E_{1}E_{2}\cdots E_{n}A\)</span> una matriz esacalonada reducida equivalente por filas a la matriz <span class="math inline">\(A\)</span> (donde <span class="math inline">\(E_{1}E_{2}\cdots E_{n}\)</span> son matrices elementales). Entonces, <span class="math inline">\(A=E_{n}^{-1}\cdots E_{2}^{-1}E_{1}^{-1}R\)</span>, ya que las matrices elementales son invertibles. Como el producto de matrices invertibles, es invertible, <span class="math inline">\(A\)</span> es invertible si y solo si <span class="math inline">\(R\)</span> lo es; como <span class="math inline">\(R\)</span> es una matriz cuadrada esacalonada reducida por filas, entonces <span class="math inline">\(R\)</span> es invertible si y solo si <span class="math inline">\(R\)</span> es la identidad. Luego, <span class="math inline">\(A\)</span> es invertible si y solo si <span class="math inline">\(R=I\)</span>, entonces, <span class="math inline">\(A=E_{n}^{-1}\cdots E_{2}^{-1}E_{1}^{-1}I=E_{n}^{-1}\cdots E_{2}^{-1}E_{1}^{-1}\)</span>.</p>
+</div>
+
+
+<div class="corollary">
+<p><span id="cor:unnamed-chunk-42" class="corollary"><strong>Corolario 1.2  </strong></span> Si <span class="math inline">\(A\)</span> es una matriz invertible <span class="math inline">\(n\times n\)</span> y si la sucesión de operaciones elementales <span class="math inline">\(e_{1}\circ e_{2}\circ \cdots \circ e_{n}\)</span> reduce a la matriz <span class="math inline">\(A\)</span> a la identidad, entonces la misma sucesión de operaciones elementales aplicadas a <span class="math inline">\(I\)</span>, nos da <span class="math inline">\(A^{-1}\)</span>, la inversa de <span class="math inline">\(A\)</span>.</p>
+</div>
+
+
+<div class="corollary">
+<span id="cor:unnamed-chunk-43" class="corollary"><strong>Corolario 1.3  </strong></span> Sean <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> dos matrices <span class="math inline">\(m\times n\)</span>. Entonces <span class="math inline">\(B\)</span> es equivalente por filas a <span class="math inline">\(A\)</span> si y solo si <span class="math inline">\(B=PA\)</span>, donde <span class="math inline">\(P\)</span> es una matriz invertible <span class="math inline">\(m\times m\)</span>.
+</div>
+
 </div>
 </div>
 <script>
