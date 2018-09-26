@@ -524,6 +524,12 @@ De lo anterior podemos concluir que siempre podemos reducir una matriz a una esc
 	donde las $n-r$ incógnitas diferentes de $x_{k_{1}}, x_{k_{2}},\cdots, x_{k_{r}}$ las denotamos $u_{1}, u_{2}, \cdots, u_{n-r}$. Note que la incógnita $x_{k_{i}}$ aparece solo en la $i$-ésima ecuación. De esta forma, podemos dar valores arbitrarios a $u_{1}, u_{2}, \cdots, u_{n-r}$ y así hallar una solución no trivial, que a su vez es solución del sistema $AX=0$.
 </div>\EndKnitrBlock{proof}
 
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:teorema6"><strong>(\#thm:teorema6) </strong></span>	Si $A$ es una matriz cuadrada $n\times n$. Entonces $A$ es equivalente por filas a la matriz identidad si y solo si, el sistema de ecuaciones $AX=0$ tiene solo la solución trivial $X=0$.
+</div>\EndKnitrBlock{theorem}
+
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Si $A$ es equivalente por filas a la identidad, por el teorema anterior $AX=0$ y $IX=0$ tienen exactamente las mismas soluciones, por lo tanto la única solución es $X=0$. Ahora, supongamos que $AX=0$ tiene unicamente la solución trivial; supongamos que $R$ es la matriz escalonada reducida equivalente a $A$, y sea $r\leq n$ el número de filas no nulas; entonces $RX=0$ tiene unicamente la solución trivial (por el teorema anterior), luego $r\geq n$, por lo tanto $r=n$, por lo tanto $R=I$. 
+</div>\EndKnitrBlock{proof}
+
 Todos los teoremas anteriores hacen referencia a sistemas homogéneos $AX=0$, el cual siempre tiene solución, la solución trivial $X=0$. Cabe preguntar que sucede con los sistemas no homogéneos $AX=B$. Un sistema no homogéneo no tiene necesariamente solución. Estudiemos esto a continuación.
 Dado el sistema no homogéneo $AX=B$, con $A$ de orden $m\times n$; consideramos la *matriz aumentada*, $\hat{A}$ de orden $m\times (n+1)$, cuyas primeras $n$ columnas son iguales a las columnas de $A$ y la columna $n+1$ corresponde a $B$, es decir, $\hat{A}_{\ast j}=A_{\ast j}$ para $j\leq n$ y $\hat{A}_{\ast n+1}=B_{1}$. Se aplicará a esta matriz, $\hat{A}$ las mismas operaciones elementales por filas que se le aplican a la matriz $A$ para llevarla a una matriz escalonada reducidas por filas $R$, y así se obtendrá una matriz $\hat{R}$ cuya última fila son los escalares $z_{1}, z_{2},\cdots z_{m}$ (que serán combinaciones lineales de los coeficientes $b_{1}, b_{2},\cdots, b_{m}$). Es claro que los sistemas $AX=B$ y $RX=Z$ tienen las mismas soluciones (la demostración es análoga al de los sistemas homogéneos). Es fácil ver cuando el sistema $\hat{R}X=Z$ tiene solución. Si $\hat{R}$ tiene $r$ filas no nulas, donde el pivote de la fila $i$ está en la columna $k_{i}$ entonces las primeras $r$ ecuaciones expresarán las primeras $r$ incógnitas, $x_{k_{1}}, x_{k_{2}}, \cdots, x_{k_{r}}$ por las $n-r$ incógnitas restantes, $x_{j}$ y los escalares $z_{1}, z_{2},\cdots, z_{r}$. Y las últimas $m-r$ ecuaciones son:
 $$\begin{array}{cc}
@@ -533,7 +539,7 @@ $$\begin{array}{cc}
 \end{array}$$
 Por lo tanto, para que el sistema tenga solución debe suceder que $z_{r+1}=z_{r+2}=\cdots=z_{m}=0$. Si esto ocurre entonces las soluciones del sistema se obtienen dando valores arbitrarios a la $n-j$ incógnitas $x_{j}$.
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-26"><strong>(\#exm:unnamed-chunk-26) </strong></span>	Sea $$A=\left[\begin{array}{ccc}
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-27"><strong>(\#exm:unnamed-chunk-27) </strong></span>	Sea $$A=\left[\begin{array}{ccc}
 	1 & -2 & 1\\
 	2 & 1 & 1\\
 	0 & 5 & -1
@@ -585,10 +591,10 @@ Por lo tanto, para que el sistema tenga solución debe suceder que $z_{r+1}=z_{r
 Note que la igualdad $A(BC)=(AB)C$ implica, entre otras cosas, que combinaciones lineales de combinaciones lineales de las filas de $C$, son otra vez combinaciones lineales de las filas de $C$.
 Si $C$ es una matriz que se obtiene de aplicar una operación elemental de fila a $B$, entonces las filas de $C$ son combinación lineal de las filas de $B$, por lo tanto debe existir una matriz $A$, tal que $C=AB$. Pueden existir muchas matrices con tal propiedad; veremos como escoger una de ellas.
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-27"><strong>(\#def:unnamed-chunk-27) </strong></span>	Una matriz $m\times m$ es una *matriz elemental* si se obtiene de aplicar una sola operación elemental de filas a la matriz identidad (de orden $m\times m$).
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-28"><strong>(\#def:unnamed-chunk-28) </strong></span>	Una matriz $m\times m$ es una *matriz elemental* si se obtiene de aplicar una sola operación elemental de filas a la matriz identidad (de orden $m\times m$).
 </div>\EndKnitrBlock{definition}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-28"><strong>(\#exm:unnamed-chunk-28) </strong></span>	Una matriz elementa de orden $2\times 2$ es necesariamente como alguna de las siguientes: 
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-29"><strong>(\#exm:unnamed-chunk-29) </strong></span>	Una matriz elementa de orden $2\times 2$ es necesariamente como alguna de las siguientes: 
 	$$ \left[ \begin{array}{cc}
 	0 & 1\\
 	1 & 0
@@ -613,7 +619,7 @@ Si $C$ es una matriz que se obtiene de aplicar una operación elemental de fila 
 	\end{array} \right] \mbox{ con } \delta\neq 0$$
 </div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-29"><strong>(\#thm:unnamed-chunk-29) </strong></span>	Sea $E$ una matriz elemental que corresponde a la operación elemental por filas $e$. Sea $A$ una matriz $m\times n$. Entonces $e(A)=EA$.
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-30"><strong>(\#thm:unnamed-chunk-30) </strong></span>	Sea $E$ una matriz elemental que corresponde a la operación elemental por filas $e$. Sea $A$ una matriz $m\times n$. Entonces $e(A)=EA$.
 </div>\EndKnitrBlock{theorem}
 
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Note que el elemento $[EA]_{ij}$ se obtien de la $i$-ésima fila de $E$ y la $j$-ésima columna de $A$. Estudiemos cada tipo de operación por separado, comenzaremos con la mas complicada y las otras dos se dejan como ejercicio. Supongamos que $e= \lambda e_{sr}$ (se sustituye la fila $r$ por la fila $r$ mas $\lambda$ veces la fila $s$). Se tiene que $E=\lambda e_{sr}(I)$, por lo tanto:
@@ -634,17 +640,17 @@ $$
 	Por lo tanto $EA=e(A)$.
 </div>\EndKnitrBlock{proof}
 
-\BeginKnitrBlock{corollary}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-31"><strong>(\#cor:unnamed-chunk-31) </strong></span>	Sean $A$ y $B$ matrices de orden $m\times n$ sobre el cuerpo $\mathbb{F}$. Entonces $B$ es equivalente por filas a $A$ si y solo si $B=PA$, donde $P$ es un producto de matrices elementales $m\times m$.
+\BeginKnitrBlock{corollary}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-32"><strong>(\#cor:unnamed-chunk-32) </strong></span>	Sean $A$ y $B$ matrices de orden $m\times n$ sobre el cuerpo $\mathbb{F}$. Entonces $B$ es equivalente por filas a $A$ si y solo si $B=PA$, donde $P$ es un producto de matrices elementales $m\times m$.
 </div>\EndKnitrBlock{corollary}
 
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Supongamos que $E_{1}, E_{2},\cdots, E_{k}$ matrices elementales correspondientes a las operaciones elementales por fila $e_{1}, e_{2},\cdots, e_{k}$. Entonces $B=e_{1}\circ e_{2}\circ\cdots \circ e_{k}(A)$ si y solo si $B=E_{1} E_{2} \cdots E_{k} A=PA$, con $P=E_{1} E_{2} \cdots E_{k}$.
 </div>\EndKnitrBlock{proof}
 Si $A$ es una matriz equivalente por filas a $B$, el corolario anterior asegura que existe $P$, tal que $B=PA$, donde $P$ es producto de matrices elementales. Por otro lado se tiene que $B$ es equivalente por filas a $A$, luego existe una matriz $Q$, producto de matrices elementales, tal que $A=QB$. En particular, esto es cierto para la matriz identidad, es decir $I=QB=QP$. Veremos que la existencia de la matriz $Q$, tal que $QP=I$ es equivalente al hecho de que $P$ es producto de matrices elementales.
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-33"><strong>(\#def:unnamed-chunk-33) </strong></span>	Sea $A$ una matriz (cuadrada) $n\times n$ sobre el cuerpo $\mathbb{F}$. Una matriz $B$ $n\times n$, tal que $BA=I$ se llama *inversa izquierda* de $A$; una matriz $B$ $n\times n$, tal que $AB=I$ se llama *inversa derecha* de $A$. Si $AB=BA=I$, entonces $B$ se llama *inversa bilateral* de $A$ y en este caso se dice que $A$ es *invertible*.
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-34"><strong>(\#def:unnamed-chunk-34) </strong></span>	Sea $A$ una matriz (cuadrada) $n\times n$ sobre el cuerpo $\mathbb{F}$. Una matriz $B$ $n\times n$, tal que $BA=I$ se llama *inversa izquierda* de $A$; una matriz $B$ $n\times n$, tal que $AB=I$ se llama *inversa derecha* de $A$. Si $AB=BA=I$, entonces $B$ se llama *inversa bilateral* de $A$ y en este caso se dice que $A$ es *invertible*.
 </div>\EndKnitrBlock{definition}
 
-\BeginKnitrBlock{lemma}<div class="lemma"><span class="lemma" id="lem:unnamed-chunk-34"><strong>(\#lem:unnamed-chunk-34) </strong></span>	Si una matriz $A$ tiene una inversa izquierda $B$ y una inversa derecha $C$, entonces $B=C$.
+\BeginKnitrBlock{lemma}<div class="lemma"><span class="lemma" id="lem:unnamed-chunk-35"><strong>(\#lem:unnamed-chunk-35) </strong></span>	Si una matriz $A$ tiene una inversa izquierda $B$ y una inversa derecha $C$, entonces $B=C$.
 </div>\EndKnitrBlock{lemma}
 
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Suponga que $BA=I$ y $AC=I$. Entonces $B=BI=B(AC)=(BA)C=IC=C$
@@ -652,7 +658,7 @@ Si $A$ es una matriz equivalente por filas a $B$, el corolario anterior asegura 
 
 Del corolario anterior tenemos que si $A$ tiene una inversa derecha y una inversa izquierda, entonces son iguales, la llamos *la inversa de $A$* y la denotámos $A^{-1}$.
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-36"><strong>(\#thm:unnamed-chunk-36) </strong></span>	Dadas las matrices $A$ y $B$ de orden $n\times n$ sobre el cuerpo $\mathbb{F}$. Se tiene que:
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-37"><strong>(\#thm:unnamed-chunk-37) </strong></span>	Dadas las matrices $A$ y $B$ de orden $n\times n$ sobre el cuerpo $\mathbb{F}$. Se tiene que:
 
 		(1) Si $A$ es invertible, entonces $A^{-1}$ también lo es y $(A^{-1})^{-1}=A$.
 		(2) Si $A$ y $B$ son invertibles, entonces $AB$ también lo es y $(AB)^{-1}=B^{-1}A^{-1}$.
@@ -662,12 +668,12 @@ Del corolario anterior tenemos que si $A$ tiene una inversa derecha y una invers
 
 Del resultado anterior se tiene que el producto de matrices invertible, es invertible.
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-38"><strong>(\#thm:unnamed-chunk-38) </strong></span>	Toda matriz elemental es invertible.
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-39"><strong>(\#thm:unnamed-chunk-39) </strong></span>	Toda matriz elemental es invertible.
 </div>\EndKnitrBlock{theorem}
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Sea $E$ una matriz elemental y sea $e$ la operación elemental de filas que corresponde a $E$, es decir, $E=e(I)$. Sea $\hat{e}$ la operación inversa de $e$, y $\hat{E}=\hat{e}(I)$. Entonces $\hat{E}E=\hat{e}(E)=\hat{e}(e(I))=(\hat{e}\circ e) (I)= I$. Análogamente se tiene que $E\hat{E}=I$. Luego $\hat{E}=E^{-1}$.
 </div>\EndKnitrBlock{proof}
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-40"><strong>(\#thm:unnamed-chunk-40) </strong></span>	Sea $A$ una matriz $n\times n$. Entonces los siguientes enunciados son equivalentes:
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-41"><strong>(\#thm:unnamed-chunk-41) </strong></span>	Sea $A$ una matriz $n\times n$. Entonces los siguientes enunciados son equivalentes:
 	
 		(1) $A$ es invertible.
 		(2) $A$ es equivalente por filas a la identidad (de orden $n\times n$).
@@ -676,7 +682,8 @@ Del resultado anterior se tiene que el producto de matrices invertible, es inver
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Sea $R=E_{1}E_{2}\cdots E_{n}A$ una matriz esacalonada reducida equivalente por filas a la matriz $A$ (donde $E_{1}E_{2}\cdots E_{n}$ son matrices elementales). Entonces, $A=E_{n}^{-1}\cdots E_{2}^{-1}E_{1}^{-1}R$, ya que las matrices elementales son invertibles. Como el producto de matrices invertibles, es invertible, $A$ es invertible si y solo si $R$ lo es; como $R$ es una matriz cuadrada esacalonada reducida por filas, entonces $R$ es invertible si y solo si $R$ es la identidad. Luego, $A$ es invertible si y solo si $R=I$, entonces, $A=E_{n}^{-1}\cdots E_{2}^{-1}E_{1}^{-1}I=E_{n}^{-1}\cdots E_{2}^{-1}E_{1}^{-1}$.
 </div>\EndKnitrBlock{proof}
 
-\BeginKnitrBlock{corollary}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-42"><strong>(\#cor:unnamed-chunk-42) </strong></span>	Si $A$ es una matriz invertible $n\times n$ y si la sucesión de operaciones elementales $e_{1}\circ e_{2}\circ \cdots \circ e_{n}$ reduce a la matriz $A$ a la identidad, entonces la misma sucesión de operaciones elementales aplicadas a $I$, nos da $A^{-1}$, la inversa de $A$.
+\BeginKnitrBlock{corollary}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-43"><strong>(\#cor:unnamed-chunk-43) </strong></span>	Si $A$ es una matriz invertible $n\times n$ y si la sucesión de operaciones elementales $e_{1}\circ e_{2}\circ \cdots \circ e_{n}$ reduce a la matriz $A$ a la identidad, entonces la misma sucesión de operaciones elementales aplicadas a $I$, nos da $A^{-1}$, la inversa de $A$.
 </div>\EndKnitrBlock{corollary}
 
-\BeginKnitrBlock{corollary}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-43"><strong>(\#cor:unnamed-chunk-43) </strong></span>	Sean $A$ y $B$ dos matrices $m\times n$. Entonces $B$ es equivalente por filas a $A$ si y solo si $B=PA$, donde $P$ es una matriz invertible $m\times m$.</div>\EndKnitrBlock{corollary}
+\BeginKnitrBlock{corollary}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-44"><strong>(\#cor:unnamed-chunk-44) </strong></span>	Sean $A$ y $B$ dos matrices $m\times n$. Entonces $B$ es equivalente por filas a $A$ si y solo si $B=PA$, donde $P$ es una matriz invertible $m\times m$.
+</div>\EndKnitrBlock{corollary}

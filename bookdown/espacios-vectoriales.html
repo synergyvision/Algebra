@@ -531,6 +531,16 @@ $\left[
     \end{array}\]</span> donde las <span class="math inline">\(n-r\)</span> incógnitas diferentes de <span class="math inline">\(x_{k_{1}}, x_{k_{2}},\cdots, x_{k_{r}}\)</span> las denotamos <span class="math inline">\(u_{1}, u_{2}, \cdots, u_{n-r}\)</span>. Note que la incógnita <span class="math inline">\(x_{k_{i}}\)</span> aparece solo en la <span class="math inline">\(i\)</span>-ésima ecuación. De esta forma, podemos dar valores arbitrarios a <span class="math inline">\(u_{1}, u_{2}, \cdots, u_{n-r}\)</span> y así hallar una solución no trivial, que a su vez es solución del sistema <span class="math inline">\(AX=0\)</span>.</p>
 </div>
 
+
+<div class="theorem">
+<p><span id="thm:teorema6" class="theorem"><strong>Teorema 1.7  </strong></span> Si <span class="math inline">\(A\)</span> es una matriz cuadrada <span class="math inline">\(n\times n\)</span>. Entonces <span class="math inline">\(A\)</span> es equivalente por filas a la matriz identidad si y solo si, el sistema de ecuaciones <span class="math inline">\(AX=0\)</span> tiene solo la solución trivial <span class="math inline">\(X=0\)</span>.</p>
+</div>
+
+
+<div class="proof">
+<p> <span class="proof"><em>Demostración. </em></span>  Si <span class="math inline">\(A\)</span> es equivalente por filas a la identidad, por el teorema anterior <span class="math inline">\(AX=0\)</span> y <span class="math inline">\(IX=0\)</span> tienen exactamente las mismas soluciones, por lo tanto la única solución es <span class="math inline">\(X=0\)</span>. Ahora, supongamos que <span class="math inline">\(AX=0\)</span> tiene unicamente la solución trivial; supongamos que <span class="math inline">\(R\)</span> es la matriz escalonada reducida equivalente a <span class="math inline">\(A\)</span>, y sea <span class="math inline">\(r\leq n\)</span> el número de filas no nulas; entonces <span class="math inline">\(RX=0\)</span> tiene unicamente la solución trivial (por el teorema anterior), luego <span class="math inline">\(r\geq n\)</span>, por lo tanto <span class="math inline">\(r=n\)</span>, por lo tanto <span class="math inline">\(R=I\)</span>.</p>
+</div>
+
 <p>Todos los teoremas anteriores hacen referencia a sistemas homogéneos <span class="math inline">\(AX=0\)</span>, el cual siempre tiene solución, la solución trivial <span class="math inline">\(X=0\)</span>. Cabe preguntar que sucede con los sistemas no homogéneos <span class="math inline">\(AX=B\)</span>. Un sistema no homogéneo no tiene necesariamente solución. Estudiemos esto a continuación. Dado el sistema no homogéneo <span class="math inline">\(AX=B\)</span>, con <span class="math inline">\(A\)</span> de orden <span class="math inline">\(m\times n\)</span>; consideramos la <em>matriz aumentada</em>, <span class="math inline">\(\hat{A}\)</span> de orden <span class="math inline">\(m\times (n+1)\)</span>, cuyas primeras <span class="math inline">\(n\)</span> columnas son iguales a las columnas de <span class="math inline">\(A\)</span> y la columna <span class="math inline">\(n+1\)</span> corresponde a <span class="math inline">\(B\)</span>, es decir, <span class="math inline">\(\hat{A}_{\ast j}=A_{\ast j}\)</span> para <span class="math inline">\(j\leq n\)</span> y <span class="math inline">\(\hat{A}_{\ast n+1}=B_{1}\)</span>. Se aplicará a esta matriz, <span class="math inline">\(\hat{A}\)</span> las mismas operaciones elementales por filas que se le aplican a la matriz <span class="math inline">\(A\)</span> para llevarla a una matriz escalonada reducidas por filas <span class="math inline">\(R\)</span>, y así se obtendrá una matriz <span class="math inline">\(\hat{R}\)</span> cuya última fila son los escalares <span class="math inline">\(z_{1}, z_{2},\cdots z_{m}\)</span> (que serán combinaciones lineales de los coeficientes <span class="math inline">\(b_{1}, b_{2},\cdots, b_{m}\)</span>). Es claro que los sistemas <span class="math inline">\(AX=B\)</span> y <span class="math inline">\(RX=Z\)</span> tienen las mismas soluciones (la demostración es análoga al de los sistemas homogéneos). Es fácil ver cuando el sistema <span class="math inline">\(\hat{R}X=Z\)</span> tiene solución. Si <span class="math inline">\(\hat{R}\)</span> tiene <span class="math inline">\(r\)</span> filas no nulas, donde el pivote de la fila <span class="math inline">\(i\)</span> está en la columna <span class="math inline">\(k_{i}\)</span> entonces las primeras <span class="math inline">\(r\)</span> ecuaciones expresarán las primeras <span class="math inline">\(r\)</span> incógnitas, <span class="math inline">\(x_{k_{1}}, x_{k_{2}}, \cdots, x_{k_{r}}\)</span> por las <span class="math inline">\(n-r\)</span> incógnitas restantes, <span class="math inline">\(x_{j}\)</span> y los escalares <span class="math inline">\(z_{1}, z_{2},\cdots, z_{r}\)</span>. Y las últimas <span class="math inline">\(m-r\)</span> ecuaciones son: <span class="math display">\[\begin{array}{cc}
 0= &amp; z_{r+1}\\
 \vdots &amp; \vdots\\
@@ -538,7 +548,7 @@ $\left[
 \end{array}\]</span> Por lo tanto, para que el sistema tenga solución debe suceder que <span class="math inline">\(z_{r+1}=z_{r+2}=\cdots=z_{m}=0\)</span>. Si esto ocurre entonces las soluciones del sistema se obtienen dando valores arbitrarios a la <span class="math inline">\(n-j\)</span> incógnitas <span class="math inline">\(x_{j}\)</span>.</p>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-26" class="example"><strong>Ejemplo 1.7  </strong></span> Sea <span class="math display">\[A=\left[\begin{array}{ccc}
+<p><span id="exm:unnamed-chunk-27" class="example"><strong>Ejemplo 1.7  </strong></span> Sea <span class="math display">\[A=\left[\begin{array}{ccc}
     1 &amp; -2 &amp; 1\\
     2 &amp; 1 &amp; 1\\
     0 &amp; 5 &amp; -1
@@ -566,12 +576,12 @@ $\left[\begin{array}{ccc|c}
 <p>Note que la igualdad <span class="math inline">\(A(BC)=(AB)C\)</span> implica, entre otras cosas, que combinaciones lineales de combinaciones lineales de las filas de <span class="math inline">\(C\)</span>, son otra vez combinaciones lineales de las filas de <span class="math inline">\(C\)</span>. Si <span class="math inline">\(C\)</span> es una matriz que se obtiene de aplicar una operación elemental de fila a <span class="math inline">\(B\)</span>, entonces las filas de <span class="math inline">\(C\)</span> son combinación lineal de las filas de <span class="math inline">\(B\)</span>, por lo tanto debe existir una matriz <span class="math inline">\(A\)</span>, tal que <span class="math inline">\(C=AB\)</span>. Pueden existir muchas matrices con tal propiedad; veremos como escoger una de ellas.</p>
 
 <div class="definition">
-<p><span id="def:unnamed-chunk-27" class="definition"><strong>Definición 1.7  </strong></span> Una matriz <span class="math inline">\(m\times m\)</span> es una <em>matriz elemental</em> si se obtiene de aplicar una sola operación elemental de filas a la matriz identidad (de orden <span class="math inline">\(m\times m\)</span>).</p>
+<p><span id="def:unnamed-chunk-28" class="definition"><strong>Definición 1.7  </strong></span> Una matriz <span class="math inline">\(m\times m\)</span> es una <em>matriz elemental</em> si se obtiene de aplicar una sola operación elemental de filas a la matriz identidad (de orden <span class="math inline">\(m\times m\)</span>).</p>
 </div>
 
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-28" class="example"><strong>Ejemplo 1.8  </strong></span> Una matriz elementa de orden <span class="math inline">\(2\times 2\)</span> es necesariamente como alguna de las siguientes: <span class="math display">\[ \left[ \begin{array}{cc}
+<p><span id="exm:unnamed-chunk-29" class="example"><strong>Ejemplo 1.8  </strong></span> Una matriz elementa de orden <span class="math inline">\(2\times 2\)</span> es necesariamente como alguna de las siguientes: <span class="math display">\[ \left[ \begin{array}{cc}
     0 &amp; 1\\
     1 &amp; 0
     \end{array} \right] , 
@@ -595,7 +605,7 @@ $\left[\begin{array}{ccc|c}
 
 
 <div class="theorem">
-<p><span id="thm:unnamed-chunk-29" class="theorem"><strong>Teorema 1.7  </strong></span> Sea <span class="math inline">\(E\)</span> una matriz elemental que corresponde a la operación elemental por filas <span class="math inline">\(e\)</span>. Sea <span class="math inline">\(A\)</span> una matriz <span class="math inline">\(m\times n\)</span>. Entonces <span class="math inline">\(e(A)=EA\)</span>.</p>
+<p><span id="thm:unnamed-chunk-30" class="theorem"><strong>Teorema 1.8  </strong></span> Sea <span class="math inline">\(E\)</span> una matriz elemental que corresponde a la operación elemental por filas <span class="math inline">\(e\)</span>. Sea <span class="math inline">\(A\)</span> una matriz <span class="math inline">\(m\times n\)</span>. Entonces <span class="math inline">\(e(A)=EA\)</span>.</p>
 </div>
 
 
@@ -616,7 +626,7 @@ $\left[\begin{array}{ccc|c}
 
 
 <div class="corollary">
-<p><span id="cor:unnamed-chunk-31" class="corollary"><strong>Corolario 1.1  </strong></span> Sean <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> matrices de orden <span class="math inline">\(m\times n\)</span> sobre el cuerpo <span class="math inline">\(\mathbb{F}\)</span>. Entonces <span class="math inline">\(B\)</span> es equivalente por filas a <span class="math inline">\(A\)</span> si y solo si <span class="math inline">\(B=PA\)</span>, donde <span class="math inline">\(P\)</span> es un producto de matrices elementales <span class="math inline">\(m\times m\)</span>.</p>
+<p><span id="cor:unnamed-chunk-32" class="corollary"><strong>Corolario 1.1  </strong></span> Sean <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> matrices de orden <span class="math inline">\(m\times n\)</span> sobre el cuerpo <span class="math inline">\(\mathbb{F}\)</span>. Entonces <span class="math inline">\(B\)</span> es equivalente por filas a <span class="math inline">\(A\)</span> si y solo si <span class="math inline">\(B=PA\)</span>, donde <span class="math inline">\(P\)</span> es un producto de matrices elementales <span class="math inline">\(m\times m\)</span>.</p>
 </div>
 
 
@@ -626,12 +636,12 @@ $\left[\begin{array}{ccc|c}
 <p> Si <span class="math inline">\(A\)</span> es una matriz equivalente por filas a <span class="math inline">\(B\)</span>, el corolario anterior asegura que existe <span class="math inline">\(P\)</span>, tal que <span class="math inline">\(B=PA\)</span>, donde <span class="math inline">\(P\)</span> es producto de matrices elementales. Por otro lado se tiene que <span class="math inline">\(B\)</span> es equivalente por filas a <span class="math inline">\(A\)</span>, luego existe una matriz <span class="math inline">\(Q\)</span>, producto de matrices elementales, tal que <span class="math inline">\(A=QB\)</span>. En particular, esto es cierto para la matriz identidad, es decir <span class="math inline">\(I=QB=QP\)</span>. Veremos que la existencia de la matriz <span class="math inline">\(Q\)</span>, tal que <span class="math inline">\(QP=I\)</span> es equivalente al hecho de que <span class="math inline">\(P\)</span> es producto de matrices elementales.</p>
 
 <div class="definition">
-<p><span id="def:unnamed-chunk-33" class="definition"><strong>Definición 1.8  </strong></span> Sea <span class="math inline">\(A\)</span> una matriz (cuadrada) <span class="math inline">\(n\times n\)</span> sobre el cuerpo <span class="math inline">\(\mathbb{F}\)</span>. Una matriz <span class="math inline">\(B\)</span> <span class="math inline">\(n\times n\)</span>, tal que <span class="math inline">\(BA=I\)</span> se llama <em>inversa izquierda</em> de <span class="math inline">\(A\)</span>; una matriz <span class="math inline">\(B\)</span> <span class="math inline">\(n\times n\)</span>, tal que <span class="math inline">\(AB=I\)</span> se llama <em>inversa derecha</em> de <span class="math inline">\(A\)</span>. Si <span class="math inline">\(AB=BA=I\)</span>, entonces <span class="math inline">\(B\)</span> se llama <em>inversa bilateral</em> de <span class="math inline">\(A\)</span> y en este caso se dice que <span class="math inline">\(A\)</span> es <em>invertible</em>.</p>
+<p><span id="def:unnamed-chunk-34" class="definition"><strong>Definición 1.8  </strong></span> Sea <span class="math inline">\(A\)</span> una matriz (cuadrada) <span class="math inline">\(n\times n\)</span> sobre el cuerpo <span class="math inline">\(\mathbb{F}\)</span>. Una matriz <span class="math inline">\(B\)</span> <span class="math inline">\(n\times n\)</span>, tal que <span class="math inline">\(BA=I\)</span> se llama <em>inversa izquierda</em> de <span class="math inline">\(A\)</span>; una matriz <span class="math inline">\(B\)</span> <span class="math inline">\(n\times n\)</span>, tal que <span class="math inline">\(AB=I\)</span> se llama <em>inversa derecha</em> de <span class="math inline">\(A\)</span>. Si <span class="math inline">\(AB=BA=I\)</span>, entonces <span class="math inline">\(B\)</span> se llama <em>inversa bilateral</em> de <span class="math inline">\(A\)</span> y en este caso se dice que <span class="math inline">\(A\)</span> es <em>invertible</em>.</p>
 </div>
 
 
 <div class="lemma">
-<p><span id="lem:unnamed-chunk-34" class="lemma"><strong>Lema 1.1  </strong></span> Si una matriz <span class="math inline">\(A\)</span> tiene una inversa izquierda <span class="math inline">\(B\)</span> y una inversa derecha <span class="math inline">\(C\)</span>, entonces <span class="math inline">\(B=C\)</span>.</p>
+<p><span id="lem:unnamed-chunk-35" class="lemma"><strong>Lema 1.1  </strong></span> Si una matriz <span class="math inline">\(A\)</span> tiene una inversa izquierda <span class="math inline">\(B\)</span> y una inversa derecha <span class="math inline">\(C\)</span>, entonces <span class="math inline">\(B=C\)</span>.</p>
 </div>
 
 
@@ -642,7 +652,7 @@ $\left[\begin{array}{ccc|c}
 <p>Del corolario anterior tenemos que si <span class="math inline">\(A\)</span> tiene una inversa derecha y una inversa izquierda, entonces son iguales, la llamos <em>la inversa de <span class="math inline">\(A\)</span></em> y la denotámos <span class="math inline">\(A^{-1}\)</span>.</p>
 
 <div class="theorem">
-<p><span id="thm:unnamed-chunk-36" class="theorem"><strong>Teorema 1.8  </strong></span> Dadas las matrices <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> de orden <span class="math inline">\(n\times n\)</span> sobre el cuerpo <span class="math inline">\(\mathbb{F}\)</span>. Se tiene que:</p>
+<p><span id="thm:unnamed-chunk-37" class="theorem"><strong>Teorema 1.9  </strong></span> Dadas las matrices <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> de orden <span class="math inline">\(n\times n\)</span> sobre el cuerpo <span class="math inline">\(\mathbb{F}\)</span>. Se tiene que:</p>
 <pre><code>    (1) Si $A$ es invertible, entonces $A^{-1}$ también lo es y $(A^{-1})^{-1}=A$.
     (2) Si $A$ y $B$ son invertibles, entonces $AB$ también lo es y $(AB)^{-1}=B^{-1}A^{-1}$.
 &lt;/div&gt;\EndKnitrBlock{theorem}</code></pre>
@@ -654,7 +664,7 @@ $\left[\begin{array}{ccc|c}
 <p>Del resultado anterior se tiene que el producto de matrices invertible, es invertible.</p>
 
 <div class="theorem">
-<p><span id="thm:unnamed-chunk-38" class="theorem"><strong>Teorema 1.9  </strong></span> Toda matriz elemental es invertible.</p>
+<p><span id="thm:unnamed-chunk-39" class="theorem"><strong>Teorema 1.10  </strong></span> Toda matriz elemental es invertible.</p>
 </div>
  
 <div class="proof">
@@ -663,7 +673,7 @@ $\left[\begin{array}{ccc|c}
 
 
 <div class="theorem">
-<p><span id="thm:unnamed-chunk-40" class="theorem"><strong>Teorema 1.10  </strong></span> Sea <span class="math inline">\(A\)</span> una matriz <span class="math inline">\(n\times n\)</span>. Entonces los siguientes enunciados son equivalentes:</p>
+<p><span id="thm:unnamed-chunk-41" class="theorem"><strong>Teorema 1.11  </strong></span> Sea <span class="math inline">\(A\)</span> una matriz <span class="math inline">\(n\times n\)</span>. Entonces los siguientes enunciados son equivalentes:</p>
 <pre><code>    (1) $A$ es invertible.
     (2) $A$ es equivalente por filas a la identidad (de orden $n\times n$).
     (3) $A$ es producto de matrices elementales.</code></pre>
@@ -675,12 +685,12 @@ $\left[\begin{array}{ccc|c}
 
 
 <div class="corollary">
-<p><span id="cor:unnamed-chunk-42" class="corollary"><strong>Corolario 1.2  </strong></span> Si <span class="math inline">\(A\)</span> es una matriz invertible <span class="math inline">\(n\times n\)</span> y si la sucesión de operaciones elementales <span class="math inline">\(e_{1}\circ e_{2}\circ \cdots \circ e_{n}\)</span> reduce a la matriz <span class="math inline">\(A\)</span> a la identidad, entonces la misma sucesión de operaciones elementales aplicadas a <span class="math inline">\(I\)</span>, nos da <span class="math inline">\(A^{-1}\)</span>, la inversa de <span class="math inline">\(A\)</span>.</p>
+<p><span id="cor:unnamed-chunk-43" class="corollary"><strong>Corolario 1.2  </strong></span> Si <span class="math inline">\(A\)</span> es una matriz invertible <span class="math inline">\(n\times n\)</span> y si la sucesión de operaciones elementales <span class="math inline">\(e_{1}\circ e_{2}\circ \cdots \circ e_{n}\)</span> reduce a la matriz <span class="math inline">\(A\)</span> a la identidad, entonces la misma sucesión de operaciones elementales aplicadas a <span class="math inline">\(I\)</span>, nos da <span class="math inline">\(A^{-1}\)</span>, la inversa de <span class="math inline">\(A\)</span>.</p>
 </div>
 
 
 <div class="corollary">
-<span id="cor:unnamed-chunk-43" class="corollary"><strong>Corolario 1.3  </strong></span> Sean <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> dos matrices <span class="math inline">\(m\times n\)</span>. Entonces <span class="math inline">\(B\)</span> es equivalente por filas a <span class="math inline">\(A\)</span> si y solo si <span class="math inline">\(B=PA\)</span>, donde <span class="math inline">\(P\)</span> es una matriz invertible <span class="math inline">\(m\times m\)</span>.
+<p><span id="cor:unnamed-chunk-44" class="corollary"><strong>Corolario 1.3  </strong></span> Sean <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> dos matrices <span class="math inline">\(m\times n\)</span>. Entonces <span class="math inline">\(B\)</span> es equivalente por filas a <span class="math inline">\(A\)</span> si y solo si <span class="math inline">\(B=PA\)</span>, donde <span class="math inline">\(P\)</span> es una matriz invertible <span class="math inline">\(m\times m\)</span>.</p>
 </div>
 
 </div>

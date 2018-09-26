@@ -574,6 +574,16 @@ De lo anterior podemos concluir que siempre podemos reducir una matriz a una esc
 
 ```
 
+```{theorem, label="teorema6"}
+	Si $A$ es una matriz cuadrada $n\times n$. Entonces $A$ es equivalente por filas a la matriz identidad si y solo si, el sistema de ecuaciones $AX=0$ tiene solo la solución trivial $X=0$.
+
+```
+
+```{proof}
+	Si $A$ es equivalente por filas a la identidad, por el teorema anterior $AX=0$ y $IX=0$ tienen exactamente las mismas soluciones, por lo tanto la única solución es $X=0$. Ahora, supongamos que $AX=0$ tiene unicamente la solución trivial; supongamos que $R$ es la matriz escalonada reducida equivalente a $A$, y sea $r\leq n$ el número de filas no nulas; entonces $RX=0$ tiene unicamente la solución trivial (por el teorema anterior), luego $r\geq n$, por lo tanto $r=n$, por lo tanto $R=I$. 
+
+```
+
 Todos los teoremas anteriores hacen referencia a sistemas homogéneos $AX=0$, el cual siempre tiene solución, la solución trivial $X=0$. Cabe preguntar que sucede con los sistemas no homogéneos $AX=B$. Un sistema no homogéneo no tiene necesariamente solución. Estudiemos esto a continuación.
 Dado el sistema no homogéneo $AX=B$, con $A$ de orden $m\times n$; consideramos la *matriz aumentada*, $\hat{A}$ de orden $m\times (n+1)$, cuyas primeras $n$ columnas son iguales a las columnas de $A$ y la columna $n+1$ corresponde a $B$, es decir, $\hat{A}_{\ast j}=A_{\ast j}$ para $j\leq n$ y $\hat{A}_{\ast n+1}=B_{1}$. Se aplicará a esta matriz, $\hat{A}$ las mismas operaciones elementales por filas que se le aplican a la matriz $A$ para llevarla a una matriz escalonada reducidas por filas $R$, y así se obtendrá una matriz $\hat{R}$ cuya última fila son los escalares $z_{1}, z_{2},\cdots z_{m}$ (que serán combinaciones lineales de los coeficientes $b_{1}, b_{2},\cdots, b_{m}$). Es claro que los sistemas $AX=B$ y $RX=Z$ tienen las mismas soluciones (la demostración es análoga al de los sistemas homogéneos). Es fácil ver cuando el sistema $\hat{R}X=Z$ tiene solución. Si $\hat{R}$ tiene $r$ filas no nulas, donde el pivote de la fila $i$ está en la columna $k_{i}$ entonces las primeras $r$ ecuaciones expresarán las primeras $r$ incógnitas, $x_{k_{1}}, x_{k_{2}}, \cdots, x_{k_{r}}$ por las $n-r$ incógnitas restantes, $x_{j}$ y los escalares $z_{1}, z_{2},\cdots, z_{r}$. Y las últimas $m-r$ ecuaciones son:
 $$\begin{array}{cc}
@@ -765,4 +775,5 @@ Del resultado anterior se tiene que el producto de matrices invertible, es inver
 
 ```{corollary}
 	Sean $A$ y $B$ dos matrices $m\times n$. Entonces $B$ es equivalente por filas a $A$ si y solo si $B=PA$, donde $P$ es una matriz invertible $m\times m$.
+
 ```
