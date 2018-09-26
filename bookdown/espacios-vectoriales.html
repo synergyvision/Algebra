@@ -710,6 +710,80 @@ $\left[\begin{array}{ccc|c}
     \end{array}\right] \]</span> no tiene solución, lo que es una contradicción. Por lo tanto se tiene que <span class="math inline">\(R=I\)</span>.</p>
 </div>
 
+
+<div class="corollary">
+<p><span id="cor:unnamed-chunk-47" class="corollary"><strong>Corolario 1.4  </strong></span> Una matriz cuadrada que tiene una inversa izquierda o una inversa a la derecha es invertible.</p>
+</div>
+
+
+<div class="proof">
+<p> <span class="proof"><em>Demostración. </em></span>  Sea <span class="math inline">\(A\)</span> una matriz <span class="math inline">\(n\times n\)</span>. Supongamos que <span class="math inline">\(A\)</span> tiene una inversa a la izquierda, es decir, existe <span class="math inline">\(B\)</span> tal que <span class="math inline">\(BA=I\)</span>. Así, <span class="math inline">\(AX=0\)</span> tiene unicamente la solución trivial, ya que <span class="math inline">\(X=IX=B(AX)\)</span>. Por lo tanto <span class="math inline">\(A\)</span> es invertible. Supóngase que <span class="math inline">\(A\)</span> tiene una inversa a la derecha, es decir, existe <span class="math inline">\(C\)</span> tal que <span class="math inline">\(AC=I\)</span>. entoces <span class="math inline">\(C\)</span> tiene una inversa a la izquierda y por lo tanto es invertible, así <span class="math inline">\(A=ACC^{-1}=IC^{-1}=C^{-1}\)</span> de donde se tiene que <span class="math inline">\(A\)</span> es invertible de inversa <span class="math inline">\(C\)</span>.</p>
+</div>
+
+
+<div class="corollary">
+<p><span id="cor:unnamed-chunk-49" class="corollary"><strong>Corolario 1.5  </strong></span> Sea <span class="math inline">\(A=A_{1}A_{2}\cdots A_{n}\)</span>, donde <span class="math inline">\(A_{1}, A_{2}, \cdots , A_{n}\)</span> son matrices cuadradas. Entonces <span class="math inline">\(A\)</span> es invertible si y solo si cada <span class="math inline">\(A_{i}\)</span> es invertible.</p>
+</div>
+ 
+<div class="proof">
+<p> <span class="proof"><em>Demostración. </em></span>  Supongamos que cada <span class="math inline">\(A_{i}\)</span> es invertible, como el producto de matrices invertibles es invertible, se tiene que <span class="math inline">\(A\)</span> es invertible. Recíprocamente, supongamos que <span class="math inline">\(A\)</span> es invertible, entonces <span class="math inline">\(AX=0\)</span> tiene unicamente la solución trivial. Por lo tanto, <span class="math inline">\((A_{1}A_{2}\cdots A_{n-1})A_{n}X=AX=0\)</span> tiene unicamente la solución trivial, si y solo si <span class="math inline">\(A_{n}X=0\)</span> tiene solo la solución trivial, de donde se sigue que <span class="math inline">\(A_{n}\)</span> es invertible. Luego, <span class="math inline">\(AA^{-1}=A_{1}A_{2}\cdots A_{n-1}\)</span>, considerando <span class="math inline">\((A_{1}A_{2}\cdots A_{n-2})A_{n-1}X=AA^{-1}X=0\)</span>, de forma análoga a lo anterior, se puede demostrar que <span class="math inline">\(A_{n-1}\)</span> es invertible. Continuando de esta forma se demuestra que cada <span class="math inline">\(A_{i}\)</span> es invertible.</p>
+</div>
+
+
+<div class="remark">
+<p> <span class="remark"><em>Nota. </em></span>  Sea <span class="math inline">\(A\)</span> una matriz <span class="math inline">\(m\times n\)</span> y sea <span class="math inline">\(AX=B\)</span>, y sea <span class="math inline">\(R\)</span> la matriz escalonada reducida por filas equivalentes por fila a <span class="math inline">\(A\)</span>, entonces <span class="math inline">\(R=PA\)</span>, donde <span class="math inline">\(P\)</span> es una matriz invertible <span class="math inline">\(m\times m\)</span>; las soluciones de <span class="math inline">\(RX=PB\)</span> son las mismas que las del sistema <span class="math inline">\(AX=B\)</span>. Hallar <span class="math inline">\(PB\)</span> es equivalente a reducir por filas la matriz <span class="math inline">\(A\)</span>, esto se hace considerando la matriz aumentada <span class="math inline">\(\hat{A}\)</span> y aplicandole operaciones elementales por fila hasta reducir a <span class="math inline">\(A\)</span> a una matriz escalonada reducida, lo obtenido en la última columna será la matriz <span class="math inline">\(PB\)</span>.</p>
+</div>
+
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-52" class="example"><strong>Ejemplo 1.9  </strong></span> Sea $A=$ la matriz de coeficientes del sistema <span class="math inline">\(AX=B\)</span>, donde <span class="math inline">\(B=\left[\begin{array}{c}  b_{1}\\  b_{2}  \end{array} \right]\)</span>. Luego la matriz extendida es</p>
+<p><span class="math inline">\(\hat{A}=\left[\begin{array}{cc|c}  2 &amp; -1 &amp; b_{1}\\  1 &amp; 3 &amp; b_{2}  \end{array} \right]\)</span></p>
+<pre><code>Reducimos la matriz:
+$\left[\begin{array}{cc|c}
+2 &amp; -1 &amp; b_{1}\\
+1 &amp; 3 &amp; b_{2}
+\end{array} \right] \stackrel{e_{12}}{\longrightarrow} 
+\left[\begin{array}{cc|c}
+1 &amp; 3 &amp; b_{2}\\
+2 &amp; -1 &amp; b_{1}
+\end{array} \right] \stackrel{-2 e_{12}}{\longrightarrow}
+\left[\begin{array}{cc|c}
+1 &amp; 3 &amp; b_{2}\\
+0 &amp; -7 &amp; b_{1}-2b_{2}
+\end{array} \right] \stackrel{ -\frac{1}{7}e_{2}}{\longrightarrow}
+\left[\begin{array}{cc|c}
+1 &amp; 3 &amp;   b_{2}\\
+0 &amp; 1 &amp; \frac{1}{7}(2b_{2}-b_{1})
+\end{array} \right] \stackrel{ -3e_{21}}{\longrightarrow}
+\left[\begin{array}{cc|c}
+1 &amp; 0 &amp;  \frac{1}{7}(b_{2}+3b_{1})\\
+0 &amp; 1 &amp; \frac{1}{7}(2b_{2}-b_{1})
+\end{array} \right]$
+
+De donde se tiene que $PB=\left[ \begin{array}{c}
+\frac{1}{7}(b_{2}+3b_{1})\\
+\frac{1}{7}(2b_{2}-b_{1})
+\end{array}\right] $, o también que $A^{-1}=\left[\begin{array}{cc}
+\frac{3}{7} &amp; \frac{1}{7}\\
+-\frac{1}{7} &amp; \frac{2}{7} 
+\end{array} \right]$.
+
+También podemos llegar a la inversa de $A$ aplicando las operaciones elementales antes descritas para reducir a $A$, a la identidad. Es decir:
+$\left[\begin{array}{cc|cc}
+2 &amp; -1 &amp; 1 &amp; 0\\
+1 &amp; 3 &amp; 0 &amp; 1
+\end{array} \right] \stackrel{e_{12}}{\longrightarrow} 
+\left[\begin{array}{cc|cc}
+1 &amp; 3 &amp; 0 &amp; 1\\
+2 &amp; -1 &amp; 1 &amp; 0
+\end{array} \right] \stackrel{-2 e_{12}}{\longrightarrow}
+\cdots 
+\left[\begin{array}{cc|cc}
+1 &amp; 0 &amp;  \frac{3}{7} &amp; \frac{1}{7}\\
+0 &amp; 1 &amp;  -\frac{1}{7} &amp; \frac{2}{7}
+\end{array} \right]$</code></pre>
+</div>
+
 </div>
 </div>
 <script>

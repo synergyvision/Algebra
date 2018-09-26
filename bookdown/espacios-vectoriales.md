@@ -702,3 +702,78 @@ Del resultado anterior se tiene que el producto de matrices invertible, es inver
 	1
 	\end{array}\right] $$ no tiene solución, lo que es una contradicción. Por lo tanto se tiene que $R=I$.
 </div>\EndKnitrBlock{proof}
+
+\BeginKnitrBlock{corollary}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-47"><strong>(\#cor:unnamed-chunk-47) </strong></span>	Una matriz cuadrada que tiene una inversa izquierda o una inversa a la derecha es invertible.
+</div>\EndKnitrBlock{corollary}
+
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Sea $A$ una matriz $n\times n$. Supongamos que $A$ tiene una inversa a la izquierda, es decir, existe $B$ tal que $BA=I$. Así, $AX=0$ tiene unicamente la solución trivial, ya que $X=IX=B(AX)$. Por lo tanto $A$ es invertible. Supóngase que $A$ tiene una inversa a la derecha, es decir, existe $C$ tal que $AC=I$. entoces $C$ tiene una inversa a la izquierda y por lo tanto es invertible, así $A=ACC^{-1}=IC^{-1}=C^{-1}$ de donde se tiene que $A$ es invertible de inversa $C$.
+</div>\EndKnitrBlock{proof}
+
+\BeginKnitrBlock{corollary}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-49"><strong>(\#cor:unnamed-chunk-49) </strong></span>	Sea $A=A_{1}A_{2}\cdots A_{n}$, donde $A_{1}, A_{2}, \cdots , A_{n}$ son matrices cuadradas. Entonces $A$ es invertible si y solo si cada $A_{i}$ es invertible.
+</div>\EndKnitrBlock{corollary}
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Supongamos que cada $A_{i}$ es invertible, como el producto de matrices invertibles es invertible, se tiene que $A$ es invertible. Recíprocamente, supongamos que $A$ es invertible, entonces $AX=0$ tiene unicamente la solución trivial. Por lo tanto, $(A_{1}A_{2}\cdots A_{n-1})A_{n}X=AX=0$ tiene unicamente la solución trivial, si y solo si $A_{n}X=0$ tiene solo la solución trivial, de donde se sigue que $A_{n}$ es invertible. Luego, $AA^{-1}=A_{1}A_{2}\cdots A_{n-1}$, considerando $(A_{1}A_{2}\cdots A_{n-2})A_{n-1}X=AA^{-1}X=0$, de forma análoga a lo anterior, se puede demostrar que $A_{n-1}$ es invertible. Continuando de esta forma se demuestra que cada $A_{i}$ es invertible.
+</div>\EndKnitrBlock{proof}
+
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	Sea $A$ una matriz $m\times n$ y sea $AX=B$, y sea $R$ la matriz escalonada reducida por filas equivalentes por fila a $A$, entonces $R=PA$, donde $P$ es una matriz invertible $m\times m$; las soluciones de $RX=PB$ son las mismas que las del sistema $AX=B$. Hallar $PB$ es equivalente a reducir por filas la matriz $A$, esto se hace considerando la matriz aumentada $\hat{A}$ y aplicandole operaciones elementales por fila hasta reducir a $A$ a una matriz escalonada reducida, lo obtenido en la última columna será la matriz $PB$.
+</div>\EndKnitrBlock{remark}
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-52"><strong>(\#exm:unnamed-chunk-52) </strong></span>	Sea $A=\left[\begin{array}{cc}
+	2 & -1\\
+	1 & 3 
+	\end{array} \right] $
+  la matriz de coeficientes del sistema $AX=B$, donde 
+	$B=\left[\begin{array}{c}
+	b_{1}\\
+	b_{2}
+	\end{array} \right]$. Luego la matriz extendida es 
+	
+  $\hat{A}=\left[\begin{array}{cc|c}
+	 2 & -1 & b_{1}\\
+	 1 & 3 & b_{2}
+	\end{array} \right]$
+  
+	Reducimos la matriz:
+	$\left[\begin{array}{cc|c}
+	2 & -1 & b_{1}\\
+	1 & 3 & b_{2}
+	\end{array} \right] \stackrel{e_{12}}{\longrightarrow} 
+	\left[\begin{array}{cc|c}
+	1 & 3 & b_{2}\\
+	2 & -1 & b_{1}
+	\end{array} \right] \stackrel{-2 e_{12}}{\longrightarrow}
+	\left[\begin{array}{cc|c}
+	1 & 3 & b_{2}\\
+	0 & -7 & b_{1}-2b_{2}
+	\end{array} \right] \stackrel{ -\frac{1}{7}e_{2}}{\longrightarrow}
+	\left[\begin{array}{cc|c}
+	1 & 3 &   b_{2}\\
+	0 & 1 & \frac{1}{7}(2b_{2}-b_{1})
+	\end{array} \right] \stackrel{ -3e_{21}}{\longrightarrow}
+	\left[\begin{array}{cc|c}
+	1 & 0 &  \frac{1}{7}(b_{2}+3b_{1})\\
+	0 & 1 & \frac{1}{7}(2b_{2}-b_{1})
+	\end{array} \right]$
+  
+	De donde se tiene que $PB=\left[ \begin{array}{c}
+	\frac{1}{7}(b_{2}+3b_{1})\\
+	\frac{1}{7}(2b_{2}-b_{1})
+	\end{array}\right] $, o también que $A^{-1}=\left[\begin{array}{cc}
+	\frac{3}{7} & \frac{1}{7}\\
+	-\frac{1}{7} & \frac{2}{7} 
+	\end{array} \right]$.
+
+	También podemos llegar a la inversa de $A$ aplicando las operaciones elementales antes descritas para reducir a $A$, a la identidad. Es decir:
+	$\left[\begin{array}{cc|cc}
+	2 & -1 & 1 & 0\\
+	1 & 3 & 0 & 1
+	\end{array} \right] \stackrel{e_{12}}{\longrightarrow} 
+	\left[\begin{array}{cc|cc}
+	1 & 3 & 0 & 1\\
+	2 & -1 & 1 & 0
+	\end{array} \right] \stackrel{-2 e_{12}}{\longrightarrow}
+	\cdots 
+	\left[\begin{array}{cc|cc}
+	1 & 0 &  \frac{3}{7} & \frac{1}{7}\\
+	0 & 1 &  -\frac{1}{7} & \frac{2}{7}
+	\end{array} \right]$
+</div>\EndKnitrBlock{example}
