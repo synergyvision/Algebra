@@ -687,3 +687,18 @@ Del resultado anterior se tiene que el producto de matrices invertible, es inver
 
 \BeginKnitrBlock{corollary}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-44"><strong>(\#cor:unnamed-chunk-44) </strong></span>	Sean $A$ y $B$ dos matrices $m\times n$. Entonces $B$ es equivalente por filas a $A$ si y solo si $B=PA$, donde $P$ es una matriz invertible $m\times m$.
 </div>\EndKnitrBlock{corollary}
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-45"><strong>(\#thm:unnamed-chunk-45) </strong></span>	Sea $A$ una matriz $n\times n$. Entonces los siguientes enunciados son equivalentes:
+
+	(1) $A$ es invertible.
+	(2) El sistema homogéneo $AX=0$ tiene una única solución ($X=0$).
+	(3) El sistema de ecuaciones asociado a $AX=B$ tiene una solución $X$ para cada matriz $B$ de orden $n\times 1$.
+	</div>\EndKnitrBlock{theorem}
+
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	El sistema homogéneo $AX=0$ si y solo si $A$ es equivalente por filas al la identidad ( por el teorema \@ref(thm:teorema6). Del teorema anterior, se tiene que $(1)$ y $(2)$ son equivalentes. Ahora supongámos que $A$ es invertible, entonces la solución de $AX=B$ viene dada por $X=A^{-1}$. Recíprocamente, supongamos que $AX=B$ tiene una solución para cada $B$. Sea $R$ la matriz escalonada reducida por filas equivalente por filas a $A$. Necesariamente $R=I$, ya que si $R$ tiene al menos una fila identicamente igual a cero, entonces el sistema $RX=C$, donde $$C=\left[ \begin{array}{c}
+	0\\
+	0\\
+	\vdots\\
+	0\\
+	1
+	\end{array}\right] $$ no tiene solución, lo que es una contradicción. Por lo tanto se tiene que $R=I$.
+</div>\EndKnitrBlock{proof}

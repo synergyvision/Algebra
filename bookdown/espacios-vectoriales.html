@@ -692,6 +692,23 @@ $\left[\begin{array}{ccc|c}
 <div class="corollary">
 <p><span id="cor:unnamed-chunk-44" class="corollary"><strong>Corolario 1.3  </strong></span> Sean <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> dos matrices <span class="math inline">\(m\times n\)</span>. Entonces <span class="math inline">\(B\)</span> es equivalente por filas a <span class="math inline">\(A\)</span> si y solo si <span class="math inline">\(B=PA\)</span>, donde <span class="math inline">\(P\)</span> es una matriz invertible <span class="math inline">\(m\times m\)</span>.</p>
 </div>
+ 
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-45" class="theorem"><strong>Teorema 1.12  </strong></span> Sea <span class="math inline">\(A\)</span> una matriz <span class="math inline">\(n\times n\)</span>. Entonces los siguientes enunciados son equivalentes:</p>
+<pre><code>(1) $A$ es invertible.
+(2) El sistema homogéneo $AX=0$ tiene una única solución ($X=0$).
+(3) El sistema de ecuaciones asociado a $AX=B$ tiene una solución $X$ para cada matriz $B$ de orden $n\times 1$.
+&lt;/div&gt;\EndKnitrBlock{theorem}</code></pre>
+
+<div class="proof">
+<p> <span class="proof"><em>Demostración. </em></span>  El sistema homogéneo <span class="math inline">\(AX=0\)</span> si y solo si <span class="math inline">\(A\)</span> es equivalente por filas al la identidad ( por el teorema <a href="#thm:teorema6">1.7</a>. Del teorema anterior, se tiene que <span class="math inline">\((1)\)</span> y <span class="math inline">\((2)\)</span> son equivalentes. Ahora supongámos que <span class="math inline">\(A\)</span> es invertible, entonces la solución de <span class="math inline">\(AX=B\)</span> viene dada por <span class="math inline">\(X=A^{-1}\)</span>. Recíprocamente, supongamos que <span class="math inline">\(AX=B\)</span> tiene una solución para cada <span class="math inline">\(B\)</span>. Sea <span class="math inline">\(R\)</span> la matriz escalonada reducida por filas equivalente por filas a <span class="math inline">\(A\)</span>. Necesariamente <span class="math inline">\(R=I\)</span>, ya que si <span class="math inline">\(R\)</span> tiene al menos una fila identicamente igual a cero, entonces el sistema <span class="math inline">\(RX=C\)</span>, donde <span class="math display">\[C=\left[ \begin{array}{c}
+    0\\
+    0\\
+    \vdots\\
+    0\\
+    1
+    \end{array}\right] \]</span> no tiene solución, lo que es una contradicción. Por lo tanto se tiene que <span class="math inline">\(R=I\)</span>.</p>
+</div>
 
 </div>
 </div>
