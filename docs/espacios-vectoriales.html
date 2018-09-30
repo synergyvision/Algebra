@@ -25,7 +25,7 @@
 <meta name="author" content="Synergy Vision">
 
 
-<meta name="date" content="2018-09-17">
+<meta name="date" content="2018-09-29">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -146,6 +146,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="4.1" data-path="espacios-vectoriales.html"><a href="espacios-vectoriales.html#ecuaciones-lineales"><i class="fa fa-check"></i><b>4.1</b> Ecuaciones lineales</a></li>
 <li class="chapter" data-level="4.2" data-path="espacios-vectoriales.html"><a href="espacios-vectoriales.html#matrices"><i class="fa fa-check"></i><b>4.2</b> Matrices</a></li>
 <li class="chapter" data-level="4.3" data-path="espacios-vectoriales.html"><a href="espacios-vectoriales.html#ecuaciones-lineales-y-matrices"><i class="fa fa-check"></i><b>4.3</b> Ecuaciones lineales y matrices</a></li>
+<li class="chapter" data-level="4.4" data-path="espacios-vectoriales.html"><a href="espacios-vectoriales.html#teoria-de-espacios-vectoriales"><i class="fa fa-check"></i><b>4.4</b> Teoría de espacios vectoriales</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="matrices-1.html"><a href="matrices-1.html"><i class="fa fa-check"></i><b>5</b> Matrices</a></li>
 <li class="chapter" data-level="6" data-path="autovalores-y-autovectores.html"><a href="autovalores-y-autovectores.html"><i class="fa fa-check"></i><b>6</b> Autovalores y autovectores</a></li>
@@ -431,6 +432,11 @@ Podemos representar este sistema de ecuaciones como un sistema matricial <span c
 <p> <span class="proof"><em>Demostración. </em></span>  Como <span class="math inline">\(BC\)</span> y <span class="math inline">\(A(BC)\)</span> están definidos, se tiene que el número de columnas de <span class="math inline">\(B\)</span> es igual al número de filas de <span class="math inline">\(C\)</span> y que el número de columnas de <span class="math inline">\(A\)</span> es igual al número de filas de <span class="math inline">\(BC\)</span> (y por lo tanto, igual al número de filas de <span class="math inline">\(B\)</span>). Supongamos que <span class="math inline">\(B\)</span> es de orden <span class="math inline">\(n\times p\)</span>, <span class="math inline">\(C\)</span> es de orden <span class="math inline">\(p\times q\)</span> y <span class="math inline">\(A\)</span> de orden <span class="math inline">\(m\times n\)</span>, así <span class="math inline">\(A(BC)\)</span> es de orden <span class="math inline">\(m\times q\)</span>. Claramente, <span class="math inline">\(AB\)</span> está definida y será de orden <span class="math inline">\(m\times p\)</span>, como <span class="math inline">\(C\)</span> es de orden <span class="math inline">\(p\times q\)</span>, <span class="math inline">\((AB)C\)</span> está bien definido y será de orden <span class="math inline">\(m\times q\)</span>. Ahora veamos que los productos <span class="math inline">\(A(BC)\)</span> y <span class="math inline">\((AB)C\)</span> además de tener el mismo orden, coinciden en cada elemento. <span class="math inline">\(\begin{array}{rl}  [A(BC)]_{ij} &amp; =\sum_{r=1}^{n} [A]_{ir}[BC]_{rj}\\  &amp; =\sum_{r=1}^{n} [A]_{ir} \sum_{s=1}^{p} [B]_{rs} [C]_{sj}\\  &amp; =\sum_{r=1}^{n}\sum_{s=1}^{p} [A]_{ir}[B]_{rs} [C]_{sj}\\  &amp; =\sum_{s=1}^{p}\sum_{r=1}^{n} [A]_{ir}[B]_{rs} [C]_{sj}\\  &amp; =\sum_{s=1}^{p}(\sum_{r=1}^{n} [A]_{ir}[B]_{rs}) [C]_{sj}\\  &amp; =\sum_{s=1}^{p} [AB]_{is} [C]_{sj}\\  &amp; =[(AB)C]_{ij}  \end{array}\)</span></p>
 </div>
 
+
+<div class="remark">
+<p> <span class="remark"><em>Nota. </em></span>  El producto de una matriz cuadrada <span class="math inline">\(A\)</span> de orden <span class="math inline">\(n\times n\)</span>, consigo misma, se puede denotar por <span class="math inline">\(A^{2}=AA\)</span>. Note que <span class="math inline">\(A^{2}\)</span> es de orden <span class="math inline">\(n\times n\)</span>, luego el producto <span class="math inline">\(AA^{2}\)</span> está defindo y se denotará <span class="math inline">\(A^{3}\)</span>. En general, el producto de cualquier matriz cuadrada consigo misma, <span class="math inline">\(r\)</span> veces, está definida y se denota <span class="math inline">\(A^{r}=AA\cdots A\)</span>.</p>
+</div>
+
 <p>Ahora veremos las operaciones elementales por filas que corresponden a hacer combinaciones lineales entre las filas de la matriz de coeficientes (equivalente a hacerlo con las ecuaciones del sistema). Las <em>\textit{</em>operaciones elementales por filas* son tres:</p>
 <pre><code>(1) Multiplicar una fila de la matriz $A$ por un escalar no nulo $\lambda$.
 
@@ -459,12 +465,12 @@ $[e(A)]_{ij}=\left\{ \begin{array}{cc}
 <p>Note que cualquiera de las tres operaciones elementales por filas se puede “revertir” con una operación del mismo tipo. Para el primer tipo, basta con multiplicar la misma fila por el inverso de <span class="math inline">\(\lambda\)</span>, <span class="math inline">\(\frac{1}{\lambda}\)</span>. Para el intercambio de las filas <span class="math inline">\(r\)</span> y <span class="math inline">\(s\)</span> basta volver a intercambiar las filas. Para el tercer tipo de operación, <span class="math inline">\(\lambda A_{rs}\)</span>, debemos aplicar <span class="math inline">\(-\lambda A_{rs}\)</span> y regresaremos a la matriz original. Esto es la demostración del siguiente teorema.</p>
 
 <div class="theorem">
-<p><span id="thm:unnamed-chunk-227" class="theorem"><strong>Teorema 4.3  </strong></span> Para cada operación elemental de filas <span class="math inline">\(e\)</span> existe una operación elemental de filas <span class="math inline">\(e_{1}\)</span> del mismo tipo tal que <span class="math inline">\(e_{1}(e(A))=e(e_{1}(A))=A\)</span>. Es decir, cada operación elemental de filas, tiene una operación inversa del mismo tipo.</p>
+<p><span id="thm:unnamed-chunk-228" class="theorem"><strong>Teorema 4.3  </strong></span> Para cada operación elemental de filas <span class="math inline">\(e\)</span> existe una operación elemental de filas <span class="math inline">\(e_{1}\)</span> del mismo tipo tal que <span class="math inline">\(e_{1}(e(A))=e(e_{1}(A))=A\)</span>. Es decir, cada operación elemental de filas, tiene una operación inversa del mismo tipo.</p>
 </div>
 
 
 <div class="definition">
-<p><span id="def:unnamed-chunk-228" class="definition"><strong>Definición 4.6  </strong></span> Si <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> son dos matrices del mismo orden sobre el mismo cuerpo de escalares y <span class="math inline">\(B\)</span> se obtiene de aplicar una cantidad finita de operaciones elementales por filas a la matriz <span class="math inline">\(A\)</span>, entonces decimos que <em><span class="math inline">\(B\)</span> es equivalente por filas a <span class="math inline">\(A\)</span></em>.</p>
+<p><span id="def:unnamed-chunk-229" class="definition"><strong>Definición 4.6  </strong></span> Si <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> son dos matrices del mismo orden sobre el mismo cuerpo de escalares y <span class="math inline">\(B\)</span> se obtiene de aplicar una cantidad finita de operaciones elementales por filas a la matriz <span class="math inline">\(A\)</span>, entonces decimos que <em><span class="math inline">\(B\)</span> es equivalente por filas a <span class="math inline">\(A\)</span></em>.</p>
 </div>
 
 
@@ -474,7 +480,7 @@ $[e(A)]_{ij}=\left\{ \begin{array}{cc}
 <p> Como ya lo hemos mencionado, aplicar una operación elemental por filas es equivalente a hacer combinaciones lineales con las ecuaciones del sistema, por lo tanto al obtener matrices equivalentes por filas tendremos sistemas de ecuaciones equivalentes.</p>
 
 <div class="theorem">
-<p><span id="thm:unnamed-chunk-230" class="theorem"><strong>Teorema 4.4  </strong></span> Si <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> son matrices equivalentes por filas, los sistemas homogeneos de ecuaciones lineales <span class="math inline">\(AX=0\)</span> y <span class="math inline">\(BX=0\)</span> tinen exactamente las mismas soluciones.</p>
+<p><span id="thm:unnamed-chunk-231" class="theorem"><strong>Teorema 4.4  </strong></span> Si <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> son matrices equivalentes por filas, los sistemas homogeneos de ecuaciones lineales <span class="math inline">\(AX=0\)</span> y <span class="math inline">\(BX=0\)</span> tinen exactamente las mismas soluciones.</p>
 </div>
  
 <div class="proof">
@@ -482,7 +488,7 @@ $[e(A)]_{ij}=\left\{ \begin{array}{cc}
 </div>
  
 <div class="example">
-<p><span id="exm:unnamed-chunk-232" class="example"><strong>Ejemplo 4.5  </strong></span> Dada la matriz de coeficientes <span class="math inline">\(A=\left[ \begin{array}{cccc}  2 &amp; -1 &amp; 3 &amp; 2 \\  1 &amp; 4 &amp; 0 &amp; -1 \\  2 &amp; 6 &amp; -1 &amp; 5  \end{array}\right]\)</span> podemos hallar una matriz escalonada reducida por fila equivalente a <span class="math inline">\(A\)</span>, de la siguiente forma:</p>
+<p><span id="exm:unnamed-chunk-233" class="example"><strong>Ejemplo 4.5  </strong></span> Dada la matriz de coeficientes <span class="math inline">\(A=\left[ \begin{array}{cccc}  2 &amp; -1 &amp; 3 &amp; 2 \\  1 &amp; 4 &amp; 0 &amp; -1 \\  2 &amp; 6 &amp; -1 &amp; 5  \end{array}\right]\)</span> podemos hallar una matriz escalonada reducida por fila equivalente a <span class="math inline">\(A\)</span>, de la siguiente forma:</p>
 <pre><code>$\left[  \begin{array}{cccc}
 2 &amp; -1 &amp; 3 &amp; 2 \\
 1 &amp; 4 &amp; 0 &amp; -1 \\
@@ -537,7 +543,7 @@ $
 
 
 <div class="example">
-<span id="exm:unnamed-chunk-233" class="example"><strong>Ejemplo 4.6  </strong></span> Dada la ecuación con coeficientes en el cuerpo de los números complejos <span class="math inline">\(\mathbb{C}\)</span>: $ 
+<span id="exm:unnamed-chunk-234" class="example"><strong>Ejemplo 4.6  </strong></span> Dada la ecuación con coeficientes en el cuerpo de los números complejos <span class="math inline">\(\mathbb{C}\)</span>: $ 
 <span class="math display">\[\begin{array}{ccc}
     -x_{1} &amp; +ix_{2} &amp;=0\\
     -ix_{1} &amp; +3x_{2} &amp;=0\\
@@ -597,12 +603,12 @@ $\left[
 <p>Dada cualquier matriz <span class="math inline">\(A\)</span> de orden <span class="math inline">\(m\times n\)</span>, podemos hallar una matriz equivalente por filas que sea escalonda reducida por filas, realizando un número finito de operaciones por filas según el siguiente algoritmo. Toda fila nula de la matriz se mueven hacia abajo de la matriz por medio de la operación intercambio de filas, de forma que todas ellas queden en las últimas filas de la matriz, es decir, supongamos que existen <span class="math inline">\(r\leq m\)</span> filas no nulas, entonces las últimas filas <span class="math inline">\(r+1, r+2, \cdots, m\)</span> serán las filas de ceros, de forma que el bloque superior <span class="math inline">\(1,2,\cdots, r\)</span> serán las filas no nulas. Luego, considerando esta nueva matriz (la llamaremos <span class="math inline">\(A\)</span>, por comodidad). Sea <span class="math inline">\(a_{1k_{1}}\)</span> el primer elemento no nulo de la primera fila (<span class="math inline">\(k_{1}\)</span> es la columna donde aparece el primer elemento no nulo de la fila <span class="math inline">\(1\)</span>), si <span class="math inline">\(a_{1k_{1}}=1\)</span>, se cumple la condición (1), si no es así, aplicamos la operación <span class="math inline">\(\frac{1}{a_{1k_{1}}} e_{1}\)</span> para hacer que el pivote sea <span class="math inline">\(1\)</span>. Ahora, debemos hacer que todo elemento en esa columna sea cero si está en otra fila (condición (2)), para esto aplicamos la operación <span class="math inline">\(-a_{ik_{1}}e_{i}\)</span> para cada fila <span class="math inline">\(1\neq i\leq r\)</span>. Pasamos a la siguiente fila, <span class="math inline">\(A_{2\ast}\)</span>, consideramos el primer elemento no nulo de dicha fila, <span class="math inline">\(a_{2k_{2}}\)</span>, donde <span class="math inline">\(k_{2}\)</span> es la columna que ocupa. Si <span class="math inline">\(a_{2k_{2}}=1\)</span>, no haremos nada, en otro caso, aplicamos la operación <span class="math inline">\(\frac{1}{a_{2k_{2}}} e_{2}\)</span>, con esto se cumple la condición (1) para esta fila. Ahora aplicamos <span class="math inline">\(-a_{ik_{2}}e_{i}\)</span> para cada fila <span class="math inline">\(2\neq i\leq r\)</span>, con esto se cumple la condición (2). Repetimos este proceso para cada una de las filas no nulas de <span class="math inline">\(A\)</span>, es decir, para las filas <span class="math inline">\(1,2,\cdots, r\)</span>. Ahora ordenamos las filas no nulas intercambiando filas para lograr que se cumpla la condición (4), es decir, que se cumpla que <span class="math inline">\(p_{1}&lt; p_{2}&lt; \cdots &lt; p_{r}\)</span>, llamando <span class="math inline">\(p_{i}\)</span> a la columna del pivote de la fila <span class="math inline">\(i\)</span> luego de aplicar las operaciones elementales por filas. Es claro que estas operaciones son siempre posibles de aplicar a cualquier matriz, en un número finito de pasos. De lo anterior podemos concluir que siempre podemos reducir una matriz a una escalonada. Podemos expresarlo como un teorema, cuya demostración es el algoritmo anterior.</p>
 
 <div class="theorem">
-<p><span id="thm:unnamed-chunk-234" class="theorem"><strong>Teorema 4.5  </strong></span> Toda matriz <span class="math inline">\(m\times n\)</span> sobre el cuerpo <span class="math inline">\(\mathbb{F}\)</span> es equivalente por filas a una matriz escalonada reducida por filas.</p>
+<p><span id="thm:unnamed-chunk-235" class="theorem"><strong>Teorema 4.5  </strong></span> Toda matriz <span class="math inline">\(m\times n\)</span> sobre el cuerpo <span class="math inline">\(\mathbb{F}\)</span> es equivalente por filas a una matriz escalonada reducida por filas.</p>
 </div>
 
 
 <div class="theorem">
-<p><span id="thm:unnamed-chunk-235" class="theorem"><strong>Teorema 4.6  </strong></span> Si <span class="math inline">\(A\)</span> es una matriz <span class="math inline">\(m\times n\)</span> con <span class="math inline">\(m&lt;n\)</span>, el sistema homogéneo de ecuaciones lineales <span class="math inline">\(AX=0\)</span> tiene una solución no trivial.</p>
+<p><span id="thm:unnamed-chunk-236" class="theorem"><strong>Teorema 4.6  </strong></span> Si <span class="math inline">\(A\)</span> es una matriz <span class="math inline">\(m\times n\)</span> con <span class="math inline">\(m&lt;n\)</span>, el sistema homogéneo de ecuaciones lineales <span class="math inline">\(AX=0\)</span> tiene una solución no trivial.</p>
 </div>
  
 <div class="proof">
@@ -613,6 +619,16 @@ $\left[
     \end{array}\]</span> donde las <span class="math inline">\(n-r\)</span> incógnitas diferentes de <span class="math inline">\(x_{k_{1}}, x_{k_{2}},\cdots, x_{k_{r}}\)</span> las denotamos <span class="math inline">\(u_{1}, u_{2}, \cdots, u_{n-r}\)</span>. Note que la incógnita <span class="math inline">\(x_{k_{i}}\)</span> aparece solo en la <span class="math inline">\(i\)</span>-ésima ecuación. De esta forma, podemos dar valores arbitrarios a <span class="math inline">\(u_{1}, u_{2}, \cdots, u_{n-r}\)</span> y así hallar una solución no trivial, que a su vez es solución del sistema <span class="math inline">\(AX=0\)</span>.</p>
 </div>
 
+
+<div class="theorem">
+<p><span id="thm:teorema6" class="theorem"><strong>Teorema 4.7  </strong></span> Si <span class="math inline">\(A\)</span> es una matriz cuadrada <span class="math inline">\(n\times n\)</span>. Entonces <span class="math inline">\(A\)</span> es equivalente por filas a la matriz identidad si y solo si, el sistema de ecuaciones <span class="math inline">\(AX=0\)</span> tiene solo la solución trivial <span class="math inline">\(X=0\)</span>.</p>
+</div>
+
+
+<div class="proof">
+<p> <span class="proof"><em>Demostración. </em></span>  Si <span class="math inline">\(A\)</span> es equivalente por filas a la identidad, por el teorema anterior <span class="math inline">\(AX=0\)</span> y <span class="math inline">\(IX=0\)</span> tienen exactamente las mismas soluciones, por lo tanto la única solución es <span class="math inline">\(X=0\)</span>. Ahora, supongamos que <span class="math inline">\(AX=0\)</span> tiene unicamente la solución trivial; supongamos que <span class="math inline">\(R\)</span> es la matriz escalonada reducida equivalente a <span class="math inline">\(A\)</span>, y sea <span class="math inline">\(r\leq n\)</span> el número de filas no nulas; entonces <span class="math inline">\(RX=0\)</span> tiene unicamente la solución trivial (por el teorema anterior), luego <span class="math inline">\(r\geq n\)</span>, por lo tanto <span class="math inline">\(r=n\)</span>, por lo tanto <span class="math inline">\(R=I\)</span>.</p>
+</div>
+
 <p>Todos los teoremas anteriores hacen referencia a sistemas homogéneos <span class="math inline">\(AX=0\)</span>, el cual siempre tiene solución, la solución trivial <span class="math inline">\(X=0\)</span>. Cabe preguntar que sucede con los sistemas no homogéneos <span class="math inline">\(AX=B\)</span>. Un sistema no homogéneo no tiene necesariamente solución. Estudiemos esto a continuación. Dado el sistema no homogéneo <span class="math inline">\(AX=B\)</span>, con <span class="math inline">\(A\)</span> de orden <span class="math inline">\(m\times n\)</span>; consideramos la <em>matriz aumentada</em>, <span class="math inline">\(\hat{A}\)</span> de orden <span class="math inline">\(m\times (n+1)\)</span>, cuyas primeras <span class="math inline">\(n\)</span> columnas son iguales a las columnas de <span class="math inline">\(A\)</span> y la columna <span class="math inline">\(n+1\)</span> corresponde a <span class="math inline">\(B\)</span>, es decir, <span class="math inline">\(\hat{A}_{\ast j}=A_{\ast j}\)</span> para <span class="math inline">\(j\leq n\)</span> y <span class="math inline">\(\hat{A}_{\ast n+1}=B_{1}\)</span>. Se aplicará a esta matriz, <span class="math inline">\(\hat{A}\)</span> las mismas operaciones elementales por filas que se le aplican a la matriz <span class="math inline">\(A\)</span> para llevarla a una matriz escalonada reducidas por filas <span class="math inline">\(R\)</span>, y así se obtendrá una matriz <span class="math inline">\(\hat{R}\)</span> cuya última fila son los escalares <span class="math inline">\(z_{1}, z_{2},\cdots z_{m}\)</span> (que serán combinaciones lineales de los coeficientes <span class="math inline">\(b_{1}, b_{2},\cdots, b_{m}\)</span>). Es claro que los sistemas <span class="math inline">\(AX=B\)</span> y <span class="math inline">\(RX=Z\)</span> tienen las mismas soluciones (la demostración es análoga al de los sistemas homogéneos). Es fácil ver cuando el sistema <span class="math inline">\(\hat{R}X=Z\)</span> tiene solución. Si <span class="math inline">\(\hat{R}\)</span> tiene <span class="math inline">\(r\)</span> filas no nulas, donde el pivote de la fila <span class="math inline">\(i\)</span> está en la columna <span class="math inline">\(k_{i}\)</span> entonces las primeras <span class="math inline">\(r\)</span> ecuaciones expresarán las primeras <span class="math inline">\(r\)</span> incógnitas, <span class="math inline">\(x_{k_{1}}, x_{k_{2}}, \cdots, x_{k_{r}}\)</span> por las <span class="math inline">\(n-r\)</span> incógnitas restantes, <span class="math inline">\(x_{j}\)</span> y los escalares <span class="math inline">\(z_{1}, z_{2},\cdots, z_{r}\)</span>. Y las últimas <span class="math inline">\(m-r\)</span> ecuaciones son: <span class="math display">\[\begin{array}{cc}
 0= &amp; z_{r+1}\\
 \vdots &amp; \vdots\\
@@ -620,7 +636,7 @@ $\left[
 \end{array}\]</span> Por lo tanto, para que el sistema tenga solución debe suceder que <span class="math inline">\(z_{r+1}=z_{r+2}=\cdots=z_{m}=0\)</span>. Si esto ocurre entonces las soluciones del sistema se obtienen dando valores arbitrarios a la <span class="math inline">\(n-j\)</span> incógnitas <span class="math inline">\(x_{j}\)</span>.</p>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-237" class="example"><strong>Ejemplo 4.7  </strong></span> Sea <span class="math display">\[A=\left[\begin{array}{ccc}
+<p><span id="exm:unnamed-chunk-239" class="example"><strong>Ejemplo 4.7  </strong></span> Sea <span class="math display">\[A=\left[\begin{array}{ccc}
     1 &amp; -2 &amp; 1\\
     2 &amp; 1 &amp; 1\\
     0 &amp; 5 &amp; -1
@@ -643,6 +659,266 @@ $\left[\begin{array}{ccc|c}
 0 &amp; 5 &amp; -1 &amp; b_{3}
 \end{array} \right] \stackrel{ 2e_{21}}{\longrightarrow}</code></pre>
 <p> $ Luego, el sistema tiene solución solo si <span class="math inline">\(2b_{1}-b_{2}+b_{3}=0\)</span>. Si esta condición se cumple, entonces una solución para el sistema es de la forma: <span class="math inline">\(\begin{array}{cc}  x_{1}= &amp;-\frac{3}{5}x_{3}+\frac{1}{5}(b_{1}+2b_{2})\\  x_{2}= &amp;\frac{1}{5}x_{3}+\frac{1}{5}(b_{2}-2b_{1})  \end{array}\)</span> para cualquier valor de <span class="math inline">\(x_{3}\)</span>.</p>
+</div>
+
+<p>Note que la igualdad <span class="math inline">\(A(BC)=(AB)C\)</span> implica, entre otras cosas, que combinaciones lineales de combinaciones lineales de las filas de <span class="math inline">\(C\)</span>, son otra vez combinaciones lineales de las filas de <span class="math inline">\(C\)</span>. Si <span class="math inline">\(C\)</span> es una matriz que se obtiene de aplicar una operación elemental de fila a <span class="math inline">\(B\)</span>, entonces las filas de <span class="math inline">\(C\)</span> son combinación lineal de las filas de <span class="math inline">\(B\)</span>, por lo tanto debe existir una matriz <span class="math inline">\(A\)</span>, tal que <span class="math inline">\(C=AB\)</span>. Pueden existir muchas matrices con tal propiedad; veremos como escoger una de ellas.</p>
+
+<div class="definition">
+<p><span id="def:unnamed-chunk-240" class="definition"><strong>Definición 4.7  </strong></span> Una matriz <span class="math inline">\(m\times m\)</span> es una <em>matriz elemental</em> si se obtiene de aplicar una sola operación elemental de filas a la matriz identidad (de orden <span class="math inline">\(m\times m\)</span>).</p>
+</div>
+
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-241" class="example"><strong>Ejemplo 4.8  </strong></span> Una matriz elementa de orden <span class="math inline">\(2\times 2\)</span> es necesariamente como alguna de las siguientes: <span class="math display">\[ \left[ \begin{array}{cc}
+    0 &amp; 1\\
+    1 &amp; 0
+    \end{array} \right] , 
+    \left[ \begin{array}{cc}
+    1 &amp; \lambda\\
+    0 &amp; 1
+    \end{array} \right] ,
+    \left[ \begin{array}{cc}
+    1 &amp; 0\\
+    \lambda &amp; 1
+    \end{array} \right]  \mbox{ con }\lambda\in \mathbb{F}\]</span> o</p>
+<pre><code>$$\left[ \begin{array}{cc}
+\delta &amp; 0\\
+0 &amp; 1
+\end{array} \right] , 
+\left[ \begin{array}{cc}
+1 &amp; 0\\
+0 &amp; \delta
+\end{array} \right] \mbox{ con } \delta\neq 0$$</code></pre>
+</div>
+
+
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-242" class="theorem"><strong>Teorema 4.8  </strong></span> Sea <span class="math inline">\(E\)</span> una matriz elemental que corresponde a la operación elemental por filas <span class="math inline">\(e\)</span>. Sea <span class="math inline">\(A\)</span> una matriz <span class="math inline">\(m\times n\)</span>. Entonces <span class="math inline">\(e(A)=EA\)</span>.</p>
+</div>
+
+
+<div class="proof">
+<p> <span class="proof"><em>Demostración. </em></span>  Note que el elemento <span class="math inline">\([EA]_{ij}\)</span> se obtien de la <span class="math inline">\(i\)</span>-ésima fila de <span class="math inline">\(E\)</span> y la <span class="math inline">\(j\)</span>-ésima columna de <span class="math inline">\(A\)</span>. Estudiemos cada tipo de operación por separado, comenzaremos con la mas complicada y las otras dos se dejan como ejercicio. Supongamos que <span class="math inline">\(e= \lambda e_{sr}\)</span> (se sustituye la fila <span class="math inline">\(r\)</span> por la fila <span class="math inline">\(r\)</span> mas <span class="math inline">\(\lambda\)</span> veces la fila <span class="math inline">\(s\)</span>). Se tiene que <span class="math inline">\(E=\lambda e_{sr}(I)\)</span>, por lo tanto: <span class="math display">\[[E]_{ik}=
+        \left\{ \begin{array}{lc}
+        \delta_{ik} &amp; i\neq r\\
+        \delta_{rk}+\lambda \delta_{sk} &amp; i=r
+        \end{array} 
+        \right.\]</span> Luego <span class="math display">\[ [EA]_{ij}=\sum_{k=1}^{m} [E]_{ik}[A]_{kj}=
+    \left\{ \begin{array}{lc}
+        a_{ik} &amp; i\neq r \\
+        a_{rk}+\lambda a_{sk} &amp; i=r
+        \end{array} 
+    \right. 
+\]</span> Por lo tanto <span class="math inline">\(EA=e(A)\)</span>.</p>
+</div>
+
+
+<div class="corollary">
+<p><span id="cor:unnamed-chunk-244" class="corollary"><strong>Corolario 4.1  </strong></span> Sean <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> matrices de orden <span class="math inline">\(m\times n\)</span> sobre el cuerpo <span class="math inline">\(\mathbb{F}\)</span>. Entonces <span class="math inline">\(B\)</span> es equivalente por filas a <span class="math inline">\(A\)</span> si y solo si <span class="math inline">\(B=PA\)</span>, donde <span class="math inline">\(P\)</span> es un producto de matrices elementales <span class="math inline">\(m\times m\)</span>.</p>
+</div>
+
+
+<div class="proof">
+<p> <span class="proof"><em>Demostración. </em></span>  Supongamos que <span class="math inline">\(E_{1}, E_{2},\cdots, E_{k}\)</span> matrices elementales correspondientes a las operaciones elementales por fila <span class="math inline">\(e_{1}, e_{2},\cdots, e_{k}\)</span>. Entonces <span class="math inline">\(B=e_{1}\circ e_{2}\circ\cdots \circ e_{k}(A)\)</span> si y solo si <span class="math inline">\(B=E_{1} E_{2} \cdots E_{k} A=PA\)</span>, con <span class="math inline">\(P=E_{1} E_{2} \cdots E_{k}\)</span>.</p>
+</div>
+<p> Si <span class="math inline">\(A\)</span> es una matriz equivalente por filas a <span class="math inline">\(B\)</span>, el corolario anterior asegura que existe <span class="math inline">\(P\)</span>, tal que <span class="math inline">\(B=PA\)</span>, donde <span class="math inline">\(P\)</span> es producto de matrices elementales. Por otro lado se tiene que <span class="math inline">\(B\)</span> es equivalente por filas a <span class="math inline">\(A\)</span>, luego existe una matriz <span class="math inline">\(Q\)</span>, producto de matrices elementales, tal que <span class="math inline">\(A=QB\)</span>. En particular, esto es cierto para la matriz identidad, es decir <span class="math inline">\(I=QB=QP\)</span>. Veremos que la existencia de la matriz <span class="math inline">\(Q\)</span>, tal que <span class="math inline">\(QP=I\)</span> es equivalente al hecho de que <span class="math inline">\(P\)</span> es producto de matrices elementales.</p>
+
+<div class="definition">
+<p><span id="def:unnamed-chunk-246" class="definition"><strong>Definición 4.8  </strong></span> Sea <span class="math inline">\(A\)</span> una matriz (cuadrada) <span class="math inline">\(n\times n\)</span> sobre el cuerpo <span class="math inline">\(\mathbb{F}\)</span>. Una matriz <span class="math inline">\(B\)</span> <span class="math inline">\(n\times n\)</span>, tal que <span class="math inline">\(BA=I\)</span> se llama <em>inversa izquierda</em> de <span class="math inline">\(A\)</span>; una matriz <span class="math inline">\(B\)</span> <span class="math inline">\(n\times n\)</span>, tal que <span class="math inline">\(AB=I\)</span> se llama <em>inversa derecha</em> de <span class="math inline">\(A\)</span>. Si <span class="math inline">\(AB=BA=I\)</span>, entonces <span class="math inline">\(B\)</span> se llama <em>inversa bilateral</em> de <span class="math inline">\(A\)</span> y en este caso se dice que <span class="math inline">\(A\)</span> es <em>invertible</em>.</p>
+</div>
+
+
+<div class="lemma">
+<p><span id="lem:unnamed-chunk-247" class="lemma"><strong>Lema 4.1  </strong></span> Si una matriz <span class="math inline">\(A\)</span> tiene una inversa izquierda <span class="math inline">\(B\)</span> y una inversa derecha <span class="math inline">\(C\)</span>, entonces <span class="math inline">\(B=C\)</span>.</p>
+</div>
+
+
+<div class="proof">
+<p> <span class="proof"><em>Demostración. </em></span>  Suponga que <span class="math inline">\(BA=I\)</span> y <span class="math inline">\(AC=I\)</span>. Entonces <span class="math inline">\(B=BI=B(AC)=(BA)C=IC=C\)</span></p>
+</div>
+
+<p>Del corolario anterior tenemos que si <span class="math inline">\(A\)</span> tiene una inversa derecha y una inversa izquierda, entonces son iguales, la llamos <em>la inversa de <span class="math inline">\(A\)</span></em> y la denotámos <span class="math inline">\(A^{-1}\)</span>.</p>
+
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-249" class="theorem"><strong>Teorema 4.9  </strong></span> Dadas las matrices <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> de orden <span class="math inline">\(n\times n\)</span> sobre el cuerpo <span class="math inline">\(\mathbb{F}\)</span>. Se tiene que:</p>
+<pre><code>    (1) Si $A$ es invertible, entonces $A^{-1}$ también lo es y $(A^{-1})^{-1}=A$.
+    (2) Si $A$ y $B$ son invertibles, entonces $AB$ también lo es y $(AB)^{-1}=B^{-1}A^{-1}$.
+&lt;/div&gt;\EndKnitrBlock{theorem}</code></pre>
+
+<div class="proof">
+<p> <span class="proof"><em>Demostración. </em></span>  De la simetría de la definición de inversa, se sigue la parte <span class="math inline">\(1\)</span>. Para la segunda parte se sigue de <span class="math inline">\((AB)(B^{-1}A^{-1})=A(BB^{-1})A^{-1}=AIA^{-1}=AA^{-1}=I\)</span> y <span class="math inline">\((B^{-1}A^{-1})(AB)=B^{-1}(A^{-1}A)B=B^{-1}IB=B^{-1}B=I\)</span>.</p>
+</div>
+
+<p>Del resultado anterior se tiene que el producto de matrices invertible, es invertible.</p>
+
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-251" class="theorem"><strong>Teorema 4.10  </strong></span> Toda matriz elemental es invertible.</p>
+</div>
+ 
+<div class="proof">
+<p> <span class="proof"><em>Demostración. </em></span>  Sea <span class="math inline">\(E\)</span> una matriz elemental y sea <span class="math inline">\(e\)</span> la operación elemental de filas que corresponde a <span class="math inline">\(E\)</span>, es decir, <span class="math inline">\(E=e(I)\)</span>. Sea <span class="math inline">\(\hat{e}\)</span> la operación inversa de <span class="math inline">\(e\)</span>, y <span class="math inline">\(\hat{E}=\hat{e}(I)\)</span>. Entonces <span class="math inline">\(\hat{E}E=\hat{e}(E)=\hat{e}(e(I))=(\hat{e}\circ e) (I)= I\)</span>. Análogamente se tiene que <span class="math inline">\(E\hat{E}=I\)</span>. Luego <span class="math inline">\(\hat{E}=E^{-1}\)</span>.</p>
+</div>
+
+
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-253" class="theorem"><strong>Teorema 4.11  </strong></span> Sea <span class="math inline">\(A\)</span> una matriz <span class="math inline">\(n\times n\)</span>. Entonces los siguientes enunciados son equivalentes:</p>
+<pre><code>    (1) $A$ es invertible.
+    (2) $A$ es equivalente por filas a la identidad (de orden $n\times n$).
+    (3) $A$ es producto de matrices elementales.</code></pre>
+</div>
+ 
+<div class="proof">
+<p> <span class="proof"><em>Demostración. </em></span>  Sea <span class="math inline">\(R=E_{1}E_{2}\cdots E_{n}A\)</span> una matriz esacalonada reducida equivalente por filas a la matriz <span class="math inline">\(A\)</span> (donde <span class="math inline">\(E_{1}E_{2}\cdots E_{n}\)</span> son matrices elementales). Entonces, <span class="math inline">\(A=E_{n}^{-1}\cdots E_{2}^{-1}E_{1}^{-1}R\)</span>, ya que las matrices elementales son invertibles. Como el producto de matrices invertibles, es invertible, <span class="math inline">\(A\)</span> es invertible si y solo si <span class="math inline">\(R\)</span> lo es; como <span class="math inline">\(R\)</span> es una matriz cuadrada esacalonada reducida por filas, entonces <span class="math inline">\(R\)</span> es invertible si y solo si <span class="math inline">\(R\)</span> es la identidad. Luego, <span class="math inline">\(A\)</span> es invertible si y solo si <span class="math inline">\(R=I\)</span>, entonces, <span class="math inline">\(A=E_{n}^{-1}\cdots E_{2}^{-1}E_{1}^{-1}I=E_{n}^{-1}\cdots E_{2}^{-1}E_{1}^{-1}\)</span>.</p>
+</div>
+
+
+<div class="corollary">
+<p><span id="cor:unnamed-chunk-255" class="corollary"><strong>Corolario 4.2  </strong></span> Si <span class="math inline">\(A\)</span> es una matriz invertible <span class="math inline">\(n\times n\)</span> y si la sucesión de operaciones elementales <span class="math inline">\(e_{1}\circ e_{2}\circ \cdots \circ e_{n}\)</span> reduce a la matriz <span class="math inline">\(A\)</span> a la identidad, entonces la misma sucesión de operaciones elementales aplicadas a <span class="math inline">\(I\)</span>, nos da <span class="math inline">\(A^{-1}\)</span>, la inversa de <span class="math inline">\(A\)</span>.</p>
+</div>
+
+
+<div class="corollary">
+<p><span id="cor:unnamed-chunk-256" class="corollary"><strong>Corolario 4.3  </strong></span> Sean <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> dos matrices <span class="math inline">\(m\times n\)</span>. Entonces <span class="math inline">\(B\)</span> es equivalente por filas a <span class="math inline">\(A\)</span> si y solo si <span class="math inline">\(B=PA\)</span>, donde <span class="math inline">\(P\)</span> es una matriz invertible <span class="math inline">\(m\times m\)</span>.</p>
+</div>
+ 
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-257" class="theorem"><strong>Teorema 4.12  </strong></span> Sea <span class="math inline">\(A\)</span> una matriz <span class="math inline">\(n\times n\)</span>. Entonces los siguientes enunciados son equivalentes:</p>
+<pre><code>(1) $A$ es invertible.
+(2) El sistema homogéneo $AX=0$ tiene una única solución ($X=0$).
+(3) El sistema de ecuaciones asociado a $AX=B$ tiene una solución $X$ para cada matriz $B$ de orden $n\times 1$.
+&lt;/div&gt;\EndKnitrBlock{theorem}</code></pre>
+
+<div class="proof">
+<p> <span class="proof"><em>Demostración. </em></span>  El sistema homogéneo <span class="math inline">\(AX=0\)</span> si y solo si <span class="math inline">\(A\)</span> es equivalente por filas al la identidad ( por el teorema <a href="espacios-vectoriales.html#thm:teorema6">4.7</a>. Del teorema anterior, se tiene que <span class="math inline">\((1)\)</span> y <span class="math inline">\((2)\)</span> son equivalentes. Ahora supongámos que <span class="math inline">\(A\)</span> es invertible, entonces la solución de <span class="math inline">\(AX=B\)</span> viene dada por <span class="math inline">\(X=A^{-1}\)</span>. Recíprocamente, supongamos que <span class="math inline">\(AX=B\)</span> tiene una solución para cada <span class="math inline">\(B\)</span>. Sea <span class="math inline">\(R\)</span> la matriz escalonada reducida por filas equivalente por filas a <span class="math inline">\(A\)</span>. Necesariamente <span class="math inline">\(R=I\)</span>, ya que si <span class="math inline">\(R\)</span> tiene al menos una fila identicamente igual a cero, entonces el sistema <span class="math inline">\(RX=C\)</span>, donde <span class="math display">\[C=\left[ \begin{array}{c}
+    0\\
+    0\\
+    \vdots\\
+    0\\
+    1
+    \end{array}\right] \]</span> no tiene solución, lo que es una contradicción. Por lo tanto se tiene que <span class="math inline">\(R=I\)</span>.</p>
+</div>
+
+
+<div class="corollary">
+<p><span id="cor:unnamed-chunk-259" class="corollary"><strong>Corolario 4.4  </strong></span> Una matriz cuadrada que tiene una inversa izquierda o una inversa a la derecha es invertible.</p>
+</div>
+
+
+<div class="proof">
+<p> <span class="proof"><em>Demostración. </em></span>  Sea <span class="math inline">\(A\)</span> una matriz <span class="math inline">\(n\times n\)</span>. Supongamos que <span class="math inline">\(A\)</span> tiene una inversa a la izquierda, es decir, existe <span class="math inline">\(B\)</span> tal que <span class="math inline">\(BA=I\)</span>. Así, <span class="math inline">\(AX=0\)</span> tiene unicamente la solución trivial, ya que <span class="math inline">\(X=IX=B(AX)\)</span>. Por lo tanto <span class="math inline">\(A\)</span> es invertible. Supóngase que <span class="math inline">\(A\)</span> tiene una inversa a la derecha, es decir, existe <span class="math inline">\(C\)</span> tal que <span class="math inline">\(AC=I\)</span>. entoces <span class="math inline">\(C\)</span> tiene una inversa a la izquierda y por lo tanto es invertible, así <span class="math inline">\(A=ACC^{-1}=IC^{-1}=C^{-1}\)</span> de donde se tiene que <span class="math inline">\(A\)</span> es invertible de inversa <span class="math inline">\(C\)</span>.</p>
+</div>
+
+
+<div class="corollary">
+<p><span id="cor:unnamed-chunk-261" class="corollary"><strong>Corolario 4.5  </strong></span> Sea <span class="math inline">\(A=A_{1}A_{2}\cdots A_{n}\)</span>, donde <span class="math inline">\(A_{1}, A_{2}, \cdots , A_{n}\)</span> son matrices cuadradas. Entonces <span class="math inline">\(A\)</span> es invertible si y solo si cada <span class="math inline">\(A_{i}\)</span> es invertible.</p>
+</div>
+ 
+<div class="proof">
+<p> <span class="proof"><em>Demostración. </em></span>  Supongamos que cada <span class="math inline">\(A_{i}\)</span> es invertible, como el producto de matrices invertibles es invertible, se tiene que <span class="math inline">\(A\)</span> es invertible. Recíprocamente, supongamos que <span class="math inline">\(A\)</span> es invertible, entonces <span class="math inline">\(AX=0\)</span> tiene unicamente la solución trivial. Por lo tanto, <span class="math inline">\((A_{1}A_{2}\cdots A_{n-1})A_{n}X=AX=0\)</span> tiene unicamente la solución trivial, si y solo si <span class="math inline">\(A_{n}X=0\)</span> tiene solo la solución trivial, de donde se sigue que <span class="math inline">\(A_{n}\)</span> es invertible. Luego, <span class="math inline">\(AA^{-1}=A_{1}A_{2}\cdots A_{n-1}\)</span>, considerando <span class="math inline">\((A_{1}A_{2}\cdots A_{n-2})A_{n-1}X=AA^{-1}X=0\)</span>, de forma análoga a lo anterior, se puede demostrar que <span class="math inline">\(A_{n-1}\)</span> es invertible. Continuando de esta forma se demuestra que cada <span class="math inline">\(A_{i}\)</span> es invertible.</p>
+</div>
+
+
+<div class="remark">
+<p> <span class="remark"><em>Nota. </em></span>  Sea <span class="math inline">\(A\)</span> una matriz <span class="math inline">\(m\times n\)</span> y sea <span class="math inline">\(AX=B\)</span>, y sea <span class="math inline">\(R\)</span> la matriz escalonada reducida por filas equivalentes por fila a <span class="math inline">\(A\)</span>, entonces <span class="math inline">\(R=PA\)</span>, donde <span class="math inline">\(P\)</span> es una matriz invertible <span class="math inline">\(m\times m\)</span>; las soluciones de <span class="math inline">\(RX=PB\)</span> son las mismas que las del sistema <span class="math inline">\(AX=B\)</span>. Hallar <span class="math inline">\(PB\)</span> es equivalente a reducir por filas la matriz <span class="math inline">\(A\)</span>, esto se hace considerando la matriz aumentada <span class="math inline">\(\hat{A}\)</span> y aplicandole operaciones elementales por fila hasta reducir a <span class="math inline">\(A\)</span> a una matriz escalonada reducida, lo obtenido en la última columna será la matriz <span class="math inline">\(PB\)</span>.</p>
+</div>
+
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-264" class="example"><strong>Ejemplo 4.9  </strong></span> Sea $A=$ la matriz de coeficientes del sistema <span class="math inline">\(AX=B\)</span>, donde <span class="math inline">\(B=\left[\begin{array}{c}  b_{1}\\  b_{2}  \end{array} \right]\)</span>. Luego la matriz extendida es</p>
+<p><span class="math inline">\(\hat{A}=\left[\begin{array}{cc|c}  2 &amp; -1 &amp; b_{1}\\  1 &amp; 3 &amp; b_{2}  \end{array} \right]\)</span></p>
+<pre><code>Reducimos la matriz:
+$\left[\begin{array}{cc|c}
+2 &amp; -1 &amp; b_{1}\\
+1 &amp; 3 &amp; b_{2}
+\end{array} \right] \stackrel{e_{12}}{\longrightarrow} 
+\left[\begin{array}{cc|c}
+1 &amp; 3 &amp; b_{2}\\
+2 &amp; -1 &amp; b_{1}
+\end{array} \right] \stackrel{-2 e_{12}}{\longrightarrow}
+\left[\begin{array}{cc|c}
+1 &amp; 3 &amp; b_{2}\\
+0 &amp; -7 &amp; b_{1}-2b_{2}
+\end{array} \right] \stackrel{ -\frac{1}{7}e_{2}}{\longrightarrow}
+\left[\begin{array}{cc|c}
+1 &amp; 3 &amp;   b_{2}\\
+0 &amp; 1 &amp; \frac{1}{7}(2b_{2}-b_{1})
+\end{array} \right] \stackrel{ -3e_{21}}{\longrightarrow}
+\left[\begin{array}{cc|c}
+1 &amp; 0 &amp;  \frac{1}{7}(b_{2}+3b_{1})\\
+0 &amp; 1 &amp; \frac{1}{7}(2b_{2}-b_{1})
+\end{array} \right]$
+
+De donde se tiene que $PB=\left[ \begin{array}{c}
+\frac{1}{7}(b_{2}+3b_{1})\\
+\frac{1}{7}(2b_{2}-b_{1})
+\end{array}\right] $, o también que $A^{-1}=\left[\begin{array}{cc}
+\frac{3}{7} &amp; \frac{1}{7}\\
+-\frac{1}{7} &amp; \frac{2}{7} 
+\end{array} \right]$.
+
+También podemos llegar a la inversa de $A$ aplicando las operaciones elementales antes descritas para reducir a $A$, a la identidad. Es decir:
+$\left[\begin{array}{cc|cc}
+2 &amp; -1 &amp; 1 &amp; 0\\
+1 &amp; 3 &amp; 0 &amp; 1
+\end{array} \right] \stackrel{e_{12}}{\longrightarrow} 
+\left[\begin{array}{cc|cc}
+1 &amp; 3 &amp; 0 &amp; 1\\
+2 &amp; -1 &amp; 1 &amp; 0
+\end{array} \right] \stackrel{-2 e_{12}}{\longrightarrow}
+\cdots 
+\left[\begin{array}{cc|cc}
+1 &amp; 0 &amp;  \frac{3}{7} &amp; \frac{1}{7}\\
+0 &amp; 1 &amp;  -\frac{1}{7} &amp; \frac{2}{7}
+\end{array} \right]$</code></pre>
+</div>
+
+</div>
+<div id="teoria-de-espacios-vectoriales" class="section level2">
+<h2><span class="header-section-number">4.4</span> Teoría de espacios vectoriales</h2>
+<p>En los sitemas de ecuaciones lineales vimos que las combinaciones lineales de soluciones del sistema volvía a ser una solución. Este no es el único ámbito en el que sucede y es interesante este comportamiento, el concepto de espacios vectoriales generaliza esto. Estudiaremos a continuación estas estructuras algebraicas.</p>
+
+<div class="definition">
+<p><span id="def:unnamed-chunk-265" class="definition"><strong>Definición 4.9  </strong></span> Dado un cuerpo <span class="math inline">\(\mathbb{F}\)</span>, un <em>espacio vectorial</em> sobre el cuerpo <span class="math inline">\(\mathbb{K}\)</span> es un conjunto <span class="math inline">\(V\)</span> de objetos llamados <em>vectores</em>, dotado de dos operaciones, <em>suma</em> y <em>producto por un escalar</em>, con las siguientes propiedades:</p>
+<pre><code>    (1) *cerrado bajo la suma*: para todo $u,v\in V$, se tiene que $u+v\in V$;
+    (2) la *suma es comutativa*: para todo $u,v\in V$, $u+v=v+u$;
+    (3) la *suma es asociativa*: para todo $u, v, ww\in V$, $(u+v)+w=u+(v+w)$;
+    (4) existe un único *vector nulo*, $0\in V$, tal que para todo $u\in V$, $u+0=u$;
+    (5) para cada vector $u\in V$, existe un único *vector opuesto*, $-u$, tal que $u+(-u)=0$;
+    (6) *cerrado bajo el producto por un escalar*: para todo $\lambda\in\mathbb{F}$ y todo $u\in V$, se tiene que $\lambda \cdot u\in V$ (se puede abreviar la notación quitando el punto $\lambda u$);
+    (7) para todo $u\in V$, $1u=u$;
+    (8) para todo $u\in V$ y para todo $\lambda, \gamma\in\mathbb{F}$, $(\lambda\gamma)u=\lambda(\gamma u)$;
+    (9) para todo $u, v\in V$ y $\lambda in\in\mathbb{F}$, $\lambda(u+v)=\lambda u+\lambda v$;
+    (10) para todo $u\in V$ y para todo $\lambda, \gamma\in\mathbb{F}$, $(\lambda +\gamma)u=\lambda u + \gamma u$.</code></pre>
+</div>
+
+<p>Note que un espacio vectorial consta de cuatro cosas, un cuerpo, un conjunto no vacío de vectores y dos operaciones. Cuando no hay posibilidad de confusión, se hará referencia solo al espacio <span class="math inline">\(V\)</span>, omitiendo el resto de los objetos. Puede ocurrir que el mismo conjunto <span class="math inline">\(V\)</span> forme parte de dos espacios vectoriales distintos.</p>
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-266" class="example"><strong>Ejemplo 4.10  </strong></span> <em>El conjunto de las <span class="math inline">\(n\)</span>-tuplas</em>, <span class="math inline">\(\mathbb{F}^{n}\)</span>. Sea <span class="math inline">\(\mathbb{F}\)</span> un cuerpo y sea <span class="math inline">\(V\)</span> el conjunto de todas las <span class="math inline">\(n\)</span>-tuplas <span class="math inline">\(u=(x_{1}, x_{2}, \cdots , x_{n})\)</span> de escalares <span class="math inline">\(x_{i}\in\mathbb{F}\)</span>. Dados <span class="math inline">\(u=(x_{1}, x_{2}, \cdots , x_{n}), v=(y_{1}, y_{2}, \cdots , y_{n})\in V\)</span> y el escalar <span class="math inline">\(\lambda\in \mathbb{F}\)</span>, definimos: La suma <span class="math inline">\(u+v=(x_{1}, x_{2}, \cdots , x_{n})+(y_{1}, y_{2}, \cdots , y_{n})=(x_{1}+y_{1}, x_{2}+y_{2}, \cdots , x_{n}+y_{n})\)</span> y <span class="math inline">\(\lambda u=\lambda(x_{1}, x_{2}, \cdots , x_{n})=(\lambda x_{1},\lambda x_{2}, \cdots ,\lambda x_{n})\)</span>. Es fácil ver que estas operaciones así definidas cumplen con las 10 condiciones de la definición.</p>
+</div>
+
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-267" class="example"><strong>Ejemplo 4.11  </strong></span> <em>El espacio de las matrices</em> <span class="math inline">\(m\times n\)</span>, <span class="math inline">\(\mathbb{F}^{m\times n}\)</span>. Sea <span class="math inline">\(\mathbb{F}\)</span> un cuerpo, y sean <span class="math inline">\(m\)</span> y <span class="math inline">\(n\)</span> enteros positivos. Sea el conjunto <span class="math inline">\(\mathbb{F}^{m\times n}\)</span> el conjunto de todas las matrices de orden <span class="math inline">\(m\times n\)</span> sobre el cuerpo <span class="math inline">\(\mathbb{F}\)</span>. La suma de dos vectores y el producto por un escalar se definen de la forma usual, sean <span class="math inline">\(A,B\in\mathbb{F}^{m\times n}\)</span> y <span class="math inline">\(\lambda\in\mathbb{F}\)</span>, <span class="math inline">\([A+B]_{ij}=[A]_{ij}+[B]_{ij}\)</span> y <span class="math inline">\([\lambda A]_{ij}=\lambda [A]_{ij}\)</span>. Note que, <span class="math inline">\(\mathbb{F}^{1\times n}=\mathbb{F}^{n}\)</span>.</p>
+</div>
+
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-268" class="example"><strong>Ejemplo 4.12  </strong></span> <em>El espacio de funciones de un conjunto en un cuerpo</em>. Sea <span class="math inline">\(\mathbb{F}\)</span> y <span class="math inline">\(C\)</span> un conjunto no vacío cualquiera. Sea <span class="math inline">\(V\)</span> el conjunto de funciones de <span class="math inline">\(C\)</span> en <span class="math inline">\(\mathbb{F}\)</span>. La suma de dos vectores <span class="math inline">\(f, g\in V\)</span>, se define como la suma usual de funciones, <span class="math inline">\((f+g)(c)=f(c)+g(c)\)</span> y el producto por un escalar se define como <span class="math inline">\((\lambda f)(c)=\lambda f(c)\)</span>. Las condiciones se cumplen, ya que <span class="math inline">\(\mathbb{F}\)</span> es un cuerpo:</p>
+<pre><code>    (1) claramente las operaciones así definidas, son cerradas.
+    (2) como la suma en $\mathbb{F}$ es conmutativa, $(f+g)(c)=f(c)+g(c)=g(c)+f(c)=(g+f)(c)$;
+    (3) como la suma en $\mathbb{F}$ es asociativa, $((f+g)+h)(c)=(f(c)+g(c))+h(c)=f(c)(g(c)+h(c))=(f+(g+h))(c)$;
+    (4) el único vector nulo es la función cero, que asigna el escalar cero (del cuerpo $\mathbb{F}$) a cada elemento $c\in C$, esto es $f(c)\equiv 0$;
+    (5) para toda función $f$, $-f$, definda como $(-f)(c)=-f(c)$, es el elemento opuesto;
+    (6) claramente, $(1f)(c)=1f(c)=f(c)$;
+    (7) $(\lambda\gamma f)(c)=(\lambda\gamma) f(c)= \lambda(\gamma f(c))=(\lambda(\gamma f))(c)$;
+    (8) $(\lambda(f+g))(c)=(\lambda f)(c)+(\lambda g)(c)=((\lambda f)+(\lambda g))(c)$;
+    (9) $((\lambda + \gamma)f)(c)=(\lambda f+ \gamma f)(c)$.</code></pre>
+</div>
+
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-269" class="example"><strong>Ejemplo 4.13  </strong></span> <em>El espacio de las funciones polinómicas sobre el cuerpo</em> <span class="math inline">\(\mathbb{F}\)</span>. Sea <span class="math inline">\(\mathbb{F}\)</span> un cuerpo y sea <span class="math inline">\(V\)</span> el conjunto de las funciones de <span class="math inline">\(\mathbb{F}\)</span> en <span class="math inline">\(\mathbb{F}\)</span>, de la forma <span class="math inline">\(f(x)=c_{0}+c_{1}x+\cdots+c_{n}x^{n}\)</span>, donde <span class="math inline">\(c_{0}, c_{1},\cdots c_{n}\)</span> son escalares fijos de <span class="math inline">\(\mathbb{F}\)</span> y <span class="math inline">\(n\)</span> un entero positivo cualquiera, una función de este tipo se llama <em>función polinómica</em>. Las operaciones de suman y producto por escalares se definen como en el ejemplo anterior. Es fácil ver que <span class="math inline">\(f+g\)</span> y <span class="math inline">\(\lambda f\)</span> son funciones polinómicas y cumplen con las condiciones de la definición.</p>
 </div>
 
 

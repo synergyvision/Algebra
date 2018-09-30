@@ -883,3 +883,58 @@ Del resultado anterior se tiene que el producto de matrices invertible, es inver
 	\end{array} \right]$
 
 ```
+
+## Teoría de espacios vectoriales
+
+En los sitemas de ecuaciones lineales vimos que las combinaciones lineales de soluciones del sistema volvía a ser una solución. Este no es el único ámbito en el que sucede y es interesante este comportamiento, el concepto de espacios vectoriales generaliza esto. Estudiaremos a continuación estas estructuras algebraicas.
+
+```{definition}
+	Dado un cuerpo $\mathbb{F}$, un *espacio vectorial* sobre el cuerpo $\mathbb{K}$ es un conjunto $V$ de objetos llamados *vectores*, dotado de dos operaciones, *suma* y *producto por un escalar*, con las siguientes propiedades:
+	
+		(1) *cerrado bajo la suma*: para todo $u,v\in V$, se tiene que $u+v\in V$;
+		(2) la *suma es comutativa*: para todo $u,v\in V$, $u+v=v+u$;
+		(3) la *suma es asociativa*: para todo $u, v, ww\in V$, $(u+v)+w=u+(v+w)$;
+		(4) existe un único *vector nulo*, $0\in V$, tal que para todo $u\in V$, $u+0=u$;
+		(5) para cada vector $u\in V$, existe un único *vector opuesto*, $-u$, tal que $u+(-u)=0$;
+		(6) *cerrado bajo el producto por un escalar*: para todo $\lambda\in\mathbb{F}$ y todo $u\in V$, se tiene que $\lambda \cdot u\in V$ (se puede abreviar la notación quitando el punto $\lambda u$);
+		(7) para todo $u\in V$, $1u=u$;
+		(8) para todo $u\in V$ y para todo $\lambda, \gamma\in\mathbb{F}$, $(\lambda\gamma)u=\lambda(\gamma u)$;
+		(9) para todo $u, v\in V$ y $\lambda in\in\mathbb{F}$, $\lambda(u+v)=\lambda u+\lambda v$;
+		(10) para todo $u\in V$ y para todo $\lambda, \gamma\in\mathbb{F}$, $(\lambda +\gamma)u=\lambda u + \gamma u$.
+
+```
+
+Note que un espacio vectorial consta de cuatro cosas, un cuerpo, un conjunto no vacío de vectores y dos operaciones. Cuando no hay posibilidad de confusión, se hará referencia solo al espacio $V$, omitiendo el resto de los objetos. Puede ocurrir que el mismo conjunto $V$ forme parte de dos espacios vectoriales distintos.
+
+```{example}
+	*El conjunto de las $n$-tuplas*, $\mathbb{F}^{n}$. Sea $\mathbb{F}$ un cuerpo y sea $V$ el conjunto de todas las $n$-tuplas $u=(x_{1}, x_{2}, \cdots , x_{n})$ de escalares $x_{i}\in\mathbb{F}$. Dados $u=(x_{1}, x_{2}, \cdots , x_{n}), v=(y_{1}, y_{2}, \cdots , y_{n})\in V$ y el escalar $\lambda\in \mathbb{F}$, definimos:
+	La suma $u+v=(x_{1}, x_{2}, \cdots , x_{n})+(y_{1}, y_{2}, \cdots , y_{n})=(x_{1}+y_{1}, x_{2}+y_{2}, \cdots , x_{n}+y_{n})$ y $\lambda u=\lambda(x_{1}, x_{2}, \cdots , x_{n})=(\lambda x_{1},\lambda x_{2}, \cdots ,\lambda x_{n})$.
+	Es fácil ver que estas operaciones así definidas cumplen con las 10 condiciones de la definición.
+
+```
+
+```{example}
+	*El espacio de las matrices* $m\times n$, $\mathbb{F}^{m\times n}$. Sea $\mathbb{F}$ un cuerpo, y sean $m$ y $n$ enteros positivos. Sea el conjunto $\mathbb{F}^{m\times n}$ el conjunto de todas las matrices de orden $m\times n$ sobre el cuerpo $\mathbb{F}$. La suma de dos vectores y el producto por un escalar se definen de la forma usual, sean $A,B\in\mathbb{F}^{m\times n}$ y $\lambda\in\mathbb{F}$, $[A+B]_{ij}=[A]_{ij}+[B]_{ij}$ y $[\lambda A]_{ij}=\lambda [A]_{ij}$.
+	Note que, $\mathbb{F}^{1\times n}=\mathbb{F}^{n}$.
+
+```
+
+```{example}
+	*El espacio de funciones de un conjunto en un cuerpo*. Sea $\mathbb{F}$ y $C$ un conjunto no vacío cualquiera. Sea $V$ el conjunto de funciones de $C$ en $\mathbb{F}$. La suma de dos vectores $f, g\in V$, se define como la suma usual de funciones, $(f+g)(c)=f(c)+g(c)$ y el producto por un escalar se define como $(\lambda f)(c)=\lambda f(c)$. Las condiciones se cumplen, ya que $\mathbb{F}$ es un cuerpo: 
+
+		(1) claramente las operaciones así definidas, son cerradas.
+		(2) como la suma en $\mathbb{F}$ es conmutativa, $(f+g)(c)=f(c)+g(c)=g(c)+f(c)=(g+f)(c)$;
+		(3) como la suma en $\mathbb{F}$ es asociativa, $((f+g)+h)(c)=(f(c)+g(c))+h(c)=f(c)(g(c)+h(c))=(f+(g+h))(c)$;
+		(4) el único vector nulo es la función cero, que asigna el escalar cero (del cuerpo $\mathbb{F}$) a cada elemento $c\in C$, esto es $f(c)\equiv 0$;
+		(5) para toda función $f$, $-f$, definda como $(-f)(c)=-f(c)$, es el elemento opuesto;
+		(6) claramente, $(1f)(c)=1f(c)=f(c)$;
+		(7) $(\lambda\gamma f)(c)=(\lambda\gamma) f(c)= \lambda(\gamma f(c))=(\lambda(\gamma f))(c)$;
+		(8) $(\lambda(f+g))(c)=(\lambda f)(c)+(\lambda g)(c)=((\lambda f)+(\lambda g))(c)$;
+		(9) $((\lambda + \gamma)f)(c)=(\lambda f+ \gamma f)(c)$.
+
+```
+
+```{example}
+	*El espacio de las funciones polinómicas sobre el cuerpo* $\mathbb{F}$. Sea $\mathbb{F}$ un cuerpo y sea $V$ el conjunto de las funciones de $\mathbb{F}$ en $\mathbb{F}$, de la forma $f(x)=c_{0}+c_{1}x+\cdots+c_{n}x^{n}$, donde $c_{0}, c_{1},\cdots c_{n}$ son escalares fijos de $\mathbb{F}$ y $n$ un entero positivo cualquiera, una función de este tipo se llama *función polinómica*. Las operaciones de suman y producto por escalares se definen como en el ejemplo anterior. Es fácil ver que $f+g$ y $\lambda f$ son funciones polinómicas y cumplen con las condiciones de la definición.
+
+```
