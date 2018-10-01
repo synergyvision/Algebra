@@ -777,6 +777,7 @@ Del resultado anterior se tiene que el producto de matrices invertible, es inver
 	0 & 1 &  -\frac{1}{7} & \frac{2}{7}
 	\end{array} \right]$
 </div>\EndKnitrBlock{example}
+
 ## Teoría de espacios vectoriales
 
 En los sitemas de ecuaciones lineales vimos que las combinaciones lineales de soluciones del sistema volvía a ser una solución. Este no es el único ámbito en el que sucede y es interesante este comportamiento, el concepto de espacios vectoriales generaliza esto. Estudiaremos a continuación estas estructuras algebraicas.
@@ -821,3 +822,23 @@ Note que un espacio vectorial consta de cuatro cosas, un cuerpo, un conjunto no 
 
 \BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-57"><strong>(\#exm:unnamed-chunk-57) </strong></span>	*El espacio de las funciones polinómicas sobre el cuerpo* $\mathbb{F}$. Sea $\mathbb{F}$ un cuerpo y sea $V$ el conjunto de las funciones de $\mathbb{F}$ en $\mathbb{F}$, de la forma $f(x)=c_{0}+c_{1}x+\cdots+c_{n}x^{n}$, donde $c_{0}, c_{1},\cdots c_{n}$ son escalares fijos de $\mathbb{F}$ y $n$ un entero positivo cualquiera, una función de este tipo se llama *función polinómica*. Las operaciones de suman y producto por escalares se definen como en el ejemplo anterior. Es fácil ver que $f+g$ y $\lambda f$ son funciones polinómicas y cumplen con las condiciones de la definición.
 </div>\EndKnitrBlock{example}
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-58"><strong>(\#def:unnamed-chunk-58) </strong></span>	Una *combinación lineal* de los vectores $u_{1}, u_{2}, \cdots, u_{n}$ de un espacio vectorial $V$, es un vector $v\in V$, tal que $v=\sum_{i=1}^{n} \lambda_{i}u_{i}$, para algunos escalares $\lambda_{1}, \lambda_{2}, \cdots, \lambda_{n}$.
+</div>\EndKnitrBlock{definition}
+
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	Note que una combinación lineal de vectores, es un vector del espacio gracias a que las operaciones de suma y producto por un escalar son cerradas.
+	Una combinación lineal de combinaciones lineales de vectores, es una combinación lineal de vectores.
+	Dados los vectores $u_{1}, u_{2}, \cdots, u_{n}$, de las propiedades de asociatividad de la suma y las propiedades distributivas, se tiene que $\sum_{i=1}^{n} \lambda_{i}u_{i} + \sum_{i=1}^{n} \gamma_{i}u_{i}=\sum_{i=1}^{n} (\lambda_{i}+\gamma_{i})u_{i}$.
+</div>\EndKnitrBlock{remark}
+
+Mucho del álgebra está motivado por la geometría, las palabras "espacio" y vector tienen una connotación geométrica. Los vectores en el espacio $\mathbb{R}^{3}$ son ternas $(x,y,z)$ donde cada entrada representa una coordenada en el espacio. Esto se estudia en el capítulo de vectores.
+
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-60"><strong>(\#def:unnamed-chunk-60) </strong></span>	Sea $V$ un espacio vectorial sobre el cuerpo $\mathbb{F}$. Un *subespacio* de $V$ es un subconjunto $W\subseteq V$ que junto a las mismas operaciones de suma y producto por un escalar definidas en $V$, es en si mismo un espacio vectorial sobre $\mathbb{F}$.
+</div>\EndKnitrBlock{definition}
+
+De este modo para comprobar que un subconjunto de vectores $W$ de un espacio vectorial $V$, es un subespacio de $V$, debemos ver que la suma y el producto por un escalar son operaciones cerradas, es decir, para todo $u,v\in W$ se debe tener que $u+v\in W$ y $\lambda v\in W$, para calquier escalar $\lambda$ en $\mathbb{F}$; que el elemento neutro (para la suma) pertenece a $W$, y que todo vector de $W$, tiene un opuesto en $W$, es decir para todo $v\in W$, $-v\in W$. Las otras propiedades se heredan del espacio vectorial $V$.
+En alguna literatura se puede conseguir que la definición de subespacio vectorial es un subconjunto $W$ que tiene la siguiente propiedad: para todo $u,v\in W$ y todo $\lambda\in\mathbb{F}$, $\lambda u+v\in W$. Sin embargo, se puede demostrar la equivalencia entre ambas afirmaciones.
+
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-61"><strong>(\#thm:unnamed-chunk-61) </strong></span>	Un subconjunto no vacío $W$ de $V$ es un subespacio de $V$ si y solo si, para todo par de vectores $u,v$ de $W$ y todo escalar $\lambda$ en el cuerpo $\mathbb{F}$, se tinen que el vector (combinación lineal) $\lambda u + v$ está en $W$.
+</div>\EndKnitrBlock{theorem}
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Sea $W$ un subconjunto de vectores con la propiedad de que $\forall u,v\in W$ y $\forall \lambda\in\mathbb{F}$, $\lambda u + v\in W$. Sea $r\in W$, ya que $W$ no es vacío, entonces, por la propiedad del conjunto $(-1)r+r=-r+r=0\in W$, lo que indica que $W$ contiene al elemento neutro; así $(-1)r+0=-r\in W$, por lo que $W$ tiene al opuesto de todo sus vectores; en general $\lambda u +0\in W$, es decir el producto por un escalar es cerrado; de este modo, si $u,v\in W$, $u+v=(1)u+v\in W$, por lo que se tiene que la suma es cerrada; de donde se concluye que $W$ es un subespacio. Recíprocamente, si $W$ es un subespacio, por definición se tiene que cumple que $\forall u,v\in W$ y $\forall \lambda\in\mathbb{F}$, $\lambda u + v\in W$.
+</div>\EndKnitrBlock{proof}
