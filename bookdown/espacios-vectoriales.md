@@ -842,3 +842,16 @@ En alguna literatura se puede conseguir que la definición de subespacio vectori
 </div>\EndKnitrBlock{theorem}
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Sea $W$ un subconjunto de vectores con la propiedad de que $\forall u,v\in W$ y $\forall \lambda\in\mathbb{F}$, $\lambda u + v\in W$. Sea $r\in W$, ya que $W$ no es vacío, entonces, por la propiedad del conjunto $(-1)r+r=-r+r=0\in W$, lo que indica que $W$ contiene al elemento neutro; así $(-1)r+0=-r\in W$, por lo que $W$ tiene al opuesto de todo sus vectores; en general $\lambda u +0\in W$, es decir el producto por un escalar es cerrado; de este modo, si $u,v\in W$, $u+v=(1)u+v\in W$, por lo que se tiene que la suma es cerrada; de donde se concluye que $W$ es un subespacio. Recíprocamente, si $W$ es un subespacio, por definición se tiene que cumple que $\forall u,v\in W$ y $\forall \lambda\in\mathbb{F}$, $\lambda u + v\in W$.
 </div>\EndKnitrBlock{proof}
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-63"><strong>(\#exm:unnamed-chunk-63) </strong></span>	Dado un espacio vectorial $V$, el mismo $V$ es subespacio de $V$. El conjunto cuyo único elemento es el vector cero $\{\vec{0}\}$ es subespacio de $V$, llamado el subespacio nulo de $V$. Estos dos subespacios son los subespacios triviales de $V$.
+</div>\EndKnitrBlock{example}
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-64"><strong>(\#exm:unnamed-chunk-64) </strong></span>	En el espacio $\mathbb{F}^{n}$, el conjunto de las $n$-tuplas $(x_{1}, x_{2},\cdots , x_{n})$ donde $x_{i}=0$, para algún $i$ fijo, es un subespacio de $\mathbb{F}^{n}$. Pero el conjunto de las $n$-tuplas, tales que $x_{i}+kx_{j}=p$ no es un subespacio.
+</div>\EndKnitrBlock{example}
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-65"><strong>(\#exm:unnamed-chunk-65) </strong></span>	El espacio de las funciones polinómicas es subespacio del espacio de todas las funciones.
+</div>\EndKnitrBlock{example}
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-66"><strong>(\#exm:unnamed-chunk-66) </strong></span>	Una matriz cuadrada $n\times n$, es una *matriz simétrica* si $a_{ij}=a_{ji}$ para todo $1\leq i,j\leq n$. El conjunto de las matrices simétricas es un subespacio del espacio de las matrices $n\times n$.
+</div>\EndKnitrBlock{example}
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-67"><strong>(\#exm:unnamed-chunk-67) </strong></span>	Una matriz cuadrada $n\times n$ sobre el cuerpo de los números complejos $\mathbb{C}$ es una *matriz hermítica* (o *autoadjunta*) si $a_{jk}=\bar{a_{kj}}$ para todo $1\leq j,k\leq n$, donde la barra sobre el escalar $a_{kj}$ denota la conjugación compleja. El conjunto de las matrices hermíticas no es un subespacio sobre el espacio de las matrices cuadradas $n\times n$ sobre $\mathbb{C}$.</div>\EndKnitrBlock{example}
