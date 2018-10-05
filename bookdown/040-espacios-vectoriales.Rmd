@@ -989,6 +989,28 @@ En alguna literatura se puede conseguir que la definición de subespacio vectori
 ```
 
 ```{example}
-	Una matriz cuadrada $n\times n$ sobre el cuerpo de los números complejos $\mathbb{C}$ es una *matriz hermítica* (o *autoadjunta*) si $a_{jk}=\bar{a_{kj}}$ para todo $1\leq j,k\leq n$, donde la barra sobre el escalar $a_{kj}$ denota la conjugación compleja. El conjunto de las matrices hermíticas no es un subespacio sobre el espacio de las matrices cuadradas $n\times n$ sobre $\mathbb{C}$.
+	Una matriz cuadrada $n\times n$ sobre el cuerpo de los números complejos $\mathbb{C}$ es una *matriz hermítica* (o *autoadjunta*) si $a_{jk}=\bar{a_{kj}}$ para todo $1\leq j,k\leq n$, donde la barra sobre el escalar $a_{kj}$ denota la conjugación compleja. El conjunto de las matrices hermíticas es un subespacio sobre el espacio de las matrices cuadradas $n\times n$ sobre $\mathbb{R}$.
 
 ```
+
+
+	(1) Muestre que el conjunto de las matrices hermíticas $n\times n$ es un espacio vectorial sobre el conjunto de los números reales $\mathbb{R}$.
+	Respuesta: Sea $V$ el conjunto de las matrices $n\times n$ de la forma 
+	$$\left[ \begin{array}{cccc}
+		x_{11}+iy_{11} & x_{12}+iy_{12} & \cdots & x_{1n}+iy_{1n}\\
+			x_{21}+iy_{21} & x_{22}+iy_{22} & \cdots & x_{2n}+iy_{2n}\\
+			\vdots        & \vdots        & \ddots & \vdots       \\
+			x_{n1}+iy_{n1} & x_{n2}+iy_{n2} & \cdots & x_{nn}+iy_{nn}
+	\end{array}\right] $$
+	tal que $a_{jk}=x_{jk}+iy_{jk}=x_{kj}-iy_{kj}=\overline{x_{kj}+iy_{kj}}=\overline{a_{kj}}$; sea el conjunto de los números reales $\mathbb{R}$, el conjunto de escalares y consideremos las operaciones de suma y producto por un escalar las usuales para las matrices. Entonces se tiene que:
+	(1) La suma de matrices en $V$ es cerrada: Sean $A, B\in V$, como $\overline{a_{jk}+b_{jk}}=\overline{a_{kj}}+\overline{b_{kj}}$, entonces $\forall A,B\in V$, $A+B\in V$.
+	(2) La suma en $V$ es conmutativa: ya que la suma de números complejos es conmutativa.
+	(3) La suma en $V$ es asociativa: se sigue de la propiedad asociativa de los números complejos.
+	(4) Existe el elemento neutro: la matriz nula es hermítica.
+	(5) Existencia del elemento opuesto: dada la una matriz $A\in V$, $-A$ es hermítica.
+	(6) El producto de una matriz por un escalar, es cerrada: como $\lambda \overline{x_{jk}+iy_{jk}}=\lambda (x_{jk}-iy_{jk})=\lambda x_{jk}-\lambda iy_{jk}$, se tiene que $\lambda A$ es hermítica, si $A$ es hermítica.
+	(7) Claramente $1A=A$ para todo $A\in V$, ya que $1(x_{jk}+iy_{jk})=x_{jk}+iy_{jk}$.
+	(8) Sean $\lambda,\gamma\in\mathbb{R}$ y $A\in V$, se tiene que $(\lambda\gamma) a_{jk}=(\lambda\gamma)(x_{jk}+iy_{jk})=(\lambda\gamma) x_{jk}+(\lambda\gamma) iy_{jk}=\lambda(\gamma x_{jk})+\lambda(\gamma iy_{jk})=\lambda(\gamma (x_{jk}+ iy_{jk}))=\lambda(\gamma a_{jk})$, por lo tanto $(\lambda\gamma)A=\lambda(\gamma A)$.
+	(9) Para todo $A, B\in V$ y todo $\lambda\in\mathbb{R}$, $\lambda(a_{jk}+b_{jk})=\lambda a_{jk} + \lambda b_{jk}$ ya que el producto por un escalar es distributivo respecto de la suma de números complejos.
+	(10) Para todo $A\in V$ y todo $\lambda,\gamma\in\mathbb{R}$, $(\lambda+\gamma)a_{jk}=\lambda a_{jk} + \gamma a_{jk}$ ya que el producto por un escalar es distributivo respecto de la suma de números complejos.
+	De donde se sigue que $(V,\mathbb{R},+,\cdot)$ es un espacio vectorial.
