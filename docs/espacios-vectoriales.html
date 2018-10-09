@@ -25,7 +25,7 @@
 <meta name="author" content="Synergy Vision">
 
 
-<meta name="date" content="2018-09-29">
+<meta name="date" content="2018-10-09">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -147,6 +147,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="4.2" data-path="espacios-vectoriales.html"><a href="espacios-vectoriales.html#matrices"><i class="fa fa-check"></i><b>4.2</b> Matrices</a></li>
 <li class="chapter" data-level="4.3" data-path="espacios-vectoriales.html"><a href="espacios-vectoriales.html#ecuaciones-lineales-y-matrices"><i class="fa fa-check"></i><b>4.3</b> Ecuaciones lineales y matrices</a></li>
 <li class="chapter" data-level="4.4" data-path="espacios-vectoriales.html"><a href="espacios-vectoriales.html#teoria-de-espacios-vectoriales"><i class="fa fa-check"></i><b>4.4</b> Teoría de espacios vectoriales</a></li>
+<li class="chapter" data-level="4.5" data-path="espacios-vectoriales.html"><a href="espacios-vectoriales.html#ejercicios-3"><i class="fa fa-check"></i><b>4.5</b> Ejercicios:</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="matrices-1.html"><a href="matrices-1.html"><i class="fa fa-check"></i><b>5</b> Matrices</a></li>
 <li class="chapter" data-level="6" data-path="autovalores-y-autovectores.html"><a href="autovalores-y-autovectores.html"><i class="fa fa-check"></i><b>6</b> Autovalores y autovectores</a></li>
@@ -920,7 +921,121 @@ $\left[\begin{array}{cc|cc}
 <div class="example">
 <p><span id="exm:unnamed-chunk-269" class="example"><strong>Ejemplo 4.13  </strong></span> <em>El espacio de las funciones polinómicas sobre el cuerpo</em> <span class="math inline">\(\mathbb{F}\)</span>. Sea <span class="math inline">\(\mathbb{F}\)</span> un cuerpo y sea <span class="math inline">\(V\)</span> el conjunto de las funciones de <span class="math inline">\(\mathbb{F}\)</span> en <span class="math inline">\(\mathbb{F}\)</span>, de la forma <span class="math inline">\(f(x)=c_{0}+c_{1}x+\cdots+c_{n}x^{n}\)</span>, donde <span class="math inline">\(c_{0}, c_{1},\cdots c_{n}\)</span> son escalares fijos de <span class="math inline">\(\mathbb{F}\)</span> y <span class="math inline">\(n\)</span> un entero positivo cualquiera, una función de este tipo se llama <em>función polinómica</em>. Las operaciones de suman y producto por escalares se definen como en el ejemplo anterior. Es fácil ver que <span class="math inline">\(f+g\)</span> y <span class="math inline">\(\lambda f\)</span> son funciones polinómicas y cumplen con las condiciones de la definición.</p>
 </div>
+ 
+<div class="definition">
+<p><span id="def:unnamed-chunk-270" class="definition"><strong>Definición 4.10  </strong></span> Una <em>combinación lineal</em> de los vectores <span class="math inline">\(u_{1}, u_{2}, \cdots, u_{n}\)</span> de un espacio vectorial <span class="math inline">\(V\)</span>, es un vector <span class="math inline">\(v\in V\)</span>, tal que <span class="math inline">\(v=\sum_{i=1}^{n} \lambda_{i}u_{i}\)</span>, para algunos escalares <span class="math inline">\(\lambda_{1}, \lambda_{2}, \cdots, \lambda_{n}\)</span>.</p>
+</div>
 
+
+<div class="remark">
+<p> <span class="remark"><em>Nota. </em></span>  Note que una combinación lineal de vectores, es un vector del espacio gracias a que las operaciones de suma y producto por un escalar son cerradas. Una combinación lineal de combinaciones lineales de vectores, es una combinación lineal de vectores. Dados los vectores <span class="math inline">\(u_{1}, u_{2}, \cdots, u_{n}\)</span>, de las propiedades de asociatividad de la suma y las propiedades distributivas, se tiene que <span class="math inline">\(\sum_{i=1}^{n} \lambda_{i}u_{i} + \sum_{i=1}^{n} \gamma_{i}u_{i}=\sum_{i=1}^{n} (\lambda_{i}+\gamma_{i})u_{i}\)</span>.</p>
+</div>
+
+<p>Mucho del álgebra está motivado por la geometría, las palabras “espacio” y vector tienen una connotación geométrica. Los vectores en el espacio <span class="math inline">\(\mathbb{R}^{3}\)</span> son ternas <span class="math inline">\((x,y,z)\)</span> donde cada entrada representa una coordenada en el espacio. Esto se estudia en el capítulo de vectores.</p>
+
+<div class="definition">
+<p><span id="def:unnamed-chunk-272" class="definition"><strong>Definición 4.11  </strong></span> Sea <span class="math inline">\(V\)</span> un espacio vectorial sobre el cuerpo <span class="math inline">\(\mathbb{F}\)</span>. Un <em>subespacio</em> de <span class="math inline">\(V\)</span> es un subconjunto <span class="math inline">\(W\subseteq V\)</span> que junto a las mismas operaciones de suma y producto por un escalar definidas en <span class="math inline">\(V\)</span>, es en si mismo un espacio vectorial sobre <span class="math inline">\(\mathbb{F}\)</span>. Escribiremos <span class="math inline">\(W\prec V\)</span> para decir que <span class="math inline">\(W\)</span> es un subespacio de <span class="math inline">\(V\)</span>.</p>
+</div>
+
+<p>De este modo para comprobar que un subconjunto de vectores <span class="math inline">\(W\)</span> de un espacio vectorial <span class="math inline">\(V\)</span>, es un subespacio de <span class="math inline">\(V\)</span>, debemos ver que la suma y el producto por un escalar son operaciones cerradas, es decir, para todo <span class="math inline">\(u,v\in W\)</span> se debe tener que <span class="math inline">\(u+v\in W\)</span> y <span class="math inline">\(\lambda v\in W\)</span>, para calquier escalar <span class="math inline">\(\lambda\)</span> en <span class="math inline">\(\mathbb{F}\)</span>; que el elemento neutro (para la suma) pertenece a <span class="math inline">\(W\)</span>, y que todo vector de <span class="math inline">\(W\)</span>, tiene un opuesto en <span class="math inline">\(W\)</span>, es decir para todo <span class="math inline">\(v\in W\)</span>, <span class="math inline">\(-v\in W\)</span>. Las otras propiedades se heredan del espacio vectorial <span class="math inline">\(V\)</span>. En alguna literatura se puede conseguir que la definición de subespacio vectorial es un subconjunto <span class="math inline">\(W\)</span> que tiene la siguiente propiedad: para todo <span class="math inline">\(u,v\in W\)</span> y todo <span class="math inline">\(\lambda\in\mathbb{F}\)</span>, <span class="math inline">\(\lambda u+v\in W\)</span>. Sin embargo, se puede demostrar la equivalencia entre ambas afirmaciones.</p>
+
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-273" class="theorem"><strong>Teorema 4.13  </strong></span> Un subconjunto no vacío <span class="math inline">\(W\)</span> de <span class="math inline">\(V\)</span> es un subespacio de <span class="math inline">\(V\)</span> si y solo si, para todo par de vectores <span class="math inline">\(u,v\)</span> de <span class="math inline">\(W\)</span> y todo escalar <span class="math inline">\(\lambda\)</span> en el cuerpo <span class="math inline">\(\mathbb{F}\)</span>, se tinen que el vector (combinación lineal) <span class="math inline">\(\lambda u + v\)</span> está en <span class="math inline">\(W\)</span>.</p>
+</div>
+ 
+<div class="proof">
+<p> <span class="proof"><em>Demostración. </em></span>  Sea <span class="math inline">\(W\)</span> un subconjunto de vectores con la propiedad de que <span class="math inline">\(\forall u,v\in W\)</span> y <span class="math inline">\(\forall \lambda\in\mathbb{F}\)</span>, <span class="math inline">\(\lambda u + v\in W\)</span>. Sea <span class="math inline">\(r\in W\)</span>, ya que <span class="math inline">\(W\)</span> no es vacío, entonces, por la propiedad del conjunto <span class="math inline">\((-1)r+r=-r+r=0\in W\)</span>, lo que indica que <span class="math inline">\(W\)</span> contiene al elemento neutro; así <span class="math inline">\((-1)r+0=-r\in W\)</span>, por lo que <span class="math inline">\(W\)</span> tiene al opuesto de todo sus vectores; en general <span class="math inline">\(\lambda u +0\in W\)</span>, es decir el producto por un escalar es cerrado; de este modo, si <span class="math inline">\(u,v\in W\)</span>, <span class="math inline">\(u+v=(1)u+v\in W\)</span>, por lo que se tiene que la suma es cerrada; de donde se concluye que <span class="math inline">\(W\)</span> es un subespacio. Recíprocamente, si <span class="math inline">\(W\)</span> es un subespacio, por definición se tiene que cumple que <span class="math inline">\(\forall u,v\in W\)</span> y <span class="math inline">\(\forall \lambda\in\mathbb{F}\)</span>, <span class="math inline">\(\lambda u + v\in W\)</span>.</p>
+</div>
+ 
+<div class="example">
+<p><span id="exm:unnamed-chunk-275" class="example"><strong>Ejemplo 4.14  </strong></span> Dado un espacio vectorial <span class="math inline">\(V\)</span>, el mismo <span class="math inline">\(V\)</span> es subespacio de <span class="math inline">\(V\)</span>. El conjunto cuyo único elemento es el vector cero <span class="math inline">\(\{\vec{0}\}\)</span> es subespacio de <span class="math inline">\(V\)</span>, llamado el subespacio nulo de <span class="math inline">\(V\)</span>. Estos dos subespacios son los subespacios triviales de <span class="math inline">\(V\)</span>.</p>
+</div>
+
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-276" class="example"><strong>Ejemplo 4.15  </strong></span> En el espacio <span class="math inline">\(\mathbb{F}^{n}\)</span>, el conjunto de las <span class="math inline">\(n\)</span>-tuplas <span class="math inline">\((x_{1}, x_{2},\cdots , x_{n})\)</span> donde <span class="math inline">\(x_{i}=0\)</span>, para algún <span class="math inline">\(i\)</span> fijo, es un subespacio de <span class="math inline">\(\mathbb{F}^{n}\)</span>. Pero el conjunto de las <span class="math inline">\(n\)</span>-tuplas, tales que <span class="math inline">\(x_{i}+kx_{j}=p\)</span> no es un subespacio.</p>
+</div>
+
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-277" class="example"><strong>Ejemplo 4.16  </strong></span> El espacio de las funciones polinómicas es subespacio del espacio de todas las funciones.</p>
+</div>
+
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-278" class="example"><strong>Ejemplo 4.17  </strong></span> Una matriz cuadrada <span class="math inline">\(n\times n\)</span>, es una <em>matriz simétrica</em> si <span class="math inline">\(a_{ij}=a_{ji}\)</span> para todo <span class="math inline">\(1\leq i,j\leq n\)</span>. El conjunto de las matrices simétricas es un subespacio del espacio de las matrices <span class="math inline">\(n\times n\)</span>.</p>
+</div>
+
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-279" class="example"><strong>Ejemplo 4.18  </strong></span> Una matriz cuadrada <span class="math inline">\(n\times n\)</span> sobre el cuerpo de los números complejos <span class="math inline">\(\mathbb{C}\)</span> es una <em>matriz hermítica</em> (o <em>autoadjunta</em>) si <span class="math inline">\(a_{jk}=\bar{a_{kj}}\)</span> para todo <span class="math inline">\(1\leq j,k\leq n\)</span>, donde la barra sobre el escalar <span class="math inline">\(a_{kj}\)</span> denota la conjugación compleja. El conjunto de las matrices hermíticas es un subespacio sobre el espacio de las matrices cuadradas <span class="math inline">\(n\times n\)</span> sobre <span class="math inline">\(\mathbb{R}\)</span>.</p>
+</div>
+ 
+<div class="example">
+<span id="exm:unnamed-chunk-280" class="example"><strong>Ejemplo 4.19  </strong></span> El espacio de las soluciones de un sistema homogéneo de ecuaciones. Dada una matriz <span class="math inline">\(A\)</span> <span class="math inline">\(m\times n\)</span>, el conjunto de las soluciones, de la ecuación <span class="math inline">\(AX=0\)</span>, forman un subespacio del espacio de las matrices <span class="math inline">\(n\times 1\)</span>. Para esto basta ver que dadas dos soluciones del sistema <span class="math inline">\(X_{1}\)</span> y <span class="math inline">\(X_{2}\)</span>, la matriz <span class="math inline">\(\lambda X_{1} + X_{2}\)</span>, con <span class="math inline">\(\lambda\)</span> un escalar cualquiera, es también solución del sistema. Esto es fácil de ver, ya que <span class="math display">\[\begin{array}{cl}
+     [A(\lambda X_{1}+X_{2})]_{ij}&amp;=\sum_{k=1}^{n} [A]_{ik}[\lambda X_{1}+ X_{2}]_{kj}\\
+                                  &amp;=\sum_{k=1}^{n} [A]_{ik}\lambda [X_{1}]_{kj}+ A_{ik}[X_{2}]_{kj}\\
+                                  &amp;=\sum_{k=1}^{n} \lambda ([A]_{ik} [X_{1}]_{kj})+ ([A]_{ik}[X_{2}]_{kj})\\
+                                  &amp;=\lambda \sum_{k=1}^{n} ([A]_{ik} [X_{1}]_{kj}) + \sum_{k=1}^{n} ([A]_{ik}[X_{2}]_{kj})\\
+                                  &amp;=\lambda[AX_{1}]_{ij} + [AX_{2}]_{ij}
+     \end{array}\]</span>
+</div>
+
+<p>De hecho, la demostración del ejemplo anterior se puede generalizar.</p>
+
+<div class="lemma">
+<p><span id="lem:unnamed-chunk-281" class="lemma"><strong>Lema 4.2  </strong></span> Sea <span class="math inline">\(A\)</span> una matriz <span class="math inline">\(m\times n\)</span> sobre el cuerpo <span class="math inline">\(\mathbb{F}\)</span>. Si <span class="math inline">\(B\)</span> y <span class="math inline">\(C\)</span> matrices <span class="math inline">\(n\times p\)</span> sobre el mismo cuerpo, y <span class="math inline">\(\lambda\)</span> un escalar. Entonces <span class="math inline">\(A(\lambda B + C)=\lambda(AB)+ AC\)</span>. Si <span class="math inline">\(B\)</span> y <span class="math inline">\(C\)</span> matrices <span class="math inline">\(q\times m\)</span> sobre el mismo cuerpo, y <span class="math inline">\(\lambda\)</span> un escalar. Entonces <span class="math inline">\((\lambda B + C)A=\lambda(BA)+ CA\)</span>.</p>
+</div>
+
+
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-282" class="theorem"><strong>Teorema 4.14  </strong></span> Sea <span class="math inline">\(V\)</span> un espacio vectorial. Entonces la intersección de una colección arbitraria de subespacios de <span class="math inline">\(V\)</span>, es un subespacio de <span class="math inline">\(V\)</span>.</p>
+</div>
+
+
+<div class="proof">
+<p> <span class="proof"><em>Demostración. </em></span>  Sea <span class="math inline">\(\{W_{\alpha} \}\)</span> una colección de subespacios de <span class="math inline">\(V\)</span>. Sea <span class="math inline">\(W=\bigcap _{\alpha} W_{\alpha}\)</span> la intersección de la colección de subespacios. Note que el vector cero pertece a todo <span class="math inline">\(W_{\alpha}\)</span> ya que cada <span class="math inline">\(W_{\alpha}\)</span> es un subespacio de <span class="math inline">\(V\)</span>; por lo tanto el vector cero pertenece a la intersección <span class="math inline">\(W\)</span>, así <span class="math inline">\(W\)</span> no es vacío. Sean <span class="math inline">\(u,v\in W\)</span>, y <span class="math inline">\(\lambda\)</span> un escalar. Entonces <span class="math inline">\(u,v\in W_{\alpha}\)</span> para todo <span class="math inline">\(\alpha\)</span>, como cada <span class="math inline">\(W_{\aleph}\)</span> es un subespacio, se tiene que <span class="math inline">\(\lambda u + v\in W_{\alpha}\)</span> para todo <span class="math inline">\(\alpha\)</span>, de donde se sigue que <span class="math inline">\(\lambda u +v\in W\)</span>, lo que muestra que <span class="math inline">\(W\prec V\)</span>.</p>
+</div>
+
+<p>Del teorema anterior dado un subconjunto no vacío <span class="math inline">\(S\)</span> de un espacio vectorial, podemos construír un subespacio que contenga a <span class="math inline">\(S\)</span> y que sea mínimo (en el sentido de la contención).</p>
+
+<div class="definition">
+<p><span id="def:unnamed-chunk-284" class="definition"><strong>Definición 4.12  </strong></span> Sea <span class="math inline">\(S\)</span> un conjunto de vectores de un espacio vectorial <span class="math inline">\(V\)</span>. El <em>subespacio generado</em> por <span class="math inline">\(S\)</span> es la intersección de todos los subespacios que contienen a <span class="math inline">\(S\)</span> y se denota <span class="math inline">\(\left\langle S \right\langle\)</span>. Es decir, <span class="math inline">\(\left\langle S \right\rangle =\bigcap \{W\prec V : S\subseteq W \}\)</span>. Cuando <span class="math inline">\(S\)</span> es un conjunto finito de vectores, <span class="math inline">\(u_{1}, u_{2},\cdots u_{n}\)</span> se denota <span class="math inline">\(\left\langle u_{1}, u_{2},\cdots u_{n} \right\rangle\)</span> y dicimos simplemente que <span class="math inline">\(\left\langle u_{1}, u_{2},\cdots u_{n} \right\rangle\)</span> es el subespacio generado por los vectores <span class="math inline">\(u_{1}, u_{2},\cdots u_{n}\)</span>.</p>
+</div>
+
+
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-285" class="theorem"><strong>Teorema 4.15  </strong></span> Sea <span class="math inline">\(V\)</span> un espacio vectorial y <span class="math inline">\(S\subseteq V\)</span> no vacío. El subespacio generado por <span class="math inline">\(S\)</span>, <span class="math inline">\(\left\langle S \right\rangle\)</span>, es el conjunto de todas las combinaciones lineales de los vectores de <span class="math inline">\(S\)</span>.</p>
+</div>
+
+
+<div class="proof">
+<p> <span class="proof"><em>Demostración. </em></span>  Sea <span class="math inline">\(L(S)\)</span> el conjunto de todas las combinaciones lineales de <span class="math inline">\(S\)</span>, es decir, <span class="math inline">\(L(S)=\{\sum_{i=1}^{n} \lambda_{i} u_{i}: \lambda_{i}\mbox{ es un escalar, } u_{i}\in S, n\in\mathbb{N} \}\)</span>. Es claro que <span class="math inline">\(L(S)\subseteq \left\langle S \right\rangle\)</span>, ya que toda combinación lineal de elementos de <span class="math inline">\(S\)</span> es un elemento de <span class="math inline">\(\left\langle S \right\rangle\)</span> (por definición de subespacio). Ahora, veamos la otra contención. Para esto, veamos que <span class="math inline">\(L(S)\)</span> es un subespacio vectorial que contiene a <span class="math inline">\(S\)</span> (y así tendremos que <span class="math inline">\(\left\langle S \right\rangle\subseteq L(S)\)</span>). Primero, como <span class="math inline">\(S\subseteq L(S)\)</span> se tiene que <span class="math inline">\(L(S)\)</span> no es vacío. Sean <span class="math inline">\(v, w\in L(S)\)</span>, como combinaciones lineales de combinaciones lineales, vuelven a ser combinaciones lineales (del mismo conjunto de vectores) entonces <span class="math inline">\(\gamma v + w\in L(S)\)</span>, lo que muestra que <span class="math inline">\(L(S)\)</span> es un subespacio de <span class="math inline">\(V\)</span> que contiene al conjunto <span class="math inline">\(S\)</span>, por ser <span class="math inline">\(\left\langle S \right\rangle\)</span> el menor subespacio con esta propiedad, se tiene que <span class="math inline">\(\left\langle S \right\rangle\subseteq L(S)\)</span>. Por lo que <span class="math inline">\(\left\langle S \right\rangle = L(S)\)</span>.</p>
+</div>
+
+</div>
+<div id="ejercicios-3" class="section level2">
+<h2><span class="header-section-number">4.5</span> Ejercicios:</h2>
+<pre><code>(1) Muestre que el conjunto de las matrices hermíticas $n\times n$ es un espacio vectorial sobre el conjunto de los números reales $\mathbb{R}$.
+Respuesta: Sea $V$ el conjunto de las matrices $n\times n$ de la forma 
+$$\left[ \begin{array}{cccc}
+    x_{11}+iy_{11} &amp; x_{12}+iy_{12} &amp; \cdots &amp; x_{1n}+iy_{1n}\\
+        x_{21}+iy_{21} &amp; x_{22}+iy_{22} &amp; \cdots &amp; x_{2n}+iy_{2n}\\
+        \vdots        &amp; \vdots        &amp; \ddots &amp; \vdots       \\
+        x_{n1}+iy_{n1} &amp; x_{n2}+iy_{n2} &amp; \cdots &amp; x_{nn}+iy_{nn}
+\end{array}\right] $$
+tal que $a_{jk}=x_{jk}+iy_{jk}=x_{kj}-iy_{kj}=\overline{x_{kj}+iy_{kj}}=\overline{a_{kj}}$; sea el conjunto de los números reales $\mathbb{R}$, el conjunto de escalares y consideremos las operaciones de suma y producto por un escalar las usuales para las matrices. Entonces se tiene que:
+(i) La suma de matrices en $V$ es cerrada: Sean $A, B\in V$, como $\overline{a_{jk}+b_{jk}}=\overline{a_{kj}}+\overline{b_{kj}}$, entonces $\forall A,B\in V$, $A+B\in V$.
+(ii) La suma en $V$ es conmutativa: ya que la suma de números complejos es conmutativa.
+(iii) La suma en $V$ es asociativa: se sigue de la propiedad asociativa de los números complejos.
+(iv) Existe el elemento neutro: la matriz nula es hermítica.
+(v) Existencia del elemento opuesto: dada la una matriz $A\in V$, $-A$ es hermítica.
+(vi) El producto de una matriz por un escalar, es cerrada: como $\lambda \overline{x_{jk}+iy_{jk}}=\lambda (x_{jk}-iy_{jk})=\lambda x_{jk}-\lambda iy_{jk}$, se tiene que $\lambda A$ es hermítica, si $A$ es hermítica.
+(vii) Claramente $1A=A$ para todo $A\in V$, ya que $1(x_{jk}+iy_{jk})=x_{jk}+iy_{jk}$.
+(viii) Sean $\lambda,\gamma\in\mathbb{R}$ y $A\in V$, se tiene que $(\lambda\gamma) a_{jk}=(\lambda\gamma)(x_{jk}+iy_{jk})=(\lambda\gamma) x_{jk}+(\lambda\gamma) iy_{jk}=\lambda(\gamma x_{jk})+\lambda(\gamma iy_{jk})=\lambda(\gamma (x_{jk}+ iy_{jk}))=\lambda(\gamma a_{jk})$, por lo tanto $(\lambda\gamma)A=\lambda(\gamma A)$.
+(ix) Para todo $A, B\in V$ y todo $\lambda\in\mathbb{R}$, $\lambda(a_{jk}+b_{jk})=\lambda a_{jk} + \lambda b_{jk}$ ya que el producto por un escalar es distributivo respecto de la suma de números complejos.
+(x) Para todo $A\in V$ y todo $\lambda,\gamma\in\mathbb{R}$, $(\lambda+\gamma)a_{jk}=\lambda a_{jk} + \gamma a_{jk}$ ya que el producto por un escalar es distributivo respecto de la suma de números complejos.
+De donde se sigue que $(V,\mathbb{R},+,\cdot)$ es un espacio vectorial.</code></pre>
 
 </div>
 </div>

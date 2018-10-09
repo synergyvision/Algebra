@@ -4,7 +4,7 @@
 title: "Álgebra Lineal"
 subtitle: "Ciencia de los Datos Financieros"
 author: "Synergy Vision"
-date: "2018-09-29"
+date: "2018-10-09"
 knit: "bookdown::render_book"
 documentclass: krantz
 bibliography: [book.bib, packages.bib]
@@ -2490,6 +2490,96 @@ Note que un espacio vectorial consta de cuatro cosas, un cuerpo, un conjunto no 
 
 \BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-269"><strong>(\#exm:unnamed-chunk-269) </strong></span>	*El espacio de las funciones polinómicas sobre el cuerpo* $\mathbb{F}$. Sea $\mathbb{F}$ un cuerpo y sea $V$ el conjunto de las funciones de $\mathbb{F}$ en $\mathbb{F}$, de la forma $f(x)=c_{0}+c_{1}x+\cdots+c_{n}x^{n}$, donde $c_{0}, c_{1},\cdots c_{n}$ son escalares fijos de $\mathbb{F}$ y $n$ un entero positivo cualquiera, una función de este tipo se llama *función polinómica*. Las operaciones de suman y producto por escalares se definen como en el ejemplo anterior. Es fácil ver que $f+g$ y $\lambda f$ son funciones polinómicas y cumplen con las condiciones de la definición.
 </div>\EndKnitrBlock{example}
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-270"><strong>(\#def:unnamed-chunk-270) </strong></span>	Una *combinación lineal* de los vectores $u_{1}, u_{2}, \cdots, u_{n}$ de un espacio vectorial $V$, es un vector $v\in V$, tal que $v=\sum_{i=1}^{n} \lambda_{i}u_{i}$, para algunos escalares $\lambda_{1}, \lambda_{2}, \cdots, \lambda_{n}$.
+</div>\EndKnitrBlock{definition}
+
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	Note que una combinación lineal de vectores, es un vector del espacio gracias a que las operaciones de suma y producto por un escalar son cerradas.
+	Una combinación lineal de combinaciones lineales de vectores, es una combinación lineal de vectores.
+	Dados los vectores $u_{1}, u_{2}, \cdots, u_{n}$, de las propiedades de asociatividad de la suma y las propiedades distributivas, se tiene que $\sum_{i=1}^{n} \lambda_{i}u_{i} + \sum_{i=1}^{n} \gamma_{i}u_{i}=\sum_{i=1}^{n} (\lambda_{i}+\gamma_{i})u_{i}$.
+</div>\EndKnitrBlock{remark}
+
+Mucho del álgebra está motivado por la geometría, las palabras "espacio" y vector tienen una connotación geométrica. Los vectores en el espacio $\mathbb{R}^{3}$ son ternas $(x,y,z)$ donde cada entrada representa una coordenada en el espacio. Esto se estudia en el capítulo de vectores.
+
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-272"><strong>(\#def:unnamed-chunk-272) </strong></span>	Sea $V$ un espacio vectorial sobre el cuerpo $\mathbb{F}$. Un *subespacio* de $V$ es un subconjunto $W\subseteq V$ que junto a las mismas operaciones de suma y producto por un escalar definidas en $V$, es en si mismo un espacio vectorial sobre $\mathbb{F}$. Escribiremos $W\prec V$ para decir que $W$ es un subespacio de $V$.
+</div>\EndKnitrBlock{definition}
+
+De este modo para comprobar que un subconjunto de vectores $W$ de un espacio vectorial $V$, es un subespacio de $V$, debemos ver que la suma y el producto por un escalar son operaciones cerradas, es decir, para todo $u,v\in W$ se debe tener que $u+v\in W$ y $\lambda v\in W$, para calquier escalar $\lambda$ en $\mathbb{F}$; que el elemento neutro (para la suma) pertenece a $W$, y que todo vector de $W$, tiene un opuesto en $W$, es decir para todo $v\in W$, $-v\in W$. Las otras propiedades se heredan del espacio vectorial $V$.
+En alguna literatura se puede conseguir que la definición de subespacio vectorial es un subconjunto $W$ que tiene la siguiente propiedad: para todo $u,v\in W$ y todo $\lambda\in\mathbb{F}$, $\lambda u+v\in W$. Sin embargo, se puede demostrar la equivalencia entre ambas afirmaciones.
+
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-273"><strong>(\#thm:unnamed-chunk-273) </strong></span>	Un subconjunto no vacío $W$ de $V$ es un subespacio de $V$ si y solo si, para todo par de vectores $u,v$ de $W$ y todo escalar $\lambda$ en el cuerpo $\mathbb{F}$, se tinen que el vector (combinación lineal) $\lambda u + v$ está en $W$.
+</div>\EndKnitrBlock{theorem}
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Sea $W$ un subconjunto de vectores con la propiedad de que $\forall u,v\in W$ y $\forall \lambda\in\mathbb{F}$, $\lambda u + v\in W$. Sea $r\in W$, ya que $W$ no es vacío, entonces, por la propiedad del conjunto $(-1)r+r=-r+r=0\in W$, lo que indica que $W$ contiene al elemento neutro; así $(-1)r+0=-r\in W$, por lo que $W$ tiene al opuesto de todo sus vectores; en general $\lambda u +0\in W$, es decir el producto por un escalar es cerrado; de este modo, si $u,v\in W$, $u+v=(1)u+v\in W$, por lo que se tiene que la suma es cerrada; de donde se concluye que $W$ es un subespacio. Recíprocamente, si $W$ es un subespacio, por definición se tiene que cumple que $\forall u,v\in W$ y $\forall \lambda\in\mathbb{F}$, $\lambda u + v\in W$.
+</div>\EndKnitrBlock{proof}
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-275"><strong>(\#exm:unnamed-chunk-275) </strong></span>	Dado un espacio vectorial $V$, el mismo $V$ es subespacio de $V$. El conjunto cuyo único elemento es el vector cero $\{\vec{0}\}$ es subespacio de $V$, llamado el subespacio nulo de $V$. Estos dos subespacios son los subespacios triviales de $V$.
+</div>\EndKnitrBlock{example}
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-276"><strong>(\#exm:unnamed-chunk-276) </strong></span>	En el espacio $\mathbb{F}^{n}$, el conjunto de las $n$-tuplas $(x_{1}, x_{2},\cdots , x_{n})$ donde $x_{i}=0$, para algún $i$ fijo, es un subespacio de $\mathbb{F}^{n}$. Pero el conjunto de las $n$-tuplas, tales que $x_{i}+kx_{j}=p$ no es un subespacio.
+</div>\EndKnitrBlock{example}
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-277"><strong>(\#exm:unnamed-chunk-277) </strong></span>	El espacio de las funciones polinómicas es subespacio del espacio de todas las funciones.
+</div>\EndKnitrBlock{example}
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-278"><strong>(\#exm:unnamed-chunk-278) </strong></span>	Una matriz cuadrada $n\times n$, es una *matriz simétrica* si $a_{ij}=a_{ji}$ para todo $1\leq i,j\leq n$. El conjunto de las matrices simétricas es un subespacio del espacio de las matrices $n\times n$.
+</div>\EndKnitrBlock{example}
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-279"><strong>(\#exm:unnamed-chunk-279) </strong></span>	Una matriz cuadrada $n\times n$ sobre el cuerpo de los números complejos $\mathbb{C}$ es una *matriz hermítica* (o *autoadjunta*) si $a_{jk}=\bar{a_{kj}}$ para todo $1\leq j,k\leq n$, donde la barra sobre el escalar $a_{kj}$ denota la conjugación compleja. El conjunto de las matrices hermíticas es un subespacio sobre el espacio de las matrices cuadradas $n\times n$ sobre $\mathbb{R}$.
+</div>\EndKnitrBlock{example}
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-280"><strong>(\#exm:unnamed-chunk-280) </strong></span>	El espacio de las soluciones de un sistema  homogéneo de ecuaciones. Dada una matriz $A$ $m\times n$, el conjunto de las soluciones, de la ecuación $AX=0$, forman un subespacio del espacio de las matrices $n\times 1$. Para esto basta ver que dadas dos soluciones del sistema $X_{1}$ y $X_{2}$, la matriz $\lambda X_{1} + X_{2}$, con $\lambda$ un escalar cualquiera, es también solución del sistema. Esto es fácil de ver, ya que
+	 $$\begin{array}{cl}
+	 [A(\lambda X_{1}+X_{2})]_{ij}&=\sum_{k=1}^{n} [A]_{ik}[\lambda X_{1}+ X_{2}]_{kj}\\
+	                              &=\sum_{k=1}^{n} [A]_{ik}\lambda [X_{1}]_{kj}+ A_{ik}[X_{2}]_{kj}\\
+	                              &=\sum_{k=1}^{n} \lambda ([A]_{ik} [X_{1}]_{kj})+ ([A]_{ik}[X_{2}]_{kj})\\
+	                              &=\lambda \sum_{k=1}^{n} ([A]_{ik} [X_{1}]_{kj}) + \sum_{k=1}^{n} ([A]_{ik}[X_{2}]_{kj})\\
+	                              &=\lambda[AX_{1}]_{ij} + [AX_{2}]_{ij}
+	 \end{array}$$
+	 </div>\EndKnitrBlock{example}
+
+De hecho, la demostración del ejemplo anterior se puede generalizar.
+
+\BeginKnitrBlock{lemma}<div class="lemma"><span class="lemma" id="lem:unnamed-chunk-281"><strong>(\#lem:unnamed-chunk-281) </strong></span>	Sea $A$ una matriz $m\times n$ sobre el cuerpo $\mathbb{F}$.
+  Si $B$ y $C$ matrices $n\times p$ sobre el mismo cuerpo, y $\lambda$ un escalar. Entonces $A(\lambda B + C)=\lambda(AB)+ AC$.
+	Si $B$ y $C$ matrices $q\times m$ sobre el mismo cuerpo, y $\lambda$ un escalar. Entonces $(\lambda B + C)A=\lambda(BA)+ CA$.
+</div>\EndKnitrBlock{lemma}
+	
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-282"><strong>(\#thm:unnamed-chunk-282) </strong></span>	Sea $V$ un espacio vectorial. Entonces la intersección de una colección arbitraria de subespacios de $V$, es un subespacio de $V$.
+</div>\EndKnitrBlock{theorem}
+
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Sea $\{W_{\alpha} \}$ una colección de subespacios de $V$. Sea $W=\bigcap _{\alpha} W_{\alpha}$ la intersección de la colección de subespacios. Note que el vector cero pertece a todo $W_{\alpha}$ ya que cada $W_{\alpha}$ es un subespacio de $V$; por lo tanto el vector cero pertenece a la intersección $W$, así $W$ no es vacío. Sean $u,v\in W$, y $\lambda$ un escalar. Entonces $u,v\in W_{\alpha}$ para todo $\alpha$, como cada $W_{\aleph}$ es un subespacio, se tiene que $\lambda u + v\in W_{\alpha}$ para todo $\alpha$, de donde se sigue que $\lambda u +v\in W$, lo que muestra que $W\prec V$.
+</div>\EndKnitrBlock{proof}
+
+Del teorema anterior dado un subconjunto no vacío $S$ de un espacio vectorial, podemos construír un subespacio que contenga a $S$ y que sea mínimo (en el sentido de la contención).
+
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-284"><strong>(\#def:unnamed-chunk-284) </strong></span>	Sea $S$ un conjunto de vectores de un espacio vectorial $V$. El *subespacio generado* por $S$ es la intersección de todos los subespacios que contienen a $S$ y se denota $\left\langle S \right\langle$. Es decir, $\left\langle S \right\rangle =\bigcap \{W\prec V : S\subseteq W \}$. Cuando $S$ es un conjunto finito de vectores, $u_{1}, u_{2},\cdots u_{n}$ se denota $\left\langle u_{1}, u_{2},\cdots u_{n} \right\rangle$ y dicimos simplemente que $\left\langle u_{1}, u_{2},\cdots u_{n} \right\rangle$ es el subespacio generado por los vectores $u_{1}, u_{2},\cdots u_{n}$.
+</div>\EndKnitrBlock{definition}
+
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-285"><strong>(\#thm:unnamed-chunk-285) </strong></span>	Sea $V$ un espacio vectorial y $S\subseteq V$ no vacío. El subespacio generado por $S$, $\left\langle S \right\rangle$, es el conjunto de todas las combinaciones lineales de los vectores de $S$.
+</div>\EndKnitrBlock{theorem}
+
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Sea $L(S)$ el conjunto de todas las combinaciones lineales de $S$, es decir, $L(S)=\{\sum_{i=1}^{n} \lambda_{i} u_{i}: \lambda_{i}\mbox{ es un escalar, } u_{i}\in S, n\in\mathbb{N} \}$. Es claro que $L(S)\subseteq \left\langle S \right\rangle$, ya que toda combinación lineal de elementos de $S$ es un elemento de $\left\langle S \right\rangle$ (por definición de subespacio). Ahora, veamos la otra contención. Para esto, veamos que $L(S)$ es un subespacio vectorial que contiene a $S$ (y así tendremos que $\left\langle S \right\rangle\subseteq L(S)$). Primero, como $S\subseteq L(S)$ se tiene que $L(S)$ no es vacío. Sean $v, w\in L(S)$, como combinaciones lineales de combinaciones lineales, vuelven a ser combinaciones lineales (del mismo conjunto de vectores) entonces $\gamma v + w\in L(S)$, lo que muestra que $L(S)$ es un subespacio de $V$ que contiene al conjunto $S$, por ser $\left\langle S \right\rangle$ el menor subespacio con esta propiedad, se tiene que $\left\langle S \right\rangle\subseteq L(S)$. Por lo que $\left\langle S \right\rangle = L(S)$.
+</div>\EndKnitrBlock{proof}
+
+## Ejercicios:
+
+	(1) Muestre que el conjunto de las matrices hermíticas $n\times n$ es un espacio vectorial sobre el conjunto de los números reales $\mathbb{R}$.
+	Respuesta: Sea $V$ el conjunto de las matrices $n\times n$ de la forma 
+	$$\left[ \begin{array}{cccc}
+		x_{11}+iy_{11} & x_{12}+iy_{12} & \cdots & x_{1n}+iy_{1n}\\
+			x_{21}+iy_{21} & x_{22}+iy_{22} & \cdots & x_{2n}+iy_{2n}\\
+			\vdots        & \vdots        & \ddots & \vdots       \\
+			x_{n1}+iy_{n1} & x_{n2}+iy_{n2} & \cdots & x_{nn}+iy_{nn}
+	\end{array}\right] $$
+	tal que $a_{jk}=x_{jk}+iy_{jk}=x_{kj}-iy_{kj}=\overline{x_{kj}+iy_{kj}}=\overline{a_{kj}}$; sea el conjunto de los números reales $\mathbb{R}$, el conjunto de escalares y consideremos las operaciones de suma y producto por un escalar las usuales para las matrices. Entonces se tiene que:
+	(i) La suma de matrices en $V$ es cerrada: Sean $A, B\in V$, como $\overline{a_{jk}+b_{jk}}=\overline{a_{kj}}+\overline{b_{kj}}$, entonces $\forall A,B\in V$, $A+B\in V$.
+	(ii) La suma en $V$ es conmutativa: ya que la suma de números complejos es conmutativa.
+	(iii) La suma en $V$ es asociativa: se sigue de la propiedad asociativa de los números complejos.
+	(iv) Existe el elemento neutro: la matriz nula es hermítica.
+	(v) Existencia del elemento opuesto: dada la una matriz $A\in V$, $-A$ es hermítica.
+	(vi) El producto de una matriz por un escalar, es cerrada: como $\lambda \overline{x_{jk}+iy_{jk}}=\lambda (x_{jk}-iy_{jk})=\lambda x_{jk}-\lambda iy_{jk}$, se tiene que $\lambda A$ es hermítica, si $A$ es hermítica.
+	(vii) Claramente $1A=A$ para todo $A\in V$, ya que $1(x_{jk}+iy_{jk})=x_{jk}+iy_{jk}$.
+	(viii) Sean $\lambda,\gamma\in\mathbb{R}$ y $A\in V$, se tiene que $(\lambda\gamma) a_{jk}=(\lambda\gamma)(x_{jk}+iy_{jk})=(\lambda\gamma) x_{jk}+(\lambda\gamma) iy_{jk}=\lambda(\gamma x_{jk})+\lambda(\gamma iy_{jk})=\lambda(\gamma (x_{jk}+ iy_{jk}))=\lambda(\gamma a_{jk})$, por lo tanto $(\lambda\gamma)A=\lambda(\gamma A)$.
+	(ix) Para todo $A, B\in V$ y todo $\lambda\in\mathbb{R}$, $\lambda(a_{jk}+b_{jk})=\lambda a_{jk} + \lambda b_{jk}$ ya que el producto por un escalar es distributivo respecto de la suma de números complejos.
+	(x) Para todo $A\in V$ y todo $\lambda,\gamma\in\mathbb{R}$, $(\lambda+\gamma)a_{jk}=\lambda a_{jk} + \gamma a_{jk}$ ya que el producto por un escalar es distributivo respecto de la suma de números complejos.
+	De donde se sigue que $(V,\mathbb{R},+,\cdot)$ es un espacio vectorial.
 
 <!--chapter:end:040-espacios-vectoriales.Rmd-->
 
