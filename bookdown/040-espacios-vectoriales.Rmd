@@ -1039,6 +1039,40 @@ Del teorema anterior dado un subconjunto no vacío $S$ de un espacio vectorial, 
 	Sea $L(S)$ el conjunto de todas las combinaciones lineales de $S$, es decir, $L(S)=\{\sum_{i=1}^{n} \lambda_{i} u_{i}: \lambda_{i}\mbox{ es un escalar, } u_{i}\in S, n\in\mathbb{N} \}$. Es claro que $L(S)\subseteq \left\langle S \right\rangle$, ya que toda combinación lineal de elementos de $S$ es un elemento de $\left\langle S \right\rangle$ (por definición de subespacio). Ahora, veamos la otra contención. Para esto, veamos que $L(S)$ es un subespacio vectorial que contiene a $S$ (y así tendremos que $\left\langle S \right\rangle\subseteq L(S)$). Primero, como $S\subseteq L(S)$ se tiene que $L(S)$ no es vacío. Sean $v, w\in L(S)$, como combinaciones lineales de combinaciones lineales, vuelven a ser combinaciones lineales (del mismo conjunto de vectores) entonces $\gamma v + w\in L(S)$, lo que muestra que $L(S)$ es un subespacio de $V$ que contiene al conjunto $S$, por ser $\left\langle S \right\rangle$ el menor subespacio con esta propiedad, se tiene que $\left\langle S \right\rangle\subseteq L(S)$. Por lo que $\left\langle S \right\rangle = L(S)$.
 
 ```
+Se puede usar $L(S)$ o $\left\langle S \right\rangle$ indistintamente para denotar el subespacio generado por $S$.
+
+```{definition}
+	Sean $S_{1}, S_{2},\cdots, S_{n}\subseteq V$, la suma de $S_{1}, S_{2},\cdots, S_{n}$ es el conjunto de todos las sumas $v_{1}+v_{2}+\cdots + v_{n}$ con $v_{i}\in S_{i}$, para cada $1\leq i\leq n$ y se denota $S_{1}+S_{2}+\cdots+S_{n}$ o $\sum_{i=1}^{n} S_{i}$.
+
+```
+
+Note que si $W_{1}, W_{2}, \cdots, W_{n}$ son subespacios de un espacio vectorial $V$, entonces $W=W_{1}+W_{2}+\cdots +W_{n}$ es subespacio de $V$, que contienen a cada $W_{i}$, con $1\leq i\leq n$. Entonces $W=W_{1}+W_{2}+\cdots +W_{n}=\left\langle W_{1}\cup W_{2}\cdots W_{n}\right\rangle$.
+
+```{example}
+	Sean $v_{1}=(1,0,2,0,1), v_{2}=(0,1,0,3,2), v_{3}=(0,0,1,0,0)$ vectores del espacio $\mathbb{R}^{5}$. El subespacio generado por $v_{1}, v_{2}, v_{3}$ es el espacio $\left\langle v_{1}, v_{2}, v_{3}\right\rangle =\{\lambda_{1}v_{1}+\lambda_{2}v_{2}+\lambda_{3}v_{3}: \lambda_{1}, \lambda_{2},\lambda_{3}\in\mathbb{R} \}$. Como $\alpha=\lambda_{1}v_{1}+\lambda_{2}v_{2}+\lambda_{3}v_{3}=(\lambda_{1},\lambda_{2},2\lambda_{1}+\lambda_{3},3\lambda_{2},\lambda_{1}+2\lambda_{2})$, se tiene que $\left\langle v_{1}, v_{2}, v_{3}\right\rangle =\{v\in\mathbb{R}^{5}:(\lambda_{1},\lambda_{2},2\lambda_{1}+\lambda_{3},3\lambda_{2},\lambda_{1}+2\lambda_{2})\mbox{ con } \lambda_{1}, \lambda_{2},\lambda_{3}\in\mathbb{R}\}\subseteq\mathbb{R}^{5}$.
+
+```
+
+```{example}
+	Las matrices de la forma $$\left[ \begin{array}{cc} 
+	a & b\\
+	c & 0
+	\end{array}\right]\mbox{ con }a,b,c\in\mathbb{R}$$ forman un subespacio de $\mathbb{R}^{2\times 2}$. Llamemos $W_{1}=\{A\in\mathbb{R}^{2\times 2}: a_{22}=0  \}$. Sean $A, B\in W_{1}$, entonces $\lambda A + B\in W_{1}$, pues $[\lambda A + B\in W_{1}]_{ij}=\lambda a_{ij} + b_{ij}$ y así, $[\lambda A + B\in W_{1}]_{22}=\lambda a_{22} + b_{22}=0$.
+	Las matrices de la forma $$\left[ \begin{array}{cc} 
+	a & 0\\
+	0 & b
+	\end{array}\right] \mbox{ con } a,b,c\in\mathbb{R}$$ también son un subespacio de $\mathbb{R}^{2\times 2}$. Si llamemos $W_{2}=\{A\in\mathbb{R}^{2\times 2}: a_{12}=a_{21}=0  \}$, se tiene que $\mathbb{R}^{2\times 2}=W_{1}+W_{2}$.
+	También se puede ver que $W_{1}\cap W_{2}$ es el subespacio de las matrices de la forma $$\left[ \begin{array}{cc} 
+	a & 0\\
+	0 & 0
+	\end{array}\right]\mbox{ con } a\in\mathbb{R}$$.
+
+```
+
+```{example}
+	Sea $A$ una matriz $m\times n$, sobre un cuerpo $\mathbb{F}$. Los *vectores filas* de la matriz $A$ son vectores de $\mathbb{R}^{n}$ dados por $A_{i\ast}=(a_{i1},a_{i2},\cdots, a_{in})$, con $1\leq i\leq n$. El espacio fila de la matriz $A$ es el espacio generado por los vectores fila, es decir, $\left\langle A_{1\ast},A_{2\ast}, \cdots A_{m\ast} \right\rangle $
+
+```
 
 ## Ejercicios:
 
