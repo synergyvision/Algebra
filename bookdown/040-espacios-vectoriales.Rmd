@@ -1048,7 +1048,7 @@ Se puede usar $L(S)$ o $\left\langle S \right\rangle$ indistintamente para denot
 
 Note que si $W_{1}, W_{2}, \cdots, W_{n}$ son subespacios de un espacio vectorial $V$, entonces $W=W_{1}+W_{2}+\cdots +W_{n}$ es subespacio de $V$, que contienen a cada $W_{i}$, con $1\leq i\leq n$. Entonces $W=W_{1}+W_{2}+\cdots +W_{n}=\left\langle W_{1}\cup W_{2}\cdots W_{n}\right\rangle$.
 
-```{example}
+```{example, label="ejm361"}
 	Sean $v_{1}=(1,0,2,0,1), v_{2}=(0,1,0,3,2), v_{3}=(0,0,1,0,0)$ vectores del espacio $\mathbb{R}^{5}$. El subespacio generado por $v_{1}, v_{2}, v_{3}$ es el espacio $\left\langle v_{1}, v_{2}, v_{3}\right\rangle =\{\lambda_{1}v_{1}+\lambda_{2}v_{2}+\lambda_{3}v_{3}: \lambda_{1}, \lambda_{2},\lambda_{3}\in\mathbb{R} \}$. Como $\alpha=\lambda_{1}v_{1}+\lambda_{2}v_{2}+\lambda_{3}v_{3}=(\lambda_{1},\lambda_{2},2\lambda_{1}+\lambda_{3},3\lambda_{2},\lambda_{1}+2\lambda_{2})$, se tiene que $\left\langle v_{1}, v_{2}, v_{3}\right\rangle =\{v\in\mathbb{R}^{5}:(\lambda_{1},\lambda_{2},2\lambda_{1}+\lambda_{3},3\lambda_{2},\lambda_{1}+2\lambda_{2})\mbox{ con } \lambda_{1}, \lambda_{2},\lambda_{3}\in\mathbb{R}\}\subseteq\mathbb{R}^{5}$.
 
 ```
@@ -1070,7 +1070,70 @@ Note que si $W_{1}, W_{2}, \cdots, W_{n}$ son subespacios de un espacio vectoria
 ```
 
 ```{example}
-	Sea $A$ una matriz $m\times n$, sobre un cuerpo $\mathbb{F}$. Los *vectores filas* de la matriz $A$ son vectores de $\mathbb{R}^{n}$ dados por $A_{i\ast}=(a_{i1},a_{i2},\cdots, a_{in})$, con $1\leq i\leq n$. El espacio fila de la matriz $A$ es el espacio generado por los vectores fila, es decir, $\left\langle A_{1\ast},A_{2\ast}, \cdots A_{m\ast} \right\rangle $
+	Sea $A$ una matriz $m\times n$, sobre un cuerpo $\mathbb{F}$. Los *vectores filas* de la matriz $A$ son vectores de $\mathbb{R}^{n}$ dados por $A_{i\ast}=(a_{i1},a_{i2},\cdots, a_{in})$, con $1\leq i\leq n$. El espacio fila de la matriz $A$ es el espacio generado por los vectores fila, es decir, $\left\langle A_{1\ast},A_{2\ast}, \cdots A_{m\ast} \right\rangle $. El subespacio visto en el ejemplo \@ref(exm:ejm361) es exactamente el espacio fila de la matriz $$\left[ \begin{array}{ccccc} 
+	1 & 0 & 2 & 0 & 1 \\
+	0 & 1 & 0 & 3 & 2 \\
+	0 & 0 & 1 & 0 & 0
+	\end{array}\right]$$ Pero también es el espacio fila de la siguiente matriz 
+	$$\left[ \begin{array}{ccccc} 
+	1 & 0 & 2 & 0 & 1 \\
+	0 & 1 & 0 & 3 & 2 \\
+	0 & 0 & 1 & 0 & 0 \\
+	-2 & -1 & -3 & -3 & -4
+	\end{array}\right]$$ Ya que la última fila es combinación lineal de las anteriores. Sim embargo, el espacio fila de la matriz 
+	$$\left[ \begin{array}{ccccc} 
+	1 & 0 & 2 & 0 & 1 \\
+	0 & 1 & 0 & 3 & 2 \\
+	0 & 0 & 1 & 0 & 0 \\
+	0 & 0 & 0 & 1 & -1
+	\end{array}\right]$$ es diferente, esto es porque las filas de esta matriz son linealmente independientes.
+
+```
+
+```{definition}
+	Un subconjunto $S$ de un espacio vectorial $V$ es *linealmente dependiente* (se puede abreviar l.d.) si existen vectores $v_{1}, v_{2},\cdots ,v_{n}\in S$ distintos y escalares $\lambda_{1}, \lambda_{2}, \cdots , \lambda_{n}$ no todos nulos tales que la combinación lineal $\lambda_{1}v_{1}+\lambda_{2}v_{2}+\cdots +\lambda_{n}v_{n}=0$ sea igual al vector cero.
+	Un conjunto que no es linealmente dependiente, se llama *linealmente independiente*. Se puede abreviar l.i.
+
+```
+
+Si el conjunto es finito $S=\{v_{1}, v_{2},\cdots ,v_{n}\}$ podemos decir directamente que los vectores $v_{1}, v_{2},\cdots ,v_{n}$ son l.d. o l.i. (según corresponda) obviando el nombre del conjunto $S$.
+
+```{remark}
+Se tiene que:
+	
+		1. Todo conjunto que contiene a un conjunto l.d., es un conjunto l.d.
+		2. Todo subconjunto de un conjunto l.i., es l.i.
+		3. Todo conjunto que contenga el vector cero es l.d.
+		4. Un conjunto $S$ es l.i. si y solo si toda combinación lineal de vectores de $S$ que es igual a cero, implica que todos los escalares de dicha combinación lineal son iguales a cero, es decir, si para todo $n\in \mathbb{N}$, $\lambda_{1}v_{1}+\lambda_{2}v_{2}+\cdots +\lambda_{n}v_{n}=0$, donde $v_{i}\in S$ para $0\leq i\leq n$, entonces $\lambda_{1}=\lambda_{2}= \cdots =\lambda_{n}=0$.
+	
+```
+
+```{definition}
+	*Una base* de un espacio vectorial $V$, es un conjunto de vectores linealmente independientes de $V$, cuyo espacio generado coincide con $V$. El espacio $V$ es de *dimensión finita* si tiene una base finita.
+
+```
+
+```{example}
+	Los vectores $v_{1}=(1,0,2,0,1), v_{2}=(0,1,0,3,2), v_{3}=(0,0,1,0,0), v_{4}=(2,1,5,3,4)$ son linealmente dependientes, ya que $2v_{1}+v_{2}+v_{3}-v_{4}=0$. Pero $v_{1}=(1,0,2,0,1), v_{2}=(0,1,0,3,2), v_{3}=(0,0,1,0,0)$ son linealmente independientes, ya que $\lambda v_{1}+\lambda v_{2}+\lambda v_{3}=0$ solo si $\lambda_{1}=\lambda_{2}=\lambda_{3}=0$. Note que cualquier otra combinación lineal (de dos o menos vectores) es igual a cero solo cuando sus escalares son todos cero.
+
+```
+
+```{example}
+	Sean $e_{1}, e_{2}, \cdots ,e_{n}$ vectores de $\mathbb{R}^{n}$ tales que 
+	$$[e_{i}]_{j}=\left\lbrace \begin{array}{cc}
+	1 & \mbox{ si } i=j\\
+	0 & \mbox{ si } i\neq j
+	\end{array}\right. $$ donde $[e_{i}]_{j}$ denota la $j-$ésima posición (entrada o coordenada) del vector $e_{i}$. Es decir, los vectores $e_{1}, e_{2}, \cdots ,e_{n}$ son $n$ vectores casi iguales a cero, salvo que en la coordenada $i-$ésima $e_{i}$ es igual a $1$. Serían así:
+	$$\begin{array}{cl}
+	e_{1}=& (1, 0, 0, \cdots , 0, 0)\\
+	e_{2}=& (0, 1, 0, \cdots , 0, 0)\\
+	\vdots & \vdots \\
+	e_{i}=& (0, \cdots, 1,\cdots , 0)\mbox{ , en la posición } i\\
+	\vdots & \vdots \\
+	e_{n}=& (0, 0, \cdots, 0, 0, 1)
+	\end{array}$$
+	Sea $v=(x_{1}, x_{2},\cdots, x_{n})\in \mathbb{R}^{n}$ un vector cualquiera. Se tiene que $v=(x_{1}, x_{2},\cdots, x_{n})=x_{1}e_{1}+x_{2}e_{2}+\cdots+ x_{n}e_{n}$, lo que muestra que todo vector de $\mathbb{R}^{n}$ se puede escribir como combinación lineal de los vectores $e_{1}, e_{2}, \cdots ,e_{n}$, o lo que es igual, que estos vectores generan a todo el espacio, es decir, $\left\langle e_{1}, e_{2}, \cdots, e_{n}\right\rangle=\mathbb{R}^{n}$.
+	Ahora es fácil ver que $\{e_{1}, e_{2}, \cdots ,e_{n}\}$ es un conjunto l.i., por lo tanto forman una base para el espacio $\mathbb{R}^{n}$. Lo que nos permite decir que $\mathbb{R}^{n}$ es un espacio de dimensión finita. A la base $\{e_{1}, e_{2}, \cdots ,e_{n}\}$ se le conoce con el nombre de base canónica de $\mathbb{R}^{n}$.
 
 ```
 
