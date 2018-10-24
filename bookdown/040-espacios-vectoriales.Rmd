@@ -1206,6 +1206,66 @@ Se tiene que:
 
 ```
 
+```{definition}
+	Llamaremos *dimensión* al número de vectores de una base de un espacio de dimensión finita y se denota $\dim V$.
+
+```
+
+Podemos reformular el teorema anterior en términos de la definición anterior.
+
+
+```{corollary,label="coro374"}
+		Sea $V$ un espacio de dimensión finita y sea $n=\dim V$. Entonces:
+
+		(1) Cualquier conjunto $S\subseteq V$ que contenga más de $n$ vectores es l.d.
+		(2) Ningún subconjunto de $V$ que contenga menos de $n$ vectores puede generar a $V$.
+
+```
+
+```{example}
+	
+		(1) $\mathbb{R}^{n}$ tiene dimensión $n$. Ya vimos antes que la base canónica de $\mathbb{R}^{n}$ está formada por los vectores $e_{1}, e_{2}, \cdots ,e_{n}$,  
+		
+$$[e_{i}]_{j}=\left\lbrace \begin{array}{cc}
+		1 & \mbox{ si } i=j\\
+		0 & \mbox{ si } i\neq j
+		\end{array}\right. $$ 
+		Luego, toda base de $\mathbb{R}^{n}$ tiene $n$ vectores.
+		
+		(2) El espacio de las matrices de orden $m\times n$, $\mathcal{M}_{m\times n}(\mathbb{F})$, tiene como base al conjunto de matrices $E^{ij}$ de la forma
+		$$[E^{ij}]st=\left\{\begin{array}{cc}
+		1 & \mbox{ si } i=s \mbox{ y } j=t\\
+		0 & \mbox{ en otro caso }
+		\end{array}\right. $$
+		  
+		Hay $mn$ matrices de esta forma, por lo tanto la dimensión del espacio $\mathcal{M}_{m\times n}(\mathbb{F})$ es $mn$.
+		
+		(3) Dada una matriz $A$, el espacio soluci\ón del sistema homogéneo $AX=0$, tiene dimensión igual al número de filas no nulas de la matriz escalonada reducida por filas equivalente a $A$.
+	
+```
+
+Vamos a convenir dar dimensión cero al espacio nulo.
+
+```{lemma}
+	Sea $S$ un subconjunto linealmente independiente de un espacio vectorial $V$. Sea $v\in V\setminus\left\langle S \right\rangle$. Entonces $S\cup \{v\}$ es linealmente independiente.
+
+```
+
+```{proof}
+	Sean $u_{1}, u_{2},\cdots, u_{n}\in S$; tomemos $\lambda_{1}u_{1}+\lambda_{2}u_{2}+\cdots +\lambda_{n}u_{n}+\gamma v=0$, necesariamente $\gamma=0$ porque en otro caso, $v=\gamma^{-1}(\lambda_{1}u_{1}+\lambda_{2}u_{2}+\cdots +\lambda_{n}u_{n})=\gamma^{-1}\lambda_{1}u_{1}+\gamma^{-1}\lambda_{2}u_{2}+\cdots +\gamma^{-1}\lambda_{n}u_{n}$ y así $v\in\left\langle S \right\rangle$. Como $S$ es l.i. se tiene que si $\lambda_{1}u_{1}+\lambda_{2}u_{2}+\cdots +\lambda_{n}u_{n}+\gamma v=0$, entonces $\lambda_{1}u_{1}+\lambda_{2}u_{2}+\cdots +\lambda_{n}u_{n}=0$, por lo tanto,  $\lambda_{1}=\lambda_{2}=\cdots=\lambda_{n}=\gamma=0$ de donde se sigue que $S\cup \{v\}$ es l.i.
+
+```
+
+```{theorem}
+	Sea $V$ un espacio de dimensión finita. Sea $W\prec V$, entonces todo subconjunto $S\subseteq W$ l.i. es finito y es parte de una base de $W$ (esta base debe ser finita).
+
+```
+
+```{proof}
+	Sea $n=\dim V$. Sea $S=S_{0}\subseteq W$ un conjunto l.i. Por el corolario \ref{coro3.72}, $S_{0}$ tiene a lo sumo $n$ vectores. Si $S_{0}$ genera a $W$, esto es $\left\langle S_{0}\right\rangle=W$, el mismo es la base de $W$. Si no, existe $v_{1}\in W\setminus\left\langle S_{0} \right\rangle$, y por el corolario anterior, $S_{1}=S_{0}\cup\{v_{1}\}$ es l.i. Si $\left\langle S_{1}\right\rangle=W$, ya tenemos la base de $W$, sino repetimos el proceso, tomamos $v_{2}\in W\setminus\left\langle S_{1} \right\rangle$ y construimos $S_{2}=S_{1}\cup\{v_{2}\}$ un conjunto l.i. Volvemos a preguntarnos si $S_{2}$ genera al subespacio $W$, si la respuesta es afirmativa, conseguimos la base, si no, continuamos con este proceso hasta hallar $k$ vectores $\{v_{1}, v_{2}, \cdots, v_{k}\}$, que completen una base para el subespacio $W$, a saber $S_{k}=S_{0}\cup \{v_{0}, v_{1}, \cdots, v_{k}\}$. Note que este proceso es finito ya que la dimensión de $V$ es finita.
+
+```
+
 ## Ejercicios:
 
 	(1) Muestre que el conjunto de las matrices hermíticas $n\times n$ es un espacio vectorial sobre el conjunto de los números reales $\mathbb{R}$.
