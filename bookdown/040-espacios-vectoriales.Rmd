@@ -891,12 +891,12 @@ En los sitemas de ecuaciones lineales vimos que las combinaciones lineales de so
 ```{definition}
 	Dado un cuerpo $\mathbb{F}$, un *espacio vectorial* sobre el cuerpo $\mathbb{K}$ es un conjunto $V$ de objetos llamados *vectores*, dotado de dos operaciones, *suma* y *producto por un escalar*, con las siguientes propiedades:
 	
-		(1) *cerrado bajo la suma*: para todo $u,v\in V$, se tiene que $u+v\in V$;
-		(2) la *suma es comutativa*: para todo $u,v\in V$, $u+v=v+u$;
-		(3) la *suma es asociativa*: para todo $u, v, ww\in V$, $(u+v)+w=u+(v+w)$;
-		(4) existe un único *vector nulo*, $0\in V$, tal que para todo $u\in V$, $u+0=u$;
-		(5) para cada vector $u\in V$, existe un único *vector opuesto*, $-u$, tal que $u+(-u)=0$;
-		(6) *cerrado bajo el producto por un escalar*: para todo $\lambda\in\mathbb{F}$ y todo $u\in V$, se tiene que $\lambda \cdot u\in V$ (se puede abreviar la notación quitando el punto $\lambda u$);
+		(1) cerrado bajo la suma: para todo $u,v\in V$, se tiene que $u+v\in V$;
+		(2) la suma es comutativa: para todo $u,v\in V$, $u+v=v+u$;
+		(3) la suma es asociativa: para todo $u, v, ww\in V$, $(u+v)+w=u+(v+w)$;
+		(4) existe un único vector nulo, $0\in V$, tal que para todo $u\in V$, $u+0=u$;
+		(5) para cada vector $u\in V$, existe un único vector opuesto, $-u$, tal que $u+(-u)=0$;
+		(6) cerrado bajo el producto por un escalar: para todo $\lambda\in\mathbb{F}$ y todo $u\in V$, se tiene que $\lambda \cdot u\in V$ (se puede abreviar la notación quitando el punto $\lambda u$);
 		(7) para todo $u\in V$, $1u=u$;
 		(8) para todo $u\in V$ y para todo $\lambda, \gamma\in\mathbb{F}$, $(\lambda\gamma)u=\lambda(\gamma u)$;
 		(9) para todo $u, v\in V$ y $\lambda in\in\mathbb{F}$, $\lambda(u+v)=\lambda u+\lambda v$;
@@ -1134,6 +1134,75 @@ Se tiene que:
 	\end{array}$$
 	Sea $v=(x_{1}, x_{2},\cdots, x_{n})\in \mathbb{R}^{n}$ un vector cualquiera. Se tiene que $v=(x_{1}, x_{2},\cdots, x_{n})=x_{1}e_{1}+x_{2}e_{2}+\cdots+ x_{n}e_{n}$, lo que muestra que todo vector de $\mathbb{R}^{n}$ se puede escribir como combinación lineal de los vectores $e_{1}, e_{2}, \cdots ,e_{n}$, o lo que es igual, que estos vectores generan a todo el espacio, es decir, $\left\langle e_{1}, e_{2}, \cdots, e_{n}\right\rangle=\mathbb{R}^{n}$.
 	Ahora es fácil ver que $\{e_{1}, e_{2}, \cdots ,e_{n}\}$ es un conjunto l.i., por lo tanto forman una base para el espacio $\mathbb{R}^{n}$. Lo que nos permite decir que $\mathbb{R}^{n}$ es un espacio de dimensión finita. A la base $\{e_{1}, e_{2}, \cdots ,e_{n}\}$ se le conoce con el nombre de base canónica de $\mathbb{R}^{n}$.
+
+```
+
+```{example}
+	Sea $A\in \mathcal{M}_{n}(\mathbb{F})$ invertible. Sean $A_{1\ast}, A_{2\ast},\cdots, A_{n\ast}$ los vectores fila de la $A$. $A_{1\ast}, A_{2\ast},\cdots, A_{n\ast}$ son l.i. ya que $\lambda_{1} A_{1\ast}+\lambda_{2} A_{2\ast}+\cdots+\lambda_{n} A_{n\ast}=0$ si y solo si $AX=0$, donde $X$ es la matriz $n\times 1$ formada por los $\lambda_{i}$. Como $AX=0\Leftrightarrow X=A^{-1}0\Leftrightarrow \lambda_{1}=\lambda_{2}=\cdots=\lambda_{n}=0$. Además forman una base del espacio de las matrices filas $\mathcal{M}_{1\times n}(F)$: Sea $B=(b_{11} b_{12},\cdots,b_{1n})$, sea $X=A^{-1}B\Leftrightarrow AX=B$. Luego, el espacio de las matrices filas $\mathcal{M}_{1\times n}(F)$, es un espacio de dimensión finita.
+
+```
+
+```{example}
+	El espacio de las funciones polinómicas sobre $\mathbb{R}$.
+	Sea $S=\{f_{k}(x)=x^{k}: k\geq 0 \}=\{1, x, x^{2},\cdots \}$. Sea $n$ un entero positivo, consideremos la combinación lineal  $f(x)=\lambda_{0}+\lambda_{1}x+\lambda_{2}x^{2}+\cdots + \lambda_{n}x^{n}$, entonces $f(x)=0$ para todo $x\in \mathbb{F}$ si y solo si $\lambda_{1}=\lambda_{2}=\cdots=\lambda_{n}=0$. Por lo tanto $S$ es un conjunto linealmente independiente. Cualquier subconjunto finito de $S$ no genera a todo el espacio, Lo que demuestra que el espacio de las funciones polinómicas es de dimensión infinita.
+
+```
+
+```{theorem}
+	Sea $V$ un espacio vectorial generado por un conjunto finito de $n$ vectores $v_{1}, v_{2},\cdots, v_{n}$. Entonces todo subconjunto de $V$ linealmente independiente no tiene mas de $n$ vectores.
+
+```
+
+```{proof}
+	Veamos que $S=\{u_{1}, u_{2}, \cdots, u_{m} \}$, con $m\geq n$, es linealmente dependiente. Como $v_{1}, v_{2},\cdots, v_{n}$ generan a todo el espacio $V$, cada $u_{i}$ se escribe como combinación lineal de los $v_{j}$, es decir, 
+	$$\begin{array}{cc}
+		u_{1}=&\lambda_{11}v_{1}+\lambda_{12}v_{2}+\cdots +\lambda_{1n}v_{n}\\
+		u_{2}=&\lambda_{21}v_{1}+\lambda_{22}v_{2}+\cdots +\lambda_{2n}v_{n}\\
+		\vdots& \ddots\\
+		u_{m}=&\lambda_{m1}v_{1}+\lambda_{m2}v_{2}+\cdots +\lambda_{mn}v_{n}
+	\end{array} \mbox{ donde } \lambda_{ij} \mbox{ es un escalar }$$
+	Tomemos una combinación lineal de los vectores de $S$ y la igualamos a cero
+	 $x_{1} u_{1}+ x_{2} u_{2}+ \cdots+ x_{m} u_{m}=0$, esto es $$(x_{1},x_{2},\cdots, x_{m}) \left(\left[ \begin{array}{cccc}
+		\lambda_{11} & \lambda_{12} & \cdots & \lambda_{1n}\\
+		\lambda_{21} & \lambda_{22} & \cdots & \lambda_{2n}\\
+		\vdots & & \ddots & \\
+		\lambda_{m1} & \lambda_{m2} & \cdots & \lambda_{mn}\\
+	\end{array}
+	\right] \left[ \begin{array}{c}
+		v_{1}\\
+		v_{2}\\
+		\vdots\\
+		v_{n}
+	\end{array} \right]  \right)=0 $$
+	Es decir, $$(x_{1},x_{2},\cdots, x_{m}) \left[ \begin{array}{cccc}
+	\lambda_{11} & \lambda_{12} & \cdots & \lambda_{1n}\\
+	\lambda_{21} & \lambda_{22} & \cdots & \lambda_{2n}\\
+	\vdots & & \ddots & \\
+	\lambda_{m1} & \lambda_{m2} & \cdots & \lambda_{mn}\\
+	\end{array}
+	\right] =0\Leftrightarrow \left[ \begin{array}{cccc}
+		\lambda_{11} & \lambda_{12} & \cdots & \lambda_{1n}\\
+		\lambda_{21} & \lambda_{22} & \cdots & \lambda_{2n}\\
+		\vdots & & \ddots & \\
+		\lambda_{m1} & \lambda_{m2} & \cdots & \lambda_{mn}\\
+	\end{array}
+	\right] \left[ \begin{array}{c}
+	x_{1}\\
+	x_{2}\\
+	\vdots\\
+	x_{n}
+	\end{array} \right] =0$$
+	Como $m>n$ tiene múltiples soluciones, esto es, existen $x_{1},x_{2},\cdots, x_{m}$ no todos ceros tales que $x_{1} u_{1}+ x_{2} u_{2}+ \cdots+ x_{m} u_{m}=0$, por lo tanto $S$ es linealmente dependiente.
+
+```
+
+```{corollary}
+	Si $V$ en un espacio de dimensión finita, entonces dos bases cualesquiera tienen el mismo número (finito) de elementos.
+
+```
+
+```{proof}
+	Como $V$ es de dimensión finita, tiene una base finita, digamos $B=\{v_{1}, v_{2}, \cdots, v_{n} \}$. Sea $B´$ una base de $V$, entonces $B´$ tiene una cantidad finita de vectores, digamos $B´=\{u_{1}, u_{2}, \cdots, u_{m} \}$ con $m\leq n$. Análogamente, $n\leq m$, por lo tanto $n=m$.
 
 ```
 
