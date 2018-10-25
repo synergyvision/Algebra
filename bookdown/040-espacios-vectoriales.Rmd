@@ -1266,6 +1266,34 @@ Vamos a convenir dar dimensión cero al espacio nulo.
 
 ```
 
+```{corollary}
+	Sea $V$ un espacio vectorial de dimensión finita. Sea $W$ un subespacio propio de $V$. Entonces $\dim W < \dim V$, por lo tanto $W$ es de dimensión finita.
+
+```
+```{proof}
+	Si $W$ es el subespacio nulo se tiene el resultado de forma trivial. Supongamos que $W$ no es el espacio nulo. Sea $\vDash\in W$, entonces $\{v\}$ es l.i. y por el teorema anterior $v$ pertenece a $B$ una base finita de $W$, y $B$ no tiene mas de $\dim V$ vectores. Por lo tanto $\dim W\leq \dim V$. Pero como $W$ es un subespacio propio de $V$, existe $u\in V\setminus W$, y así $B\cup\{u\}$ es un conjunto l.i., por lo tanto cualquier base de $V$ tiene mas de $\dim W$ elementos, entonces $\dim V > \dim W$.
+
+```
+
+```{corollary}
+	En todo espacio $V$ de dimensión finita, todo conjunto de vectores linealmente independientes es parte de una base.
+
+```
+
+```{corollary}
+	Sea $A\in\mathcal{M}_{n}(\mathbb{F})$. Si los vectores filas de $A$ son un conjunto linealmente independientes de $\mathbb{F}^{n}$, entonces $A$ es invertible.
+
+```
+
+```{proof}
+	Sean $v_{1}, v_{2},\cdots, v_{n}$ los vectores filas de $A$ (es decir $v_{i}=A_{i*}$ para cada $1\leq i\leq n$) y supongamos que es un conjunto l.i. Sea $W=\left\langle v_{1}, v_{2},\cdots, v_{n}\right\rangle$, entonces $\dim W=n$, así $W=\mathbb{F}^{n}$. Además, los vectores $e_{i}$, $$[e_{i}]_{j}=\left\lbrace \begin{array}{cc}
+	1 & \mbox{ si } i=j\\
+	0 & \mbox{ si } i\neq j
+	\end{array}\right. $$ 
+	que forman la base canónica de $\mathbb{F}^{n}$ se escriben como combinación lineal de los vectores $v_{1}, v_{2},\cdots, v_{n}$. Esto es, existen escalares $\lambda_{ij}\in \mathbb{F}$ tales que: $e_{i}=\sum_{j=1}^{n} b_{ij}v_{j}$ para cada $1\leq i\leq n$. Es decir, $BA=I$, donde $[B]_{ij}=b_{ij}$.
+
+```
+
 ## Ejercicios:
 
 	(1) Muestre que el conjunto de las matrices hermíticas $n\times n$ es un espacio vectorial sobre el conjunto de los números reales $\mathbb{R}$.
