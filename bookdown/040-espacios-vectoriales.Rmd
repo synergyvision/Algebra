@@ -1294,6 +1294,46 @@ Vamos a convenir dar dimensión cero al espacio nulo.
 
 ```
 
+```{theorem}
+	Si $W_{1}$ y $W_{2}$ son subespacios de dimensión finita de un espacio vectorial $V$, entonces $W_{1}+W_{2}$ es de dimensión finita y $\dim W_{1}+\dim W_{2}=\dim (W_{1}\cap W_{2}) + \dim (W_{1}+W_{2})$.
+
+```
+
+```{proof}
+	Como $W_{1}\cap W_{2}$ es un subespacio vectorial y $W_{1}\cap W_{2}\subseteq W_{1}$ y $W_{1}\cap W_{2}\subseteq W_{2}$ se sigue que $W_{1}\cap W_{2}$ tiene una base finita $B=\{v_{1}, v_{2},\cdots, v_{k} \}$ que es parte de una base de $W_{1}$, digamos $B_{1}=\{v_{1}, v_{2},\cdots, v_{k}, u_{1}, u_{2}, \cdots, u_{m} \}$ y de base de $W_{2}$, digamos $B_{2}=\{v_{1}, v_{2},\cdots, v_{k}, w_{1}, w_{2}, \cdots, w_{n} \}$ así el subespacio $W_{1}+W_{2}$ es generado por los vectores $v_{1}, v_{2},\cdots, v_{k}, u_{1}, u_{2}, \cdots, u_{m}, w_{1}, w_{2}, \cdots, w_{n}$ los cuales forman un conjunto l.i.
+	En efecto, tomemos la combinación lineal $\sum_{i=1}^{k} \lambda_{i}v_{i} + \sum_{i=1}^{m} \gamma_{i}u_{1} + \sum_{i=1}^{n} \delta_{i}w_{i}=0$ si y solo si 
+	$$-\sum_{i=1}^{n} \delta_{i}w_{i}=\sum_{i=1}^{k} \lambda_{i}v_{i} + \sum_{i=1}^{m} \gamma_{i}u_{1}.$$
+	Luego $-\sum_{i=1}^{n} c_{i}w_{i}\in W_{1}$. Además $\sum_{i=1}^{n} c_{i}w_{i}\in W_{2}$, entonces $\sum_{i=1}^{n} c_{i}w_{i}\in W_{1}\cap W_{2}$ por lo que $$\sum_{i=1}^{n} c_{i}w_{i}=\sum_{i=1}^{k} a_{i}v_{i},$$ Entonces $\sum_{i=1}^{n} c_{i}w_{i}-\sum_{i=1}^{k} a_{i}v_{i}=0$.
+	Como $B_{2}$ es una base, se tiene que $\lambda_{1}=\lambda_{2}=\cdots=\lambda_{k}=\delta_{1}=\delta_{2}=\cdots=\delta_{n}=0$, en particular $\delta_{i}=0$ para cada $1 \leq i\leq n$. De este modo $$\sum_{i=1}^{k} \lambda_{i}v_{i} + \sum_{i=1}^{m} \gamma_{i}u_{1}=0.$$ Como $B_{1}$ es base, $\lambda_{1}=\lambda_{2}=\cdots=\lambda_{k}=\gamma_{1}=\gamma_{2}=\cdots=\gamma_{m}=0$, de donde se tiene que $B_{1}\cup B_{2}$ es base de $W_{1}+W-{2}$.
+	Finalmente, $\dim W_{1}+\dim W_{2}=(k+m)+(k+n)=k+(k+m+n)=\dim (W_{1}\cup W_{2})+\dim (W_{1}+W_{2})$.
+
+```
+
+```{definition}
+	El *rango fila* de una matriz $A$ de orden $n\times m$, es la dimensión del espacio fila de la $A$. 
+
+```
+
+Note que, si $P\in\mathcal{M}_{k\times m}(\mathbb{R})$, entonces $B=PA\in\mathcal{M}_{k\times n}(\mathbb{R})$ por lo tanto sus vectores fila son $v=P_{i1}u_{1}+P_{i2}u_{2}+\cdots+P_{im}u_{m}$, donde $P_{ij}=[P]_{i1}$ y $u_{j}=A_{j\ast}=(a_{j1}, a_{j2},\cdots, a_{jn})$. Entonces, el espacio fila de $B$ es un subespacio del espacio fila de $A$. Si $P$ es una matriz invertible $m\times m$, entonces $A=P^{-1}B$ y de forma análoga, el espacio fila de la matriz $A$ es subespacio del espacio fila de la matriz $B$. Esto lo describimos en el siguiente teorema.
+
+```{theorem}
+	Las matrices equivalentes por filas tienen el mismo espacio fila.
+
+```
+
+Así solo basta estudiar el espacio fila de la matriz escalón reducida por filas.
+
+```{theorem}
+	Sea $R$ una matriz escalón reducida por filas, no nula. Entonces los vectores filas no nulas de $R$ forman una base del espacio fila de $R$.
+
+```
+
+```{proof}
+	Sea $R\in\mathcal{M}_{n}(\mathbb{R})$ como en la hipótesis. Sean $s_{1}, s_{2},\cdots, s_{r}$ los vectores filas no nulos de $R$, esto es, $r_{i}=(s_{i1}, s_{i2},\cdots, s_{in})$ para todo $1\leq i\leq r$. Es claro que $s_{1}, s_{2},\cdots, s_{r}$ generan el espacio fila de $R$. Como $R$ es escalón reducida por filas, se tiene que existen $k_{1}<k_{2}<\cdots<k_{r}\in\mathbb{N}$ tales que $[R]_{ij}=0$ si $j<k_{i}$ y $[R]_{ik_{j}}=\delta_{ij}$.
+	Consideremos $\lambda_{1}s_{1}+ \lambda_{2}s_{2}+\cdots+ \lambda_{r}s_{r}=0$ si y solo si $\lambda_{1}=\lambda_{2}=\cdots=\lambda_{r}$ ya que $\lambda_{1}s_{1}+ \lambda_{2}s_{2}+\cdots+ \lambda_{r}s_{r}=(b_{1}, b_{2}, \cdots, b_{n})$ si y solo si $b_{k_{j}}=\sum_{i=1}^{r} \lambda_{i}s_{ik_{j}}=\lambda_{j}s_{jk_{j}}=\lambda_{j}$ por lo tanto $s_{1}, s_{2},\cdots, s_{r}$ son l.i.
+
+```
+
 ## Ejercicios:
 
 	(1) Muestre que el conjunto de las matrices hermíticas $n\times n$ es un espacio vectorial sobre el conjunto de los números reales $\mathbb{R}$.
