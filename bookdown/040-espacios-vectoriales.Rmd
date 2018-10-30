@@ -1334,6 +1334,54 @@ Así solo basta estudiar el espacio fila de la matriz escalón reducida por fila
 
 ```
 
+```{theorem}
+	Sean $m$ y $n$ enteros positivos y sea $W$ un subespacio de $\mathbb{R}^{n}$ tal que $\dim W\leq m$. Entonces existe una única matriz escalón reducida por filas $m\times n$ que tiene a $W$ como espacio fila.
+
+```
+
+```{proof}
+	Sean $v_{1}, v_{2}, \cdots, v_{m}\in\mathbb{R}^{n}$ vectores generadores de $W$.
+	Sea $A$ una matriz $m\times n$ cuyas filas son los vectores $v_{i}$, es decir, $A_{i\ast}=v_{i}$ para cada $1\leq i\leq m$. Si $R$ es una matriz escalón reducida por filas equivalente a la matriz $A$, entonces $W$ es el espacio fila de la matriz $R$ y por lo tanto de la matriz $A$.
+
+```
+
+```{corollary}
+	Cada matriz $A$ es equivalente por filas a una y solo una mtriz escalón reducida por filas.
+
+```
+
+```{proof}
+	Si dos matrices escalón reducida por filas tienen el mismo espacio fila,  entonces ellas son identicas.
+
+```
+
+```{corollary}
+	Dos matrices $A$ y $B$ son equivalentes por filas si y solo si $A$ y $B$ tienen el mismo espacio fila.
+
+```
+
+```{proof}
+	Es claro que si $A\sim B$, entonces $A$ y $B$ tienen el mismo espacio fila.
+	Supongamos que $A$ y $B$ tienen el mismo espacio fila. Sean $R$ y $S$ dos matrices escalonadas reducidas por fila, equivalentes a $A$ y $B$ respectivamente. Como $R\sim A$ y $B\sim S$, entonces $R$ y $S$ tienen el mismo espacio fila, luego $R=S$ de donde se tiene que $A\sim B$.
+
+```
+
+###Espacio cociente
+
+```{definition}
+	Sea $W$ un subespacio de un espacio vectorial $V$. Si $u$ y $v$ son vectores en $V$, diremos que *$u$ es congruente con $v$ módulo $W$* si el vector $v-u\in W$. Esto lo denotaremos $u\cong v\mbox{ m\'od }W$.
+
+```
+
+La congruencia módulo $W$, es una relación de equivalencia sobre $V$:
+
+	(a) $u\cong u\mbox{ mód }W$, ya que $u-u=0\in W$.
+	(b) $u\cong v\mbox{ mód }W$ si y solo si $-1(u-v)\in W$ si y solo si $v\cong u\mbox{ mód }W$.
+	(c) Si $u\cong v\mbox{ mód }W$ y $v\cong w\mbox{ mód }W$, entonces $w-u=w-v+v-u\in W$ si y solo si $u\cong w\mbox{ mód } W$.
+
+	Las clases de equivalencia de un vector $v\in V$ es el conjunto $[v]:=\{u\in V: u\cong v\mbox{ mód } W \}=\{u\in V: v-u\in W \}=v+W$. A los conjuntos $v+W$ los llamaremos clases laterales de $W$.
+	
+
 ## Ejercicios:
 
 	(1) Muestre que el conjunto de las matrices hermíticas $n\times n$ es un espacio vectorial sobre el conjunto de los números reales $\mathbb{R}$.
