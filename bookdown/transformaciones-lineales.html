@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+
+  <meta property="og:title" content="" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+<script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+
+
+
+<link rel="stylesheet" href="css\style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"><img src="images/logovision-black.png" width="160"></img></a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path=""><a href="#transformaciones-lineales"><i class="fa fa-check"></i><b>1</b> Transformaciones lineales</a><ul>
+<li class="chapter" data-level="1.1" data-path=""><a href="#ejercicios"><i class="fa fa-check"></i><b>1.1</b> Ejercicios</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://bookdown.org" target="blank">Publicado con bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<!--bookdown:title:end-->
+<!--bookdown:title:start-->
+<div id="transformaciones-lineales" class="section level1">
+<h1><span class="header-section-number">Capítulo 1</span> Transformaciones lineales</h1>
+<p>En este capítulos estudiaremos unas funciones especiales entre espacios vectoriales. Lo deseable es que las funciones preserven la estructura de espacio vectorial, entre otras cosas, queremos que la imagen del vector cero, sea el vector cero en el espacio de llegada. Estas funciones son las llamadas transformaciones lineales. Veremos que el nombre obedece a que dichas funciones corresponden a una recta si los espacios son los números reales.</p>
+
+<div class="definition">
+<p><span id="def:unnamed-chunk-1" class="definition"><strong>Definición 1.1  </strong></span> Sean <span class="math inline">\(V\)</span> y <span class="math inline">\(W\)</span> dos espacios vectoriales sobre el mismo cuerpo de escalares <span class="math inline">\(\mathbb{F}\)</span>. Decimos que una función <span class="math inline">\(T\)</span> de <span class="math inline">\(V\)</span> en <span class="math inline">\(W\)</span> es una <em>transformación lineal</em> si <span class="math inline">\(T(\lambda u+ v)=\lambda T(u)+T(v)\)</span> para todo escalar <span class="math inline">\(\lambda\in \mathbb{F}\)</span> y todo <span class="math inline">\(u,v\in V\)</span>.</p>
+</div>
+
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-2" class="example"><strong>Ejemplo 1.1  </strong></span> La <em>transformación identidad</em>. Sea <span class="math inline">\(V\)</span> un espacio vectorial cualquiera. <span class="math inline">\(I: V\longrightarrow V\)</span> en la que a cada vector <span class="math inline">\(v\in V\)</span> se le asigna el mismo <span class="math inline">\(v\)</span>, es decir, <span class="math inline">\(I(v)=v\)</span>.</p>
+</div>
+
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-3" class="example"><strong>Ejemplo 1.2  </strong></span> La <em>transformación cero</em>. Sean <span class="math inline">\(V\)</span> y <span class="math inline">\(W\)</span> espacios vectoriales. <span class="math inline">\(0:V\longrightarrow W\)</span>, definido por <span class="math inline">\(0(v)=0\)</span>. Note que el cero de la derecha es el vector cero del espacio <span class="math inline">\(W\)</span>.</p>
+</div>
+
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-4" class="example"><strong>Ejemplo 1.3  </strong></span> La <em>transformación derivación</em> <span class="math inline">\(D\)</span>. Sea <span class="math inline">\(V\)</span> el espacio de las funciones infinitamente derivables. Sea <span class="math inline">\(D:V\longrightarrow V\)</span>, definida como <span class="math inline">\(D(f)(x)=f´(x)\)</span>. Como la derivada de una suma es la suma de las derivadas y las constantes salen de la derivada, se sigue que <span class="math inline">\(D\)</span> es una transformación lineal.</p>
+</div>
+
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-5" class="example"><strong>Ejemplo 1.4  </strong></span> Sea <span class="math inline">\(A\in\mathcal{M}_{m\times n}(\mathbb{F})\)</span>. Definimos la función <span class="math inline">\(T:\mathbb{F}^{n}\longrightarrow \mathbb{F}^{m}\)</span>, como <span class="math inline">\(T(X)=AX\)</span>. En la sección de matrices vimos las propiedades de las operaciones de suma y producto por un escalar de matrices, de donde se sigue que <span class="math inline">\(T(\lambda X+Y)=A(\lambda X+Y)=\lambda AX+AY=\lambda T(X)+T(Y)\)</span>.</p>
+</div>
+
+<p>Note que si <span class="math inline">\(T\)</span> es una transformación lineal de <span class="math inline">\(V\)</span> en <span class="math inline">\(W\)</span>, <span class="math inline">\(T(0)=0\)</span>. Además, se puede probar que las transformaciones lineales preservan las combinaciones lineales, es decir, <span class="math inline">\(T(\sum_{i=1}^{n}\lambda_{i}v_{i})=\sum_{i=1}^{n}\lambda_{i}T(v_{i})\)</span>.</p>
+<p>En el capítulo anterior definimos base de un espacio vectorial, como un conjunto de vectores linealmente independiente que generan el espacio. Para esta parte tomaremos en cuenta el orden en el que aparecen los vectores que conforman la base, es decir, tomaremos bases ordenadas.</p>
+
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-6" class="theorem"><strong>Teorema 1.1  </strong></span> Sea <span class="math inline">\(V\)</span> un espacio vectorial de dimensión finita (sobre un cuerpo <span class="math inline">\(\mathbb{F}\)</span>). Sea <span class="math inline">\(\{v_{1}, v_{2},\cdots, v_{n}\}\)</span> una base ordenada de <span class="math inline">\(V\)</span>. Sea <span class="math inline">\(W\)</span> un espacio vectorial (sobre un cuerpo <span class="math inline">\(\mathbb{F}\)</span>) y sean <span class="math inline">\(u_{1}, u_{2},\cdots, u_{n}\)</span> vectores cualesquiera de <span class="math inline">\(W\)</span>. Entonces existe una única transformación lineal <span class="math inline">\(T\)</span> de <span class="math inline">\(V\)</span> en <span class="math inline">\(W\)</span> tal que <span class="math inline">\(Tv_{i}=u_{i}\)</span>, para todo <span class="math inline">\(1\leq i\leq n\)</span>.</p>
+</div>
+
+
+<div class="proof">
+<p> <span class="proof"><em>Demostración. </em></span>  Cada <span class="math inline">\(v\in V\)</span> se escribe como combinación lineal de los elementos de la base, esto es, <span class="math inline">\(v=\lambda_{1}v_{1}+\lambda_{2}v_{2}+\cdots+\lambda_{n}v_{n}\)</span>. Definamos para cada <span class="math inline">\(v\)</span>, <span class="math inline">\(Tv=\lambda_{1}u_{1}+\lambda_{2}u_{2}+\cdots+\lambda_{n}u_{n}\)</span>, donde los <span class="math inline">\(\lambda_{i}\)</span> son los mismos coeficientes que lo describen en términos de la base. Esto es <span class="math inline">\(T:V\longrightarrow W\)</span> tal que <span class="math inline">\(Tv\)</span> está definido como antes. Por construcción <span class="math inline">\(Tv_{i}=u_{i}\)</span>. Veamos que <span class="math inline">\(T\)</span> es lineal. Sean <span class="math inline">\(v, w\in V\)</span> y <span class="math inline">\(\gamma\in\mathbb{F}\)</span>, donde <span class="math inline">\(v=\lambda_{1}v_{1}+\lambda_{2}v_{2}+\cdots+\lambda_{n}v_{n}\)</span> y <span class="math inline">\(w=\delta_{1}v_{1}+\delta_{2}v_{2}+\cdots+\delta_{n}v_{n}\)</span>, entonces <span class="math display">\[\begin{array}{rl}
+    T(\gamma v+w)=&amp;T((\gamma\lambda_{1}v_{1}+\gamma\lambda_{2}v_{2}+\cdots+\gamma\lambda_{n}v_{n})+(\delta_{1}v_{1}+\delta_{2}v_{2}+\cdots+\delta_{n}v_{n}))\\
+                 =&amp;T((\gamma\lambda_{1}+\delta_{1})v_{1}+(\gamma\lambda_{2}+\delta_{2})v_{2}+\cdots+(\gamma\lambda_{n}+\delta_{n})v_{n})\\
+                 =&amp;(\gamma\lambda_{1}+\delta_{1})u_{1}+(\gamma\lambda_{2}+\delta_{2})u_{2}+\cdots+(\gamma\lambda_{n}+\delta_{n})u_{n}\\
+                 =&amp;(\gamma\lambda_{1}u_{1}+\gamma\lambda_{2}u_{2}+\cdots+\gamma\lambda_{n}u_{n})+(\delta_{1}u_{1}+\delta_{2}u_{2}+\cdots+\delta_{n}u_{n})\\
+                 =&amp;\gamma T(v)+T(w)
+    \end{array}\]</span> Veamos que es única. Sea <span class="math inline">\(T´:V\longrightarrow W\)</span> una transformación tal que <span class="math inline">\(T´v_{i}=u_{i}\)</span>, para todo <span class="math inline">\(1\leq i\leq n\)</span>. Así <span class="math inline">\(T´v=T´(\sum_{i=1}^{n} \lambda_{i}v_{i})=\sum_{i=1}^{n} \lambda_{i}T´(v_{i})=\sum_{i=1}^{n} \lambda_{i}T(v_{i})=Tv\)</span>.</p>
+</div>
+
+<p>El resultado de este teorema nos dice que una transformación lineal está unívocamente determinada por las imagenes de los vectores de una base del espacio <span class="math inline">\(V\)</span>.</p>
+
+<div class="definition">
+<p><span id="def:unnamed-chunk-8" class="definition"><strong>Definición 1.2  </strong></span> Sea <span class="math inline">\(T:V\longrightarrow W\)</span> una transformación lineal del espacio vectorial <span class="math inline">\(V\)</span> en el espacio vectorial <span class="math inline">\(W\)</span>. El conjunto <em>imagen de <span class="math inline">\(T\)</span></em> es el conjunto formado por los vectores imagen de la transformación y se denota por <span class="math inline">\(Img(T)\)</span>. Es decir <span class="math inline">\(Img(T)=\{Tv:v\in V \}\)</span>.</p>
+</div>
+
+
+<div class="remark">
+<p> <span class="remark"><em>Nota. </em></span>  El conjunto imagen de una transformación lineal, es un subespacio vectorial del codominio de <span class="math inline">\(T\)</span>. Además, el conjunto de vectores cuya imagen es el vector cero, es un subespacio del dominio de <span class="math inline">\(T\)</span>.</p>
+</div>
+
+
+<div class="definition">
+<p><span id="def:unnamed-chunk-10" class="definition"><strong>Definición 1.3  </strong></span> Sea <span class="math inline">\(T:V\longrightarrow W\)</span> una transformación lineal del espacio vectorial <span class="math inline">\(V\)</span> en el espacio vectorial <span class="math inline">\(W\)</span>. El *núcleo (o espacio nulo) de <span class="math inline">\(T\)</span> es el conjunto <span class="math inline">\(Ker(T)=\{v\in V: Tv=0 \}\)</span>.</p>
+</div>
+
+<p>Si <span class="math inline">\(V\)</span> es un espacio vectorial de dimensión finita, el<em>rango de <span class="math inline">\(T\)</span></em> es la dimensión de la imagen de <span class="math inline">\(T\)</span> y <em>la nulidad de <span class="math inline">\(T\)</span></em> es la dimensión del núcleo de <span class="math inline">\(T\)</span>. Se denota <span class="math inline">\(rango(T)\)</span> y <span class="math inline">\(Nul(T)\)</span> respectivamente.</p>
+
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-11" class="theorem"><strong>Teorema 1.2  </strong></span> Sean <span class="math inline">\(V\)</span> y <span class="math inline">\(W\)</span> espacios vectoriales, donde <span class="math inline">\(V\)</span> es de dimensión finita. Sea <span class="math inline">\(T\)</span> una transformación lineal de <span class="math inline">\(V\)</span> en <span class="math inline">\(W\)</span>. Entonces <span class="math display">\[dim V=rango(T)+Nul(T).\]</span></p>
+</div>
+ 
+<div class="proof">
+<p> <span class="proof"><em>Demostración. </em></span>  Sea <span class="math inline">\(n\)</span> la dimensión de <span class="math inline">\(V\)</span>. Sea <span class="math inline">\(\{v_{1},v_{2},\cdots,v_{k}\}\)</span> una base de <span class="math inline">\(Ker(T)\)</span> y sean <span class="math inline">\(v_{k+1},v_{k+2},\cdots, v_{n}\)</span> vectores tales que <span class="math inline">\(\{v_{1},v_{2},\cdots,v_{k}, v_{k+1},v_{k+2},\cdots, v_{n} \}\)</span> son base de <span class="math inline">\(V\)</span>. Así <span class="math inline">\(T\)</span> está determinada por <span class="math inline">\(Tv_{i}\)</span>, para cada <span class="math inline">\(1\leq i\leq n\)</span>; como <span class="math inline">\(tv_{i}=0\)</span> para todo <span class="math inline">\(1\leq i\leq k\)</span>, se tiene que <span class="math inline">\(Tv_{k+1}, Tv_{k+2},\cdots, Tv_{n}\)</span> generan a <span class="math inline">\(Img(T)\)</span>. Veamos que son linealmente independientes, sean <span class="math inline">\(n-k\)</span> escalares <span class="math inline">\(\lambda_{k+1}, \lambda_{k+2}, \cdots, \lambda_{n}\)</span> y consideremos <span class="math inline">\(\lambda_{k+1}Tv_{k+1}+ \lambda_{k+2}Tv_{k+2}+ \cdots+ \lambda_{n}Tv_{n}=0\)</span>, entonces <span class="math inline">\(T(\lambda_{k+1}v_{k+1}+ \lambda_{k+2}v_{k+2}+ \cdots+ \lambda_{n}v_{n})=0\)</span> por lo tanto <span class="math inline">\(\lambda_{k+1}v_{k+1}+ \lambda_{k+2}v_{k+2}+ \cdots+ \lambda_{n}v_{n}\in Ker(T)\)</span>, de donde se tiene que <span class="math inline">\(\lambda_{k+1}v_{k+1}+ \lambda_{k+2}v_{k+2}+ \cdots+ \lambda_{n}v_{n}=\lambda_{1}v_{1}+\lambda_{2}v_{2}+\cdots+\lambda_{k}v_{k}\)</span>, como <span class="math inline">\(\{v_{1},v_{2},\cdots,v_{k}, v_{k+1},v_{k+2},\cdots, v_{n} \}\)</span> es un conjunto linealmente independiente, se tiene que <span class="math inline">\(\lambda_{k+1}=\lambda_{k+2}= \cdots=\lambda_{n}=0\)</span>.</p>
+</div>
+
+
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-13" class="theorem"><strong>Teorema 1.3  </strong></span> Sean <span class="math inline">\(V\)</span> y <span class="math inline">\(W\)</span> espacios vectoriales sobre un cuerpo <span class="math inline">\(\mathbb{F}\)</span>. Sean <span class="math inline">\(T_{1}\)</span> y <span class="math inline">\(T_{2}\)</span> transformaciones lineales de <span class="math inline">\(V\)</span> en <span class="math inline">\(W\)</span>, se tiene:</p>
+<pre><code>(1) La función $(T_{1}+T_{2})$ definida por $(T_{1}+T_{2})(v)=T_{1}(v)+T_{2}(v)$, es una transformación lineal de $V$ en $W$.
+(2) Dado un escalar $\lambda$, la función $\lambda T_{1}$ definida por $(\lambda T_{1})(v)=\lambda T_{1}(v)$, es una transformación lineal de $V$ en $W$.
+(3) El conjunto de las transformaciones lineales de $V$ en $W$, junto con las operaciones definidas antes, es un espacio vectorial sobre el cuerpo $\lambda$.</code></pre>
+</div>
+
+
+<div class="proof">
+<p> <span class="proof"><em>Demostración. </em></span>  Sean <span class="math inline">\(T_{1}\)</span> y <span class="math inline">\(T_{2}\)</span> como en las hipótesis y <span class="math inline">\(\lambda\in \mathbb{F}\)</span>. Sean <span class="math inline">\(u,v\in V\)</span> vectores cuales quiera y <span class="math inline">\(\gamma\)</span> un escalar. Entonces <span class="math display">\[\begin{array}{rl}
+    (T_{1}+T_{2})(\gamma u + v)=&amp; T_{1}(\gamma u+v)+T_{2}(\gamma u+v)\\
+                               =&amp; \gamma T_{1}u+T_{1}v+\gamma T_{2}u+T_{2}v\\
+                               =&amp; \gamma((T_{1}+T_{2})u)+((T_{1}+T_{2})v)
+    \end{array}\]</span> y <span class="math display">\[\begin{array}{rl}
+    (\lambda T_{1})(\gamma u + v)=&amp; \lambda T_{1}(\gamma u+v)\\
+                                 =&amp; \lambda\gamma T_{1}u+ \lambda T_{1}v\\
+                                 =&amp; \gamma(\lambda T_{1})u+(\lambda T_{1})v
+    \end{array}\]</span> Las propiedades necesarias de las operaciones de transformaciones lineales se siguen del hecho que <span class="math inline">\(W\)</span> es un espacio vectorial y por lo tanto tiene esas propiedades. Note que la transformación cero, <span class="math inline">\(Tv\equiv 0\)</span>, es el vector cero del espacio de las transformaciones de <span class="math inline">\(V\)</span> en <span class="math inline">\(W\)</span>.</p>
+</div>
+
+<div id="ejercicios" class="section level2">
+<h2><span class="header-section-number">1.1</span> Ejercicios</h2>
+<pre><code>(1) Dada una transfotmación lineal $T:V\longrightarrow W$, el conjunto $Img(T)\prec W$. Además, el conjunto $\{v\in V: Tv=0 \}\prec V$.
+Respuesta: Sean $w_{1}, w_{2}\in Img(T)$ y $\lambda$ un escalar. Entonces $\lambda w_{1}+w_{2}=\lambda T(v_{1})+T(v_{2})$, como $T$ es transformación lineal, $\lambda w_{1}+w_{2}=\lambda T(v_{1})+T(v_{2})=T(\lambda v_{1}+v_{2})$, luego $\lambda w_{1}+w_{2}$ es la imagen del vector $\lambda v_{1}+v_{2})$, por lo tanto, $\lambda w_{1}+w_{2}\in Img(T)$. Ahora, dados dos vectores $v_{1},v_{2}$ tales que $Tv_{1}=Tv_{2}=0$, entonces $T(\lambda v_{1}+v_{2})=\lambda T(v_{1})+T(v_{2})=\lambda 0+0=0$ por lo tanto $\lambda v_{1}+v_{2}\in \{v\in V: Tv=0 \}$.</code></pre>
+</div>
+</div>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-78759535-1', 'auto');
+ga('send', 'pageview');  
+</script>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/synergyvision/Algebra/edit/master/bookdown/%s",
+"text": "Edit"
+},
+"download": null,
+"toc": {
+"collapse": "none"
+},
+"search": false
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
