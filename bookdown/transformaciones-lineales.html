@@ -247,6 +247,29 @@
 <p> <span class="proof"><em>Demostración. </em></span>  Supongamos que <span class="math inline">\(T\)</span> es no singular. Sea <span class="math inline">\(S\subseteq V\)</span> un conjunto linealmente independiente. Sean <span class="math inline">\(\{v_{1},v_{2},\cdots, v_{k} \}\subseteq S\)</span>, vectores de <span class="math inline">\(S\)</span>. Consideremos una combinación lineal de las imágenes de estos vectores, igual a cero, <span class="math inline">\(\lambda_{1}Tv_{1}+\lambda_{2}Tv_{2}+\cdots+\lambda_{k}Tv_{k}=0\)</span>, como <span class="math inline">\(T\)</span> es lineal, <span class="math inline">\(T(\lambda_{1}v_{1}+\lambda_{2}v_{2}+\cdots+\lambda_{k}v_{k})=T0=0\)</span>, por lo tanto, <span class="math inline">\(\lambda_{1}v_{1}+\lambda_{2}v_{2}+\cdots+\lambda_{k}v_{k}=0\)</span>. Como <span class="math inline">\(S\)</span> es l.i. se tiene que <span class="math inline">\(\lambda_{1}=\lambda_{2}=\cdots=\lambda_{k}=0\)</span>, de donde se sigue que <span class="math inline">\(T(S)\)</span> (la imagen de <span class="math inline">\(S\)</span> por <span class="math inline">\(T\)</span>) es l.i. Recíprocamente, supongamos que <span class="math inline">\(T\)</span> aplica conjuntos l.i. de <span class="math inline">\(V\)</span> en conjuntos l.i. de <span class="math inline">\(W\)</span>. En particular, dado <span class="math inline">\(v\in V\)</span>, con <span class="math inline">\(v\neq 0\)</span>, <span class="math inline">\(Tv\)</span> es l.i. por lo tanto, <span class="math inline">\(Tv\neq 0\)</span> (considerar <span class="math inline">\(Tv=0\)</span> contradice que <span class="math inline">\(Tv\)</span> es l.i.) por lo tanto <span class="math inline">\(T\)</span> es n o singular.</p>
 </div>
 
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-25" class="example"><strong>Ejemplo 1.5  </strong></span> (1) Sea <span class="math inline">\(T:\mathbb{R}^{2}\longrightarrow \mathbb{R}^{2}\)</span> definida por <span class="math inline">\(T(x,y)=(x+y,x)\)</span>. Como <span class="math inline">\(T(x,y)=(0,0)\)</span> si y solo si <span class="math inline">\(x=y=0\)</span>, se tiene que <span class="math inline">\(T\)</span> es no singular. (2) Sea <span class="math inline">\(D:V\longrightarrow V\)</span>, donde <span class="math inline">\(V\)</span> es el espacio de los polinomios y <span class="math inline">\(D\)</span> es la derivada. Como la derivada de cualquier constante es cero, <span class="math inline">\(D\)</span> es singular. Pero la dimensión de <span class="math inline">\(V\)</span> no es finita y <span class="math inline">\(Img D=V\)</span>, entonces es posible definir una inversa a la derecha <span class="math inline">\(E\)</span>, a saber la integral indefinida, tal que <span class="math inline">\(ED=I_{V}\)</span>. Pero no se puede definir la inversa a la izquierda.</p>
+</div>
+
+
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-26" class="theorem"><strong>Teorema 1.8  </strong></span> Sean <span class="math inline">\(V\)</span> y <span class="math inline">\(W\)</span> espacios vectoriales de dimensión finita sobre <span class="math inline">\(\mathbb{F}\)</span>, tales que <span class="math inline">\(\dim V=\dim W\)</span>. Si <span class="math inline">\(T\)</span> es una transformación lineal de <span class="math inline">\(V\)</span> en <span class="math inline">\(W\)</span>, las siguientes afirmaciones son equivalentes:</p>
+<pre><code>    (1) $T$ es invertible.
+    (2) $T$ es no singular.
+    (3) $T$ es sobreyectiva.</code></pre>
+</div>
+
+
+<div class="proof">
+<p> <span class="proof"><em>Demostración. </em></span>  Sea <span class="math inline">\(n=\dim V=\dim W\)</span>. Entonces <span class="math inline">\(rango(T)+Nul(T)=n\)</span>. <span class="math inline">\(T\)</span> es no singular si y solo si <span class="math inline">\(rango (T)=n\)</span>. Pero <span class="math inline">\(rang(T)=n\)</span> si y solo si <span class="math inline">\(Img(T)=W\)</span>. Por lo tanto <span class="math inline">\(T\)</span> es sobreyectiva si y solo si <span class="math inline">\(rango (t)=n=\dim W\)</span> si y solo si <span class="math inline">\(Nul(T)=0\)</span> si y solo si <span class="math inline">\(T\)</span> es no singular.</p>
+</div>
+
+
+<div class="remark">
+<p> <span class="remark"><em>Nota. </em></span>  Para cualquier transformación <span class="math inline">\(T:V\longrightarrow W\)</span>, se tiene por definición que <span class="math inline">\(T\)</span> es invertible si y solo si <span class="math inline">\(T\)</span> es biyectiva. El teorema nos permite afirmar que una transformación es invertible probando solo que <span class="math inline">\(T\)</span> es inyectiva (no singular) o probando solo la sobreyectividad, tan solo una de ambas condiciones, siempre y cuando las dimensiones de los espacios sean iguales.</p>
+</div>
+
 <div id="ejercicios" class="section level2">
 <h2><span class="header-section-number">1.1</span> Ejercicios</h2>
 <pre><code>(1) Dada una transfotmación lineal $T:V\longrightarrow W$, el conjunto $Img(T)\prec W$. Además, el conjunto $\{v\in V: Tv=0 \}\prec V$.
