@@ -25,7 +25,7 @@
 <meta name="author" content="Synergy Vision">
 
 
-<meta name="date" content="2018-11-07">
+<meta name="date" content="2018-12-10">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -88,7 +88,7 @@ code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* Com
 code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 </style>
 
-<link rel="stylesheet" href="css\style.css" type="text/css" />
+<link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
 
 <body>
@@ -149,13 +149,16 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="4.4" data-path="espacios-vectoriales.html"><a href="espacios-vectoriales.html#teoria-de-espacios-vectoriales"><i class="fa fa-check"></i><b>4.4</b> Teoría de espacios vectoriales</a><ul>
 <li class="chapter" data-level="4.4.1" data-path="espacios-vectoriales.html"><a href="espacios-vectoriales.html#espacio-cociente"><i class="fa fa-check"></i><b>4.4.1</b> Espacio cociente</a></li>
 </ul></li>
-<li class="chapter" data-level="4.5" data-path="espacios-vectoriales.html"><a href="espacios-vectoriales.html#ejercicios-3"><i class="fa fa-check"></i><b>4.5</b> Ejercicios:</a></li>
+<li class="chapter" data-level="4.5" data-path="espacios-vectoriales.html"><a href="espacios-vectoriales.html#ejercicios-3"><i class="fa fa-check"></i><b>4.5</b> Ejercicios</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="matrices-1.html"><a href="matrices-1.html"><i class="fa fa-check"></i><b>5</b> Matrices</a></li>
 <li class="chapter" data-level="6" data-path="autovalores-y-autovectores.html"><a href="autovalores-y-autovectores.html"><i class="fa fa-check"></i><b>6</b> Autovalores y autovectores</a></li>
 <li class="chapter" data-level="7" data-path="calculo-en-vectores-y-matrices.html"><a href="calculo-en-vectores-y-matrices.html"><i class="fa fa-check"></i><b>7</b> Cálculo en vectores y matrices</a></li>
 <li class="chapter" data-level="8" data-path="transformaciones-lineales.html"><a href="transformaciones-lineales.html"><i class="fa fa-check"></i><b>8</b> Transformaciones lineales</a><ul>
-<li class="chapter" data-level="8.1" data-path="transformaciones-lineales.html"><a href="transformaciones-lineales.html#ejercicios-4"><i class="fa fa-check"></i><b>8.1</b> Ejercicios</a></li>
+<li class="chapter" data-level="8.1" data-path="transformaciones-lineales.html"><a href="transformaciones-lineales.html#bases-ordenadas"><i class="fa fa-check"></i><b>8.1</b> Bases ordenadas</a></li>
+<li class="chapter" data-level="8.2" data-path="transformaciones-lineales.html"><a href="transformaciones-lineales.html#matriz-de-una-transformacion"><i class="fa fa-check"></i><b>8.2</b> Matriz de una transformación</a></li>
+<li class="chapter" data-level="8.3" data-path="transformaciones-lineales.html"><a href="transformaciones-lineales.html#transformaciones-invertibles"><i class="fa fa-check"></i><b>8.3</b> Transformaciones invertibles</a></li>
+<li class="chapter" data-level="8.4" data-path="transformaciones-lineales.html"><a href="transformaciones-lineales.html#ejercicios-4"><i class="fa fa-check"></i><b>8.4</b> Ejercicios</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="producto-escalar.html"><a href="producto-escalar.html"><i class="fa fa-check"></i><b>9</b> Producto escalar</a></li>
 <li class="appendix"><span><b>Apéndice</b></span></li>
@@ -190,62 +193,337 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>En este capítulos estudiaremos unas funciones especiales entre espacios vectoriales. Lo deseable es que las funciones preserven la estructura de espacio vectorial, entre otras cosas, queremos que la imagen del vector cero, sea el vector cero en el espacio de llegada. Estas funciones son las llamadas transformaciones lineales. Veremos que el nombre obedece a que dichas funciones corresponden a una recta si los espacios son los números reales.</p>
 
 <div class="definition">
-<p><span id="def:unnamed-chunk-328" class="definition"><strong>Definición 8.1  </strong></span> Sean <span class="math inline">\(V\)</span> y <span class="math inline">\(W\)</span> dos espacios vectoriales sobre el mismo cuerpo de escalares <span class="math inline">\(\mathbb{F}\)</span>. Decimos que una función <span class="math inline">\(T\)</span> de <span class="math inline">\(V\)</span> en <span class="math inline">\(W\)</span> es una <em>transformación lineal</em> si <span class="math inline">\(T(\lambda u+ v)=\lambda T(u)+T(v)\)</span> para todo escalar <span class="math inline">\(\lambda\in \mathbb{F}\)</span> y todo <span class="math inline">\(u,v\in V\)</span>.</p>
+<span id="def:unnamed-chunk-323" class="definition"><strong>Definición 8.1  </strong></span>Sean <span class="math inline">\(V\)</span> y <span class="math inline">\(W\)</span> dos espacios vectoriales sobre el mismo cuerpo de escalares <span class="math inline">\(\mathbb{F}\)</span>. Decimos que una función <span class="math inline">\(T\)</span> de <span class="math inline">\(V\)</span> en <span class="math inline">\(W\)</span> es una <em>transformación lineal</em> si <span class="math inline">\(T(\lambda u+ v)=\lambda T(u)+T(v)\)</span> para todo escalar <span class="math inline">\(\lambda\in \mathbb{F}\)</span> y todo <span class="math inline">\(u,v\in V\)</span>.
 </div>
 
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-329" class="example"><strong>Ejemplo 8.1  </strong></span> La <em>transformación identidad</em>. Sea <span class="math inline">\(V\)</span> un espacio vectorial cualquiera. <span class="math inline">\(I: V\longrightarrow V\)</span> en la que a cada vector <span class="math inline">\(v\in V\)</span> se le asigna el mismo <span class="math inline">\(v\)</span>, es decir, <span class="math inline">\(I(v)=v\)</span>.</p>
+<span id="exm:unnamed-chunk-324" class="example"><strong>Ejemplo 8.1  </strong></span>La <em>transformación identidad</em>. Sea <span class="math inline">\(V\)</span> un espacio vectorial cualquiera. <span class="math inline">\(I: V\longrightarrow V\)</span> en la que a cada vector <span class="math inline">\(v\in V\)</span> se le asigna el mismo <span class="math inline">\(v\)</span>, es decir, <span class="math inline">\(I(v)=v\)</span>.
 </div>
 
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-330" class="example"><strong>Ejemplo 8.2  </strong></span> La <em>transformación cero</em>. Sean <span class="math inline">\(V\)</span> y <span class="math inline">\(W\)</span> espacios vectoriales. <span class="math inline">\(0:V\longrightarrow W\)</span>, definido por <span class="math inline">\(0(v)=0\)</span>. Note que el cero de la derecha es el vector cero del espacio <span class="math inline">\(W\)</span>.</p>
+<span id="exm:unnamed-chunk-325" class="example"><strong>Ejemplo 8.2  </strong></span>La <em>transformación cero</em>. Sean <span class="math inline">\(V\)</span> y <span class="math inline">\(W\)</span> espacios vectoriales. <span class="math inline">\(0:V\longrightarrow W\)</span>, definido por <span class="math inline">\(0(v)=0\)</span>. Note que el cero de la derecha es el vector cero del espacio <span class="math inline">\(W\)</span>.
 </div>
 
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-331" class="example"><strong>Ejemplo 8.3  </strong></span> La <em>transformación derivación</em> <span class="math inline">\(D\)</span>. Sea <span class="math inline">\(V\)</span> el espacio de las funciones infinitamente derivables. Sea <span class="math inline">\(D:V\longrightarrow V\)</span>, definida como <span class="math inline">\(D(f)(x)=f´(x)\)</span>. Como la derivada de una suma es la suma de las derivadas y las constantes salen de la derivada, se sigue que <span class="math inline">\(D\)</span> es una transformación lineal.</p>
+<span id="exm:unnamed-chunk-326" class="example"><strong>Ejemplo 8.3  </strong></span>La <em>transformación derivación</em> <span class="math inline">\(D\)</span>. Sea <span class="math inline">\(V\)</span> el espacio de las funciones infinitamente derivables. Sea <span class="math inline">\(D:V\longrightarrow V\)</span>, definida como <span class="math inline">\(D(f)(x)=f´(x)\)</span>. Como la derivada de una suma es la suma de las derivadas y las constantes salen de la derivada, se sigue que <span class="math inline">\(D\)</span> es una transformación lineal.
 </div>
 
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-332" class="example"><strong>Ejemplo 8.4  </strong></span> Sea <span class="math inline">\(A\in\mathcal{M}_{m\times n}(\mathbb{F})\)</span>. Definimos la función <span class="math inline">\(T:\mathbb{F}^{n}\longrightarrow \mathbb{F}^{m}\)</span>, como <span class="math inline">\(T(X)=AX\)</span>. En la sección de matrices vimos las propiedades de las operaciones de suma y producto por un escalar de matrices, de donde se sigue que <span class="math inline">\(T(\lambda X+Y)=A(\lambda X+Y)=\lambda AX+AY=\lambda T(X)+T(Y)\)</span>.</p>
+<span id="exm:unnamed-chunk-327" class="example"><strong>Ejemplo 8.4  </strong></span>Sea <span class="math inline">\(A\in\mathcal{M}_{m\times n}(\mathbb{F})\)</span>. Definimos la función <span class="math inline">\(T:\mathbb{F}^{n}\longrightarrow \mathbb{F}^{m}\)</span>, como <span class="math inline">\(T(X)=AX\)</span>. En la sección de matrices vimos las propiedades de las operaciones de suma y producto por un escalar de matrices, de donde se sigue que <span class="math inline">\(T(\lambda X+Y)=A(\lambda X+Y)=\lambda AX+AY=\lambda T(X)+T(Y)\)</span>.
 </div>
 
 <p>Note que si <span class="math inline">\(T\)</span> es una transformación lineal de <span class="math inline">\(V\)</span> en <span class="math inline">\(W\)</span>, <span class="math inline">\(T(0)=0\)</span>. Además, se puede probar que las transformaciones lineales preservan las combinaciones lineales, es decir, <span class="math inline">\(T(\sum_{i=1}^{n}\lambda_{i}v_{i})=\sum_{i=1}^{n}\lambda_{i}T(v_{i})\)</span>.</p>
+<div id="bases-ordenadas" class="section level2">
+<h2><span class="header-section-number">8.1</span> Bases ordenadas</h2>
 <p>En el capítulo anterior definimos base de un espacio vectorial, como un conjunto de vectores linealmente independiente que generan el espacio. Para esta parte tomaremos en cuenta el orden en el que aparecen los vectores que conforman la base, es decir, tomaremos bases ordenadas.</p>
 
+<div class="definition">
+<span id="def:unnamed-chunk-328" class="definition"><strong>Definición 8.2  </strong></span>Decimos que una sucesión finita de vectores de un espacio vectorial de dimensión finita <span class="math inline">\(V\)</span>, es una <em>base ordenada</em> si es un conjunto linealmente independiente y generan <span class="math inline">\(V\)</span>. Es decir, la sucesión <span class="math inline">\(\mathcal{B}=\{v_{1},v_{2},\cdots v_{n} \}\subseteq V\)</span> es una base ordenada de <span class="math inline">\(V\)</span>, si <span class="math inline">\(\mathcal{B}\)</span> es l.i. y <span class="math inline">\(\left\langle v_{1},v_{2},\cdots v_{n} \right\rangle =V\)</span>.
+</div>
+
+<p>Al considerar la base <span class="math inline">\(\mathcal{B}\)</span> como un conjunto ordenado, a cada vector <span class="math inline">\(v\in V\)</span> le corresponde una sucesión única de escalares <span class="math inline">\((\lambda_{1},\lambda_{2},\cdots ,\lambda_{n})\)</span> tales que <span class="math inline">\(v=\sum_{i=1}^{n} \lambda_{i}v_{i}\)</span>. La unicidad viene dada por el orden de los vectores de la base, sin dicho orden, una permutación de los escalares nos dotaría de una sucesión distinta de escalares. Llamaremos <em>\textit{</em><span class="math inline">\(i\)</span>-ésima coordenada de <span class="math inline">\(v\)</span> en la base <span class="math inline">\(\mathcal{B}\)</span>*, al escalar <span class="math inline">\(\lambda_{i}\)</span>. Además, note que</p>
+<p><span class="math display">\[v=(v_{1}, v_{2},\cdots , v_{n}) \left( \begin{array}{c}
+ \lambda_{1}\\
+ \lambda_{2}\\
+ \vdots\\
+ \lambda_{n}
+\end{array} \right)\]</span></p>
+<p>Se suele denotar <span class="math inline">\([v]_{\mathcal{B}}\)</span> a <em>la matriz de coordenadas de <span class="math inline">\(v\)</span> en la base ordenada</em> <span class="math inline">\(\mathcal{B}\)</span> y puede mostrarse como una matriz fila (un vector) en lugar de una matriz columna, por comodidad.</p>
+<p>Si <span class="math inline">\(\mathcal{B}_{1}=\{v_{1},v_{2},\cdots v_{n} \}\)</span> y <span class="math inline">\(\mathcal{B}_{2}=\{u_{1},u_{2},\cdots u_{n} \}\)</span> son dos bases ordenadas de <span class="math inline">\(V\)</span>, existen <span class="math inline">\(n^{2}\)</span> escalares (únicos) <span class="math inline">\(P_{ij}\)</span> tales que <span class="math inline">\(u_{j}=\sum_{i=1}^{n} P_{ij}v_{i}\)</span>, para cada <span class="math inline">\(j\in\{1,2,\cdots,n\}\)</span>. Suponiendo que <span class="math inline">\(\gamma_{1}, \gamma_{2},\cdots, \gamma_{n}\)</span> son las coordenadas del vector <span class="math inline">\(v\)</span> en la base <span class="math inline">\(\mathcal{B}_{2}\)</span>, entonces</p>
+<p><span class="math display">\[\begin{array}{rl}
+v=&amp;\sum_{j=1}^{n} \gamma_{j} u_{j}\\
+ =&amp;\sum_{j=1}^{n} \gamma_{j} \sum_{i=1}^{n} P_{ij}v_{i}\\
+ =&amp;\sum_{j=1}^{n} \sum_{i=1}^{n} \gamma_{j} P_{ij}v_{i}
+\end{array} \]</span></p>
+<p>Pero, por otro lado, <span class="math inline">\(v=\sum_{i=1}^{n} \lambda_{i} u_{i}\)</span>, por la unicidad de los escalares se tiene que <span class="math inline">\(\lambda_{i}=\gamma_{j}P_{ij}\)</span> para cada <span class="math inline">\(i\in\{1,2,\cdots,n\}\)</span>. LLamandos <span class="math inline">\(P\)</span> a la matriz <span class="math inline">\([P]_{ij}=P_{ij}\)</span>, se tiene que <span class="math inline">\([v]_{\mathcal{B}_{1}}=P[v]_{\mathcal{B}_{2}}\)</span>. Como las bases <span class="math inline">\(\mathcal{B}_{1}\)</span> y <span class="math inline">\(\mathcal{B}_{2}\)</span> son conjunto linealmente independientes, se tiene que <span class="math inline">\([v]_{\mathcal{B}_{1}}=0\)</span> si y solo si <span class="math inline">\([v]_{\mathcal{B}_{2}}=0\)</span>, por lo tanto <span class="math inline">\(P\)</span> es una matriz invertible, de donde se tiene que <span class="math inline">\([v]_{\mathcal{B}_{2}}=P^{-1}[v]_{\mathcal{B}_{1}}\)</span>, es decir, <span class="math inline">\([v]_{\mathcal{B}_{1}}=P[v]_{\mathcal{B}_{2}}\Leftrightarrow [v]_{\mathcal{B}_{2}}=P^{-1}[v]_{\mathcal{B}_{1}}\)</span>.</p>
+
+<div class="remark">
+ <span class="remark"><em>Nota. </em></span> Ya hemos visto que la matriz <span class="math inline">\(P\)</span> es única (por considerar bases ordenadas), a esta matriz la llamaremos <em>matriz cambio de base, de <span class="math inline">\(\mathcal{B}_{1}\)</span> a la base <span class="math inline">\(\mathcal{B}_{2}\)</span></em>. Además, dada una base <span class="math inline">\(\mathcal{B}_{1}\)</span> y una matriz invertible <span class="math inline">\(P\)</span>, existe una única base <span class="math inline">\(\mathcal{B}_{2}\)</span> tal que <span class="math inline">\(P\)</span> es la correspondiente matriz cambio de base de <span class="math inline">\(\mathcal{B}_{1}\)</span> a <span class="math inline">\(\mathcal{B}_{2}\)</span>.
+</div>
+
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-330" class="example"><strong>Ejemplo 8.5  </strong></span>Sean <span class="math inline">\(\mathcal{B}_{1}=\{e_{1}, e_{2}\}\)</span> la base canónica y <span class="math inline">\(\mathcal{B}_{2}=\{(1,2), (-2,1)\}\)</span> otra base de <span class="math inline">\(\mathbb{R}^{2}\)</span>. Entonces <span class="math display">\[(1,2)=1e_{1}+2e_{2}\]</span> y <span class="math display">\[(-2,1)=-2e_{1}+1e_{2}\]</span> por lo tanto las coordenadas de los vectores <span class="math inline">\((1,2), (-2,1)\)</span> de la base <span class="math inline">\(\mathcal{B}_{2}\)</span> son <span class="math inline">\((1,2)\)</span> y <span class="math inline">\((-2,1)\)</span> respectivamente.</p>
+<p>Por otro lado, <span class="math display">\[e_{1}=(1,0)=\frac{1}{5}(1,2)-\frac{2}{5}(-2,1)\]</span> y <span class="math display">\[e_{2}=(0,1)=\frac{2}{5}(1,2)+\frac{1}{5}(-2,1)\]</span> por lo que las coordenadas de los vectores <span class="math inline">\(e_{1}\)</span> y <span class="math inline">\(e_{2}\)</span> son <span class="math inline">\((\frac{1}{5},-\frac{2}{5})\)</span> y <span class="math inline">\((\frac{2}{5},\frac{1}{5})\)</span> respectivamente.</p>
+<p>De este modo la matriz cambio de base de <span class="math inline">\(\mathcal{B}_{1}\)</span> a la base <span class="math inline">\(\mathcal{B}_{2}\)</span> es</p>
+<p><span class="math display">\[
+P=\left(
+\begin{array}{cc}
+\frac{1}{5} &amp; \frac{2}{5}\\
+-\frac{2}{5} &amp; \frac{1}{5}
+\end{array}
+\right)
+\]</span></p>
+<p>y así, la matriz cambio de base de <span class="math inline">\(\mathcal{B}_{2}\)</span> a la base <span class="math inline">\(\mathcal{B}_{1}\)</span> es la inversa de <span class="math inline">\(P\)</span>, esto es</p>
+<span class="math display">\[
+P^{-1}=\left(
+\begin{array}{cc}
+1 &amp; -2\\
+2 &amp; 1
+\end{array}
+\right)
+\]</span>
+</div>
+
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-331" class="example"><strong>Ejemplo 8.6  </strong></span>Para <span class="math inline">\(\theta\)</span> fijo,</p>
+<p><span class="math display">\[P=\left(\begin{array}{cc}
+\cos\theta &amp; -\sin\theta\\
+\sin\theta &amp; \cos\theta
+\end{array} \right)\]</span></p>
+<p>Es una matriz invertible, cuya inversa es</p>
+<p><span class="math display">\[P^{-1}=\left(\begin{array}{cc}
+\cos\theta &amp; \sin\theta\\
+-\sin\theta &amp; \cos\theta
+\end{array} \right)\]</span></p>
+Luego <span class="math inline">\(\mathcal{B}_{2}=\{(\cos\theta,\sin\theta),(-\sin\theta,\cos\theta)\}\)</span> es la base para la cual <span class="math inline">\(P\)</span> es la matriz cambio de base de la base canónica a la base <span class="math inline">\(\mathcal{B}_{2}\)</span>.
+</div>
+
+
 <div class="theorem">
-<p><span id="thm:unnamed-chunk-333" class="theorem"><strong>Teorema 8.1  </strong></span> Sea <span class="math inline">\(V\)</span> un espacio vectorial de dimensión finita (sobre un cuerpo <span class="math inline">\(\mathbb{F}\)</span>). Sea <span class="math inline">\(\{v_{1}, v_{2},\cdots, v_{n}\}\)</span> una base ordenada de <span class="math inline">\(V\)</span>. Sea <span class="math inline">\(W\)</span> un espacio vectorial (sobre un cuerpo <span class="math inline">\(\mathbb{F}\)</span>) y sean <span class="math inline">\(u_{1}, u_{2},\cdots, u_{n}\)</span> vectores cualesquiera de <span class="math inline">\(W\)</span>. Entonces existe una única transformación lineal <span class="math inline">\(T\)</span> de <span class="math inline">\(V\)</span> en <span class="math inline">\(W\)</span> tal que <span class="math inline">\(Tv_{i}=u_{i}\)</span>, para todo <span class="math inline">\(1\leq i\leq n\)</span>.</p>
+<span id="thm:unnamed-chunk-332" class="theorem"><strong>Teorema 8.1  </strong></span>Sea <span class="math inline">\(V\)</span> un espacio vectorial de dimensión finita (sobre un cuerpo <span class="math inline">\(\mathbb{F}\)</span>). Sea <span class="math inline">\(\{v_{1}, v_{2},\cdots, v_{n}\}\)</span> una base ordenada de <span class="math inline">\(V\)</span>. Sea <span class="math inline">\(W\)</span> un espacio vectorial (sobre un cuerpo <span class="math inline">\(\mathbb{F}\)</span>) y sean <span class="math inline">\(u_{1}, u_{2},\cdots, u_{n}\)</span> vectores cualesquiera de <span class="math inline">\(W\)</span>. Entonces existe una única transformación lineal <span class="math inline">\(T\)</span> de <span class="math inline">\(V\)</span> en <span class="math inline">\(W\)</span> tal que <span class="math inline">\(Tv_{i}=u_{i}\)</span>, para todo <span class="math inline">\(1\leq i\leq n\)</span>.
 </div>
 
 
 <div class="proof">
-<p> <span class="proof"><em>Demostración. </em></span>  Cada <span class="math inline">\(v\in V\)</span> se escribe como combinación lineal de los elementos de la base, esto es, <span class="math inline">\(v=\lambda_{1}v_{1}+\lambda_{2}v_{2}+\cdots+\lambda_{n}v_{n}\)</span>. Definamos para cada <span class="math inline">\(v\)</span>, <span class="math inline">\(Tv=\lambda_{1}u_{1}+\lambda_{2}u_{2}+\cdots+\lambda_{n}u_{n}\)</span>, donde los <span class="math inline">\(\lambda_{i}\)</span> son los mismos coeficientes que lo describen en términos de la base. Esto es <span class="math inline">\(T:V\longrightarrow W\)</span> tal que <span class="math inline">\(Tv\)</span> está definido como antes. Por construcción <span class="math inline">\(Tv_{i}=u_{i}\)</span>. Veamos que <span class="math inline">\(T\)</span> es lineal. Sean <span class="math inline">\(v, w\in V\)</span> y <span class="math inline">\(\gamma\in\mathbb{F}\)</span>, donde <span class="math inline">\(v=\lambda_{1}v_{1}+\lambda_{2}v_{2}+\cdots+\lambda_{n}v_{n}\)</span> y <span class="math inline">\(w=\delta_{1}v_{1}+\delta_{2}v_{2}+\cdots+\delta_{n}v_{n}\)</span>, entonces <span class="math display">\[\begin{array}{rl}
-    T(\gamma v+w)=&amp;T((\gamma\lambda_{1}v_{1}+\gamma\lambda_{2}v_{2}+\cdots+\gamma\lambda_{n}v_{n})+(\delta_{1}v_{1}+\delta_{2}v_{2}+\cdots+\delta_{n}v_{n}))\\
-                 =&amp;T((\gamma\lambda_{1}+\delta_{1})v_{1}+(\gamma\lambda_{2}+\delta_{2})v_{2}+\cdots+(\gamma\lambda_{n}+\delta_{n})v_{n})\\
-                 =&amp;(\gamma\lambda_{1}+\delta_{1})u_{1}+(\gamma\lambda_{2}+\delta_{2})u_{2}+\cdots+(\gamma\lambda_{n}+\delta_{n})u_{n}\\
-                 =&amp;(\gamma\lambda_{1}u_{1}+\gamma\lambda_{2}u_{2}+\cdots+\gamma\lambda_{n}u_{n})+(\delta_{1}u_{1}+\delta_{2}u_{2}+\cdots+\delta_{n}u_{n})\\
-                 =&amp;\gamma T(v)+T(w)
-    \end{array}\]</span> Veamos que es única. Sea <span class="math inline">\(T´:V\longrightarrow W\)</span> una transformación tal que <span class="math inline">\(T´v_{i}=u_{i}\)</span>, para todo <span class="math inline">\(1\leq i\leq n\)</span>. Así <span class="math inline">\(T´v=T´(\sum_{i=1}^{n} \lambda_{i}v_{i})=\sum_{i=1}^{n} \lambda_{i}T´(v_{i})=\sum_{i=1}^{n} \lambda_{i}T(v_{i})=Tv\)</span>.</p>
+<p> <span class="proof"><em>Demostración. </em></span> Cada <span class="math inline">\(v\in V\)</span> se escribe como combinación lineal de los elementos de la base, esto es, <span class="math inline">\(v=\lambda_{1}v_{1}+\lambda_{2}v_{2}+\cdots+\lambda_{n}v_{n}\)</span>. Definamos para cada <span class="math inline">\(v\)</span>, <span class="math inline">\(Tv=\lambda_{1}u_{1}+\lambda_{2}u_{2}+\cdots+\lambda_{n}u_{n}\)</span>, donde los <span class="math inline">\(\lambda_{i}\)</span> son los mismos coeficientes que lo describen en términos de la base. Esto es <span class="math inline">\(T:V\longrightarrow W\)</span> tal que <span class="math inline">\(Tv\)</span> está definido como antes. Por construcción <span class="math inline">\(Tv_{i}=u_{i}\)</span>. Veamos que <span class="math inline">\(T\)</span> es lineal. Sean <span class="math inline">\(v, w\in V\)</span> y <span class="math inline">\(\gamma\in\mathbb{F}\)</span>, donde <span class="math inline">\(v=\lambda_{1}v_{1}+\lambda_{2}v_{2}+\cdots+\lambda_{n}v_{n}\)</span> y <span class="math inline">\(w=\delta_{1}v_{1}+\delta_{2}v_{2}+\cdots+\delta_{n}v_{n}\)</span>, entonces <span class="math display">\[
+\begin{array}{rl}
+T(\gamma v+w)=&amp;T((\gamma\lambda_{1}v_{1}+\gamma\lambda_{2}v_{2}+\cdots+\gamma\lambda_{n}v_{n})+(\delta_{1}v_{1}+\delta_{2}v_{2}+\cdots+\delta_{n}v_{n}))\\
+=&amp;T((\gamma\lambda_{1}+\delta_{1})v_{1}+(\gamma\lambda_{2}+\delta_{2})v_{2}+\cdots+(\gamma\lambda_{n}+\delta_{n})v_{n})\\
+=&amp;(\gamma\lambda_{1}+\delta_{1})u_{1}+(\gamma\lambda_{2}+\delta_{2})u_{2}+\cdots+(\gamma\lambda_{n}+\delta_{n})u_{n}\\
+=&amp;(\gamma\lambda_{1}u_{1}+\gamma\lambda_{2}u_{2}+\cdots+\gamma\lambda_{n}u_{n})+(\delta_{1}u_{1}+\delta_{2}u_{2}+\cdots+\delta_{n}u_{n})\\
+=&amp;\gamma T(v)+T(w)
+\end{array}
+\]</span></p>
+Veamos que es única. Sea <span class="math inline">\(T´:V\longrightarrow W\)</span> una transformación tal que <span class="math inline">\(T´v_{i}=u_{i}\)</span>, para todo <span class="math inline">\(1\leq i\leq n\)</span>. Así <span class="math inline">\(T´v=T´(\sum_{i=1}^{n} \lambda_{i}v_{i})=\sum_{i=1}^{n} \lambda_{i}T´(v_{i})=\sum_{i=1}^{n} \lambda_{i}T(v_{i})=Tv\)</span>.
 </div>
 
 <p>El resultado de este teorema nos dice que una transformación lineal está unívocamente determinada por las imagenes de los vectores de una base del espacio <span class="math inline">\(V\)</span>.</p>
 
 <div class="definition">
-<p><span id="def:unnamed-chunk-335" class="definition"><strong>Definición 8.2  </strong></span> Sea <span class="math inline">\(T:V\longrightarrow W\)</span> una transformación lineal del espacio vectorial <span class="math inline">\(V\)</span> en el espacio vectorial <span class="math inline">\(W\)</span>. El conjunto <em>imagen de <span class="math inline">\(T\)</span></em> es el conjunto formado por los vectores imagen de la transformación y se denota por <span class="math inline">\(Img(T)\)</span>. Es decir <span class="math inline">\(Img(T)=\{Tv:v\in V \}\)</span>.</p>
+<span id="def:unnamed-chunk-334" class="definition"><strong>Definición 8.3  </strong></span>Sea <span class="math inline">\(T:V\longrightarrow W\)</span> una transformación lineal del espacio vectorial <span class="math inline">\(V\)</span> en el espacio vectorial <span class="math inline">\(W\)</span>. El conjunto <em>imagen de <span class="math inline">\(T\)</span></em> es el conjunto formado por los vectores imagen de la transformación y se denota por <span class="math inline">\(Img(T)\)</span>. Es decir <span class="math inline">\(Img(T)=\{Tv:v\in V \}\)</span>.
 </div>
 
 
 <div class="remark">
-<p> <span class="remark"><em>Nota. </em></span>  El conjunto imagen de una transformación lineal, es un subespacio vectorial del codominio de <span class="math inline">\(T\)</span>. Además, el conjunto de vectores cuya imagen es el vector cero, es un subespacio del dominio de <span class="math inline">\(T\)</span>.</p>
+ <span class="remark"><em>Nota. </em></span> El conjunto imagen de una transformación lineal, es un subespacio vectorial del codominio de <span class="math inline">\(T\)</span>. Además, el conjunto de vectores cuya imagen es el vector cero, es un subespacio del dominio de <span class="math inline">\(T\)</span>.
 </div>
 
+
+<div class="definition">
+<span id="def:unnamed-chunk-336" class="definition"><strong>Definición 8.4  </strong></span>Sea <span class="math inline">\(T:V\longrightarrow W\)</span> una transformación lineal del espacio vectorial <span class="math inline">\(V\)</span> en el espacio vectorial <span class="math inline">\(W\)</span>. El <em>núcleo (o espacio nulo) de <span class="math inline">\(T\)</span></em> es el conjunto <span class="math inline">\(Ker(T)=\{v\in V: Tv=0 \}\)</span>.
+</div>
+
+<p>Si <span class="math inline">\(V\)</span> es un espacio vectorial de dimensión finita, el<em>rango de <span class="math inline">\(T\)</span></em> es la dimensión de la imagen de <span class="math inline">\(T\)</span> y <em>la nulidad de <span class="math inline">\(T\)</span></em> es la dimensión del núcleo de <span class="math inline">\(T\)</span>. Se denota <span class="math inline">\(rango(T)\)</span> y <span class="math inline">\(Nul(T)\)</span> respectivamente.</p>
+
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-337" class="theorem"><strong>Teorema 8.2  </strong></span>Sean <span class="math inline">\(V\)</span> y <span class="math inline">\(W\)</span> espacios vectoriales, donde <span class="math inline">\(V\)</span> es de dimensión finita. Sea <span class="math inline">\(T\)</span> una transformación lineal de <span class="math inline">\(V\)</span> en <span class="math inline">\(W\)</span>. Entonces</p>
+<span class="math display">\[dim V=rango(T)+Nul(T).\]</span>
+</div>
+
+
+<div class="proof">
+<p> <span class="proof"><em>Demostración. </em></span> Sea <span class="math inline">\(n\)</span> la dimensión de <span class="math inline">\(V\)</span>. Sea <span class="math inline">\(\{v_{1},v_{2},\cdots,v_{k}\}\)</span> una base de <span class="math inline">\(Ker(T)\)</span> y sean <span class="math inline">\(v_{k+1},v_{k+2},\cdots, v_{n}\)</span> vectores tales que <span class="math inline">\(\{v_{1},v_{2},\cdots,v_{k}, v_{k+1},v_{k+2},\cdots, v_{n} \}\)</span> son base de <span class="math inline">\(V\)</span>. Así <span class="math inline">\(T\)</span> está determinada por <span class="math inline">\(Tv_{i}\)</span>, para cada <span class="math inline">\(1\leq i\leq n\)</span>; como <span class="math inline">\(tv_{i}=0\)</span> para todo <span class="math inline">\(1\leq i\leq k\)</span>, se tiene que <span class="math inline">\(Tv_{k+1}, Tv_{k+2},\cdots, Tv_{n}\)</span> generan a <span class="math inline">\(Img(T)\)</span>. Veamos que son linealmente independientes, sean <span class="math inline">\(n-k\)</span> escalares <span class="math inline">\(\lambda_{k+1}, \lambda_{k+2}, \cdots, \lambda_{n}\)</span> y consideremos <span class="math inline">\(\lambda_{k+1}Tv_{k+1}+ \lambda_{k+2}Tv_{k+2}+ \cdots+ \lambda_{n}Tv_{n}=0\)</span>, entonces <span class="math inline">\(T(\lambda_{k+1}v_{k+1}+ \lambda_{k+2}v_{k+2}+ \cdots+ \lambda_{n}v_{n})=0\)</span> por lo tanto <span class="math inline">\(\lambda_{k+1}v_{k+1}+ \lambda_{k+2}v_{k+2}+ \cdots+ \lambda_{n}v_{n}\in Ker(T)\)</span>, de donde se tiene que <span class="math inline">\(\lambda_{k+1}v_{k+1}+ \lambda_{k+2}v_{k+2}+ \cdots+ \lambda_{n}v_{n}=\lambda_{1}v_{1}+\lambda_{2}v_{2}+\cdots+\lambda_{k}v_{k}\)</span>, como <span class="math inline">\(\{v_{1},v_{2},\cdots,v_{k}, v_{k+1},v_{k+2},\cdots, v_{n} \}\)</span> es un conjunto linealmente independiente, se tiene que <span class="math inline">\(\lambda_{k+1}=\lambda_{k+2}= \cdots=\lambda_{n}=0\)</span>.</p>
+</div>
+
+
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-339" class="theorem"><strong>Teorema 8.3  </strong></span>Sean <span class="math inline">\(V\)</span> y <span class="math inline">\(W\)</span> espacios vectoriales sobre un cuerpo <span class="math inline">\(\mathbb{F}\)</span>. Sean <span class="math inline">\(T_{1}\)</span> y <span class="math inline">\(T_{2}\)</span> transformaciones lineales de <span class="math inline">\(V\)</span> en <span class="math inline">\(W\)</span>, se tiene:</p>
+<ol style="list-style-type: decimal">
+<li><p>La función <span class="math inline">\((T_{1}+T_{2})\)</span> definida por <span class="math inline">\((T_{1}+T_{2})(v)=T_{1}(v)+T_{2}(v)\)</span>, es una transformación lineal de <span class="math inline">\(V\)</span> en <span class="math inline">\(W\)</span>.</p></li>
+<li><p>Dado un escalar <span class="math inline">\(\lambda\)</span>, la función <span class="math inline">\(\lambda T_{1}\)</span> definida por <span class="math inline">\((\lambda T_{1})(v)=\lambda T_{1}(v)\)</span>, es una transformación lineal de <span class="math inline">\(V\)</span> en <span class="math inline">\(W\)</span>.</p></li>
+<li>El conjunto de las transformaciones lineales de <span class="math inline">\(V\)</span> en <span class="math inline">\(W\)</span>, junto con las operaciones definidas antes, es un espacio vectorial sobre el cuerpo <span class="math inline">\(\lambda\)</span>.</li>
+</ol>
+</div>
+
+
+<div class="proof">
+<p> <span class="proof"><em>Demostración. </em></span>  Sean <span class="math inline">\(T_{1}\)</span> y <span class="math inline">\(T_{2}\)</span> como en las hipótesis y <span class="math inline">\(\lambda\in \mathbb{F}\)</span>. Sean <span class="math inline">\(u,v\in V\)</span> vectores cuales quiera y <span class="math inline">\(\gamma\)</span> un escalar. Entonces</p>
+<p><span class="math display">\[\begin{array}{rl}
+(T_{1}+T_{2})(\gamma u + v)=&amp; T_{1}(\gamma u+v)+T_{2}(\gamma u+v)\\
+                               =&amp; \gamma T_{1}u+T_{1}v+\gamma T_{2}u+T_{2}v\\
+                               =&amp; \gamma((T_{1}+T_{2})u)+((T_{1}+T_{2})v)
+\end{array}\]</span></p>
+<p>y</p>
+<p><span class="math display">\[\begin{array}{rl}
+(\lambda T_{1})(\gamma u + v)=&amp; \lambda T_{1}(\gamma u+v)\\
+                                 =&amp; \lambda\gamma T_{1}u+ \lambda T_{1}v\\
+                                 =&amp; \gamma(\lambda T_{1})u+(\lambda T_{1})v
+\end{array}\]</span></p>
+Las propiedades necesarias de las operaciones de transformaciones lineales se siguen del hecho que <span class="math inline">\(W\)</span> es un espacio vectorial y por lo tanto tiene esas propiedades. Note que la transformación cero, <span class="math inline">\(Tv\equiv 0\)</span>, es el vector cero del espacio de las transformaciones de <span class="math inline">\(V\)</span> en <span class="math inline">\(W\)</span>.
+</div>
+
+<p>El teorema dota de multiples ejemplos de espacios vectoriales, para cada par de espacios <span class="math inline">\(V\)</span> y <span class="math inline">\(W\)</span>, <em>el espacio vectorial de las transformaciones lineales de <span class="math inline">\(V\)</span> en <span class="math inline">\(W\)</span></em> con las operaciones de suma y multiplicación por un escalar definidas en el teorema, que denotamos <span class="math inline">\(L(V,W)\)</span>. En el cuerpo de la demostración se evidencia que es importante que ambos espacios vectoriales esten definidos sobre el mismo cuerpo de escalares. Vale preguntarse cuál es la dimensión de este espacio vectorial.</p>
+
+<div class="theorem">
+<span id="thm:unnamed-chunk-341" class="theorem"><strong>Teorema 8.4  </strong></span>Sean <span class="math inline">\(V\)</span> y <span class="math inline">\(W\)</span> espacios de dimensión finita, digamos <span class="math inline">\(dim V=n\)</span> y <span class="math inline">\(dim W=m\)</span>. Entonces <span class="math inline">\(L(V,W)\)</span> es de dimensión finita y su dimensión es <span class="math inline">\(nm\)</span>.
+</div>
+
+
+<div class="proof">
+<p> <span class="proof"><em>Demostración. </em></span> Sean <span class="math inline">\(\mathcal{B}_{1}=\{v_{1},v_{2},\cdots, v_{n}\}\)</span> y <span class="math inline">\(\mathcal{B}_{2}=\{u_{1},u_{2},\cdots, u_{n}\}\)</span> bases ordenadas de <span class="math inline">\(V\)</span> y <span class="math inline">\(W\)</span> respectivamente.</p>
+<p>Definamos la siguiente familia de transformaciones lineales: <span class="math inline">\(E^{pq}(v_{1}): V\longrightarrow W\)</span> como</p>
+<p><span class="math display">\[E^{pq}(v_{j})=\left\lbrace \begin{array}{ll}
+    0&amp; \mbox{ si } j\neq q\\
+    u_{p}&amp; \mbox{ si } j=q
+    \end{array} \right. \mbox{ para } 1\leq p\leq m \mbox{ y } 1\leq q\leq n.\]</span></p>
+<p>Se puede ver que <span class="math inline">\(E^{pq}(v_{j})=u_{p}\delta_{jq}\)</span>, donde <span class="math inline">\(\delta_{jq}\)</span> denota la función delta de Kronecker.</p>
+<p>Veamos que esta familia genera a <span class="math inline">\(L(V,W)\)</span>. Sea <span class="math inline">\(T:V\longrightarrow W\)</span> una transformación lineal. Para cada <span class="math inline">\(v_{j}\)</span>, <span class="math inline">\(Tv_{j}\)</span> se escribe como combinación lineal de los vectores de la base <span class="math inline">\(\mathcal{B}_{2}\)</span>, digamos <span class="math inline">\(Tv_{j}=\sum_{p=1}^{m} A_{pj}u_{p}\)</span>, donde <span class="math inline">\(A_{pj}\)</span> son los coeficientes, entonces</p>
+<p><span class="math display">\[\begin{array}{rl}
+    Tv_{j}=&amp;\sum_{p=1}^{m} A_{pj}u_{p}\\
+          =&amp;\sum_{p=1}^{m}\sum_{q=1}^{n} A_{pq}u_{p}\delta_{jq}\\
+          =&amp;\sum_{p=1}^{m}\sum_{q=1}^{n} A_{pq}E^{pq}(v_{j})
+\end{array}\]</span></p>
+Ahora veamos que el conjunto de los <span class="math inline">\(E^{pq}\)</span> es linealmente idependiente. De la igualdad anterior se tiene que <span class="math inline">\(\sum_{p=1}^{m}\sum_{q=1}^{n} A_{pq}E^{pq}(v_{j})=\sum_{p=1}^{m} A_{pj}u_{p}=Tv_{j}\)</span>. Si <span class="math inline">\(T\)</span> es la transformación cero, es decir <span class="math inline">\(T\equiv 0\)</span>, se tiene que <span class="math inline">\(\sum_{p=1}^{m} A_{pj}u_{p}=0\)</span>. Como <span class="math inline">\(\mathcal{B}_{2}=\{u_{1},u_{2},\cdots, u_{n}\}\)</span> es linealmente independiente, se tiene que <span class="math inline">\(A_{pj}=0\)</span> para todo <span class="math inline">\(p\)</span> y todo <span class="math inline">\(j\)</span>. Luego, <span class="math inline">\(\{E^{pq}: 1\leq p\leq n, 1\leq q\leq m \}\)</span> es un conjunto l.i. Por último, es fácil ver que este conjunto tiene <span class="math inline">\(mn\)</span> transformaciones, por lo tanto la dimensión de <span class="math inline">\(L(V,W)\)</span>.
+</div>
+
+
+<div class="theorem">
+<span id="thm:unnamed-chunk-343" class="theorem"><strong>Teorema 8.5  </strong></span>Sean <span class="math inline">\(V_{1}, V_{2}\)</span> y <span class="math inline">\(V_{3}\)</span> espacios vectoriales sobre un cuerpo <span class="math inline">\(\mathbb{F}\)</span>. Sean <span class="math inline">\(T_{1}:V_{1}\longrightarrow V_{2}\)</span> y <span class="math inline">\(T_{2}:V_{2}\longrightarrow V_{3}\)</span> transformaciones lineales. Entonces, la función compuesta definida por <span class="math inline">\((T_{2}\circ T_{1})v=T_{2}(T_{1}v)\)</span> es una transformación lineal de <span class="math inline">\(V_{1}\)</span> en <span class="math inline">\(V_{3}\)</span>.
+</div>
+
+
+<div class="proof">
+ <span class="proof"><em>Demostración. </em></span> <span class="math display">\[\begin{array}{rl}
+    (T_{2}\circ T_{2})(\lambda u + v)=&amp;T_{2}(\lambda T_{1} u + T_{1}v)\\
+    =&amp;\lambda T_{2}(T_{1} u) + T_{2}(T_{1}v)\\
+    =&amp;\lambda (T_{2}\circ T_{1}) u + (T_{2}\circ T_{1})v
+\end{array}\]</span>
+</div>
+
+<p>La composición de transformaciones lineales <span class="math inline">\(T_{2}\circ T_{1}\)</span> se denota <span class="math inline">\(T_{2}T_{1}\)</span>.</p>
+
+<div class="definition">
+<span id="def:unnamed-chunk-345" class="definition"><strong>Definición 8.5  </strong></span>Sea <span class="math inline">\(V\)</span> un espacio vectorial sobre un cuerpo <span class="math inline">\(\mathbb{F}\)</span>, un operador lineal sobre <span class="math inline">\(V\)</span> es una transformación lineal de <span class="math inline">\(V\)</span> en <span class="math inline">\(V\)</span>.
+</div>
+
+<p>En el teorema anterior, si <span class="math inline">\(T_{1}\)</span> y <span class="math inline">\(T_{2}\)</span> son operadores lineales sobre <span class="math inline">\(V\)</span>, se tiene que la composición <span class="math inline">\(T_{2}T_{1}\)</span> es también un operador lineal. De este modo el espacio <span class="math inline">\(L(V,V)\)</span> tiene una operación multiplicación definida por la composición de operadores lineales. Además, la composición <span class="math inline">\(T_{1}T_{2}\)</span> también está definida pero en general <span class="math inline">\(T_{2}T_{1}\neq T_{1}T_{2}\)</span>, es decir, <span class="math inline">\(T_{2}T_{1}-T_{1}T_{2}\neq 0\)</span>.</p>
+<p>También es posible componer un operador lineal consigo mismo, dos o más veces, en este caso denotamos <span class="math inline">\(T^{2}=TT\)</span> y en general, <span class="math inline">\(T^{n}=TT\cdots T\)</span> (<span class="math inline">\(n\)</span>-veces) para cualquier <span class="math inline">\(n\in \mathbb{N}\)</span>. Se define <span class="math inline">\(T^{0}=I\)</span> si <span class="math inline">\(T\neq 0\)</span>.</p>
+
+<div class="lemma">
+<p><span id="lem:unnamed-chunk-346" class="lemma"><strong>Lema 8.1  </strong></span>Sea <span class="math inline">\(V\)</span> un espacio vectorial sobre el cuerpo <span class="math inline">\(\mathbb{F}\)</span>, sean <span class="math inline">\(U, T_{1}\)</span> y <span class="math inline">\(T_{2}\)</span> operadores lineales sobre <span class="math inline">\(V\)</span>; sea <span class="math inline">\(c\)</span> un elemento de <span class="math inline">\(\mathbb{F}\)</span>.</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(IU=UI=U\)</span>;</p></li>
+<li><p><span class="math inline">\(U(T_{1}+T_{2})=UT_{1}+UT_{2}\)</span>; <span class="math inline">\((T_{1}+T_{2})U=T_{1}U+T_{2}U\)</span>;</p></li>
+<li><span class="math inline">\(c(UT_{1})=(cU)T_{1}=U(cT_{1})\)</span>.
+</div>
+</li>
+</ol>
+
+<div class="proof">
+<p> <span class="proof"><em>Demostración. </em></span> (1) Esta propiedad de la función identidad es obvia.</p>
+<ol start="2" style="list-style-type: decimal">
+<li><p><span class="math display">\[\begin{array}{rl}
+    [U(T_{1}+T_{2})](v)=&amp;U[(T_{1}+T_{2})(v)]\\
+                       =&amp;U(T_{1}(v)+T_{2}(v))\\
+                       =&amp;U(T_{1}(v))+U(T_{2}(v))\\
+                       =&amp;(UT_{1})(v)+(UT_{2})(v)
+    \end{array}\]</span> así <span class="math inline">\(U(T_{1}+T_{2})=UT_{1}+UT_{2}\)</span>. De forma análoga <span class="math inline">\((T_{1}+T_{2})U=T_{1}U+T_{2}U\)</span>.</p></li>
+<li>Se deja al lector la demostración de este apartado.
+</div>
+</li>
+</ol>
+</div>
+<div id="matriz-de-una-transformacion" class="section level2">
+<h2><span class="header-section-number">8.2</span> Matriz de una transformación</h2>
+<p>Sean <span class="math inline">\(V\)</span> y <span class="math inline">\(W\)</span> espacios vectoriales de dimensión finita tales que <span class="math inline">\(\dim V=n\)</span> y <span class="math inline">\(\dim W=m\)</span>, y sean <span class="math inline">\(\mathcal{B}_{1}=\{v_{1},v_{2}, \cdots, v_{n} \}\)</span> y <span class="math inline">\(\mathcal{B}_{2}=\{w_{1},w_{2}, \cdots, w_{m} \}\)</span> bases de <span class="math inline">\(V\)</span> y <span class="math inline">\(W\)</span> respectivamente. Sea <span class="math inline">\(T\)</span> una transformación lineal de <span class="math inline">\(V\)</span> en <span class="math inline">\(W\)</span>, entonces <span class="math inline">\(T\)</span> está determinado por las imágenes de la base <span class="math inline">\(\mathcal{B}_{1}\)</span>, es decir, <span class="math inline">\(T(v_{1}),T(v_{2}), \cdots, T(v_{n})\)</span>. A su vez, <span class="math inline">\(Tv_{j}\)</span> se escribe como combinación lineal de los vectores <span class="math inline">\(w_{i}\)</span>, así <span class="math inline">\(Tv_{j}=\sum_{i=1}^{m} A_{ij}w_{i}\)</span> donde <span class="math inline">\(A_{ij}\)</span> son las coordenadas del vector <span class="math inline">\(Tv_{j}\)</span> en la base <span class="math inline">\(\mathcal{B}_{2}\)</span>. Para cualquier <span class="math inline">\(v\in V\)</span>, <span class="math inline">\(v=\lambda_{1}v_{1}+\lambda_{2}v_{2}+ \cdots+ \lambda_{n}v_{n}\)</span>, entonces</p>
+<p><span class="math display">\[\begin{array}{rl}
+Tv=&amp;T\sum_{j=1}^{n}\lambda_{j}v_{j}\\
+  =&amp;\sum_{j=1}^{n}\lambda_{j}Tv_{j}\\
+  =&amp;\sum_{j=1}^{n}\lambda_{j}\sum_{i=1}^{m} A_{ij}w_{i}\\
+  =&amp;\sum_{j=1}^{n}\sum_{i=1}^{m} \lambda_{j}A_{ij}w_{i}
+\end{array}\]</span></p>
+<p>Entonces <span class="math inline">\(\lambda_{j}A_{ij}\)</span> es la <span class="math inline">\(i\)</span>-ésima coordenada de <span class="math inline">\(Tv\)</span> en <span class="math inline">\(\mathcal{B}_{2}\)</span> siempre que <span class="math inline">\(\lambda_{j}\)</span> sea la <span class="math inline">\(j\)</span>-ésima coordenada de <span class="math inline">\(v\)</span> e la base <span class="math inline">\(\mathcal{B}_{1}\)</span>. De este modo <span class="math inline">\(A[v]_{\mathcal{B}_{1}}=[Tv]_{\mathcal{B}_{2}}\)</span>, donde la matriz <span class="math inline">\(A\)</span> está formada por los coeficientes <span class="math inline">\(A_{ij}\)</span>. A esta matriz la llamaremos <em>matriz de <span class="math inline">\(T\)</span> respecto a las bases ordenadas <span class="math inline">\(\mathcal{B}_{1}\)</span> y <span class="math inline">\(\mathcal{B}_{2}\)</span></em> y se denota <span class="math inline">\([T]_{\mathcal{B}_{1}\mathcal{B}_{2}}\)</span>, es decir, <span class="math inline">\([[T]_{\mathcal{B}_{1}\mathcal{B}_{2}}]=A_{ij}\)</span>.</p>
+<p>Ahora, sea <span class="math inline">\(A\in\mathcal{M}_{m\times n}(\mathbb{F})\)</span>, entonces <span class="math inline">\(T(\sum_{j=1}^{n}\lambda_{j}v_{j})=\sum_{i=1}^{m}(\sum_{j=1}^{n}[A]_{ij}\lambda_{j})w_{i}\)</span> define una transformación de <span class="math inline">\(V\)</span> en <span class="math inline">\(W\)</span>, para la cual <span class="math inline">\(A\)</span> es la matriz de <span class="math inline">\(T\)</span> respecto de las bases <span class="math inline">\(\mathcal{B}_{1}\)</span> y <span class="math inline">\(\mathcal{B}_{1}\)</span>. Lo anterior es la demostración del siguiente teorema:</p>
+
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-348" class="theorem"><strong>Teorema 8.6  </strong></span>Sean <span class="math inline">\(V\)</span>y <span class="math inline">\(W\)</span> espacios vectoriales de dimensión finita, donde <span class="math inline">\(\dim V=n\)</span> y <span class="math inline">\(\dim W=m\)</span>. Sean <span class="math inline">\(\mathcal{B}_{1}\)</span> y <span class="math inline">\(\mathcal{B}_{2}\)</span> bases ordenadas de <span class="math inline">\(V\)</span> y <span class="math inline">\(W\)</span> respectivamente. Para cada transformación <span class="math inline">\(T\)</span> de <span class="math inline">\(V\)</span> en <span class="math inline">\(W\)</span>, existe una matriz <span class="math inline">\(A\in\mathcal{M}_{m\times n}(\mathbb{R})\)</span> tal que <span class="math inline">\([Tv]_{\mathcal{B}_{2}}=A[v]_{\mathcal{B}_{1}}\)</span> para todo <span class="math inline">\(v\in V\)</span>. Además <span class="math inline">\(T\longmapsto A\)</span> es una correspondencia biyectiva entre el conjunto <span class="math inline">\(L(V,W)\)</span> y <span class="math inline">\(\mathcal{M}_{m\times n}(\mathbb{R})\)</span>.</p>
+</div>
+
+
+<div class="remark">
+<p> <span class="remark"><em>Nota. </em></span> Las columnas de la matriz de la transformación, <span class="math inline">\([T]_{\mathcal{B}_{1}\mathcal{B}_{2}}\)</span>, vienen dadas por las coordenadas de <span class="math inline">\(Tv_{j}\)</span> en la base <span class="math inline">\(\mathcal{B}_{2}\)</span>, es decir, <span class="math inline">\([Tv_{j}]_{\mathcal{B}_{2}}\)</span>; donde <span class="math inline">\(v_{j}\)</span> son los vectores de la base <span class="math inline">\(\mathcal{B}_{1}\)</span> del espacio <span class="math inline">\(V\)</span>.</p>
+Además, si <span class="math inline">\(U\)</span> es otra transformación de <span class="math inline">\(V\)</span> en <span class="math inline">\(W\)</span>, entonces la matriz de la transformación <span class="math inline">\(\lambda T+U\)</span> es la matriz <span class="math inline">\(\lambda[T]_{\mathcal{B}_{1}\mathcal{B}_{2}}+[U]_{\mathcal{B}_{1}\mathcal{B}_{2}}\)</span>.
+</div>
+
+</div>
+<div id="transformaciones-invertibles" class="section level2">
+<h2><span class="header-section-number">8.3</span> Transformaciones invertibles</h2>
+<p>Recuerde que una función <span class="math inline">\(T:V\longrightarrow W\)</span> es invertible si existe una función <span class="math inline">\(U:W\longrightarrow V\)</span> tal que <span class="math inline">\(UT\)</span> es la función identidad en <span class="math inline">\(V\)</span>, <span class="math inline">\(I_{V}\)</span> y <span class="math inline">\(TU\)</span> es la función identidad en <span class="math inline">\(W\)</span>, <span class="math inline">\(I_{W}\)</span>. Ya vimos que de existir la inversa, es única y la denotamos por <span class="math inline">\(T^{-1}\)</span> y en este caso decimos que <span class="math inline">\(T\)</span> es invertible. Además sabemos que <span class="math inline">\(T\)</span> es biyectiva si y solo si existe su inversa, <span class="math inline">\(T^{-1}\)</span>.</p>
+
+<div class="theorem">
+<span id="thm:unnamed-chunk-350" class="theorem"><strong>Teorema 8.7  </strong></span>Sean <span class="math inline">\(V\)</span> y <span class="math inline">\(W\)</span> espacios vectoriales sobre un cuerpo <span class="math inline">\(\mathbb{F}\)</span> y sea <span class="math inline">\(T\)</span> una transformación lineal de <span class="math inline">\(V\)</span> en <span class="math inline">\(W\)</span>. Si <span class="math inline">\(T\)</span> es invertible, entonces la función <span class="math inline">\(T^{-1}\)</span> es una transformación lineal de <span class="math inline">\(W\)</span> en <span class="math inline">\(V\)</span>.
+</div>
+
+
+<div class="proof">
+<p> <span class="proof"><em>Demostración. </em></span> Sean <span class="math inline">\(u_{1}, u_{2}\in W\)</span> y <span class="math inline">\(\lambda\in\mathbb{F}\)</span>. Como <span class="math inline">\(T\)</span> es biyectiva, existen <span class="math inline">\(v_{1},v_{2}\in V\)</span> únicos, tales que <span class="math inline">\(Tv_{1}=u_{1}\)</span> y <span class="math inline">\(Tv_{2}=u_{2}\)</span>. Por lo que <span class="math inline">\(\lambda u_{1}+ u_{2}=\lambda Tv_{1} + Tv_{2}\)</span>, por linealidad de <span class="math inline">\(T\)</span>, <span class="math inline">\(\lambda u_{1}+ u_{2}=T(\lambda v_{1} + v_{2})\)</span>. Nuevamente, por la inyectividad de <span class="math inline">\(T\)</span>, el único vector de <span class="math inline">\(V\)</span> que cumple que <span class="math inline">\(Tv=\lambda u_{1}+ u_{2}\)</span> es <span class="math inline">\(\lambda v_{1} + v_{2}\)</span>, entonces <span class="math inline">\(T^{-1}(\lambda v_{1} + v_{2})=T^{-1}(T(\lambda v_{1} + v_{2}))=\lambda v_{1} + v_{2}=\lambda T^{-1}u_{1}+T^{-1}u_{2}\)</span>.</p>
+</div>
+
+
+<div class="remark">
+<p> <span class="remark"><em>Nota. </em></span> (1) Si <span class="math inline">\(T_{1}:\longrightarrow V_{2}\)</span> y <span class="math inline">\(T_{2}: V_{2}\longrightarrow V_{3}\)</span> son invertibles. Entonces <span class="math inline">\(T_{2}T_{1}\)</span> es invertible y <span class="math inline">\((T_{2}T_{1})^{-1}=T_{1}^{-1}T_{2}^{-1}\)</span>.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Como <span class="math inline">\(T\)</span> es lineal, <span class="math inline">\(T(u-v)=Tu - Tv\)</span>, así <span class="math inline">\(Tu=Tv\)</span> si y solo si <span class="math inline">\(T(u-v)=0\)</span>. Entonces <span class="math inline">\(T\)</span> es inyectiva si y solo si <span class="math inline">\(v=0\)</span> siempre que <span class="math inline">\(T(v)=0\)</span>. Esto es, <span class="math inline">\(T\)</span> es inyectiva si y solo si <span class="math inline">\(Ker(T)=\{0\}\)</span>.
+</div>
+</li>
+</ol>
+
+<div class="definition">
+<span id="def:unnamed-chunk-353" class="definition"><strong>Definición 8.6  </strong></span>Diremos que <span class="math inline">\(T\)</span> es <em>no singular</em> si <span class="math inline">\(Tv=0 \Rightarrow v=0\)</span> (esto es <span class="math inline">\(Ker(T)=\{0\}\)</span>).
+</div>
+
+
+<div class="theorem">
+<span id="thm:unnamed-chunk-354" class="theorem"><strong>Teorema 8.8  </strong></span>Sea <span class="math inline">\(T\)</span> una transformación lineal de <span class="math inline">\(V\)</span> en <span class="math inline">\(W\)</span>. Entonces <span class="math inline">\(T\)</span> es no singular si y solo si, <span class="math inline">\(T\)</span> aplica cada conjunto linealmente independiente de <span class="math inline">\(V\)</span> en un conjunto linealmente independiente de <span class="math inline">\(W\)</span>.
+</div>
+
+
+<div class="proof">
+<p> <span class="proof"><em>Demostración. </em></span> Supongamos que <span class="math inline">\(T\)</span> es no singular. Sea <span class="math inline">\(S\subseteq V\)</span> un conjunto linealmente independiente. Sean <span class="math inline">\(\{v_{1},v_{2},\cdots, v_{k} \}\subseteq S\)</span>, vectores de <span class="math inline">\(S\)</span>. Consideremos una combinación lineal de las imágenes de estos vectores, igual a cero, <span class="math inline">\(\lambda_{1}Tv_{1}+\lambda_{2}Tv_{2}+\cdots+\lambda_{k}Tv_{k}=0\)</span>, como <span class="math inline">\(T\)</span> es lineal, <span class="math inline">\(T(\lambda_{1}v_{1}+\lambda_{2}v_{2}+\cdots+\lambda_{k}v_{k})=T0=0\)</span>, por lo tanto, <span class="math inline">\(\lambda_{1}v_{1}+\lambda_{2}v_{2}+\cdots+\lambda_{k}v_{k}=0\)</span>. Como <span class="math inline">\(S\)</span> es l.i. se tiene que <span class="math inline">\(\lambda_{1}=\lambda_{2}=\cdots=\lambda_{k}=0\)</span>, de donde se sigue que <span class="math inline">\(T(S)\)</span> (la imagen de <span class="math inline">\(S\)</span> por <span class="math inline">\(T\)</span>) es l.i.</p>
+Recíprocamente, supongamos que <span class="math inline">\(T\)</span> aplica conjuntos l.i. de <span class="math inline">\(V\)</span> en conjuntos l.i. de <span class="math inline">\(W\)</span>. En particular, dado <span class="math inline">\(v\in V\)</span>, con <span class="math inline">\(v\neq 0\)</span>, <span class="math inline">\(Tv\)</span> es l.i. por lo tanto, <span class="math inline">\(Tv\neq 0\)</span> (considerar <span class="math inline">\(Tv=0\)</span> contradice que <span class="math inline">\(Tv\)</span> es l.i.) por lo tanto <span class="math inline">\(T\)</span> es n o singular.
+</div>
+
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-356" class="example"><strong>Ejemplo 8.7  </strong></span>(1) Sea <span class="math inline">\(T:\mathbb{R}^{2}\longrightarrow \mathbb{R}^{2}\)</span> definida por <span class="math inline">\(T(x,y)=(x+y,x)\)</span>. Como <span class="math inline">\(T(x,y)=(0,0)\)</span> si y solo si <span class="math inline">\(x=y=0\)</span>, se tiene que <span class="math inline">\(T\)</span> es no singular.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Sea <span class="math inline">\(D:V\longrightarrow V\)</span>, donde <span class="math inline">\(V\)</span> es el espacio de los polinomios y <span class="math inline">\(D\)</span> es la derivada. Como la derivada de cualquier constante es cero, <span class="math inline">\(D\)</span> es singular. Pero la dimensión de <span class="math inline">\(V\)</span> no es finita y <span class="math inline">\(Img D=V\)</span>, entonces es posible definir una inversa a la derecha <span class="math inline">\(E\)</span>, a saber la integral indefinida, tal que <span class="math inline">\(ED=I_{V}\)</span>. Pero no se puede definir la inversa a la izquierda.
+</div>
+</li>
+</ol>
+
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-357" class="theorem"><strong>Teorema 8.9  </strong></span>Sean <span class="math inline">\(V\)</span> y <span class="math inline">\(W\)</span> espacios vectoriales de dimensión finita sobre <span class="math inline">\(\mathbb{F}\)</span>, tales que <span class="math inline">\(\dim V=\dim W\)</span>. Si <span class="math inline">\(T\)</span> es una transformación lineal de <span class="math inline">\(V\)</span> en <span class="math inline">\(W\)</span>, las siguientes afirmaciones son equivalentes:</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(T\)</span> es invertible.</p></li>
+<li><p><span class="math inline">\(T\)</span> es no singular.</p></li>
+<li><span class="math inline">\(T\)</span> es sobreyectiva.</li>
+</ol>
+</div>
+
+
+<div class="proof">
+<p> <span class="proof"><em>Demostración. </em></span> Sea <span class="math inline">\(n=\dim V=\dim W\)</span>. Entonces <span class="math inline">\(rango(T)+Nul(T)=n\)</span>. <span class="math inline">\(T\)</span> es no singular si y solo si <span class="math inline">\(rango (T)=n\)</span>. Pero <span class="math inline">\(rang(T)=n\)</span> si y solo si <span class="math inline">\(Img(T)=W\)</span>. Por lo tanto <span class="math inline">\(T\)</span> es sobreyectiva si y solo si <span class="math inline">\(rango (t)=n=\dim W\)</span> si y solo si <span class="math inline">\(Nul(T)=0\)</span> si y solo si <span class="math inline">\(T\)</span> es no singular.</p>
+</div>
+
+
+<div class="remark">
+ <span class="remark"><em>Nota. </em></span> Para cualquier transformación <span class="math inline">\(T:V\longrightarrow W\)</span>, se tiene por definición que <span class="math inline">\(T\)</span> es invertible si y solo si <span class="math inline">\(T\)</span> es biyectiva. El teorema nos permite afirmar que una transformación es invertible probando solo que <span class="math inline">\(T\)</span> es inyectiva (no singular) o probando solo la sobreyectividad, tan solo una de ambas condiciones, siempre y cuando las dimensiones de los espacios sean iguales.
+</div>
+
+</div>
 <div id="ejercicios-4" class="section level2">
-<h2><span class="header-section-number">8.1</span> Ejercicios</h2>
-<pre><code>(1) Dada una transfotmación lineal $T:V\longrightarrow W$, el conjunto $Img(T)\prec W$. Además, el conjunto $\{v\in V: Tv=0 \}\prec V$.
-Respuesta: Sean $w_{1}, w_{2}\in Img(T)$ y $\lambda$ un escalar. Entonces $\lambda w_{1}+w_{2}=\lambda T(v_{1})+T(v_{2})$, como $T$ es transformación lineal, $\lambda w_{1}+w_{2}=\lambda T(v_{1})+T(v_{2})=T(\lambda v_{1}+v_{2})$, luego $\lambda w_{1}+w_{2}$ es la imagen del vector $\lambda v_{1}+v_{2})$, por lo tanto, $\lambda w_{1}+w_{2}\in Img(T)$. Ahora, dados dos vectores $v_{1},v_{2}$ tales que $Tv_{1}=Tv_{2}=0$, entonces $T(\lambda v_{1}+v_{2})=\lambda T(v_{1})+T(v_{2})=\lambda 0+0=0$ por lo tanto $\lambda v_{1}+v_{2}\in \{v\in V: Tv=0 \}$.</code></pre>
+<h2><span class="header-section-number">8.4</span> Ejercicios</h2>
+<ol style="list-style-type: decimal">
+<li>Dada una transfotmación lineal <span class="math inline">\(T:V\longrightarrow W\)</span>, el conjunto <span class="math inline">\(Img(T)\prec W\)</span>. Además, el conjunto <span class="math inline">\(\{v\in V: Tv=0 \}\prec V\)</span>.</li>
+</ol>
+<p>Respuesta: Sean <span class="math inline">\(w_{1}, w_{2}\in Img(T)\)</span> y <span class="math inline">\(\lambda\)</span> un escalar. Entonces <span class="math inline">\(\lambda w_{1}+w_{2}=\lambda T(v_{1})+T(v_{2})\)</span>, como <span class="math inline">\(T\)</span> es transformación lineal, <span class="math inline">\(\lambda w_{1}+w_{2}=\lambda T(v_{1})+T(v_{2})=T(\lambda v_{1}+v_{2})\)</span>, luego <span class="math inline">\(\lambda w_{1}+w_{2}\)</span> es la imagen del vector <span class="math inline">\(\lambda v_{1}+v_{2})\)</span>, por lo tanto, <span class="math inline">\(\lambda w_{1}+w_{2}\in Img(T)\)</span>. Ahora, dados dos vectores <span class="math inline">\(v_{1},v_{2}\)</span> tales que <span class="math inline">\(Tv_{1}=Tv_{2}=0\)</span>, entonces <span class="math inline">\(T(\lambda v_{1}+v_{2})=\lambda T(v_{1})+T(v_{2})=\lambda 0+0=0\)</span> por lo tanto <span class="math inline">\(\lambda v_{1}+v_{2}\in \{v\in V: Tv=0 \}\)</span>.</p>
 
 </div>
 </div>
