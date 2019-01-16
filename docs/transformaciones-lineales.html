@@ -5,11 +5,11 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Álgebra Lineal</title>
-  <meta name="description" content="Álgebra Lineal">
-  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+  <title>Capítulo 8 Transformaciones lineales | Álgebra Lineal</title>
+  <meta name="description" content="Capítulo 8 Transformaciones lineales | Álgebra Lineal>
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
-  <meta property="og:title" content="Álgebra Lineal" />
+  <meta property="og:title" content="Capítulo 8 Transformaciones lineales | Álgebra Lineal />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="http://synergy.vision/Algebra/" />
   <meta property="og:image" content="http://synergy.vision/Algebra/images/cover.png" />
@@ -17,7 +17,7 @@
   <meta name="github-repo" content="synergyvision/Algebra/" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Álgebra Lineal" />
+  <meta name="twitter:title" content="Capítulo 8 Transformaciones lineales | Álgebra Lineal />
   
   
   <meta name="twitter:image" content="http://synergy.vision/Algebra/images/cover.png" />
@@ -25,7 +25,7 @@
 <meta name="author" content="Synergy Vision">
 
 
-<meta name="date" content="2018-12-10">
+<meta name="date" content="2019-01-16">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -36,6 +36,7 @@
 <link rel="next" href="producto-escalar.html">
 <script src="libs/jquery/jquery.min.js"></script>
 <link href="libs/gitbook/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook/css/plugin-bookdown.css" rel="stylesheet" />
 <link href="libs/gitbook/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook/css/plugin-search.css" rel="stylesheet" />
@@ -328,7 +329,7 @@ Veamos que es única. Sea <span class="math inline">\(T´:V\longrightarrow W\)</
 
 
 <div class="proof">
-<p> <span class="proof"><em>Demostración. </em></span> Sea <span class="math inline">\(n\)</span> la dimensión de <span class="math inline">\(V\)</span>. Sea <span class="math inline">\(\{v_{1},v_{2},\cdots,v_{k}\}\)</span> una base de <span class="math inline">\(Ker(T)\)</span> y sean <span class="math inline">\(v_{k+1},v_{k+2},\cdots, v_{n}\)</span> vectores tales que <span class="math inline">\(\{v_{1},v_{2},\cdots,v_{k}, v_{k+1},v_{k+2},\cdots, v_{n} \}\)</span> son base de <span class="math inline">\(V\)</span>. Así <span class="math inline">\(T\)</span> está determinada por <span class="math inline">\(Tv_{i}\)</span>, para cada <span class="math inline">\(1\leq i\leq n\)</span>; como <span class="math inline">\(tv_{i}=0\)</span> para todo <span class="math inline">\(1\leq i\leq k\)</span>, se tiene que <span class="math inline">\(Tv_{k+1}, Tv_{k+2},\cdots, Tv_{n}\)</span> generan a <span class="math inline">\(Img(T)\)</span>. Veamos que son linealmente independientes, sean <span class="math inline">\(n-k\)</span> escalares <span class="math inline">\(\lambda_{k+1}, \lambda_{k+2}, \cdots, \lambda_{n}\)</span> y consideremos <span class="math inline">\(\lambda_{k+1}Tv_{k+1}+ \lambda_{k+2}Tv_{k+2}+ \cdots+ \lambda_{n}Tv_{n}=0\)</span>, entonces <span class="math inline">\(T(\lambda_{k+1}v_{k+1}+ \lambda_{k+2}v_{k+2}+ \cdots+ \lambda_{n}v_{n})=0\)</span> por lo tanto <span class="math inline">\(\lambda_{k+1}v_{k+1}+ \lambda_{k+2}v_{k+2}+ \cdots+ \lambda_{n}v_{n}\in Ker(T)\)</span>, de donde se tiene que <span class="math inline">\(\lambda_{k+1}v_{k+1}+ \lambda_{k+2}v_{k+2}+ \cdots+ \lambda_{n}v_{n}=\lambda_{1}v_{1}+\lambda_{2}v_{2}+\cdots+\lambda_{k}v_{k}\)</span>, como <span class="math inline">\(\{v_{1},v_{2},\cdots,v_{k}, v_{k+1},v_{k+2},\cdots, v_{n} \}\)</span> es un conjunto linealmente independiente, se tiene que <span class="math inline">\(\lambda_{k+1}=\lambda_{k+2}= \cdots=\lambda_{n}=0\)</span>.</p>
+ <span class="proof"><em>Demostración. </em></span> Sea <span class="math inline">\(n\)</span> la dimensión de <span class="math inline">\(V\)</span>. Sea <span class="math inline">\(\{v_{1},v_{2},\cdots,v_{k}\}\)</span> una base de <span class="math inline">\(Ker(T)\)</span> y sean <span class="math inline">\(v_{k+1},v_{k+2},\cdots, v_{n}\)</span> vectores tales que <span class="math inline">\(\{v_{1},v_{2},\cdots,v_{k}, v_{k+1},v_{k+2},\cdots, v_{n} \}\)</span> son base de <span class="math inline">\(V\)</span>. Así <span class="math inline">\(T\)</span> está determinada por <span class="math inline">\(Tv_{i}\)</span>, para cada <span class="math inline">\(1\leq i\leq n\)</span>; como <span class="math inline">\(tv_{i}=0\)</span> para todo <span class="math inline">\(1\leq i\leq k\)</span>, se tiene que <span class="math inline">\(Tv_{k+1}, Tv_{k+2},\cdots, Tv_{n}\)</span> generan a <span class="math inline">\(Img(T)\)</span>. Veamos que son linealmente independientes, sean <span class="math inline">\(n-k\)</span> escalares <span class="math inline">\(\lambda_{k+1}, \lambda_{k+2}, \cdots, \lambda_{n}\)</span> y consideremos <span class="math inline">\(\lambda_{k+1}Tv_{k+1}+ \lambda_{k+2}Tv_{k+2}+ \cdots+ \lambda_{n}Tv_{n}=0\)</span>, entonces <span class="math inline">\(T(\lambda_{k+1}v_{k+1}+ \lambda_{k+2}v_{k+2}+ \cdots+ \lambda_{n}v_{n})=0\)</span> por lo tanto <span class="math inline">\(\lambda_{k+1}v_{k+1}+ \lambda_{k+2}v_{k+2}+ \cdots+ \lambda_{n}v_{n}\in Ker(T)\)</span>, de donde se tiene que <span class="math inline">\(\lambda_{k+1}v_{k+1}+ \lambda_{k+2}v_{k+2}+ \cdots+ \lambda_{n}v_{n}=\lambda_{1}v_{1}+\lambda_{2}v_{2}+\cdots+\lambda_{k}v_{k}\)</span>, como <span class="math inline">\(\{v_{1},v_{2},\cdots,v_{k}, v_{k+1},v_{k+2},\cdots, v_{n} \}\)</span> es un conjunto linealmente independiente, se tiene que <span class="math inline">\(\lambda_{k+1}=\lambda_{k+2}= \cdots=\lambda_{n}=0\)</span>.
 </div>
 
 
@@ -337,10 +338,10 @@ Veamos que es única. Sea <span class="math inline">\(T´:V\longrightarrow W\)</
 <ol style="list-style-type: decimal">
 <li><p>La función <span class="math inline">\((T_{1}+T_{2})\)</span> definida por <span class="math inline">\((T_{1}+T_{2})(v)=T_{1}(v)+T_{2}(v)\)</span>, es una transformación lineal de <span class="math inline">\(V\)</span> en <span class="math inline">\(W\)</span>.</p></li>
 <li><p>Dado un escalar <span class="math inline">\(\lambda\)</span>, la función <span class="math inline">\(\lambda T_{1}\)</span> definida por <span class="math inline">\((\lambda T_{1})(v)=\lambda T_{1}(v)\)</span>, es una transformación lineal de <span class="math inline">\(V\)</span> en <span class="math inline">\(W\)</span>.</p></li>
-<li>El conjunto de las transformaciones lineales de <span class="math inline">\(V\)</span> en <span class="math inline">\(W\)</span>, junto con las operaciones definidas antes, es un espacio vectorial sobre el cuerpo <span class="math inline">\(\lambda\)</span>.</li>
-</ol>
+<li>El conjunto de las transformaciones lineales de <span class="math inline">\(V\)</span> en <span class="math inline">\(W\)</span>, junto con las operaciones definidas antes, es un espacio vectorial sobre el cuerpo <span class="math inline">\(\lambda\)</span>.
 </div>
-
+</li>
+</ol>
 
 <div class="proof">
 <p> <span class="proof"><em>Demostración. </em></span>  Sean <span class="math inline">\(T_{1}\)</span> y <span class="math inline">\(T_{2}\)</span> como en las hipótesis y <span class="math inline">\(\lambda\in \mathbb{F}\)</span>. Sean <span class="math inline">\(u,v\in V\)</span> vectores cuales quiera y <span class="math inline">\(\gamma\)</span> un escalar. Entonces</p>
@@ -462,13 +463,14 @@ Además, si <span class="math inline">\(U\)</span> es otra transformación de <s
 
 
 <div class="proof">
-<p> <span class="proof"><em>Demostración. </em></span> Sean <span class="math inline">\(u_{1}, u_{2}\in W\)</span> y <span class="math inline">\(\lambda\in\mathbb{F}\)</span>. Como <span class="math inline">\(T\)</span> es biyectiva, existen <span class="math inline">\(v_{1},v_{2}\in V\)</span> únicos, tales que <span class="math inline">\(Tv_{1}=u_{1}\)</span> y <span class="math inline">\(Tv_{2}=u_{2}\)</span>. Por lo que <span class="math inline">\(\lambda u_{1}+ u_{2}=\lambda Tv_{1} + Tv_{2}\)</span>, por linealidad de <span class="math inline">\(T\)</span>, <span class="math inline">\(\lambda u_{1}+ u_{2}=T(\lambda v_{1} + v_{2})\)</span>. Nuevamente, por la inyectividad de <span class="math inline">\(T\)</span>, el único vector de <span class="math inline">\(V\)</span> que cumple que <span class="math inline">\(Tv=\lambda u_{1}+ u_{2}\)</span> es <span class="math inline">\(\lambda v_{1} + v_{2}\)</span>, entonces <span class="math inline">\(T^{-1}(\lambda v_{1} + v_{2})=T^{-1}(T(\lambda v_{1} + v_{2}))=\lambda v_{1} + v_{2}=\lambda T^{-1}u_{1}+T^{-1}u_{2}\)</span>.</p>
+ <span class="proof"><em>Demostración. </em></span> Sean <span class="math inline">\(u_{1}, u_{2}\in W\)</span> y <span class="math inline">\(\lambda\in\mathbb{F}\)</span>. Como <span class="math inline">\(T\)</span> es biyectiva, existen <span class="math inline">\(v_{1},v_{2}\in V\)</span> únicos, tales que <span class="math inline">\(Tv_{1}=u_{1}\)</span> y <span class="math inline">\(Tv_{2}=u_{2}\)</span>. Por lo que <span class="math inline">\(\lambda u_{1}+ u_{2}=\lambda Tv_{1} + Tv_{2}\)</span>, por linealidad de <span class="math inline">\(T\)</span>, <span class="math inline">\(\lambda u_{1}+ u_{2}=T(\lambda v_{1} + v_{2})\)</span>. Nuevamente, por la inyectividad de <span class="math inline">\(T\)</span>, el único vector de <span class="math inline">\(V\)</span> que cumple que <span class="math inline">\(Tv=\lambda u_{1}+ u_{2}\)</span> es <span class="math inline">\(\lambda v_{1} + v_{2}\)</span>, entonces <span class="math inline">\(T^{-1}(\lambda v_{1} + v_{2})=T^{-1}(T(\lambda v_{1} + v_{2}))=\lambda v_{1} + v_{2}=\lambda T^{-1}u_{1}+T^{-1}u_{2}\)</span>.
 </div>
 
 
 <div class="remark">
-<p> <span class="remark"><em>Nota. </em></span> (1) Si <span class="math inline">\(T_{1}:\longrightarrow V_{2}\)</span> y <span class="math inline">\(T_{2}: V_{2}\longrightarrow V_{3}\)</span> son invertibles. Entonces <span class="math inline">\(T_{2}T_{1}\)</span> es invertible y <span class="math inline">\((T_{2}T_{1})^{-1}=T_{1}^{-1}T_{2}^{-1}\)</span>.</p>
-<ol start="2" style="list-style-type: decimal">
+<p> <span class="remark"><em>Nota. </em></span> Notemos que:</p>
+<ol style="list-style-type: decimal">
+<li><p>Si <span class="math inline">\(T_{1}:\longrightarrow V_{2}\)</span> y <span class="math inline">\(T_{2}: V_{2}\longrightarrow V_{3}\)</span> son invertibles. Entonces <span class="math inline">\(T_{2}T_{1}\)</span> es invertible y <span class="math inline">\((T_{2}T_{1})^{-1}=T_{1}^{-1}T_{2}^{-1}\)</span>.</p></li>
 <li>Como <span class="math inline">\(T\)</span> es lineal, <span class="math inline">\(T(u-v)=Tu - Tv\)</span>, así <span class="math inline">\(Tu=Tv\)</span> si y solo si <span class="math inline">\(T(u-v)=0\)</span>. Entonces <span class="math inline">\(T\)</span> es inyectiva si y solo si <span class="math inline">\(v=0\)</span> siempre que <span class="math inline">\(T(v)=0\)</span>. Esto es, <span class="math inline">\(T\)</span> es inyectiva si y solo si <span class="math inline">\(Ker(T)=\{0\}\)</span>.
 </div>
 </li>
@@ -491,30 +493,83 @@ Recíprocamente, supongamos que <span class="math inline">\(T\)</span> aplica co
 
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-356" class="example"><strong>Ejemplo 8.7  </strong></span>(1) Sea <span class="math inline">\(T:\mathbb{R}^{2}\longrightarrow \mathbb{R}^{2}\)</span> definida por <span class="math inline">\(T(x,y)=(x+y,x)\)</span>. Como <span class="math inline">\(T(x,y)=(0,0)\)</span> si y solo si <span class="math inline">\(x=y=0\)</span>, se tiene que <span class="math inline">\(T\)</span> es no singular.</p>
-<ol start="2" style="list-style-type: decimal">
-<li>Sea <span class="math inline">\(D:V\longrightarrow V\)</span>, donde <span class="math inline">\(V\)</span> es el espacio de los polinomios y <span class="math inline">\(D\)</span> es la derivada. Como la derivada de cualquier constante es cero, <span class="math inline">\(D\)</span> es singular. Pero la dimensión de <span class="math inline">\(V\)</span> no es finita y <span class="math inline">\(Img D=V\)</span>, entonces es posible definir una inversa a la derecha <span class="math inline">\(E\)</span>, a saber la integral indefinida, tal que <span class="math inline">\(ED=I_{V}\)</span>. Pero no se puede definir la inversa a la izquierda.
+<span id="exm:unnamed-chunk-356" class="example"><strong>Ejemplo 8.7  </strong></span>Sea <span class="math inline">\(T:\mathbb{R}^{2}\longrightarrow \mathbb{R}^{2}\)</span> definida por <span class="math inline">\(T(x,y)=(x+y,x)\)</span>. Como <span class="math inline">\(T(x,y)=(0,0)\)</span> si y solo si <span class="math inline">\(x=y=0\)</span>, se tiene que <span class="math inline">\(T\)</span> es no singular.
+</div>
+
+
+<div class="example">
+<span id="exm:unnamed-chunk-357" class="example"><strong>Ejemplo 8.8  </strong></span>Sea <span class="math inline">\(D:V\longrightarrow V\)</span>, donde <span class="math inline">\(V\)</span> es el espacio de los polinomios y <span class="math inline">\(D\)</span> es la derivada. Como la derivada de cualquier constante es cero, <span class="math inline">\(D\)</span> es singular. Pero la dimensión de <span class="math inline">\(V\)</span> no es finita y <span class="math inline">\(Img D=V\)</span>, entonces es posible definir una inversa a la derecha <span class="math inline">\(E\)</span>, a saber la integral indefinida, tal que <span class="math inline">\(ED=I_{V}\)</span>. Pero no se puede definir la inversa a la izquierda.
+</div>
+
+
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-358" class="theorem"><strong>Teorema 8.9  </strong></span>Sean <span class="math inline">\(V\)</span> y <span class="math inline">\(W\)</span> espacios vectoriales de dimensión finita sobre <span class="math inline">\(\mathbb{F}\)</span>, tales que <span class="math inline">\(\dim V=\dim W\)</span>. Si <span class="math inline">\(T\)</span> es una transformación lineal de <span class="math inline">\(V\)</span> en <span class="math inline">\(W\)</span>, las siguientes afirmaciones son equivalentes:</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(T\)</span> es invertible.</p></li>
+<li><p><span class="math inline">\(T\)</span> es no singular.</p></li>
+<li><span class="math inline">\(T\)</span> es sobreyectiva.
+</div>
+</li>
+</ol>
+
+<div class="proof">
+ <span class="proof"><em>Demostración. </em></span> Sea <span class="math inline">\(n=\dim V=\dim W\)</span>. Entonces <span class="math inline">\(rango(T)+Nul(T)=n\)</span>. <span class="math inline">\(T\)</span> es no singular si y solo si <span class="math inline">\(rango (T)=n\)</span>. Pero <span class="math inline">\(rang(T)=n\)</span> si y solo si <span class="math inline">\(Img(T)=W\)</span>. Por lo tanto <span class="math inline">\(T\)</span> es sobreyectiva si y solo si <span class="math inline">\(rango (t)=n=\dim W\)</span> si y solo si <span class="math inline">\(Nul(T)=0\)</span> si y solo si <span class="math inline">\(T\)</span> es no singular.
+</div>
+
+
+<div class="definition">
+<p><span id="def:unnamed-chunk-360" class="definition"><strong>Definición 8.7  </strong></span>Sean <span class="math inline">\(V\)</span> y <span class="math inline">\(W\)</span> espacios vectoriales (sobre el mismo cuerpo <span class="math inline">\(\mathbb{F}\)</span>). Sea <span class="math inline">\(T\)</span> una transformación lineal de <span class="math inline">\(V\)</span> en <span class="math inline">\(W\)</span>. Si <span class="math inline">\(T\)</span> es biyectiva, decimos que <span class="math inline">\(T\)</span> es un <em>isomorfismo de <span class="math inline">\(V\)</span> sobre <span class="math inline">\(W\)</span></em>. Si existe un isomorfismo de <span class="math inline">\(V\)</span> en <span class="math inline">\(W\)</span>, decimos que <em><span class="math inline">\(V\)</span> es isomorfo a <span class="math inline">\(W\)</span></em> y se denota <span class="math inline">\(V\simeq W\)</span>.</p>
+</div>
+
+
+<div class="remark">
+<p> <span class="remark"><em>Nota. </em></span> La relación de isomorfismo es una relación de equivalencia:</p>
+<ol style="list-style-type: decimal">
+<li><p>Todo espacio vectorial <span class="math inline">\(V\)</span> es trivialmente isomorfo a si mismo.</p></li>
+<li><p>Si <span class="math inline">\(V\)</span> es isomorfo a <span class="math inline">\(W\)</span>, es claro que <span class="math inline">\(W\)</span> es isomorfo a <span class="math inline">\(V\)</span>.</p></li>
+<li>Si <span class="math inline">\(V\)</span> es isomorfo a <span class="math inline">\(W\)</span> y <span class="math inline">\(W\)</span> es isomorfo a <span class="math inline">\(X\)</span>, entonces <span class="math inline">\(V\)</span> es isomorfo a <span class="math inline">\(X\)</span>.
 </div>
 </li>
 </ol>
 
 <div class="theorem">
-<p><span id="thm:unnamed-chunk-357" class="theorem"><strong>Teorema 8.9  </strong></span>Sean <span class="math inline">\(V\)</span> y <span class="math inline">\(W\)</span> espacios vectoriales de dimensión finita sobre <span class="math inline">\(\mathbb{F}\)</span>, tales que <span class="math inline">\(\dim V=\dim W\)</span>. Si <span class="math inline">\(T\)</span> es una transformación lineal de <span class="math inline">\(V\)</span> en <span class="math inline">\(W\)</span>, las siguientes afirmaciones son equivalentes:</p>
-<ol style="list-style-type: decimal">
-<li><p><span class="math inline">\(T\)</span> es invertible.</p></li>
-<li><p><span class="math inline">\(T\)</span> es no singular.</p></li>
-<li><span class="math inline">\(T\)</span> es sobreyectiva.</li>
-</ol>
+<span id="thm:unnamed-chunk-362" class="theorem"><strong>Teorema 8.10  </strong></span>Todo espacio vectorial de dimensión <span class="math inline">\(n\)</span> (sobre un cuerpo <span class="math inline">\(\mathbb{F}\)</span>) es isomorfo a <span class="math inline">\(\mathbb{F}^{n}\)</span>.
 </div>
 
 
 <div class="proof">
-<p> <span class="proof"><em>Demostración. </em></span> Sea <span class="math inline">\(n=\dim V=\dim W\)</span>. Entonces <span class="math inline">\(rango(T)+Nul(T)=n\)</span>. <span class="math inline">\(T\)</span> es no singular si y solo si <span class="math inline">\(rango (T)=n\)</span>. Pero <span class="math inline">\(rang(T)=n\)</span> si y solo si <span class="math inline">\(Img(T)=W\)</span>. Por lo tanto <span class="math inline">\(T\)</span> es sobreyectiva si y solo si <span class="math inline">\(rango (t)=n=\dim W\)</span> si y solo si <span class="math inline">\(Nul(T)=0\)</span> si y solo si <span class="math inline">\(T\)</span> es no singular.</p>
+ <span class="proof"><em>Demostración. </em></span> Sea <span class="math inline">\(V\)</span> un espacio vectorial sobre <span class="math inline">\(\mathbb{F}\)</span>, de dimensión igual a <span class="math inline">\(n\in\mathbb{N}\)</span>. Sea <span class="math inline">\(\mathcal{B}=\{v_{1},v_{2},\cdots v_{n} \}\)</span> una base ordenada de <span class="math inline">\(V\)</span>. Definimos la tansformación lineal <span class="math inline">\(T:V\longrightarrow \mathbb{F}^{n}\)</span> por <span class="math inline">\(Tv=(\lambda_{1},\lambda_{2},\cdots,\lambda_{n})\)</span> donde <span class="math inline">\((\lambda_{1},\lambda_{2},\cdots,\lambda_{n})\)</span> son las coordenadas del vector <span class="math inline">\(v\)</span> en la base <span class="math inline">\(\mathcal{B}\)</span>, es decir, <span class="math inline">\(v=\lambda_{1}v_{1}+\lambda_{2}v_{2}+\cdots+\lambda_{n}v_{n}\)</span>. Es fácil ver que <span class="math inline">\(T\)</span> es un isomorfismo. En efecto, dos vectores distintos, <span class="math inline">\((\lambda_{1},\lambda_{2},\cdots,\lambda_{n})\neq(\gamma_{1},\gamma_{2},\cdots,\gamma_{n})\)</span> de <span class="math inline">\(\mathbb{F}\)</span>, tienen preimágenes distintas, <span class="math inline">\(v_{1}\neq v_{2}\)</span> (de lo contrario, <span class="math inline">\(\mathcal{B}\)</span> no sería un conjunto linealmente independiente). Además, para todo vector en <span class="math inline">\(\mathbb{F}\)</span>, <span class="math inline">\((\lambda_{1},\lambda_{2},\cdots,\lambda_{n})\)</span>, existe un vector <span class="math inline">\(v\in V\)</span> tal que <span class="math inline">\((\lambda_{1},\lambda_{2},\cdots,\lambda_{n})\)</span> es su vector de coordenadas, es decir, <span class="math inline">\(v=\lambda_{1}v_{1}+\lambda_{2}v_{2}+\cdots+\lambda_{n}v_{n}\)</span>.
+</div>
+
+
+<div class="theorem">
+<span id="thm:unnamed-chunk-364" class="theorem"><strong>Teorema 8.11  </strong></span>Sean <span class="math inline">\(V\)</span> y <span class="math inline">\(W\)</span> espacios vectoriales (sobre <span class="math inline">\(\mathbb{F}\)</span>) de dimensión finita. Sean <span class="math inline">\(n=\dim V\)</span> y <span class="math inline">\(m=\dim W\)</span>. Y sean <span class="math inline">\(\mathcal{B}_{1}\)</span> y <span class="math inline">\(\mathcal{B}_{2}\)</span> bases ordenadas de <span class="math inline">\(V\)</span> y <span class="math inline">\(W\)</span> respectivamente. La función que asigna a cada transformación <span class="math inline">\(T\)</span> (de <span class="math inline">\(V\)</span> en <span class="math inline">\(W\)</span>), la matriz de la transformación en las bases <span class="math inline">\(\mathcal{B}_{1}\)</span> y <span class="math inline">\(\mathcal{B}_{2}\)</span>, es un isomorfismo entre <span class="math inline">\(L(V,W)\)</span> y <span class="math inline">\(\mathcal{M}_{m\times n}(\mathbb{R})\)</span>.
+</div>
+
+
+<div class="proof">
+ <span class="proof"><em>Demostración. </em></span> Sean <span class="math inline">\(V\)</span> y <span class="math inline">\(W\)</span> espacios vectoriales (sobre <span class="math inline">\(\mathbb{F}\)</span>) tales que <span class="math inline">\(n=\dim V\)</span> y <span class="math inline">\(m=\dim W\)</span>. Sea <span class="math inline">\(f:L(V,W)\longrightarrow \mathcal{M}_{m\times n}(\mathbb{F})\)</span> la función <span class="math inline">\(f(T)=[T]_{\mathcal{B}_{1}\mathcal{B}_{2}}\)</span>, donde <span class="math inline">\(\mathcal{B}_{1}\)</span> y <span class="math inline">\(\mathcal{B}_{2}\)</span> son bases de <span class="math inline">\(V\)</span> y <span class="math inline">\(W\)</span> respectivamente. En el teorema @ref{thm:teorema420} ya demostramos que esta función es biyectiva.
+</div>
+
+<p>Si <span class="math inline">\(T\)</span> es una transformación lineal de <span class="math inline">\(V\)</span> en si mismo, diremos que <span class="math inline">\(T\)</span> es un <em>operador lineal</em>. En este caso, la matriz asociada a <span class="math inline">\(T\)</span> en una base <span class="math inline">\(\mathcal{B}\)</span> de <span class="math inline">\(V\)</span> se denota <span class="math inline">\([T]_{\mathcal{B}}\)</span> en lugar de <span class="math inline">\([T]_{\mathcal{B}\mathcal{B}}\)</span>.</p>
+
+<div class="theorem">
+<span id="thm:unnamed-chunk-366" class="theorem"><strong>Teorema 8.12  </strong></span>Sean <span class="math inline">\(V_{1}, V_{2}\)</span> y <span class="math inline">\(V_{3}\)</span> espacios vectoriales de dimensión finita, cuyas dimensiones son <span class="math inline">\(n,m\)</span> y <span class="math inline">\(p\)</span> respectivamente. Sean <span class="math inline">\(\mathcal{B}_{1}, \mathcal{B}_{2}\)</span> y <span class="math inline">\(\mathcal{B}_{1}\)</span> bases de <span class="math inline">\(V_{1}, V_{2}\)</span> y <span class="math inline">\(V_{3}\)</span> respectivamente. Sean <span class="math inline">\(T_{1}:V_{1}\longrightarrow V_{2}\)</span> y <span class="math inline">\(T_{2}:V_{1}\longrightarrow V_{2}\)</span> transformaciones lineales. Entonces la matriz de la transformación <span class="math inline">\([T_{2}\circ T_{1}]_{\mathcal{B}_{1}\mathcal{B}_{3}}=[T_{2}]_{\mathcal{B}_{2}\mathcal{B}_{3}}[T_{1}]_{\mathcal{B}_{1}\mathcal{B}_{2}}\)</span>.
+</div>
+
+
+<div class="proof">
+<p> <span class="proof"><em>Demostración. </em></span> Como <span class="math inline">\([T_{1}v]_{\mathcal{B}_{2}}=[T_{1}]_{\mathcal{B}_{1}\mathcal{B}_{2}}[v]_{\mathcal{B}_{1}}\)</span>, entonces</p>
+<span class="math display">\[\begin{array}{rl}
+[T_{2}\circ T_{1}v]_{\mathcal{B}_{3}}=&amp;[T_{2}(T_{1}v)]_{\mathcal{B}_{3}}\\
+=&amp;[T_{2}]_{\mathcal{B}_{2}\mathcal{B}_{3}}[T_{1}v]_{\mathcal{B}_{2}}\\
+=&amp;[T_{2}]_{\mathcal{B}_{2}\mathcal{B}_{3}}[T_{1}]_{\mathcal{B}_{1}\mathcal{B}_{2}}[v]_{\mathcal{B}_{1}}
+\end{array}\]</span>
 </div>
 
 
 <div class="remark">
- <span class="remark"><em>Nota. </em></span> Para cualquier transformación <span class="math inline">\(T:V\longrightarrow W\)</span>, se tiene por definición que <span class="math inline">\(T\)</span> es invertible si y solo si <span class="math inline">\(T\)</span> es biyectiva. El teorema nos permite afirmar que una transformación es invertible probando solo que <span class="math inline">\(T\)</span> es inyectiva (no singular) o probando solo la sobreyectividad, tan solo una de ambas condiciones, siempre y cuando las dimensiones de los espacios sean iguales.
+ <span class="remark"><em>Nota. </em></span> Si consideramos el caso de un operador lineal compuesto consigo mismo, entonces <span class="math inline">\(V_{1}=V_{2}=V_{3}\)</span> y considerando la misma base, <span class="math inline">\(\mathcal{B}_{1}=\mathcal{B}_{2}=\mathcal{B}_{3}\)</span>, se tiene que <span class="math inline">\([T\circ T]_{\mathcal{B}}=[T]_{\mathcal{B}}[T]_{\mathcal{B}}=[T]_{\mathcal{B}}^{2}\)</span>. Por lo tanto <span class="math inline">\(T\)</span> es invertible si y solo si <span class="math inline">\([T]_{\mathcal{B}}\)</span> lo es. Más aún, si <span class="math inline">\(T\)</span> es invertible, la matriz de la transformación inversa es igual a la inversa de la matriz de la transformación, es decir <span class="math inline">\([T^{1}]_{\mathcal{B}}=[T]_{\mathcal{B}}^{-1}\)</span>.
 </div>
 
 </div>
@@ -523,7 +578,34 @@ Recíprocamente, supongamos que <span class="math inline">\(T\)</span> aplica co
 <ol style="list-style-type: decimal">
 <li>Dada una transfotmación lineal <span class="math inline">\(T:V\longrightarrow W\)</span>, el conjunto <span class="math inline">\(Img(T)\prec W\)</span>. Además, el conjunto <span class="math inline">\(\{v\in V: Tv=0 \}\prec V\)</span>.</li>
 </ol>
-<p>Respuesta: Sean <span class="math inline">\(w_{1}, w_{2}\in Img(T)\)</span> y <span class="math inline">\(\lambda\)</span> un escalar. Entonces <span class="math inline">\(\lambda w_{1}+w_{2}=\lambda T(v_{1})+T(v_{2})\)</span>, como <span class="math inline">\(T\)</span> es transformación lineal, <span class="math inline">\(\lambda w_{1}+w_{2}=\lambda T(v_{1})+T(v_{2})=T(\lambda v_{1}+v_{2})\)</span>, luego <span class="math inline">\(\lambda w_{1}+w_{2}\)</span> es la imagen del vector <span class="math inline">\(\lambda v_{1}+v_{2})\)</span>, por lo tanto, <span class="math inline">\(\lambda w_{1}+w_{2}\in Img(T)\)</span>. Ahora, dados dos vectores <span class="math inline">\(v_{1},v_{2}\)</span> tales que <span class="math inline">\(Tv_{1}=Tv_{2}=0\)</span>, entonces <span class="math inline">\(T(\lambda v_{1}+v_{2})=\lambda T(v_{1})+T(v_{2})=\lambda 0+0=0\)</span> por lo tanto <span class="math inline">\(\lambda v_{1}+v_{2}\in \{v\in V: Tv=0 \}\)</span>.</p>
+<p>Respuesta:</p>
+<p>Sean <span class="math inline">\(w_{1}, w_{2}\in Img(T)\)</span> y <span class="math inline">\(\lambda\)</span> un escalar. Entonces <span class="math inline">\(\lambda w_{1}+w_{2}=\lambda T(v_{1})+T(v_{2})\)</span>, como <span class="math inline">\(T\)</span> es transformación lineal, <span class="math inline">\(\lambda w_{1}+w_{2}=\lambda T(v_{1})+T(v_{2})=T(\lambda v_{1}+v_{2})\)</span>, luego <span class="math inline">\(\lambda w_{1}+w_{2}\)</span> es la imagen del vector <span class="math inline">\(\lambda v_{1}+v_{2})\)</span>, por lo tanto, <span class="math inline">\(\lambda w_{1}+w_{2}\in Img(T)\)</span>. Ahora, dados dos vectores <span class="math inline">\(v_{1},v_{2}\)</span> tales que <span class="math inline">\(Tv_{1}=Tv_{2}=0\)</span>, entonces <span class="math inline">\(T(\lambda v_{1}+v_{2})=\lambda T(v_{1})+T(v_{2})=\lambda 0+0=0\)</span> por lo tanto <span class="math inline">\(\lambda v_{1}+v_{2}\in \{v\in V: Tv=0 \}\)</span>.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Sea <span class="math inline">\(V\)</span> un espacio vectorial sobre el cuerpo <span class="math inline">\(\mathbb{F}\)</span>, sean <span class="math inline">\(U, T\)</span> operadores lineales sobre <span class="math inline">\(V\)</span>; sea <span class="math inline">\(\lambda\)</span> un elemento de <span class="math inline">\(\mathbb{F}\)</span>. Entonces <span class="math inline">\(\lambda(UT)=(\lambda U)T=U(\lambda T)\)</span>.</li>
+</ol>
+<p>Respuesta:</p>
+<p><span class="math display">\[
+\begin{array}{rl}
+[\lambda (UT)](v)=&amp;\lambda ((UT)(v))\\
+=&amp;\lambda U(T(v))\\
+=&amp;(\lambda U)(T(v))\\
+=&amp;[(\lambda U)T](v)
+\end{array}
+\]</span></p>
+<p>Análogamente,</p>
+<p><span class="math display">\[
+\begin{array}{rl}
+[\lambda (UT)](v)=&amp;\lambda ((UT)(v))\\
+=&amp;U(\lambda T(v))\\
+=&amp;U(\lambda T)(v)\\
+=&amp;[U\lambda T](v)
+\end{array}
+\]</span></p>
+<ol start="3" style="list-style-type: decimal">
+<li>Demuestre que la relación de isomorfismo es una relación de equivalencia.</li>
+</ol>
+<p>Respuesta:</p>
+<p>La función identidad de un espacio vectorial <span class="math inline">\(V\)</span> en si mismo, <span class="math inline">\(I:V\longrightarrow V\)</span>, es una transformación lineal biyectiva. Supongamos que <span class="math inline">\(V\)</span> es isomorfoa a <span class="math inline">\(W\)</span>, entonces existe un isomorfismo, <span class="math inline">\(T:V\longrightarrow W\)</span>, por ser biyectivo, es invertible y su inversa <span class="math inline">\(T^{-1}:W\longrightarrow V\)</span>, es un isomorfismo, por lo tanto <span class="math inline">\(W\)</span> es isomorfoa a <span class="math inline">\(V\)</span>. Para verificar la transditividad basta notar que la composición de isomorfismos, es un isomorfismo, y así lo es, ya que la composición de funciones biyectivas, es biyectiva.</p>
 
 </div>
 </div>
@@ -559,7 +641,7 @@ gitbook.start({
 "google": false,
 "linkedin": false,
 "weibo": false,
-"instapper": false,
+"instapaper": false,
 "vk": false,
 "all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
 },
@@ -571,6 +653,10 @@ gitbook.start({
 "edit": {
 "link": "https://github.com/synergyvision/Algebra/edit/master/bookdown/080-transformaciones-lineales.Rmd",
 "text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
 },
 "download": ["Algebra-Lineal.pdf"],
 "toc": {
@@ -586,7 +672,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "";
-    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(src))
       src = src.replace(/^https?:/, '');
     script.src = src;

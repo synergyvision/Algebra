@@ -4,7 +4,7 @@
 title: "Álgebra Lineal"
 subtitle: "Ciencia de los Datos Financieros"
 author: "Synergy Vision"
-date: "2018-12-10"
+date: "2019-01-16"
 knit: "bookdown::render_book"
 documentclass: krantz
 bibliography: [book.bib, packages.bib]
@@ -104,7 +104,9 @@ Nuestra cuenta de Twitter es (https://twitter.com/bysynergyvision) y nuestros re
 <!--chapter:end:010-introduction.Rmd-->
 
 # Estructuras algebraicas
+
 ## Conjuntos
+
 Abordaremos los temas relacionados con la teoría de conjuntos desde una perspectiva intuitiva, más bien oparacional para abordar los conceptos básicos necesarios para desarrollar el resto de los capítulos.
 
 ### Definiciones Iniciales
@@ -121,12 +123,12 @@ Denotaremos por $\mathbb{N}^{*}=\{ 1, 2, 3, \cdots \}$.
 \BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-9"><strong>(\#exm:unnamed-chunk-9) </strong></span>Dado el conjunto de los números enteros $\mathbb{Z}=\{\cdots,-3,-2,-1,0,1,2,3,\cdots \}$, el conjunto de los números pares (enteros pares) es el conjunto de los números de la forma $2k$ donde $k$ es un entero.
 También se puede describir el conjunto anterior así: 
 
-$$\{p\in\mathbb{Z}| p=2k \mbox{ para algún } k\in\mathbb{Z} \}$$ 
+$$\{p\in\mathbb{Z}| p=2k \mbox{ para algú n } k\in\mathbb{Z} \}$$ 
   
 lo cual se lee: _el conjunto formado por todos los números enteros_ $p$ _tales que_ $p=2k$ _para algún número entero_ $k$.
 </div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-10"><strong>(\#exm:unnamed-chunk-10) </strong></span>Denotaremos el conjunto de los números reales po $\mathbb{R}$. El conjunto de las soluciones de la ecuación $7x^{2}+4x-32=0$ es $C=\{x\in\mathbb{R}| x \mbox{ es solución de } 7x^{2}+4x-32=0 \}$.
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-10"><strong>(\#exm:unnamed-chunk-10) </strong></span>Denotaremos el conjunto de los números reales po $\mathbb{R}$. El conjunto de las soluciones de la ecuación $7x^{2}+4x-32=0$ es $C=\{x\in\mathbb{R}| x \mbox{ es solució n de } 7x^{2}+4x-32=0 \}$.
   </div>\EndKnitrBlock{example}
 
 ### Operaciones entre conjuntos
@@ -166,7 +168,6 @@ Ahora bien, pensemos en el conjunto $\mathbb{Z}^{+}\cap\mathbb{Z}^{-}$. Note que
 \BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-15"><strong>(\#exm:unnamed-chunk-15) </strong></span>Dados los conjuntos de los números enteros, $\mathbb{Z}$ y el conjunto de los números naturales $\mathbb{N}=\{0,1,2,3,4,\cdots \}$, el conjunto diferencia $\mathbb{Z}-\mathbb{N}=\{p\in\mathbb{Z}| p\notin \mathbb{N} \}$ es decir, el conjunto de los números enteros que no son números naturales, que no es más que $\mathbb{Z}^{-}$.
 </div>\EndKnitrBlock{example}
 
-
 *Generalización de unión e intersección*
 
 Las operaciones entre conjuntos definidas antes consideran solo dos conjuntos, sin embargo podemos extender las nociones de unión e intesección de conjuntos a una cantidad cualquiera de conjuntos, finita o no.
@@ -185,7 +186,7 @@ Ahora bien, la unión e intersección de una cantidad arbitraria (no necesariame
 
 Dado $I$ un conjunto de índices. Una familia indexada por $I$ es una colección $\mathcal{F}=\{A_{\alpha} | \, \alpha\in I \}$. Note que esta definición permite que el conjunto $I$ sea cualquier conjunto, finito o infinito. Se suele usar el conjunto de los números enteros positivos como conjunto de índices (para numerar) cuando el conjunto es infinito numerable, pero se puede usar cualquier otro conjunto.
 
-La *unión* de los conjuntos $A_{\alpha}$, con $\alpha\in I$, el el conjunto $\bigcup\mathcal{F}=\bigcup_{\alpha\in I} A_{\alpha}=\{x|\, x\in A_{\alpha} \mbox{ para algún } \alpha\in I \}$. De forma análoga, la *intersección* de los conjuntos $A_{\alpha}$, con $\alpha\in I$, es el conjunto $\bigcap A_{\alpha}=\{x|\, x\in A_{\alpha} \mbox{ para todo } \alpha\in I \}$. Vale resaltar que cuando $I$ es un conjunto finito, digamos $I=\{1,2,\cdots, n\}$, se tiene que $\bigcup A_{\alpha}=\{x|\, x\in A_{\alpha} \mbox{ para algún } \alpha\in I \}=\{x|\, x\in A_{1} \mbox{ o } x\in A_{2}\mbox{ o }\cdots \mbox{ o } x\in A_{n} \}=A_{1}\cup A_{2},\cdots , A_{n}$.
+La *unión* de los conjuntos $A_{\alpha}$, con $\alpha\in I$, el el conjunto $\bigcup\mathcal{F}=\bigcup_{\alpha\in I} A_{\alpha}=\{x|\, x\in A_{\alpha} \mbox{ para algú n } \alpha\in I \}$. De forma análoga, la *intersección* de los conjuntos $A_{\alpha}$, con $\alpha\in I$, es el conjunto $\bigcap A_{\alpha}=\{x|\, x\in A_{\alpha} \mbox{ para todo } \alpha\in I \}$. Vale resaltar que cuando $I$ es un conjunto finito, digamos $I=\{1,2,\cdots, n\}$, se tiene que $\bigcup A_{\alpha}=\{x|\, x\in A_{\alpha} \mbox{ para algú n } \alpha\in I \}=\{x|\, x\in A_{1} \mbox{ o } x\in A_{2}\mbox{ o }\cdots \mbox{ o } x\in A_{n} \}=A_{1}\cup A_{2},\cdots , A_{n}$.
 
 ### Producto cartesiano
 
@@ -340,8 +341,8 @@ Es importante el orden de las funciones, en el contexto general descrito en la d
 \begin{equation}
 	g(p) = \left\{
 	\begin{array}{ll}
-	0      & \mbox{ si } p \mbox{ es un número par } \\
-	e      & \mbox{ si } p \mbox{ es un número impar }
+	0      & \mbox{ si } p \mbox{ es un nú mero par } \\
+	e      & \mbox{ si } p \mbox{ es un nú mero impar }
  \end{array}
 	\right.
 \end{equation}
@@ -446,25 +447,26 @@ Es claro que la definición de $\leq$ no depende de la elección de los conjunto
 
 Enunciaremos el conocido *Teorema de Schroeder-Bernstein* sin demostración. El lector interesado en estos temas puede remitirse a HACER REFERENCIA AQUí.
 
-\BeginKnitrBlock{theorem}\iffalse{-91-84-101-111-114-101-109-97-32-100-101-32-83-99-104-114-111-101-100-101-114-45-66-101-114-110-115-116-101-105-110-93-}\fi{}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-53"><strong>(\#thm:unnamed-chunk-53)  \iffalse (Teorema de Schroeder-Bernstein) \fi{} </strong></span>	 Si $A$ y $B$ son conjuntos tales que $|A|\leq |B|$ y $|B|\leq |A|$. Entonces $|A|=|B|$.
- </div>\EndKnitrBlock{theorem}
+\BeginKnitrBlock{theorem}\iffalse{-91-84-101-111-114-101-109-97-32-100-101-32-83-99-104-114-111-101-100-101-114-45-66-101-114-110-115-116-101-105-110-93-}\fi{}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-53"><strong>(\#thm:unnamed-chunk-53)  \iffalse (Teorema de Schroeder-Bernstein) \fi{} </strong></span>Si $A$ y $B$ son conjuntos tales que $|A|\leq |B|$ y $|B|\leq |A|$. Entonces $|A|=|B|$.
+</div>\EndKnitrBlock{theorem}
 A continuación veremos resultados que nos permiten caracterizar los grupos cíclicos.
 
 \BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-54"><strong>(\#thm:unnamed-chunk-54) </strong></span>	Sea $H$ un subgrupo del grupo aditivo $\mathbb{Z}$. $H$ es cíclico, además $H=\langle 0\rangle$ o $H=\langle m\rangle$ donde $m$ es el menor entero positivo de $H$.
 </div>\EndKnitrBlock{theorem}
-\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Supongamos que $H\neq \langle 0\rangle$. Entonces existe $m\in H$ mínimo. Como $H$ es subgrupo, es fácil ver que $\langle m\rangle\subseteq H$. Ahora bien, para todo $h\in H$ se tiene que $h=km+r$ para algún entero $k$ y un entero no negativo $r<m$ (algoritmo de la división). De lo anterior se tiene que $r=h-km$ es un elemento de $H$. Como $m$ es el mínimo de $H$, se tiene que $r=0$ de donde se sigue que $h$ es un elemento de $\langle m\rangle$.
+
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Supongamos que $H\neq \langle 0\rangle$. Entonces existe $m\in H$ mínimo. Como $H$ es subgrupo, es fácil ver que $\langle m\rangle\subseteq H$. Ahora bien, para todo $h\in H$ se tiene que $h=km+r$ para algún entero $k$ y un entero no negativo $r<m$ (algoritmo de la división). De lo anterior se tiene que $r=h-km$ es un elemento de $H$. Como $m$ es el mínimo de $H$, se tiene que $r=0$ de donde se sigue que $h$ es un elemento de $\langle m\rangle$.
 </div>\EndKnitrBlock{proof}
 
-\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	En el teorema anterior, si $H\neq \langle 0\rangle$, entonces es infinito.
-\end{remark}
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}En el teorema anterior, si $H\neq \langle 0\rangle$, entonces es infinito.</div>\EndKnitrBlock{remark}
 
 Note que si $G$ es un grupo cíclico, la función que aplica a cada entero $k$ en el elemento $a^{k}$, es un epimorfismo. Además, si el núcleo es $0$, se tiene que $G\cong \mathbb{Z}$; si no, el núcleo es un subgrupo no trivial de $\mathbb{Z}$, por el teorema anterior, será un grupo cíclico, es decir, de la forma $\langle m\rangle$, con $m$ el menor entero positivo tal que $a^{m}=e$. Por otro lado, como $a^{r}=a^{s}\Leftrightarrow a^{r-s}=e$, se tiene que $r-s$ pertenece al núcleo, por lo que $r-s=km$ para algún entero $k$, de donde se tiene que $[r]=[s]\in\mathbb{Z}_{m}$. Por lo que la función que asigna a cada clase de equivalencia $[k]$ de $\mathbb{Z}_{m}$ al elemento $a^{k}$ está bien definida y es un isomorfismo. Esto es lo podemos escribir como el siguiente:
-</div>\EndKnitrBlock{remark}
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-57"><strong>(\#thm:unnamed-chunk-57) </strong></span>	Todo grupo cíclico infinito es isomorfo al grupo aditivo $\mathbb{Z}$ y todo grupo cíclico finito de orden $m$ es isomorfo al grupo aditivo $\mathbb{Z}_{m}$.
+
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-57"><strong>(\#thm:unnamed-chunk-57) </strong></span>Todo grupo cíclico infinito es isomorfo al grupo aditivo $\mathbb{Z}$ y todo grupo cíclico finito de orden $m$ es isomorfo al grupo aditivo $\mathbb{Z}_{m}$.
 </div>\EndKnitrBlock{theorem}
 
-\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Sea $G=\langle a\rangle$. Sea $f:\mathbb{Z}\longrightarrow G$ la función definida por $f(k)=a^{k}$. Para cada $b\in G$, existe $r\in\mathbb{Z}$ tal que $b=a^{r}$ por lo tanto $f(r)=a^{r}=b$, esto muestra que $f$ es sobreyectiva. Se tiene que $Ker f=\{0\}$, en caso contrario se tiene que $Ker f=\langle m\rangle$, luego $G$ sería finito.
-	Si $G$ es un grupo finito, $Ker f=\langle m\rangle$. Sea $g:\mathbb{Z}_{m}\longrightarrow G$ como $g([k])=a^{k}$ está bien definida ya que para todo $r,s\in\mathbb{Z}$, $a^{r}=a^{s}\Leftrightarrow a^{r-s}=e\Leftrightarrow r-s\in Ker f=\langle m\rangle$ por lo tanto $r-s=km$ para algún entero $k$ y así $[r]=[s]$. Es claro que es un epimorfismo, además, como $g([k])=e\Leftrightarrow a^{k}=e=a^{0}\Leftrightarrow [k]=[0]$, entonces $Ker g=\{[0]\}$, por lo tanto $g$ es un isomorfismo. 
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Sea $G=\langle a\rangle$. Sea $f:\mathbb{Z}\longrightarrow G$ la función definida por $f(k)=a^{k}$. Para cada $b\in G$, existe $r\in\mathbb{Z}$ tal que $b=a^{r}$ por lo tanto $f(r)=a^{r}=b$, esto muestra que $f$ es sobreyectiva. Se tiene que $Ker f=\{0\}$, en caso contrario se tiene que $Ker f=\langle m\rangle$, luego $G$ sería finito.
+
+Si $G$ es un grupo finito, $Ker f=\langle m\rangle$. Sea $g:\mathbb{Z}_{m}\longrightarrow G$ como $g([k])=a^{k}$ está bien definida ya que para todo $r,s\in\mathbb{Z}$, $a^{r}=a^{s}\Leftrightarrow a^{r-s}=e\Leftrightarrow r-s\in Ker f=\langle m\rangle$ por lo tanto $r-s=km$ para algún entero $k$ y así $[r]=[s]$. Es claro que es un epimorfismo, además, como $g([k])=e\Leftrightarrow a^{k}=e=a^{0}\Leftrightarrow [k]=[0]$, entonces $Ker g=\{[0]\}$, por lo tanto $g$ es un isomorfismo. 
 </div>\EndKnitrBlock{proof}
 
 
@@ -478,14 +480,16 @@ Supongamos que $A_{n}=A_{m}$, entonces es fácil ver que $n=M$ (en caso contrari
 \BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:ejc2"><strong>(\#exr:ejc2) </strong></span>Denuestre que los conjuntos $\mathbb{Z}$, $\mathbb{Q}$ son conjuntos numerables.
 
 Basta probar que $\mathbb{Z}\sim \mathbb{N}$ y $\mathbb{Q}\sim \mathbb{N}$. Para esto debemos hallar biyecciones entre los conjuntos. Sea $f:\mathbb{Z}\longrightarrow \mathbb{N}$ definida así: 
-  $$f(n) = \left\{
+$$f(n) = \left\{
 	\begin{array}{ll}
 	-2n-1      & \mbox{ si } n<0\\
 	2n      & \mbox{ si } n>=0
 	\end{array}
-	\right.$$
+\right.$$
+    
 Es fácil ver que $f$ es una biyección, ya que $f$ asigna cada número entero negativo a los números naturales impares (1, 3, 5, ...) y cada número entero positivo a los números naturales pares (0, 2, 4, ...).
-     Por otro lado, la función $g:\mathbb{Z}\times\mathbb{N} \longrightarrow \mathbb{Q}$ definida por $f(a,n)=\frac{a}{n}$ es sobreyectiva. Se puede hallar una función inyectiva $\hat{g}$ de $\mathbb{Z}\times\mathbb{N}$ en $\mathbb{Q}$. Por lo tanto $|\mathbb{Q}|\leq |\mathbb{Z}\times\mathbb{N}|$. Como $\mathbb{Z}\times\mathbb{N}$ es numerable, se tiene que $\mathbb{Q}$ es numerable.
+  
+Por otro lado, la función $g:\mathbb{Z}\times\mathbb{N} \longrightarrow \mathbb{Q}$ definida por $f(a,n)=\frac{a}{n}$ es sobreyectiva. Se puede hallar una función inyectiva $\hat{g}$ de $\mathbb{Z}\times\mathbb{N}$ en $\mathbb{Q}$. Por lo tanto $|\mathbb{Q}|\leq |\mathbb{Z}\times\mathbb{N}|$. Como $\mathbb{Z}\times\mathbb{N}$ es numerable, se tiene que $\mathbb{Q}$ es numerable.
     </div>\EndKnitrBlock{exercise}
 
 ## Teoría de Grupos
@@ -532,37 +536,57 @@ Sea $C_{4}$ el conjunto formado por las siguientes transformaciones: $R$, una ro
 \BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-65"><strong>(\#exm:unnamed-chunk-65) </strong></span>Sea $C$ un conjunto no vacío y $\mathcal{A}(C)$ el conjunto de todas las biyecciones de $C$ en si mismo. Con la operación composición de funciones vista en la sección anterior, $\mathcal{A}(C)$ forma un grupo (no abeliano). En efecto, la composición de funciones biyectivas es asociativa, la identidad es una función biyectiva y toda biyección tiene una inversa. Los elementos de $\mathcal{A}(C)$ son llamados *permutaciones* y $\mathcal{A}(C)$ es llamado el grupo de permutaciones sobre $C$. Si $C=\{1,2, ..., n\}$, entonces $\mathcal{A}(C)$ es llamdo el *grupo simétrico sobre $n$ letras* y se denota $S_{n}$. Se puede ver que $|S_{n}|=n!$ (ejercicio \@ref(exr:ejc3)).
 </div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}Dado un elemento $f\in S_{n}$, podemos representarlo por $\left(  {\begin{array}{ccccc}
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}Dado un elemento $f\in S_{n}$, podemos representarlo por 
+
+$$\left(  {\begin{array}{ccccc}
 	1 & 2 & 3 & \cdots & n \\
 	i_{1} & i_{2} & i_{3} & \cdots & i_{n}\\
-	\end{array} } \right) $. Y el producto de dos de estos elementos, $f, g\in\mathcal{C}$ es la composición de dos biyecciones $f\circ g$, y puede representarse por un arreglo como el anterior tomando en cuenta que $(f\circ g)(k)=f(g(k))=f(i_{k})$. Si suponemos que $f,g\in S_{5}$, donde $f$ está representado por $\left(  {\begin{array}{ccccc}
+	\end{array} } \right) $$
+  
+Y el producto de dos de estos elementos, $f, g\in\mathcal{C}$ es la composición de dos biyecciones $f\circ g$, y puede representarse por un arreglo como el anterior tomando en cuenta que $(f\circ g)(k)=f(g(k))=f(i_{k})$. Si suponemos que $f,g\in S_{5}$, donde $f$ está representado por 
+
+$$\left(  {\begin{array}{ccccc}
 	1 & 2 & 3 & 4 & 5 \\
 	3 & 4 & 1 & 2 & 5 \\
-	\end{array} } \right) $, y $g$ es la biyección
- $\left(  {\begin{array}{ccccc}
+	\end{array} } \right)$$
+  
+Y $g$ es la biyección
+
+$$\left(  {\begin{array}{ccccc}
 	1 & 2 & 3 & 4 & 5 \\
 	5 & 4 & 3 & 2 & 1 \\
-	\end{array} } \right) $. Entonces  $f\circ g$ es  tal que $(f\circ g)(1)=f(g(1))=f(5)=5$, análogamente con los números del $2$ al $5$, por lo tanto, $f\circ g$ es $\left(  {\begin{array}{ccccc}
+	\end{array} } \right)$$
+  
+Entonces  $f\circ g$ es  tal que $(f\circ g)(1)=f(g(1))=f(5)=5$, análogamente con los números del $2$ al $5$, por lo tanto, $f\circ g$ es 
+
+$$\left(  {\begin{array}{ccccc}
 	1 & 2 & 3 & 4 & 5 \\
 	5 & 2 & 1 & 4 & 3 \\
-	\end{array} } \right) $. Mientras que $g\circ f$ es $\left(  {\begin{array}{ccccc}
+	\end{array} } \right)$$
+  
+Mientras que $g\circ f$ es 
+
+$$\left(  {\begin{array}{ccccc}
 	1 & 2 & 3 & 4 & 5 \\
 	3 & 2 & 5 & 4 & 1 \\
-	\end{array} } \right) $. Lo que evidencia que $S_{n}$ no es necesariamente un grupo abeliano.
+	\end{array} } \right)$$
+  
+Lo que evidencia que $S_{n}$ no es necesariamente un grupo abeliano.
 </div>\EndKnitrBlock{remark}
 
 \BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:ejm1-21"><strong>(\#exm:ejm1-21) </strong></span>Dados $G$ y $H$ dos grupos con identidades $e_{G}$ y $e_{H}$ respectivamente. Consideremos el producto cartesiano $G\times H$ y la operación binaria $(a,b)\ast (c,d)=(a\ast c,b\ast d)$ donde $a\ast c\in G$ y $b\ast d\in H$. Con esta operación $G\times H$ es un grupo con identidad $(e_{G}, e_{H})$ y con inverso $(a^{-1}, b^{-1})$ para cada elemento $(a,b)\in G\times H$.
 </div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-67"><strong>(\#def:unnamed-chunk-67) </strong></span>Una relación de equivalencia sobre un monoide $G$ que satisface que si $a_{1}\sim a_{2}$ y $b_{1}\sim b_{2}$, entonces $a_{1}b_{1}\sim a_{2}b_{2}$ para todo $a_{1},a_{2},b_{1},b_{2}\in G$, se llama *relación de congruencia*.
-</div>\EndKnitrBlock{definition}
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-67"><strong>(\#def:unnamed-chunk-67) </strong></span>Una relación de equivalencia sobre un monoide $G$ que satisface que si $a_{1}\sim a_{2}$ y $b_{1}\sim b_{2}$, entonces $a_{1}b_{1}\sim a_{2}b_{2}$ para todo $a_{1},a_{2},b_{1},b_{2}\in G$, se llama *relación de congruencia*.</div>\EndKnitrBlock{definition}
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-68"><strong>(\#thm:unnamed-chunk-68) </strong></span>Si $\sim$ es una relación de congruencia sobre un monoide $G$, entonces el conjunto $G/\sim$ de todas las clases equivalencia de $(G,\sim)$ es un monoide con la operación binaria definida por $[a][b]=[ab]$. Si $G$ es un grupo abeliano, entoces $(G,\sim)$ lo és.
-</div>\EndKnitrBlock{theorem}
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-68"><strong>(\#thm:unnamed-chunk-68) </strong></span>Si $\sim$ es una relación de congruencia sobre un monoide $G$, entonces el conjunto $G/\sim$ de todas las clases equivalencia de $(G,\sim)$ es un monoide con la operación binaria definida por $[a][b]=[ab]$. Si $G$ es un grupo abeliano, entoces $(G,\sim)$ lo és.</div>\EndKnitrBlock{theorem}
+
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Como $\sim$ es una relación de equivalencia, se tiene que:
-  (1) Si $[a_{1}]=[a_{2}]$ y $[b_{1}]=[b_{2}]$, $a_{1}\sim a_{2}$ y $b_{1}\sim b_{2}$, entonces $a_{1}b_{1}\sim a_{2}b_{2}$, es decir, $[a_{1}b_{1}]= [a_{2}b_{2}]$. Entonces la operación está bien definida. $G/\sim$ tiene un elemento neutro, para todo $a\in G$ se tiene que $[a][e]=[ae]=[a]=[ea]=[e][a]$, donde $e\in G$ es el elemento neutro del monoide. La operación es asociativa, en efecto, $[a]([b][c])=[a][bc]=[a(bc)]=[(ab)c]=[ab][c]=([a][b])[c]$. De aquí concluímos que $G/\sim$ es un monoide.
+  
+(1) Si $[a_{1}]=[a_{2}]$ y $[b_{1}]=[b_{2}]$, $a_{1}\sim a_{2}$ y $b_{1}\sim b_{2}$, entonces $a_{1}b_{1}\sim a_{2}b_{2}$, es decir, $[a_{1}b_{1}]= [a_{2}b_{2}]$. Entonces la operación está bien definida. $G/\sim$ tiene un elemento neutro, para todo $a\in G$ se tiene que $[a][e]=[ae]=[a]=[ea]=[e][a]$, donde $e\in G$ es el elemento neutro del monoide. La operación es asociativa, en efecto, $[a]([b][c])=[a][bc]=[a(bc)]=[(ab)c]=[ab][c]=([a][b])[c]$. De aquí concluímos que $G/\sim$ es un monoide.
 Supongamos que $G$ es un grupo abeliano, entonces cada $a\in G$ tiene un elemento inverso  $a^{-1}\in G$. De este modo, para cada $[a]\in G/\sim$, se tiene que $[a^{-1}]\in G/\sim$ es el inverso de $[a]$ ya que $[a][a^{-1}]=[aa^{-1}]=[e]=[a^{-1}][a]=[a^{-1}][a]$. Así $G/\sim$ es un grupo. Se ve fácilmente que si $G$ es abeliano, entonces $G/\sim$ lo és, ya que $[a][b]=[ab]=[ba]=[b][a]$. 
 </div>\EndKnitrBlock{proof}
+
 Este teorema dota de otros ejemplos, tanto de monoides como de grupos:
 
 \BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-70"><strong>(\#exm:unnamed-chunk-70) </strong></span>Para un entero fijo, la relación de congruencia modular es una relación de congruencia sobre el grupo aditivo $\mathbb{Z}$. Como $(\mathbb{Z}, +)$ es un grupo abeliano, se tiene que $\mathbb{Z}_{n}$ es un grupo aditivo abeliano, con la operación natural $[a]+[b]=[a+b]$.
@@ -575,14 +599,15 @@ Veremos algunos resultados muy técnicos que nos serán útiles mas adelante.
 
 \BeginKnitrBlock{lemma}<div class="lemma"><span class="lemma" id="lem:unnamed-chunk-72"><strong>(\#lem:unnamed-chunk-72) </strong></span>Sea $G$ un grupo, entonces se tiene que:
   
-  1. el elemento identidad de $G$ es único;
+1. el elemento identidad de $G$ es único;
 
-  2. para cada $a\in G$, el inverso $a^{-1}$ es único;
+2. para cada $a\in G$, el inverso $a^{-1}$ es único;
 
-  3. para todo $a\in G$, se tiene que $(a^{-1})^{-1}=a$;
+3. para todo $a\in G$, se tiene que $(a^{-1})^{-1}=a$;
   
-  4. para $a,b\in G$, se tiene que $(a*b)^{-1}=b^{-1}*a^{-1}$.
+4. para $a,b\in G$, se tiene que $(a*b)^{-1}=b^{-1}*a^{-1}$.
   </div>\EndKnitrBlock{lemma}
+
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}
 1. Supongamos que $e, f\in G$ son tales que, $\forall a\in G$, $a*e=e*a=a$ y $a*f=f*a=a$. En particular, $f*e=f$ y $f*e=e$, de donde se sigue que $e=f$.
 
@@ -595,440 +620,494 @@ Veremos algunos resultados muy técnicos que nos serán útiles mas adelante.
 
 \BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-74"><strong>(\#def:unnamed-chunk-74) </strong></span>Un subconjunto $H$ de un grupo $G$, se llama *subgrupo* de $G$ si respecto a la operación definida sobre $G$, él mismo forma un grupo. Esto se denota por $H< G$.
 </div>\EndKnitrBlock{definition}
+
 Suponga que $G$ es un grupo y $H\subseteq G$ es un subconjunto cerrado bajo la operación de grupo definida sobre G, es decir, para todo $a,b\in H$ se tiene que $ab\in H$. Y cada elemento de $H$ tiene su inverso también en $H$, esto es, si $a\in H$, entonces $a^{-1}\in H$. Es claro que $H$ será un semigrupo de $G$.
  Esto lo mostramos en el siguiente resultado:
 
 \BeginKnitrBlock{lemma}<div class="lemma"><span class="lemma" id="lem:unnamed-chunk-75"><strong>(\#lem:unnamed-chunk-75) </strong></span>Un subconjunto no vacío $H$ de un grupo $G$, es un subgrupo si y solo si:
   
-  1. para cada $a,b\in H$, $ab\in H$.
+1. para cada $a,b\in H$, $ab\in H$.
 
-  2. para cada $a\in H$, $a^{-1}\in H$.
+2. para cada $a\in H$, $a^{-1}\in H$.
 </div>\EndKnitrBlock{lemma}
 
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Es claro que si $H\subseteq G$ es un subgrupo de $G$, cumple 1 y 2.
 Recíprocamente, supongamos que $H\subseteq G$, cumple con (1) y (2) Faltaría ver que la operación es asociativa en $H$ y que el elemento neutro está en $H$. La ley asociativa se hereda de $G$ (si la operación es asociativa en $G$, de igual forma lo será en $H$). Como para cada elemento de $H$ tiene un inverso, existen $a, a^{-1}\in H$; además se tiene que la operación es cerrada en $H$, luego $e=aa^{-1}\in H$. Por lo tanto se tiene que $H$ es un grupo (con la operación heredada de $G$). 
 </div>\EndKnitrBlock{proof}
-\BeginKnitrBlock{lemma}<div class="lemma"><span class="lemma" id="lem:unnamed-chunk-77"><strong>(\#lem:unnamed-chunk-77) </strong></span>	Si $H$ es un subconjunto finito no vacío de un grupo $G$ y $H$ es cerrado bajo la operación de grupo, entonces $H$ es un subgrupo de $G$.
+
+\BeginKnitrBlock{lemma}<div class="lemma"><span class="lemma" id="lem:unnamed-chunk-77"><strong>(\#lem:unnamed-chunk-77) </strong></span>Si $H$ es un subconjunto finito no vacío de un grupo $G$ y $H$ es cerrado bajo la operación de grupo, entonces $H$ es un subgrupo de $G$.
 </div>\EndKnitrBlock{lemma}
-\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Note que, dado $a\in H$, $a, a^{2}, a^{3},\cdots , c^{n},\cdots \in H$. Pero $H$ es finito, por lo tanto existen enteros positivos $r>s>0$ tales que $a^{r}=a^{s}$, entonces se tiene que $a^{r}a^{-s}=a^{s}a^{-s}$ de donde se sigue a $a^{r-s}=e$, lo que muestra que $e\in H$. Por otro lado, $a^{r-s-1}$ está en la lista de elementos de $H$, por lo tanto, dado $a\in H$ se tiene que $a^{-1}=ea^{-1}=a^{r-s-1}\in H$ ya que $aa^{-1}=aa^{r-s-1}=a^{r-s}=e=a^{r-s}=a^{r-s-1}a=a^{-1}a$. Por el lema anterior, se tiene que $H$ es un subgrupo de $G$.
+
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Note que, dado $a\in H$, $a, a^{2}, a^{3},\cdots , c^{n},\cdots \in H$. Pero $H$ es finito, por lo tanto existen enteros positivos $r>s>0$ tales que $a^{r}=a^{s}$, entonces se tiene que $a^{r}a^{-s}=a^{s}a^{-s}$ de donde se sigue a $a^{r-s}=e$, lo que muestra que $e\in H$. Por otro lado, $a^{r-s-1}$ está en la lista de elementos de $H$, por lo tanto, dado $a\in H$ se tiene que $a^{-1}=ea^{-1}=a^{r-s-1}\in H$ ya que $aa^{-1}=aa^{r-s-1}=a^{r-s}=e=a^{r-s}=a^{r-s-1}a=a^{-1}a$. Por el lema anterior, se tiene que $H$ es un subgrupo de $G$.
 </div>\EndKnitrBlock{proof}
 
 Este lema nos permite saber si un subconjunto finito de un grupo es un subgrupo tan solo probando que la operación de grupo es cerrada en el subconjunto finito. 
-Veamos a conyinuación algunos ejemplos de subgrupos.
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-79"><strong>(\#exm:unnamed-chunk-79) </strong></span>	Dado un grupo $G$. El mismo $G$ es un subgrupo. El conjunto cuyo único elemento es la identidad del grupo, $\{e\}$ es un subgrupo. Estos dos se conocen con el nombre de *subgrupos triviales* del grupo $G$.
+Veamos a continuación algunos ejemplos de subgrupos.
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-79"><strong>(\#exm:unnamed-chunk-79) </strong></span>Dado un grupo $G$. El mismo $G$ es un subgrupo. El conjunto cuyo único elemento es la identidad del grupo, $\{e\}$ es un subgrupo. Estos dos se conocen con el nombre de *subgrupos triviales* del grupo $G$.
 </div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-80"><strong>(\#exm:unnamed-chunk-80) </strong></span>	Consideremos el grupo aditico de los números enteros. Sea $n\in\mathbb{N}$ un entero positivo. El conjunto $H_{n}$ formado por los múltiplos de $n$ es un subgrupo. Es fácil ver que si sumamos dos múltiplos de $n$, es resultado es un múltiplo de $n$, $kn+qn=(k+q)n$. Además $k\ kn$ y $-kn$ están en $H$ y $kn+(-kn)=0=-kn+kn$.
-	Es interesante pensar en el conjunto intersección de dos de estos subgrupos, es decir, $H_{n}\cap H_{m}$. 
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-80"><strong>(\#exm:unnamed-chunk-80) </strong></span>Consideremos el grupo aditico de los números enteros. Sea $n\in\mathbb{N}$ un entero positivo. El conjunto $H_{n}$ formado por los múltiplos de $n$ es un subgrupo. Es fácil ver que si sumamos dos múltiplos de $n$, es resultado es un múltiplo de $n$, $kn+qn=(k+q)n$. Además $k\ kn$ y $-kn$ están en $H$ y $kn+(-kn)=0=-kn+kn$.
+
+Es interesante pensar en el conjunto intersección de dos de estos subgrupos, es decir, $H_{n}\cap H_{m}$. 
 </div>\EndKnitrBlock{example}
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-81"><strong>(\#exm:unnamed-chunk-81) </strong></span>	Sea $G$ un grupo cualquiera, sea $a\in G$ un elemento cualquiera. El conjunto $\rangle a\langle =\{a^{n}|n\in\mathbb{Z} \}$ es un subgrupo de $G$ llamado el \textit{grupo cíclico generado por $a$}. Efectivamente, claramente la operación es cerrada, para cuales quiera $a^{n}, a^{m}\in (a)$, $a^{n}a^{m}=a^{n+m}\in (a)$. por definición de $(a)$, $a^{n}$ y $a^{-n}$ están en $(a)$. Si para algún $a\in G$, $G=(a)$, entonces decimos que $G$ es un grupo cíclico. El orden de un elemento $a\in G$ es el orden del grupo generado por $a$, es decir el orden de $|\rangle a\langle|$.
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-81"><strong>(\#exm:unnamed-chunk-81) </strong></span>Sea $G$ un grupo cualquiera, sea $a\in G$ un elemento cualquiera. El conjunto $\rangle a\langle =\{a^{n}|n\in\mathbb{Z} \}$ es un subgrupo de $G$ llamado el \textit{grupo cíclico generado por $a$}. Efectivamente, claramente la operación es cerrada, para cuales quiera $a^{n}, a^{m}\in (a)$, $a^{n}a^{m}=a^{n+m}\in (a)$. por definición de $(a)$, $a^{n}$ y $a^{-n}$ están en $(a)$. Si para algún $a\in G$, $G=(a)$, entonces decimos que $G$ es un grupo cíclico. El orden de un elemento $a\in G$ es el orden del grupo generado por $a$, es decir el orden de $|\rangle a\langle|$.
 </div>\EndKnitrBlock{example}
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-82"><strong>(\#thm:unnamed-chunk-82) </strong></span>	Sea $G$ un grupo y sea $\{H_{i}|i\in I \}$ una familia no vacía de subgrupos de $G$, entonces $\bigcap_{i\in I} H_{i}$ es un subgrupo de $G$.
+
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-82"><strong>(\#thm:unnamed-chunk-82) </strong></span>Sea $G$ un grupo y sea $\{H_{i}|i\in I \}$ una familia no vacía de subgrupos de $G$, entonces $\bigcap_{i\in I} H_{i}$ es un subgrupo de $G$.
 </div>\EndKnitrBlock{theorem}
+
 La demostración queda como ejercicio.
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-83"><strong>(\#def:unnamed-chunk-83) </strong></span>	Sea $G$ un grupo y sea $X$ un subconjunto de $G$. Sea $I$ una familia de índices, entonces $\bigcap_{i\in I} \{H_{i}|X\subseteq H_{i}< G \}$ es el ***subgrupo generado por $X$** y se denota por $\langle X \rangle$.
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-83"><strong>(\#def:unnamed-chunk-83) </strong></span>Sea $G$ un grupo y sea $X$ un subconjunto de $G$. Sea $I$ una familia de índices, entonces $\bigcap_{i\in I} \{H_{i}|X\subseteq H_{i}< G \}$ es el ***subgrupo generado por $X$** y se denota por $\langle X \rangle$.
 </div>\EndKnitrBlock{definition}
 
-\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	Es importante hacer notar que el subgrupo $\langle X\rangle$ puede ser generado por otro conjunto de elementos de $G$, es decir, puede ocurrir que $\angle X\rangle=\langle Y\rangle$, con $X\neq Y$. Si en conjunto $X$ es un conjunto finito, en lugar de $\langle X\rangle$ escribimos $\langle x_{1},x_{2},\cdots , x_{n}\rangle$, donde $X=\{x_{1}, x_{2},\cdots ,x_{n}\}$.
-	Si un grupo es generado por un conjunto finito de elementos, es decir, $G=\langle a_{1}, a_{2},\cdots ,a_{n}\rangle$, donde $a_{i}\in G$ decimos que $G$ es un grupo *finitamente generado*.
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}Es importante hacer notar que el subgrupo $\langle X\rangle$ puede ser generado por otro conjunto de elementos de $G$, es decir, puede ocurrir que $\angle X\rangle=\langle Y\rangle$, con $X\neq Y$. Si en conjunto $X$ es un conjunto finito, en lugar de $\langle X\rangle$ escribimos $\langle x_{1},x_{2},\cdots , x_{n}\rangle$, donde $X=\{x_{1}, x_{2},\cdots ,x_{n}\}$.
+
+Si un grupo es generado por un conjunto finito de elementos, es decir, $G=\langle a_{1}, a_{2},\cdots ,a_{n}\rangle$, donde $a_{i}\in G$ decimos que $G$ es un grupo *finitamente generado*.
 </div>\EndKnitrBlock{remark}
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-85"><strong>(\#thm:unnamed-chunk-85) </strong></span>	Si $G$ es un grupo y $X$ un subconjunto no vacío de $G$, entonces el subgrupo $\langle X\rangle$ generado por $X$ está contituído por los productos de la forma $a_{1}^{m_{1}}a_{2}^{m_{2}}\cdots a_{n}^{m_{n}}$ donde $a_{i}\in X$, $m_{i}\in\mathbb{Z}$ y $n$ es un número entero positivo cualquiera. En particular $\langle a\rangle=\{a^{n}|n\in\mathbb{Z} \}$.
+
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-85"><strong>(\#thm:unnamed-chunk-85) </strong></span>Si $G$ es un grupo y $X$ un subconjunto no vacío de $G$, entonces el subgrupo $\langle X\rangle$ generado por $X$ está contituído por los productos de la forma $a_{1}^{m_{1}}a_{2}^{m_{2}}\cdots a_{n}^{m_{n}}$ donde $a_{i}\in X$, $m_{i}\in\mathbb{Z}$ y $n$ es un número entero positivo cualquiera. En particular $\langle a\rangle=\{a^{n}|n\in\mathbb{Z} \}$.
 </div>\EndKnitrBlock{theorem}
-\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Veamos que $H=\{a_{1}^{m_{1}}a_{2}^{m_{2}}\cdots a_{n}^{m_{n}} | n\in\mathbb{N}, a_{i}\in X$ \mbox{ y } $m_{i}\in\mathbb{Z}\}$ es un subgrupo de $G$ que contiene a $X$. En efecto, claramente $X\subseteq H$. Además, si $a\in X$, $a^{-1}\in H$ por lo tanto para $b,c\in H$, por definición de $H$ se tiene que  $b=a_{1}^{m_{1}}a_{2}^{m_{2}}\cdots a_{n}^{m_{n}}$ y $c=a_{1}^{r_{1}}a_{2}^{r_{2}}\cdots a_{k}^{r_{k}}$ por lo tanto $b^{-1}=a_{n}^{-m_{n}}\cdots  a_{2}^{m_{2}}a_{1}^{m_{1}} \in H$ y $bc=a_{1}^{m_{1}}a_{2}^{m_{2}}\cdots a_{n}^{m_{n}}a_{1}^{r_{1}}a_{2}^{r_{2}}\cdots a_{k}^{r_{k}}In H$. De donde se concluye que $H$ es un subgrupo que contine a $G$.
-	Ahora note que $H$ está contenido en todo subgrupo que contenga a $X$. Por lo tanto $H=\bigcap_{i\in I} \{H_{i}|X\subseteq H_{i}< G \}$.
+
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Veamos que $H=\{a_{1}^{m_{1}}a_{2}^{m_{2}}\cdots a_{n}^{m_{n}} | n\in\mathbb{N}, a_{i}\in X$ \mbox{ y } $m_{i}\in\mathbb{Z}\}$ es un subgrupo de $G$ que contiene a $X$. En efecto, claramente $X\subseteq H$. Además, si $a\in X$, $a^{-1}\in H$ por lo tanto para $b,c\in H$, por definición de $H$ se tiene que  $b=a_{1}^{m_{1}}a_{2}^{m_{2}}\cdots a_{n}^{m_{n}}$ y $c=a_{1}^{r_{1}}a_{2}^{r_{2}}\cdots a_{k}^{r_{k}}$ por lo tanto $b^{-1}=a_{n}^{-m_{n}}\cdots  a_{2}^{m_{2}}a_{1}^{m_{1}} \in H$ y $bc=a_{1}^{m_{1}}a_{2}^{m_{2}}\cdots a_{n}^{m_{n}}a_{1}^{r_{1}}a_{2}^{r_{2}}\cdots a_{k}^{r_{k}}In H$. De donde se concluye que $H$ es un subgrupo que contine a $G$.
+
+Ahora note que $H$ está contenido en todo subgrupo que contenga a $X$. Por lo tanto $H=\bigcap_{i\in I} \{H_{i}|X\subseteq H_{i}< G \}$.
 </div>\EndKnitrBlock{proof}
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-87"><strong>(\#def:unnamed-chunk-87) </strong></span>	Sean $G$ y $H$ dos semigrupos. Una función $f:G\longrightarrow H$ es un *homomorfismo* si y solo si $f(ab)=f(a)f(b)$ para todo $a,b\in G$.
-	Si $f$ es inyectiva, decimos que $f$ es un *monomorfismo*. Si $f$ es sobreyectiva, diremos que $f$ es un *epimorfismo*. Cuando $f$ es una función biectiva diremos que $f$ es un *isomorfismo* y esto lo denotaremos por $G\cong H$.
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-87"><strong>(\#def:unnamed-chunk-87) </strong></span>Sean $G$ y $H$ dos semigrupos. Una función $f:G\longrightarrow H$ es un *homomorfismo* si y solo si $f(ab)=f(a)f(b)$ para todo $a,b\in G$.
+
+Si $f$ es inyectiva, decimos que $f$ es un *monomorfismo*. Si $f$ es sobreyectiva, diremos que $f$ es un *epimorfismo*. Cuando $f$ es una función biectiva diremos que $f$ es un *isomorfismo* y esto lo denotaremos por $G\cong H$.
 	</div>\EndKnitrBlock{definition}
 
-\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	Un homomorfimos de $G$ en si mismo es llamado *endomorfismo de $G$*. Y un isomorfismo de $G$ en si mismo se conoce como *automorfismo de $G$*. 
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}Un homomorfimos de $G$ en si mismo es llamado *endomorfismo de $G$*. Y un isomorfismo de $G$ en si mismo se conoce como *automorfismo de $G$*. 
 
-	Como todo grupo es un semigrupo, la definición de homomorfismo de grupo aplica perfectamente a grupos, al igual que el resto de las definiciones.
+Como todo grupo es un semigrupo, la definición de homomorfismo de grupo aplica perfectamente a grupos, al igual que el resto de las definiciones.
 </div>\EndKnitrBlock{remark}
 
 Note que dados dos homomorfismos de semigrupos $f:G\longrightarrow H$ y $g:H\longrightarrow K$, la composición $g\circ f:G\longrightarrow K$ es un homomorfismo de semigrupo. Por lo tanto se tiene que la composición de monomorfismos, es un monomorfismo, análogamente para epimorfismos e isomorfismos. Si $f:G\longrightarrow H$ es un homomorfismo de grupos y $e_{G}$ y $e_{H}$ son los elementos identidad de los grupos $G$ y $H$ respectivamente, entonces se tiene que $f(e_{G})=e_{H}$, por lo tanto $f(a^{-1})=f(a)^{-1}$. No obstante, si $G$ y $H$ son monoides, esto no es cierto.
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-89"><strong>(\#def:unnamed-chunk-89) </strong></span>	Dado $f:G\longrightarrow H$ un homomorfismo de grupo. El *núcleo* de $f$ (también conocido por su nombre en inglés *kernel*) es el conjunto $\{a\in G| f(a)=e_{H} \}$ y se denota $Ker f$. Dado $A\subseteq G$, *la imagen de $A$* es el conjunto $\{f(a)| a\in A \}$ y se denota por $f(A)$; al conjunto imagen de $G$, lo llamaremos *imagen de $f$* y le daremos una notación especial, $Im f$. Dado un conjunto $B\in H$, la imagen inversa de $B$ es el conjunto $f^{-1}(B)=\{a\in G|f(a)\in B \}$.
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-89"><strong>(\#def:unnamed-chunk-89) </strong></span>Dado $f:G\longrightarrow H$ un homomorfismo de grupo. El *núcleo* de $f$ (también conocido por su nombre en inglés *kernel*) es el conjunto $\{a\in G| f(a)=e_{H} \}$ y se denota $Ker f$. Dado $A\subseteq G$, *la imagen de $A$* es el conjunto $\{f(a)| a\in A \}$ y se denota por $f(A)$; al conjunto imagen de $G$, lo llamaremos *imagen de $f$* y le daremos una notación especial, $Im f$. Dado un conjunto $B\in H$, la imagen inversa de $B$ es el conjunto $f^{-1}(B)=\{a\in G|f(a)\in B \}$.
 </div>\EndKnitrBlock{definition}
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:1homomorfismo"><strong>(\#thm:1homomorfismo) </strong></span>	Sea $f:G\longrightarrow H$ un homomorfismo de grupos. Entonces:
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:1homomorfismo"><strong>(\#thm:1homomorfismo) </strong></span>Sea $f:G\longrightarrow H$ un homomorfismo de grupos. Entonces:
 
-		1. $f$ es un monomorfismo si y solo si $Ker f=\{e_{G}\}$.
+1. $f$ es un monomorfismo si y solo si $Ker f=\{e_{G}\}$.
 
-		2. $f$ es un isomorfismo si y solo si existe un homomorfismo $g:H\longrightarrow G$ tal que $f^{-1}\circ f=\mathbb{I}_{G}$ y $f\circ f^{-1}=\mathbb{I}_{H}$.
+2. $f$ es un isomorfismo si y solo si existe un homomorfismo $g:H\longrightarrow G$ tal que $f^{-1}\circ f=\mathbb{I}_{G}$ y $f\circ f^{-1}=\mathbb{I}_{H}$.
 	</div>\EndKnitrBlock{theorem}
 
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	
-		1. Supongamos que $f$ es un monomorfismo. Sea $a\in Ker f$, entonces $f(a)=e_{H}$. Como $f(e_{g})=e_{H}$ y $f$ es inyectiva, se tiene que $a=e_{G}$. Ahora supongamos que $Ker f=\{e_{G} \}$ y sean $a, b\in G$ tales que $f(a)=f(b)$. Entonces $=f(ab^{-1})f(a)f(b^{-1})=f(a)f(b)^{-1}=f(b)f(b)^{-1}=e_{H}$, por lo tanto $ab^{-1}=e_{G}$ de donde se sigue que $a=b$ y así $f$ es un monomorfismo.
+1. Supongamos que $f$ es un monomorfismo. Sea $a\in Ker f$, entonces $f(a)=e_{H}$. Como $f(e_{g})=e_{H}$ y $f$ es inyectiva, se tiene que $a=e_{G}$. Ahora supongamos que $Ker f=\{e_{G} \}$ y sean $a, b\in G$ tales que $f(a)=f(b)$. Entonces $=f(ab^{-1})f(a)f(b^{-1})=f(a)f(b)^{-1}=f(b)f(b)^{-1}=e_{H}$, por lo tanto $ab^{-1}=e_{G}$ de donde se sigue que $a=b$ y así $f$ es un monomorfismo.
 
-		2. Ya vimos en la sección de funciones que existe la función inversa y que ella es biyectiva, además en \@ref{lema1.48} vimos que $f^{-1}\circ f=\mathbb{I}_{G}$ y $f\circ f^{-1}=\mathbb{I}_{H}$. El recíproco se tiene del lema siguiente \ref{lema1.49}.
+2. Ya vimos en la sección de funciones que existe la función inversa y que ella es biyectiva, además en \@ref{lema1.48} vimos que $f^{-1}\circ f=\mathbb{I}_{G}$ y $f\circ f^{-1}=\mathbb{I}_{H}$. El recíproco se tiene del lema siguiente \ref{lema1.49}.
 </div>\EndKnitrBlock{proof}
 
 A continuación veremos resultados que nos permiten caracterizar los grupos cíclicos.
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-91"><strong>(\#thm:unnamed-chunk-91) </strong></span>	Sea $H$ un subgrupo del grupo aditivo $\mathbb{Z}$. $H$ es cíclico, además $H=\langle 0\rangle$ o $H=\langle m\rangle$ donde $m$ es el menor entero positivo de $H$.
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-91"><strong>(\#thm:unnamed-chunk-91) </strong></span>Sea $H$ un subgrupo del grupo aditivo $\mathbb{Z}$. $H$ es cíclico, además $H=\langle 0\rangle$ o $H=\langle m\rangle$ donde $m$ es el menor entero positivo de $H$.
 </div>\EndKnitrBlock{theorem}
 
-\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Supongamos que $H\neq \langle 0\rangle$. Entonces existe $m\in H$ mínimo. Como $H$ es subgrupo, es fácil ver que $\langle m\rangle\subseteq H$. Ahora bien, para todo $h\in H$ se tiene que $h=km+r$ para algúno entero $k$ y un entero no negativo $r<m$ (algoritmo de la división). De lo anterior se tiene que $r=h-km$ es un elemento de $H$. Como $m$ es el mínimo de $H$, se tiene que $r=0$ de donde se sigue que $h$ es un elemento de $\langle m\rangle$.
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Supongamos que $H\neq \langle 0\rangle$. Entonces existe $m\in H$ mínimo. Como $H$ es subgrupo, es fácil ver que $\langle m\rangle\subseteq H$. Ahora bien, para todo $h\in H$ se tiene que $h=km+r$ para algúno entero $k$ y un entero no negativo $r<m$ (algoritmo de la división). De lo anterior se tiene que $r=h-km$ es un elemento de $H$. Como $m$ es el mínimo de $H$, se tiene que $r=0$ de donde se sigue que $h$ es un elemento de $\langle m\rangle$.
 </div>\EndKnitrBlock{proof}
 
-\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	En el teorema anterior, si $H\neq \langle 0\rangle$, entonces es infinito.
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}En el teorema anterior, si $H\neq \langle 0\rangle$, entonces es infinito.
 </div>\EndKnitrBlock{remark}
 
 Note que si $G$ es un grupo cíclico, la función que aplica a cada entero $k$ en el elemento $a^{k}$, es un epimorfismo. Además, si el núcleo es $0$, se tiene que $G\cong \mathbb{Z}$; si no, el núcleo es un subgrupo no trivial de $\mathbb{Z}$, por el teorema anterior, será un grupo cíclico, es decir, de la forma $\langle m\rangle$, con $m$ el menor entero positivo tal que $a^{m}=e$. Por otro lado, como $a^{r}=a^{s}\Leftrightarrow a^{r-s}=e$, se tiene que $r-s$ pertenece al núcleo, por lo que $r-s=km$ para algún entero $k$, de donde se tiene que $[r]=[s]\in\mathbb{Z}_{m}$. Por lo que la función que asigna a cada clase de equivalencia $[k]$ de $\mathbb{Z}_{m}$ al elemento $a^{k}$ está bien definida y es un isomorfismo. Esto es lo podemos escribir como el siguiente:
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:teo1-86"><strong>(\#thm:teo1-86) </strong></span>	Todo grupo cíclico infinito es isomorfo al grupo aditivo $\mathbb{Z}$ y todo grupo cíclico finito de orden $m$ es isomorfo al grupo aditivo $\mathbb{Z}_{m}$.
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:teo1-86"><strong>(\#thm:teo1-86) </strong></span>Todo grupo cíclico infinito es isomorfo al grupo aditivo $\mathbb{Z}$ y todo grupo cíclico finito de orden $m$ es isomorfo al grupo aditivo $\mathbb{Z}_{m}$.
 </div>\EndKnitrBlock{theorem}
 
-\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Sea $G=\langle a\rangle$. Sea $f:\mathbb{Z}\longrightarrow G$ la función definida por $f(k)=a^{k}$. Para cada $b\in G$, existe $r\in\mathbb{Z}$ tal que $b=a^{r}$ por lo tanto $f(r)=a^{r}=b$, esto muestra que $f$ es sobreyectiva. Se tiene que $Ker f=\{0\}$, en caso contrario se tiene que $Ker f=\langle m\rangle$, luego $G$ sería finito.
-	Si $G$ es un grupo finito, $Ker f=\langle m\rangle$. Sea $g:\mathbb{Z}_{m}\longrightarrow G$ como $g([k])=a^{k}$ está bien definida ya que para todo $r,s\in\mathbb{Z}$, $a^{r}=a^{s}\Leftrightarrow a^{r-s}=e\Leftrightarrow r-s\in Ker f=\langle m\rangle$ por lo tanto $r-s=km$ para algún entero $k$ y así $[r]=[s]$. Es claro que es un epimorfismo, además, como $g([k])=e\Leftrightarrow a^{k}=e=a^{0}\Leftrightarrow [k]=[0]$, entonces $Ker g=\{[0]\}$, por lo tanto $g$ es un isomorfismo. 
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Sea $G=\langle a\rangle$. Sea $f:\mathbb{Z}\longrightarrow G$ la función definida por $f(k)=a^{k}$. Para cada $b\in G$, existe $r\in\mathbb{Z}$ tal que $b=a^{r}$ por lo tanto $f(r)=a^{r}=b$, esto muestra que $f$ es sobreyectiva. Se tiene que $Ker f=\{0\}$, en caso contrario se tiene que $Ker f=\langle m\rangle$, luego $G$ sería finito.
+
+Si $G$ es un grupo finito, $Ker f=\langle m\rangle$. Sea $g:\mathbb{Z}_{m}\longrightarrow G$ como $g([k])=a^{k}$ está bien definida ya que para todo $r,s\in\mathbb{Z}$, $a^{r}=a^{s}\Leftrightarrow a^{r-s}=e\Leftrightarrow r-s\in Ker f=\langle m\rangle$ por lo tanto $r-s=km$ para algún entero $k$ y así $[r]=[s]$. Es claro que es un epimorfismo, además, como $g([k])=e\Leftrightarrow a^{k}=e=a^{0}\Leftrightarrow [k]=[0]$, entonces $Ker g=\{[0]\}$, por lo tanto $g$ es un isomorfismo. 
 </div>\EndKnitrBlock{proof}
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-95"><strong>(\#thm:unnamed-chunk-95) </strong></span>	Sea $G$ un grupo cíclico. Si $f:G\longrightarrow H$ es un homomorfismo de grupo, entonces $Im f$ es cíclico.
-</div>\EndKnitrBlock{theorem}
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-95"><strong>(\#thm:unnamed-chunk-95) </strong></span>Sea $G$ un grupo cíclico. Si $f:G\longrightarrow H$ es un homomorfismo de grupo, entonces $Im f$ es cíclico.</div>\EndKnitrBlock{theorem}
 
-\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Supongamos que $G$ es un grupo cíclico, entonces $G=\langle a\rangle$ para algún $a\in G$. Se tiene entonces que $Im f=\langle f(a) \rangle$.
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Supongamos que $G$ es un grupo cíclico, entonces $G=\langle a\rangle$ para algún $a\in G$. Se tiene entonces que $Im f=\langle f(a) \rangle$.
 </div>\EndKnitrBlock{proof}
 
-\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	Note que si $k$ es un subgrupo del grupo cíclico $G=\langle a \rangle$, y sea $m$ el menor entero positivo tal que $a^{m}\in H$. Entonces $H=\langle a^{m} \rangle$.
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}Note que si $k$ es un subgrupo del grupo cíclico $G=\langle a \rangle$, y sea $m$ el menor entero positivo tal que $a^{m}\in H$. Entonces $H=\langle a^{m} \rangle$.
 </div>\EndKnitrBlock{remark}
 
 Note que un grupo cíclico puede ser generado por dos elementos distintos.
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-98"><strong>(\#thm:unnamed-chunk-98) </strong></span>	Sea $G=\langle a\rangle$ un grupo cíclico. Si $G$ es infinito entonces $a$ y $a^{-1}$ son los únicos generadores de $G$. Si $G$ es finito de orden $m$, entonces $a^{k}$ es un generador de $G$ si y solo si el mínimo común múltiplo $(m,k)=1$.
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-98"><strong>(\#thm:unnamed-chunk-98) </strong></span>Sea $G=\langle a\rangle$ un grupo cíclico. Si $G$ es infinito entonces $a$ y $a^{-1}$ son los únicos generadores de $G$. Si $G$ es finito de orden $m$, entonces $a^{k}$ es un generador de $G$ si y solo si el mínimo común múltiplo $(m,k)=1$.
 </div>\EndKnitrBlock{theorem}
 	
-\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Si $G$ es infinito, en virtud del teorema \@ref{thm:teo1.86} podemos suponer que $G$ es el grupo aditivo $\mathbb{Z}$ y en este caso es muy fácil ver que es generado solo por $1$ y $-1$. Si $G$ es finito de orden $m$, podemos suponer que $\mathbb{Z}_{m}$. Así, si $(m,k)=1$, entonces $xk+ym=1$ para enteros $x,y$. Por lo tanto se tiene que para todo $bm\in G$ se tiene que $bm\in [k]$.
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Si $G$ es infinito, en virtud del teorema \@ref{thm:teo1.86} podemos suponer que $G$ es el grupo aditivo $\mathbb{Z}$ y en este caso es muy fácil ver que es generado solo por $1$ y $-1$. Si $G$ es finito de orden $m$, podemos suponer que $\mathbb{Z}_{m}$. Así, si $(m,k)=1$, entonces $xk+ym=1$ para enteros $x,y$. Por lo tanto se tiene que para todo $bm\in G$ se tiene que $bm\in [k]$.
 </div>\EndKnitrBlock{proof}
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-100"><strong>(\#def:unnamed-chunk-100) </strong></span>	Sea $H$ un subgrupo de un grupo $G$ y sean $a,bIn G$. Decimos que *$a$ es congruente por la derecha con $b$ módulo $H$*, si y solo $ab^{-1}\in H$ y se denota $a\cong_{r} b mod H$. Decimos que *$a$ es congruente por la izquierda con $b$ módulo $H$*, si y solo $a^{-1}b\in H$ y se denota $a\cong_{l} b mod H$. 
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-100"><strong>(\#def:unnamed-chunk-100) </strong></span>Sea $H$ un subgrupo de un grupo $G$ y sean $a,bIn G$. Decimos que *$a$ es congruente por la derecha con $b$ módulo $H$*, si y solo $ab^{-1}\in H$ y se denota $a\cong_{r} b mod H$. Decimos que *$a$ es congruente por la izquierda con $b$ módulo $H$*, si y solo $a^{-1}b\in H$ y se denota $a\cong_{l} b mod H$. 
 </div>\EndKnitrBlock{definition}
 
-\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	Note que si un grupo $G$ es abeliano y $H$ es un subgrupo, como $ab^{-1}\in H\Leftrightarrow (ab^{-1})^{-1}\in H \Leftrightarrow ba^{-1}\in H\Leftrightarrow a^{-1}b\in H$, entonces la congruencia derecha e izquierda módulo $H$ coinciden. Ahora bien, aunque existen grupos $G$ y subgrupos $H$ no abelianos en los que pueden coincidir la congruencia derecha e izquierda, módulo $H$, esto no es verdad en general.
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}Note que si un grupo $G$ es abeliano y $H$ es un subgrupo, como $ab^{-1}\in H\Leftrightarrow (ab^{-1})^{-1}\in H \Leftrightarrow ba^{-1}\in H\Leftrightarrow a^{-1}b\in H$, entonces la congruencia derecha e izquierda módulo $H$ coinciden. Ahora bien, aunque existen grupos $G$ y subgrupos $H$ no abelianos en los que pueden coincidir la congruencia derecha e izquierda, módulo $H$, esto no es verdad en general.
 </div>\EndKnitrBlock{remark}
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-102"><strong>(\#thm:unnamed-chunk-102) </strong></span>	Sea $H$ un subgrupo de un grupo $G$.
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-102"><strong>(\#thm:unnamed-chunk-102) </strong></span>Sea $H$ un subgrupo de un grupo $G$.
 
-		1. La congruencia por la derecha (respectivamente, por la izquierda) módulo $H$ es una relación de equivalencia sobre $G$.
+1. La congruencia por la derecha (respectivamente, por la izquierda) módulo $H$ es una relación de equivalencia sobre $G$.
 
-		2. Las clases de equivalencia de $a\in G$ bajo la congruencia por la derecha (respectivamente por la izquierda) módulo $H$ es el conjunto $Ha=\{ha : h\in H \}$ (respectivamente $aH=\{ah :h\in H \}$). A los conjuntos del tipo $Ha$ y $aH$ se les llama *clase lateral derecha módulo $H$* y  *clase lateral izquierda módulo $H$*. En general, una clase lateral derecha no es una clase lateral izquierda.
+2. Las clases de equivalencia de $a\in G$ bajo la congruencia por la derecha (respectivamente por la izquierda) módulo $H$ es el conjunto $Ha=\{ha : h\in H \}$ (respectivamente $aH=\{ah :h\in H \}$). A los conjuntos del tipo $Ha$ y $aH$ se les llama *clase lateral derecha módulo $H$* y  *clase lateral izquierda módulo $H$*. En general, una clase lateral derecha no es una clase lateral izquierda.
 
-		3. $|Ha|=|H|=|aH|$, para todo $a\in G$.
+3. $|Ha|=|H|=|aH|$, para todo $a\in G$.
 </div>\EndKnitrBlock{theorem}
 
-\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Sean $a,b,c\in G$.
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Sean $a,b,c\in G$.
 	
-		1. Claramente $a\cong_{r} a mod H$, ya que $aa^{-1}=e\in H$, de donde se tiene que la relación es reflexiva. Como $ba^{-1}=(ab^{-1})^{-1}$, se tiene que la relación es reflexiva. Supongamos que $a\cong_{r} b mod H$ y que $b\cong_{r} c mod H$, esto es $ab^{-1}\in H$ y $bc^{-1}\in H$, por lo tanto $ac^{-1}=a(b^{-1}b)c^{-1}=(ab^{-1})(bc^{-1})\in H$, se tiene que $a\cong_{r} c mod H$, por lo que la relación es transitiva.
+1. Claramente $a\cong_{r} a mod H$, ya que $aa^{-1}=e\in H$, de donde se tiene que la relación es reflexiva. Como $ba^{-1}=(ab^{-1})^{-1}$, se tiene que la relación es reflexiva. Supongamos que $a\cong_{r} b mod H$ y que $b\cong_{r} c mod H$, esto es $ab^{-1}\in H$ y $bc^{-1}\in H$, por lo tanto $ac^{-1}=a(b^{-1}b)c^{-1}=(ab^{-1})(bc^{-1})\in H$, se tiene que $a\cong_{r} c mod H$, por lo que la relación es transitiva.
 
-		2. La clase de equivalencia de $a$ es el conjunto $[a]=\{b\in G : b\cong a mod H \}=\{b\in G: ba^{-1}\in H \}=\{b\in G: b=ha \mbox{ para algún } h\in H \}=\{ha: h\in H \}=Ha$.
+2. La clase de equivalencia de $a$ es el conjunto $[a]=\{b\in G : b\cong a mod H \}=\{b\in G: ba^{-1}\in H \}=\{b\in G: b=ha \mbox{ para algún } h\in H \}=\{ha: h\in H \}=Ha$.
 
-		3. Es fácil ver que la función de $Ha$ sobre $H$, que aplica a cada $ha$ en $h$, es una biyección.
+3. Es fácil ver que la función de $Ha$ sobre $H$, que aplica a cada $ha$ en $h$, es una biyección.
 	
-	Para la congruencia por la izquierda se procede forma análoga.
+Para la congruencia por la izquierda se procede de forma análoga.
 </div>\EndKnitrBlock{proof}
 
-\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	En la literatura puede hallarse que a los conjuntos $Ha$ (resp. $aH$) se les llama *coset derecho (resp. izquierdo) de $H$ en $G$*, término proveniente del idioma inglés (right coset y left coset) pero que se ha hecho popular en la literatura en otras lenguas, en particular en la española, por su simplicidad. El prefijo co indica con o en compañía. De este punto en adelante usaremos este término para referirinos a las clases laterales módulo $H$.
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}En la literatura puede hallarse que a los conjuntos $Ha$ (resp. $aH$) se les llama *coset derecho (resp. izquierdo) de $H$ en $G$*, término proveniente del idioma inglés (right coset y left coset) pero que se ha hecho popular en la literatura en otras lenguas, en particular en la española, por su simplicidad. El prefijo co indica con o en compañía. De este punto en adelante usaremos este término para referirinos a las clases laterales módulo $H$.
 </div>\EndKnitrBlock{remark}
 
-\BeginKnitrBlock{corollary}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-105"><strong>(\#cor:unnamed-chunk-105) </strong></span>	Sea $H$ un subgrupo de un grupo $G$.
+\BeginKnitrBlock{corollary}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-105"><strong>(\#cor:unnamed-chunk-105) </strong></span>Sea $H$ un subgrupo de un grupo $G$.
 
-		1. $G$ es la unión de los coset derechos (resp. izquierdos) de $H$ en $G$.
-		2. Dos coset derechos (rersp. izquierdos) de $H$ en $G$ son disjuntos o iguales.
-		3. Para todo $a,b\in G$, $Ha=Hb\Leftrightarrow ab^{-1}\in H$ y $aH=bH\Leftrightarrow a^{-1}b\in H$.
-		4. Si $\mathcal{D}$ es el conjunto de los coset derechos de $H$ en $G$ y $\mathcal{I}$ es el conjunto de los coset izquierdos de $H$ en $G$, entonces $|\mathcal{D}|=|\mathcal{I}|$.
+1. $G$ es la unión de los coset derechos (resp. izquierdos) de $H$ en $G$.
+
+2. Dos coset derechos (rersp. izquierdos) de $H$ en $G$ son disjuntos o iguales.
+
+3. Para todo $a,b\in G$, $Ha=Hb\Leftrightarrow ab^{-1}\in H$ y $aH=bH\Leftrightarrow a^{-1}b\in H$.
+
+4. Si $\mathcal{D}$ es el conjunto de los coset derechos de $H$ en $G$ y $\mathcal{I}$ es el conjunto de los coset izquierdos de $H$ en $G$, entonces $|\mathcal{D}|=|\mathcal{I}|$.
 	</div>\EndKnitrBlock{corollary}
-\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Los apartados del (1) al (3) son consecuencia inmediata del teorema anterior y del teorema \ref{teo1.27} (sección 2).
-	(4) Sea $f:\mathcal{D}\longrightarrow\mathcal{L}$ la función definida por $f(Ha)=Ha^{-1}$ es una biyección, ya que $Ha=Hb\Leftrightarrow ab^{-1}\in H\leftrightarrow (a^{-1})^{-1}b^{-1}\in H\leftrightarrow a^{1}H=b^{-1}H$.
+
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Los apartados del (1) al (3) son consecuencia inmediata del teorema anterior y del teorema \ref{teo1.27} (sección 2).
+
+(4) Sea $f:\mathcal{D}\longrightarrow\mathcal{L}$ la función definida por $f(Ha)=Ha^{-1}$ es una biyección, ya que $Ha=Hb\Leftrightarrow ab^{-1}\in H\leftrightarrow (a^{-1})^{-1}b^{-1}\in H\leftrightarrow a^{1}H=b^{-1}H$.
 </div>\EndKnitrBlock{proof}
 
-\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	*La notación aditiva*. Si $G$ es un subgrupo aditivo y $H$ un subgrupo de $G$, la congruencia por la derecha módulo $H$ es $a\cong_{r}b mod H$ si y solo si $a-b\in H$. Las clases laterales derechas (coset derechos) son los conjuntos $H+a=\{h+a:h\in H \}$, para $a\in G$. De forma análoga, para la congruencia por la izquierda módulo $H$, $a\cong_{l}b mod H$ si y solo si $b-a\in H$. Las clases laterales izquierdas (coset izquierdos) son los conjuntos de la forma  $a+H=\{h+a:h\in H \}$.
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}*La notación aditiva*. Si $G$ es un subgrupo aditivo y $H$ un subgrupo de $G$, la congruencia por la derecha módulo $H$ es $a\cong_{r}b mod H$ si y solo si $a-b\in H$. Las clases laterales derechas (coset derechos) son los conjuntos $H+a=\{h+a:h\in H \}$, para $a\in G$. De forma análoga, para la congruencia por la izquierda módulo $H$, $a\cong_{l}b mod H$ si y solo si $b-a\in H$. Las clases laterales izquierdas (coset izquierdos) son los conjuntos de la forma  $a+H=\{h+a:h\in H \}$.
 </div>\EndKnitrBlock{remark}
 
 De la parte (4) del corolario se puede ver $|\mathcal{D}|=|\mathcal{I}|$. Podemos entonces dar la siguiente definición:
  
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-108"><strong>(\#def:unnamed-chunk-108) </strong></span>	Sea $H$ un subgrupo de un grupo $G$. El *índice de $H$ en $G$* es el cardinal del conjunto de los coset derechos de $H$ en $G$. Lo denotamos por $[G:H]$.
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-108"><strong>(\#def:unnamed-chunk-108) </strong></span>Sea $H$ un subgrupo de un grupo $G$. El *índice de $H$ en $G$* es el cardinal del conjunto de los coset derechos de $H$ en $G$. Lo denotamos por $[G:H]$.
 </div>\EndKnitrBlock{definition}
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-109"><strong>(\#thm:unnamed-chunk-109) </strong></span>	Si $K,H, G$ son subgrupos tales que $K<H<G$, entonces $[G:K]=[G:H][H:K]$.
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-109"><strong>(\#thm:unnamed-chunk-109) </strong></span>Si $K,H, G$ son subgrupos tales que $K<H<G$, entonces $[G:K]=[G:H][H:K]$.
 </div>\EndKnitrBlock{theorem}
 
-\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Sea $a_{i}\in G$, con $i\in I$ un representante de cada coset de $H$ en $G$, donde la familia de índices $I$ cumple que $|I|=[G:H]$. Por el corolario anterior se tiene que $G=\bigcup_{i\in I} Ha_{i}$. Note que los coset derechos $Ha_{i}$ son disjuntos (esto es $Ha_{i}=Ha_{j}\leftrightarrow i=j$). Análogamente $H=\bigcup_{j\in J} Kb_{j}$, con $b_{j}\in H$ y $|J|=[H:K]$, donde los conjuntos $Kb_{j}$ son disjuntos dos a dos. De esta forma se tiene que $G=\bigcup_{i\in I} Ha_{i}=\bigcup_{i\in I}(\bigcup_{j\in J} Kb_{j})a_{i}=\bigcup_{(i,j)\in I\times J} Kb_{j}a_{i}$. Basta probar que los conjuntos $Kb_{j}a_{i}$ son disjuntos dos a dos porque así, del corolario se tiene $[G:K]=|I\times J|=|I||J|=[G:K][K:H]$. Si $Kb_{j}a_{i}=Kb_{s}a_{r}\Leftrightarrow b_{j}a_{i}=kb_{s}a_{r}$ para algún $k\in K$. Como $b_{j},b_{r},k\in H$ se tiene que $Ha_{i}=Hb_{j}a_{i}=Hkb_{s}a_{r}=Ha_{r}$, por lo que $i=r$ y $b_{j}=kb_{s}$. Así $Kb_{j}=Kkb_{s}=Kb_{s}$ por lo tanto $j=s$. De este modo los coset $Kb_{j}a_{i}$ son disjuntos dos a dos. 
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Sea $a_{i}\in G$, con $i\in I$ un representante de cada coset de $H$ en $G$, donde la familia de índices $I$ cumple que $|I|=[G:H]$. Por el corolario anterior se tiene que $G=\bigcup_{i\in I} Ha_{i}$. Note que los coset derechos $Ha_{i}$ son disjuntos (esto es $Ha_{i}=Ha_{j}\leftrightarrow i=j$). Análogamente $H=\bigcup_{j\in J} Kb_{j}$, con $b_{j}\in H$ y $|J|=[H:K]$, donde los conjuntos $Kb_{j}$ son disjuntos dos a dos. De esta forma se tiene que $G=\bigcup_{i\in I} Ha_{i}=\bigcup_{i\in I}(\bigcup_{j\in J} Kb_{j})a_{i}=\bigcup_{(i,j)\in I\times J} Kb_{j}a_{i}$. Basta probar que los conjuntos $Kb_{j}a_{i}$ son disjuntos dos a dos porque así, del corolario se tiene $[G:K]=|I\times J|=|I||J|=[G:K][K:H]$. Si $Kb_{j}a_{i}=Kb_{s}a_{r}\Leftrightarrow b_{j}a_{i}=kb_{s}a_{r}$ para algún $k\in K$. Como $b_{j},b_{r},k\in H$ se tiene que $Ha_{i}=Hb_{j}a_{i}=Hkb_{s}a_{r}=Ha_{r}$, por lo que $i=r$ y $b_{j}=kb_{s}$. Así $Kb_{j}=Kkb_{s}=Kb_{s}$ por lo tanto $j=s$. De este modo los coset $Kb_{j}a_{i}$ son disjuntos dos a dos. 
 </div>\EndKnitrBlock{proof}
 
-\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	Si dos de estos índices son finitos, también lo será el tercero.
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}Si dos de estos índices son finitos, también lo será el tercero.
 </div>\EndKnitrBlock{remark}
 
-\BeginKnitrBlock{corollary}\iffalse{-91-76-97-103-114-97-110-103-101-93-}\fi{}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-112"><strong>(\#cor:unnamed-chunk-112)  \iffalse (Lagrange) \fi{} </strong></span>	Si $H$ es un subgrupo de un grupo $G$, entonces $|G|=[G:H]|H|$. En particular si $G$ es finito, el orden de $a\in G$ divide al orden de $G$.
+\BeginKnitrBlock{corollary}\iffalse{-91-76-97-103-114-97-110-103-101-93-}\fi{}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-112"><strong>(\#cor:unnamed-chunk-112)  \iffalse (Lagrange) \fi{} </strong></span>Si $H$ es un subgrupo de un grupo $G$, entonces $|G|=[G:H]|H|$. En particular si $G$ es finito, el orden de $a\in G$ divide al orden de $G$.
 </div>\EndKnitrBlock{corollary}
 
-\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Considerando el subgrupo $\langle e\rangle$, del teorema anterior se tiene el resultado. En particular, si se considera además el subgrupo $\langle a\rangle$, se sigue que $|\langle a\rangle|$ divide a $|G|$.
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Considerando el subgrupo $\langle e\rangle$, del teorema anterior se tiene el resultado. En particular, si se considera además el subgrupo $\langle a\rangle$, se sigue que $|\langle a\rangle|$ divide a $|G|$.
 </div>\EndKnitrBlock{proof}
 
 Dados dos subconjuntos $H$ y $K$ de un grupo $G$, el conjunto $HK$ es el formado por todos los productos del tipo $ab$ donde $a\in H$ y $b\in K$, es decir, $HK=\{ab|a\in H \mbox{ y }b\in K \}$. Los coset derecho e izquierdo son un caso particular de estos conjuntos. Puede que los subconjuntos $H$ y $K$ sean subgrupos, en este caso, el conjunto $HK$ no es necesariamente un subgrupo.
 
 Dados dos subconjuntos $H$ y $K$ de un grupo $G$, el conjunto $HK$ es el formado por todos los productos del tipo $ab$ donde $a\in H$ y $b\in K$, es decir, $HK=\{ab|a\in H \mbox{ y }b\in K \}$. Los coset derecho e izquierdo son un caso particular de estos conjuntos. Puede que los subconjuntos $H$ y $K$ sean subgrupos, en este caso, el conjunto $HK$ no es necesariamente un subgrupo.
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-114"><strong>(\#thm:unnamed-chunk-114) </strong></span>	Sea $H$ y $K$ subgrupos finitos de un grupo $G$. Entonces $|HK|=|H||K|/|H\cap K|$.
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-114"><strong>(\#thm:unnamed-chunk-114) </strong></span>Sea $H$ y $K$ subgrupos finitos de un grupo $G$. Entonces $|HK|=|H||K|/|H\cap K|$.
 </div>\EndKnitrBlock{theorem}
-\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Sea $C=H\cap K$, $C$ es un subgrupo de $K$ de índice $n=|K|/|C|$ y $K$ es la unión disjunta de coset derechos $Ck_{1}\cup Ck_{2}\cdots Ck_{n}$ para algunos $k_{i}\in K$. Como $HC=H$, se tiene que $HK$ es la unión disjunta $Hk_{1}\cup Hk_{2}\cdots Hk_{n}$. Por lo tanto, $|HK|=|H|n=|H||K|/|H\cap K|$.
+
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Sea $C=H\cap K$, $C$ es un subgrupo de $K$ de índice $n=|K|/|C|$ y $K$ es la unión disjunta de coset derechos $Ck_{1}\cup Ck_{2}\cdots Ck_{n}$ para algunos $k_{i}\in K$. Como $HC=H$, se tiene que $HK$ es la unión disjunta $Hk_{1}\cup Hk_{2}\cdots Hk_{n}$. Por lo tanto, $|HK|=|H|n=|H||K|/|H\cap K|$.
 </div>\EndKnitrBlock{proof}
 
-\BeginKnitrBlock{proposition}<div class="proposition"><span class="proposition" id="prp:unnamed-chunk-116"><strong>(\#prp:unnamed-chunk-116) </strong></span>	Si $H$ y $K$ son subgrupos de un grupo $G$, entonces $[H:H\cap K]\leq [G:K]$. Si $[G:K]$ es finito, entonces $[H:H\cap K]= [G:K]$ si y solo si $G=KH$.
+\BeginKnitrBlock{proposition}<div class="proposition"><span class="proposition" id="prp:unnamed-chunk-116"><strong>(\#prp:unnamed-chunk-116) </strong></span>Si $H$ y $K$ son subgrupos de un grupo $G$, entonces $[H:H\cap K]\leq [G:K]$. Si $[G:K]$ es finito, entonces $[H:H\cap K]= [G:K]$ si y solo si $G=KH$.
 </div>\EndKnitrBlock{proposition}
-\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Sean $A$ y $B$ los conjuntos de coset´s de $H\cap K$ en $H$ y de $K$ en $G$ respectivamente. Sea $\phi:A\longleftarrow B$ la función definida por $\phi((H\cap K)h)=Kh$.  Veamos que está bien definida. Si $(H\cap K)h=(H\cap K)h´$, entonces $h´h^{-1}\in H\cap K\subseteq K$ y así $Kh=Kh´$. Además $\phi$ es inyectiva. Entonces $|A|\leq |B|$, es decir $[H:H\cap K]\leq [G:K]$.\\
-	Si $[G:K]$ es finito, entonces $\phi$ es sobreyectiva si y solo si $G=KH$. Nótese que para $h\in H$, $k\in K$, $Kkh=Kh$.
+
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Sean $A$ y $B$ los conjuntos de coset´s de $H\cap K$ en $H$ y de $K$ en $G$ respectivamente. Sea $\phi:A\longleftarrow B$ la función definida por $\phi((H\cap K)h)=Kh$.  Veamos que está bien definida. Si $(H\cap K)h=(H\cap K)h´$, entonces $h´h^{-1}\in H\cap K\subseteq K$ y así $Kh=Kh´$. Además $\phi$ es inyectiva. Entonces $|A|\leq |B|$, es decir $[H:H\cap K]\leq [G:K]$.
+
+Si $[G:K]$ es finito, entonces $\phi$ es sobreyectiva si y solo si $G=KH$. Nótese que para $h\in H$, $k\in K$, $Kkh=Kh$.
 </div>\EndKnitrBlock{proof}
 
 Ahora estuadiaremos algunos subgrupos $N$ (de un grupo $G$) para los que la congruencia derecha e izquierda módulo $N$ coinciden. 
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-118"><strong>(\#thm:unnamed-chunk-118) </strong></span>	Si $N$ es un subgrupo de un grupo $G$, entonces las siguientes condiciones son equivalentes:
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-118"><strong>(\#thm:unnamed-chunk-118) </strong></span>Si $N$ es un subgrupo de un grupo $G$, entonces las siguientes condiciones son equivalentes:
 
-		1. La congruencia por laderecha módulo $N$ y la congruencia por la izquierda módulo $N$ coinciden (es decir, definen la misma relación de equivalencia sobre G).
+1. La congruencia por laderecha módulo $N$ y la congruencia por la izquierda módulo $N$ coinciden (es decir, definen la misma relación de equivalencia sobre G).
 
-		2. Todo coset derecho de $N$ en $G$ es un coset izquierdo de $N$ en $G$.
+2. Todo coset derecho de $N$ en $G$ es un coset izquierdo de $N$ en $G$.
 
-		3. $aN=Na$ para todo $a\in G$.
+3. $aN=Na$ para todo $a\in G$.
 
-		4. Para todo $a\in G$, $\{ana^{-1}| n\in N \}=aNa^{-1}\subseteq N$.
+4. Para todo $a\in G$, $\{ana^{-1}| n\in N \}=aNa^{-1}\subseteq N$.
 
-		5. Para todo $a\in G$, $aNa^{-1}=N$.
+5. Para todo $a\in G$, $aNa^{-1}=N$.
 </div>\EndKnitrBlock{theorem}
 
-\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Es inmediato ver que (1) es equivalente a (3) ya que dos relaciones son idénticas si y solo si definen las mismas clases de equivalencias, en este caso los coset derechos e izquierdos de $N$. Veamos que (2) implica (3), si $aN=Nb$ para algún $b\in G$, entonces $a\in Nb\cap Na$, por lo que $Nb=Na$ ya que los cosets derechos (e izquierdos) son disjuntos o iguales. (3) implica (4) trivialmene, basta multiplicar por la derecha $a^{-1}$. Para ver que (4) implica (5), basta notar que (4) es cierto para el elemento $a^{-1}$, así $a^{-1}Na\subseteq N$ po lo que para todo $n\in N$, se tiene que $n=a(a^{-1}na)a^{-1}\in aNa^{-1}$ y así $N\subseteq aNa^{-1}$. Es trivial ver que (5) implica (2) multiplicando por $a$ a la derecha.
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Es inmediato ver que (1) es equivalente a (3) ya que dos relaciones son idénticas si y solo si definen las mismas clases de equivalencias, en este caso los coset derechos e izquierdos de $N$. Veamos que (2) implica (3), si $aN=Nb$ para algún $b\in G$, entonces $a\in Nb\cap Na$, por lo que $Nb=Na$ ya que los cosets derechos (e izquierdos) son disjuntos o iguales. (3) implica (4) trivialmene, basta multiplicar por la derecha $a^{-1}$. Para ver que (4) implica (5), basta notar que (4) es cierto para el elemento $a^{-1}$, así $a^{-1}Na\subseteq N$ po lo que para todo $n\in N$, se tiene que $n=a(a^{-1}na)a^{-1}\in aNa^{-1}$ y así $N\subseteq aNa^{-1}$. Es trivial ver que (5) implica (2) multiplicando por $a$ a la derecha.
 </div>\EndKnitrBlock{proof}
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-120"><strong>(\#def:unnamed-chunk-120) </strong></span>	Un subgrupo $N$ de un grupo $G$ que satisfaga las condiciones equivalentes del teorema anterior se llama *subgrupo normal de $G$* (o se dice que es *normal en $G$*) y se denota por $N\triangleleft G$.
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-120"><strong>(\#def:unnamed-chunk-120) </strong></span>Un subgrupo $N$ de un grupo $G$ que satisfaga las condiciones equivalentes del teorema anterior se llama *subgrupo normal de $G$* (o se dice que es *normal en $G$*) y se denota por $N\triangleleft G$.
 </div>\EndKnitrBlock{definition}
 
 Cuando se tiene un subgrupo normal $N$, por el teorema anterior, podemos omitir el subíndice "i" y "d" en la congruencia módulo $N$ ya que la las congruencias izquierda y derechas coinciden. 
 
 \BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}
-		1. Note que todo subgrupo de un grupo abeliano es normal.
+1. Note que todo subgrupo de un grupo abeliano es normal.
 
-		2. La intersección de subgrupos normales, es un subgrupo normal.
+2. La intersección de subgrupos normales, es un subgrupo normal.
 
-		3. Si $N$ es un subgrupo normal de un grupo $G$, entonces es normal en todo subgrupo de $G$ que lo contenga, sin embargo, si $H$ es un subgrupo normal de $K$ y $K$ es un subgrupo normal de $G$, no necesariamente se tiene que $H\triangleleft G$.
+3. Si $N$ es un subgrupo normal de un grupo $G$, entonces es normal en todo subgrupo de $G$ que lo contenga, sin embargo, si $H$ es un subgrupo normal de $K$ y $K$ es un subgrupo normal de $G$, no necesariamente se tiene que $H\triangleleft G$.
 
-		4. Denotaremos por $H\bigvee K$ al subgrupo generado por el conjunto  unión $H\cup K$, es decir $H\bigvee K=\langle H\cup K\rangle$.
+4. Denotaremos por $H\bigvee K$ al subgrupo generado por el conjunto  unión $H\cup K$, es decir $H\bigvee K=\langle H\cup K\rangle$.
 </div>\EndKnitrBlock{remark}
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:teorema53"><strong>(\#thm:teorema53) </strong></span>	Sean $K$ y $N$ subgrupos de un grupo $G$, con $N$ normal en $G$. Entonces:
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:teorema53"><strong>(\#thm:teorema53) </strong></span>Sean $K$ y $N$ subgrupos de un grupo $G$, con $N$ normal en $G$. Entonces:
 
-		1. $N\cap K$ es un subgrupo normal de $K$.
+1. $N\cap K$ es un subgrupo normal de $K$.
 	
-		2. $N$ es un subgrupo normal de $N\bigvee K$.
+2. $N$ es un subgrupo normal de $N\bigvee K$.
 	
-		3. $NK=N\bigvee K=KN$.
+3. $NK=N\bigvee K=KN$.
 	
-		4. Si $K$ es normal en $G$ y $K\cap N=\langle e\rangle$, entonces $nk=kn$ para todo $k\in K$ y $n\in N$.
+4. Si $K$ es normal en $G$ y $K\cap N=\langle e\rangle$, entonces $nk=kn$ para todo $k\in K$ y $n\in N$.
 	</div>\EndKnitrBlock{theorem}
-\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}		1. Sea $n\in N\cap K$ y $a\in G$. Entonces $ana^{-1}\in N$ (porque $N$ es normal) y $ana^{-1}\in K$ (ya que $K<G$). De este modo $a(N\cap K)a^{-1}\subseteq N\cap K$ y $N\cap K \vartriangleleft K$. 
-    2. Se sigue trivialmente de $N< N\bigvee K$. 
-    3. Es claro que $NK\subseteq N\bigvee K$; un elemento $b$ de $N\bigvee K$ es de la forma $b=n_{1}k_{1}n_{2}k_{2}\cdots n_{r}k_{r}$ donde $n_{i}\in N$ y $k_{i}\in K$. Como $N$ es normal en $G$, se tiene que $n_{i}k_{i}=k_{i}m$ para algún $m\in N$ y de este modo $b=n(k_{1}k_{2}\cdots k_{r})$ con $n\in N$, por lo que $N\bigvee K\subseteq NK$. De forma análoga se tiene que $N\bigvee K=KN$. 
-    4. Sea $k\in K$ y $n\in N$, entonces $nkn^{-1}\in K$ ya que $K$ es normal en $G$ y $kn^{-1}k^{-1}\in N$ ya que $N$ es normal en $G$. Entonces $(nkn^{-1})k^{-1}=n(kn^{-1}k^{-1})\in N\cap K=\left\langle e\right\rangle$, por lo tanto $kn=kn$.
+
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}1. Sea $n\in N\cap K$ y $a\in G$. Entonces $ana^{-1}\in N$ (porque $N$ es normal) y $ana^{-1}\in K$ (ya que $K<G$). De este modo $a(N\cap K)a^{-1}\subseteq N\cap K$ y $N\cap K \vartriangleleft K$. 
+
+2. Se sigue trivialmente de $N< N\bigvee K$. 
+
+3. Es claro que $NK\subseteq N\bigvee K$; un elemento $b$ de $N\bigvee K$ es de la forma $b=n_{1}k_{1}n_{2}k_{2}\cdots n_{r}k_{r}$ donde $n_{i}\in N$ y $k_{i}\in K$. Como $N$ es normal en $G$, se tiene que $n_{i}k_{i}=k_{i}m$ para algún $m\in N$ y de este modo $b=n(k_{1}k_{2}\cdots k_{r})$ con $n\in N$, por lo que $N\bigvee K\subseteq NK$. De forma análoga se tiene que $N\bigvee K=KN$. 
+
+4. Sea $k\in K$ y $n\in N$, entonces $nkn^{-1}\in K$ ya que $K$ es normal en $G$ y $kn^{-1}k^{-1}\in N$ ya que $N$ es normal en $G$. Entonces $(nkn^{-1})k^{-1}=n(kn^{-1}k^{-1})\in N\cap K=\left\langle e\right\rangle$, por lo tanto $kn=kn$.
 </div>\EndKnitrBlock{proof}
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-123"><strong>(\#thm:unnamed-chunk-123) </strong></span>	Sea $N$ un subgrupos normal en $G$. Sea $G/N$ el conjunto de coset (izquierdas) de $N$ en $G$. Entonces $G/N$ es un grupo de orden $[G:N]$ bajo la operación $(aN)(bN)=abN$.
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-123"><strong>(\#thm:unnamed-chunk-123) </strong></span>Sea $N$ un subgrupos normal en $G$. Sea $G/N$ el conjunto de coset (izquierdas) de $N$ en $G$. Entonces $G/N$ es un grupo de orden $[G:N]$ bajo la operación $(aN)(bN)=abN$.
 </div>\EndKnitrBlock{theorem}
-\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Veamos que la congruencia módulo $N$ es una relación de congruencia. Sean $a_{1}\cong a mod N$ y $b_{1}\cong b mod N$. Sean $n_{1}=a_{1}a^{-1}$ y $n_{2}=b_{1}b^{-1}$ donde $n_{1}$ y $n_{2}\in N$. Se tiene que $(a_{1}b_{1})(ab)^{-1}=a_{1}b_{1}b^{-1}a^{-1}=a_{1}n_{2}a^{-1}$. Como $N$ es normal, $a_{2}N=Na_{1}$ por lo tanto $a_{1}n_{2}=ma_{1}$ para algún $m\in N$, de este modo $(a_{1}b_{1})(ab)^{-1}=(a_{1}n_{2})a^{-1}=ma_{1}a^{-1}=mn_{1}\in N$, de donde $a_{1}b_{1}\cong ab mod N$.
-</div>\EndKnitrBlock{proof}
+
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Veamos que la congruencia módulo $N$ es una relación de congruencia. Sean $a_{1}\cong a mod N$ y $b_{1}\cong b mod N$. Sean $n_{1}=a_{1}a^{-1}$ y $n_{2}=b_{1}b^{-1}$ donde $n_{1}$ y $n_{2}\in N$. Se tiene que $(a_{1}b_{1})(ab)^{-1}=a_{1}b_{1}b^{-1}a^{-1}=a_{1}n_{2}a^{-1}$. Como $N$ es normal, $a_{2}N=Na_{1}$ por lo tanto $a_{1}n_{2}=ma_{1}$ para algún $m\in N$, de este modo $(a_{1}b_{1})(ab)^{-1}=(a_{1}n_{2})a^{-1}=ma_{1}a^{-1}=mn_{1}\in N$, de donde $a_{1}b_{1}\cong ab mod N$.</div>\EndKnitrBlock{proof}
 
 Si $N$ es un grupo normal, entonces el grupo $G/N$ es llamado *grupo cociente (o grupo factor) de $G$ por $N$*. Si $G$ es un grupo aditivo, entonces la operación de grupo en $G/N$ está dada por $(a+N)+(b+N)=(a+b)+N$.
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:teorema55"><strong>(\#thm:teorema55) </strong></span>	Si $f:G\longrightarrow H$ es un homomorfismo de grupos. Entonces el núcleo de $f$ es un subgrupo normal de $G$. Inversamente, si $N$ es un subgrupo normal de $G$, entonces la función $\pi: G\longrightarrow G/N$ definida por $\pi(a)=aN$ es un epimorfismo de núcleo $N$.
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:teorema55"><strong>(\#thm:teorema55) </strong></span>Si $f:G\longrightarrow H$ es un homomorfismo de grupos. Entonces el núcleo de $f$ es un subgrupo normal de $G$. Inversamente, si $N$ es un subgrupo normal de $G$, entonces la función $\pi: G\longrightarrow G/N$ definida por $\pi(a)=aN$ es un epimorfismo de núcleo $N$.
 </div>\EndKnitrBlock{theorem}
 
-\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Sea $b\in Ker f$ y $a\in G$. Entonces $f(aba^{-1})=f(a)f(b)f(a^{-1})=f(a)ef(a)^{-1}=e$ por lo que $aba^{-1}\in Kerf$. Así $aKerfa^{-1}\subseteq Kerf$. Ya hemos visto que la función $\pi:G\longrightarrow G/N$ definida por $\pi(a)=aN$ es sobreyectiva. Luego $Ker\pi =\{a\in G: \pi(a)=eN=N \}=\{a\in G: aN=N \}=N$.
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Sea $b\in Ker f$ y $a\in G$. Entonces $f(aba^{-1})=f(a)f(b)f(a^{-1})=f(a)ef(a)^{-1}=e$ por lo que $aba^{-1}\in Kerf$. Así $aKerfa^{-1}\subseteq Kerf$. Ya hemos visto que la función $\pi:G\longrightarrow G/N$ definida por $\pi(a)=aN$ es sobreyectiva. Luego $Ker\pi =\{a\in G: \pi(a)=eN=N \}=\{a\in G: aN=N \}=N$.
 </div>\EndKnitrBlock{proof}
 
 La función $\pi:G\longrightarrow G/N$ es llamada *epimorfismo canónico* (la proyeccón canónica).
 
-´´´{theorem}
-	Si $f:G\longrightarrow H$ es un homomorfismo de grupo y $N$ es un subgrupo normal de $G$ contenido en el núcleo de $f$, entonces existe un único homomorfismo $\hat{f}: G/N\longrightarrow H$ tal que $\hat{f}(aN)=f(a)$ para todo $a\in G$, $Im f=Im \hat{f}$ y $Ker\hat{f}=(Kerf)/N$. Adem\'as $\hat{f}$ es un isomorfismo si y solo si $f$ es un epimorfismo y $N=Ker f$.
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-126"><strong>(\#thm:unnamed-chunk-126) </strong></span>Si $f:G\longrightarrow H$ es un homomorfismo de grupo y $N$ es un subgrupo normal de $G$ contenido en el núcleo de $f$, entonces existe un único homomorfismo $\hat{f}: G/N\longrightarrow H$ tal que $\hat{f}(aN)=f(a)$ para todo $a\in G$, $Im f=Im \hat{f}$ y $Ker\hat{f}=(Kerf)/N$. Además $\hat{f}$ es un isomorfismo si y solo si $f$ es un epimorfismo y $N=Ker f$.
+</div>\EndKnitrBlock{theorem}
 
-```
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Si $b\in aN$, $b=an$ para algún $n\in N$ y $f(b)=f(a)f(n)=f(a)$ por lo tanto para todo $b\in aN$, $f(b)=f(a)$, es decir la función $\hat{f}$ está bien definida. Ahora, $\hat{f}(aNbN)=\hat{f}(abN)=f(ab)=f(a)f(b)=\hat{f}(aN)\hat{f}(bN)$, luego $\hat{f}$ es un homomorfismo. Es evidente que $Im f=Im \hat{f}$ (ya que $\hat{f}(aN)=f(a)$) y $aN\in Ker\hat{f}\Leftrightarrow f(a)=e\Leftrightarrow a\in Ker f\Leftrightarrow Ker f/N=Ker\hat{f}$ ($Ker\hat{f}=\{aN: a\in Ker f \}=Ker f/N$). Al estar $\hat{f}$ definisa a partir de $f$, se tiene la unicidad. Es claro que $\hat{f}$ es un epimorfismo si y solo si $f$ lo es. Por el teorema \@ref(thm:1homomorfismo), $\hat{f}$ es un monomorfismo si y solo si $Ker\hat{f}(=Ker f/N)$ es el subgrupo trivial de $G/N$, esto es $\hat{f}$ es un monomorfismo si y solo si $Ker f=N$.
 </div>\EndKnitrBlock{proof}
 
-\BeginKnitrBlock{corollary}\iffalse{-91-80-114-105-109-101-114-32-116-101-111-114-101-109-97-32-100-101-32-105-115-111-109-111-114-102-105-115-109-111-93-}\fi{}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-127"><strong>(\#cor:unnamed-chunk-127)  \iffalse (Primer teorema de isomorfismo) \fi{} </strong></span>	Si $f:G\longrightarrow H$ es un homomorfismo de grupos, entonces $f$ induce un isomorfismo $G/Ker f\cong Im f$.
-</div>\EndKnitrBlock{corollary}
+\BeginKnitrBlock{corollary}\iffalse{-91-80-114-105-109-101-114-32-116-101-111-114-101-109-97-32-100-101-32-105-115-111-109-111-114-102-105-115-109-111-93-}\fi{}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-128"><strong>(\#cor:unnamed-chunk-128)  \iffalse (Primer teorema de isomorfismo) \fi{} </strong></span>Si $f:G\longrightarrow H$ es un homomorfismo de grupos, entonces $f$ induce un isomorfismo $G/Ker f\cong Im f$.</div>\EndKnitrBlock{corollary}
 
-\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Como $f$ es un epimorfismo, tomando $N=Ker f$ en el teorema anterior se tiene el resultado.
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Como $f$ es un epimorfismo, tomando $N=Ker f$ en el teorema anterior se tiene el resultado.
 </div>\EndKnitrBlock{proof}
 
-\BeginKnitrBlock{corollary}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-129"><strong>(\#cor:unnamed-chunk-129) </strong></span>	Si $f:G\longrightarrow H$ es un homomorfismo de grupos, $N$ es normal en $G$, $M$ es normal en $H$ y $f(N)$ es un subgrupo de $M$; entonces $f$ induce un homomorfismo $\hat{f}:G/N\longrightarrow H/M$ donde $\hat{f}(aN)=f(a)M$. $\hat{f}$ es un isomorfismo si y solo si $Im f\bigvee M=H$ y $f^{-1}(M)\subseteq N$. En particular, si $f$ es un epimorfismo tal que $f(N)=M$ y $Ker f\subseteq N$, entonces $\hat{f}$ es un isomorfismo.
+\BeginKnitrBlock{corollary}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-130"><strong>(\#cor:unnamed-chunk-130) </strong></span>Si $f:G\longrightarrow H$ es un homomorfismo de grupos, $N$ es normal en $G$, $M$ es normal en $H$ y $f(N)$ es un subgrupo de $M$; entonces $f$ induce un homomorfismo $\hat{f}:G/N\longrightarrow H/M$ donde $\hat{f}(aN)=f(a)M$. $\hat{f}$ es un isomorfismo si y solo si $Im f\bigvee M=H$ y $f^{-1}(M)\subseteq N$. En particular, si $f$ es un epimorfismo tal que $f(N)=M$ y $Ker f\subseteq N$, entonces $\hat{f}$ es un isomorfismo.
 </div>\EndKnitrBlock{corollary}
 
-\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Haremos un esquema de la demostración. Dada la función $f:G\longrightarrow H$ y la proyección $\pi:H\longrightarrow H/M$, consideramos la  composición $\pi f:G\longrightarrow H/M$. Se tiene que $N\subseteq f^{-1}(M)=Ker \pi f$. Por el teorema anterior, se tiene que la función $g:G/N\longrightarrow H/M$ dada por $g(aN)=(\pi f)(a)=f(a)M$ es un homomorfismo que es un isomorfismo si y solo si $\pi f$ es un isomorfismo y $N=Ker f$. Pero la última condición es cierta si y solo si $Im f\bigvee M=H$ y $f^{-1}(M)\subseteq N$. Si $f$ es un epimorfismo, entonces $H=Im f=Im f\bigvee M$. Si $f(N)=M$ y $Ker f\subseteq N$, entonces $f^{-1}(M)\subseteq N$, de donde se tiene que $\hat{f}$ es un isomorfismo. 
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Haremos un esquema de la demostración. Dada la función $f:G\longrightarrow H$ y la proyección $\pi:H\longrightarrow H/M$, consideramos la  composición $\pi f:G\longrightarrow H/M$. Se tiene que $N\subseteq f^{-1}(M)=Ker \pi f$. Por el teorema anterior, se tiene que la función $g:G/N\longrightarrow H/M$ dada por $g(aN)=(\pi f)(a)=f(a)M$ es un homomorfismo que es un isomorfismo si y solo si $\pi f$ es un isomorfismo y $N=Ker f$. Pero la última condición es cierta si y solo si $Im f\bigvee M=H$ y $f^{-1}(M)\subseteq N$. Si $f$ es un epimorfismo, entonces $H=Im f=Im f\bigvee M$. Si $f(N)=M$ y $Ker f\subseteq N$, entonces $f^{-1}(M)\subseteq N$, de donde se tiene que $\hat{f}$ es un isomorfismo. 
 </div>\EndKnitrBlock{proof}
 
-\BeginKnitrBlock{corollary}\iffalse{-91-83-101-103-117-110-100-111-32-116-101-111-114-101-109-97-32-100-101-32-105-115-111-109-111-114-102-105-115-109-111-93-}\fi{}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-131"><strong>(\#cor:unnamed-chunk-131)  \iffalse (Segundo teorema de isomorfismo) \fi{} </strong></span>	Si $K$ y $N$ son subgrupos de un grupo $G$, donde $N$ es normal en $G$. Entonces $K/(N\cap K)\cong NK/N$.
+\BeginKnitrBlock{corollary}\iffalse{-91-83-101-103-117-110-100-111-32-116-101-111-114-101-109-97-32-100-101-32-105-115-111-109-111-114-102-105-115-109-111-93-}\fi{}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-132"><strong>(\#cor:unnamed-chunk-132)  \iffalse (Segundo teorema de isomorfismo) \fi{} </strong></span>	Si $K$ y $N$ son subgrupos de un grupo $G$, donde $N$ es normal en $G$. Entonces $K/(N\cap K)\cong NK/N$.
 </div>\EndKnitrBlock{corollary}
+
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Del teorema \@ref(thm:teorema53) se tiene que $N\vartriangleleft NK=N\bigvee K$. Consideremos las funciones inclusión $i:K\longrightarrow NK$ y la proyección $\pi: NK\longrightarrow NK/K$; la composición $f:K\longrightarrow NK/K$ ($f=\pi i$) es un homomorfismo y su núcleo es $Ker f=K\cap N$, de donde $\hat{f}$ es un isomorfismo de $K/(K\cap N)$ en $Imf$, esto es $K/(K\cap N)\cong Imf$ (por el primer teorema de isomorfismo). Todo elemento en $NK/N$ tiene la forma $nkN$, con $n\in N$ y $k\in K$. Como $N$ es normal, se tiene que $nk=kn_{1}$ para algún $n_{1}\in N$, de donde $nkN=kn_{1}N=kN=f(k)$, por lo tanto $f$ es un epimorfismo y así $Im f=NK/N$.
 </div>\EndKnitrBlock{proof}
 
-\BeginKnitrBlock{corollary}\iffalse{-91-84-101-114-99-101-114-32-116-101-111-114-101-109-97-32-100-101-32-105-115-111-109-111-114-102-105-115-109-111-93-}\fi{}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-133"><strong>(\#cor:unnamed-chunk-133)  \iffalse (Tercer teorema de isomorfismo) \fi{} </strong></span>	Si $K$ y $H$ son subgrupos normales de un grupo $G$, donde $K< H$, entonces $H/K$ es un subgrupo normal de $G/K$ y $(G/K)/(H/K)\cong GH$.
+\BeginKnitrBlock{corollary}\iffalse{-91-84-101-114-99-101-114-32-116-101-111-114-101-109-97-32-100-101-32-105-115-111-109-111-114-102-105-115-109-111-93-}\fi{}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-134"><strong>(\#cor:unnamed-chunk-134)  \iffalse (Tercer teorema de isomorfismo) \fi{} </strong></span>	Si $K$ y $H$ son subgrupos normales de un grupo $G$, donde $K< H$, entonces $H/K$ es un subgrupo normal de $G/K$ y $(G/K)/(H/K)\cong GH$.
 </div>\EndKnitrBlock{corollary}
+
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Consideremos la función identidad $i_{G}:G\longrightarrow G$, se tiene que $i(K)<H$ y por lo tanto induce un epimorfismo $I:G/K\longrightarrow G/H$ con $I(aK)=aH$. Como $H=I(aK)$ si y solo si $a\in H$, $Ker I=\{aK : a\in H \}=H/K$. Por lo tanto $H/K\vartriangleleft G/K$; del teorema \@ref{thm:teorema55} y el primer teorema de isomorfismo, como $G/H=Im I$ se tiene que $G/H=Im I\cong (G/H)/Ker I=(G/K)/(H/K)$. 
 	</div>\EndKnitrBlock{proof}
 
 ### Ejercicios
 
-\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-135"><strong>(\#exr:unnamed-chunk-135) </strong></span>Sea $G$ un grupo y $C$ un conjunto no vacío. Sea $M(C,G)$ el conjunto de todas las funciones $f:C\longrightarrow G$. Definamos la operación de grupo como la suma de funciones, es decir, para cada $f,g\in M(C,G)$, $f\ast g = f +g$. Demuestre que $M(C,G)$ es un grupo, es abeliano si $G$ lo es.
+\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-136"><strong>(\#exr:unnamed-chunk-136) </strong></span>Sea $G$ un grupo y $C$ un conjunto no vacío. Sea $M(C,G)$ el conjunto de todas las funciones $f:C\longrightarrow G$. Definamos la operación de grupo como la suma de funciones, es decir, para cada $f,g\in M(C,G)$, $f\ast g = f +g$. Demuestre que $M(C,G)$ es un grupo, es abeliano si $G$ lo es.
 
 Respuesta: Es claro que la suma de funciones es cerrada en $M(C,G)$. Sean $f,g,h\in M(C,G)$, para cada $a\in C$, $(f+(g+h))(a)=f(a)+((g+h)(a))=f(a)+(g(a)+h(a))$ como $G$ es un grupo, la suma es asociativa, luego $f(a)+(g(a)+h(a))=(f(a)+g(a))+h(a)=((f+g)(a))+h(a)=((f+g)+h)(a)$; por lo tanto la suma de funciones es asociativa.
 </div>\EndKnitrBlock{exercise}
 
-\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-136"><strong>(\#exr:unnamed-chunk-136) </strong></span>Demuestre que el grupo del ejemplo \@ref(exm:ejm1-21) es un grupo de orden $|G||H|$. Además muestre que $G\times H$ es un grupo abeliano si $G$ y $H$ lo son.
+\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-137"><strong>(\#exr:unnamed-chunk-137) </strong></span>Demuestre que el grupo del ejemplo \@ref(exm:ejm1-21) es un grupo de orden $|G||H|$. Además muestre que $G\times H$ es un grupo abeliano si $G$ y $H$ lo son.
 Respuesta: Sabemos que $|G\times H|=|G||H|$, lo que demuestra que el orden del grupo es el producto $|G||H|$. Ahora supongamos que $G$ y $H$ son abelianos, luego $(a,b)\ast (c,d)=(a\ast c,b\ast d)=(c\ast a,d\ast b)=(c,d)\ast (a,b)$.
 </div>\EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:ejc3"><strong>(\#exr:ejc3) </strong></span>Demuestre que el grupo simétrico sobre $n$ letras es de orden $n!$.
-	Respuesta: Pensemos en el grupo simétrico $S_{3}$. El orden del grupo es equivalente a contar todas las posibles biyecciones de un conjunto de $3$ elementos, a saber:
-	$\left(  {\begin{array}{ccc}
+
+Respuesta: Pensemos en el grupo simétrico $S_{3}$. El orden del grupo es equivalente a contar todas las posibles biyecciones de un conjunto de $3$ elementos, a saber:
+
+$$
+\left(
+\begin{array}{ccc}
 		1 & 2 & 3\\
 		i_{1} & i_{2} & i_{3}\\
-		\end{array} } \right) $. Nótese que $1$ tiene $3$ posibles imágenes $i_{1}$, luego de fijada la imagen de $1$, restas $2$ posibles imágenes de $2$, $i_{2}$ y luego de fijadas las imágenes de $1$ y $2$, le queda una sola posibilidad a $3$. De donde podemos concluír que existen $3!$ posibles biyecciones de $\{1,2,3\}$ en sí mismo.
-	Análogamente, contar los elementos de $S_{n}$ es equivalente a contar las posibles permutaciones del conjunto $\{1,2,3,\cdots, n\}$.
+\end{array}
+\right) $$
+	  
+Nótese que $1$ tiene $3$ posibles imágenes $i_{1}$, luego de fijada la imagen de $1$, restas $2$ posibles imágenes de $2$, $i_{2}$ y luego de fijadas las imágenes de $1$ y $2$, le queda una sola posibilidad a $3$. De donde podemos concluír que existen $3!$ posibles biyecciones de $\{1,2,3\}$ en sí mismo.
+	
+Análogamente, contar los elementos de $S_{n}$ es equivalente a contar las posibles permutaciones del conjunto $\{1,2,3,\cdots, n\}$.
 </div>\EndKnitrBlock{exercise}
 
-\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-137"><strong>(\#exr:unnamed-chunk-137) </strong></span>Demuestre que el grupo simétrico sobre $n$ letras es de orden $n!$.
-	Respuesta: Pensemos en el grupo simétrico $S_{3}$. El orden del grupo es equivalente a contar todas las posibles biyecciones de un conjunto de $3$ elementos, a saber:
-	$\left(  {\begin{array}{ccc}
+\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-138"><strong>(\#exr:unnamed-chunk-138) </strong></span>Demuestre que el grupo simétrico sobre $n$ letras es de orden $n!$.
+
+Respuesta: Pensemos en el grupo simétrico $S_{3}$. El orden del grupo es equivalente a contar todas las posibles biyecciones de un conjunto de $3$ elementos, a saber:
+  
+$$
+\left(  
+\begin{array}{ccc}
 		1 & 2 & 3\\
 		i_{1} & i_{2} & i_{3}\\
-		\end{array} } \right) $. Nótese que $1$ tiene $3$ posibles imágenes $i_{1}$, luego de fijada la imagen de $1$, restas $2$ posibles imágenes de $2$, $i_{2}$ y luego de fijadas las imágenes de $1$ y $2$, le queda una sola posibilidad a $3$. De donde podemos concluír que existen $3!$ posibles biyecciones de $\{1,2,3\}$ en sí mismo.
-	Análogamente, contar los elementos de $S_{n}$ es equivalente a contar las posibles permutaciones del conjunto $\{1,2,3,\cdots, n\}$.
+\end{array}
+\right)
+$$
+  
+Nótese que $1$ tiene $3$ posibles imágenes $i_{1}$, luego de fijada la imagen de $1$, restas $2$ posibles imágenes de $2$, $i_{2}$ y luego de fijadas las imágenes de $1$ y $2$, le queda una sola posibilidad a $3$. De donde podemos concluír que existen $3!$ posibles biyecciones de $\{1,2,3\}$ en sí mismo.
+
+Análogamente, contar los elementos de $S_{n}$ es equivalente a contar las posibles permutaciones del conjunto $\{1,2,3,\cdots, n\}$.
 	</div>\EndKnitrBlock{exercise}
 
-\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-138"><strong>(\#exr:unnamed-chunk-138) </strong></span>Demuestre que el grupo del ejemplo \ref{ejm1-21} es un grupo de orden $|G||H|$. Además muestre que $G\times H$ es un grupo abeliano si $G$ y $H$ lo son.
-	Respuesta: Sabemos que $|G\times H|=|G||H|$, lo que demuestra que el orden del grupo es el producto $|G||H|$. Ahora supongamos que $G$ y $H$ son abelianos, luego $(a,b)\ast (c,d)=(a\ast c,b\ast d)=(c\ast a,d\ast b)=(c,d)\ast (a,b)$.
-</div>\EndKnitrBlock{exercise}
-\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-139"><strong>(\#exr:unnamed-chunk-139) </strong></span>Demuestre que la intersección de subgrupos es un subgrupo.
-	Respuesta: Sea $G$ un grupo y sea $\{H_{i}|i\in I \}$ una familia no vacía de subgrupos de $G$. Sea $a,b\in\bigcap_{i\in I}H_{i}$. Entonces para cada $i\in I$, $a,b\in H_{i}$, como cada $H_{i}$ es un subgrupo de $G$, se tiene que $a^{-1}, ab\in H_{i}$, por lo tanto $a^{-1}, ab\in\bigcap_{i\in I} H_{i}$.
+\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-139"><strong>(\#exr:unnamed-chunk-139) </strong></span>Demuestre que el grupo del ejemplo \ref{ejm1-21} es un grupo de orden $|G||H|$. Además muestre que $G\times H$ es un grupo abeliano si $G$ y $H$ lo son.
+
+Respuesta: Sabemos que $|G\times H|=|G||H|$, lo que demuestra que el orden del grupo es el producto $|G||H|$. Ahora supongamos que $G$ y $H$ son abelianos, luego $(a,b)\ast (c,d)=(a\ast c,b\ast d)=(c\ast a,d\ast b)=(c,d)\ast (a,b)$.</div>\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-140"><strong>(\#exr:unnamed-chunk-140) </strong></span>Demuestre que la intersección de subgrupos es un subgrupo.
+
+Respuesta: Sea $G$ un grupo y sea $\{H_{i}|i\in I \}$ una familia no vacía de subgrupos de $G$. Sea $a,b\in\bigcap_{i\in I}H_{i}$. Entonces para cada $i\in I$, $a,b\in H_{i}$, como cada $H_{i}$ es un subgrupo de $G$, se tiene que $a^{-1}, ab\in H_{i}$, por lo tanto $a^{-1}, ab\in\bigcap_{i\in I} H_{i}$.
 	</div>\EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:ejc5"><strong>(\#exr:ejc5) </strong></span>Sea $G$ un grupo y $a,b\in G$ de orden finito. Demuestre que se cumplen las siguientes propiedades:
 
-		1. $a^{k}=e \Leftrightarrow |\langle a\rangle||k$.
+1. $a^{k}=e \Leftrightarrow |\langle a\rangle||k$.
 	
-		2. $a=e \Leftrightarrow |\langle a\rangle|=1$.
+2. $a=e \Leftrightarrow |\langle a\rangle|=1$.
 	
-		3. $|\langle a\rangle|=|\langle a^{-1}\rangle|$.
+3. $|\langle a\rangle|=|\langle a^{-1}\rangle|$.
 	
-		4. $|\langle a^{k}\rangle|=\frac{|a|}{(|a|,k)}$. Donde $(m,n)$ denota el máximo común divisor de $m$ y $n$.
+4. $|\langle a^{k}\rangle|=\frac{|a|}{(|a|,k)}$. Donde $(m,n)$ denota el máximo común divisor de $m$ y $n$.
 	
-		5. Si $|ab|$ es finito, entonces $|ab|=|ba|$.
+5. Si $|ab|$ es finito, entonces $|ab|=|ba|$.
 	
-		6. Si $|ab|=|ba|$, entonces $|ab||[|a|,|b|]$. Además si $|a|$ y $|b|$ son coprimos, entonces $|ab|=|a||b|$. Donde $[m,n]$ denota el mínimo común múltiplo de $m$ y $n$.
+6. Si $|ab|=|ba|$, entonces $|ab||[|a|,|b|]$. Además si $|a|$ y $|b|$ son coprimos, entonces $|ab|=|a||b|$. Donde $[m,n]$ denota el mínimo común múltiplo de $m$ y $n$.
 	
-	Respuesta:
+Respuesta:
 
-		1. Sea $n$ el oreden de $a$. Note que si $k=qn+r$ para algunos enteros $0\leq r< n$, $a^{k}=a^{qn}a^{r}$. Si $a^{k}=e$, entonces $e=a^{k}=a^{qn}a^{r}=a^{r}$, de donde se sigue que $r$ es necesariamente $0$ .Si $n|k$, $k=qn\Leftrightarrow a^{k}=a^{qn}=e^{q}=e$.
+1. Sea $n$ el oreden de $a$. Note que si $k=qn+r$ para algunos enteros $0\leq r< n$, $a^{k}=a^{qn}a^{r}$. Si $a^{k}=e$, entonces $e=a^{k}=a^{qn}a^{r}=a^{r}$, de donde se sigue que $r$ es necesariamente $0$ .Si $n|k$, $k=qn\Leftrightarrow a^{k}=a^{qn}=e^{q}=e$.
 	
-		2. Si el orden de $a$ es $1$, se tiene que $a=a^{1}=e$. Recíprocamente, si $a=e$, $\langle a\rangle=\langle e\rangle$, por lo tanto el orden de $a$ es $1$.
+2. Si el orden de $a$ es $1$, se tiene que $a=a^{1}=e$. Recíprocamente, si $a=e$, $\langle a\rangle=\langle e\rangle$, por lo tanto el orden de $a$ es $1$.
 	
-		3. Se sigue del hecho que $(a^{-1})^{m}=(a^{m})^{-1}$.
+3. Se sigue del hecho que $(a^{-1})^{m}=(a^{m})^{-1}$.
 	
-		4. Sea $n=|\langle a\rangle|$ y $d=(n,k)$. Entonces $n=sd$ y $k=td$. Si $(a^{k})^{m}=a^{km}=e=a^{n}$, entonces $n|km$, por lo tanto $s|tm$. Como $(s,t)=1$, entonces $s|m$, por lo tanto $|\langle a^{k}\rangle|=s$.
+4. Sea $n=|\langle a\rangle|$ y $d=(n,k)$. Entonces $n=sd$ y $k=td$. Si $(a^{k})^{m}=a^{km}=e=a^{n}$, entonces $n|km$, por lo tanto $s|tm$. Como $(s,t)=1$, entonces $s|m$, por lo tanto $|\langle a^{k}\rangle|=s$.
 	
-		5. Sea $m$ el orden de $ab$. Esto es $(ab)^{m}=e$ por lo tanto $(ab)(ab)\cdots (ab)=e\Leftrightarrow a(ba)(ba)\cdots (ba)b=e\Leftrightarrow (ba)^{m-1}=a^{-1}b^{-1}=(ba)^{-1}\Leftrightarrow (ba)^{m}=e$
+5. Sea $m$ el orden de $ab$. Esto es $(ab)^{m}=e$ por lo tanto $(ab)(ab)\cdots (ab)=e\Leftrightarrow a(ba)(ba)\cdots (ba)b=e\Leftrightarrow (ba)^{m-1}=a^{-1}b^{-1}=(ba)^{-1}\Leftrightarrow (ba)^{m}=e$
 	  
-		6. Sean $n=|\langle a\rangle|$, $m=|\langle b\rangle|$, $s=|\langle (ab)\rangle|$ y $M=[n,m]$. Si $(ab)$ commuta, $(ab)^{M}=a^{M}b^{M}$. De la parte (a) se tiene que $(ab)^{M}=a^{M}b^{M}=e$ y que $s|M$. Si $(m,n)=1$, $(ab)^{s}=a^{s}b^{s}=e$ entonces $a^{s}=b^{-s}$ por lo tanto $|\langle a^{s}\rangle|=|\langle b^{s}\rangle|$; de los apartados anteriores se sigue que $\frac{n}{(n,s)}=\frac{m}{m,s}\Leftrightarrow n|s\mbox{ y }m|s$ de donde se tiene que $M|s$, y como $s|M$, entonces $s=M$.
+6. Sean $n=|\langle a\rangle|$, $m=|\langle b\rangle|$, $s=|\langle (ab)\rangle|$ y $M=[n,m]$. Si $(ab)$ commuta, $(ab)^{M}=a^{M}b^{M}$. De la parte (a) se tiene que $(ab)^{M}=a^{M}b^{M}=e$ y que $s|M$. Si $(m,n)=1$, $(ab)^{s}=a^{s}b^{s}=e$ entonces $a^{s}=b^{-s}$ por lo tanto $|\langle a^{s}\rangle|=|\langle b^{s}\rangle|$; de los apartados anteriores se sigue que $\frac{n}{(n,s)}=\frac{m}{m,s}\Leftrightarrow n|s\mbox{ y }m|s$ de donde se tiene que $M|s$, y como $s|M$, entonces $s=M$.
 	</div>\EndKnitrBlock{exercise}
-\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-140"><strong>(\#exr:unnamed-chunk-140) </strong></span> Demuestre que si $f:G\longrightarrow H$ es un epimorfismo de grupos, entonces la signación $K\mapsto f(K)$ define una correspondencia uno a uno entre el conjunto $S_{f}(G)$ de todos los subgrupos $K$ de $G$ que contienen al núcleo de $f$ y el conjunto $S(H)$ de todos los subgrupos de $H$. Bajo esta correspondencia, subgrupos normales corresponden a subgrupos normales. Además, si $N$ es un  subgrupo normal de $G$, entonces todo subgrupo de $G/N$ es de la forma $K/N$, donde $K$ es un subgrupo de $G$ que contiene a $N$. Por lo tanto, $K/N$ es normal en $G/N$ si y solo si $K$ es normal en $G$.
-	Respuesta:
-	La asiganación $K\mapsto f(K)$ define una función $\phi: S_{f}(G)\longrightarrow S(H)$ y $f^{-}(J)$ es un subgrupo de $G$ para todo subgrupo $J$ de $H$. $J<H$ implica que $Ker f< f^{-1}(J)$ y $f(f^{-1}(J))=J$, $\phi$ es sobreyectiva. Como $f(f^{-1}(K))=K$ si y solo si $Ker f<K$, se tiene que $f$ es inyectiva. Si $K\vartriangleleft G$, entonces $f(K)\vartriangleleft H$, al igual que si $J\vartriangleleft H$ entonces $f^{-1}(J)\vartriangleleft G$, de donde se tiene el resultado. Adicionalmente, si se considera el epimorfismo canónico $\pi: G\longrightarrow G/N$, si $N<K<G$, entonces $\pi(K)=K/N$.
+
+\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-141"><strong>(\#exr:unnamed-chunk-141) </strong></span>Demuestre que si $f:G\longrightarrow H$ es un epimorfismo de grupos, entonces la signación $K\mapsto f(K)$ define una correspondencia uno a uno entre el conjunto $S_{f}(G)$ de todos los subgrupos $K$ de $G$ que contienen al núcleo de $f$ y el conjunto $S(H)$ de todos los subgrupos de $H$. Bajo esta correspondencia, subgrupos normales corresponden a subgrupos normales. Además, si $N$ es un  subgrupo normal de $G$, entonces todo subgrupo de $G/N$ es de la forma $K/N$, donde $K$ es un subgrupo de $G$ que contiene a $N$. Por lo tanto, $K/N$ es normal en $G/N$ si y solo si $K$ es normal en $G$.
+	
+Respuesta:
+La asiganación $K\mapsto f(K)$ define una función $\phi: S_{f}(G)\longrightarrow S(H)$ y $f^{-}(J)$ es un subgrupo de $G$ para todo subgrupo $J$ de $H$. $J<H$ implica que $Ker f< f^{-1}(J)$ y $f(f^{-1}(J))=J$, $\phi$ es sobreyectiva. Como $f(f^{-1}(K))=K$ si y solo si $Ker f<K$, se tiene que $f$ es inyectiva. Si $K\vartriangleleft G$, entonces $f(K)\vartriangleleft H$, al igual que si $J\vartriangleleft H$ entonces $f^{-1}(J)\vartriangleleft G$, de donde se tiene el resultado. Adicionalmente, si se considera el epimorfismo canónico $\pi: G\longrightarrow G/N$, si $N<K<G$, entonces $\pi(K)=K/N$.
 </div>\EndKnitrBlock{exercise}
 
 ## Anillos
+
 En esta sección estudiaremos otro concepto fundamental para el álgebra, el concepto de *anillo*, concepto básico en el estudio de los temas mas actuales del álgebra moderna. Se estudiarán las definiciones de anillo, dominios de integridad y homomorfismo de anillos, así como la definición de subanillo, ideal y se presentarán los resultados correspondientes a estos. Muchos de los resultados son una generalización directa de los vistos en la sección de grupos. Veremos algunos resultados sobre anillos commutativos, anillos euclideanos, divisibiliadad y factorización única. Por último, se verán algunos resultados sobre anillos cocientes.
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-141"><strong>(\#def:unnamed-chunk-141) </strong></span>	Un *anillo* es un conjunto no vacío $A$ junto con dos operaciones binarias (usualmente denotada por el símbolo de suma, $+$ y la multiplicación) tales que:
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-142"><strong>(\#def:unnamed-chunk-142) </strong></span>Un *anillo* es un conjunto no vacío $A$ junto con dos operaciones binarias (usualmente denotada por el símbolo de suma, $+$ y la multiplicación) tales que:
   
-		1. $(A,+)$ es un grupo abeliano.
-		2. $(ab)c=a(bc)$ para todo $a,b,c\in A$ (multiplicación asociativa).
-		3. $a(b+c)=ab+ac$ y $(a+b)c=ac+bc$, para todo $a,b,c\in A$ (leyes distributivas, izquierda y derecha).
+1. $(A,+)$ es un grupo abeliano.
 
-	Si adicionalmente se tiene que:
+2. $(ab)c=a(bc)$ para todo $a,b,c\in A$ (multiplicación asociativa).
+
+3. $a(b+c)=ab+ac$ y $(a+b)c=ac+bc$, para todo $a,b,c\in A$ (leyes distributivas, izquierda y derecha).
+
+Si adicionalmente se tiene que:
 	  
-		4. $ab=ba$ para todo $a,b\in A$, se dice que $A$ es un *anillo commutativo*.
-		5. Si existe un elemento $1_{A}\in A$ tal que $1_{A}a=a1_{A}=a$ para todo $a\in A$, entonces decimos que $A$ es un *anillo con identidad*.
+4. $ab=ba$ para todo $a,b\in A$, se dice que $A$ es un *anillo commutativo*.
+
+5. Si existe un elemento $1_{A}\in A$ tal que $1_{A}a=a1_{A}=a$ para todo $a\in A$, entonces decimos que $A$ es un *anillo con identidad*.
 </div>\EndKnitrBlock{definition}
 
-\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	La identidad para la suma en un anillo es llamado cero y denotado por $0$. Si $A$ es un anillo, $a\in A$ y $n\in\mathbb{Z}$, entonces $na$ denota la suma de de $a$ consigo mismo, $n$ veces, siempre que $n>0$.
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}La identidad para la suma en un anillo es llamado cero y denotado por $0$. Si $A$ es un anillo, $a\in A$ y $n\in\mathbb{Z}$, entonces $na$ denota la suma de de $a$ consigo mismo, $n$ veces, siempre que $n>0$.
 </div>\EndKnitrBlock{remark}
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:teorema61"><strong>(\#thm:teorema61) </strong></span>	Sea $A$ un anillo, entonces:
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:teorema61"><strong>(\#thm:teorema61) </strong></span>Sea $A$ un anillo, entonces:
 	
-  	1. $0a=a0=0$ para todo $a\in A$.
+1. $0a=a0=0$ para todo $a\in A$.
 
-		2. $(-a)b=a(-b)=-(ab)$ para todo $a,b\in A$.
+2. $(-a)b=a(-b)=-(ab)$ para todo $a,b\in A$.
 
-		3. $(-a)(-b)=ab$ para todo $a,b\in A$.
+3. $(-a)(-b)=ab$ para todo $a,b\in A$.
 
-		4. $(na)b=a(nb)$ para todo $a,b\in A$.
+4. $(na)b=a(nb)$ para todo $a,b\in A$.
 
-		5. $(\sum_{i=1}^{n} a_{i})(\sum_{j=1}^{m}b_{j})=\sum_{i=1}^{n}\sum_{j=1}^{m}a_{i}b_{j}$ para todo $a_{i},b_{j}\in A$.
+5. $(\sum_{i=1}^{n} a_{i})(\sum_{j=1}^{m}b_{j})=\sum_{i=1}^{n}\sum_{j=1}^{m}a_{i}b_{j}$ para todo $a_{i},b_{j}\in A$.
 </div>\EndKnitrBlock{theorem}
-\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}		1. $0a=(0+0)a=0a+0a$, por unicidad del elemento neutro se sigue que $0a=0$.
 
-		2. $ab+(-a)b=(a-a)b=0b=0$, por unicidad del elemento inverso, se sigue que $(-a)b=-(ab)$.
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}1. $0a=(0+0)a=0a+0a$, por unicidad del elemento neutro se sigue que $0a=0$.
 
-		3. Por lo demostrado en (2) se tiene que $(-a)(-b)=-(-(ab))=ab$.
+2. $ab+(-a)b=(a-a)b=0b=0$, por unicidad del elemento inverso, se sigue que $(-a)b=-(ab)$.
 
-		4. Haciendo inducción sobre $n$ y de la propiedad distributiva, se obtiene el resultado.
+3. Por lo demostrado en (2) se tiene que $(-a)(-b)=-(-(ab))=ab$.
 
-		5. Haciendo inducción sobre $n$ y $m$ se obtiene el resultado.
+4. Haciendo inducción sobre $n$ y de la propiedad distributiva, se obtiene el resultado.
+
+5. Haciendo inducción sobre $n$ y $m$ se obtiene el resultado.
 	</div>\EndKnitrBlock{proof}
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-144"><strong>(\#def:unnamed-chunk-144) </strong></span>	Un elemento $a$ de un anillo $A$ no cero es un *divisor izquierdo* (respectivamente *divisor derecho*) *de cero* si existe un elemento $b\in A$ no cero tal que $ab=0$ (respectivamente $ba=0$). Un *divisor de cero* es un elemento de un anillo $A$ que es a la vez un divisor izquierdo y derecho de cero.
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-145"><strong>(\#def:unnamed-chunk-145) </strong></span>Un elemento $a$ de un anillo $A$ no cero es un *divisor izquierdo* (respectivamente *divisor derecho*) *de cero* si existe un elemento $b\in A$ no cero tal que $ab=0$ (respectivamente $ba=0$). Un *divisor de cero* es un elemento de un anillo $A$ que es a la vez un divisor izquierdo y derecho de cero.
 </div>\EndKnitrBlock{definition}
 
-\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	Es fácil verificar que en un anillo $A$ se cumples las leyes de cancelación izquierda y derecha si y solo si no tiene divisores de cero.
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}Es fácil verificar que en un anillo $A$ se cumples las leyes de cancelación izquierda y derecha si y solo si no tiene divisores de cero.
 </div>\EndKnitrBlock{remark}
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-146"><strong>(\#def:unnamed-chunk-146) </strong></span>	Un elemento $a$ en un anillo con identidad $A$ se dice que es *invertible izquierdo* (resp. *invertible derecho*) si existe $c\in A$ (resp. $b\in A$) tal que $ca=1_{A}$ (resp. $ab=1_{A}$). El elemento $c$ (resp. $b$) es llamado *inverso izquierdo* (resp. *inverso derecho*) de $a$. Si es es invertible izquierdo y derecho simultáneamente, se dice que es *invertible* o es una *unidad*.
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-147"><strong>(\#def:unnamed-chunk-147) </strong></span>Un elemento $a$ en un anillo con identidad $A$ se dice que es *invertible izquierdo* (resp. *invertible derecho*) si existe $c\in A$ (resp. $b\in A$) tal que $ca=1_{A}$ (resp. $ab=1_{A}$). El elemento $c$ (resp. $b$) es llamado *inverso izquierdo* (resp. *inverso derecho*) de $a$. Si es es invertible izquierdo y derecho simultáneamente, se dice que es *invertible* o es una *unidad*.
 </div>\EndKnitrBlock{definition}
 
-\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	
-		1. Los inverso derechos e izquierdos de una unidad $a$ en un anillo con identidad $A$, son necesariamente iguales. 
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}1. Los inverso derechos e izquierdos de una unidad $a$ en un anillo con identidad $A$, son necesariamente iguales. 
 
-		2. El conjunto de unidades de un anillo con identidad $A$, forma un grupo bajo la multiplicación.
+2. El conjunto de unidades de un anillo con identidad $A$, forma un grupo bajo la multiplicación.
 	</div>\EndKnitrBlock{remark}
-\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}</div>\EndKnitrBlock{remark}
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-149"><strong>(\#def:unnamed-chunk-149) </strong></span>	Un anillo $A$ con identidad $1_{A}\neq 0$ y sin divisores de cero, se llama *dominio de identidad*. Un anillo $D$ con identidad $1_{D}\neq 0$ en el que todo elemento no cero es una unidad, se llama *anillo con división*. Un *cuerpo (o campo)* es un anillo commutativo con división.
+
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-149"><strong>(\#def:unnamed-chunk-149) </strong></span>Un anillo $A$ con identidad $1_{A}\neq 0$ y sin divisores de cero, se llama *dominio de identidad*. Un anillo $D$ con identidad $1_{D}\neq 0$ en el que todo elemento no cero es una unidad, se llama *anillo con división*. Un *cuerpo (o campo)* es un anillo commutativo con división.
 	</div>\EndKnitrBlock{definition}
 
-\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	1. Todo dominio de integridad y todo anillo con división tiene al menos dos elementos, denotados $0$ y $1_{A}$.
-	2. Un anillo $A$ con identidad es un anillo con división si y solo si los elementos no nulos forman un grupo bajo la multiplicación.
-	3. Todo cuerpo $F$ es un dominio de integridad ya que $ab=0$ y $a\neq 0$ implica que $b=1_{F}b=(a^{-1}a)b=a^{-1}(ab)=a^{-1}0=0$.
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}1. Todo dominio de integridad y todo anillo con división tiene al menos dos elementos, denotados $0$ y $1_{A}$.
+
+2. Un anillo $A$ con identidad es un anillo con división si y solo si los elementos no nulos forman un grupo bajo la multiplicación.
+
+3. Todo cuerpo $F$ es un dominio de integridad ya que $ab=0$ y $a\neq 0$ implica que $b=1_{F}b=(a^{-1}a)b=a^{-1}(ab)=a^{-1}0=0$.
 </div>\EndKnitrBlock{remark}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-151"><strong>(\#exm:unnamed-chunk-151) </strong></span>	El conjunto de los números enteros es un anillo, más aun, es un dominio de integridad. El conjunto de los enteros pares es un anillo commutativo sin identidad. Los conjuntos de los números racionales, $\mathbb{Q}$, de los números reales $\mathbb{R}$ y de los números complejos $\mathbb{C}$ con las operaciones usuales de suma y multiplicación, son cuerpos. 
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-151"><strong>(\#exm:unnamed-chunk-151) </strong></span>El conjunto de los números enteros es un anillo, más aun, es un dominio de integridad. El conjunto de los enteros pares es un anillo commutativo sin identidad. Los conjuntos de los números racionales, $\mathbb{Q}$, de los números reales $\mathbb{R}$ y de los números complejos $\mathbb{C}$ con las operaciones usuales de suma y multiplicación, son cuerpos. 
 </div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	Las matrices sobre $\mathbb{Q}$ (o sobre $\mathbb{R}$ o $\mathbb{C}$) con las operaciones suma y multiplicación de matrices, forman una anillos no commutativo con identidad. (más adelante se estudiará este tema).
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}Las matrices sobre $\mathbb{Q}$ (o sobre $\mathbb{R}$ o $\mathbb{C}$) con las operaciones suma y multiplicación de matrices, forman una anillos no commutativo con identidad. (más adelante se estudiará este tema).
 </div>\EndKnitrBlock{remark}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-153"><strong>(\#exm:unnamed-chunk-153) </strong></span>	Dados $n\in \mathbb{Z}$ positivo, el conjunto de los enteros módulo $n$, $\mathbb{Z}_{n}$, con las operaciones usuales, es un anillo. Si $n$ no es un número primo, entonces $n=kr$ para enteros $k>1$ y $r>1$, por lo tanto $[k]\neq [0]$, $[r]\neq [0]$ y $[k][r]=[n]=[0]$, entonces $[k]$ y $[r]$ son divisores de cero. Si $n=p$ es un número primo, entonces $\mathbb{Z}_{p}$ es un cuerpo.
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-153"><strong>(\#exm:unnamed-chunk-153) </strong></span>Dados $n\in \mathbb{Z}$ positivo, el conjunto de los enteros módulo $n$, $\mathbb{Z}_{n}$, con las operaciones usuales, es un anillo. Si $n$ no es un número primo, entonces $n=kr$ para enteros $k>1$ y $r>1$, por lo tanto $[k]\neq [0]$, $[r]\neq [0]$ y $[k][r]=[n]=[0]$, entonces $[k]$ y $[r]$ son divisores de cero. Si $n=p$ es un número primo, entonces $\mathbb{Z}_{p}$ es un cuerpo.
 </div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-154"><strong>(\#exm:unnamed-chunk-154) </strong></span>	Sea $G$ un grupo abeliano. Sea $End(G)$ el conjunto de endomorfismos de $f:G\longrightarrow G$. Definimos la suma en $End(G)$ como $(f+g)(a)=f(a)+g(a)$, para todo $f,g\in End(G)$. Se verifica que $f+g\in End(G)$. De este modo $End(G)$ es un grupo abeliano. Si definimos la multiplicación en $End(G)$ como la composición de funciones, $(f\circ g)(a)=f(g(a))$ para todo $f,g\in End(G)$; claramente $f\circ g\in End(G)$. Con estas dos operaciones, $End(G)$ es un anillos con identidad $I_{G}:G\longrightarrow G$, $I_{G}(a)=a$ (no necesariamente commutativo).
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-154"><strong>(\#exm:unnamed-chunk-154) </strong></span>Sea $G$ un grupo abeliano. Sea $End(G)$ el conjunto de endomorfismos de $f:G\longrightarrow G$. Definimos la suma en $End(G)$ como $(f+g)(a)=f(a)+g(a)$, para todo $f,g\in End(G)$. Se verifica que $f+g\in End(G)$. De este modo $End(G)$ es un grupo abeliano. Si definimos la multiplicación en $End(G)$ como la composición de funciones, $(f\circ g)(a)=f(g(a))$ para todo $f,g\in End(G)$; claramente $f\circ g\in End(G)$. Con estas dos operaciones, $End(G)$ es un anillos con identidad $I_{G}:G\longrightarrow G$, $I_{G}(a)=a$ (no necesariamente commutativo).
 </div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-155"><strong>(\#exm:unnamed-chunk-155) </strong></span>	Los *cuaterniones* (o *cuaternios*): Sea el conjunto $\mathcal{Q}$ de elementos de la forma $\alpha=a_{0}+a_{1}i+a_{2}j+a_{3}k$, con $a_{0}, a_{1}, a_{2}, a_{3}\in \mathbb{R}$, definimos a las operaciones:
-	1. *Suma* definida por
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-155"><strong>(\#exm:unnamed-chunk-155) </strong></span>Los *cuaterniones* (o *cuaternios*): Sea el conjunto $\mathcal{Q}$ de elementos de la forma $\alpha=a_{0}+a_{1}i+a_{2}j+a_{3}k$, con $a_{0}, a_{1}, a_{2}, a_{3}\in \mathbb{R}$, definimos a las operaciones:
+
+1. *Suma* definida por
 		\begin{equation*}
 		\begin{split}
 			\alpha+\beta&=(a_{0}+a_{1}i+a_{2}j+a_{3}k)+(b_{0}+b_{1}i+b_{2}j+b_{3}k)\\
 			&=(a_{0}+b_{0})+(a_{1}+b_{1})i+(a_{2}+b_{2})j+(a_{3}+b_{3})k
 		\end{split}
 		\end{equation*}
-	2. *Multiplicación* definada por
+
+2. *Multiplicación* definada por
 		\begin{equation*}
 			\begin{split}
 			\alpha\beta & =(a_{0}+a_{1}i+a_{2}j+a_{3}k)(b_{0}+b_{1}i+b_{2}j+b_{3}k)\\
@@ -1036,83 +1115,104 @@ En esta sección estudiaremos otro concepto fundamental para el álgebra, el con
 			&+(a_{1}b_{3}-a_{2}b_{4}+a_{3}b_{1}+a_{4}b_{2})j+(a_{1}b_{4}+a_{2}b_{3}-a_{3}b_{2}+a_{4}b_{1})k
 			\end{split}
 		\end{equation*}
-	La multiplicación se puede hacer mediante la propiedad distributiva y usando las siguientes reglas:
+
+La multiplicación se puede hacer mediante la propiedad distributiva y usando las siguientes reglas:
 		
-			1. $i^{2}=j^{2}=k^{2}=ijk=-1$;
-			2. $ij=-ji=k$;
-			3. $jk=-kj=i$:
-			4. $ki=-ik=j$.
+
+1. $i^{2}=j^{2}=k^{2}=ijk=-1$;
+
+2. $ij=-ji=k$;
+
+3. $jk=-kj=i$:
+
+4. $ki=-ik=j$.
 		 
-		El conjunto de los elementos $\{\mbox{\textpm} 1,\mbox{\textpm} i, \mbox{\textpm} j,\mbox{\textpm} k \}$ forman un grupo no abeliano  de orden 8 con la multiplicación.
-		El conjunto $\mathcal{Q}$ junto a las operaciones suma y multiplicación antes definidas forman un anillos no commutativo con división, donde el elemento cero (nulo para la suma) es $0+0i+0j+0k$, la unidad es $1+0i+0j+0k$ y el inverso multiplicativo de un elemnto no nulo $\alpha=a_{0}+a_{1}i+a_{2}j+a_{3}k$ es $(a_{0}/d)+(a_{1}/d)i+(a_{2}/d)j+(a_{3}/d)k$ con $d=a_{0}^{2}+a_{1}^{2}+a_{2}^{2}+a_{3}^{2}$.
+El conjunto de los elementos $\{\mbox{\textpm} 1,\mbox{\textpm} i, \mbox{\textpm} j,\mbox{\textpm} k \}$ forman un grupo no abeliano  de orden 8 con la multiplicación.
+
+El conjunto $\mathcal{Q}$ junto a las operaciones suma y multiplicación antes definidas forman un anillos no commutativo con división, donde el elemento cero (nulo para la suma) es $0+0i+0j+0k$, la unidad es $1+0i+0j+0k$ y el inverso multiplicativo de un elemnto no nulo $\alpha=a_{0}+a_{1}i+a_{2}j+a_{3}k$ es $(a_{0}/d)+(a_{1}/d)i+(a_{2}/d)j+(a_{3}/d)k$ con $d=a_{0}^{2}+a_{1}^{2}+a_{2}^{2}+a_{3}^{2}$.
 </div>\EndKnitrBlock{example}
 
 Nóte que los elemento de un anillo $A$ bajo la operación de multiplicación, forman un semigrupo y si $A$ tiene unidad, forman un monoide. Por lo tanto puede definirse la potenciación. Para cada $a\in A$ y $n\in\mathbb{N}$ no nulo, $a^{n}=a\cdots a$ ($n$ factores) y $a^{0}=1_{A}$ si $A$ tiene identidad. Además $a^{m}a^{n}=a^{m+n}$ y $(a^{m})^{n}=a^{mn}$.La resta en un anillo $A$ está definida como de la menera usual, $a-b=a+(-b)$, por lo tanto $a(b-c)=ab-ac$ y $(a+b)c=ac+bc$ para cualesquiera $a,b,c\in A$.
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-156"><strong>(\#def:unnamed-chunk-156) </strong></span>	Una aplicación $\phi$ de un anillo $A$ en un anillo $A´$ se dice que es un *homomorfismo* si:
-    1. $\phi(a+b)=\phi(a)+\phi(b)$,
-		2. $\phi(ab)=\phi(a)\phi(b)$.
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-156"><strong>(\#def:unnamed-chunk-156) </strong></span>Una aplicación $\phi$ de un anillo $A$ en un anillo $A´$ se dice que es un *homomorfismo* si:
+
+1. $\phi(a+b)=\phi(a)+\phi(b)$,
 	
-	para cualesquiera $a,b\in A$.
-	Si la función $\phi$ es inyectiva, diremos que es un *isomorfismo*. en este caso se dice que los anillos $A$ y $A´$ son *isomorfos*.
+2. $\phi(ab)=\phi(a)\phi(b)$.
+	
+Para cualesquiera $a,b\in A$.
+
+Si la función $\phi$ es inyectiva, diremos que es un *isomorfismo*. en este caso se dice que los anillos $A$ y $A´$ son *isomorfos*.
 </div>\EndKnitrBlock{definition}
+
 Note que tal homomorfismo de anillos es un homormorfismo de grupos considerando $A$ como un grupo bajo la suma, por lo tanto todos los resultados para homomorfismo de grupos se aplican a los homomorfismo de anillos. En particular,
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-157"><strong>(\#thm:unnamed-chunk-157) </strong></span>	Si $\phi$ es un homomorfismo de anillos de $A$ en $A´$, entonces:
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-157"><strong>(\#thm:unnamed-chunk-157) </strong></span>Si $\phi$ es un homomorfismo de anillos de $A$ en $A´$, entonces:
 	
-		1. $\phi(0)=0$.
-		2. $\phi(-a)=-\phi(a)$, para todo $a\in A$.
+1. $\phi(0)=0$.
+
+2. $\phi(-a)=-\phi(a)$, para todo $a\in A$.
 	</div>\EndKnitrBlock{theorem}
 
-\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	Si los anillos $A$ y $A´$ tienen unidades $1_{A}$ y $1_{A´}$, no se tiene en general que $\phi(1_{A})=1_{A´}$. Pero si $A´$ es un dominio de integridad se tiene que $\phi(1_{A})=1_{A´}$. También, si $A´$ es cualquier anillo y $\phi$ es sobreyectiva, entonces $\phi(1_{A})=1_{A´}$. 
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}Si los anillos $A$ y $A´$ tienen unidades $1_{A}$ y $1_{A´}$, no se tiene en general que $\phi(1_{A})=1_{A´}$. Pero si $A´$ es un dominio de integridad se tiene que $\phi(1_{A})=1_{A´}$. También, si $A´$ es cualquier anillo y $\phi$ es sobreyectiva, entonces $\phi(1_{A})=1_{A´}$. 
 </div>\EndKnitrBlock{remark}
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-159"><strong>(\#def:unnamed-chunk-159) </strong></span>	Si $\phi$ es un homomorfismo de anillos de $A$ en $A´$, el *núcleo* de $\phi$ es el conjunto $\{a\in A: \phi(a)=0 \mbox{ el elemento nulo de } A´\}$ y se denota $I(\phi)$.
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-159"><strong>(\#def:unnamed-chunk-159) </strong></span>Si $\phi$ es un homomorfismo de anillos de $A$ en $A´$, el *núcleo* de $\phi$ es el conjunto $\{a\in A: \phi(a)=0 \mbox{ el elemento nulo de } A´\}$ y se denota $I(\phi)$.
 </div>\EndKnitrBlock{definition}
 
-\BeginKnitrBlock{lemma}<div class="lemma"><span class="lemma" id="lem:unnamed-chunk-160"><strong>(\#lem:unnamed-chunk-160) </strong></span>	Si $\phi$ es un homomorfismo de anillo de $A$ en $A´$ con núcleo $I(\phi)$, entonces:
+\BeginKnitrBlock{lemma}<div class="lemma"><span class="lemma" id="lem:unnamed-chunk-160"><strong>(\#lem:unnamed-chunk-160) </strong></span>Si $\phi$ es un homomorfismo de anillo de $A$ en $A´$ con núcleo $I(\phi)$, entonces:
 	
-		(1) $I(\phi)$ es un subgrupo de $A$ bajo la suma.
-		(2) Si $r\in I(\phi)$ y $a\in A$, entonces $ra, ar\in I(\phi)$.
+(1) $I(\phi)$ es un subgrupo de $A$ bajo la suma.
+
+(2) Si $r\in I(\phi)$ y $a\in A$, entonces $ra, ar\in I(\phi)$.
 	</div>\EndKnitrBlock{lemma}
-\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	La parte (1) se sigue de los resultados de homomorfismo de grupo. 
-	Veamos (2), sean $r\in I(\phi)$ y $a\in A$, entonces $\phi(ra)=\phi(r)\phi(a)=0\phi(a)=0$, por lo tanto $ra\in I(\phi)$. Análogamente se tiene que $ar\in I(\phi)$.
+
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}La parte (1) se sigue de los resultados de homomorfismo de grupo. 
+
+Veamos (2), sean $r\in I(\phi)$ y $a\in A$, entonces $\phi(ra)=\phi(r)\phi(a)=0\phi(a)=0$, por lo tanto $ra\in I(\phi)$. Análogamente se tiene que $ar\in I(\phi)$.
 </div>\EndKnitrBlock{proof}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-162"><strong>(\#exm:unnamed-chunk-162) </strong></span>	Sea $\phi:A\longrightarrow A´$, donde $\phi(a)=0$ para todo $a\in A$. Claramente $\phi$ es un homomorfismo (de anillos) y $I(\phi)=A$. A tal función se le llama *homomorfismo cero*.
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-162"><strong>(\#exm:unnamed-chunk-162) </strong></span>Sea $\phi:A\longrightarrow A´$, donde $\phi(a)=0$ para todo $a\in A$. Claramente $\phi$ es un homomorfismo (de anillos) y $I(\phi)=A$. A tal función se le llama *homomorfismo cero*.
 </div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-163"><strong>(\#exm:unnamed-chunk-163) </strong></span>	Dada la función $\phi: A\longrightarrow A$, definida por $\phi(a)=a$ para todo $a\in A$. Es claramente un homomorfismo de anillos y su núcleo está formado por el cero $0$.
-	En general, a un homomorfismo de $A$ en si mismo se le llama *automorfismo* (al igual que en los grupos). 
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-163"><strong>(\#exm:unnamed-chunk-163) </strong></span>Dada la función $\phi: A\longrightarrow A$, definida por $\phi(a)=a$ para todo $a\in A$. Es claramente un homomorfismo de anillos y su núcleo está formado por el cero $0$.
+
+En general, a un homomorfismo de $A$ en si mismo se le llama *automorfismo* (al igual que en los grupos). 
 </div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-164"><strong>(\#exm:unnamed-chunk-164) </strong></span>	Sea $J(\sqrt{2})$ el conjunto de todos los números de la forma $m+n\sqrt{2}$, con $n,m\in\mathbb{Z}$. Verifique que $J(\sqrt{2})$ forman un anillo bajo la suma y la multiplicación usuales de los números reales. Definamos $\phi:J(\sqrt{2})\longrightarrow J(\sqrt{2})$ definida por $\phi(m+n\sqrt{2})=m-n\sqrt{2}$. $\phi$ es un homomorfismo de anillo y su núcleo solo contiene al elemento cero.
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-164"><strong>(\#exm:unnamed-chunk-164) </strong></span>Sea $J(\sqrt{2})$ el conjunto de todos los números de la forma $m+n\sqrt{2}$, con $n,m\in\mathbb{Z}$. Verifique que $J(\sqrt{2})$ forman un anillo bajo la suma y la multiplicación usuales de los números reales. Definamos $\phi:J(\sqrt{2})\longrightarrow J(\sqrt{2})$ definida por $\phi(m+n\sqrt{2})=m-n\sqrt{2}$. $\phi$ es un homomorfismo de anillo y su núcleo solo contiene al elemento cero.
 </div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-165"><strong>(\#exm:unnamed-chunk-165) </strong></span>	La función canónica $\mathbb{Z}\longrightarrow \mathbb{Z}_{m}$ dada por $k\mapsto [k]$ es un *epimorfismo de anillo*, esto es un homomorfismo sobreyectivo.
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-165"><strong>(\#exm:unnamed-chunk-165) </strong></span>La función canónica $\mathbb{Z}\longrightarrow \mathbb{Z}_{m}$ dada por $k\mapsto [k]$ es un *epimorfismo de anillo*, esto es un homomorfismo sobreyectivo.
 </div>\EndKnitrBlock{example}
 
 Así como el lema anterios se obtiene directamente de los resultados de grupo, el teorema que sigue es la traduccción natural del correspondiente a la teoría de grupo, razón por la cual lo presentaremos sin demostración.
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-166"><strong>(\#thm:unnamed-chunk-166) </strong></span>	El homomorfismo $\phi$ de anillos de $A$ en $A´$ es un isomorfismo si y solo si $I(\phi)=\{0\}$.
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-166"><strong>(\#thm:unnamed-chunk-166) </strong></span>El homomorfismo $\phi$ de anillos de $A$ en $A´$ es un isomorfismo si y solo si $I(\phi)=\{0\}$.
 </div>\EndKnitrBlock{theorem}
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-167"><strong>(\#def:unnamed-chunk-167) </strong></span>	Un subconjunto no vac?o $I$ de $A$ se dice que es un ideal (bilateral) de $A$ si:
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-167"><strong>(\#def:unnamed-chunk-167) </strong></span>Un subconjunto no vac?o $I$ de $A$ se dice que es un ideal (bilateral) de $A$ si:
 
-		1. $I$ es un subgrupo de $A$ bajo la suma.
-		2. Para todo $u\in I$ y $a\in A$, tanto $ua$ como $au$ pertenecen a $I$.
+1. $I$ es un subgrupo de $A$ bajo la suma.
+
+2. Para todo $u\in I$ y $a\in A$, tanto $ua$ como $au$ pertenecen a $I$.
 	</div>\EndKnitrBlock{definition}
 
-\BeginKnitrBlock{lemma}<div class="lemma"><span class="lemma" id="lem:unnamed-chunk-168"><strong>(\#lem:unnamed-chunk-168) </strong></span>	Si $I$ es un ideal de un anillo $A$, entonces $A/I$ es un anillo y es una imagen homomorfa de $A$.
+\BeginKnitrBlock{lemma}<div class="lemma"><span class="lemma" id="lem:unnamed-chunk-168"><strong>(\#lem:unnamed-chunk-168) </strong></span>Si $I$ es un ideal de un anillo $A$, entonces $A/I$ es un anillo y es una imagen homomorfa de $A$.
 </div>\EndKnitrBlock{lemma}
-\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Recordemos que los elementos de $A/I$ son las clases laterales $a+I$, con $a\in A$, la suma está definida como $(a+I)+(b+I)=(a+b)+I$ y la multiplicación $(a+I)(b+I)= (ab)+I$ (ya demostramos que están bien definidas). Ver que $A/I$ es un anillo basta probar los axiomas que corresponden a la operación de multiplicación (para la suma ya lo demostramos antes). Se puede verificar fácilemente la propiedad asociativa, ya que $((a+I)(b+I))(c+I)=(((ab)c)+I)=((a(bc))+I)=(a+I)((bc)+I)$. La propiedad distributiva es igualmente sencilla, $(a+I)((b+I)+(c+I))=(a(b+c))+I=(ab+ac)+I=(ab+I)+(ac+I)=((a+I)(b+I))+((a+I)(c+I))$. Considerando la función que a cada $a$ le asigna $a+I$, por la definición de las operaciones se sigue que dicha función es un homomorfismo cuyo núcleo es exactamente $I$.
+
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Recordemos que los elementos de $A/I$ son las clases laterales $a+I$, con $a\in A$, la suma está definida como $(a+I)+(b+I)=(a+b)+I$ y la multiplicación $(a+I)(b+I)= (ab)+I$ (ya demostramos que están bien definidas). Ver que $A/I$ es un anillo basta probar los axiomas que corresponden a la operación de multiplicación (para la suma ya lo demostramos antes). Se puede verificar fácilemente la propiedad asociativa, ya que $((a+I)(b+I))(c+I)=(((ab)c)+I)=((a(bc))+I)=(a+I)((bc)+I)$. La propiedad distributiva es igualmente sencilla, $(a+I)((b+I)+(c+I))=(a(b+c))+I=(ab+ac)+I=(ab+I)+(ac+I)=((a+I)(b+I))+((a+I)(c+I))$. Considerando la función que a cada $a$ le asigna $a+I$, por la definición de las operaciones se sigue que dicha función es un homomorfismo cuyo núcleo es exactamente $I$.
 </div>\EndKnitrBlock{proof}
 
 ### Ejercicios
 
 \BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-170"><strong>(\#exr:unnamed-chunk-170) </strong></span>Complete los detalles de la demostración de las partes (4) y (5) del teorema \@ref{thm:teorema61}.
-	Repuesta: (4) Obviamente la proposición es cierta si $n=1$. Supongamos que $(ka)b=a(kb)$ para todo $k\leq n$, $((k+1)a)b=((ka)+a)b=((ka)b+ab)=(a(kb)+ab)=a((kb)+b)=a((k+1)b)$. (5) De lo anterior tenemos que $(\sum_{i=1}^{n} a_{i})b=\sum_{i=1}^{n}a_{i}b$ para todo $a_{i},b\in A$. Haremos inducción sobre $m$. Claramente la proposición es cierta para $m=1$. Supongamos $(\sum_{i=1}^{n} a_{i})(\sum_{j=1}^{k}b_{j})=\sum_{i=1}^{n}\sum_{j=1}^{k}a_{i}b_{j}$ para todo $k\leq m$. 
-	\begin{equation} 
+
+Repuesta: 
+  
+(4) Obviamente la proposición es cierta si $n=1$. Supongamos que $(ka)b=a(kb)$ para todo $k\leq n$, $((k+1)a)b=((ka)+a)b=((ka)b+ab)=(a(kb)+ab)=a((kb)+b)=a((k+1)b)$. (5) De lo anterior tenemos que $(\sum_{i=1}^{n} a_{i})b=\sum_{i=1}^{n}a_{i}b$ para todo $a_{i},b\in A$. Haremos inducción sobre $m$. Claramente la proposición es cierta para $m=1$. Supongamos $(\sum_{i=1}^{n} a_{i})(\sum_{j=1}^{k}b_{j})=\sum_{i=1}^{n}\sum_{j=1}^{k}a_{i}b_{j}$ para todo $k\leq m$. 
+
+\begin{equation} 
 	\begin{split}
 	(\sum_{i=1}^{n} a_{i})(\sum_{j=1}^{k+1}b_{j}) & = (\sum_{i=1}^{n} a_{i})(\sum_{j=1}^{k}b_{j}+b_{k+1}) \\
 	& = ((\sum_{i=1}^{n} a_{i})(\sum_{j=1}^{k}b_{j}))+((\sum_{i=1}^{n} a_{i})b_{k+1})) \\
@@ -1120,17 +1220,24 @@ Así como el lema anterios se obtiene directamente de los resultados de grupo, e
 	& = \sum_{i=1}^{n}(\sum_{j=1}^{k}a_{i}b_{j}+a_{i}b_{k+1}) \\
 	& = \sum_{i=1}^{n}\sum_{j=1}^{k+1}a_{i}b_{j}
 	\end{split}
-	\end{equation}
+\end{equation}
 	</div>\EndKnitrBlock{exercise}
+
 \BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-171"><strong>(\#exr:unnamed-chunk-171) </strong></span>Sea $A$ un anillo. Demuestre que en $A$ se cumples las leyes de cancelación izquierda y derecha si y solo si $A$ no tiene divisores de cero.
-	Respuesta: Supongamos que en $A$ se cumplen las leyes derechas e izquierdas de cancelación, sean $a,b\in A$, tales que $ab=0$, supongamos que $a\neq 0$, entonces $ab=0=a0=0b$ por lo tanto $b=0$ (o $a=0$). Por lo tanto $A$ no tiene divisores de cero. Inversamente, supongamos que $A$ no tiene divisores de cero. Sean $a,b,c\in A$, supongamos que $a\neq o$. Si $ab=ac$, entonces $a(b-c)=ab-ac=0$, por lo tanto $b=c$. Análogamente se demuestra la ley de cancelación derecha.
+	
+Respuesta: 
+  
+Supongamos que en $A$ se cumplen las leyes derechas e izquierdas de cancelación, sean $a,b\in A$, tales que $ab=0$, supongamos que $a\neq 0$, entonces $ab=0=a0=0b$ por lo tanto $b=0$ (o $a=0$). Por lo tanto $A$ no tiene divisores de cero. Inversamente, supongamos que $A$ no tiene divisores de cero. Sean $a,b,c\in A$, supongamos que $a\neq o$. Si $ab=ac$, entonces $a(b-c)=ab-ac=0$, por lo tanto $b=c$. Análogamente se demuestra la ley de cancelación derecha.
 </div>\EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-172"><strong>(\#exr:unnamed-chunk-172) </strong></span>Sea $A$ un anillo con identidad y sea $C=\{a\in A: a \mbox{ una identidad de } A \}$. Demuestre que $C$ junto con la multiplicación (definida en el anillo $A$) forman un grupo.
-	Respuesta: Claramente el producto es asociativo, el elemento identidad existe y por definición de unidad, los elementos de $C$ tienen inverso.
+
+Respuesta: Claramente el producto es asociativo, el elemento identidad existe y por definición de unidad, los elementos de $C$ tienen inverso.
 	</div>\EndKnitrBlock{exercise}
+
 \BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-173"><strong>(\#exr:unnamed-chunk-173) </strong></span>Si $p\in \mathbb{Z}$ es un número primo, demuestre que $\mathbb{Z}_{p}$ es un cuerpo.
-	Respuesta: $p$ es primo si y solo si $(m,p)=1$ si y solo si $[m]$ tiene inverso.
+
+Respuesta: $p$ es primo si y solo si $(m,p)=1$ si y solo si $[m]$ tiene inverso.
 	</div>\EndKnitrBlock{exercise}
 
 <!--chapter:end:020-estructuras-algebraicas.Rmd-->
@@ -1139,111 +1246,120 @@ Así como el lema anterios se obtiene directamente de los resultados de grupo, e
 
 En este capítulo estudiaremos los vectores, objetos muy usados en la física para representar distintas nociones en las que se deben representar magnitudes,  direcciones y orientación, como lo son el desplazamiento, la velocidad, la fuerza, etc.  Sin embargo, se puden definir los vectores desde una perspectiva más abstracta, como los elementos de un espacio vectorial. En este capítulo nos centraremos en la noción más natural (como en la física) para desrrollar y mostrar las propiedades y operaciones de los vectores, estudiando los vectores en espacios euclideanos.
 
-##Representación geométrica
+## Representación geométrica
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-174"><strong>(\#def:unnamed-chunk-174) </strong></span>	Un *vector* $v$ en $\mathbb{R}^{n}$ de dimensión $n$ es una n-tupla de $n$ números reales, de la forma $v=(a_{1}, a_{2},\cdots, a_{n})$. Llamaremos componente $i-$ésima al número $a_{i}$ ($1\leq i\leq n$).
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-174"><strong>(\#def:unnamed-chunk-174) </strong></span>Un *vector* $v$ en $\mathbb{R}^{n}$ de dimensión $n$ es una n-tupla de $n$ números reales, de la forma $v=(a_{1}, a_{2},\cdots, a_{n})$. Llamaremos componente $i-$ésima al número $a_{i}$ ($1\leq i\leq n$).
 </div>\EndKnitrBlock{definition}
 
-\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	Nos centraremos en estuiar vectores en $\mathbb{R}^{2}$ o en $\mathbb{R}^{3}$. Los vectores en $\mathbb{R}^{2}$ o en $\mathbb{R}^{3}$ pueden representarse como un segmento de recta dirigido (una flecha) determinado por dos puntos en el espacio, $A$ de coordenadas $(x_{A},y_{A})$ y $B$ de coordenadas $(x_{B},y_{B})$, en los que uno es el origen del vector y el otro el extremo, en este caso se denota $\vec{AB}$ y sus coordenadas en el plano serían $\vec{AB}=(x_{B}-x_{A}, y_{B}-y_{A})$. también se puede denotar el vector con una letra minúscula $v=\vec{AB}$. La recta por la que pasa el vector es la **dirección** del vector.
-</div>\EndKnitrBlock{remark}
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}Nos centraremos en estuiar vectores en $\mathbb{R}^{2}$ o en $\mathbb{R}^{3}$. Los vectores en $\mathbb{R}^{2}$ o en $\mathbb{R}^{3}$ pueden representarse como un segmento de recta dirigido (una flecha) determinado por dos puntos en el espacio, $A$ de coordenadas $(x_{A},y_{A})$ y $B$ de coordenadas $(x_{B},y_{B})$, en los que uno es el origen del vector y el otro el extremo, en este caso se denota $\vec{AB}$ y sus coordenadas en el plano serían $\vec{AB}=(x_{B}-x_{A}, y_{B}-y_{A})$. también se puede denotar el vector con una letra minúscula $v=\vec{AB}$. La recta por la que pasa el vector es la **dirección** del vector.</div>\EndKnitrBlock{remark}
 
 La longitud del segmento de recta que define el vector (es decir, la flecha) es la *magnitud* del vector y se denota por $|\vec{AB}|$ (o $|v|$). La *dirección* del vector corresponde a la inclinación de la recta sobre la cual está el vector, esto es el ángulo que forma el vector con la horizontal. La *orientación* o *sentido* del vector representa el sentido en que se recorre el segmento de recta (determina hacia donde apunta la flecha). 
 
-\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	Los vectores $\vec{AB}$ y $\vec{BA}$ tienen la misma magnitud, la misma dirección pero sentidos contrarios, por lo que $\vec{BA}=-\vec{AB}$. 
-	Las coordenadas de un vector describen un rectángulo en el plano $\mathbb{R}^{2}$ en el que el vector es una de las diagonales.
-</div>\EndKnitrBlock{remark}
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}Los vectores $\vec{AB}$ y $\vec{BA}$ tienen la misma magnitud, la misma dirección pero sentidos contrarios, por lo que $\vec{BA}=-\vec{AB}$. 
+
+Las coordenadas de un vector describen un rectángulo en el plano $\mathbb{R}^{2}$ en el que el vector es una de las diagonales.</div>\EndKnitrBlock{remark}
 
 \includegraphics[width=0.5\textwidth]{suma-vectores.eps}
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-177"><strong>(\#def:unnamed-chunk-177) </strong></span>	Dado el vector $v$ de coordenadas $(x,y)$, *la magnitud* puede calcularse usando el teorema de pitágoras, con $|v|=\sqrt{x^{2}+y^{2}}$, la dirección es el *ángulo* $\theta$ que forma con el eje de las abscisas y se calcula con $\theta=\arctan(\frac{y}{x})$. El sentido es una noción referencial y se representan sentidos contrarios con los signos positivos ($+$) y negativos ($-$) (el signo $+$ suele omitirse)
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-177"><strong>(\#def:unnamed-chunk-177) </strong></span>Dado el vector $v$ de coordenadas $(x,y)$, *la magnitud* puede calcularse usando el teorema de pitágoras, con $|v|=\sqrt{x^{2}+y^{2}}$, la dirección es el *ángulo* $\theta$ que forma con el eje de las abscisas y se calcula con $\theta=\arctan(\frac{y}{x})$. El sentido es una noción referencial y se representan sentidos contrarios con los signos positivos ($+$) y negativos ($-$) (el signo $+$ suele omitirse)
 </div>\EndKnitrBlock{definition}
 
-\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	En general, la *magnitud* de un vector $v$ en $\mathbb{R}^{n}$ es $|v|=\sqrt{\sum_{k=1}^{n}a_{k}^{2}}$.
-</div>\EndKnitrBlock{remark}
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}En general, la *magnitud* de un vector $v$ en $\mathbb{R}^{n}$ es $|v|=\sqrt{\sum_{k=1}^{n}a_{k}^{2}}$.</div>\EndKnitrBlock{remark}
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-179"><strong>(\#def:unnamed-chunk-179) </strong></span>	Dos *vectores* son *paralelos* si forman iguales ángulos con el eje de las abscisas. Es decir, $v_{1}=(x_{1},y_{1})$ y $v_{2}=(x_{2},y_{2})$ son paralelos si $\theta_{1}=\arctan(\frac{y_{1}}{x_{2}})=\theta_{2}=\arctan(\frac{y_{2}}{x_{2}})$.
-</div>\EndKnitrBlock{definition}
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-179"><strong>(\#def:unnamed-chunk-179) </strong></span>Dos *vectores* son *paralelos* si forman iguales ángulos con el eje de las abscisas. Es decir, $v_{1}=(x_{1},y_{1})$ y $v_{2}=(x_{2},y_{2})$ son paralelos si $\theta_{1}=\arctan(\frac{y_{1}}{x_{2}})=\theta_{2}=\arctan(\frac{y_{2}}{x_{2}})$.</div>\EndKnitrBlock{definition}
 
-##Operaciones entre vectores
+## Operaciones entre vectores
 
 Ya vimos que los vectores pueden representar conceptos físicos como lo son la distancia, la velocidad o la fuerza. Entonces es conveniente poder sumar estos objetos, para representar suma de distancias o suma de fuerzas, por ejemplo. También podemos pensar en multiplicar un vector por un escalar, como sería multiplicar la magnitud de una fuerza. En esta sección veremos que podemos definir varias operaciones entre vectores, sumar, restar y multiplicar vectores como lo hacemos con los números reales. Pero también definiremos operaciones propias de estos objetos, como lo son el producto punto y el producto cruz de vectores.
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-180"><strong>(\#def:unnamed-chunk-180) </strong></span>	Dados los vectores $v_{1}=(x_{1},y_{1})$ y $v_{2}=(x_{2},y_{2})$, *la suma* de $v_{1}$ y $v_{2}$ está dada por la suma de las componentes correspondientes, es decir, $v_{1}+v_{2}=(x_{1}+x_{2},y_{1}+y_{2})$. En general, la suma de dos vectores $v=(a_{1}, a_{2},\cdots, a_{n})$ y $u=(b_{1}, b_{2},\cdots, b_{n})$ en $\mathbb{R}^{n}$ se define como $v+u=(a_{1}, a_{2},\cdots, a_{n})+(b_{1}, b_{2},\cdots, b_{n})=(a_{1}+b_{1},a_{2}+b_{2},\cdots a_{n}+b_{n})$.
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-180"><strong>(\#def:unnamed-chunk-180) </strong></span>Dados los vectores $v_{1}=(x_{1},y_{1})$ y $v_{2}=(x_{2},y_{2})$, *la suma* de $v_{1}$ y $v_{2}$ está dada por la suma de las componentes correspondientes, es decir, $v_{1}+v_{2}=(x_{1}+x_{2},y_{1}+y_{2})$. En general, la suma de dos vectores $v=(a_{1}, a_{2},\cdots, a_{n})$ y $u=(b_{1}, b_{2},\cdots, b_{n})$ en $\mathbb{R}^{n}$ se define como $v+u=(a_{1}, a_{2},\cdots, a_{n})+(b_{1}, b_{2},\cdots, b_{n})=(a_{1}+b_{1},a_{2}+b_{2},\cdots a_{n}+b_{n})$.
 </div>\EndKnitrBlock{definition}
+
 La suma de vectores tiene las siguientes propiedades:
 
-		(1) Es commutativa, es decir, $v_{1}+v_{2}=v_{2}+v_{1}$, para cuales quiera vectores $v_{1}, v_{2}$.
+(1) Es commutativa, es decir, $v_{1}+v_{2}=v_{2}+v_{1}$, para cuales quiera vectores $v_{1}, v_{2}$.
 		
-		(2) Es asociativa, esto es, $(v_{1}+v_{2})+v_{3}=v_{1}+(v_{2}+v_{3})$, para todo $v_{1}, v_{2}$ y $v_{3}$.
+(2) Es asociativa, esto es, $(v_{1}+v_{2})+v_{3}=v_{1}+(v_{2}+v_{3})$, para todo $v_{1}, v_{2}$ y $v_{3}$.
 		
-		(3) Existencia del elemento neutro o vector cero,  $v+\vec{0}=v$, para todo vector $v$. 
+(3) Existencia del elemento neutro o vector cero,  $v+\vec{0}=v$, para todo vector $v$. 
 		
-		(4) Para todo vector $v$, existe un vector $v´$ tal que $v+(v´)=\vec{0}$. 
+(4) Para todo vector $v$, existe un vector $v´$ tal que $v+(v´)=\vec{0}$. 
 
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-181"><strong>(\#def:unnamed-chunk-181) </strong></span>	Dado el vector $v=(x,y)$ y un escalar $\lambda\in\mathbb{R}$, *el producto* de $v$ *por un escalar* $\lambda$ está dada por la multiplicaión de cada una de las componentes por el escalar, es decir, $\lambda v=(\lambda x,\lambda y)$. En general, si $v=(a_{1},a_{2},\cdots, a_{n})$, entonces $\lambda v=(\lambda a_{1},\lambda a_{2},\cdots, \lambda a_{n})$.
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-181"><strong>(\#def:unnamed-chunk-181) </strong></span>Dado el vector $v=(x,y)$ y un escalar $\lambda\in\mathbb{R}$, *el producto* de $v$ *por un escalar* $\lambda$ está dada por la multiplicaión de cada una de las componentes por el escalar, es decir, $\lambda v=(\lambda x,\lambda y)$. En general, si $v=(a_{1},a_{2},\cdots, a_{n})$, entonces $\lambda v=(\lambda a_{1},\lambda a_{2},\cdots, \lambda a_{n})$.
 </div>\EndKnitrBlock{definition}
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-182"><strong>(\#def:unnamed-chunk-182) </strong></span>	Dado el vector $v=(x,y)$ , el *vector opuesto* a $v$ es el vector $-v$ dado por el producto de $v$ por el escalar $-1$, es decir, $-v=-1 v=(-x,-y)$. En general, si $v=(a_{1},a_{2},\cdots, a_{n})$, entonces $-v=(-a_{1},-a_{2},\cdots, -a_{n})$.
-</div>\EndKnitrBlock{definition}
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-182"><strong>(\#def:unnamed-chunk-182) </strong></span>Dado el vector $v=(x,y)$ , el *vector opuesto* a $v$ es el vector $-v$ dado por el producto de $v$ por el escalar $-1$, es decir, $-v=-1 v=(-x,-y)$. En general, si $v=(a_{1},a_{2},\cdots, a_{n})$, entonces $-v=(-a_{1},-a_{2},\cdots, -a_{n})$.</div>\EndKnitrBlock{definition}
 
 El producto de vectores por un escalar tiene las siguientes propiedades:
 
-	(1) Es commutativa, es decir, $\lambda v=v\lambda$, para cualquier vector $v$ y cualquier escalar $\lambda$.
-	(2) Es distributiva, esto es, $\lambda(v_{1}+v_{2})=\lambda v_{1}+\lambda v_{2}$, para todo $v_{1}, v_{2}$ y todo $\lambda$.
-	(3) Existencia del elemento neutro,  $1v=v$, para todo vector $v$. 
+(1) Es commutativa, es decir, $\lambda v=v\lambda$, para cualquier vector $v$ y cualquier escalar $\lambda$.
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-183"><strong>(\#def:unnamed-chunk-183) </strong></span>		Dados los vectores $v_{1}=(x_{1},y_{1})$ y $v_{2}=(x_{2},y_{2})$, *la resta* de $v_{1}$ y $v_{2}$ está dada por la suma de $v_{1}$ con el opuesto de $v_{2}$, es decir, $v_{1}-v_{2}=(x_{1},y_{1})-(x_{2},y_{2})=(x_{1}-x_{2},y_{1}-y_{2})$. En general, $v-u=(a_{1}, a_{2},\cdots, a_{n})-(b_{1}, b_{2},\cdots, b_{n})=(a_{1}-b_{1},a_{2}-b_{2},\cdots a_{n}-b_{n})$, cuando $v=(a_{1}, a_{2},\cdots, a_{n})$ y $u=(b_{1}, b_{2},\cdots, b_{n})$ son vectores de $\mathbb{R}^{n}$.
+(2) Es distributiva, esto es, $\lambda(v_{1}+v_{2})=\lambda v_{1}+\lambda v_{2}$, para todo $v_{1}, v_{2}$ y todo $\lambda$.
+
+(3) Existencia del elemento neutro,  $1v=v$, para todo vector $v$. 
+
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-183"><strong>(\#def:unnamed-chunk-183) </strong></span>Dados los vectores $v_{1}=(x_{1},y_{1})$ y $v_{2}=(x_{2},y_{2})$, *la resta* de $v_{1}$ y $v_{2}$ está dada por la suma de $v_{1}$ con el opuesto de $v_{2}$, es decir, $v_{1}-v_{2}=(x_{1},y_{1})-(x_{2},y_{2})=(x_{1}-x_{2},y_{1}-y_{2})$. En general, $v-u=(a_{1}, a_{2},\cdots, a_{n})-(b_{1}, b_{2},\cdots, b_{n})=(a_{1}-b_{1},a_{2}-b_{2},\cdots a_{n}-b_{n})$, cuando $v=(a_{1}, a_{2},\cdots, a_{n})$ y $u=(b_{1}, b_{2},\cdots, b_{n})$ son vectores de $\mathbb{R}^{n}$.
 </div>\EndKnitrBlock{definition}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-184"><strong>(\#exm:unnamed-chunk-184) </strong></span>	Dados los vectores $v_{1}=(10,2)$, $v_{2}=(-5,4)$ y $v_{3}=(-1,-2)$, entonces $$v_{1}+v_{2}=(10,2)+(-5,4)=(10-5,2+4)=(5,6),$$
-	 $$v_{1}-v_{2}=(10,2)-(-5,4)=(10-(-5),2-4)=(15,-2) \mbox{ y}$$ $$v_{3}+v_{2}-v_{1}=(-1,-2)+(-5,4)-(10,2)=(-1-5-10,-2+4-2)=(-16,0).$$ También	 
-	$$-2v_{1}=-2(10,2)=(-20,-4)\mbox{ y }$$ $$-2v_{1}+3v_{2}-v_{3}=-2(10,2)+3(-5,4)-1(-1,-2)=(-20-15+1,-4+12+2)=(-34,10).$$
-</div>\EndKnitrBlock{example}
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-184"><strong>(\#exm:unnamed-chunk-184) </strong></span>Dados los vectores $v_{1}=(10,2)$, $v_{2}=(-5,4)$ y $v_{3}=(-1,-2)$, entonces 
 
-###Producto escalar y producto vectorial
+$$v_{1}+v_{2}=(10,2)+(-5,4)=(10-5,2+4)=(5,6),$$
+	 
+$$v_{1}-v_{2}=(10,2)-(-5,4)=(10-(-5),2-4)=(15,-2) \mbox{ y}$$ 
+  
+$$v_{3}+v_{2}-v_{1}=(-1,-2)+(-5,4)-(10,2)=(-1-5-10,-2+4-2)=(-16,0).$$ 
+  
+También	 
+
+$$-2v_{1}=-2(10,2)=(-20,-4)\mbox{ y }$$ 
+  
+$$-2v_{1}+3v_{2}-v_{3}=-2(10,2)+3(-5,4)-1(-1,-2)=(-20-15+1,-4+12+2)=(-34,10).$$</div>\EndKnitrBlock{example}
+
+### Producto escalar y producto vectorial
 
 Las operaciones que definiremos en esta parte son propias de los vectores. En la mayor parte de los conceptos nos remitiremos a los espacios $\mathbb{R}^{2}$ y $\mathbb{R}^{3}$.
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-185"><strong>(\#def:unnamed-chunk-185) </strong></span>	Sean $v_{1}$ y $v_{2}$ vectores, el *producto escalar* de $v_{1}$ y $v_{2}$ es el producto de los módulos $|v_{1}|$ y $|v_{2}|$ y el coseno del ángulo que forman los vectores y se denota $v_{1}\cdot v_{2}$. Es decir, $v_{1}\cdot v_{2}=|v_{1}||v_{2}|\cos \theta$, donde $\theta$ es el ángulo entre $v_{1}$ y $v_{2}$.
-</div>\EndKnitrBlock{definition}
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-185"><strong>(\#def:unnamed-chunk-185) </strong></span>Sean $v_{1}$ y $v_{2}$ vectores, el *producto escalar* de $v_{1}$ y $v_{2}$ es el producto de los módulos $|v_{1}|$ y $|v_{2}|$ y el coseno del ángulo que forman los vectores y se denota $v_{1}\cdot v_{2}$. Es decir, $v_{1}\cdot v_{2}=|v_{1}||v_{2}|\cos \theta$, donde $\theta$ es el ángulo entre $v_{1}$ y $v_{2}$.</div>\EndKnitrBlock{definition}
 
-\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	La proyección de $v_{1}$ sobre $v_{2}$ es $proy_{v_{2}} v_{1}=|v_{1}|\cos\theta$ donde $\theta$ es el ángulo que forman ambos vectores. Por lo tanto, $v_{1}\cdot v_{2}=|v_{2}| proy_{v_{2}} v_{1}$.
-	También podemos calcular el producto escalar del siguiente modo: Sean $v_{1}=(x_{1}, y_{1})$ y $v_{2}=(x_{2}, y_{2})$ vectores, $v_{1}\cdot v_{2}=x_{1}x_{2}+y_{1}y_{2}$. En general, si $v_{1}$ y $v_{2}$ son vectores en $\mathbb{R}^{n}$ tales que $v_{1}=(x_{1},x_{2},\cdots, x_{n})$ y $v_{2}=(y_{1},y_{2},\cdots, y_{n})$, $v_{1}\cdot v_{2}=\sum_{i=1}^{n} x_{i}y_{i}$.
-</div>\EndKnitrBlock{remark}
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}La proyección de $v_{1}$ sobre $v_{2}$ es $proy_{v_{2}} v_{1}=|v_{1}|\cos\theta$ donde $\theta$ es el ángulo que forman ambos vectores. Por lo tanto, $v_{1}\cdot v_{2}=|v_{2}| proy_{v_{2}} v_{1}$.
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-187"><strong>(\#exm:unnamed-chunk-187) </strong></span>	Dados los vectores $v=(\sqrt{3},1)$ y $u=(\frac{3}{2},\frac{3\sqrt{3}}{2})$, y sabiendo que el ángulo que ellos forman es 30\textdegree, entonces el producto escalar entre ellos $$v\cdot u=|v||u|\cos 30^{o}=2\cdot 3\cdot\frac{\sqrt{3}}{2}=3\sqrt{3}$$ ya que $|v|=\sqrt{\sqrt{3}^{2}+1^{2}}=\sqrt{4}=2$ y $|u|=\sqrt{(\frac{3}{2}^{2})+(\frac{3\sqrt{3}}{2})^{2}}=\sqrt{\frac{36}{4}}=3$. Note que si usamos la fórmula analítica podemos calcular el producto escalar $v\cdot u=(\sqrt{3}\cdot \frac{3}{2}) + (1\cdot \frac{3\sqrt{3}}{2})=3\sqrt{3}$.
-</div>\EndKnitrBlock{example}
+También podemos calcular el producto escalar del siguiente modo: Sean $v_{1}=(x_{1}, y_{1})$ y $v_{2}=(x_{2}, y_{2})$ vectores, $v_{1}\cdot v_{2}=x_{1}x_{2}+y_{1}y_{2}$. En general, si $v_{1}$ y $v_{2}$ son vectores en $\mathbb{R}^{n}$ tales que $v_{1}=(x_{1},x_{2},\cdots, x_{n})$ y $v_{2}=(y_{1},y_{2},\cdots, y_{n})$, $v_{1}\cdot v_{2}=\sum_{i=1}^{n} x_{i}y_{i}$.</div>\EndKnitrBlock{remark}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-188"><strong>(\#exm:unnamed-chunk-188) </strong></span>	Dados los vectores $v=(1,2)$ y $u=(-3,4)$, el producto escalar es $v\cdot u=1\cdot (-3)+(2\cdot 4)$. Si queremos calcular el ángulo $\alpha$ entre los vectores, usamos la fórmula $v\cdot u=|v||u|\cos\alpha$, como $|v|=\sqrt{1^{2}+2^{2}}=\sqrt{5}$ y $|v|=\sqrt{(-3)^{2}+4^{2}}=5$, entonces $\cos\alpha=\frac{5}{\sqrt{5}\cdot 5}$, por lo tanto $\alpha=\arccos\frac{1}{\sqrt{5}}$.
-</div>\EndKnitrBlock{example}
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-187"><strong>(\#exm:unnamed-chunk-187) </strong></span>Dados los vectores $v=(\sqrt{3},1)$ y $u=(\frac{3}{2},\frac{3\sqrt{3}}{2})$, y sabiendo que el ángulo que ellos forman es 30\textdegree, entonces el producto escalar entre ellos $$v\cdot u=|v||u|\cos 30^{o}=2\cdot 3\cdot\frac{\sqrt{3}}{2}=3\sqrt{3}$$ ya que $|v|=\sqrt{\sqrt{3}^{2}+1^{2}}=\sqrt{4}=2$ y $|u|=\sqrt{(\frac{3}{2}^{2})+(\frac{3\sqrt{3}}{2})^{2}}=\sqrt{\frac{36}{4}}=3$. Note que si usamos la fórmula analítica podemos calcular el producto escalar $v\cdot u=(\sqrt{3}\cdot \frac{3}{2}) + (1\cdot \frac{3\sqrt{3}}{2})=3\sqrt{3}$.</div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	Dos *vectores* $v_{1}, v_{2}$ son *perpendiculares* si y solo si forman un ángulo de $90^{o}$ entre ellos, esto lo denotamos con $v_{1}\perp v_{2}$. Como $\cos 90^{o}=0$ se puede ver que dos vectores no nulos son perpendiculares si y solo si el producto escalar entre ellos es cero. Es decir $v_{1}\perp v_{2}$ si y solo si $v_{1}\cdot v_{2}=0$, siempre que $u\neq 0$ o $v\neq 0$.
-</div>\EndKnitrBlock{remark}
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-188"><strong>(\#exm:unnamed-chunk-188) </strong></span>Dados los vectores $v=(1,2)$ y $u=(-3,4)$, el producto escalar es $v\cdot u=1\cdot (-3)+(2\cdot 4)$. Si queremos calcular el ángulo $\alpha$ entre los vectores, usamos la fórmula $v\cdot u=|v||u|\cos\alpha$, como $|v|=\sqrt{1^{2}+2^{2}}=\sqrt{5}$ y $|v|=\sqrt{(-3)^{2}+4^{2}}=5$, entonces $\cos\alpha=\frac{5}{\sqrt{5}\cdot 5}$, por lo tanto $\alpha=\arccos\frac{1}{\sqrt{5}}$.</div>\EndKnitrBlock{example}
+
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}Dos *vectores* $v_{1}, v_{2}$ son *perpendiculares* si y solo si forman un ángulo de $90^{o}$ entre ellos, esto lo denotamos con $v_{1}\perp v_{2}$. Como $\cos 90^{o}=0$ se puede ver que dos vectores no nulos son perpendiculares si y solo si el producto escalar entre ellos es cero. Es decir $v_{1}\perp v_{2}$ si y solo si $v_{1}\cdot v_{2}=0$, siempre que $u\neq 0$ o $v\neq 0$.</div>\EndKnitrBlock{remark}
 
 El producto escalar tiene las siguientes propiedades:
 
-	(1) Conmutativa: Para todo par de vectores $v$ y $u$, se tiene $v\cdot u= u\cdot v$.
-	(2) Distributiva respecto a la suma: Para cualesquiera vectores $u$, $v$ y $w$, se tiene que $u\cdot(v+w)=u\cdot v + u\cdot w$.
-	(3) Asociatividad respecto al producto por un escalar: Para todo par de vectores $v$ y $u$ y todo escalar $\lambda$, se tiene que: $\lambda(u\cdot v)=(\lambda u)\cdot v=u\cdot (\lambda v)$.
+(1) Conmutativa: Para todo par de vectores $v$ y $u$, se tiene $v\cdot u= u\cdot v$.
+	
+(2) Distributiva respecto a la suma: Para cualesquiera vectores $u$, $v$ y $w$, se tiene que $u\cdot(v+w)=u\cdot v + u\cdot w$.
+	
+(3) Asociatividad respecto al producto por un escalar: Para todo par de vectores $v$ y $u$ y todo escalar $\lambda$, se tiene que: $\lambda(u\cdot v)=(\lambda u)\cdot v=u\cdot (\lambda v)$.
 
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-190"><strong>(\#def:unnamed-chunk-190) </strong></span>	Dados dos vectores, $u$ y $v$, el producto vectorial de $u$ y $v$ está definido como $u\times v=(|u||v| sen \theta) n$, donde $n$ es un vector de módulo uno (1) y perpendicular a los vectores $u$ y $v$, cuya dirección está dada por la regla de la mano derecha y $\theta$ es el ángulo entre los vectores $u$ y $v$.
-</div>\EndKnitrBlock{definition}
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-190"><strong>(\#def:unnamed-chunk-190) </strong></span>Dados dos vectores, $u$ y $v$, el producto vectorial de $u$ y $v$ está definido como $u\times v=(|u||v| sen \theta) n$, donde $n$ es un vector de módulo uno (1) y perpendicular a los vectores $u$ y $v$, cuya dirección está dada por la regla de la mano derecha y $\theta$ es el ángulo entre los vectores $u$ y $v$.</div>\EndKnitrBlock{definition}
 
-\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	La regla de la mano derecha consiste en dar el mismo sentido al producto vectorial de $u\times v$ que el avance de un sacacorchos al girar desde el vector $u$ al vector $v$. (insertar imagen)
-	Desde el punto de vista geométrico, el módulo del producto vectorial corresponde al área del paralelogramo que forman los vectores $u$ y $v$ y las rectas paralelas a estos. (insertar imagen)
-</div>\EndKnitrBlock{remark}
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}La regla de la mano derecha consiste en dar el mismo sentido al producto vectorial de $u\times v$ que el avance de un sacacorchos al girar desde el vector $u$ al vector $v$. (insertar imagen)
+
+Desde el punto de vista geométrico, el módulo del producto vectorial corresponde al área del paralelogramo que forman los vectores $u$ y $v$ y las rectas paralelas a estos. (insertar imagen)</div>\EndKnitrBlock{remark}
 
 Otra forma de calcular el producto vectorial entre dos vectores $u=(a_{1},a_{2}, a_{3})$ y $v=(b_{1}, b_{2}, b_{3})$ es esta $u\times v=(a_{2}b_{3}-a_{3}b_{2}, a_{3}b_{1}-a_{1}b_{3}, a_{1}b_{2}-a_{2}b_{1})$, la cual resulta muy práctica en el caso de conocer las componetes de los vectores. 
 
-\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	Si definimos el determinante de una matriz $2x2$ como sigue: 
-	$$\left|  \begin{array}{ll} 
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}Si definimos el determinante de una matriz $2x2$ como sigue: 
+
+$$\left|  \begin{array}{ll} 
 	a & b\\ 
 	c & d
-	\end{array} \right| = ad-bc$$, entonces el producto vectorial se pude calcular como sigue:
-	$u\times v=(x,y,z)$ donde 
-	$x=\left|  \begin{array}{ll} 
+	\end{array} \right| = ad-bc$$,
+	
+entonces el producto vectorial se pude calcular como sigue:
+	  
+$u\times v=(x,y,z)$ donde 
+$x=\left|  \begin{array}{ll} 
 	a_{2} & a_{3}\\ 
 	b_{2} & b_{3}
 	\end{array} \right|$, $x=\left|  \begin{array}{ll} 
@@ -1254,8 +1370,7 @@ Otra forma de calcular el producto vectorial entre dos vectores $u=(a_{1},a_{2},
 	b_{1} & b_{2}
 	\end{array} \right|$.
 	
-	En el capítulo de matrices veremos mas formalmente el concepto de determinante de una matriz.
-</div>\EndKnitrBlock{remark}
+En el capítulo de matrices veremos mas formalmente el concepto de determinante de una matriz.</div>\EndKnitrBlock{remark}
 
 Note que $u\cdot (u\times v)=a_{1}(a_{2}b_{3}-a_{3}b_{2})+ a_{2}(a_{3}b_{1}-a_{1}b_{3})+ a_{3}(a_{1}b_{2}-a_{2}b_{1})=0$ lo que implica que $u\perp u\times v$. De forma análoga se muestra que $v\perp u\times v$.
 
@@ -1263,46 +1378,53 @@ El producto vectorial tiene las siguientes propiedades:
 
 Sean $u,v, w\in \mathbb{R}^{3}$ vectores en el espacio y $\lambda\in \mathbb{R}$ un escalar, se tiene que:
 
-	(1) $u\times \vec{0}=\vec{0}$,
-	(2) $u\times u=\vec{0}$,
-	(3) $u\times v= -(v\times u)$,
-	(4) $\lambda (u\times v)= (\lambda u)\times v=u\times (\lambda v)$,
-	(5) $u\times (v+w)=(u\times v) + (u\times w)$,
-	(6) $u\times (v\times w)=(u\cdot w)v-(u\cdot v)w$,
-	(7) $u\cdot (v\times w)=(u\times v)\cdot w$.
+(1) $u\times \vec{0}=\vec{0}$,
 
+(2) $u\times u=\vec{0}$,
+
+(3) $u\times v= -(v\times u)$,
+
+(4) $\lambda (u\times v)= (\lambda u)\times v=u\times (\lambda v)$,
+
+(5) $u\times (v+w)=(u\times v) + (u\times w)$,
+
+(6) $u\times (v\times w)=(u\cdot w)v-(u\cdot v)w$,
+
+(7) $u\cdot (v\times w)=(u\times v)\cdot w$.
 
 Por último definiremos el *producto mixto* o *triple producto escalar*:
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-193"><strong>(\#def:unnamed-chunk-193) </strong></span>	Dados los vectores $u,v, w\in \mathbb{R}^{3}$, el **producto mixto** es la operación que denotaremos $[u,v,w]=u\cdot(v\times w)$.
-</div>\EndKnitrBlock{definition}
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-193"><strong>(\#def:unnamed-chunk-193) </strong></span>Dados los vectores $u,v, w\in \mathbb{R}^{3}$, el **producto mixto** es la operación que denotaremos $[u,v,w]=u\cdot(v\times w)$.</div>\EndKnitrBlock{definition}
 
 El producto mixto tiene las siguientes propiedades:
 Sean $u,v, w,\in \mathbb{R}^{3}$ vectores en el espacio, se tiene que:
 
-	(1) $[u,v,w]=[v,w,u]=[w,u,v]$,
-	(2) $[u,v,w]=u\cdot(v\times w)=v\cdot(w\times u)=w\cdot(u\times v)$,
-	(3) $[u,v,w]=0$ si y solo si $u$, $v$ y $w$ son coplanares,
-	(4) es trilineal, es decir: 
-			(i) $[(\lambda u+ \delta u'),v,w]=[\lambda u,v,w]+[\delta u',v,w]$, para cualquier vector $u'$ y cualesquiera escalares $\lambda$ y $\delta$.
-		  (ii) $[u,(\lambda v+ \delta v'),w]=[u,\lambda v,w]+[u,\delta v',w]$, para cualquier vector $v'$ y cualesquiera escalares $\lambda$ y $\delta$.
-		  (iii) $[u,v,(\lambda w+ \delta w')]=[u,v,\lambda w]+[u,v,\delta w']$, para cualquier vector $w'$ y cualesquiera escalares $\lambda$ y $\delta$.
-  (5) es antisimétrica: $[u,v,w]=-[v,u,w]=-[u,w,v]=[w,v,u]$.
+(1) $[u,v,w]=[v,w,u]=[w,u,v]$,
 
+(2) $[u,v,w]=u\cdot(v\times w)=v\cdot(w\times u)=w\cdot(u\times v)$,
 
-\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	Interpretación geométrica del producto mixto: así como el módulo del producto vectorial $u\times v$ corresponde al área del paralelogramo que forman los vectores $u$ y $u$; el producto mixto $[u,v,w]$ es igual al volumen del paralelepípedo que ellos forman. Esto es fácil de demostrar pues el  volumen $V$ es igual a la base del paralelogramo, que es igual al módulo del producto vectorial, por la altura $h$ que es igual a $|w|\cos\theta$, por lo tanto $V=A h=|(u\times v)||w|\cos\theta=|(u\times v)\cdot w|=|[u,v,w]|$.
-	(INSERTAR IMAGEN)
-</div>\EndKnitrBlock{remark}
+(3) $[u,v,w]=0$ si y solo si $u$, $v$ y $w$ son coplanares,
 
-##Rectas y Planos
+(4) es trilineal, es decir: 
 
+  (i) $[(\lambda u+ \delta u'),v,w]=[\lambda u,v,w]+[\delta u',v,w]$, para cualquier vector $u'$ y cualesquiera escalares $\lambda$ y $\delta$.
+	
+  (ii) $[u,(\lambda v+ \delta v'),w]=[u,\lambda v,w]+[u,\delta v',w]$, para cualquier vector $v'$ y cualesquiera escalares $\lambda$ y $\delta$.
+	
+  (iii) $[u,v,(\lambda w+ \delta w')]=[u,v,\lambda w]+[u,v,\delta w']$, para cualquier vector $w'$ y cualesquiera escalares $\lambda$ y $\delta$.
+  
+(5) es antisimétrica: $[u,v,w]=-[v,u,w]=-[u,w,v]=[w,v,u]$.
 
-###Rectas en el espacio
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}Interpretación geométrica del producto mixto: así como el módulo del producto vectorial $u\times v$ corresponde al área del paralelogramo que forman los vectores $u$ y $u$; el producto mixto $[u,v,w]$ es igual al volumen del paralelepípedo que ellos forman. Esto es fácil de demostrar pues el  volumen $V$ es igual a la base del paralelogramo, que es igual al módulo del producto vectorial, por la altura $h$ que es igual a $|w|\cos\theta$, por lo tanto $V=A h=|(u\times v)||w|\cos\theta=|(u\times v)\cdot w|=|[u,v,w]|$.
+	(INSERTAR IMAGEN)</div>\EndKnitrBlock{remark}
+
+## Rectas y Planos
+
+### Rectas en el espacio
 
 En esta sección estudiaremos las rectas como objetos en el espacio $\mathbb{R}^{3}$. Una recta es un conjunto infinito de puntos que siguen una determinada  dirección y que pasa por un punto conocido en el espacio. Más formalmente:
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-195"><strong>(\#def:unnamed-chunk-195) </strong></span>	Dado un punto $P(x_{0},y_{0},z_{0})$ y un vector $u=(a,b,c)$, la recta que pasa por $P$ y está en la misma dirección que el vector $u$, es el conjunto de puntos $X(x,y,z)$ que cumplen que $\vec{PX}=\lambda u$, para algún número real $\lambda$, es decir, el vector $\vec{PX}$ es un múltiplo escalar del vector $u$. En este caso el vector $u$ se llamará **vector director** de la recta.
-</div>\EndKnitrBlock{definition}
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-195"><strong>(\#def:unnamed-chunk-195) </strong></span>Dado un punto $P(x_{0},y_{0},z_{0})$ y un vector $u=(a,b,c)$, la recta que pasa por $P$ y está en la misma dirección que el vector $u$, es el conjunto de puntos $X(x,y,z)$ que cumplen que $\vec{PX}=\lambda u$, para algún número real $\lambda$, es decir, el vector $\vec{PX}$ es un múltiplo escalar del vector $u$. En este caso el vector $u$ se llamará **vector director** de la recta.</div>\EndKnitrBlock{definition}
 
 Note que la ecuación $\vec{PX}=\lambda u$ es equivalente a $X=P+\lambda u$, es decir 
 
@@ -1324,7 +1446,8 @@ z=&z_{0}\lambda c
 \right.
 (\#eq:ecparesp)
 \end{equation}
-Estas se llaman **ecuaciones param\'etricas** de la recta.
+
+Estas se llaman **ecuaciones paramétricas** de la recta.
 
 Note que el escalar $\lambda$ es el mismo para todas las ecuaciones anteriores, para cada punto $X(x,y,z)$ sobre la recta. Si despejamos $\lambda$ de las ecuaciones paramétricas e igualamos obtenemos la **ecuación continua** de la recta: 
 
@@ -1334,6 +1457,7 @@ Note que el escalar $\lambda$ es el mismo para todas las ecuaciones anteriores, 
 \end{equation}
 
 Otra manera de escribir esta cadena de desigualdades es como este sistema de ecuaciones:
+
 $$\left\{ \begin{array}{ll}
 \frac{x-x_{0}}{a}=&\frac{y-y_{0}}{b}\\
 \frac{x-x_{0}}{a}=&\frac{z-z_{0}}{c}  
@@ -1351,18 +1475,22 @@ A'x+B'y+C'z+D'=&0
 (\#eq:eccaresp)
 \end{equation}
 
-Estás últimas son las **ecuaciones implícitas** de la recta o **ecuaciones cartesianas**, las cuales representan la intersección de dos planos (veremos este tema más adelante).
+Estas últimas son las **ecuaciones implícitas** de la recta o **ecuaciones cartesianas**, las cuales representan la intersección de dos planos (veremos este tema más adelante).
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-196"><strong>(\#exm:unnamed-chunk-196) </strong></span>	La recta que pasa por el punto $P(1,0,1)$ y tiene la dirección del vector $u=(4,5,-1)$ tiene la siguiente ecuación vectorial:  $(x,y,z)=(1,0,1)+\lambda(4,5,-1)$.
-	La ecuaciones paramétricas son:
-	$$\left\{ \begin{array}{ll}
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-196"><strong>(\#exm:unnamed-chunk-196) </strong></span>La recta que pasa por el punto $P(1,0,1)$ y tiene la dirección del vector $u=(4,5,-1)$ tiene la siguiente ecuación vectorial:  $(x,y,z)=(1,0,1)+\lambda(4,5,-1)$.
+
+La ecuaciones paramétricas son:
+
+$$\left\{ \begin{array}{ll}
 	x=&1+4\lambda\\
 	y=&5\lambda\\
 	z=&1-\lambda
 	\end{array}
-	\right.$$ 
-	De dónde se tiene que la ecuación continua es $\frac{x-1}{4}=\frac{y}{5}=\frac{z-1}{-1}$ y de acá se sigue que 
-		$$\left\{ \begin{array}{ll}
+	\right.$$
+
+De dónde se tiene que la ecuación continua es $\frac{x-1}{4}=\frac{y}{5}=\frac{z-1}{-1}$ y de acá se sigue que 
+
+$$\left\{ \begin{array}{ll}
 		\frac{x-1}{4}=&\frac{y}{5}\\
 		\frac{x-1}{4}=&\frac{z-1}{-1}
 		\end{array}
@@ -1372,18 +1500,23 @@ Estás últimas son las **ecuaciones implícitas** de la recta o **ecuaciones ca
 		x-4z-5=&0
 		\end{array}
 		\right.$$ 
-	corresponde a la ecuación cartesiana de la recta.</div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-197"><strong>(\#exm:unnamed-chunk-197) </strong></span>	La recta que pasa por los puntos $A(1,0,1)$ y $B(0,1,1)$ viene dada por la ecuación vectorial  $(x,y,z)=(1,0,1)+\lambda(-1,1,0)$, ya que un vector director es $\vec{AB}$.
-	La ecuaciones paramétricas son:
-	$$\left\{ \begin{array}{ll}
+corresponde a la ecuación cartesiana de la recta.</div>\EndKnitrBlock{example}
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-197"><strong>(\#exm:unnamed-chunk-197) </strong></span>La recta que pasa por los puntos $A(1,0,1)$ y $B(0,1,1)$ viene dada por la ecuación vectorial  $(x,y,z)=(1,0,1)+\lambda(-1,1,0)$, ya que un vector director es $\vec{AB}$.
+
+La ecuaciones paramétricas son:
+
+$$\left\{ \begin{array}{ll}
 	x=&1-\lambda\\
 	y=&\lambda\\
 	z=&1
 	\end{array}
-	\right.$$ 
-	Por lo tanto la ecuación cartesiana es 
-	$$\left\{ \begin{array}{ll}
+	\right.$$
+	  
+Por lo tanto la ecuación cartesiana es 
+
+$$\left\{ \begin{array}{ll}
 	1-x=&y\\
 	z=&1
 	\end{array}
@@ -1392,34 +1525,39 @@ Estás últimas son las **ecuaciones implícitas** de la recta o **ecuaciones ca
 	x+y-1=&0\\
 	z-1=&0
 	\end{array}
-	\right.$$ 
-	Note que la ecuación $z=1$ es el plano paralelo al plano $XY$ con altura en uno (1).
-	</div>\EndKnitrBlock{example}
+	\right.$$
+	  
+Note que la ecuación $z=1$ es el plano paralelo al plano $XY$ con altura en uno (1).</div>\EndKnitrBlock{example}
 
-**Posici\'on relativa de dos rectas en el espacio.**
+**Posición relativa de dos rectas en el espacio.**
 
 Dos rectas en el espacio pueden intersectarse o no. En el caso que se intersecten, estas forman un ángulo entre ellas pues estarían en el mismo plano, este ángulo pudiese ser un ángulo recto, lo que las haría perpendiculares entre sí. En el caso que no se intersecten, puede que sean paralelas entre sí o simplemente cruzarse sin tocarse (también se les dice alabeadas). Veamos esto en detalle:
 
 Dadas dos rectas $\mathit{l}_{1}$ y $\mathit{l}_{2}$ de ecuacines $P+\lambda u$ y $Q+\delta v$, con $\lambda, \delta\in\mathbb{R}$, se tiene que:
 
-	(1) $\mathit{l}_{1}$ y $\mathit{l}_{2}$ son paralelas si y solo si sus vectores directores $u$ y $v$ son paralelos. Lo denotamos por $\mathit{l}_{1}\parallel \mathit{l}_{2}$.
-	(2) $\mathit{l}_{1}$ y $\mathit{l}_{2}$ son perpendiculares (u ortogonales) si y solo si sus vectores directores $u$ y $v$ lo son. Esto lo denotamos por $\mathit{l}_{1}\perp\mathit{l}_{2}$.
-	(3) $\mathit{l}_{1}$ y $\mathit{l}_{2}$ se intersectan si y solo si $[u,v,\vec{PQ}]=(u\times v)\cdot \vec{PQ}=0$, ya que el vector $u\times v$ es perpendicular al plano que forman las rectas y como el vector $\vec{PQ}$ pertenece a este plano, es también perpendicular a $u\times v$.
-	(4) $\mathit{l}_{1}$ y $\mathit{l}_{2}$ se cruzan sin intersectarse si y solo si $[u,v,\vec{PQ}]=(u\times v)\cdot \vec{PQ}\neq0$. No son paralelas y no pertenecen al mismo plano.
+(1) $\mathit{l}_{1}$ y $\mathit{l}_{2}$ son paralelas si y solo si sus vectores directores $u$ y $v$ son paralelos. Lo denotamos por $\mathit{l}_{1}\parallel \mathit{l}_{2}$.
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-198"><strong>(\#exm:unnamed-chunk-198) </strong></span>	Dadas las rectas $\mathit{l}_{1}: (0,1,2)+\lambda(1,1,1)$, $\lambda\in \mathbb{R}$ y 
-	$\mathit{l}_{2}:\left\lbrace \begin{array}{ll}
+(2) $\mathit{l}_{1}$ y $\mathit{l}_{2}$ son perpendiculares (u ortogonales) si y solo si sus vectores directores $u$ y $v$ lo son. Esto lo denotamos por $\mathit{l}_{1}\perp\mathit{l}_{2}$.
+
+(3) $\mathit{l}_{1}$ y $\mathit{l}_{2}$ se intersectan si y solo si $[u,v,\vec{PQ}]=(u\times v)\cdot \vec{PQ}=0$, ya que el vector $u\times v$ es perpendicular al plano que forman las rectas y como el vector $\vec{PQ}$ pertenece a este plano, es también perpendicular a $u\times v$.
+
+(4) $\mathit{l}_{1}$ y $\mathit{l}_{2}$ se cruzan sin intersectarse si y solo si $[u,v,\vec{PQ}]=(u\times v)\cdot \vec{PQ}\neq0$. No son paralelas y no pertenecen al mismo plano.
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-198"><strong>(\#exm:unnamed-chunk-198) </strong></span>Dadas las rectas $\mathit{l}_{1}: (0,1,2)+\lambda(1,1,1)$, $\lambda\in \mathbb{R}$ y 
+
+$\mathit{l}_{2}:\left\lbrace \begin{array}{ll}
 	x=& \delta\\
 	y=& \delta\\
 	z=& 0
 	\end{array}
 	\right.$, con $\delta\in\mathbb{R}.$
-Se tiene que el vector director de $\mathit{l}_{1}$ es $(1,1,1)$ y el vector director de $\mathit{l}_{2}$ es $(1,1,0)$ no son paralelos, por lo tanto las rectas no son paralelas. Tampoco son perpendiculares ya que $u\cdot v=|u||v|\cos\theta$, donde $\theta$ es el ángulo que forman los vectores $u$ y $v$. Por lo tanto $\cos\theta=\frac{u\cdot v}{|u||v|}=\frac{\sqrt{6}}{3}$, por lo tanto $\theta\neq0$. las rectas pueden ser rectas que se intersecten o que solo se crucen, para ver esto calculemos $[u,v,\vec{PQ}]={(1,1,1)\times(1,1,0)}\cdot (0,-1,-2)=(-1,1,0)\cdot(0,-1,-2)=0-1+0=-1\neq0$ por lo tanto las rectas se cruzan (no se intesectan).
+	  
+Se tiene que el vector director de $\mathit{l}_{1}$ es $(1,1,1)$ y el vector director de $\mathit{l}_{2}$ es $(1,1,0)$ no son paralelos, por lo tanto las rectas no son paralelas. Tampoco son perpendiculares ya que $u\cdot v=|u||v|\cos\theta$, donde $\theta$ es el ángulo que forman los vectores $u$ y $v$. Por lo tanto $\cos\theta=\frac{u\cdot v}{|u||v|}=\frac{\sqrt{6}}{3}$, por lo tanto $\theta\neq0$. las rectas pueden ser rectas que se intersecten o que solo se crucen, para ver esto calculemos $[u,v,\vec{PQ}]={(1,1,1)\times(1,1,0)}\cdot (0,-1,-2)=(-1,1,0)\cdot(0,-1,-2)=0-1+0=-1\neq0$ por lo tanto las rectas se cruzan (no se intersectan).
 </div>\EndKnitrBlock{example}
 
 **Distancia de un punto a una recta**
 
-Dada la recta $\mathit{l}: P_{0}+\lambda u$, con $\lambda\in \mathbb{R}$ y un punto en el espacio $Q\in \mathbb{R}^{3}$, el área $A$ del paralelogramo que forman los puntos $P_{0}$, $Q$ y el vector $u$ viene dada por el valor absoluto del producto vectorial entre $\vec{P_{0}Q}$ y $u$, es decir, $A=|\vec{P_{0}Q}\times u|$. Si tomamos el vector $u$ como base y llamamos $h$ a la altura del paralelogramo (y la distancia de la recta al punto $Q$), entonces $A=|u|h$, como lo muestra la figura (INSERTAR FIGURA). Pero $h=|\vec{P_{0}Q}|sen\theta$, donde $\theta$ es el ángulo que forman los vectores $\vec{P_{0}Q}$ y $u$. Por lo tanto $A=|\vec{P_{0}Q}\times u|=|u||\vec{P_{0}Q}|sen\theta=|u|h$, despejando $h$, se tiene que $h=\frac{|\vec{P_{0}Q}\times u|}{|u|}$, es decir,
+Dada la recta $\mathit{l}: P_{0}+\lambda u$, con $\lambda\in \mathbb{R}$ y un punto en el espacio $Q\in \mathbb{R}^{3}$, el área $A$ del paralelogramo que forman los puntos $P_{0}$, $Q$ y el vector $u$ viene dada por el valor absoluto del producto vectorial entre $\vec{P_{0}Q}$ y $u$, es decir, $A=|\vec{P_{0}Q}\times u|$. Si tomamos el vector $u$ como base y llamamos $h$ a la altura del paralelogramo (y la distancia de la recta al punto $Q$), entonces $A=|u|h$, como lo muestra la figura (INSERTAR FIGURA). Pero $h=|\vec{P_{0}Q}|\sin\theta$, donde $\theta$ es el ángulo que forman los vectores $\vec{P_{0}Q}$ y $u$. Por lo tanto $A=|\vec{P_{0}Q}\times u|=|u||\vec{P_{0}Q}|\sin\theta=|u|h$, despejando $h$, se tiene que $h=\frac{|\vec{P_{0}Q}\times u|}{|u|}$, es decir,
 
 \begin{equation}
 	d(\mathit{l},Q)=\frac{|\vec{P_{0}Q}\times u|}{|u|}
@@ -1428,21 +1566,23 @@ Dada la recta $\mathit{l}: P_{0}+\lambda u$, con $\lambda\in \mathbb{R}$ y un pu
 
 **Distancia entre dos rectas**
 
-La distacia entre dos rectas es la menor distancia entre los puntos entre ellas, es decir, dadas las rectas $\mathit{l}_{1}$ y $\mathit{l}_{2}$, la distancia entre ellas vienen dada por la menor distancia entre los puntos de ambas, es decir $d(\mathit{l}_{1},\mathit{l}_{2})$ es la menor distancia $d(P,Q)$, donde $P\in\mathit{l}_{1}$ y $Q\in\mathit{l}_{2}$. Es claro que la distancia entre dos rectas es cero si estas se intersectan. Pero si son paralelas o se cruzan, podemos calcular la distancia entre ellas haciendo uso de la ecuación anterior \ref@{eq=dpuntorecta}, considerando una de las rectas y escogiendo un punto en la otra recta. La elección del punto debe hacerse de forma tal que la distancia del punto a la recta sea mínima.
-Cuando las rectas son paralelas, cualquier punto sobre la otra recta servirá y por lo tanto se usará la misma ecuación \ref@{eq=dpuntorecta}.
+La distacia entre dos rectas es la menor distancia entre los puntos entre ellas, es decir, dadas las rectas $\mathit{l}_{1}$ y $\mathit{l}_{2}$, la distancia entre ellas vienen dada por la menor distancia entre los puntos de ambas, es decir $d(\mathit{l}_{1},\mathit{l}_{2})$ es la menor distancia $d(P,Q)$, donde $P\in\mathit{l}_{1}$ y $Q\in\mathit{l}_{2}$. Es claro que la distancia entre dos rectas es cero si estas se intersectan. Pero si son paralelas o se cruzan, podemos calcular la distancia entre ellas haciendo uso de la ecuación anterior \@ref(eq:dpuntorecta), considerando una de las rectas y escogiendo un punto en la otra recta. La elección del punto debe hacerse de forma tal que la distancia del punto a la recta sea mínima.
+Cuando las rectas son paralelas, cualquier punto sobre la otra recta servirá y por lo tanto se usará la misma ecuación \@ref(eq:dpuntorecta).
+
 Pero en el caso de que sean rectas que se cruzan, el punto debe ser elegido sobre la recta perpendicular a ambas rectas. Mas específicamente, dadas las rectas $\mathit{l}_{1}:P_{0}+\lambda u$ y $\mathit{l}_{2}:Q_{0}+\delta v$. Sea $\mathit{l}$ una recta perpendicular a $\mathit{l}_{1}$ y $\mathit{l}_{2}$ y que las intersectan. Sean $P$ y $Q$ los puntos de intersección de la recta $\mathit{l}$ con las rectas $\mathit{l}_{1}$ y $\mathit{l}_{2}$ respectivamente. El volumen $V$ del paralelepípedo que se forma con las rectas es igual a módulo de producto mixto, esto es, $V=|[\vec{PQ},u,v]|$. Por otro lado, el volumen es igual al producto de $|u\times v|$ por la distancia entre las rectas, es decir, $V=|u\times v|d(\mathit{l}_{1},\mathit{l}_{2})$ (INSERTAR IMAGEN). Por lo tanto, $V=|[\vec{PQ},u,v]|=|u\times v|d(\mathit{l}_{1},\mathit{l}_{2})$, despejando $d(\mathit{l}_{1},\mathit{l}_{2})$, se sigue que 
 \begin{equation}
 	d(\mathit{l}_{1},\mathit{l}_{2})=\frac{|[\vec{PQ},u,v]|}{|u\times v|}
 	(\#eq:drectas)
 \end{equation}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-199"><strong>(\#exm:unnamed-chunk-199) </strong></span>	La distancia entre las rectas $\mathit{l}_{1}:x-1=7(z-3), y=6$ y $\mathit{l}_{2}:(4,2,7)+\lambda (-7,0,-1)$ se puede calcular tomando un punto de $\mathit{l}_{2}$, digamos $Q_{0}=(4,2,7)$ y calculando $d(\mathit{l}_{1}, Q_{0})$. Hallemos la ecuación vectorial de la recta $\mathit{l}_{1}$, de la ecuación continua de la recta, deducimos que $\mathit{l}_{1}:(1,6,3)+\lambda(7,0,1)$. Note que las rectas son paralelas (los vectores directores son paralelos). Luego la distancia entre las rectas $d(\mathit{l}_{1},\mathit{l}_{2})$ es igual a $d(\mathit{l}_{1},Q_{0})$, es decir $$d(\mathit{l}_{1},\mathit{l}_{2})=d(\mathit{l}_{1},Q_{0})=d(\mathit{l}_{1},(4,2,7))=\frac{|\vec{P_{0}Q_{0}\times (7,0,1)|}}{|(7,0,1)|}$$ sabemos que $\vec{P_{0}Q_{0}}=(4-1,2-6,7-3)=(3,-4,4)$, por lo tanto $$d(\mathit{l}_{1},Q_{0})=\frac{|(3,-4,4)\times(7,0,1)|}{|(7,0,1)|=\frac{|(-4,25,28)|}{\sqrt{50}}}=\frac{\sqrt{1425}}{5\sqrt{2}}=\frac{\sqrt{114}}{2}$$.
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-199"><strong>(\#exm:unnamed-chunk-199) </strong></span>La distancia entre las rectas $\mathit{l}_{1}:x-1=7(z-3), y=6$ y $\mathit{l}_{2}:(4,2,7)+\lambda (-7,0,-1)$ se puede calcular tomando un punto de $\mathit{l}_{2}$, digamos $Q_{0}=(4,2,7)$ y calculando $d(\mathit{l}_{1}, Q_{0})$. Hallemos la ecuación vectorial de la recta $\mathit{l}_{1}$, de la ecuación continua de la recta, deducimos que $\mathit{l}_{1}:(1,6,3)+\lambda(7,0,1)$. Note que las rectas son paralelas (los vectores directores son paralelos). Luego la distancia entre las rectas $d(\mathit{l}_{1},\mathit{l}_{2})$ es igual a $d(\mathit{l}_{1},Q_{0})$, es decir $$d(\mathit{l}_{1},\mathit{l}_{2})=d(\mathit{l}_{1},Q_{0})=d(\mathit{l}_{1},(4,2,7))=\frac{|\vec{P_{0}Q_{0}\times (7,0,1)|}}{|(7,0,1)|}$$ sabemos que $\vec{P_{0}Q_{0}}=(4-1,2-6,7-3)=(3,-4,4)$, por lo tanto
+
+$$d(\mathit{l}_{1},Q_{0})=\frac{|(3,-4,4)\times(7,0,1)|}{|(7,0,1)|=\frac{|(-4,25,28)|}{\sqrt{50}}}=\frac{\sqrt{1425}}{5\sqrt{2}}=\frac{\sqrt{114}}{2}$$.
 </div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-200"><strong>(\#exm:unnamed-chunk-200) </strong></span>	Para calcular la distancia entre las rectas $\mathit{l}_{1}:x-2=\frac{y+3}{2}=z$ y $\mathit{l}_{2}:x=y=z$ usaremos la ecuación \@ref{eq=drectas}. Comenzamos por calcular $\vec{PQ}$, donde $P$ es un punto sobre $\mathit{l}_{1}$ y $Q$ un punto sobre $\mathit{l}_{2}$, $\vec{PQ}= (-2,3,0)$, ya que $\mathit{l}_{1}: (2,-3,0)+\lambda(1,2,1)$ y $\mathit{l}_{2}:(0,0,0)=\delta(1,1,1)$. Note que efectivamente las rectas son alabeadas ya que $[\vec{PQ},u,v]=(u\times v)\cdot\vec{PQ}=(1,0,-1)\cdot(-2,3,0)=-2\neq 0$. Ahora, $d(\mathit{l}_{1},\mathit{l}_{2})=\frac{|[\vec{PQ},u,v]|}{|u\times v|}=\frac{|-2|}{|\sqrt{2}|}=\sqrt{2}$.
-</div>\EndKnitrBlock{example}
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-200"><strong>(\#exm:unnamed-chunk-200) </strong></span>Para calcular la distancia entre las rectas $\mathit{l}_{1}:x-2=\frac{y+3}{2}=z$ y $\mathit{l}_{2}:x=y=z$ usaremos la ecuación \@ref(eq:drectas). Comenzamos por calcular $\vec{PQ}$, donde $P$ es un punto sobre $\mathit{l}_{1}$ y $Q$ un punto sobre $\mathit{l}_{2}$, $\vec{PQ}= (-2,3,0)$, ya que $\mathit{l}_{1}: (2,-3,0)+\lambda(1,2,1)$ y $\mathit{l}_{2}:(0,0,0)=\delta(1,1,1)$. Note que efectivamente las rectas son alabeadas ya que $[\vec{PQ},u,v]=(u\times v)\cdot\vec{PQ}=(1,0,-1)\cdot(-2,3,0)=-2\neq 0$. Ahora, $d(\mathit{l}_{1},\mathit{l}_{2})=\frac{|[\vec{PQ},u,v]|}{|u\times v|}=\frac{|-2|}{|\sqrt{2}|}=\sqrt{2}$.</div>\EndKnitrBlock{example}
 
-###Rectas en el plano
+### Rectas en el plano
 
 En esta parte describiremos como son las rectas en el plano cartesiano $\mathbb{R}^{2}$. Veremos como son las ecuaciones de las rectas en plano. Las características de rectas paralelas y perpendiculares así como el punto de intersección de dos rectas. 
 
@@ -1454,11 +1594,14 @@ De la sección anterior tenemos que una recta en $\mathbb{R}^{2}$ está inequivo
 \end{equation}
 
 de donde se obtiene $(x,y)=(x_{0},y_{0})+\lambda(a,b)$, por lo tanto 
+
 $$\left\lbrace \begin{array}{ll} 
 x=&x_{0}+a\lambda\\ 
 y=&y_{0}+b\lambda
 \end{array} \right.$$
+
 De donde podemos obtener $\frac{x-x_{0}}{a}=\frac{y-y_{0}}{b}\Leftrightarrow b(x-x_{0})=a(y-y_{0})$. Si $a\neq 0$ se tiene que $y=\frac{b}{a}x+(y_{0}-\frac{b}{a}x_{0})$.
+
 Renombrando los coeficientes de la última ecuación, obtenemos la conocida **ecuación explícita** de la recta en el plano 
 
 \begin{equation}
@@ -1466,8 +1609,8 @@ y=mx+n
 (\#eq:ecexppla)
 \end{equation}
 
-donde el coeficiente $m$ corresponde a la **pendiente de la recta** (la inclinación) y es igual a la tangente del ángulo que forma la recta con el eje horizontal (abscisas o eje $x$). Note que si el vector director no es paralelo al eje vertical (las ordenadas o eje $Y$), entonces $a\neq 0$ en \ref{ecvecpla} y por lo tanto podemos dividir por $a$. Además, si $x=0$, se tiene que $y=m(0)+n$, es decir $y=n$, de donde se sigue que el **punto de corte de la recta con el eje de las abscisas** (o eje $Y$) es el coeficiente $n$ de la ecuación explícita \@ref{eq:ecexppla}. Por otro lado el **punto de corte de la recta con el eje de las ordenadas** (eje $X$) es un punto cuya segunda coordenada es cero, esto es $(x,0)$, por lo tanto $0=mx+n$, entonces $x=\frac{n}{m}$.
-También podemos escribir la **ecuación implícita o cartesiana** de la recta renombrando los coeficientes y reordenando los términos de la ecuación \@ref{eq:ecvecpla} para obtener 
+donde el coeficiente $m$ corresponde a la **pendiente de la recta** (la inclinación) y es igual a la tangente del ángulo que forma la recta con el eje horizontal (abscisas o eje $x$). Note que si el vector director no es paralelo al eje vertical (las ordenadas o eje $Y$), entonces $a\neq 0$ en \@ref(eq:ecvecpla) y por lo tanto podemos dividir por $a$. Además, si $x=0$, se tiene que $y=m(0)+n$, es decir $y=n$, de donde se sigue que el **punto de corte de la recta con el eje de las abscisas** (o eje $Y$) es el coeficiente $n$ de la ecuación explícita \@ref(eq:ecexppla). Por otro lado el **punto de corte de la recta con el eje de las ordenadas** (eje $X$) es un punto cuya segunda coordenada es cero, esto es $(x,0)$, por lo tanto $0=mx+n$, entonces $x=\frac{n}{m}$.
+También podemos escribir la **ecuación implícita o cartesiana** de la recta renombrando los coeficientes y reordenando los términos de la ecuación \@ref(eq:ecvecpla) para obtener 
 
 \begin{equation}
 Ax+By+C=0
@@ -1481,47 +1624,45 @@ m=tang(\alpha)=\frac{y_{2}-y_{1}}{x_{1}-x_{2}}
 (\#eq:pendiente)
 \end{equation}
 
-La ecuanción antes descrita es cierta para todo par de puntos sobre la recta, por lo tanto, si $A(x_{0},y_{0})$ es un punto conocido y $X(x,y)$ es un punto arbitrario sobre la recta, se tiene que $m=\frac{y-y_{0}}{x-x_{0}}$. Si conocemos la pendiente de la recta, podemos despejar $y$ en término de la pendiente y las coordenadas del punto conocido, obteniendo así la **ecuación punto-pendiente** de la recta:
+La ecuación antes descrita es cierta para todo par de puntos sobre la recta, por lo tanto, si $A(x_{0},y_{0})$ es un punto conocido y $X(x,y)$ es un punto arbitrario sobre la recta, se tiene que $m=\frac{y-y_{0}}{x-x_{0}}$. Si conocemos la pendiente de la recta, podemos despejar $y$ en término de la pendiente y las coordenadas del punto conocido, obteniendo así la **ecuación punto-pendiente** de la recta:
 
 \begin{equation}
 y=m(x-x_{0})+y_{0}
 (\#eq:puntopend)
 \end{equation}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-201"><strong>(\#exm:unnamed-chunk-201) </strong></span>	Para hallar la ecuación de la recta que pasa por el punto $A(3,1)$ y tiene pendiente $m=\frac{1}{2}$ usamos la ecuación punto pediente \@ref(eq:puntopend),
-	$y=\frac{1}{2}(x-3)+1$ por lo tanto $y=\frac{1}{2}x-\frac{1}{2}$. Reagrupando términos y multiplicando por $2$, obtenemos la ecuación implícita \@ref(eq:ecimppla): $x-2y-1=0$.
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-201"><strong>(\#exm:unnamed-chunk-201) </strong></span>Para hallar la ecuación de la recta que pasa por el punto $A(3,1)$ y tiene pendiente $m=\frac{1}{2}$ usamos la ecuación punto pediente \@ref(eq:puntopend), $y=\frac{1}{2}(x-3)+1$ por lo tanto $y=\frac{1}{2}x-\frac{1}{2}$. Reagrupando términos y multiplicando por $2$, obtenemos la ecuación implícita \@ref(eq:ecimppla): $x-2y-1=0$.
 </div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-202"><strong>(\#exm:unnamed-chunk-202) </strong></span>	Dada la ecuación cartesiana de la recta $5x-3y+1=0$, podemos hallar la pendiente de la recta despejando $y$ de la ecuación cartesiana, de la siguiente forma: $y=\frac{5}{3}x+\frac{1}{3}$. De donde se sigue que la pendiente es $m=\frac{5}{3}$. Además, directamente de la ecuación explícita, podemos decir que el punto de corte con el eje $Y$ es $n=\frac{1}{3}$. Para hallar el punto de corte con el eje $X$, despejamos $x$ de $0=\frac{5}{3}x+\frac{1}{3}$, así $x=\frac{-1}{5}$.
-</div>\EndKnitrBlock{example}
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-202"><strong>(\#exm:unnamed-chunk-202) </strong></span>Dada la ecuación cartesiana de la recta $5x-3y+1=0$, podemos hallar la pendiente de la recta despejando $y$ de la ecuación cartesiana, de la siguiente forma: $y=\frac{5}{3}x+\frac{1}{3}$. De donde se sigue que la pendiente es $m=\frac{5}{3}$. Además, directamente de la ecuación explícita, podemos decir que el punto de corte con el eje $Y$ es $n=\frac{1}{3}$. Para hallar el punto de corte con el eje $X$, despejamos $x$ de $0=\frac{5}{3}x+\frac{1}{3}$, así $x=\frac{-1}{5}$.</div>\EndKnitrBlock{example}
+
 Dos rectas en plano pueden ser **rectas paralelas**, en ese caso tienen la misma pendiente (forman el mismo ángulo con el eje $X$), es decir, si la recta $\mathit{l}_{1}$ tiene ecuación $y=mx+n$ y la recta $\mathit{l}_{2}$ tiene ecuación $y=px+q$, entonces $\mathit{l}_{1}$ es paralela a $\mathit{l}_{2}$ si y solo si $m=p$, esto se denota $\mathit{l}_{1} \parallel \mathit{l}_{2}$.
 
 Si dos rectas $\mathit{l}_{1}$ y $\mathit{l}_{2}$ de ecuaciones $y=mx+n$ y $y=px+q$ respectivamente, forman un ángulo de $90^{o}$ entre ellas se dice que son **perpendiculares** y se denota $\mathit{l}_{1} \perp \mathit{l}_{2}$, en este caso se puede ver que las pendientes guardan la siguiente relación: $mp=-1$.
 
-\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}	Note que si una recta es horizontal, su pendiente es igual a cero, esto es $y=0x+n$ y cualquier recta perpendicular a ella es paralela al eje $Y$ y por lo tanto no es función.
-</div>\EndKnitrBlock{remark}
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}Note que si una recta es horizontal, su pendiente es igual a cero, esto es $y=0x+n$ y cualquier recta perpendicular a ella es paralela al eje $Y$ y por lo tanto no es función.</div>\EndKnitrBlock{remark}
 
 Dos rectas no paralelas $\mathit{l}_{1}$ y $\mathit{l}_{2}$ de ecuaciones $y=mx+n$ y $y=px+q$ respectivamente, se intersectan en un punto del plano $(x_{0},y_{0})$, por lo tanto satisface ambas ecuaciones simultaneamente, es decir, $y_{0}=mx_{0}+n$ y $y_{0}=px_{0}+q$. Luego $mx_{0}+n=y_{0}=px_{0}+q$ por lo tanto $mx_{0}-px_{0}=q-n\Leftrightarrow x_{0}=\frac{q-n}{m-p}$ y así, $y_{0}=m(\frac{q-n}{m-p})+n$. En este caso el punto de intersección entre las rectas es $$\left( \frac{q-n}{m-p},m(\frac{q-n}{m-p})+n\right) .$$
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-204"><strong>(\#exm:unnamed-chunk-204) </strong></span>	Las rectas $\mathit{l}_{1}:y=2x+3$ y $\mathit{l}_{2}:y=2x-1$ son rectas paralelas. Y son perpendiculares a $\mathit{l}_{3}: y=-\frac{1}{2}x+1$. Además, el punto de intersección entre $\mathit{l}_{1}$ y $\mathit{l}_{2}$ es $x_{0}=\frac{1-3}{2+\frac{1}{2}}=\frac{-4}{5}$ y $y_{0}=2(\frac{-4}{5})+3=\frac{7}{5}$.
-</div>\EndKnitrBlock{example}
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-204"><strong>(\#exm:unnamed-chunk-204) </strong></span>Las rectas $\mathit{l}_{1}:y=2x+3$ y $\mathit{l}_{2}:y=2x-1$ son rectas paralelas. Y son perpendiculares a $\mathit{l}_{3}: y=-\frac{1}{2}x+1$. Además, el punto de intersección entre $\mathit{l}_{1}$ y $\mathit{l}_{2}$ es $x_{0}=\frac{1-3}{2+\frac{1}{2}}=\frac{-4}{5}$ y $y_{0}=2(\frac{-4}{5})+3=\frac{7}{5}$.</div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-205"><strong>(\#exm:unnamed-chunk-205) </strong></span>	La recta perpendicular a $\mathit{l}_{1}:\frac{-2}{3}x+3$ que pasa por el punto $A(-2,1)$ tiene por ecuación $y=\frac{3}{2}(x-(-2))+1$ es decir $y=\frac{-3}{2}x+4$.
-</div>\EndKnitrBlock{example}
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-205"><strong>(\#exm:unnamed-chunk-205) </strong></span>La recta perpendicular a $\mathit{l}_{1}:\frac{-2}{3}x+3$ que pasa por el punto $A(-2,1)$ tiene por ecuación $y=\frac{3}{2}(x-(-2))+1$ es decir $y=\frac{-3}{2}x+4$.</div>\EndKnitrBlock{example}
 
-###Planos
+### Planos
 
 En este capítulo volvemos al ámbito del espacio $\mathbb{R}^{3}$. Estudiaremos todo lo relativo a los planos en el espacio, las distintas ecuaciones para un plano, como determinar un plano a partir de dos rectas dadas, la posición relativa de dos planos, de una recta y un plano, así como la distancia entre dos planos y entre un plano y un puntos.
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-206"><strong>(\#def:unnamed-chunk-206) </strong></span>	Un plano $\pi$ está determinado por dos vectores no paralelos, $u$ y $v$ y un punto $P_{0}$ por donde pasa el plano (es decir un punto contenido en el plano, $P_{0}\in\pi$). Mas formalmente: 
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-206"><strong>(\#def:unnamed-chunk-206) </strong></span>Un plano $\pi$ está determinado por dos vectores no paralelos, $u$ y $v$ y un punto $P_{0}$ por donde pasa el plano (es decir un punto contenido en el plano, $P_{0}\in\pi$). Mas formalmente: 
+  
 \begin{equation}
 	\pi=\{P_{0}\in\mathbb{R}^{3}| P=P_{0}+\lambda u + \delta v,\mbox{ con } \lambda,\delta\in\mathbb{R} \}.
   (\#eq:ecplanovec)
-	\end{equation}
-	La anterior es la **ecuación vectorial del plano** $\pi$, generado por los vectores $u$ y $v$ que pasa por el punto $P_{0}$.
-</div>\EndKnitrBlock{definition}
+\end{equation}
+
+La anterior es la **ecuación vectorial del plano** $\pi$, generado por los vectores $u$ y $v$ que pasa por el punto $P_{0}$.</div>\EndKnitrBlock{definition}
 
 Suponiendo que $P_{0}=(x_{0},y_{0},z_{0})$, $u=(a_{0},b_{0},c_{0})$ y $v=(a_{1},b_{1},c_{1})$. Dado un punto genérico $P=(x,y,z)$, $P$ pertenece al plano $\pi$ si y solo si $P=P_{0}+\lambda u+\delta v\Leftrightarrow (x,y,z)=(x_{0},y_{0},z_{0})+\lambda(a_{0},b_{0},c_{0})+\delta(a_{1},b_{1},c_{1})$, de donde se tiene que:
+
 \begin{equation}
 	\left\{ 
 	 \begin{array}{ll}
@@ -1533,11 +1674,15 @@ Suponiendo que $P_{0}=(x_{0},y_{0},z_{0})$, $u=(a_{0},b_{0},c_{0})$ y $v=(a_{1},
 	(\#eq:ecplanopara)
 \end{equation}
 
-Un vector no nulo $w$ es un **vector ortogonal al plano** siempre que sea ortogonal a los vectores $u$ y $v$, es decir $w\perp \pi$ si y solo si $w=\gamma u\times v$, en particular $u\times v$ es un vector ortogonal al plano $\pi$. De este modo, para un punto cualquiera $P$, del plano, se tiene que $\vec{P_{0}P}\perp w$, por lo tanto \begin{equation}
+Un vector no nulo $w$ es un **vector ortogonal al plano** siempre que sea ortogonal a los vectores $u$ y $v$, es decir $w\perp \pi$ si y solo si $w=\gamma u\times v$, en particular $u\times v$ es un vector ortogonal al plano $\pi$. De este modo, para un punto cualquiera $P$, del plano, se tiene que $\vec{P_{0}P}\perp w$, por lo tanto 
+
+\begin{equation}
 (\vec{P_{0}P})\cdot w=0 \mbox{ para todo } P\in\pi.
 (\#eq:ecplanonormal)
 \end{equation}
+
 Esto es, $(x-x_{0},y-y_{0},z-z_{0})\cdot (a,b,c)=0$, donde $w=(a,b,c)$. Así 
+
 \begin{equation}
 	ax+bc+cz+d=0, \mbox{ donde } d=-ax_{0}-by_{0}-cz_{0}.
 	(\#eq:ecplanogeneral)
@@ -1545,9 +1690,11 @@ Esto es, $(x-x_{0},y-y_{0},z-z_{0})\cdot (a,b,c)=0$, donde $w=(a,b,c)$. Así
 
 La cual es la *ecuación general del plano*.
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-207"><strong>(\#exm:unnamed-chunk-207) </strong></span>	Dadas las rectas $\mathit{l}_{1}:\frac{x-1}{3}=\frac{y-2}{-1}=\frac{z-3}{2}$ y $\mathit{l}_{2}:\frac{x-1}{2}=\frac{y+2}{5}=\frac{z+3}{-3}$ y el punto $P_{0}=(1,2,3)$, el plano $\pi$, paralelo a las rectas $\mathit{l}_{1}$ y $\mathit{l}_{2}$ y que pasa por el punto $P$ viene dado por la ecuación: 
-	$\pi: (1,2,3)+\lambda(3,-1,2)+\delta(2,5,-3)$, con $\lambda, \delta\in \mathbb{R}$ (ecuación vectorial). De donde podemos deducir su ecuación paramétrica:
-	\begin{equation}
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-207"><strong>(\#exm:unnamed-chunk-207) </strong></span>Dadas las rectas $\mathit{l}_{1}:\frac{x-1}{3}=\frac{y-2}{-1}=\frac{z-3}{2}$ y $\mathit{l}_{2}:\frac{x-1}{2}=\frac{y+2}{5}=\frac{z+3}{-3}$ y el punto $P_{0}=(1,2,3)$, el plano $\pi$, paralelo a las rectas $\mathit{l}_{1}$ y $\mathit{l}_{2}$ y que pasa por el punto $P$ viene dado por la ecuación:
+
+$\pi: (1,2,3)+\lambda(3,-1,2)+\delta(2,5,-3)$, con $\lambda, \delta\in \mathbb{R}$ (ecuación vectorial). De donde podemos deducir su ecuación paramétrica:
+  
+\begin{equation}
 		\left\{ 
 		\begin{array}{ll}
 		x=& 1+3\lambda+ 2\delta\\
@@ -1555,33 +1702,37 @@ La cual es la *ecuación general del plano*.
 		z=& 3+\lambda c_{0}+ \delta c_{1}
 		\end{array}
 		\right. , \lambda,\delta\in\mathbb{R}
-	\end{equation}	
-	La ecuación normal del plano es: $(\vec{P_{0}P})\cdot w=0$, donde $\vec{P_{0}P}=(x-1,y-2,z-3)$ y $w=(3,-1,2)\times(2,5,-3)=(-7,13,17)$, es decir, 
-	$$(x-1,y-2,z-3)\cdot (-7,13,17)=0\Leftrightarrow 7x-13y-17z+70=0.$$
-</div>\EndKnitrBlock{example}
+\end{equation}	
+		
+La ecuación normal del plano es: $(\vec{P_{0}P})\cdot w=0$, donde $\vec{P_{0}P}=(x-1,y-2,z-3)$ y $w=(3,-1,2)\times(2,5,-3)=(-7,13,17)$, es decir, 
+
+$$(x-1,y-2,z-3)\cdot (-7,13,17)=0\Leftrightarrow 7x-13y-17z+70=0.$$</div>\EndKnitrBlock{example}
 
 *Posición relativa entre dos planos*
 
 Dos planos del espacio $\pi_{1}:(\vec{P_{0}P})\cdot w_{1}$ y $\pi_{2}:(\vec{Q_{0}P})\cdot w_{2}$ son planos paralelos si y solo si sus vectores normales son paralelos. Y son perpendiculares si y solo si sus vectores normales también lo son. Esto es:
 
 (1) $\pi_{1}\parallel\pi_{2}$ si y solo si $w_{1}\parallel w_{2}$.
-(2) $\pi_{1}\perp\pi_{2}$ si y solo si $w_{1}\perp w_{2}$.
 
+(2) $\pi_{1}\perp\pi_{2}$ si y solo si $w_{1}\perp w_{2}$.
 
 Dos planos distintos y paralelos no tienen puntos en común (no se intesctan). Pero si no son paralelos, entonces se intersectan en mas de un punto, de hecho la intersección es una recta, además forman un ángulo (distinto de cero).
 Dados los planos $\pi_{1}:(\vec{P_{0}P})\cdot w_{1}=0$ y $\pi_{2}:(\vec{Q_{0}P})\cdot w_{2}=0$ no paralelos, el ángulo entre ellos es igual al ángulo que forman $w_{1}$ y $w_{2}$, es decir $\cos(\theta)=\frac{w_{1}\cdot w_{2}}{|w_{1}||w_{2}|}$.
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-208"><strong>(\#exm:unnamed-chunk-208) </strong></span>	La intersección de los planos $\pi_{1}:3x+3y-4z+7=0$ y el plano $\pi_{2}:x+6y+2z-6=0$ es una recta, note que los planos no son paralelos (y por lo tanto no son coincidentes). Hallemos dicha recta, para ellos debemos hallar los puntos del espacio que pertenecen a ambos planos simultaneamente, es decir, los puntos $P(x,y,z)$ que se satisfacen ambas ecuaciones, 
-	\begin{equation*}
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-208"><strong>(\#exm:unnamed-chunk-208) </strong></span>La intersección de los planos $\pi_{1}:3x+3y-4z+7=0$ y el plano $\pi_{2}:x+6y+2z-6=0$ es una recta, note que los planos no son paralelos (y por lo tanto no son coincidentes). Hallemos dicha recta, para ellos debemos hallar los puntos del espacio que pertenecen a ambos planos simultaneamente, es decir, los puntos $P(x,y,z)$ que se satisfacen ambas ecuaciones, 
+
+\begin{equation*}
 		\left\{
 		\begin{array}{ll}
 			3x+3y-4z+7=&0\\
 			x+6y+2z-6=&0
 		\end{array}
 		\right.
-	\end{equation*}
-	resolviendo el sistema de ecuaciones se obtiene que el conjunto solución es 
-	\begin{equation*}
+\end{equation*}
+
+resolviendo el sistema de ecuaciones se obtiene que el conjunto solución es 
+
+\begin{equation*}
 		\left\{
 		\begin{array}{ll}
 		x=&5-3\lambda\\
@@ -1589,8 +1740,7 @@ Dados los planos $\pi_{1}:(\vec{P_{0}P})\cdot w_{1}=0$ y $\pi_{2}:(\vec{Q_{0}P})
 		z=&\frac{1}{2}+\frac{-3}{2}\lambda
 		\end{array}
 		\right.
-	\end{equation*}
-</div>\EndKnitrBlock{example}
+\end{equation*}</div>\EndKnitrBlock{example}
 
 *Distancia de un punto a un plano.*
 
@@ -1606,17 +1756,19 @@ Suponiendo que $P_{0}$ y $Q$ son los puntos $(x_{0},y_{0},z_{0})$, $(x_{1},y_{1}
 		& = ax_{1}+by_{1}+cz_{1}+d
 	\end{split}, 
 	\mbox{  con } d=-ax_{0}-by_{0}-cz_{0}
-\end{equation*} 
-y de este modo la ecuación de la distancia de un punto a un plano \@ref{eq=distplanopunto} podría reescribirse como sigue:
+\end{equation*}
+
+y de este modo la ecuación de la distancia de un punto a un plano \@ref(eq:distplanopunto) podría reescribirse como sigue:
+
 \begin{equation}
 	d(Q,\pi)=\frac{|ax_{1}+by_{1}+cz_{1}+d|}{\sqrt{a^{2}+b^{2},c^{2}}}
 	(\#eq:distplanopunto2)
 \end{equation}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-209"><strong>(\#exm:unnamed-chunk-209) </strong></span>	La distancia desde $Q(-2,1,2)$ al plano $\pi$ de ecuación $3x-y+2z-5=0$ es $d(Q,\pi)=\frac{|(3)(-2)+(-1)(1)+(2)(2)-5|}{\sqrt{3^{2}+1^{2}+2^{2}}}=\frac{8}{\sqrt{14}}=\frac{4\sqrt{14}}{7}$
-</div>\EndKnitrBlock{example}
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-209"><strong>(\#exm:unnamed-chunk-209) </strong></span>La distancia desde $Q(-2,1,2)$ al plano $\pi$ de ecuación $3x-y+2z-5=0$ es $d(Q,\pi)=\frac{|(3)(-2)+(-1)(1)+(2)(2)-5|}{\sqrt{3^{2}+1^{2}+2^{2}}}=\frac{8}{\sqrt{14}}=\frac{4\sqrt{14}}{7}$</div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-210"><strong>(\#exm:unnamed-chunk-210) </strong></span>	Dado el plano $\pi:(1,2,3)+\lambda(3,-1,2)+\delta(2,5,-3)$ y el punto $Q(1,1,1)$, para calcular la distancia del punto $Q$ al plano $\pi$ hallaremos el vector normal al plano $w=(3,-1,2)\times (2,5,-3)=(-7,13,17)$, para así finalmente calcular 
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-210"><strong>(\#exm:unnamed-chunk-210) </strong></span>Dado el plano $\pi:(1,2,3)+\lambda(3,-1,2)+\delta(2,5,-3)$ y el punto $Q(1,1,1)$, para calcular la distancia del punto $Q$ al plano $\pi$ hallaremos el vector normal al plano $w=(3,-1,2)\times (2,5,-3)=(-7,13,17)$, para así finalmente calcular 
+
 \begin{equation*}
 	\begin{split}
 		d(Q,\pi)&=|Proy_{(3,-1,2)\times(2,5,-3)}(0,-1,-2)\\
@@ -1631,7 +1783,9 @@ y de este modo la ecuación de la distancia de un punto a un plano \@ref{eq=dist
 
 Dada la recta $\mathit{l}:Q_{0}+\lambda u$ y el plano $\pi:(\vec{P_{0}P})\cdot w=0$, es fácil ver que la recta $\mathit{l}$ es paralela al plano $\pi$, lo que se denota $\mathit{l}\parallel \pi$ si y solo si $u\perp w$. Y que la recta $\mathit{l}$ es perpendicular al plano $\pi$, lo que se denota $\mathit{l}\perp \pi$ si y solo si $u\parallel w$.
 Si la resta $\mathit{l}$ no es paralela al plano $\pi$ ($\mathit{l}\nparallel\pi$), entoncen se intersectan en un punto $A$ como se ilustra en la figura (INSERTAR IMAGEN).
+
 Note que $\vec{Q_{0}P_{0}}+\vec{P_{0}A}=\vec{Q_{0}A}$. Como $\vec{Q_{0}A}=\lambda u$, se tiene que $\vec{Q_{0}P_{0}}+\vec{P_{0}A}=\lambda u$. Si multiplicamos por $w$, se tiene que $\vec{Q_{0}P_{0}}\cdot w+\vec{P_{0}A}\cdot w=\lambda u\cdot w$. Pero $\vec{P_{0}A}\perp w$ por lo que $\vec{P_{0}A}=0$ y así $\vec{Q_{0}P_{0}}\cdot w=\lambda u\cdot w$, de donde se sigue que $\lambda=\frac{\vec{Q_{0}P_{0}}\cdot w}{u\cdot w}$ y así $\vec{Q_{0}A}=(\frac{\vec{Q_{0}P_{0}}\cdot w}{u\cdot w})u$. De donde se deduce que el vector $\vec{Q_{0}A}$ es un múltiplo escalar del vector $u$, por lo tanto
+
 \begin{equation}
 	A=Q_{0}+(\frac{\vec{Q_{0}P_{0}}\cdot w}{u\cdot w})u
 	(\#eq:ptointersecplanorecta)
@@ -2964,7 +3118,7 @@ En este capítulos estudiaremos unas funciones especiales entre espacios vectori
 
 Note que si $T$ es una transformación lineal de $V$ en $W$, $T(0)=0$. Además, se puede probar que las transformaciones lineales preservan las combinaciones lineales, es decir, $T(\sum_{i=1}^{n}\lambda_{i}v_{i})=\sum_{i=1}^{n}\lambda_{i}T(v_{i})$.
 
-##Bases ordenadas
+## Bases ordenadas
 
 En el capítulo anterior definimos base de un espacio vectorial, como un conjunto de vectores linealmente independiente que generan el espacio. Para esta parte tomaremos en cuenta el orden en el que aparecen los vectores que conforman la base, es decir, tomaremos bases ordenadas.
 
@@ -3066,8 +3220,7 @@ Si $V$ es un espacio vectorial de dimensión finita, el*rango de $T$* es la dime
 
 $$dim V=rango(T)+Nul(T).$$</div>\EndKnitrBlock{theorem}
 
-\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Sea $n$ la dimensión de $V$. Sea $\{v_{1},v_{2},\cdots,v_{k}\}$ una base de $Ker(T)$ y sean $v_{k+1},v_{k+2},\cdots, v_{n}$ vectores tales que $\{v_{1},v_{2},\cdots,v_{k}, v_{k+1},v_{k+2},\cdots, v_{n} \}$ son base de $V$. Así $T$ está determinada por $Tv_{i}$, para cada $1\leq i\leq n$; como $tv_{i}=0$ para todo $1\leq i\leq k$, se tiene que $Tv_{k+1}, Tv_{k+2},\cdots, Tv_{n}$ generan a $Img(T)$. Veamos que son linealmente independientes, sean $n-k$ escalares $\lambda_{k+1}, \lambda_{k+2}, \cdots, \lambda_{n}$ y consideremos $\lambda_{k+1}Tv_{k+1}+ \lambda_{k+2}Tv_{k+2}+ \cdots+ \lambda_{n}Tv_{n}=0$, entonces $T(\lambda_{k+1}v_{k+1}+ \lambda_{k+2}v_{k+2}+ \cdots+ \lambda_{n}v_{n})=0$ por lo tanto $\lambda_{k+1}v_{k+1}+ \lambda_{k+2}v_{k+2}+ \cdots+ \lambda_{n}v_{n}\in Ker(T)$, de donde se tiene que $\lambda_{k+1}v_{k+1}+ \lambda_{k+2}v_{k+2}+ \cdots+ \lambda_{n}v_{n}=\lambda_{1}v_{1}+\lambda_{2}v_{2}+\cdots+\lambda_{k}v_{k}$, como $\{v_{1},v_{2},\cdots,v_{k}, v_{k+1},v_{k+2},\cdots, v_{n} \}$ es un conjunto linealmente independiente, se tiene que $\lambda_{k+1}=\lambda_{k+2}= \cdots=\lambda_{n}=0$.
-</div>\EndKnitrBlock{proof}
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Sea $n$ la dimensión de $V$. Sea $\{v_{1},v_{2},\cdots,v_{k}\}$ una base de $Ker(T)$ y sean $v_{k+1},v_{k+2},\cdots, v_{n}$ vectores tales que $\{v_{1},v_{2},\cdots,v_{k}, v_{k+1},v_{k+2},\cdots, v_{n} \}$ son base de $V$. Así $T$ está determinada por $Tv_{i}$, para cada $1\leq i\leq n$; como $tv_{i}=0$ para todo $1\leq i\leq k$, se tiene que $Tv_{k+1}, Tv_{k+2},\cdots, Tv_{n}$ generan a $Img(T)$. Veamos que son linealmente independientes, sean $n-k$ escalares $\lambda_{k+1}, \lambda_{k+2}, \cdots, \lambda_{n}$ y consideremos $\lambda_{k+1}Tv_{k+1}+ \lambda_{k+2}Tv_{k+2}+ \cdots+ \lambda_{n}Tv_{n}=0$, entonces $T(\lambda_{k+1}v_{k+1}+ \lambda_{k+2}v_{k+2}+ \cdots+ \lambda_{n}v_{n})=0$ por lo tanto $\lambda_{k+1}v_{k+1}+ \lambda_{k+2}v_{k+2}+ \cdots+ \lambda_{n}v_{n}\in Ker(T)$, de donde se tiene que $\lambda_{k+1}v_{k+1}+ \lambda_{k+2}v_{k+2}+ \cdots+ \lambda_{n}v_{n}=\lambda_{1}v_{1}+\lambda_{2}v_{2}+\cdots+\lambda_{k}v_{k}$, como $\{v_{1},v_{2},\cdots,v_{k}, v_{k+1},v_{k+2},\cdots, v_{n} \}$ es un conjunto linealmente independiente, se tiene que $\lambda_{k+1}=\lambda_{k+2}= \cdots=\lambda_{n}=0$.</div>\EndKnitrBlock{proof}
 
 \BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-339"><strong>(\#thm:unnamed-chunk-339) </strong></span>Sean $V$ y $W$ espacios vectoriales sobre un cuerpo $\mathbb{F}$. Sean $T_{1}$ y $T_{2}$ transformaciones lineales de $V$ en $W$, se tiene:
 	
@@ -3075,8 +3228,7 @@ $$dim V=rango(T)+Nul(T).$$</div>\EndKnitrBlock{theorem}
 
 (2) Dado un escalar $\lambda$, la función $\lambda T_{1}$ definida por $(\lambda T_{1})(v)=\lambda T_{1}(v)$, es una transformación lineal de $V$ en $W$.
 
-(3) El conjunto de las transformaciones lineales de $V$ en $W$, junto con las operaciones definidas antes, es un espacio vectorial sobre el cuerpo $\lambda$.
-</div>\EndKnitrBlock{theorem}
+(3) El conjunto de las transformaciones lineales de $V$ en $W$, junto con las operaciones definidas antes, es un espacio vectorial sobre el cuerpo $\lambda$.</div>\EndKnitrBlock{theorem}
 
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Sean $T_{1}$ y $T_{2}$ como en las hipótesis y $\lambda\in \mathbb{F}$. Sean $u,v\in V$ vectores cuales quiera y $\gamma$ un escalar. Entonces 
 
@@ -3187,12 +3339,13 @@ Recuerde que una función $T:V\longrightarrow W$ es invertible si existe una fun
 
 \BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-350"><strong>(\#thm:unnamed-chunk-350) </strong></span>Sean $V$ y $W$ espacios vectoriales sobre un cuerpo $\mathbb{F}$ y sea $T$ una transformación lineal de $V$ en $W$. Si $T$ es invertible, entonces la función $T^{-1}$ es una transformación lineal de $W$ en $V$.</div>\EndKnitrBlock{theorem}
 
-\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Sean $u_{1}, u_{2}\in W$ y $\lambda\in\mathbb{F}$. Como $T$ es biyectiva, existen $v_{1},v_{2}\in V$ únicos, tales que $Tv_{1}=u_{1}$ y $Tv_{2}=u_{2}$. Por lo que $\lambda u_{1}+ u_{2}=\lambda Tv_{1} + Tv_{2}$, por linealidad de $T$, $\lambda u_{1}+ u_{2}=T(\lambda v_{1} + v_{2})$. Nuevamente, por la inyectividad de $T$, el único vector de $V$ que cumple que $Tv=\lambda u_{1}+ u_{2}$ es $\lambda v_{1} + v_{2}$, entonces $T^{-1}(\lambda v_{1} + v_{2})=T^{-1}(T(\lambda v_{1} + v_{2}))=\lambda v_{1} + v_{2}=\lambda T^{-1}u_{1}+T^{-1}u_{2}$.
-</div>\EndKnitrBlock{proof}
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Sean $u_{1}, u_{2}\in W$ y $\lambda\in\mathbb{F}$. Como $T$ es biyectiva, existen $v_{1},v_{2}\in V$ únicos, tales que $Tv_{1}=u_{1}$ y $Tv_{2}=u_{2}$. Por lo que $\lambda u_{1}+ u_{2}=\lambda Tv_{1} + Tv_{2}$, por linealidad de $T$, $\lambda u_{1}+ u_{2}=T(\lambda v_{1} + v_{2})$. Nuevamente, por la inyectividad de $T$, el único vector de $V$ que cumple que $Tv=\lambda u_{1}+ u_{2}$ es $\lambda v_{1} + v_{2}$, entonces $T^{-1}(\lambda v_{1} + v_{2})=T^{-1}(T(\lambda v_{1} + v_{2}))=\lambda v_{1} + v_{2}=\lambda T^{-1}u_{1}+T^{-1}u_{2}$.</div>\EndKnitrBlock{proof}
 
-\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}(1) Si $T_{1}:\longrightarrow V_{2}$ y $T_{2}: V_{2}\longrightarrow V_{3}$ son invertibles. Entonces $T_{2}T_{1}$ es invertible y $(T_{2}T_{1})^{-1}=T_{1}^{-1}T_{2}^{-1}$.
-		
-(2) Como $T$ es lineal, $T(u-v)=Tu - Tv$, así $Tu=Tv$ si y solo si $T(u-v)=0$. Entonces $T$ es inyectiva si y solo si $v=0$ siempre que $T(v)=0$. Esto es, $T$ es inyectiva si y solo si $Ker(T)=\{0\}$.</div>\EndKnitrBlock{remark}
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}Notemos que:
+  
+1) Si $T_{1}:\longrightarrow V_{2}$ y $T_{2}: V_{2}\longrightarrow V_{3}$ son invertibles. Entonces $T_{2}T_{1}$ es invertible y $(T_{2}T_{1})^{-1}=T_{1}^{-1}T_{2}^{-1}$.
+
+2) Como $T$ es lineal, $T(u-v)=Tu - Tv$, así $Tu=Tv$ si y solo si $T(u-v)=0$. Entonces $T$ es inyectiva si y solo si $v=0$ siempre que $T(v)=0$. Esto es, $T$ es inyectiva si y solo si $Ker(T)=\{0\}$.</div>\EndKnitrBlock{remark}
 
 \BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-353"><strong>(\#def:unnamed-chunk-353) </strong></span>Diremos que $T$ es *no singular* si $Tv=0 \Rightarrow v=0$ (esto es $Ker(T)=\{0\}$).</div>\EndKnitrBlock{definition}
 
@@ -3202,30 +3355,90 @@ Recuerde que una función $T:V\longrightarrow W$ es invertible si existe una fun
 
 Recíprocamente, supongamos que $T$ aplica conjuntos l.i. de $V$ en conjuntos l.i. de $W$. En particular, dado $v\in V$, con $v\neq 0$, $Tv$ es l.i. por lo tanto, $Tv\neq 0$ (considerar $Tv=0$ contradice que $Tv$ es l.i.) por lo tanto $T$ es n o singular.</div>\EndKnitrBlock{proof}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-356"><strong>(\#exm:unnamed-chunk-356) </strong></span>(1) Sea $T:\mathbb{R}^{2}\longrightarrow \mathbb{R}^{2}$ definida por $T(x,y)=(x+y,x)$. Como $T(x,y)=(0,0)$ si y solo si $x=y=0$, se tiene que $T$ es no singular. 
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-356"><strong>(\#exm:unnamed-chunk-356) </strong></span>Sea $T:\mathbb{R}^{2}\longrightarrow \mathbb{R}^{2}$ definida por $T(x,y)=(x+y,x)$. Como $T(x,y)=(0,0)$ si y solo si $x=y=0$, se tiene que $T$ es no singular. </div>\EndKnitrBlock{example}
 
-(2) Sea $D:V\longrightarrow V$, donde $V$ es el espacio de los polinomios y $D$ es la derivada. Como la derivada de cualquier constante es cero, $D$ es singular. Pero la dimensión de $V$ no es finita y $Img D=V$, entonces es posible definir una inversa a la derecha $E$, a saber la integral indefinida, tal que $ED=I_{V}$. Pero no se puede definir la inversa a la izquierda.</div>\EndKnitrBlock{example}
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-357"><strong>(\#exm:unnamed-chunk-357) </strong></span>Sea $D:V\longrightarrow V$, donde $V$ es el espacio de los polinomios y $D$ es la derivada. Como la derivada de cualquier constante es cero, $D$ es singular. Pero la dimensión de $V$ no es finita y $Img D=V$, entonces es posible definir una inversa a la derecha $E$, a saber la integral indefinida, tal que $ED=I_{V}$. Pero no se puede definir la inversa a la izquierda.</div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-357"><strong>(\#thm:unnamed-chunk-357) </strong></span>Sean $V$ y $W$ espacios vectoriales de dimensión finita sobre $\mathbb{F}$, tales que $\dim V=\dim W$. Si $T$ es una transformación lineal de $V$ en $W$, las siguientes afirmaciones son equivalentes:
-	
-(1) $T$ es invertible.
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-358"><strong>(\#thm:unnamed-chunk-358) </strong></span>Sean $V$ y $W$ espacios vectoriales de dimensión finita sobre $\mathbb{F}$, tales que $\dim V=\dim W$. Si $T$ es una transformación lineal de $V$ en $W$, las siguientes afirmaciones son equivalentes:
 
-(2) $T$ es no singular.
-		
-(3) $T$ es sobreyectiva.
-</div>\EndKnitrBlock{theorem}
+1) $T$ es invertible.
 
-\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Sea $n=\dim V=\dim W$. Entonces $rango(T)+Nul(T)=n$. $T$ es no singular si y solo si $rango (T)=n$. Pero $rang(T)=n$ si y solo si $Img(T)=W$. Por lo tanto $T$ es sobreyectiva si y solo si $rango (t)=n=\dim W$ si y solo si $Nul(T)=0$ si y solo si $T$ es no singular.
-</div>\EndKnitrBlock{proof}
+2) $T$ es no singular.
 
-\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}Para cualquier transformación $T:V\longrightarrow W$, se tiene por definición que $T$ es invertible si y solo si $T$ es biyectiva. El teorema nos permite afirmar que una transformación es invertible probando solo que $T$ es inyectiva (no singular) o probando solo la sobreyectividad, tan solo una de ambas condiciones, siempre y cuando las dimensiones de los espacios sean iguales.</div>\EndKnitrBlock{remark}
+3) $T$ es sobreyectiva.</div>\EndKnitrBlock{theorem}
 
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Sea $n=\dim V=\dim W$. Entonces $rango(T)+Nul(T)=n$. $T$ es no singular si y solo si $rango (T)=n$. Pero $rang(T)=n$ si y solo si $Img(T)=W$. Por lo tanto $T$ es sobreyectiva si y solo si $rango (t)=n=\dim W$ si y solo si $Nul(T)=0$ si y solo si $T$ es no singular.</div>\EndKnitrBlock{proof}
+
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-360"><strong>(\#def:unnamed-chunk-360) </strong></span>Sean $V$ y $W$ espacios vectoriales (sobre el mismo cuerpo $\mathbb{F}$). Sea $T$ una transformación lineal de $V$ en $W$. Si $T$ es biyectiva, decimos que $T$ es un *isomorfismo de $V$ sobre $W$*. Si existe un isomorfismo de $V$ en $W$, decimos que *$V$ es isomorfo a $W$* y se denota $V\simeq W$.
+</div>\EndKnitrBlock{definition}
+
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}La relación de isomorfismo es una relación de equivalencia:
+  
+1) Todo espacio vectorial $V$ es trivialmente isomorfo a si mismo.
+
+2) Si $V$ es isomorfo a $W$, es claro que $W$ es isomorfo a $V$.
+
+3) Si $V$ es isomorfo a $W$ y $W$ es isomorfo a $X$, entonces $V$ es isomorfo a $X$.</div>\EndKnitrBlock{remark}
+
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-362"><strong>(\#thm:unnamed-chunk-362) </strong></span>Todo espacio vectorial de dimensión $n$ (sobre un cuerpo $\mathbb{F}$) es isomorfo a $\mathbb{F}^{n}$.</div>\EndKnitrBlock{theorem}
+
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Sea $V$ un espacio vectorial sobre $\mathbb{F}$, de dimensión igual a $n\in\mathbb{N}$. Sea $\mathcal{B}=\{v_{1},v_{2},\cdots v_{n} \}$ una base ordenada de $V$. Definimos la tansformación lineal $T:V\longrightarrow \mathbb{F}^{n}$ por $Tv=(\lambda_{1},\lambda_{2},\cdots,\lambda_{n})$ donde $(\lambda_{1},\lambda_{2},\cdots,\lambda_{n})$ son las coordenadas del vector $v$ en la base $\mathcal{B}$, es decir, $v=\lambda_{1}v_{1}+\lambda_{2}v_{2}+\cdots+\lambda_{n}v_{n}$. Es fácil ver que $T$ es un isomorfismo. En efecto, dos vectores distintos, $(\lambda_{1},\lambda_{2},\cdots,\lambda_{n})\neq(\gamma_{1},\gamma_{2},\cdots,\gamma_{n})$ de $\mathbb{F}$, tienen preimágenes distintas, $v_{1}\neq v_{2}$ (de lo contrario, $\mathcal{B}$ no sería un conjunto linealmente independiente). Además, para todo vector en $\mathbb{F}$, $(\lambda_{1},\lambda_{2},\cdots,\lambda_{n})$, existe un vector $v\in V$ tal que $(\lambda_{1},\lambda_{2},\cdots,\lambda_{n})$ es su vector de coordenadas, es decir, $v=\lambda_{1}v_{1}+\lambda_{2}v_{2}+\cdots+\lambda_{n}v_{n}$.</div>\EndKnitrBlock{proof}
+
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-364"><strong>(\#thm:unnamed-chunk-364) </strong></span>Sean $V$ y $W$ espacios vectoriales (sobre $\mathbb{F}$) de dimensión finita. Sean $n=\dim V$ y $m=\dim W$. Y sean $\mathcal{B}_{1}$ y $\mathcal{B}_{2}$ bases ordenadas de $V$ y $W$ respectivamente. La función que asigna a cada transformación $T$ (de $V$ en $W$), la matriz de la transformación en las bases $\mathcal{B}_{1}$ y $\mathcal{B}_{2}$, es un isomorfismo entre $L(V,W)$ y $\mathcal{M}_{m\times n}(\mathbb{R})$. </div>\EndKnitrBlock{theorem}
+
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Sean $V$ y $W$ espacios vectoriales (sobre $\mathbb{F}$) tales que $n=\dim V$ y $m=\dim W$. Sea $f:L(V,W)\longrightarrow \mathcal{M}_{m\times n}(\mathbb{F})$ la función $f(T)=[T]_{\mathcal{B}_{1}\mathcal{B}_{2}}$, donde $\mathcal{B}_{1}$ y $\mathcal{B}_{2}$ son bases de $V$ y $W$ respectivamente. En el teorema \@ref{thm:teorema420} ya demostramos que esta función es biyectiva.</div>\EndKnitrBlock{proof}
+
+Si $T$ es una transformación lineal de $V$ en si mismo, diremos que $T$ es un *operador lineal*. En este caso, la matriz asociada a $T$ en una base $\mathcal{B}$ de $V$ se denota $[T]_{\mathcal{B}}$ en lugar de $[T]_{\mathcal{B}\mathcal{B}}$.
+
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-366"><strong>(\#thm:unnamed-chunk-366) </strong></span>Sean $V_{1}, V_{2}$ y $V_{3}$ espacios vectoriales de dimensión finita, cuyas dimensiones son $n,m$ y $p$ respectivamente. Sean $\mathcal{B}_{1}, \mathcal{B}_{2}$ y $\mathcal{B}_{1}$ bases de $V_{1}, V_{2}$ y $V_{3}$ respectivamente. Sean $T_{1}:V_{1}\longrightarrow V_{2}$ y $T_{2}:V_{1}\longrightarrow V_{2}$ transformaciones lineales. Entonces la matriz de la transformación $[T_{2}\circ T_{1}]_{\mathcal{B}_{1}\mathcal{B}_{3}}=[T_{2}]_{\mathcal{B}_{2}\mathcal{B}_{3}}[T_{1}]_{\mathcal{B}_{1}\mathcal{B}_{2}}$.</div>\EndKnitrBlock{theorem}
+
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Como $[T_{1}v]_{\mathcal{B}_{2}}=[T_{1}]_{\mathcal{B}_{1}\mathcal{B}_{2}}[v]_{\mathcal{B}_{1}}$, entonces 
+
+$$\begin{array}{rl}
+[T_{2}\circ T_{1}v]_{\mathcal{B}_{3}}=&[T_{2}(T_{1}v)]_{\mathcal{B}_{3}}\\
+=&[T_{2}]_{\mathcal{B}_{2}\mathcal{B}_{3}}[T_{1}v]_{\mathcal{B}_{2}}\\
+=&[T_{2}]_{\mathcal{B}_{2}\mathcal{B}_{3}}[T_{1}]_{\mathcal{B}_{1}\mathcal{B}_{2}}[v]_{\mathcal{B}_{1}}
+\end{array}$$</div>\EndKnitrBlock{proof}
+
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}Si consideramos el caso de un operador lineal compuesto consigo mismo, entonces $V_{1}=V_{2}=V_{3}$ y considerando la misma base, $\mathcal{B}_{1}=\mathcal{B}_{2}=\mathcal{B}_{3}$, se tiene que $[T\circ T]_{\mathcal{B}}=[T]_{\mathcal{B}}[T]_{\mathcal{B}}=[T]_{\mathcal{B}}^{2}$. Por lo tanto $T$ es invertible si y solo si $[T]_{\mathcal{B}}$ lo es. Más aún, si $T$ es invertible, la matriz de la transformación inversa es igual a la inversa de la matriz de la transformación, es decir $[T^{1}]_{\mathcal{B}}=[T]_{\mathcal{B}}^{-1}$.</div>\EndKnitrBlock{remark}
 
 ## Ejercicios
 
-(1) Dada una transfotmación lineal $T:V\longrightarrow W$, el conjunto $Img(T)\prec W$. Además, el conjunto $\{v\in V: Tv=0 \}\prec V$.
+1) Dada una transfotmación lineal $T:V\longrightarrow W$, el conjunto $Img(T)\prec W$. Además, el conjunto $\{v\in V: Tv=0 \}\prec V$.
 
-Respuesta: Sean $w_{1}, w_{2}\in Img(T)$ y $\lambda$ un escalar. Entonces $\lambda w_{1}+w_{2}=\lambda T(v_{1})+T(v_{2})$, como $T$ es transformación lineal, $\lambda w_{1}+w_{2}=\lambda T(v_{1})+T(v_{2})=T(\lambda v_{1}+v_{2})$, luego $\lambda w_{1}+w_{2}$ es la imagen del vector $\lambda v_{1}+v_{2})$, por lo tanto, $\lambda w_{1}+w_{2}\in Img(T)$. Ahora, dados dos vectores $v_{1},v_{2}$ tales que $Tv_{1}=Tv_{2}=0$, entonces $T(\lambda v_{1}+v_{2})=\lambda T(v_{1})+T(v_{2})=\lambda 0+0=0$ por lo tanto $\lambda v_{1}+v_{2}\in \{v\in V: Tv=0 \}$.
+Respuesta: 
+
+Sean $w_{1}, w_{2}\in Img(T)$ y $\lambda$ un escalar. Entonces $\lambda w_{1}+w_{2}=\lambda T(v_{1})+T(v_{2})$, como $T$ es transformación lineal, $\lambda w_{1}+w_{2}=\lambda T(v_{1})+T(v_{2})=T(\lambda v_{1}+v_{2})$, luego $\lambda w_{1}+w_{2}$ es la imagen del vector $\lambda v_{1}+v_{2})$, por lo tanto, $\lambda w_{1}+w_{2}\in Img(T)$. Ahora, dados dos vectores $v_{1},v_{2}$ tales que $Tv_{1}=Tv_{2}=0$, entonces $T(\lambda v_{1}+v_{2})=\lambda T(v_{1})+T(v_{2})=\lambda 0+0=0$ por lo tanto $\lambda v_{1}+v_{2}\in \{v\in V: Tv=0 \}$.
+	
+2) Sea $V$ un espacio vectorial sobre el cuerpo $\mathbb{F}$, sean $U, T$ operadores lineales sobre $V$; sea $\lambda$ un elemento de $\mathbb{F}$. Entonces $\lambda(UT)=(\lambda U)T=U(\lambda T)$.
+
+Respuesta:
+
+$$
+\begin{array}{rl}
+[\lambda (UT)](v)=&\lambda ((UT)(v))\\
+=&\lambda U(T(v))\\
+=&(\lambda U)(T(v))\\
+=&[(\lambda U)T](v)
+\end{array}
+$$
+
+Análogamente, 
+
+$$
+\begin{array}{rl}
+[\lambda (UT)](v)=&\lambda ((UT)(v))\\
+=&U(\lambda T(v))\\
+=&U(\lambda T)(v)\\
+=&[U\lambda T](v)
+\end{array}
+$$
+	
+3) Demuestre que la relación de isomorfismo es una relación de equivalencia.
+
+Respuesta:
+
+La función identidad de un espacio vectorial $V$ en si mismo, $I:V\longrightarrow V$, es una transformación lineal biyectiva. Supongamos que $V$ es isomorfoa a $W$, entonces existe un isomorfismo, $T:V\longrightarrow W$, por ser biyectivo, es invertible y su inversa $T^{-1}:W\longrightarrow V$, es un isomorfismo, por lo tanto $W$ es isomorfoa a $V$. Para verificar la transditividad basta notar que la composición de isomorfismos, es un isomorfismo, y así lo es, ya que la composición de funciones biyectivas, es biyectiva.
 
 <!--chapter:end:080-transformaciones-lineales.Rmd-->
 
