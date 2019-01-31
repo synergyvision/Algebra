@@ -293,36 +293,41 @@ Sean $V$ y $W$ espacios vectoriales sobre un cuerpo $\mathbb{F}$ y sea $T$ una t
 
 ```{proof}
 Sean $u_{1}, u_{2}\in W$ y $\lambda\in\mathbb{F}$. Como $T$ es biyectiva, existen $v_{1},v_{2}\in V$ únicos, tales que $Tv_{1}=u_{1}$ y $Tv_{2}=u_{2}$. Por lo que $\lambda u_{1}+ u_{2}=\lambda Tv_{1} + Tv_{2}$, por linealidad de $T$, $\lambda u_{1}+ u_{2}=T(\lambda v_{1} + v_{2})$. Nuevamente, por la inyectividad de $T$, el único vector de $V$ que cumple que $Tv=\lambda u_{1}+ u_{2}$ es $\lambda v_{1} + v_{2}$, entonces $T^{-1}(\lambda v_{1} + v_{2})=T^{-1}(T(\lambda v_{1} + v_{2}))=\lambda v_{1} + v_{2}=\lambda T^{-1}u_{1}+T^{-1}u_{2}$.
+
 ```
 
 ```{remark}
-Notemos que:
-  
 1) Si $T_{1}:\longrightarrow V_{2}$ y $T_{2}: V_{2}\longrightarrow V_{3}$ son invertibles. Entonces $T_{2}T_{1}$ es invertible y $(T_{2}T_{1})^{-1}=T_{1}^{-1}T_{2}^{-1}$.
 
 2) Como $T$ es lineal, $T(u-v)=Tu - Tv$, así $Tu=Tv$ si y solo si $T(u-v)=0$. Entonces $T$ es inyectiva si y solo si $v=0$ siempre que $T(v)=0$. Esto es, $T$ es inyectiva si y solo si $Ker(T)=\{0\}$.
+
 ```
 
 ```{definition}
 Diremos que $T$ es *no singular* si $Tv=0 \Rightarrow v=0$ (esto es $Ker(T)=\{0\}$).
+
 ```
 
 ```{theorem}
 Sea $T$ una transformación lineal de $V$ en $W$. Entonces $T$ es no singular si y solo si, $T$ aplica cada conjunto linealmente independiente de $V$ en un conjunto linealmente independiente de $W$.
+
 ```
 
 ```{proof}
 Supongamos que $T$ es no singular. Sea $S\subseteq V$ un conjunto linealmente independiente. Sean $\{v_{1},v_{2},\cdots, v_{k} \}\subseteq S$, vectores de $S$. Consideremos una combinación lineal de las imágenes de estos vectores, igual a cero, $\lambda_{1}Tv_{1}+\lambda_{2}Tv_{2}+\cdots+\lambda_{k}Tv_{k}=0$, como $T$ es lineal, $T(\lambda_{1}v_{1}+\lambda_{2}v_{2}+\cdots+\lambda_{k}v_{k})=T0=0$, por lo tanto, $\lambda_{1}v_{1}+\lambda_{2}v_{2}+\cdots+\lambda_{k}v_{k}=0$. Como $S$ es l.i. se tiene que $\lambda_{1}=\lambda_{2}=\cdots=\lambda_{k}=0$, de donde se sigue que $T(S)$ (la imagen de $S$ por $T$) es l.i.
 
 Recíprocamente, supongamos que $T$ aplica conjuntos l.i. de $V$ en conjuntos l.i. de $W$. En particular, dado $v\in V$, con $v\neq 0$, $Tv$ es l.i. por lo tanto, $Tv\neq 0$ (considerar $Tv=0$ contradice que $Tv$ es l.i.) por lo tanto $T$ es n o singular.
+
 ```
 
 ```{example}
 Sea $T:\mathbb{R}^{2}\longrightarrow \mathbb{R}^{2}$ definida por $T(x,y)=(x+y,x)$. Como $T(x,y)=(0,0)$ si y solo si $x=y=0$, se tiene que $T$ es no singular. 
+
 ```
 
 ```{example}
 Sea $D:V\longrightarrow V$, donde $V$ es el espacio de los polinomios y $D$ es la derivada. Como la derivada de cualquier constante es cero, $D$ es singular. Pero la dimensión de $V$ no es finita y $Img D=V$, entonces es posible definir una inversa a la derecha $E$, a saber la integral indefinida, tal que $ED=I_{V}$. Pero no se puede definir la inversa a la izquierda.
+
 ```
 
 ```{theorem}
@@ -333,6 +338,7 @@ Sean $V$ y $W$ espacios vectoriales de dimensión finita sobre $\mathbb{F}$, tal
 2) $T$ es no singular.
 
 3) $T$ es sobreyectiva.
+
 ```
 
 ```{proof}
@@ -352,28 +358,34 @@ La relación de isomorfismo es una relación de equivalencia:
 2) Si $V$ es isomorfo a $W$, es claro que $W$ es isomorfo a $V$.
 
 3) Si $V$ es isomorfo a $W$ y $W$ es isomorfo a $X$, entonces $V$ es isomorfo a $X$.
+
 ```
 
 ```{theorem}
 Todo espacio vectorial de dimensión $n$ (sobre un cuerpo $\mathbb{F}$) es isomorfo a $\mathbb{F}^{n}$.
+
 ```
 
 ```{proof}
 Sea $V$ un espacio vectorial sobre $\mathbb{F}$, de dimensión igual a $n\in\mathbb{N}$. Sea $\mathcal{B}=\{v_{1},v_{2},\cdots v_{n} \}$ una base ordenada de $V$. Definimos la tansformación lineal $T:V\longrightarrow \mathbb{F}^{n}$ por $Tv=(\lambda_{1},\lambda_{2},\cdots,\lambda_{n})$ donde $(\lambda_{1},\lambda_{2},\cdots,\lambda_{n})$ son las coordenadas del vector $v$ en la base $\mathcal{B}$, es decir, $v=\lambda_{1}v_{1}+\lambda_{2}v_{2}+\cdots+\lambda_{n}v_{n}$. Es fácil ver que $T$ es un isomorfismo. En efecto, dos vectores distintos, $(\lambda_{1},\lambda_{2},\cdots,\lambda_{n})\neq(\gamma_{1},\gamma_{2},\cdots,\gamma_{n})$ de $\mathbb{F}$, tienen preimágenes distintas, $v_{1}\neq v_{2}$ (de lo contrario, $\mathcal{B}$ no sería un conjunto linealmente independiente). Además, para todo vector en $\mathbb{F}$, $(\lambda_{1},\lambda_{2},\cdots,\lambda_{n})$, existe un vector $v\in V$ tal que $(\lambda_{1},\lambda_{2},\cdots,\lambda_{n})$ es su vector de coordenadas, es decir, $v=\lambda_{1}v_{1}+\lambda_{2}v_{2}+\cdots+\lambda_{n}v_{n}$.
+
 ```
 
 ```{theorem}
 Sean $V$ y $W$ espacios vectoriales (sobre $\mathbb{F}$) de dimensión finita. Sean $n=\dim V$ y $m=\dim W$. Y sean $\mathcal{B}_{1}$ y $\mathcal{B}_{2}$ bases ordenadas de $V$ y $W$ respectivamente. La función que asigna a cada transformación $T$ (de $V$ en $W$), la matriz de la transformación en las bases $\mathcal{B}_{1}$ y $\mathcal{B}_{2}$, es un isomorfismo entre $L(V,W)$ y $\mathcal{M}_{m\times n}(\mathbb{R})$. 
+
 ```
 
 ```{proof}
 Sean $V$ y $W$ espacios vectoriales (sobre $\mathbb{F}$) tales que $n=\dim V$ y $m=\dim W$. Sea $f:L(V,W)\longrightarrow \mathcal{M}_{m\times n}(\mathbb{F})$ la función $f(T)=[T]_{\mathcal{B}_{1}\mathcal{B}_{2}}$, donde $\mathcal{B}_{1}$ y $\mathcal{B}_{2}$ son bases de $V$ y $W$ respectivamente. En el teorema \@ref{thm:teorema420} ya demostramos que esta función es biyectiva.
+
 ```
 
 Si $T$ es una transformación lineal de $V$ en si mismo, diremos que $T$ es un *operador lineal*. En este caso, la matriz asociada a $T$ en una base $\mathcal{B}$ de $V$ se denota $[T]_{\mathcal{B}}$ en lugar de $[T]_{\mathcal{B}\mathcal{B}}$.
 
 ```{theorem}
 Sean $V_{1}, V_{2}$ y $V_{3}$ espacios vectoriales de dimensión finita, cuyas dimensiones son $n,m$ y $p$ respectivamente. Sean $\mathcal{B}_{1}, \mathcal{B}_{2}$ y $\mathcal{B}_{1}$ bases de $V_{1}, V_{2}$ y $V_{3}$ respectivamente. Sean $T_{1}:V_{1}\longrightarrow V_{2}$ y $T_{2}:V_{1}\longrightarrow V_{2}$ transformaciones lineales. Entonces la matriz de la transformación $[T_{2}\circ T_{1}]_{\mathcal{B}_{1}\mathcal{B}_{3}}=[T_{2}]_{\mathcal{B}_{2}\mathcal{B}_{3}}[T_{1}]_{\mathcal{B}_{1}\mathcal{B}_{2}}$.
+
 ```
 
 ```{proof}
@@ -384,11 +396,152 @@ $$\begin{array}{rl}
 =&[T_{2}]_{\mathcal{B}_{2}\mathcal{B}_{3}}[T_{1}v]_{\mathcal{B}_{2}}\\
 =&[T_{2}]_{\mathcal{B}_{2}\mathcal{B}_{3}}[T_{1}]_{\mathcal{B}_{1}\mathcal{B}_{2}}[v]_{\mathcal{B}_{1}}
 \end{array}$$
+  
 ```
 
 ```{remark}
 Si consideramos el caso de un operador lineal compuesto consigo mismo, entonces $V_{1}=V_{2}=V_{3}$ y considerando la misma base, $\mathcal{B}_{1}=\mathcal{B}_{2}=\mathcal{B}_{3}$, se tiene que $[T\circ T]_{\mathcal{B}}=[T]_{\mathcal{B}}[T]_{\mathcal{B}}=[T]_{\mathcal{B}}^{2}$. Por lo tanto $T$ es invertible si y solo si $[T]_{\mathcal{B}}$ lo es. Más aún, si $T$ es invertible, la matriz de la transformación inversa es igual a la inversa de la matriz de la transformación, es decir $[T^{1}]_{\mathcal{B}}=[T]_{\mathcal{B}}^{-1}$.
+
 ```
+Ya antes vimos que dado un espacio de dimensión finita $V$, y dos bases ordenadas $\mathcal{B}_{1}=\{\alpha_{1},\alpha_{2},\cdots, \alpha_{n} \}$ y $\mathcal{B}_{2}=\{\beta_{1},\beta_{2},\cdots, \beta_{n} \}$, existe una matriz (invertible) $P$ cambio de base. Es decir, si $[\alpha]_{\mathcal{B}_{1}}=P[\alpha]_{\mathcal{B}_{2}}$, para vector $\alpha$ en $V$, donde $P=[P_{1}, P_{2},\cdots, P_{n}]$ con $P_{j}=[\beta_{j}]_{\mathcal{B}_{1}}$. Ahora, si consideramos un operador lineal $T:V\longrightarrow V$, se tiene que $$[T\alpha]_{\mathcal{B}_{1}}=[T]_{\mathcal{B}_{1}}[\alpha]_{\mathcal{B}_{1}}$$ por lo tanto, $$\begin{array}{rl}
+[T]_{\mathcal{B}_{1}}P[\alpha]_{\mathcal{B}_{2}}=P[T\alpha]_{\mathcal{B}_{1}}&\Leftrightarrow\\
+P^{-1}[T]_{\mathcal{B}_{1}}P[\alpha]_{\mathcal{B}_{2}}=[T\alpha]_{\mathcal{B}_{1}}&\Leftrightarrow
+\end{array}$$ de donde se sigue que $$[T]_{\mathcal{B}_{2}}=P^{-1}[T]_{\mathcal{B}_{1}}P.$$
+
+Esto se puede enunciar como sigue:
+
+```{theorem}
+Sea $V$ un espacio vectorial de dimensión finita sobre un cuerpo $\mathbb{F}$ y sean $\mathcal{B}_{1}=\{\alpha_{1},\alpha_{2},\cdots, \alpha_{n} \}$ y $\mathcal{B}_{2}=\{\beta_{1},\beta_{2},\cdots, \beta_{n} \}$ dos bases ordenadas de $V$. Supóngase que $T$ es un operador lineal sobre $V$. Si $P=[P_{1}, P_{2},\cdots, P_{n}]$ es la matriz $n\times n$ de columnas $P_{j}=[\beta_{j}]_{\mathcal{B}_{1}}$, entonces $$[T]_{\mathcal{B}_{2}}=P^{-1}[T]_{\mathcal{B}_{1}}P$$
+  
+```
+
+Otra forma de escribir el resultado anterior es considerar el operador lineal $U$ sobre $V$, definido como $U\alpha_{j}=\beta_{j}$, para todo $j=1,\cdots, n$, entonces $$[T]_{\mathcal{B}_{2}}=[U]^{-1}_{\mathcal{B}_{1}}[T]_{\mathcal{B}_{1}}[U]_{\mathcal{B}_{1}}.$$
+
+```{example}
+Sea $T$ el operador lineal que aplica un vector $(x,y)$ de $\mathbb{R}^{2}$ en el vector $(x,0)$, es decir $T:\mathbb{R}^{2}\longrightarrow\mathbb{R}^{2}$, definido por $T(x,y)=(x,0)$. Se tiene que la matriz de la transformación $T$ en la base (ordenada) canónica $\mathcal{B}_{1}=\{e_{1},e_{2} \}$, es $$\left[ \begin{array}{cc}
+1&0\\
+0&0
+\end{array}\right] $$
+Dada otra base ordenada de $\mathbb{R}^{2}$, $\mathcal{B}_{2}=\{(1,1), (2,1) \}$, la matriz $P$ cambio de base viene dada por $$\left[\begin{array}{cc}
+1&2\\
+1&1
+\end{array} \right]$$, cuya inversa es $$P^{-1}=\left[\begin{array}{rr}
+-1&2\\
+1&-1
+\end{array} \right]$$
+Por lo tanto $$\begin{array}{rl}
+[T]_{\mathcal{B}_{2}}&=P^{-1}[T]_{\mathcal{B}_{1}}P\\
+&=\left[\begin{array}{rr}
+-1&2\\
+1&-1
+\end{array} \right] \left[\begin{array}{rr}
+1&0\\
+0&0
+\end{array} \right] \left[\begin{array}{rr}
+1&2\\
+1&1
+\end{array} \right] \\
+&=\left[\begin{array}{rr}
+-1&2\\
+1&-1
+\end{array} \right] 
+\left[\begin{array}{rr}
+1&2\\
+0&0
+\end{array}\right]  \\
+&=\left[\begin{array}{rr}
+-1&-2\\
+1&2
+\end{array} \right]
+\end{array}$$
+Esto es coincidente con que:
+$$\begin{array}{ccc}
+T(1,1)=&(1,0)=&-(1,1)+(2,1)\\
+T(2,1=&((2,0)=&-2(1,1)+2(2,1)
+\end{array}$$
+  
+```
+
+```{example}
+Sea $V$ el espacio de las funciones polinomios generadas por $\mathcal{B}=\{f_{1}, f_{2}, f_{3}, f_{4} \}$ donde $f_{i}=x^{i-1}$ para cada $i\in\{1,2,3,4\}$. Sea $D:V\longrightarrow V$ el operador derivación. Definamos las funciones $g_{i}=(x+t)^{i-1}$ para un $t\in\mathbb{R}$ fijo y cada $i\in\{1,2,3,4\}$. Se puede ver que las funciones $$\begin{array}{ll}
+g_{1}=&f_{1}\\
+g_{2}=&tf_{1}+f_{2}\\
+g_{3}=&t^{2}f_{1}+2tf_{2}+f_{3}\\
+g_{4}=&t^{3}f_{1}+3t^{2}f_{2}+3tf_{3}+f_{4}
+\end{array}$$ forman una base del espacio $V$. En efecto, la matriz 
+$$P=\left[\begin{array}{cccc}
+1&t&t^{2}&t^{3}\\
+0&1&2t&3t^{2}\\
+0&0&1&3t\\
+0&0&0&1
+\end{array} \right] $$ es invertible, con inversa $$P^{-1}=\left[\begin{array}{cccc}
+1&-t&t^{2}&-t^{3}\\
+0&1&-2t&3t^{2}\\
+0&0&1&-3t\\
+0&0&0&1
+\end{array} \right] $$
+La matriz de la transformación en la base ordena $\mathcal{B}$, es:
+$$[D]_{\mathcal{B}}=\left[\begin{array}{cccc}
+0&1&0&0\\
+0&0&2t&0\\
+0&0&0&3\\
+0&0&0&0
+\end{array} \right] $$
+Entonces la matriz de $D$ en la base ordenada $\mathcal{B}_{2}=\{g_{1},g_{2},g_{3},g_{4} \}$, es:
+$$\begin{array}{rl}
+P^{-1}[D]_{\mathcal{B}}P=&\left[ \begin{array}{cccc}
+1&-t&t^{2}&t^{3}\\
+0&1&-2t&3t^{2}\\
+0&0&1&-3t\\
+0&0&0&1
+\end{array}\right] \left[\begin{array}{cccc}
+0&1&0&0\\
+0&0&2t&0\\
+0&0&0&3\\
+0&0&0&0
+\end{array} \right]\left[\begin{array}{cccc}
+1&t&t^{2}&t^{3}\\
+0&1&2t&3t^{2}\\
+0&0&1&3t\\
+0&0&0&1
+\end{array} \right] \\
+=&\left[ \begin{array}{cccc}
+1&-t&t^{2}&t^{3}\\
+0&1&-2t&3t^{2}\\
+0&0&1&-3t\\
+0&0&0&1
+\end{array}\right] \left[\begin{array}{cccc}
+0&1&2t&3t^{2}\\
+0&0&2&6t\\
+0&0&0&3\\
+0&0&0&0
+\end{array} \right]\\
+=&\left[ \begin{array}{cccc}
+0&1&0&0\\
+0&0&2&0\\
+0&0&0&3\\
+0&0&0&0
+\end{array}\right]
+\end{array}$$
+Pero esto se verifica directamente con las coordenadas de los vectores imágenes $Dg_{i}$ en la base $\mathcal{B}_{2}$, como lo muestran las siguientes igualdades:
+$$\begin{array}{ll}
+Dg_{1}=&0\\
+Dg_{2}=&g_{1}\\
+Dg_{3}=&2g_{2}\\
+Dg_{4}=&3g_{3}
+\end{array}$$	
+  
+```
+
+Concluíremos esta sección con lo siguiente:
+
+```{definition}
+Sean $A$ y $B$ dos matrices (cuadradas) $n\times n$ sobre el cuerpo $\mathbb{F}$. Se dice que *$B$ es semejante a $A$ sobre $\mathbb{F}$* si existe una matriz  $n\times n$ sobre $\mathbb{F}$ invertible $P$ tal que $B=P^{-1}AP$.
+
+```
+
+De este modo, dado un operador lineal sobre un espacio vectorial $V$ de dimensión finita $n$ y dadas dos bases $\mathcal{B}_{1}$ y $\mathcal{B}_{2}$ del espacio, las matrices del operador $T$ en las bases $\mathcal{B}_{1}$ y $\mathcal{B}_{2}$, son semejantes, es decir, $[T]_{\mathcal{B}_{1}}$ y $[T]_{\mathcal{B}_{2}}$, son semejantes. Inversamente, dadas las matrices semejantes $A$ y $B$ de orden $n\times n$ sobre un cuerpo $\mathbb{F}$, sea $V$ un espacio de dimensión $n$ sobre el cuerpo $\mathbb{F}$ (por ejemplo $\mathbb{F}^{n}$) y sea $\mathbb{B}_{1}$ una base ordenada de $V$. Sea $T$ el operador lineal representado por la matriz $A$ en la base $\mathbb{B}_{1}$, entonces $B$ representa el operador lineal $T$ en la base obtenida de $\mathbb{B}_{1}$ por medio de $P$, donde $P$ es la matriz que evidencia la semejanza de $B$ y $A$.
+Note que toda matriz $A$ $n\times n$ es semejante a si misma tomando $P$ como la identidad. Si $B$ es semejante a $A$, $A$ es semejante a $B$, considerando $P^{-1}$ como la matriz testigo. Además, si $B$ es semejante a $A$ y $C$ es semejante a $B$, entonces $C$ es semejante a $A$, ya que $B=P^{-1}AP$ y $C=Q^{-1}BQ$, por lo tanto $C=(PQ)^{-1}A(PQ)$. De donde concluímos que la semejanza es una relación de equivalencia en el conjunto de matrices $n\times n$ sobre un cuerpo $\mathbb{F}$. 
 
 ## Ejercicios
 
