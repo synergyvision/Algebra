@@ -4,22 +4,27 @@ En este capítulos estudiaremos unas funciones especiales entre espacios vectori
 
 ```{definition}
 Sean $V$ y $W$ dos espacios vectoriales sobre el mismo cuerpo de escalares $\mathbb{F}$. Decimos que una función $T$ de $V$ en $W$ es una *transformación lineal* si $T(\lambda u+ v)=\lambda T(u)+T(v)$ para todo escalar $\lambda\in \mathbb{F}$ y todo $u,v\in V$.
+
 ```
 
 ```{example}
 La *transformación identidad*. Sea $V$ un espacio vectorial cualquiera. $I: V\longrightarrow V$ en la que a cada vector $v\in V$ se le asigna el mismo $v$, es decir, $I(v)=v$.
+
 ```
 
 ```{example}
 La *transformación cero*. Sean $V$ y $W$ espacios vectoriales. $0:V\longrightarrow W$, definido por $0(v)=0$. Note que el cero de la derecha es el vector cero del espacio $W$.
+
 ```
 
 ```{example}
 La *transformación derivación* $D$. Sea $V$ el espacio de las funciones infinitamente derivables. Sea $D:V\longrightarrow V$, definida como $D(f)(x)=f´(x)$. Como la derivada de una suma es la suma de las derivadas y las constantes salen de la derivada, se sigue que $D$ es una transformación lineal.
+
 ```
 
 ```{example}
 Sea $A\in\mathcal{M}_{m\times n}(\mathbb{F})$. Definimos la función $T:\mathbb{F}^{n}\longrightarrow \mathbb{F}^{m}$, como $T(X)=AX$. En la sección de matrices vimos las propiedades de las operaciones de suma y producto por un escalar de matrices, de donde se sigue que $T(\lambda X+Y)=A(\lambda X+Y)=\lambda AX+AY=\lambda T(X)+T(Y)$.
+
 ```
 
 Note que si $T$ es una transformación lineal de $V$ en $W$, $T(0)=0$. Además, se puede probar que las transformaciones lineales preservan las combinaciones lineales, es decir, $T(\sum_{i=1}^{n}\lambda_{i}v_{i})=\sum_{i=1}^{n}\lambda_{i}T(v_{i})$.
@@ -30,9 +35,10 @@ En el capítulo anterior definimos base de un espacio vectorial, como un conjunt
 
 ```{definition}
 Decimos que una sucesión finita de vectores de un espacio vectorial de dimensión finita $V$, es una *base ordenada* si es un conjunto linealmente independiente y generan $V$. Es decir, la sucesión $\mathcal{B}=\{v_{1},v_{2},\cdots v_{n} \}\subseteq V$ es una base ordenada de $V$, si $\mathcal{B}$ es l.i. y $\left\langle v_{1},v_{2},\cdots v_{n} \right\rangle =V$.
+
 ```
 
-Al considerar la base $\mathcal{B}$ como un conjunto ordenado, a cada vector $v\in V$ le corresponde una sucesión única de escalares $(\lambda_{1},\lambda_{2},\cdots ,\lambda_{n})$ tales que $v=\sum_{i=1}^{n} \lambda_{i}v_{i}$. La unicidad viene dada por el orden de los vectores de la base, sin dicho orden, una permutación de los escalares nos dotaría de una sucesión distinta de escalares. Llamaremos *\textit{*$i$-ésima coordenada de $v$ en la base $\mathcal{B}$*, al escalar $\lambda_{i}$. Además, note que
+Al considerar la base $\mathcal{B}$ como un conjunto ordenado, a cada vector $v\in V$ le corresponde una sucesión única de escalares $(\lambda_{1},\lambda_{2},\cdots ,\lambda_{n})$ tales que $v=\sum_{i=1}^{n} \lambda_{i}v_{i}$. La unicidad viene dada por el orden de los vectores de la base, sin dicho orden, una permutación de los escalares nos dotaría de una sucesión distinta de escalares. Llamaremos *$i$-ésima coordenada de $v$ en la base $\mathcal{B}$*, al escalar $\lambda_{i}$. Además, note que
 
 $$v=(v_{1}, v_{2},\cdots , v_{n}) \left( \begin{array}{c}
  \lambda_{1}\\
@@ -55,6 +61,7 @@ Pero, por otro lado, $v=\sum_{i=1}^{n} \lambda_{i} u_{i}$, por la unicidad de lo
 
 ```{remark}
 Ya hemos visto que la matriz $P$ es única (por considerar bases ordenadas), a esta matriz la llamaremos *matriz cambio de base, de $\mathcal{B}_{1}$ a la base $\mathcal{B}_{2}$*. Además, dada una base $\mathcal{B}_{1}$ y una matriz invertible $P$, existe una única base $\mathcal{B}_{2}$ tal que $P$ es la correspondiente matriz cambio de base de $\mathcal{B}_{1}$ a $\mathcal{B}_{2}$.
+
 ```
 
 ```{example}
@@ -84,6 +91,7 @@ P^{-1}=\left(
 \end{array}
 \right)
 $$
+  
 ```
 
 ```{example}
@@ -103,10 +111,12 @@ $$P^{-1}=\left(\begin{array}{cc}
   
 Luego $\mathcal{B}_{2}=\{(\cos\theta,\sin\theta),(-\sin\theta,\cos\theta)\}$ 
 es la base para la cual $P$ es la matriz cambio de base de la base canónica a la base $\mathcal{B}_{2}$.
+
 ```
 
-```{theorem}
+```{theorem, label="teorema410"}
 Sea $V$ un espacio vectorial de dimensión finita (sobre un cuerpo $\mathbb{F}$). Sea $\{v_{1}, v_{2},\cdots, v_{n}\}$ una base ordenada de $V$. Sea $W$ un espacio vectorial (sobre un cuerpo $\mathbb{F}$) y sean $u_{1}, u_{2},\cdots, u_{n}$ vectores cualesquiera de $W$. Entonces existe una única transformación lineal $T$ de $V$ en $W$ tal que $Tv_{i}=u_{i}$, para todo $1\leq i\leq n$.
+
 ```
 
 ```{proof}
@@ -122,20 +132,24 @@ T(\gamma v+w)=&T((\gamma\lambda_{1}v_{1}+\gamma\lambda_{2}v_{2}+\cdots+\gamma\la
 $$
   
 Veamos que es única. Sea $T´:V\longrightarrow W$ una transformación tal que $T´v_{i}=u_{i}$, para todo $1\leq i\leq n$. Así $T´v=T´(\sum_{i=1}^{n} \lambda_{i}v_{i})=\sum_{i=1}^{n} \lambda_{i}T´(v_{i})=\sum_{i=1}^{n} \lambda_{i}T(v_{i})=Tv$.
+
 ```
 
 El resultado de este teorema nos dice que una transformación lineal está unívocamente determinada por las imagenes de los vectores de una base del espacio $V$.
 
 ```{definition}
 Sea $T:V\longrightarrow W$ una transformación lineal del espacio vectorial $V$ en el espacio vectorial $W$. El conjunto *imagen de $T$* es el conjunto formado por los vectores imagen de la transformación y se denota por $Img(T)$. Es decir $Img(T)=\{Tv:v\in V \}$.
+
 ```
 
 ```{remark}
 El conjunto imagen de una transformación lineal, es un subespacio vectorial del codominio de $T$. Además, el conjunto de vectores cuya imagen es el vector cero, es un subespacio del dominio de $T$.
+
 ```
 
 ```{definition}
 Sea $T:V\longrightarrow W$ una transformación lineal del espacio vectorial $V$ en el espacio vectorial $W$. El *núcleo (o espacio nulo) de $T$* es el conjunto $Ker(T)=\{v\in V: Tv=0 \}$.
+
 ```
 
 Si $V$ es un espacio vectorial de dimensión finita, el*rango de $T$* es la dimensión de la imagen de $T$ y *la nulidad de $T$* es la dimensión del núcleo de $T$. Se denota $rango(T)$ y $Nul(T)$ respectivamente.
@@ -144,10 +158,12 @@ Si $V$ es un espacio vectorial de dimensión finita, el*rango de $T$* es la dime
 Sean $V$ y $W$ espacios vectoriales, donde $V$ es de dimensión finita. Sea $T$ una transformación lineal de $V$ en $W$. Entonces 
 
 $$dim V=rango(T)+Nul(T).$$
+  
 ```
 
 ```{proof}
 Sea $n$ la dimensión de $V$. Sea $\{v_{1},v_{2},\cdots,v_{k}\}$ una base de $Ker(T)$ y sean $v_{k+1},v_{k+2},\cdots, v_{n}$ vectores tales que $\{v_{1},v_{2},\cdots,v_{k}, v_{k+1},v_{k+2},\cdots, v_{n} \}$ son base de $V$. Así $T$ está determinada por $Tv_{i}$, para cada $1\leq i\leq n$; como $tv_{i}=0$ para todo $1\leq i\leq k$, se tiene que $Tv_{k+1}, Tv_{k+2},\cdots, Tv_{n}$ generan a $Img(T)$. Veamos que son linealmente independientes, sean $n-k$ escalares $\lambda_{k+1}, \lambda_{k+2}, \cdots, \lambda_{n}$ y consideremos $\lambda_{k+1}Tv_{k+1}+ \lambda_{k+2}Tv_{k+2}+ \cdots+ \lambda_{n}Tv_{n}=0$, entonces $T(\lambda_{k+1}v_{k+1}+ \lambda_{k+2}v_{k+2}+ \cdots+ \lambda_{n}v_{n})=0$ por lo tanto $\lambda_{k+1}v_{k+1}+ \lambda_{k+2}v_{k+2}+ \cdots+ \lambda_{n}v_{n}\in Ker(T)$, de donde se tiene que $\lambda_{k+1}v_{k+1}+ \lambda_{k+2}v_{k+2}+ \cdots+ \lambda_{n}v_{n}=\lambda_{1}v_{1}+\lambda_{2}v_{2}+\cdots+\lambda_{k}v_{k}$, como $\{v_{1},v_{2},\cdots,v_{k}, v_{k+1},v_{k+2},\cdots, v_{n} \}$ es un conjunto linealmente independiente, se tiene que $\lambda_{k+1}=\lambda_{k+2}= \cdots=\lambda_{n}=0$.
+
 ```
 
 ```{theorem}
@@ -158,6 +174,7 @@ Sean $V$ y $W$ espacios vectoriales sobre un cuerpo $\mathbb{F}$. Sean $T_{1}$ y
 (2) Dado un escalar $\lambda$, la función $\lambda T_{1}$ definida por $(\lambda T_{1})(v)=\lambda T_{1}(v)$, es una transformación lineal de $V$ en $W$.
 
 (3) El conjunto de las transformaciones lineales de $V$ en $W$, junto con las operaciones definidas antes, es un espacio vectorial sobre el cuerpo $\lambda$.
+
 ```
 
 ```{proof}
@@ -178,13 +195,15 @@ $$\begin{array}{rl}
 \end{array}$$
 
 Las propiedades necesarias de las operaciones de transformaciones lineales se siguen del hecho que $W$ es un espacio vectorial y por lo tanto tiene esas propiedades. Note que la transformación cero, $Tv\equiv 0$, es el vector cero del espacio de las transformaciones de $V$ en $W$.
+
 ```
 
 El teorema dota de multiples ejemplos de espacios vectoriales, para cada par de espacios $V$ y $W$, *el espacio vectorial de las transformaciones lineales de $V$ en $W$* con las operaciones de suma y multiplicación por un escalar definidas en el teorema, que denotamos $L(V,W)$. En el cuerpo de la demostración se evidencia que es importante que ambos espacios vectoriales esten definidos sobre el mismo cuerpo de escalares. Vale preguntarse cuál es la dimensión de este espacio vectorial.
 
 
-```{theorem}
+```{theorem, label="teorema416"}
 Sean $V$ y $W$ espacios de dimensión finita, digamos $dim V=n$ y $dim W=m$. Entonces $L(V,W)$ es de dimensión finita y su dimensión es $nm$.
+
 ```
 
 ```{proof}
@@ -542,6 +561,109 @@ Sean $A$ y $B$ dos matrices (cuadradas) $n\times n$ sobre el cuerpo $\mathbb{F}$
 
 De este modo, dado un operador lineal sobre un espacio vectorial $V$ de dimensión finita $n$ y dadas dos bases $\mathcal{B}_{1}$ y $\mathcal{B}_{2}$ del espacio, las matrices del operador $T$ en las bases $\mathcal{B}_{1}$ y $\mathcal{B}_{2}$, son semejantes, es decir, $[T]_{\mathcal{B}_{1}}$ y $[T]_{\mathcal{B}_{2}}$, son semejantes. Inversamente, dadas las matrices semejantes $A$ y $B$ de orden $n\times n$ sobre un cuerpo $\mathbb{F}$, sea $V$ un espacio de dimensión $n$ sobre el cuerpo $\mathbb{F}$ (por ejemplo $\mathbb{F}^{n}$) y sea $\mathbb{B}_{1}$ una base ordenada de $V$. Sea $T$ el operador lineal representado por la matriz $A$ en la base $\mathbb{B}_{1}$, entonces $B$ representa el operador lineal $T$ en la base obtenida de $\mathbb{B}_{1}$ por medio de $P$, donde $P$ es la matriz que evidencia la semejanza de $B$ y $A$.
 Note que toda matriz $A$ $n\times n$ es semejante a si misma tomando $P$ como la identidad. Si $B$ es semejante a $A$, $A$ es semejante a $B$, considerando $P^{-1}$ como la matriz testigo. Además, si $B$ es semejante a $A$ y $C$ es semejante a $B$, entonces $C$ es semejante a $A$, ya que $B=P^{-1}AP$ y $C=Q^{-1}BQ$, por lo tanto $C=(PQ)^{-1}A(PQ)$. De donde concluímos que la semejanza es una relación de equivalencia en el conjunto de matrices $n\times n$ sobre un cuerpo $\mathbb{F}$. 
+
+## Funcionales lineales
+
+Dado un espacio vectorial $V$ sobre el cuerpo $\mathbb{F}$, una transformación lineal $f$ de un espacio vectorial $V$ en el conjunto de escalares $\mathbb{F}$, se llama *funcional lineal* sobre $V$, es decir, es una función $f:V\longrightarrow \mathbb{F}$ tal que $f(\lambda u +v)=\lambda f(u)+ f(v)$ para cualesquiera vectores $u,v\in V$ y cualquier escalar $\lambda \mathbb{F}$.
+
+```{example}
+	Sea $\mathbb{F}$ un cuerpo y sean $\lambda_{1}, \lambda_{2},\cdots , \lambda_{n}$ en $\mathbb{F}$. Sea $f$ la función en $\mathbb{F}^{n}$ definida por $f(x_{1},x_{2},\cdots,x_{n})=\lambda_{1}x_{1}+ \lambda_{2}x_{2}+\cdots +\lambda_{n}x_{n}$. Entonces $f$ es un funcional lineal sobre $\mathbb{F}^{n}$. Si consideramos la base canónica de $\mathbb{F}^{n}$ y la base $\{1\}$ de $\mathbb{F}$, la matriz del funcional es $[\lambda_{1}, \lambda_{2},\cdots , \lambda_{n}]$, ya que $f(e_{j})=\lambda_{j}$, $j=1,2,\cdots ,n$. Todo funcional lineal sobre $\mathbb{F}$ tendrá esta forma, para ciertos escalares $\lambda_{1}, \lambda_{2},\cdots , \lambda_{n}$ en $\mathbb{F}$, ya que $$\begin{array}{ll}
+	f(x_{1},x_{2},\cdots,x_{n})&=f(\sum_{j=1}^{n} x_{j}e_{j})\\
+	&=\sum_{j=1}^{n} x_{j}f(e_{j})\\
+	&=\sum_{j=1}^{n} \lambda_{j}x_{j}
+	\end{array}$$
+	  
+```
+
+```{example}
+	*El operador traza de una matriz*. Sea $A$ una matriz $n\times n$ sobre un cuerpo $\mathbb{F}$, la *traza* de $A$ es el escalar $$tr A=[A]_{11}+[A]_{22}+\cdots +[A]_{nn}$$ la suma de la los elementos de la diagonal de una matriz.
+	Esta función es un funcional lineal sobre el espacio de las matrices $\mathcal{M}_{n\times n}(\mathbb{F})$. En efecto, $$\begin{array}{ll}
+	tr (\lambda A + B)&=\sum_{i=1}^{n}(\lambda [A]_{ii}+[B]_{ii})\\
+	&=\lambda \sum_{i=1}^{n} [A]_{ii} + \sum_{i=1}^{n} [B]_{ii}\\
+	&=\lambda tr A + tr B
+	\end{array}$$
+	  
+```
+
+```{example}
+	Sea $V$ el espacio de todas las funciones polinómicas sobre un cuerpo $\mathbb{F}$. Para $t\in\mathbb{F}$, definamos $L_{t}:V\longrightarrow \mathbb{F}$ como la evaluación en $t$, es decir $L_{t}(p)=p(t)$ para todo $p\in V$. Entonces $L_{t}$ es un funcional lineal en $V$. 
+	En general, se puede definir el funcional lineal $L_{t}$ en el espacio de las funciones sobre $\mathbb{F}$ en si mismo, como $L_{t}(f)=f(t)$, para cada función $f: \mathbb{F}\longrightarrow\mathbb{F}$.
+
+```
+
+```{example}
+	Sea $\mathcal{C}(I)$ el espacio de las funciones continuas sobre el intervalo $I=[a,b]$. Definimos, $$L(f)=\int_{a}^{b}f(t)dt$$ entonces $L$ es un funcional lineal sobre $\mathcal{C}(I)$.
+
+```
+
+Si $V$ es un espacio vectorial, el conjunto de todos los funcionales lineales sobre $V$, $L(V,\mathbb{F})$, forman un espacio vectorial. Este recibe el nombre de espacio dual de $V$ y se denota $V^{\ast}$.
+
+Por el teorema \@ref(thm:teorema416), se tiene que $dim V^{\ast}=dim V$.
+
+Dada una base $\mathcal{B}=\{v_{1}, v_{2}, \cdots, v_{n} \}$ de $V$, para cada $i=1,2,\cdots, n$ existe un funcional lineal $f_{i}$ tal que $f_{i}(v_{j})=\delta_{ij}$ (\@ref(thm:teorema410). Estos $n$ funcionales lineales, $f_{1}, f_{2}, \cdots , f_{n}$, son linealmente independientes, en efecto, supongamos que $f=\sum_{i=1}^{n} c_{i}f_{i}$ $$\begin{array}{ll}
+f(v_{j})&=\sum_{i=1}^{n} c_{i}f_{i}(v_{j})\\
+&=\sum_{i=1}^{n} c_{i}f_{i}(v_{j})\\
+&=c_{j}
+\end{array}$$
+Luego, si $f$ es el funcional cero, $f\equiv 0$, se tiene que $f(v_{j})=0$ para todo $j=1,2,\cdots, n$, $f=\sum_{i=1}^{n} c_{i}f_{i}=0$ si y solo si $c_{j}=0$ para cada $j$.
+
+Por lo tanto los $n$ funcionales lineales $f_{1}, f_{2}, \cdots , f_{n}$ forman una base para $V^{\ast}$ a la que llamaremos base dual de $\mathcal{B}$ y denotaremos $\mathcal{B}^{\ast}$.
+
+```{theorem}
+	Sea $V$ un espacio vectorial de dimensión finita sobre el cuerpo $\mathbb{F}$ y sea $\mathcal{B}=\{v_{1}, v_{2}, \cdots, v_{n} \}$ una base de $V$. Existe una única base dual $\mathcal{B}^{\ast}=\{f_{1}, f_{2}, \cdots , f_{n} \}$ de $V^{\ast}$ tal que $f_{i}(v_{j})=\delta_{ij}$. Además, para cada funcional lineal $f$ sobre $V$ se tiene que $$f=\sum_{i=1}^{n} f(v_{i})f_{i}$$ y para cada $v\in V$ se tine que $$v=\sum_{i=1}^{n} f_{i}(v)v_{i}$$.
+
+```
+
+```{proof}
+Ya vimos que existe una única base que es dual de $\mathcal{B}$. Sea $f$ un funcional lineal sobre $V$, entoces $f=\sum_{i=1}^{n} c_{i}f_{i}$, donde cada $c_{i}=f(v_{i})$. Por otro lado, sea $v=\sum_{i=1}^{n} \lambda_{i}v_{i}$ un vector de $V$, entonces $$\begin{array}{ll}
+	f_{j}(v)&=\sum_{i=1}^{n} \lambda_{i}f_{j}(v_{i})\\
+	&=\sum_{i=1}^{n} \lambda_{i}\delta_{ij}\\
+	&=\lambda_{j}
+	\end{array}$$
+	por lo tanto la descomposición (única) de $v$ en la base $\mathcal{B}$ es, $v=\sum_{i=1}^{n} f_{j}(v)v_{i}$.
+
+```
+
+El teorema anterior nos dice que dada una base $\mathcal{B}=\{v_{1}, v_{2}, \cdots, v_{n} \}$ de un espacio vectorial $V$, la base dual viene dada por las funciones $f_{i}$, donde cada $f_{i}$ es la función que asigna a cada vector $v$ la i-ésima coordenada de $v$ respecto a la base ordenada $\mathcal{B}$, por esta razón también se conoce a las funciones $f_{i}$ como funciones coordenadas de $\mathcal{B}$. Por otro lado, dado un funcional $f$ en $V^{\ast}$, si $\lambda_{i}=f(v_{i})$, entonces para cada vector  $v=\gamma_{1}v_{1}+\gamma_{2}v_{2}+\cdots +\gamma_{n}v_{n}$ se tiene que $f(v)=\gamma_{1}\lambda_{1}+\gamma_{2}\lambda_{2}+\cdots +\gamma_{n}\lambda_{n}$.
+
+```{example}
+Sea $V$ el espacio vectorial de todas las funciones polinomios $p$ de $\mathbb{R}$ en $\mathbb{R}$ que tienen grado menor o igual que dos. Sean $t_{1}, t{2}, t{3}$ tres números reales distintos cualesquiera y sea $L_{i}(p)=p(t_{i})$. Entonces $L_{1}$, $L_{2}$ y $L_{3}$ son funcionales lineales sobre $V$. Si consideramos el funcional $L=\gamma_{1} L_{1}+ \gamma_{2} L_{2} + \gamma_{3} L_{3}$, luego $L\equiv 0$ si y solo si $L(p)=0$ para todo $p$ de $V$, entonces aplicando $L$ a las funciones plinómicas $1, x, x^{2}$, tenemos 
+	$$\left\lbrace \begin{array}{rl}
+	c_{1}+c_{2}+c_{3}&=0\\
+	t_{1}c_{1}+t_{2}c_{2}+t_{3}c_{3}&=0\\
+	t_{1}^{2}c_{1}+t_{2}^{2}c_{2}+t_{3}^{2}c_{3}&=0
+	\end{array}\right. $$ por lo que $c_{1}=c_{2}=c_{3}$. Entonces, $L_{1}$, $L{2}$ y $L_{3}$ son linealmente independientes y por lo tanto forman una base de $V^{\ast}$.
+Si queremos hallar la base $\mathcal{B}$ del espacio $V$ para la cual $\{L_{1}, L_{2}, L_{3} \}$ es dual, sabemos que cada $p\in\mathcal{B}$ debe satisfacer $L_{i}(p_{j})=\delta_{ij} \Leftrightarrow p_{j}(t_{i})$, específicamente:
+	$$\begin{array}{rl}
+	p_{1}(x)&=\dfrac{(x-t_{2})(x-t_{3})}{(t_{1}-t_{2})(t_{1}-t_{3})}\\
+	\\
+	p_{2}(x)&=\dfrac{(x-t_{1})(x-t_{3})}{(t_{2}-t_{1})(t_{2}-t_{3})}\\
+	\\
+	p_{3}(x)&=\dfrac{(x-t_{1})(x-t_{2})}{(t_{3}-t_{1})(t_{3}-t_{2})}
+\end{array} $$
+	Note que para cada $p\in V$, en virtud del teorema anterior, $p=p(t_{1})p_{1}+p(t_{2})p_{2}+p(t_{3})p_{3}$. Por lo tanto, para cada trio de números reales $r_{1}$, $r_{2}$ y $r_{3}$, existe una y solo una función polinómica $p$ de grado a lo sumo $2$, tal que, $p(t_{i})=r_{i}$ para cada $i=1,2,\cdots,3$ y $p=r_{1}p_{1}+r_{2}p_{2}+r_{3}p_{3}$.
+
+```
+
+Si $f$ es un funcional lineal no nulo sobre un espacio $V$, el rango de $f$ es uno. Pero sabemos que, como $V$ es de dimensión finita, la dimensión del espacio es la suma del rango y la nulidad, entonces $dim N_{f}=dim V -1$, por lo tanto, el subespacio nulo de $f$, $N_{f}$ tiene dimensión $n-1$.
+
+En un espacio vectorial de dimensión $n$, un subespacio de dimensión $n-1$ se le llama un *hiperespacio* (o *hiperplanos* o *subespacios de codimensión 1*). Se nos ocurre entonces la pregunta, ¿ todo hiperespacio es el espacio nulo de un funcional lineal? se puede ver fácilmente que si. También puede surgir la conjetura: todo subespacio de dimensión $m$ es la intersección de los espacios nulos de $n-m$ funcionales lineales. Esto lo veremos en lo que sigue.
+
+```{definition}
+Si $V$ es un espacio vectorial sobre un cuerpo $\mathbb{F}$ y $S$ es un subconjunto de $V$, el *anulador* de $S$ es el conjunto $S^{0}$ de funcionales lineales $f$ sobre $V$ tales que $f(v)=0$ para todo $v\in S$.
+
+```
+
+Es claro que $S^{0}$ es un subespacio de $V^{\ast}$, independientemente de que $S$ sea subespacio o no de $V$. Además, si $S$ consta unicamente del vector cero, es decir, $S=\{0\}$, entonces $S^{0}=V^{\ast}$; y si $S=V$, entonces $S^{0}$ es el espacio nulo de $V^{\ast}$.
+
+```{theorem}
+Sea $V$ un espacio vectorial de dimensión finita sobre el cuerpo $\mathbb{F}$ y sea $W$ un subespacio de $V$. Entonces $$dim W+dim W^{0}=dim V.$$
+
+```
+```{proof}
+	Sea $k$ la dimensión de $W$ y $\{v_{1}, v_{2}, \cdots , v_{k} \}$ una base de $W$. Sean $v_{k+1}, v_{k+2}, \cdots, v_{n}$ en $V$, de modo que $\mathcal{B}=\{v_{1}, v_{2}, \cdots , v_{n} \}$ sea una base de $V$. Sea $\{f_{1}, f_{2},\cdots ,f_{n} \}$ la base dual de $\mathcal{B}$. Veamos que $\{f_{k+1}, f_{k+2},\cdots ,f_{n} \}$ es base del anulador $W^{0}$. Como $f_{i}(v_{j})=\delta_{ij}$, se tiene que para $i\geq k+1$, $f_{i}(v_{j})=0$ para todo $v_{j}\in\mathcal{B}$ con $j\leq k$; por lo tanto $f_{i}(v)=0$ para todo $v\in W$ (por ser combinación lineal de los vectores $v_{1}, v_{2}, \cdots , v_{k}$). Además, $\{f_{k+1}, f_{k+2},\cdots ,f_{n} \}$ es un conjunto linealmente independiente (por ser subconjunto de una base). Por otro lado, dado $f\in W^{\ast}$, como $f=\sum_{i=1}^{n} f(v_{i})f_{i}=\sum_{i=k+1}^{n} f(v_{i})f_{i}$, ya que $f(v_{i})=0$ para todo $i\leq k$. De este modo, tenemos que $dim W^{0}=n-k$.
+
+```
 
 ## Ejercicios
 
