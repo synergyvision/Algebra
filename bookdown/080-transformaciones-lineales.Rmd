@@ -665,6 +665,26 @@ Sea $V$ un espacio vectorial de dimensión finita sobre el cuerpo $\mathbb{F}$ y
 
 ```
 
+```{corollary}
+Si $W$ es un subespacio de dimensión $k$ de un espacio vectorial de dimensión $n$, entonces $W$ es la intersección de $n-k$ hiperespacios de $V$.
+
+```
+
+```{proof}
+Sea $\{v_{1}, v_{2}, \cdots , v_{k} \}$ una base de $W$. Sean $v_{k+1}, v_{k+2}, \cdots, v_{n}$ en $V$, los vectores que completan la base, es decir,  $\mathcal{B}=\{v_{1}, v_{2}, \cdots , v_{n} \}$ es base de $V$. Sea $\{f_{1}, f_{2},\cdots ,f_{n} \}$ la base dual de $\mathcal{B}$. Entonces $W$ consta de los vectores $v$ tales que $f_{i}(v)=0$ para $i=k+1, \cdots ,n$.
+
+```
+
+```{corollary}
+Si $W_{1}$ y $W_{2}$ son subespacios de un espacio vectorial de dimensión finita, entonces $W_{1}=W_{2}$ si y solo si $W^{0}_{1}=W^{0}_{2}$.
+
+```
+
+```{proof}
+Si $W_{1}=W_{2}$, es claro que $W^{0}_{1}=W^{0}_{2}$. Supongamos que $W_{1}\neq W_{2}$ entonces existe un vector que $v\in W_{2}\setminus W_{1}$ o existe $w\in W_{2}\setminus W_{1}$ (o ambas cosas). Sin perdida de generalidad, supongamos que $v\in W_{2}\setminus W_{1}$. Entonces existe un funcional lineal $f$ tal que $f(u)=0$ para todo $u\in W_{1}$ pero $f(v)\neq 0$. Luego, $f\in W_{1}^{0}$ pero $f\notin W_{2}^{0}$, luego $W_{1}^{0}\neq W_{2}^{0}$.
+
+```
+
 ## Ejercicios
 
 1) Dada una transfotmación lineal $T:V\longrightarrow W$, el conjunto $Img(T)\prec W$. Además, el conjunto $\{v\in V: Tv=0 \}\prec V$.
