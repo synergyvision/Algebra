@@ -684,6 +684,73 @@ Si $W_{1}$ y $W_{2}$ son subespacios de un espacio vectorial de dimensión finit
 Si $W_{1}=W_{2}$, es claro que $W^{0}_{1}=W^{0}_{2}$. Supongamos que $W_{1}\neq W_{2}$ entonces existe un vector que $v\in W_{2}\setminus W_{1}$ o existe $w\in W_{2}\setminus W_{1}$ (o ambas cosas). Sin perdida de generalidad, supongamos que $v\in W_{2}\setminus W_{1}$. Entonces existe un funcional lineal $f$ tal que $f(u)=0$ para todo $u\in W_{1}$ pero $f(v)\neq 0$. Luego, $f\in W_{1}^{0}$ pero $f\notin W_{2}^{0}$, luego $W_{1}^{0}\neq W_{2}^{0}$.
 
 ```
+Veamos ahora la relación entre los sistemas lineal de ecuaciones homogéneas y los funcionales lineales. Supongamos que se tiene un sistema de ecuaciones lineales homogéneas
+$$\begin{array}{ccccc}
+A_{11}x_{1}+&\cdots&+ A_{1n}x_{n}&=& 0\\
+\vdots& &\vdots& &\\
+A_{m1}x_{1}+&\cdots&+ A_{mn}x_{n}&=& 0
+\end{array}$$
+y deseamos hallar sus soluciones. Si llamamos $f_{i}$ al funcional lineal en $\mathbb{F}^{n}$ definido por $$f_{i}=A_{i1}x_{1}+\cdots +A_{in}x_{n}$$ entonces hallar el subespacio de $\mathbb{F}^{n}$ que se anule por cada $f_{i}$, $i=1,\cdots, m$. Sabemos que el método de reducción por filas nos permitiría hallar el subespacio solución. Ahora bien, considerando la base canónica de $\mathbb{F}^{n}$, los coeficientes $A_{i1},\cdots ,A_{in}$ corresponden a las coordenadas del funcional $f_{i}$ en la base dual (a la canónica), por lo tanto, el espacio fila de la matriz de coeficientes es el espacio generado por los funcionales lineales $f_{1},\cdots ,f_{m}$. Luego el espacio solución es el subespacio de $\mathbb{F}^{n}$ anulado por este espacio de funcionales lineales.
+Ahora, si se tienen $m$ vectores de $\mathbb{F}^{n}$, $v_{i}=(A_{i1}, \cdots, A_{in})$, se quiere hallar el anulador del subespacio generado por los $v_{i}$, como un funcional lineal tiene la forma general $f(x_{1},\cdots, x_{n})=\lambda_{1}x_{1}+\cdots +c_{n}x_{n}$, pero un funcional lineal está en el anulador si $\sum_{j=1}^{n}A_{ij}\lambda_{j}=0$, para cada $i=1,\cdots, m$. Si y solo si, $\lambda_{1},\cdots, \lambda_{n}$ es solución del sistema $$\begin{array}{ccccc}
+A_{11}x_{1}+&\cdots&+ A_{1n}x_{n}&=& 0\\
+\vdots& &\vdots& &\\
+A_{m1}x_{1}+&\cdots&+ A_{mn}x_{n}&=& 0
+\end{array}.$$
+Entonces la reducción de filas nos permite hallar el anulador de un subespacio generado por un conjunto de vectores.
+
+```{example}
+Dados tres funcionales lineales sobre $\mathbb{R}^{4}$:
+$$\begin{array}{ll}
+f_{1}(x_{1},x_{2},x_{3},x_{4})&= 2x_{1}-1x_{2}+3x_{3}+2x_{4}\\
+f_{2}(x_{1},x_{2},x_{3},x_{4})&= x_{1}+4x_{2}-x_{4}\\
+f_{3}(x_{1},x_{2},x_{3},x_{4})&= 2x_{1}+6x_{2}-x_{3}+5x_{4}
+\end{array}$$ podemos hallar el subespacio anulado por $\{f_{1},f_{2},f_{3} \}$, hallando las soluciones del sistema $AX=0$, donde $$A=\left[\begin{array}{cccc}
+2&-1&3&2\\
+1&4&0&-1\\
+2&6&-1&5
+\end{array} \right] $$ es la matriz de coeficientes.
+Como ya vimos en el ejemplo \@ref(exm:ejem319) del capítulo 3, la matriz $A$ es equivalente por filas a la matriz escalonada reducida  $$R=\left[\begin{array}{cccc}
+1&0&0&\frac{17}{3}\\
+0&1&0&-\frac{5}{3}\\
+0&0&1&-\frac{11}{3}
+\end{array} \right] $$
+Por lo tanto, el espacio generado por los funcionales 
+$$\begin{array}{ll}
+g_{1}(x_{1},x_{2},x_{3},x_{4})&= x_{1}+\frac{17}{3}x_{4}\\
+g_{2}(x_{1},x_{2},x_{3},x_{4})&= x_{2}-\frac{5}{3}x_{4}\\
+g_{3}(x_{1},x_{2},x_{3},x_{4})&= x_{3}-\frac{11}{3}x_{4}
+\end{array}$$
+es el mismo espacio generado por los funcionales $f_{1},f_{2},f_{3}$, además de anular al mismo subespacio. Tal subespacio es fácil de hallar a partir de $g_{1},g_{2}$ y $g_{3}$, ya que $$\begin{array}{lll}
+g_{1}(x_{1},x_{2},x_{3},x_{4})&= x_{1}+\frac{17}{3}x_{4}&=0\\
+g_{2}(x_{1},x_{2},x_{3},x_{4})&= x_{2}-\frac{5}{3}x_{4}&=0\\
+g_{3}(x_{1},x_{2},x_{3},x_{4})&= x_{3}-\frac{11}{3}x_{4}&=0
+\end{array}\Leftrightarrow \begin{array}{ll}
+x_{1}&=-\frac{17}{3}x_{4}\\
+x_{2}&=\frac{5}{3}x_{4}\\
+x_{3}&=\frac{11}{3}x_{4}
+\end{array}$$
+
+```
+
+```{example}
+Sean $v_{1}=(-6,-3,0,-3,-3)$, $v_{2}=(0,3,6,3,2)$, $v_{3}=(-3,1,5,1,0)$ y $v_{4}=(4,1,-2,1,5)$ vectores de $\mathbb{R}^{5}$. Sea $W$ el subespacio generado por los vectores $v_{1}, v_{2}, v_{3}$ y $v_{4}$. El espacio anulador de $W$, $W^{0}$ consta de los funcionales $f(x_{1},x_{2},x_{3},x_{4},x_{5})=\sum_{j=1}^{5} \lambda_{j}x_{j}$ tales que $f(v_{i})=0$, para cada $i=1,\cdots,4$.
+Como $$A=\left[\begin{array}{ccccc}
+-6&-3&0&-3&-3\\
+0&3&6&3&2\\
+-3&1&5&1&0\\
+4&1&-2&1&5
+\end{array} \right]$$ es equivalente por filas a $$R=\left[\begin{array}{ccccc}
+1&0&-1&0&0\\
+0&1&2&1&0\\
+0&0&0&0&1\\
+0&0&0&0&0
+\end{array} \right]$$ entonces $f\in W^{0}$ si y solo si $f(v_{i})=0$, para cada $i=1,\cdots,4$ si y solo si $\sum_{j=1}^{5} [A]_{ij}\lambda_{j}=0$ para cada $i=1,\cdots,4$, si y solo si $\sum_{j=1}^{5} [R]_{ij}\lambda_{j}=0$ para cada $i=1,\cdots,3$, esto es $$\begin{array}{rl}
+\lambda_{1}-\lambda_{3}&=0\\
+\lambda_{2}+2\lambda_{3}+\lambda_{4}&=0\\
+\lambda_{5}&=0
+\end{array}$$ De este moso obtenemos todos los funcionales lineales de $W^{0}$ asignando valores arbitrarios a $\lambda_{3}$ y $\lambda_{4}$. Por ejemplo $\lambda_{3}=a$ y $\lambda_{4}=b$, entonces $\lambda_{1}=a$, $\lambda_{2}=-2a-b$ y $\lambda_{5}=0$, por lo tanto $f(x_{1},x_{2},x_{3},x_{4},x_{5})=ax_{1}+(-2a-b)x_{2}+ax_{3}+bx_{4}$. Note que la dimensión del espacio $W^{0}$ es $2$ y una base es $f_{1}=x_{1}-2x_{2}+x_{3}$ poniendo $a=1$ y $b=0$ y $f_{2}=-x_{2}+x_{4}$ poniendo $a=0$ y $b=1$. Es claro que el funcional anterior es $af_{1}+bf_{2}$.
+
+```
 
 ## Ejercicios
 
