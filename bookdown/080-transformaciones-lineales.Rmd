@@ -349,7 +349,7 @@ Sea $D:V\longrightarrow V$, donde $V$ es el espacio de los polinomios y $D$ es l
 
 ```
 
-```{theorem}
+```{theorem, label="teorema427"}
 Sean $V$ y $W$ espacios vectoriales de dimensión finita sobre $\mathbb{F}$, tales que $\dim V=\dim W$. Si $T$ es una transformación lineal de $V$ en $W$, las siguientes afirmaciones son equivalentes:
 
 1) $T$ es invertible.
@@ -751,6 +751,31 @@ Como $$A=\left[\begin{array}{ccccc}
 \end{array}$$ De este moso obtenemos todos los funcionales lineales de $W^{0}$ asignando valores arbitrarios a $\lambda_{3}$ y $\lambda_{4}$. Por ejemplo $\lambda_{3}=a$ y $\lambda_{4}=b$, entonces $\lambda_{1}=a$, $\lambda_{2}=-2a-b$ y $\lambda_{5}=0$, por lo tanto $f(x_{1},x_{2},x_{3},x_{4},x_{5})=ax_{1}+(-2a-b)x_{2}+ax_{3}+bx_{4}$. Note que la dimensión del espacio $W^{0}$ es $2$ y una base es $f_{1}=x_{1}-2x_{2}+x_{3}$ poniendo $a=1$ y $b=0$ y $f_{2}=-x_{2}+x_{4}$ poniendo $a=0$ y $b=1$. Es claro que el funcional anterior es $af_{1}+bf_{2}$.
 
 ```
+
+## El doble dual
+
+Ya vimos que a cada base $\mathcal{B}$ de un espacio vectorial $V$, le corresponde una base dual $\mathbb{B}^{\ast}$. Y que dada una base $\mathcal{B}^{\ast}$ de $V^{\ast}$, se puede hallar una base de $V$ para la cual $\mathcal{B}^{\ast}$ es dual. Veremos que podemos hacer esto último considerando el espacio dual de $V^{\ast}$, es decir el *doble dual* de $V$.
+
+Dado un vector $v\in V$, este induce un funcional lineal sobre $V^{\ast}$, $L_{v}$, definido por $L_{v}=f(v)$, para cada $f\in V^{\ast}$. La linealidad de $L_{v}$ viene dada por la linealidad de las operaciones en $V^{\ast}$: $$\begin{array}{rl}
+L_{v}(\lambda f + g)&=(\lambda f + g)(v)\\
+&=(\lambda f)(v)+g(v)\\
+&=\lambda f(v)+g(v)\\
+&=\lambda L_{v}(f)+ L_{v}(g)
+\end{array}$$
+
+Si $v_{0}$ es un vector no nulo de un espacio de dimensión finita $V$, $L_{v_{0}}$ no es cero. Por lo tanto, para cada $v$ no nulo, existe un funcional lineal $f$ tal que $f(v)\neq 0$. Es muy fácil ver que efectivamente es así, tomando una base ordenada $\mathcal{B}=\{v_{1}, v_{2},\cdots, v_{n} \}$ de $V$, de forma que $v_{1}=v_{0}$, se define el funcional lineal $f$ que a cada vector $v$ de $V$ le asigna su primera coordenada en la base $\mathcal{B}$, es decir, $f(v)=([v]_{\mathcal{B}})_{1}$.
+
+```{theorem}
+	Sea $V$ un espacio de dimensión finita sobre el cuerpo $\mathbb{F}$. Para cada vector $v$ de $V$ se define $$L_{v}(f)
+=f(v)\mbox{, } \forall f\in V^{\ast}$$ La aplicación $v\mapsto L_{v}$ es entonces un isomorfismo de $V$ sobre $V^{\ast\ast}$.
+
+```
+
+Ya vimos que para todo $v\in V$, $L_{v}$ es una transformación lineal. Veamos que la aplicación $v\mapsto L_{v}$ es una transformación lineal de $V$ en $V^{\ast\ast}$. Sean $u,v\in V$ y $\lambda\in\mathbb{F}$ $$\begin{array}{rl}
+L_{\lambda v+ u}(f)=&f(\lambda v+ u)\\
+=&\lambda f(v)+ f(u)\\
+=&\lambda L_{v}(f)+ L_{u}(f)
+\end{array}$$ es decir, $L_{\lambda v+ u}=\lambda L_{v}+ L_{u}$. Además es una transformación inyectiva, ya que $v=0$ si y solo si $L_{v}=0$. Como $\dim V=\dim V^{\ast}=\dim V^{\ast\ast}$, por el teorema \@ref(thm:teorema427) se tiene que esta transformación es biyectiva y por lo tanto, un isomorfismo entre $V$ y $V^{\ast\ast}$.
 
 ## Ejercicios
 
