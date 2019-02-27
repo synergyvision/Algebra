@@ -777,6 +777,63 @@ L_{\lambda v+ u}(f)=&f(\lambda v+ u)\\
 =&\lambda L_{v}(f)+ L_{u}(f)
 \end{array}$$ es decir, $L_{\lambda v+ u}=\lambda L_{v}+ L_{u}$. Además es una transformación inyectiva, ya que $v=0$ si y solo si $L_{v}=0$. Como $\dim V=\dim V^{\ast}=\dim V^{\ast\ast}$, por el teorema \@ref(thm:teorema427) se tiene que esta transformación es biyectiva y por lo tanto, un isomorfismo entre $V$ y $V^{\ast\ast}$.
 
+```{corollary}
+Sea $V$ un espacio vectorial de dimensión finita sobre el cuerpo $\mathbb{F}$. Si $L$ es un funcional lineal en el espacio dual $V^{\ast}$, entonces existe un único $v\in V$ tal que $L(f)=f(v)$ para cada $f\in V^{\ast}$.
+
+```
+
+```{corollary}
+Sea $V$ un espacio vectorial de dimensión finita sobre el cuerpo $\mathbb{F}$. Toda base de $V^{\ast}$ es el dual de una base de $\mathcal{B}$ de $V$.
+
+```
+```{proof}
+Sea $\mathcal{B}^{\ast}=\{f_{1},\cdots, f_{n} \}$ una base de $V^{\ast}$. Por el teorema \@ref(teorema443) existe una única base $\{L_{1},\cdots, L_{n} \}$ de $V^{\ast\ast}$ tal que $L_{i}(f_{j})=\delta_{ij}$. Por el corolario anterior se tiene que para cada $i$ existe $v_{i}\in V$ tal que $L_{i}(f)=f(v_{i})=L_{v_{i}}(f)$ para todo $f\in V^{\ast}$. Se sigue que $\{v_{1},\cdots, v_{n}\}$ es una base de $V$ y $\mathcal{B}^{\ast}$ es el dual de esta base.
+
+```
+
+El teorema \@ref(teorema451) nos permite pensar que el espacio dual de $V^{\ast}$, es el mismo espacio $V$, en realidad hay una identificación entre ellos. Este hecho es de utilidad, una muestra de ello es el corolario anterior. Pero no es la única; dado un conjunto $C$ del espacio $V^{\ast}$, $C^{0}$ es su anulador en $V^{\ast\ast}$, entonces (por el teorema \@ref(teorema451)) $C^{0}$ es un subespacio de $V$ que consta de todos los vectores $v$ tales que $f(v)=0$ para todos los $f\in C$, es decir de la intersección de todos los espacios nulos de $f\in C$. El corolario \@ref(corolario447) nos dice que todo subespacio $W$ está determinado por su subespacio anulador, esto es, igual que antes, los funcionales que anulan a los vectores de $W$, es decir, las intersecciones de los subespacios nulos de los funcionales $f$ en $W^{0}$. De alguna forma podríamos pensar que $W=(W^{0})^{0}$.
+
+```{theorem}
+Sea $S$ un subconjunto de un espacio de dimensión finita $V$, entonces $(S^{0})^{0}$ es el espacio generado por $S$, es decir $(S^{0})^{0}=\left\langle S\right\rangle$.
+
+```
+
+```{proof}
+Sea $W=\left\langle S\right\rangle $. Es claro que toda combinación lineal de elementos de $S$ pertenece al espacio nulo de toda función $f\in S^{0}$, por lo tanto $S^{0}=W^{0}$. Entonces $(S^{0})^{0}=(W^{0})^{0}=W$, ya que $\dim W+\dim W^{0}=\dim V \mbox{ y } \dim W^{0}+\dim (W^{0})^{0}=\dim V^{\ast}$ y $\dim V=\dim V^{\ast}$, por lo que se tiene que $\dim W=\dim (W^{0})^{0}$ y como $W\prec (W^{0})^{0}$, se concluye que $(W^{0})^{0}=W$.
+
+```
+
+Todo lo discutido hasta ahora sobre en esta y la sección anterior se ha hecho para espacios de dimensión finita. Se tienen resultados análogos para espacios de dimensión cualquiera pero requieren del axioma de la elección. El lector interesado puede leer al respecto en HACER REFERENCIA.
+
+Para cerrar esta sección estudiaremos la traspuesta de una una transformación lineal. Note que dada una transformación lineal $T$ de un espacio vectorial $V$ en otro $W$ ambos sobre un cuerpo $\mathbb{F}$. $T$ induce una transformación lineal de $W^{\ast}$ en $V^{\ast}$, de la siguiente manera: dado un funcional lineal $g\in W^{\ast}$, se define $f=g\circ T$. Como ya sabemos, la composición de transformaciones lineales, es una transformación lineal, se tiene que $f$ es un funcional lineal en $V$. Llamamos $T^{t}$ a dicha correspondencia, esto es, $T^{t}:W^{\ast}\longrightarrow V^{\ast}$ definida como antes, $T^{t}(g)=g\circ T$. Se tiene que $T^{t}$ es una transformación lineal, en efecto, sean $g_{1}, g_{2}\in W^{\ast}$ y $\lambda\in\mathbb{F}$, $$\begin{array}{rl}
+T^{t}(\lambda g_{1}+ g_{2})(v)=&((\lambda g_{1}+ g_{2})\circ T)(v)\\
+=&(\lambda g_{1}+ g_{2}) (Tv)\\
+=&\lambda g_{1}(Tv)+ g_{2}(Tv)\\
+=&\lambda (T^{t}g_{1})(v)+ (T^{t}g_{2})(v)
+\end{array}$$
+
+Esto se puede escribir de la siguiente manera
+
+```{theorem}
+Sean $V$ y $W$ espacios vectoriales sobre el cuerpo $\mathbb{F}$. Para toda transformación lineal $T$ de $V$ en $W$, existe una única transformación lineal $T^{t}$ de $W^{\ast}$ en $V^{\ast}$ tal que $(gT^{t})(v)=g(Tv)$ para toda $g\in W^{\ast}$ y todo $v\in V$.
+
+```
+
+A $T^{t}$ se le llama *traspuesta* de $T$, también se le puede llamar adjunta de $T$.
+
+```{theorem}
+Sean $V$ y $W$ espacios vectoriales sobre el cuerpo $\mathbb{F}$ y sea $T$ una transformación lineal de $V$ en $W$. El espacio nulo de $T^{t}$ es el anulador de la imagen de $T$. Si $V$ y $W$ son de dimensión finita, entonces
+	\begin{enumerate}
+		\item[i.] $rango(T^{t})=rango (T)$.
+		\item[ii.] la imagen de $T^{t}$ es el anulador del espacio nulo de $T$.
+	\end{enumerate}
+\end{theorem}
+\begin{proof}
+Si $g$ pertenece a $W^{\ast}$, entonces por definición $(gT^{t})(v)=g(Tv)$ para todo $v\in V$, $g$ está en el espacio nulo de $T^{t}$ si y solo si $g(Tv)=0$ para todo $v\in V$. Entonces, el espacio nulo de $T^{t}$ es el anulador de la imagen $T$. Supongamos que $V$ y $W$ son espacios de dimensión finita, digamos $\dim V=n$ y $\dim W=m$. Sea $r=rango T$, por el teorema \ref@(teorema446) se tiene que $\dim (Img T)^{0}=\dim W - rango T=m-r$. Por la primera parte del teorema $Nul (T^{t})=m-r$, por otro lado, como $T^{t}$ es una transformación lineal sobre un espacio de dimensión $m$, $rango T^{t}=\dim W-Nul (T^{t})=m-(m-r)=r$ por lo tanto $rango T^{t}=rango T$. Sea $N=Ker T$, si $f$ es un funcional en la imagen de $T^{t}$, entonces $f=T^{t}g$ para algún $g\in W^{\ast}$, entonces si $v\in N$, $f(v)=(T^{t}g)(v)=g(Tv)=g(0)=0$. Ahora bien, la imagen de $T^{t}$ es un subespacio de $N^{0}$ y $\dim N^{0}=n-\dim N=rango (T)=rango (T^{t})$, por lo tanto la imagen de $T^{t}$ es exactamente $N^{0}$.
+
+```
+
+
 ## Ejercicios
 
 1) Dada una transfotmación lineal $T:V\longrightarrow W$, el conjunto $Img(T)\prec W$. Además, el conjunto $\{v\in V: Tv=0 \}\prec V$.
