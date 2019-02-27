@@ -394,7 +394,7 @@ Si $A$ y $B$ son matrices equivalentes por filas, los sistemas homogeneos de ecu
 Basta suponer que $B$ se obtiene de aplicar una operación elemental $e$ a la matriz $A$. Luego, las ecuaciones del sistema $BX=0$ son combinaciones lineales de las ecuaciones del sistema $AX=0$, por lo que cada solución de $AX=0$ es solución de $BX=0$. Análogamente,  cada solución de $BX=0$ es solución de $AX=0$, ya que $A$ se obtiene al aplicar la operación elemental inversa de $e$ a la matriz $B$.
 ```
 
-```{example}
+```{example, label=ejm45}
 Dada la matriz de coeficientes 
 
 $$A=\left[  \begin{array}{cccc}
