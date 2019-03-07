@@ -609,8 +609,8 @@ Luego, si $f$ es el funcional cero, $f\equiv 0$, se tiene que $f(v_{j})=0$ para 
 
 Por lo tanto los $n$ funcionales lineales $f_{1}, f_{2}, \cdots , f_{n}$ forman una base para $V^{\ast}$ a la que llamaremos base dual de $\mathcal{B}$ y denotaremos $\mathcal{B}^{\ast}$.
 
-```{theorem}
-	Sea $V$ un espacio vectorial de dimensión finita sobre el cuerpo $\mathbb{F}$ y sea $\mathcal{B}=\{v_{1}, v_{2}, \cdots, v_{n} \}$ una base de $V$. Existe una única base dual $\mathcal{B}^{\ast}=\{f_{1}, f_{2}, \cdots , f_{n} \}$ de $V^{\ast}$ tal que $f_{i}(v_{j})=\delta_{ij}$. Además, para cada funcional lineal $f$ sobre $V$ se tiene que $$f=\sum_{i=1}^{n} f(v_{i})f_{i}$$ y para cada $v\in V$ se tine que $$v=\sum_{i=1}^{n} f_{i}(v)v_{i}$$.
+```{theorem, label="teorema114"}
+Sea $V$ un espacio vectorial de dimensión finita sobre el cuerpo $\mathbb{F}$ y sea $\mathcal{B}=\{v_{1}, v_{2}, \cdots, v_{n} \}$ una base de $V$. Existe una única base dual $\mathcal{B}^{\ast}=\{f_{1}, f_{2}, \cdots , f_{n} \}$ de $V^{\ast}$ tal que $f_{i}(v_{j})=\delta_{ij}$. Además, para cada funcional lineal $f$ sobre $V$ se tiene que $$f=\sum_{i=1}^{n} f(v_{i})f_{i}$$ y para cada $v\in V$ se tine que $$v=\sum_{i=1}^{n} f_{i}(v)v_{i}$$.
 
 ```
 
@@ -656,7 +656,7 @@ Si $V$ es un espacio vectorial sobre un cuerpo $\mathbb{F}$ y $S$ es un subconju
 
 Es claro que $S^{0}$ es un subespacio de $V^{\ast}$, independientemente de que $S$ sea subespacio o no de $V$. Además, si $S$ consta unicamente del vector cero, es decir, $S=\{0\}$, entonces $S^{0}=V^{\ast}$; y si $S=V$, entonces $S^{0}$ es el espacio nulo de $V^{\ast}$.
 
-```{theorem}
+```{theorem, label=teorema115}
 Sea $V$ un espacio vectorial de dimensión finita sobre el cuerpo $\mathbb{F}$ y sea $W$ un subespacio de $V$. Entonces $$dim W+dim W^{0}=dim V.$$
 
 ```
@@ -665,7 +665,7 @@ Sea $V$ un espacio vectorial de dimensión finita sobre el cuerpo $\mathbb{F}$ y
 
 ```
 
-```{corollary}
+```{corollary,label=corolario11}
 Si $W$ es un subespacio de dimensión $k$ de un espacio vectorial de dimensión $n$, entonces $W$ es la intersección de $n-k$ hiperespacios de $V$.
 
 ```
@@ -709,7 +709,7 @@ f_{3}(x_{1},x_{2},x_{3},x_{4})&= 2x_{1}+6x_{2}-x_{3}+5x_{4}
 1&4&0&-1\\
 2&6&-1&5
 \end{array} \right] $$ es la matriz de coeficientes.
-Como ya vimos en el ejemplo \@ref(exm:ejem319) del capítulo 3, la matriz $A$ es equivalente por filas a la matriz escalonada reducida  $$R=\left[\begin{array}{cccc}
+Como ya vimos en el ejemplo \@ref(exm:ejm45) del capítulo 4, la matriz $A$ es equivalente por filas a la matriz escalonada reducida  $$R=\left[\begin{array}{cccc}
 1&0&0&\frac{17}{3}\\
 0&1&0&-\frac{5}{3}\\
 0&0&1&-\frac{11}{3}
@@ -765,7 +765,7 @@ L_{v}(\lambda f + g)&=(\lambda f + g)(v)\\
 
 Si $v_{0}$ es un vector no nulo de un espacio de dimensión finita $V$, $L_{v_{0}}$ no es cero. Por lo tanto, para cada $v$ no nulo, existe un funcional lineal $f$ tal que $f(v)\neq 0$. Es muy fácil ver que efectivamente es así, tomando una base ordenada $\mathcal{B}=\{v_{1}, v_{2},\cdots, v_{n} \}$ de $V$, de forma que $v_{1}=v_{0}$, se define el funcional lineal $f$ que a cada vector $v$ de $V$ le asigna su primera coordenada en la base $\mathcal{B}$, es decir, $f(v)=([v]_{\mathcal{B}})_{1}$.
 
-```{theorem}
+```{theorem, label="teorema116"}
 	Sea $V$ un espacio de dimensión finita sobre el cuerpo $\mathbb{F}$. Para cada vector $v$ de $V$ se define $$L_{v}(f)
 =f(v)\mbox{, } \forall f\in V^{\ast}$$ La aplicación $v\mapsto L_{v}$ es entonces un isomorfismo de $V$ sobre $V^{\ast\ast}$.
 
@@ -787,11 +787,11 @@ Sea $V$ un espacio vectorial de dimensión finita sobre el cuerpo $\mathbb{F}$. 
 
 ```
 ```{proof}
-Sea $\mathcal{B}^{\ast}=\{f_{1},\cdots, f_{n} \}$ una base de $V^{\ast}$. Por el teorema \@ref(teorema443) existe una única base $\{L_{1},\cdots, L_{n} \}$ de $V^{\ast\ast}$ tal que $L_{i}(f_{j})=\delta_{ij}$. Por el corolario anterior se tiene que para cada $i$ existe $v_{i}\in V$ tal que $L_{i}(f)=f(v_{i})=L_{v_{i}}(f)$ para todo $f\in V^{\ast}$. Se sigue que $\{v_{1},\cdots, v_{n}\}$ es una base de $V$ y $\mathcal{B}^{\ast}$ es el dual de esta base.
+Sea $\mathcal{B}^{\ast}=\{f_{1},\cdots, f_{n} \}$ una base de $V^{\ast}$. Por el teorema \@ref(thm:teorema114) existe una única base $\{L_{1},\cdots, L_{n} \}$ de $V^{\ast\ast}$ tal que $L_{i}(f_{j})=\delta_{ij}$. Por el corolario anterior se tiene que para cada $i$ existe $v_{i}\in V$ tal que $L_{i}(f)=f(v_{i})=L_{v_{i}}(f)$ para todo $f\in V^{\ast}$. Se sigue que $\{v_{1},\cdots, v_{n}\}$ es una base de $V$ y $\mathcal{B}^{\ast}$ es el dual de esta base.
 
 ```
 
-El teorema \@ref(teorema451) nos permite pensar que el espacio dual de $V^{\ast}$, es el mismo espacio $V$, en realidad hay una identificación entre ellos. Este hecho es de utilidad, una muestra de ello es el corolario anterior. Pero no es la única; dado un conjunto $C$ del espacio $V^{\ast}$, $C^{0}$ es su anulador en $V^{\ast\ast}$, entonces (por el teorema \@ref(teorema451)) $C^{0}$ es un subespacio de $V$ que consta de todos los vectores $v$ tales que $f(v)=0$ para todos los $f\in C$, es decir de la intersección de todos los espacios nulos de $f\in C$. El corolario \@ref(corolario447) nos dice que todo subespacio $W$ está determinado por su subespacio anulador, esto es, igual que antes, los funcionales que anulan a los vectores de $W$, es decir, las intersecciones de los subespacios nulos de los funcionales $f$ en $W^{0}$. De alguna forma podríamos pensar que $W=(W^{0})^{0}$.
+El teorema \@ref(thm:teorema116) nos permite pensar que el espacio dual de $V^{\ast}$, es el mismo espacio $V$, en realidad hay una identificación entre ellos. Este hecho es de utilidad, una muestra de ello es el corolario anterior. Pero no es la única; dado un conjunto $C$ del espacio $V^{\ast}$, $C^{0}$ es su anulador en $V^{\ast\ast}$, entonces (por el teorema \@ref(thm:teorema116)) $C^{0}$ es un subespacio de $V$ que consta de todos los vectores $v$ tales que $f(v)=0$ para todos los $f\in C$, es decir de la intersección de todos los espacios nulos de $f\in C$. El corolario \@ref(cor:corolario11) nos dice que todo subespacio $W$ está determinado por su subespacio anulador, esto es, igual que antes, los funcionales que anulan a los vectores de $W$, es decir, las intersecciones de los subespacios nulos de los funcionales $f$ en $W^{0}$. De alguna forma podríamos pensar que $W=(W^{0})^{0}$.
 
 ```{theorem}
 Sea $S$ un subconjunto de un espacio de dimensión finita $V$, entonces $(S^{0})^{0}$ es el espacio generado por $S$, es decir $(S^{0})^{0}=\left\langle S\right\rangle$.
@@ -821,18 +821,72 @@ Sean $V$ y $W$ espacios vectoriales sobre el cuerpo $\mathbb{F}$. Para toda tran
 
 A $T^{t}$ se le llama *traspuesta* de $T$, también se le puede llamar adjunta de $T$.
 
-```{theorem}
+```{theorem, label="teorema819"}
 Sean $V$ y $W$ espacios vectoriales sobre el cuerpo $\mathbb{F}$ y sea $T$ una transformación lineal de $V$ en $W$. El espacio nulo de $T^{t}$ es el anulador de la imagen de $T$. Si $V$ y $W$ son de dimensión finita, entonces
-	\begin{enumerate}
-		\item[i.] $rango(T^{t})=rango (T)$.
-		\item[ii.] la imagen de $T^{t}$ es el anulador del espacio nulo de $T$.
-	\end{enumerate}
-\end{theorem}
-\begin{proof}
-Si $g$ pertenece a $W^{\ast}$, entonces por definición $(gT^{t})(v)=g(Tv)$ para todo $v\in V$, $g$ está en el espacio nulo de $T^{t}$ si y solo si $g(Tv)=0$ para todo $v\in V$. Entonces, el espacio nulo de $T^{t}$ es el anulador de la imagen $T$. Supongamos que $V$ y $W$ son espacios de dimensión finita, digamos $\dim V=n$ y $\dim W=m$. Sea $r=rango T$, por el teorema \ref@(teorema446) se tiene que $\dim (Img T)^{0}=\dim W - rango T=m-r$. Por la primera parte del teorema $Nul (T^{t})=m-r$, por otro lado, como $T^{t}$ es una transformación lineal sobre un espacio de dimensión $m$, $rango T^{t}=\dim W-Nul (T^{t})=m-(m-r)=r$ por lo tanto $rango T^{t}=rango T$. Sea $N=Ker T$, si $f$ es un funcional en la imagen de $T^{t}$, entonces $f=T^{t}g$ para algún $g\in W^{\ast}$, entonces si $v\in N$, $f(v)=(T^{t}g)(v)=g(Tv)=g(0)=0$. Ahora bien, la imagen de $T^{t}$ es un subespacio de $N^{0}$ y $\dim N^{0}=n-\dim N=rango (T)=rango (T^{t})$, por lo tanto la imagen de $T^{t}$ es exactamente $N^{0}$.
+
+(i.) $rango(T^{t})=rango (T)$.
+
+(ii.) la imagen de $T^{t}$ es el anulador del espacio nulo de $T$.
 
 ```
 
+```{proof}
+Si $g$ pertenece a $W^{\ast}$, entonces por definición $(gT^{t})(v)=g(Tv)$ para todo $v\in V$, $g$ está en el espacio nulo de $T^{t}$ si y solo si $g(Tv)=0$ para todo $v\in V$. Entonces, el espacio nulo de $T^{t}$ es el anulador de la imagen $T$. Supongamos que $V$ y $W$ son espacios de dimensión finita, digamos $\dim V=n$ y $\dim W=m$. Sea $r=rango T$, por el teorema \@ref(thm:teorema115) se tiene que $\dim (Img T)^{0}=\dim W - rango T=m-r$. Por la primera parte del teorema $Nul (T^{t})=m-r$, por otro lado, como $T^{t}$ es una transformación lineal sobre un espacio de dimensión $m$, $rango T^{t}=\dim W-Nul (T^{t})=m-(m-r)=r$ por lo tanto $rango T^{t}=rango T$. Sea $N=Ker T$, si $f$ es un funcional en la imagen de $T^{t}$, entonces $f=T^{t}g$ para algún $g\in W^{\ast}$, entonces si $v\in N$, $f(v)=(T^{t}g)(v)=g(Tv)=g(0)=0$. Ahora bien, la imagen de $T^{t}$ es un subespacio de $N^{0}$ y $\dim N^{0}=n-\dim N=rango (T)=rango (T^{t})$, por lo tanto la imagen de $T^{t}$ es exactamente $N^{0}$.
+
+```
+
+```{theorem, label="teorema820"}
+Sean $V$ y $W$ espacios vectoriales de dimensión finita sobre el cuerpo $\mathbb{F}$. Sean $\mathcal{B}$ es una base ordenada de $V$ y $\mathcal{B}^{\ast}$ su base dual. Sean $\mathcal{B}_{1}$ es una base ordenada de $W$ y $\mathcal{B}_{1}^{\ast}$ su base dual. Sea $T$ una transformación lineal de $V$ en $W$. Sea $A$ la matriz de $T$ respecto de las bases $\mathcal{B}$ y $\mathcal{B}_{1}$ y $B$ la matriz de la transformación $T^{t}$ respecto a $\mathcal{B}_{1}^{\ast}$ y $\mathcal{B}^{\ast}$. Entonces $B_{ij}=A_{ji}$.
+
+```
+
+```{proof}
+Supongamos que $\dim V=n$ y $\dim W=m$. Sean $\mathcal{B}=\{v_{1}, \cdots v_{n}\}$, $\mathcal{B}_{1}=\{u_{1}, \cdots u_{m}\}$, $\mathcal{B}^{\ast}=\{f_{1}, \cdots f_{n}\}$ y $\mathcal{B}^{\ast}_{1}=\{g_{1}, \cdots g_{m}\}$. Por definición de $A$ y $B$, se tiene que $$Tv_{i}=\sum_{k=1}^{m} A_{ki}u_{k} \mbox{ para } i=1,\cdots , n$$ y $$T^{t}g_{i}=\sum_{k=1}^{n} B_{ki}f_{k} \mbox{ para } i=1,\cdots , m$$
+Entonces se tiene que 
+$$\begin{array}{rl}
+(T^{t}g_{j})(v_{i})=&g_{j}(Tv_{i})\\
+=&g_{j}(\sum_{k=1}^{m} A_{kj}u_{k})\\
+=&\sum_{k=1}^{m} A_{kj}g_{j}(u_{k})\\
+=&\sum_{k=1}^{m} A_{kj}\delta_{jk}\\
+=&A_{ji}
+\end{array}$$
+Ahora, para cualquier funcional $f$ en $V$, se tiene que $f=\sum_{i=1}^{m} f(v_{i})f_{i}$; en particular para el funcional $T^{t}g_{j}$, se tiene que $$T^{t}g_{j}=\sum_{i=1}^{m} (T^{t}g_{j})(v_{i})f_{i}=\sum_{i=1}^{m} A_{ji}f_{i}$$ de donde se tiene que $$\sum_{k=1}^{n} B_{ki}f_{k}=T^{t}g_{i}=\sum_{i=1}^{m} A_{ji}f_{i}$$ por lo tanto $B_{ij}=A_{ji}$.
+
+```
+
+```{definition}
+Si $A$ es una matriz $m\times n$ sobre un cuerpo $\mathbb{F}$, la traspuesta de $A$ es la matriz $A^{t}$, $n\times m$, definida por $A^{t}_{ij}=A_{ji}$.
+
+```
+
+En virtud de la definición anterior, el teorema \@ref(thm:teorema820) nos dice que si $T$ es una transformación de $V$ en $W$ y $A$ es la matriz de la transformación $T$ en un par de bases ordenadas, entonces la matriz de $T^{t}$ en las bases duales correspondientes no es mas que la matriz $A^{t}$, la traspuesta de $A$.
+
+```{theorem}
+Sea $A$ cualquier matriz $m\times n$ sobre el cuerpo $\mathbb{F}$. Entonces el rango de filas de $A$ es igual al rango de columnas de $A$.
+
+```
+
+```{proof}
+Sean $\mathcal{B}_{1}$ y $\mathcal{B}_{2}$ las bases canónicas ordenadas de los espacios vectoriales $\mathbb{F}^{n}$ y $\mathbb{F}^{m}$ respectivamente. Sea $T$ la transformación lineal de $\mathbb{F}^{n}$ en $\mathbb{F}^{m}$ correspondiente a la matriz $A$ en las bases $\mathcal{B}_{1}$ y $\mathcal{B}_{2}$. Así, $T(x_{1},\cdots,x_{n})=(y_{1},\cdots,y_{m})$, donde $y_{i}=\sum_{j=1}^{n} A_{ij}x_{j}$.
+Note que el rango de la transformación $T$, que cosnta de las combinaciones lineales de las columnas de $A$, es igual al rango columna de $A$. Análogamente, como $A^{t}$ es la matriz de la transformación $T^{t}$, el rango de $T^{t}$ es el rango columna de $A^{t}$. Además, las filas de $A$ son las columnas de $A^{t}$, por lo tanto, el rango de $T^{t}$ es igual al rango fila de $A$. Por el teorema \@ref(thm:teorema456) se tiene que el rango de $T$ (es igual al rango de $T^{t}$) es igual al rango columna de $A$ y al rango fila de $A$.
+
+```
+
+Del teorema anterior podemos afirmar que dada una matriz $A$ $m\times n$ sobre un cuerpo $\mathbb{F}$ y $T$ es la transformación definida antes en la demostración del teorema, entonces $rango(T)=\mbox{ rango de filas } (A)=\mbox{ rango de columna }(A)$ entonces simplemente diremos que este número es el *rango* de $A$.
+
+Dado un espacio vectorial $V$ de dimensión $n$ sobre un cuerpo $\mathbb{F}$ y sea $T$ un operador lineal sobre $V$. Sea $\mathcal{B}=\{v_{1},\cdots, v_{n}\}$ una base ordenada de $V$. Supongamos que $A$ es la matriz de $T$ en la base ordenada $\mathbb{B}$, entonces $Tv_{j}=\sum_{i=1}^{n} A_{ij}v_{i}$, es decir, $A_{ij}$ es la $i-$ésima coordenada del vector $Tv_{j}$ en la base ordenada $\mathbb{B}$. Por otro lado, si $\{f_{1},\cdots, f_{n}\}$ es la base dual de $\mathcal{B}$, sabemos que $v=\sum_{i=1}^{n} f_{i}(v)v_{i}$, para cualquier vector $v$, entonces $A_{ij}=f_{i}(Tv_{j})$. Ahora, si cambiamos de base, digamos a la base ordenada $\mathcal{B}_{2}=\{u_{1},\cdots, u_{n}\}$ de $V$, con base dual $\{g_{1},\cdots, g_{n}\}$, entonces $B_{ij}=g_{i}(Tu_{j})$. Sea $U$ el operador cambio de base, es decir $Uv_{j}=u_{j}$. Entonces, como $U$ es invertible, $U^{t}$ también lo es y $(U^{t})^{-1}=(U^{1})^{t}$, luego la transpuesta de $U$ viene dada por $U^{t}g_{i}=f_{i}$ y $g_{i}=(U^{-1})^{t}f_{1}$, para cada $i=1,\cdots, n$; por lo tanto 
+$$\begin{array}{rl}
+B_{ij}=&[(U^{-1})^{t}f_{i}](Tu_{j})\\
+=&f_{i}(U^{-1}Tu_{j})\\
+=&f_{i}(U^{-1}TUv_{j})
+\end{array}$$
+De este modo, $f_{i}(U^{-1}TUv_{j})$ es el elemento $ij$ de la matriz $U^{-1}TU$ en la base $\mathcal{B}$. Además, es el elemento $ij$ de la matriz de $T$ en la base ordenada $\mathcal{B}_{2}$. Entonces 
+$$\begin{array}{rl}
+[T]_{\mathcal{B}_{2}}=&[U^{-1}TU]_{\mathcal{B}}\\
+	=&[U^{-1}]_{\mathcal{B}}[T]_{\mathcal{B}}[U]_{\mathcal{B}}\\
+	=&[U]_{\mathcal{B}}^{-1}[T]_{\mathcal{B}}[U]_{\mathcal{B}}
+\end{array}$$
+lo que es precisamente la fórmula de cambio de base que antes vimos.
 
 ## Ejercicios
 
