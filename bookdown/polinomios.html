@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+
+  <meta property="og:title" content="" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+<script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+
+
+
+<link rel="stylesheet" href="css\style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"><img src="images/logovision-black.png" width="160"></img></a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path=""><a href="#polinomios"><i class="fa fa-check"></i><b>1</b> Polinomios</a></li>
+<li class="divider"></li>
+<li><a href="https://bookdown.org" target="blank">Publicado con bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<!--bookdown:title:end-->
+<!--bookdown:title:start-->
+<div id="polinomios" class="section level1">
+<h1><span class="header-section-number">Capítulo 1</span> Polinomios</h1>
+<p>En este capítulo estudiaremos una estructura especial de objetos: <em>las álgebras</em>; avocándonos especialmente al estudio de un ejemplo muy importante, <em>los polinomios</em> y sus propiedades.</p>
+<p>Ya vimos que la definición de espacio vectorial <span class="math inline">\(V\)</span> sobre un cuerpo <span class="math inline">\(\mathbb{F}\)</span> lleva intrínseca la definición de dos operaciones, la suma de vectores, definida en <span class="math inline">\(V\times V\)</span> a <span class="math inline">\(V\)</span>, y el producto por un escalar, definda de <span class="math inline">\(\mathbb{F}\times V\)</span> en <span class="math inline">\(V\)</span>. Podemos definir una operación distinta a la suma de vectores, en <span class="math inline">\(V\times V\)</span> y que el resultado sea un vector. A dicha operación la llamaremos <em>multiplicación de vectores</em> y la denotaremos por <span class="math inline">\(u\cdot v\)</span> o simplemente <span class="math inline">\(uv\)</span>.</p>
+<p>El producto de matrices es un ejemplo de multiplicación de vectores.</p>
+
+<div class="definition">
+<p><span id="def:unnamed-chunk-1" class="definition"><strong>Definición 1.1  </strong></span>Un <em>algebra lineal sobre un cuerpo</em> <span class="math inline">\(\mathbb{F}\)</span> es una terna <span class="math inline">\((\mathcal{A},+,\cdot)\)</span>, en la que <span class="math inline">\((\mathcal{A},+)\)</span> un espacio vectorial sobre <span class="math inline">\(\mathbb{F}\)</span> y <span class="math inline">\(\cdot\)</span> es la operación multiplicación de vectores, de modo que:</p>
+<ol style="list-style-type: lower-roman">
+<li><p>la multiplicación es asociativa, es decir, <span class="math inline">\(u(vw)=(uv)w\)</span>,</p></li>
+<li><p>la multiplicación es distributiva respectoa la suma, esto es, <span class="math inline">\(u(v+w)=uv+uw\)</span> y <span class="math inline">\((u+v)w=uw+vw\)</span>,</p></li>
+<li><p>para todo escalar <span class="math inline">\(\lambda\in\mathbb{F}\)</span>, se tiene que <span class="math inline">\(\lambda(uv)=(\lambda u)v=u(\lambda v)\)</span>.</p></li>
+</ol>
+<p>Si existe un elemento <span class="math inline">\(1\in\mathcal{A}\)</span> tal que <span class="math inline">\(1v=v1=v\)</span>, para todo <span class="math inline">\(v\in\mathcal{A}\)</span>, decimos que <span class="math inline">\(\mathcal{A}\)</span> es un <em>álgebra lineal con unidad</em> y llamaremos <em>unidad</em> a dicho elemento. Diremos que <span class="math inline">\(\mathcal{A}\)</span> es un álgebra conmutativa* si <span class="math inline">\(uv=vu\)</span> para todo <span class="math inline">\(uv\in\mathcal{A}\)</span>.</p>
+</div>
+
+
+<div class="remark">
+<p> <span class="remark"><em>Nota. </em></span> Un álgebra lineal no es mas que un anillo <span class="math inline">\(\mathcal{A}\)</span> en el que <span class="math inline">\(\mathcal{A}\)</span> tiene estructura de espacio vectorial (con la operación suma definida en el anillo), donde además se cumple que <span class="math inline">\(\lambda(uv)=(\lambda u)v=u(\lambda v)\)</span>, para todo escalar <span class="math inline">\(\lambda\in\mathbb{F}\)</span> y para todo <span class="math inline">\(u,v\in \mathcal{A}\)</span>.</p>
+</div>
+
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-3" class="example"><strong>Ejemplo 1.1  </strong></span>El conjunto de las matrices <span class="math inline">\(n\times n\)</span> sobre un cuerpo <span class="math inline">\(\mathbb{F}\)</span> con las operaciones usuales, es un álgebra lineal con unidad no es conmutativa salvo que <span class="math inline">\(n=1\)</span>, es ese caso las matrices no son mas que el mismo cuerpo de escalares y entonces es un álgebra conmutativa, obviamente.</p>
+</div>
+
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-4" class="example"><strong>Ejemplo 1.2  </strong></span>El espacio de los operadores lineales sobre un espacio vectorial <span class="math inline">\(V\)</span>, <span class="math inline">\(L(V,V)\)</span> con la composición como multiplicación de vectores, es un álgebra lineal con unidad. Es conmutativa si y solo si el espacio es de dimensión uno.</p>
+</div>
+
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-5" class="example"><strong>Ejemplo 1.3  </strong></span>El <em>álgebra de las series formales de potencias</em>. Consideremos el espacio vectorial de las funciones del conjunto de los enteros no negativos <span class="math inline">\(S=\{0,1,2,\cdots\}\)</span> a un cuerpo <span class="math inline">\(\mathbb{F}\)</span>, es decir <span class="math inline">\(\mathbb{F}^{\infty}=\{f:S\longrightarrow \mathbb{F}: f \mbox{ es función } \}\)</span>. Entonces cada vector <span class="math inline">\(f\)</span> de <span class="math inline">\(\mathbb{F}^{\infty}\)</span> es una sucesión infinita de elementos de <span class="math inline">\(\mathbb{F}\)</span>, <span class="math inline">\(f=(f_{0},f_{1},\cdots)\)</span> (donde cada coordenada <span class="math inline">\(i\)</span> es la imagen de <span class="math inline">\(i\)</span> por la función <span class="math inline">\(f\)</span>, es decir, <span class="math inline">\(f_{i}=f(i)\)</span>). Se tiene que <span class="math inline">\(\lambda f +g=\lambda(f_{0},f_{1},\cdots )+(g_{0},g_{1},\cdots )=(\lambda f_{0}+g_{0}, \lambda f_{1}+g_{1},\cdots )\)</span>, donde <span class="math inline">\(f=(f_{0},f_{1},\cdots)\)</span>, <span class="math inline">\(g=(g_{0},g_{1},\cdots)\)</span> y <span class="math inline">\(\lambda\in\mathbb{F}\)</span>. Definimos la operación multiplicación de vectores así: dados <span class="math inline">\(f=(f_{0},f_{1},\cdots)\)</span> y <span class="math inline">\(g=(g_{0},g_{1},\cdots)\)</span> <span class="math display">\[(fg)_{n}=\sum_{i=0}^{n} f_{i}g_{n-i} \mbox{ para } n=0,1,2,\cdots\]</span> es decir, <span class="math display">\[fg=(f_{0}g_{0}, f_{0}g_{1}+f_{1}g_{0},f_{0}g_{2}+f_{1}g_{1}+f_{2}g_{1},\cdots).\]</span> Además, es fácil ver que esta operación es conmutativa <span class="math display">\[(fg)_{n}=\sum_{i=0}^{n} f_{i}g_{n-i} = \sum_{i=0}^{n} g_{i}f_{n-i}=(gf)_{n} \mbox{ para } n=0,1,2,\cdots\]</span> Si <span class="math inline">\(h\)</span> es otro vector de <span class="math inline">\(\mathbb{F}^{\infty}\)</span>, entonces para <span class="math inline">\(n=1,2,\cdots\)</span>, se tiene que: <span class="math display">\[\begin{array}{rl}
+[(fg)h]_{n}=&amp;\sum_{i=0}^{n}(fg)_{i}h_{n-i}\\
+&amp;\sum_{i=0}^{n}(\sum_{j=0}^{i}f_{j}g_{i-j})h_{n-i}\\
+&amp;\sum_{i=0}^{n}\sum_{j=0}^{i}f_{j}g_{i-j}h_{n-i}\\
+&amp;\sum_{j=0}^{n}\sum_{i=0}^{n-j}f_{j}g_{i}h_{n-j-i}\\
+&amp;\sum_{j=0}^{n}f_{j}\sum_{i=0}^{n-j}g_{i}h_{n-j-i}\\
+&amp;\sum_{j=0}^{n}f_{j}(gh)_{n-j}\\
+&amp;=[f(gh)]_{n}
+\end{array}\]</span> de donde se deduce que <span class="math inline">\((fg)h=f(gh)\)</span>. Se puede verificar fácilmente que la multiplicación cumple las condiciones (i) y (ii) de la definición de álgebra lineal y que el vector <span class="math inline">\((1,0,0,0,\cdots)\)</span> es la unidad. De donde se concluye que <span class="math inline">\(\mathbb{F}^{\infty}\)</span> es un álgebra lineal conmutativa con unidad sobre el cuerpo <span class="math inline">\(\mathbb{F}\)</span>. El vector <span class="math inline">\((0,1,0,0,\cdots)\)</span> juega un papel importante en esta álgebra, por lo que le otorgaremos una notación especial, <span class="math inline">\(x=(0,1,0,0,\cdots)\)</span>. Vea que <span class="math inline">\(xx=(0,0,1,0,0,\cdots)\)</span> y que <span class="math inline">\(xxx=(0,0,0,1,0,\cdots)\)</span>. En general, el producto de <span class="math inline">\(x\)</span> por si mismo <span class="math inline">\(n\)</span> veces se denotará <span class="math inline">\(x^{n}\)</span> y es igual al vector <span class="math inline">\((x^{n})_{n}=1\)</span> y <span class="math inline">\((x^{n})_{k}=0\)</span> siempre que <span class="math inline">\(k\neq n\)</span>. Convendremos que <span class="math inline">\(x^{0}=1\)</span>. Note además que el conjunto <span class="math inline">\(\{1,x,x^{2},\cdots\}\)</span> formado por todas las potencias de <span class="math inline">\(x\)</span> es un conjunto linealmente independiente e infinito, por lo tanto la dimensión de <span class="math inline">\(\mathbb{F}^{\infty}\)</span> no puede ser finita. Por último, cada vector <span class="math inline">\(f=(f_{0},f_{1},f_{2},\cdots)\)</span> suele escribirse como <span class="math display">\[f=\sum_{n=0}^{\infty} f_{n}x^{n}\]</span> Esta notación es puramente formal ya que no tenemos la noción de sumas infinitas desde el punto de vista algebraico, no debe confundirse con la definición de series susceptible a nociones de convergencia.</p>
+</div>
+
+</div>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-78759535-1', 'auto');
+ga('send', 'pageview');  
+</script>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/synergyvision/Algebra/edit/master/bookdown/%s",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "none"
+},
+"search": false
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
