@@ -1,0 +1,56 @@
+# Polinomios
+En este capítulo estudiaremos una estructura especial de objetos: *las álgebras*; avocándonos especialmente al estudio de un ejemplo muy importante, *los polinomios* y sus propiedades.
+
+Ya vimos que la definición de espacio vectorial $V$ sobre un cuerpo $\mathbb{F}$ lleva intrínseca la definición de dos operaciones, la suma de vectores, definida en $V\times V$ a $V$, y el producto por un escalar, definda de $\mathbb{F}\times V$ en $V$. Podemos definir una operación distinta a la suma de vectores, en $V\times V$ y que el resultado sea un vector. A dicha operación la llamaremos *multiplicación de vectores* y la denotaremos por $u\cdot v$ o simplemente $uv$.
+
+El producto de matrices es un ejemplo de multiplicación de vectores.
+
+```{definition}
+Un *algebra lineal sobre un cuerpo* $\mathbb{F}$ es una terna $(\mathcal{A},+,\cdot)$, en la que $(\mathcal{A},+)$ un espacio vectorial sobre $\mathbb{F}$ y $\cdot$ es la operación multiplicación de vectores, de modo que:
+  
+(i) la multiplicación es asociativa, es decir, $u(vw)=(uv)w$,
+
+(ii) la multiplicación es distributiva respectoa la suma, esto es, $u(v+w)=uv+uw$ y $(u+v)w=uw+vw$,
+
+(iii) para todo escalar $\lambda\in\mathbb{F}$, se tiene que $\lambda(uv)=(\lambda u)v=u(\lambda v)$.
+
+Si existe un elemento $1\in\mathcal{A}$ tal que $1v=v1=v$, para todo $v\in\mathcal{A}$, decimos que $\mathcal{A}$ es un *álgebra lineal con unidad* y llamaremos *unidad* a dicho elemento. Diremos que $\mathcal{A}$ es un álgebra  conmutativa* si $uv=vu$ para todo $uv\in\mathcal{A}$.
+
+```
+
+```{remark}
+Un álgebra lineal no es mas que un anillo $\mathcal{A}$ en el que $\mathcal{A}$ tiene estructura de espacio vectorial (con la operación suma definida en el anillo), donde además se cumple que $\lambda(uv)=(\lambda u)v=u(\lambda v)$, para todo escalar $\lambda\in\mathbb{F}$ y para todo $u,v\in \mathcal{A}$.
+
+```
+
+```{example}
+El conjunto de las matrices $n\times n$ sobre un cuerpo $\mathbb{F}$ con las operaciones usuales, es un álgebra lineal con unidad no es conmutativa salvo que $n=1$, es ese caso las matrices no son mas que el mismo cuerpo de escalares y entonces es un álgebra conmutativa, obviamente. 
+
+```
+
+```{example}
+El espacio de los operadores lineales sobre un espacio vectorial $V$, $L(V,V)$ con la composición como multiplicación de vectores, es un álgebra lineal con unidad. Es conmutativa si y solo si el espacio es de dimensión uno.
+
+```
+
+```{example}
+El *álgebra de las series formales de potencias*. Consideremos el espacio vectorial de las funciones del conjunto de los enteros no negativos $S=\{0,1,2,\cdots\}$ a un cuerpo $\mathbb{F}$, es decir $\mathbb{F}^{\infty}=\{f:S\longrightarrow \mathbb{F}: f \mbox{ es función } \}$. Entonces cada vector $f$ de $\mathbb{F}^{\infty}$ es una sucesión infinita de elementos de $\mathbb{F}$, $f=(f_{0},f_{1},\cdots)$ (donde cada coordenada $i$ es la imagen de $i$ por la función $f$, es decir, $f_{i}=f(i)$). Se tiene que  $\lambda f +g=\lambda(f_{0},f_{1},\cdots )+(g_{0},g_{1},\cdots )=(\lambda f_{0}+g_{0}, \lambda f_{1}+g_{1},\cdots )$, donde $f=(f_{0},f_{1},\cdots)$, $g=(g_{0},g_{1},\cdots)$ y $\lambda\in\mathbb{F}$.
+Definimos la operación multiplicación de vectores así: dados $f=(f_{0},f_{1},\cdots)$ y $g=(g_{0},g_{1},\cdots)$
+$$(fg)_{n}=\sum_{i=0}^{n} f_{i}g_{n-i} \mbox{ para } n=0,1,2,\cdots$$ es decir, $$fg=(f_{0}g_{0}, f_{0}g_{1}+f_{1}g_{0},f_{0}g_{2}+f_{1}g_{1}+f_{2}g_{1},\cdots).$$
+Además, es fácil ver que esta operación es conmutativa $$(fg)_{n}=\sum_{i=0}^{n} f_{i}g_{n-i} = \sum_{i=0}^{n} g_{i}f_{n-i}=(gf)_{n} \mbox{ para } n=0,1,2,\cdots$$
+Si $h$ es otro vector de $\mathbb{F}^{\infty}$, entonces para $n=1,2,\cdots$, se tiene que:
+$$\begin{array}{rl}
+[(fg)h]_{n}=&\sum_{i=0}^{n}(fg)_{i}h_{n-i}\\
+&\sum_{i=0}^{n}(\sum_{j=0}^{i}f_{j}g_{i-j})h_{n-i}\\
+&\sum_{i=0}^{n}\sum_{j=0}^{i}f_{j}g_{i-j}h_{n-i}\\
+&\sum_{j=0}^{n}\sum_{i=0}^{n-j}f_{j}g_{i}h_{n-j-i}\\
+&\sum_{j=0}^{n}f_{j}\sum_{i=0}^{n-j}g_{i}h_{n-j-i}\\
+&\sum_{j=0}^{n}f_{j}(gh)_{n-j}\\
+&=[f(gh)]_{n}
+\end{array}$$ de donde se deduce que $(fg)h=f(gh)$.
+Se puede verificar fácilmente que la multiplicación cumple las condiciones (i) y (ii) de la definición de álgebra lineal y que el vector $(1,0,0,0,\cdots)$ es la unidad. De donde se concluye que $\mathbb{F}^{\infty}$ es un álgebra lineal conmutativa con unidad sobre el cuerpo $\mathbb{F}$.
+El vector $(0,1,0,0,\cdots)$ juega un papel importante en esta álgebra, por lo que le otorgaremos una notación especial, $x=(0,1,0,0,\cdots)$. Vea que $xx=(0,0,1,0,0,\cdots)$ y que $xxx=(0,0,0,1,0,\cdots)$. En general, el producto de $x$ por si mismo $n$ veces se denotará $x^{n}$ y es igual al vector $(x^{n})_{n}=1$ y $(x^{n})_{k}=0$ siempre que $k\neq n$. Convendremos que $x^{0}=1$.
+Note además que el conjunto $\{1,x,x^{2},\cdots\}$ formado por todas las potencias de $x$ es un conjunto linealmente independiente e infinito, por lo tanto la dimensión de $\mathbb{F}^{\infty}$ no puede ser finita.
+Por último, cada vector $f=(f_{0},f_{1},f_{2},\cdots)$ suele escribirse como $$f=\sum_{n=0}^{\infty} f_{n}x^{n}$$ Esta notación es puramente formal ya que no tenemos la noción de sumas infinitas desde el punto de vista algebraico, no debe confundirse con la definición de series susceptible a nociones de convergencia.
+
+```
