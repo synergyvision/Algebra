@@ -12,14 +12,14 @@ Un *algebra lineal sobre un cuerpo* $\mathbb{F}$ es una terna $(\mathcal{A},+,\c
 
 (ii) la multiplicación es distributiva respectoa la suma, esto es, $u(v+w)=uv+uw$ y $(u+v)w=uw+vw$,
 
-(iii) para todo escalar $\lambda\in\mathbb{F}$, se tiene que $\lambda(uv)=(\lambda u)v=u(\lambda v)$.
+(iii) para todo escalar $c\in\mathbb{F}$, se tiene que $c(uv)=(cu)v=u(cv)$.
 
 Si existe un elemento $1\in\mathcal{A}$ tal que $1v=v1=v$, para todo $v\in\mathcal{A}$, decimos que $\mathcal{A}$ es un *álgebra lineal con unidad* y llamaremos *unidad* a dicho elemento. Diremos que $\mathcal{A}$ es un álgebra  conmutativa* si $uv=vu$ para todo $uv\in\mathcal{A}$.
 
 ```
 
 ```{remark}
-Un álgebra lineal no es mas que un anillo $\mathcal{A}$ en el que $\mathcal{A}$ tiene estructura de espacio vectorial (con la operación suma definida en el anillo), donde además se cumple que $\lambda(uv)=(\lambda u)v=u(\lambda v)$, para todo escalar $\lambda\in\mathbb{F}$ y para todo $u,v\in \mathcal{A}$.
+Un álgebra lineal no es mas que un anillo $\mathcal{A}$ en el que $\mathcal{A}$ tiene estructura de espacio vectorial (con la operación suma definida en el anillo), donde además se cumple que $c(uv)=(cu)v=u(cv)$, para todo escalar $c\in\mathbb{F}$ y para todo $u,v\in \mathcal{A}$.
 
 ```
 
@@ -54,3 +54,70 @@ Note además que el conjunto $\{1,x,x^{2},\cdots\}$ formado por todas las potenc
 Por último, cada vector $f=(f_{0},f_{1},f_{2},\cdots)$ suele escribirse como $$f=\sum_{n=0}^{\infty} f_{n}x^{n}$$ Esta notación es puramente formal ya que no tenemos la noción de sumas infinitas desde el punto de vista algebraico, no debe confundirse con la definición de series susceptible a nociones de convergencia.
 
 ```
+
+```{definition}
+Sea $\mathbb{F}[x]$ el espacio vectorial generado por los vectores potencia de $x$, es decir, $\mathbb{F}[x]=\left\langle 1,x,x^{2},x^{3},\cdots \right\rangle $. Un elemento de $\mathbb{F}[x]$ se llamará *polinomio sobre* $\mathbb{F}$.
+
+```
+
+Por definición $\mathbb{F}[x]$ es un subespacio de $\mathbb{F}[{\infty}]$. Además se tiene que $f\in\mathbb{F}^{\infty}$ no nulo, es un polinomio si y solo si existe un número entero $n\geq0$ tal que $f_{n}\neq 0$ y $f_{k}=0$ para todo $k>n$; llamaremos *grado* de $f$ a este entero y se denotará por $\mbox{grd } f$. No se le asignará ningún grado al polinomio $0$. Es decir, si $f$ es un polinomio no nulo de grado $n$, $f=f_{0}x^{0}+f_{1}x^{1}+\cdots+f_{n}x^{n}$ con $f_{n}\neq 0$. Se llamarán *coeficientes* a los escalares $f_{0},f_{1},\cdots, f_{n}$, además se dirá que $f$ es un polinomio con coeficientes $\mathbb{F}$. Se llamarán *polinomios escalares* a los polinomios de la forma $cx^{0}$ y se escribirá $c$ en lugar de $cx^{0}$. Un polinomio no nulo de grado $n$ se llamará *mónico* si $f_{n}=1$.
+
+Note que los polinomios son objetos diferentes a las funciones polinómicas mencionadas en la sección espacios vectoriales, pero ciertamente estos objetos tienen relación entre si.
+
+Veamos que el conjunto de los polinomios forman un álgebra.
+
+```{theorem}
+Sean $f$ y $g$ polinomios no nulos sobre $\mathbb{F}$, entonces:
+  
+(i.) $fg$ es un polinomio no nulo.
+
+(ii.) $\mbox{grd }f=\mbox{grd }f + \mbox{grd }g$.
+
+(iii.) $fg$ es polinomio mónico si y solo si $f$ y $g$ son polinomios mónicos.
+
+(iv.) $fg$ es un polinomio escalar si y solo si $f$ y $g$ polinomios escalares.
+
+(v.) Si $f+g\neq 0$, entonces $\mbox{grd }(f+g)=\max (\mbox{grd }f, \mbox{grd }g)$.
+
+```
+
+```{proof}
+Supongamos que $f$ tiene grado $m$ y que $g$ tiene grado $n$. Estudiemos los términos $(fg)_{i}$. Sea $k$ un entero no negativo, entoces $$(fg)_{m+n+k}=\sum_{i=0}^{m+n+k} f_{i}g_{m+n+k-i}$$ Si $i\leq m$ y $m+n+k-i\leq n$, se tiene que $(fg)_{m+n+k}\neq 0$; por lo tanto para que $(fg)_{m+n+k}\neq 0$ es necesario que $m+k\leq i\leq m$, de donde se sigue que $k=0$ e $i=m$. Así $(fg)_{m+n}=f_{m}g_{n}$, además $(fg)_{m+n+k}=0$ si $k>0$. Luego se verifica (i.) esto es que $fg$ es un polinomio no nulo, al igual que (ii.) $\mbox{grd }(fg)=m+n=\mbox{grd }f + \mbox{grd }g$, por lo tanto si $f$ y $g$ son polinomios mónicos, $fg$ también lo es (iii.). Y de aquí se sigue fácilmente (iv.). Para ver (v.) supongamos que $f+g\neq 0$, entonces existe $i\geq 0$ tal que $f_{i}+g_{i}\neq 0$. No puede suceder que $i>\max (\mbox{grd }f, \mbox{grd }g)$ de donde se sigue el resultado.
+
+```
+
+```{corollary}
+El conjunto de los polinomios sobre el cuerpo $\mathbb{F}$ junto con las operaciones de suma y multiplicación de polinomios, forman un álgebra lineal conmutativa con unidad sobre $\mathbb{F}$.
+
+```
+
+```{proof}
+Como $\mathbb{F}[x]$ es un subespacio de $\mathbb{F}^{\infty}$ y las operaciones de suma y el multiplicación de polinomios son las mismas operaciones de sumas y multiplicación definidas en $\mathbb{F}^{\infty}$, basta ver que la multiplicación de polinomios es cerrada, es decir, el resultado es nuevamente un polinomio. Esto se tiene directamente del teorema anterior cuando ambos factores de la multiplicación son polinomios no nulos. Cuando alguno de los factores es el polinomio cero, el producto es cero, el cual también es un polinomio.
+
+```
+
+```{corollary}
+Sean $f, g$ y $h$ polinomios sobre el cuerpo $\mathbb{F}$ con $f\neq 0$. Si $fg=fh$, entonces $g=h$.
+
+```
+
+```{proof}
+Como $fg=fh$, entonces $f(g-h)=0$. De la parte (i.) del teorema, como $f\neq 0$, se tiene que $g-h=0$, de donde se sigue el resultado.
+
+```
+
+```{remark}
+Para el caso de los polinomios, la expresión de la multiplicación de series de potencias $fg$ puede reescribirse de la siguiente forma, $$fg=\sum_{s=0}^{m+n}(\sum_{r=0}^{s}f_{r}g_{s-r})x^{s}\mbox{, con } \mbox{grad}f=m \mbox{ y grad}g=n$$
+En particular, si $f=cx^{m}$ y $g=dx^{n}$, con $c, d\in\mathbb{F}$, entonces $fg=cdx^{m+n}$. De esta forma, usando las leyes distributivas en $\mathbb{F}[x]$, la multiplicación de polinomios viene dada por $$\sum_{i\leq m, j\leq n} f_{i}g_{j}x^{i+j}$$
+
+```
+
+##ejercicios
+
+(1) Demuestre que si $f=cx^{m}$ y $g=dx^{n}$, con $c, d\in\mathbb{F}$, entonces $fg=cdx^{m+n}$.
+Respuesta: como $(fg)_{k}=\sum_{i=0}^{k}f_{i}g_{k-i}$ y $f_{i}=0$ si $i<m$ y $g_{j}=0$ si $j<n$, se tiene que solo para $k=m+n$ $(fg)_{k}\neq 0$.
+
+(2) Sean $f$ y $g$ polinomios de grado $m$ y $n$ respectivamente. Demuestre que: $$fg=\sum_{s=0}^{m+n}(\sum_{r=0}^{s}f_{r}g_{s-r})x^{s}.$$
+Respuesta: Considerando a $f$ y $g$ como una suma de polinomios de la base $\{x^{n}: n\geq 0\}$, $f=f_{0}+ f_{1}x+ f_{2}x^{2}+\cdots+f_{m}x^{m}$ y $g=g_{0}+ g_{1}x+ g_{2}x^{2}+\cdots+g_{m}x^{m}$, por las propiedades distributivas y el ejercicio anterios se obtiene el resultado.
+
+
