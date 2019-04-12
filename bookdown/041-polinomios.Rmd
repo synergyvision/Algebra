@@ -112,12 +112,83 @@ En particular, si $f=cx^{m}$ y $g=dx^{n}$, con $c, d\in\mathbb{F}$, entonces $fg
 
 ```
 
+```{definition}
+Sea $\mathcal{A}$ un álgebra lineal con unidad sobre $\mathbb{F}$. Se indicará la unidad de $\mathcal{A}$ por $1$ y se conviene que $\alpha^{0}=1$ para todo $\alpha\in\mathcal{A}$. Entonces a cada polinomio $f=\sum_{i=0}^{n} f_{i}x^{i}$ sobre $\mathbb{F}$ y cada $\alpha\in\mathcal{A}$ se asocia un elemento de $f(\alpha)\in\mathcal{A}$, de la forma: $$f(\alpha)=\sum_{i=0}^{n}f_{i}\alpha^{i}.$$
+
+```
+
+```{example}
+Sea $\mathbb{C}$ el cuerpo de los números complejos y sea $f=x^{2}+1$.
+
+(a) Si $\mathcal{A}=\mathbb{C}$. Sea $z\in\mathbb{C}$, entonces $f(z)=z^{2}+1$, en particular $f(3)=10$ y $f(i)=0$.
+(b) Si $\mathcal{A}=\mathcal{M}_{2}(\mathbb{C})$, el álgebra de las matrices $2\times 2$ sobre el cuerpo $\mathbb{C}$. Y sea $$B=\left[\begin{array}{cc}
+		-1&2\\
+		1&0
+		\end{array} \right] $$
+		se tiene que $f(B)=\left[\begin{array}{cc}
+		-1&2\\
+		1&0
+		\end{array} \right]^{2}+\left[\begin{array}{cc}
+		1&0\\
+		0&1
+		\end{array} \right]=\left[\begin{array}{cc}
+		4&-2\\
+		-1&3
+		\end{array} \right]$
+(c) Si $\mathcal{A}$ es el álgebra de los operadores lineales en $\mathbb{C}^{3}$ y sea $T(c_{1},c_{2},c_{3})=(ic_{2},-c_{3},-ic_{1})$. Entonces $f(T)=T^{2}+T$, esto es $f(T)(c_{1},c_{2},c_{3})=(c_{1}-ic_{3},c_{2}+ic_{1},c_{2}+c_{3})$, ya que $T^{2}(c_{1},c_{2},c_{3})=T(T(c_{1},c_{2},c_{3}))=(-ic_{3},ic_{1},c_{2})$
+
+```
+
+```{theorem}
+Sea $\mathbb{F}$ un cuerpo y $\mathcal{A}$ un álgebra lineal con unidad sobre $\mathbb{F}$. Sean $f$ y $g$ polinomios sobre $\mathbb{F}$, $\alpha\in\mathcal{A}$ y $c\in\mathbb{F}$. Entonces:
+
+(i.) $(cf+g)(\alpha)=cf(\alpha)+g(\alpha)$ y
+(ii.) $(fg)(\alpha)=f(\alpha)g(\alpha)$.
+
+```
+
+```{proof}
+Supongamos que $f=\sum_{i=0}^{m} f_{i}x^{i}$ y $g=\sum_{j=0}^{n} g_{j}x^{j}$, por lo tanto $$\displaystyle{\begin{array}{rl}
+	fg=&\sum_{\substack{i\leq m\\ j\leq n}} f_{i}g_{j}\alpha^{i+j}\\
+	=&\left( \sum_{\substack{i\leq m\\ j\leq n}} f_{i}\alpha^{i+j}\right)  \left( \sum_{\substack{i\leq m\\ j\leq n}} g_{i}\alpha^{i+j}\right)  \\
+	=&f(\alpha)g(\alpha)
+	\end{array}}.$$
+	Por otra parte, $$\begin{array}{rl}
+	(cf+g)(\alpha)=&\sum_{i=0}^{\max(m,n)} (cf_{i}+g_{i})\alpha^{i}\\
+	=&\sum_{i=0}^{\max(m,n)} cf_{i}(\alpha^{i})+g_{i}(\alpha^{i})\\
+	=&cf(\alpha)+g(\alpha)
+	\end{array}$$
+
+```
+
+
 ##ejercicios
 
-(1) Demuestre que si $f=cx^{m}$ y $g=dx^{n}$, con $c, d\in\mathbb{F}$, entonces $fg=cdx^{m+n}$.
+(1) Sea $S$ el conjunto de los enteros no negativos y $\mathbb{F}$ un cuerpo. Sea $\mathbb{F}^{\infty}$ el conjunto de las funciones de $S$ en $\mathbb{F}$. Se definen las operaciones, suma, producto por un escalar y multiplicación de vectores en $\mathbb{F}^{\infty}$ como en el ejemplo \ref{ejemplo55}. Demuestre que:
+(i.) la multiplicación es distributiva respecto de la suma, es decir, es decir, si $f,g,h\in \mathbb{F}^{\infty}$ entonces $f(g+f)=fg+fh$ y $(f+g)h=fh+gh$, 
+(ii.) para todo escalar $c\in\mathbb{F}$, se cumple que $c(fg)=(cf)g=f(cg)$.
+Respuesta: 
+$$\begin{array}{rl}
+[f(g+h)]_{n}=&\sum_{i=0}^{n} f_{i}(g+h)_{n-i} \forall n=1,2,\cdots\\
+=&\sum_{i=0}^{n} f_{i}g_{n-i}+f_{i}h_{n-i}\\
+=&\sum_{i=0}^{n} f_{i}g_{n-i}+\sum_{i=0}^{n}f_{i}h_{n-i}\\
+=&(fg)_{n}+(fh)_{n}
+\end{array}$$ por lo tanto $f(g+h)=fg+fh$.
+De forma análoga se tiene que $[(f+g)h]_{n}=(fh)_{n}+(gh)_{n} \forall n=1,2,\cdots$ y eso demuestra (a).
+Veamos que se cumple (b)
+$$\begin{array}{rl}
+[k(fg)]_{n}=&k(fg)_{n}\\
+=&k\sum_{i=0}^{n} f_{i}g_{n-i} \forall n=1,2,\cdots\\
+=&\sum_{i=0}^{n} kf_{i}g_{n-i}\\
+=&\sum_{i=0}^{n} (kf_{i})g_{n-i}\\
+=&[(kf)g]_{n}
+\end{array}$$
+lo que muestra que $k(fg)=(kf)g$. Ahora, sustituyendo la cuarta linea de la cadena de igualdades anteriores, por $\sum_{i=0}^{n} f_{i}(kg_{n-i})$ obtenemos que $k(fg)=f(kg)$.
+
+(2) Demuestre que si $f=cx^{m}$ y $g=dx^{n}$, con $c, d\in\mathbb{F}$, entonces $fg=cdx^{m+n}$.
 Respuesta: como $(fg)_{k}=\sum_{i=0}^{k}f_{i}g_{k-i}$ y $f_{i}=0$ si $i<m$ y $g_{j}=0$ si $j<n$, se tiene que solo para $k=m+n$ $(fg)_{k}\neq 0$.
 
-(2) Sean $f$ y $g$ polinomios de grado $m$ y $n$ respectivamente. Demuestre que: $$fg=\sum_{s=0}^{m+n}(\sum_{r=0}^{s}f_{r}g_{s-r})x^{s}.$$
+(3) Sean $f$ y $g$ polinomios de grado $m$ y $n$ respectivamente. Demuestre que: $$fg=\sum_{s=0}^{m+n}(\sum_{r=0}^{s}f_{r}g_{s-r})x^{s}.$$
 Respuesta: Considerando a $f$ y $g$ como una suma de polinomios de la base $\{x^{n}: n\geq 0\}$, $f=f_{0}+ f_{1}x+ f_{2}x^{2}+\cdots+f_{m}x^{m}$ y $g=g_{0}+ g_{1}x+ g_{2}x^{2}+\cdots+g_{m}x^{m}$, por las propiedades distributivas y el ejercicio anterios se obtiene el resultado.
 
 
