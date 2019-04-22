@@ -161,6 +161,9 @@ Supongamos que $f=\sum_{i=0}^{m} f_{i}x^{i}$ y $g=\sum_{j=0}^{n} g_{j}x^{j}$, po
 
 ```
 
+En esta parte haremos un breve estudio sobre la interpolación de Lagrange (interpolación polinómica de Lagrange). Se quiere construír un polinomio sencillo que "pase" por ciertos puntos. Más formalmente, sea $\mathbb{F}$ un cuerpo y $t_{0},t_{1},\cdots, t_{n}$ $n+1$ elementos distintos de $\mathbb{F}$. Consideremos el subespacio $V$ de $\mathbb{F}[x]$ formado por los polinomios de grado menor o igual a $n$ (incluído el polinomio $0$ para dar estructura de espacio vectorial). Sean $L_{i}$ las funciones definidas por $L_{i}(f)=f(t_{i})$ para todo $f\in V$, con $i=0,1,\cdots ,n$. Note que cada $L_{i}$ es una función de $V$ en el cuerpo $\mathbb{F}$, es decir es un funcional lineal sobre $V$. Se tiene que $\{L_{i}:i=0,1,\cdots, n \}$ es una base de $V^{\ast}$, mas específicamente, $\{L_{i}:i=0,1,\cdots, n \}$ es el dual de una base $\{P_{i}:i=0,1,\cdots, n \}$ de $V$. Además, en virtud del teorema \@ref{thm:teorema443} es única para esta y esta caracterizada por $$L_{j}(P_{i})=P_{i}(t_{j})=\delta_{ij}.$$ 
+Sean $$P_{i}=\frac{(x-t_{0})\cdots(x-t_{i-1})(x-t_{i+1})\cdots (x-t_{n}) }{(t_{i}-t_{0})\cdots(t_{i}-t_{i-1})(t_{i}-t_{i+1})\cdots (t_{i}-t_{n})}=\prod_{j\neq i} \left( \frac{x-t_{j}}{t_{i}-t_{j}}\right) $$
+polinomios en $V$. Si $f=\sum_{i=0}^{n} c_{i}P_{i}$, entonces para todo $j$ se tiene que $f(t_{j})=\sum_{i=0}^{n} c_{i}P_{i}(t_{j})=c_{j}$ (ya que $P_{i}(t_{j})\neq 0$ solo cuando $i=j$). Como el polinomio cero es cero para todo coeficiente $t$, es decir $0(t)=0$ para todo $t\in\mathbb{F}$, se tiene que $P_{0},P_{1},\cdots,P_{n}$ son linealmente independientes. Recordemos que la dimensión de $V$ es $n+1$, por lo tanto la colección $\{P_{0},P_{1},\cdots,P_{n}\}$ es también una base de $V$. Entonces, para todo $f\in V$ se tiene que $$f=\sum_{i=0}^{n} f(t_{i})P_{i}$$ conocida como la *fórmula de interpolación de Lagrange*.
 
 ##ejercicios
 
