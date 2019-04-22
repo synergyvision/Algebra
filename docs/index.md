@@ -4,7 +4,7 @@
 title: "Álgebra Lineal"
 subtitle: "Ciencia de los Datos Financieros"
 author: "Synergy Vision"
-date: "2019-01-16"
+date: "2019-04-22"
 knit: "bookdown::render_book"
 documentclass: krantz
 bibliography: [book.bib, packages.bib]
@@ -2151,7 +2151,7 @@ Como ya lo hemos mencionado, aplicar una operación elemental por filas es equiv
 
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Basta suponer que $B$ se obtiene de aplicar una operación elemental $e$ a la matriz $A$. Luego, las ecuaciones del sistema $BX=0$ son combinaciones lineales de las ecuaciones del sistema $AX=0$, por lo que cada solución de $AX=0$ es solución de $BX=0$. Análogamente,  cada solución de $BX=0$ es solución de $AX=0$, ya que $A$ se obtiene al aplicar la operación elemental inversa de $e$ a la matriz $B$.</div>\EndKnitrBlock{proof}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-231"><strong>(\#exm:unnamed-chunk-231) </strong></span>Dada la matriz de coeficientes 
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:ejm45"><strong>(\#exm:ejm45) </strong></span>Dada la matriz de coeficientes 
 
 $$A=\left[  \begin{array}{cccc}
 	2 & -1 & 3 & 2 \\
@@ -2258,7 +2258,7 @@ $$\left\lbrace
 	  
 son equivalentes y por lo tanto tienen las mismas soluciones. Del segundo sistema salta a la vista que una solución es de la forma $(\frac{-17}{3}\lambda,\frac{5}{3}\lambda,\frac{11}{3}\lambda,\lambda)$ para cualquier número real $\lambda$.</div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-232"><strong>(\#exm:unnamed-chunk-232) </strong></span>Dada la ecuación con coeficientes en el cuerpo de los números complejos $\mathbb{C}$:
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-231"><strong>(\#exm:unnamed-chunk-231) </strong></span>Dada la ecuación con coeficientes en el cuerpo de los números complejos $\mathbb{C}$:
 
 $$\left\lbrace 
 	\begin{array}{ccc}
@@ -2341,9 +2341,9 @@ x_{2}
 Dada cualquier matriz $A$ de orden $m\times n$, podemos hallar una matriz equivalente por filas que sea escalonda reducida por filas, realizando un número finito de operaciones por filas según el siguiente algoritmo. Toda fila nula de la matriz se mueven hacia abajo de la matriz por medio de la operación intercambio de filas, de forma que todas ellas queden en las últimas filas de la matriz, es decir, supongamos que existen $r\leq m$ filas no nulas, entonces las últimas filas $r+1, r+2, \cdots, m$ serán las filas de ceros, de forma que el bloque superior $1,2,\cdots, r$ serán las filas no nulas. Luego, considerando esta nueva matriz (la llamaremos $A$, por comodidad). Sea $a_{1k_{1}}$ el primer elemento no nulo de la primera fila ($k_{1}$ es la columna donde aparece el primer elemento no nulo de la fila $1$), si $a_{1k_{1}}=1$, se cumple la condición (1), si no es así, aplicamos la operación $\frac{1}{a_{1k_{1}}} e_{1}$ para hacer que el pivote sea $1$. Ahora, debemos hacer que todo elemento en esa columna sea cero  si está en otra fila (condición (2)), para esto aplicamos la operación $-a_{ik_{1}}e_{i}$ para cada fila $1\neq i\leq r$. Pasamos a la siguiente fila, $A_{2\ast}$, consideramos el primer elemento no nulo de dicha fila, $a_{2k_{2}}$, donde $k_{2}$ es la columna que ocupa. Si $a_{2k_{2}}=1$, no haremos nada, en otro caso, aplicamos la operación $\frac{1}{a_{2k_{2}}} e_{2}$, con esto se cumple la condición (1) para esta fila. Ahora aplicamos $-a_{ik_{2}}e_{i}$ para cada fila $2\neq i\leq r$, con esto se cumple la condición (2). Repetimos este proceso para cada una de las filas no nulas de $A$, es decir, para las filas $1,2,\cdots, r$. Ahora ordenamos las filas no nulas intercambiando filas para lograr que se cumpla la condición (4), es decir, que se cumpla que $p_{1}< p_{2}< \cdots < p_{r}$, llamando $p_{i}$ a la columna del pivote de la fila $i$ luego de aplicar las operaciones elementales por filas. Es claro que estas operaciones son siempre posibles de aplicar a cualquier matriz, en un número finito de pasos.
 De lo anterior podemos concluir que siempre podemos reducir una matriz a una escalonada. Podemos expresarlo como un teorema, cuya demostración es el algoritmo anterior.
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-233"><strong>(\#thm:unnamed-chunk-233) </strong></span>Toda matriz $m\times n$ sobre el cuerpo $\mathbb{F}$ es equivalente por filas a una matriz escalonada reducida por filas.</div>\EndKnitrBlock{theorem}
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-232"><strong>(\#thm:unnamed-chunk-232) </strong></span>Toda matriz $m\times n$ sobre el cuerpo $\mathbb{F}$ es equivalente por filas a una matriz escalonada reducida por filas.</div>\EndKnitrBlock{theorem}
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-234"><strong>(\#thm:unnamed-chunk-234) </strong></span>Si $A$ es una matriz $m\times n$ con $m<n$, el sistema homogéneo de ecuaciones lineales $AX=0$ tiene una solución no trivial.</div>\EndKnitrBlock{theorem}
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-233"><strong>(\#thm:unnamed-chunk-233) </strong></span>Si $A$ es una matriz $m\times n$ con $m<n$, el sistema homogéneo de ecuaciones lineales $AX=0$ tiene una solución no trivial.</div>\EndKnitrBlock{theorem}
 
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Sea $R$ una matriz escalón reducida por filas equivalente por filas a la matriz $A$. Entonces $AX=0$ y $RX=0$ tienen exactamente las mismas soluciones. Supongamos que $R$ tiene $r$ filas no nulas, luego $r<n$, luego el sistema de ecuaciones $RX=0$ consta de $r$ ecuaciones no triviales, a saber, suponiendo que $x_{k_{i}}$ es la incógnita que aparece en la posición del pivote de la fila $i$,
 
@@ -2371,7 +2371,7 @@ $$\begin{array}{cc}
 
 Por lo tanto, para que el sistema tenga solución debe suceder que $z_{r+1}=z_{r+2}=\cdots=z_{m}=0$. Si esto ocurre entonces las soluciones del sistema se obtienen dando valores arbitrarios a la $n-j$ incógnitas $x_{j}$.
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-237"><strong>(\#exm:unnamed-chunk-237) </strong></span>Sea 
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-236"><strong>(\#exm:unnamed-chunk-236) </strong></span>Sea 
 
 $$A=\left[\begin{array}{ccc}
 	1 & -2 & 1\\
@@ -2439,10 +2439,10 @@ para cualquier valor de $x_{3}$.</div>\EndKnitrBlock{example}
 Note que la igualdad $A(BC)=(AB)C$ implica, entre otras cosas, que combinaciones lineales de combinaciones lineales de las filas de $C$, son otra vez combinaciones lineales de las filas de $C$.
 Si $C$ es una matriz que se obtiene de aplicar una operación elemental de fila a $B$, entonces las filas de $C$ son combinación lineal de las filas de $B$, por lo tanto debe existir una matriz $A$, tal que $C=AB$. Pueden existir muchas matrices con tal propiedad; veremos como escoger una de ellas.
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-238"><strong>(\#def:unnamed-chunk-238) </strong></span>Una matriz $m\times m$ es una *matriz elemental* si se obtiene de aplicar una sola operación elemental de filas a la matriz identidad (de orden $m\times m$).
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-237"><strong>(\#def:unnamed-chunk-237) </strong></span>Una matriz $m\times m$ es una *matriz elemental* si se obtiene de aplicar una sola operación elemental de filas a la matriz identidad (de orden $m\times m$).
 </div>\EndKnitrBlock{definition}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-239"><strong>(\#exm:unnamed-chunk-239) </strong></span>Una matriz elementa de orden $2\times 2$ es necesariamente como alguna de las siguientes: 
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-238"><strong>(\#exm:unnamed-chunk-238) </strong></span>Una matriz elementa de orden $2\times 2$ es necesariamente como alguna de las siguientes: 
   
 $$ \left[ \begin{array}{cc}
 	0 & 1\\
@@ -2468,7 +2468,7 @@ $$\left[ \begin{array}{cc}
 	0 & \delta
 \end{array} \right] \mbox{ con } \delta\neq 0$$</div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-240"><strong>(\#thm:unnamed-chunk-240) </strong></span>Sea $E$ una matriz elemental que corresponde a la operación elemental por filas $e$. Sea $A$ una matriz $m\times n$. Entonces $e(A)=EA$.</div>\EndKnitrBlock{theorem}
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-239"><strong>(\#thm:unnamed-chunk-239) </strong></span>Sea $E$ una matriz elemental que corresponde a la operación elemental por filas $e$. Sea $A$ una matriz $m\times n$. Entonces $e(A)=EA$.</div>\EndKnitrBlock{theorem}
 
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Note que el elemento $[EA]_{ij}$ se obtien de la $i$-ésima fila de $E$ y la $j$-ésima columna de $A$. Estudiemos cada tipo de operación por separado, comenzaremos con la mas complicada y las otras dos se dejan como ejercicio. Supongamos que $e= \lambda e_{sr}$ (se sustituye la fila $r$ por la fila $r$ mas $\lambda$ veces la fila $s$). Se tiene que $E=\lambda e_{sr}(I)$, por lo tanto:
   
@@ -2490,21 +2490,21 @@ $$ [EA]_{ij}=\sum_{k=1}^{m} [E]_{ik}[A]_{kj}=
 		  
 Por lo tanto $EA=e(A)$.</div>\EndKnitrBlock{proof}
 
-\BeginKnitrBlock{corollary}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-242"><strong>(\#cor:unnamed-chunk-242) </strong></span>Sean $A$ y $B$ matrices de orden $m\times n$ sobre el cuerpo $\mathbb{F}$. Entonces $B$ es equivalente por filas a $A$ si y solo si $B=PA$, donde $P$ es un producto de matrices elementales $m\times m$.</div>\EndKnitrBlock{corollary}
+\BeginKnitrBlock{corollary}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-241"><strong>(\#cor:unnamed-chunk-241) </strong></span>Sean $A$ y $B$ matrices de orden $m\times n$ sobre el cuerpo $\mathbb{F}$. Entonces $B$ es equivalente por filas a $A$ si y solo si $B=PA$, donde $P$ es un producto de matrices elementales $m\times m$.</div>\EndKnitrBlock{corollary}
 
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Supongamos que $E_{1}, E_{2},\cdots, E_{k}$ matrices elementales correspondientes a las operaciones elementales por fila $e_{1}, e_{2},\cdots, e_{k}$. Entonces $B=e_{1}\circ e_{2}\circ\cdots \circ e_{k}(A)$ si y solo si $B=E_{1} E_{2} \cdots E_{k} A=PA$, con $P=E_{1} E_{2} \cdots E_{k}$.</div>\EndKnitrBlock{proof}
 
 Si $A$ es una matriz equivalente por filas a $B$, el corolario anterior asegura que existe $P$, tal que $B=PA$, donde $P$ es producto de matrices elementales. Por otro lado se tiene que $B$ es equivalente por filas a $A$, luego existe una matriz $Q$, producto de matrices elementales, tal que $A=QB$. En particular, esto es cierto para la matriz identidad, es decir $I=QB=QP$. Veremos que la existencia de la matriz $Q$, tal que $QP=I$ es equivalente al hecho de que $P$ es producto de matrices elementales.
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-244"><strong>(\#def:unnamed-chunk-244) </strong></span>Sea $A$ una matriz (cuadrada) $n\times n$ sobre el cuerpo $\mathbb{F}$. Una matriz $B$ $n\times n$, tal que $BA=I$ se llama *inversa izquierda* de $A$; una matriz $B$ $n\times n$, tal que $AB=I$ se llama *inversa derecha* de $A$. Si $AB=BA=I$, entonces $B$ se llama *inversa bilateral* de $A$ y en este caso se dice que $A$ es *invertible*.</div>\EndKnitrBlock{definition}
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-243"><strong>(\#def:unnamed-chunk-243) </strong></span>Sea $A$ una matriz (cuadrada) $n\times n$ sobre el cuerpo $\mathbb{F}$. Una matriz $B$ $n\times n$, tal que $BA=I$ se llama *inversa izquierda* de $A$; una matriz $B$ $n\times n$, tal que $AB=I$ se llama *inversa derecha* de $A$. Si $AB=BA=I$, entonces $B$ se llama *inversa bilateral* de $A$ y en este caso se dice que $A$ es *invertible*.</div>\EndKnitrBlock{definition}
 
-\BeginKnitrBlock{lemma}<div class="lemma"><span class="lemma" id="lem:unnamed-chunk-245"><strong>(\#lem:unnamed-chunk-245) </strong></span>Si una matriz $A$ tiene una inversa izquierda $B$ y una inversa derecha $C$, entonces $B=C$.</div>\EndKnitrBlock{lemma}
+\BeginKnitrBlock{lemma}<div class="lemma"><span class="lemma" id="lem:unnamed-chunk-244"><strong>(\#lem:unnamed-chunk-244) </strong></span>Si una matriz $A$ tiene una inversa izquierda $B$ y una inversa derecha $C$, entonces $B=C$.</div>\EndKnitrBlock{lemma}
 
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Suponga que $BA=I$ y $AC=I$. Entonces $B=BI=B(AC)=(BA)C=IC=C$</div>\EndKnitrBlock{proof}
 
 Del corolario anterior tenemos que si $A$ tiene una inversa derecha y una inversa izquierda, entonces son iguales, la llamos *la inversa de $A$* y la denotámos $A^{-1}$.
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-247"><strong>(\#thm:unnamed-chunk-247) </strong></span>Dadas las matrices $A$ y $B$ de orden $n\times n$ sobre el cuerpo $\mathbb{F}$. Se tiene que:
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-246"><strong>(\#thm:unnamed-chunk-246) </strong></span>Dadas las matrices $A$ y $B$ de orden $n\times n$ sobre el cuerpo $\mathbb{F}$. Se tiene que:
 
 (1) Si $A$ es invertible, entonces $A^{-1}$ también lo es y $(A^{-1})^{-1}=A$.
 
@@ -2514,11 +2514,11 @@ Del corolario anterior tenemos que si $A$ tiene una inversa derecha y una invers
 
 Del resultado anterior se tiene que el producto de matrices invertible, es invertible.
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-249"><strong>(\#thm:unnamed-chunk-249) </strong></span>Toda matriz elemental es invertible.</div>\EndKnitrBlock{theorem}
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-248"><strong>(\#thm:unnamed-chunk-248) </strong></span>Toda matriz elemental es invertible.</div>\EndKnitrBlock{theorem}
 
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Sea $E$ una matriz elemental y sea $e$ la operación elemental de filas que corresponde a $E$, es decir, $E=e(I)$. Sea $\hat{e}$ la operación inversa de $e$, y $\hat{E}=\hat{e}(I)$. Entonces $\hat{E}E=\hat{e}(E)=\hat{e}(e(I))=(\hat{e}\circ e) (I)= I$. Análogamente se tiene que $E\hat{E}=I$. Luego $\hat{E}=E^{-1}$.</div>\EndKnitrBlock{proof}
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-251"><strong>(\#thm:unnamed-chunk-251) </strong></span>Sea $A$ una matriz $n\times n$. Entonces los siguientes enunciados son equivalentes:
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-250"><strong>(\#thm:unnamed-chunk-250) </strong></span>Sea $A$ una matriz $n\times n$. Entonces los siguientes enunciados son equivalentes:
 	
 (1) $A$ es invertible.
 
@@ -2528,11 +2528,11 @@ Del resultado anterior se tiene que el producto de matrices invertible, es inver
 
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Sea $R=E_{1}E_{2}\cdots E_{n}A$ una matriz esacalonada reducida equivalente por filas a la matriz $A$ (donde $E_{1}E_{2}\cdots E_{n}$ son matrices elementales). Entonces, $A=E_{n}^{-1}\cdots E_{2}^{-1}E_{1}^{-1}R$, ya que las matrices elementales son invertibles. Como el producto de matrices invertibles, es invertible, $A$ es invertible si y solo si $R$ lo es; como $R$ es una matriz cuadrada esacalonada reducida por filas, entonces $R$ es invertible si y solo si $R$ es la identidad. Luego, $A$ es invertible si y solo si $R=I$, entonces, $A=E_{n}^{-1}\cdots E_{2}^{-1}E_{1}^{-1}I=E_{n}^{-1}\cdots E_{2}^{-1}E_{1}^{-1}$.</div>\EndKnitrBlock{proof}
 
-\BeginKnitrBlock{corollary}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-253"><strong>(\#cor:unnamed-chunk-253) </strong></span>Si $A$ es una matriz invertible $n\times n$ y si la sucesión de operaciones elementales $e_{1}\circ e_{2}\circ \cdots \circ e_{n}$ reduce a la matriz $A$ a la identidad, entonces la misma sucesión de operaciones elementales aplicadas a $I$, nos da $A^{-1}$, la inversa de $A$.</div>\EndKnitrBlock{corollary}
+\BeginKnitrBlock{corollary}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-252"><strong>(\#cor:unnamed-chunk-252) </strong></span>Si $A$ es una matriz invertible $n\times n$ y si la sucesión de operaciones elementales $e_{1}\circ e_{2}\circ \cdots \circ e_{n}$ reduce a la matriz $A$ a la identidad, entonces la misma sucesión de operaciones elementales aplicadas a $I$, nos da $A^{-1}$, la inversa de $A$.</div>\EndKnitrBlock{corollary}
 
-\BeginKnitrBlock{corollary}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-254"><strong>(\#cor:unnamed-chunk-254) </strong></span>Sean $A$ y $B$ dos matrices $m\times n$. Entonces $B$ es equivalente por filas a $A$ si y solo si $B=PA$, donde $P$ es una matriz invertible $m\times m$.</div>\EndKnitrBlock{corollary}
+\BeginKnitrBlock{corollary}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-253"><strong>(\#cor:unnamed-chunk-253) </strong></span>Sean $A$ y $B$ dos matrices $m\times n$. Entonces $B$ es equivalente por filas a $A$ si y solo si $B=PA$, donde $P$ es una matriz invertible $m\times m$.</div>\EndKnitrBlock{corollary}
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-255"><strong>(\#thm:unnamed-chunk-255) </strong></span>Sea $A$ una matriz $n\times n$. Entonces los siguientes enunciados son equivalentes:
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-254"><strong>(\#thm:unnamed-chunk-254) </strong></span>Sea $A$ una matriz $n\times n$. Entonces los siguientes enunciados son equivalentes:
 
 (1) $A$ es invertible.
 
@@ -2553,17 +2553,17 @@ $$C=\left[ \begin{array}{c}
   
 no tiene solución, lo que es una contradicción. Por lo tanto se tiene que $R=I$.</div>\EndKnitrBlock{proof}
 
-\BeginKnitrBlock{corollary}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-257"><strong>(\#cor:unnamed-chunk-257) </strong></span>Una matriz cuadrada que tiene una inversa izquierda o una inversa a la derecha es invertible.</div>\EndKnitrBlock{corollary}
+\BeginKnitrBlock{corollary}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-256"><strong>(\#cor:unnamed-chunk-256) </strong></span>Una matriz cuadrada que tiene una inversa izquierda o una inversa a la derecha es invertible.</div>\EndKnitrBlock{corollary}
 
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Sea $A$ una matriz $n\times n$. Supongamos que $A$ tiene una inversa a la izquierda, es decir, existe $B$ tal que $BA=I$. Así, $AX=0$ tiene unicamente la solución trivial, ya que $X=IX=B(AX)$. Por lo tanto $A$ es invertible. Supóngase que $A$ tiene una inversa a la derecha, es decir, existe $C$ tal que $AC=I$. entoces $C$ tiene una inversa a la izquierda y por lo tanto es invertible, así $A=ACC^{-1}=IC^{-1}=C^{-1}$ de donde se tiene que $A$ es invertible de inversa $C$.</div>\EndKnitrBlock{proof}
 
-\BeginKnitrBlock{corollary}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-259"><strong>(\#cor:unnamed-chunk-259) </strong></span>Sea $A=A_{1}A_{2}\cdots A_{n}$, donde $A_{1}, A_{2}, \cdots , A_{n}$ son matrices cuadradas. Entonces $A$ es invertible si y solo si cada $A_{i}$ es invertible.</div>\EndKnitrBlock{corollary}
+\BeginKnitrBlock{corollary}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-258"><strong>(\#cor:unnamed-chunk-258) </strong></span>Sea $A=A_{1}A_{2}\cdots A_{n}$, donde $A_{1}, A_{2}, \cdots , A_{n}$ son matrices cuadradas. Entonces $A$ es invertible si y solo si cada $A_{i}$ es invertible.</div>\EndKnitrBlock{corollary}
 
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Supongamos que cada $A_{i}$ es invertible, como el producto de matrices invertibles es invertible, se tiene que $A$ es invertible. Recíprocamente, supongamos que $A$ es invertible, entonces $AX=0$ tiene unicamente la solución trivial. Por lo tanto, $(A_{1}A_{2}\cdots A_{n-1})A_{n}X=AX=0$ tiene unicamente la solución trivial, si y solo si $A_{n}X=0$ tiene solo la solución trivial, de donde se sigue que $A_{n}$ es invertible. Luego, $AA^{-1}=A_{1}A_{2}\cdots A_{n-1}$, considerando $(A_{1}A_{2}\cdots A_{n-2})A_{n-1}X=AA^{-1}X=0$, de forma análoga a lo anterior, se puede demostrar que $A_{n-1}$ es invertible. Continuando de esta forma se demuestra que cada $A_{i}$ es invertible.</div>\EndKnitrBlock{proof}
 
 \BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}Sea $A$ una matriz $m\times n$ y sea $AX=B$, y sea $R$ la matriz escalonada reducida por filas equivalentes por fila a $A$, entonces $R=PA$, donde $P$ es una matriz invertible $m\times m$; las soluciones de $RX=PB$ son las mismas que las del sistema $AX=B$. Hallar $PB$ es equivalente a reducir por filas la matriz $A$, esto se hace considerando la matriz aumentada $\hat{A}$ y aplicandole operaciones elementales por fila hasta reducir a $A$ a una matriz escalonada reducida, lo obtenido en la última columna será la matriz $PB$.</div>\EndKnitrBlock{remark}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-262"><strong>(\#exm:unnamed-chunk-262) </strong></span>Sea 
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-261"><strong>(\#exm:unnamed-chunk-261) </strong></span>Sea 
 
 $$A=\left[\begin{array}{cc}
 	2 & -1\\
@@ -2642,7 +2642,7 @@ $$\stackrel{-2 e_{12}}{\longrightarrow}
 
 En los sitemas de ecuaciones lineales vimos que las combinaciones lineales de soluciones del sistema volvía a ser una solución. Este no es el único ámbito en el que sucede y es interesante este comportamiento, el concepto de espacios vectoriales generaliza esto. Estudiaremos a continuación estas estructuras algebraicas.
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-263"><strong>(\#def:unnamed-chunk-263) </strong></span>Dado un cuerpo $\mathbb{F}$, un *espacio vectorial* sobre el cuerpo $\mathbb{K}$ es un conjunto $V$ de objetos llamados *vectores*, dotado de dos operaciones, *suma* y *producto por un escalar*, con las siguientes propiedades:
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-262"><strong>(\#def:unnamed-chunk-262) </strong></span>Dado un cuerpo $\mathbb{F}$, un *espacio vectorial* sobre el cuerpo $\mathbb{K}$ es un conjunto $V$ de objetos llamados *vectores*, dotado de dos operaciones, *suma* y *producto por un escalar*, con las siguientes propiedades:
 	
 (1) cerrado bajo la suma: para todo $u,v\in V$, se tiene que $u+v\in V$;
 		
@@ -2666,17 +2666,17 @@ En los sitemas de ecuaciones lineales vimos que las combinaciones lineales de so
 
 Note que un espacio vectorial consta de cuatro cosas, un cuerpo, un conjunto no vacío de vectores y dos operaciones. Cuando no hay posibilidad de confusión, se hará referencia solo al espacio $V$, omitiendo el resto de los objetos. Puede ocurrir que el mismo conjunto $V$ forme parte de dos espacios vectoriales distintos.
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-264"><strong>(\#exm:unnamed-chunk-264) </strong></span>*El conjunto de las $n$-tuplas*, $\mathbb{F}^{n}$. Sea $\mathbb{F}$ un cuerpo y sea $V$ el conjunto de todas las $n$-tuplas $u=(x_{1}, x_{2}, \cdots , x_{n})$ de escalares $x_{i}\in\mathbb{F}$. Dados $u=(x_{1}, x_{2}, \cdots , x_{n}), v=(y_{1}, y_{2}, \cdots , y_{n})\in V$ y el escalar $\lambda\in \mathbb{F}$, definimos:
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-263"><strong>(\#exm:unnamed-chunk-263) </strong></span>*El conjunto de las $n$-tuplas*, $\mathbb{F}^{n}$. Sea $\mathbb{F}$ un cuerpo y sea $V$ el conjunto de todas las $n$-tuplas $u=(x_{1}, x_{2}, \cdots , x_{n})$ de escalares $x_{i}\in\mathbb{F}$. Dados $u=(x_{1}, x_{2}, \cdots , x_{n}), v=(y_{1}, y_{2}, \cdots , y_{n})\in V$ y el escalar $\lambda\in \mathbb{F}$, definimos:
   
 La suma $u+v=(x_{1}, x_{2}, \cdots , x_{n})+(y_{1}, y_{2}, \cdots , y_{n})=(x_{1}+y_{1}, x_{2}+y_{2}, \cdots , x_{n}+y_{n})$ y $\lambda u=\lambda(x_{1}, x_{2}, \cdots , x_{n})=(\lambda x_{1},\lambda x_{2}, \cdots ,\lambda x_{n})$.
 
 Es fácil ver que estas operaciones así definidas cumplen con las 10 condiciones de la definición.</div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-265"><strong>(\#exm:unnamed-chunk-265) </strong></span>*El espacio de las matrices* $m\times n$, $\mathbb{F}^{m\times n}$. Sea $\mathbb{F}$ un cuerpo, y sean $m$ y $n$ enteros positivos. Sea el conjunto $\mathbb{F}^{m\times n}$ el conjunto de todas las matrices de orden $m\times n$ sobre el cuerpo $\mathbb{F}$. La suma de dos vectores y el producto por un escalar se definen de la forma usual, sean $A,B\in\mathbb{F}^{m\times n}$ y $\lambda\in\mathbb{F}$, $[A+B]_{ij}=[A]_{ij}+[B]_{ij}$ y $[\lambda A]_{ij}=\lambda [A]_{ij}$.
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-264"><strong>(\#exm:unnamed-chunk-264) </strong></span>*El espacio de las matrices* $m\times n$, $\mathbb{F}^{m\times n}$. Sea $\mathbb{F}$ un cuerpo, y sean $m$ y $n$ enteros positivos. Sea el conjunto $\mathbb{F}^{m\times n}$ el conjunto de todas las matrices de orden $m\times n$ sobre el cuerpo $\mathbb{F}$. La suma de dos vectores y el producto por un escalar se definen de la forma usual, sean $A,B\in\mathbb{F}^{m\times n}$ y $\lambda\in\mathbb{F}$, $[A+B]_{ij}=[A]_{ij}+[B]_{ij}$ y $[\lambda A]_{ij}=\lambda [A]_{ij}$.
 
 Note que, $\mathbb{F}^{1\times n}=\mathbb{F}^{n}$.</div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-266"><strong>(\#exm:unnamed-chunk-266) </strong></span>*El espacio de funciones de un conjunto en un cuerpo*. Sea $\mathbb{F}$ y $C$ un conjunto no vacío cualquiera. Sea $V$ el conjunto de funciones de $C$ en $\mathbb{F}$. La suma de dos vectores $f, g\in V$, se define como la suma usual de funciones, $(f+g)(c)=f(c)+g(c)$ y el producto por un escalar se define como $(\lambda f)(c)=\lambda f(c)$. Las condiciones se cumplen, ya que $\mathbb{F}$ es un cuerpo: 
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-265"><strong>(\#exm:unnamed-chunk-265) </strong></span>*El espacio de funciones de un conjunto en un cuerpo*. Sea $\mathbb{F}$ y $C$ un conjunto no vacío cualquiera. Sea $V$ el conjunto de funciones de $C$ en $\mathbb{F}$. La suma de dos vectores $f, g\in V$, se define como la suma usual de funciones, $(f+g)(c)=f(c)+g(c)$ y el producto por un escalar se define como $(\lambda f)(c)=\lambda f(c)$. Las condiciones se cumplen, ya que $\mathbb{F}$ es un cuerpo: 
 
 (1) claramente las operaciones así definidas, son cerradas.
 		
@@ -2696,9 +2696,9 @@ Note que, $\mathbb{F}^{1\times n}=\mathbb{F}^{n}$.</div>\EndKnitrBlock{example}
 		
 (9) $((\lambda + \gamma)f)(c)=(\lambda f+ \gamma f)(c)$.</div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-267"><strong>(\#exm:unnamed-chunk-267) </strong></span>*El espacio de las funciones polinómicas sobre el cuerpo* $\mathbb{F}$. Sea $\mathbb{F}$ un cuerpo y sea $V$ el conjunto de las funciones de $\mathbb{F}$ en $\mathbb{F}$, de la forma $f(x)=c_{0}+c_{1}x+\cdots+c_{n}x^{n}$, donde $c_{0}, c_{1},\cdots c_{n}$ son escalares fijos de $\mathbb{F}$ y $n$ un entero positivo cualquiera, una función de este tipo se llama *función polinómica*. Las operaciones de suman y producto por escalares se definen como en el ejemplo anterior. Es fácil ver que $f+g$ y $\lambda f$ son funciones polinómicas y cumplen con las condiciones de la definición.</div>\EndKnitrBlock{example}
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-266"><strong>(\#exm:unnamed-chunk-266) </strong></span>*El espacio de las funciones polinómicas sobre el cuerpo* $\mathbb{F}$. Sea $\mathbb{F}$ un cuerpo y sea $V$ el conjunto de las funciones de $\mathbb{F}$ en $\mathbb{F}$, de la forma $f(x)=c_{0}+c_{1}x+\cdots+c_{n}x^{n}$, donde $c_{0}, c_{1},\cdots c_{n}$ son escalares fijos de $\mathbb{F}$ y $n$ un entero positivo cualquiera, una función de este tipo se llama *función polinómica*. Las operaciones de suman y producto por escalares se definen como en el ejemplo anterior. Es fácil ver que $f+g$ y $\lambda f$ son funciones polinómicas y cumplen con las condiciones de la definición.</div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-268"><strong>(\#def:unnamed-chunk-268) </strong></span>Una *combinación lineal* de los vectores $u_{1}, u_{2}, \cdots, u_{n}$ de un espacio vectorial $V$, es un vector $v\in V$, tal que $v=\sum_{i=1}^{n} \lambda_{i}u_{i}$, para algunos escalares $\lambda_{1}, \lambda_{2}, \cdots, \lambda_{n}$.</div>\EndKnitrBlock{definition}
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-267"><strong>(\#def:unnamed-chunk-267) </strong></span>Una *combinación lineal* de los vectores $u_{1}, u_{2}, \cdots, u_{n}$ de un espacio vectorial $V$, es un vector $v\in V$, tal que $v=\sum_{i=1}^{n} \lambda_{i}u_{i}$, para algunos escalares $\lambda_{1}, \lambda_{2}, \cdots, \lambda_{n}$.</div>\EndKnitrBlock{definition}
 
 \BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}Note que una combinación lineal de vectores, es un vector del espacio gracias a que las operaciones de suma y producto por un escalar son cerradas.
 
@@ -2708,7 +2708,7 @@ Dados los vectores $u_{1}, u_{2}, \cdots, u_{n}$, de las propiedades de asociati
 
 Mucho del álgebra está motivado por la geometría, las palabras "espacio" y vector tienen una connotación geométrica. Los vectores en el espacio $\mathbb{R}^{3}$ son ternas $(x,y,z)$ donde cada entrada representa una coordenada en el espacio. Esto se estudia en el capítulo de vectores.
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-270"><strong>(\#def:unnamed-chunk-270) </strong></span>Sea $V$ un espacio vectorial sobre el cuerpo $\mathbb{F}$. Un *subespacio* de $V$ es un subconjunto $W\subseteq V$ que junto a las mismas operaciones de suma y producto por un escalar definidas en $V$, es en si mismo un espacio vectorial sobre $\mathbb{F}$.
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-269"><strong>(\#def:unnamed-chunk-269) </strong></span>Sea $V$ un espacio vectorial sobre el cuerpo $\mathbb{F}$. Un *subespacio* de $V$ es un subconjunto $W\subseteq V$ que junto a las mismas operaciones de suma y producto por un escalar definidas en $V$, es en si mismo un espacio vectorial sobre $\mathbb{F}$.
 
 Escribiremos $W\prec V$ para decir que $W$ es un subespacio de $V$.</div>\EndKnitrBlock{definition}
 
@@ -2716,21 +2716,21 @@ De este modo para comprobar que un subconjunto de vectores $W$ de un espacio vec
 
 En alguna literatura se puede conseguir que la definición de subespacio vectorial es un subconjunto $W$ que tiene la siguiente propiedad: para todo $u,v\in W$ y todo $\lambda\in\mathbb{F}$, $\lambda u+v\in W$. Sin embargo, se puede demostrar la equivalencia entre ambas afirmaciones.
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-271"><strong>(\#thm:unnamed-chunk-271) </strong></span>Un subconjunto no vacío $W$ de $V$ es un subespacio de $V$ si y solo si, para todo par de vectores $u,v$ de $W$ y todo escalar $\lambda$ en el cuerpo $\mathbb{F}$, se tinen que el vector (combinación lineal) $\lambda u + v$ está en $W$.</div>\EndKnitrBlock{theorem}
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-270"><strong>(\#thm:unnamed-chunk-270) </strong></span>Un subconjunto no vacío $W$ de $V$ es un subespacio de $V$ si y solo si, para todo par de vectores $u,v$ de $W$ y todo escalar $\lambda$ en el cuerpo $\mathbb{F}$, se tinen que el vector (combinación lineal) $\lambda u + v$ está en $W$.</div>\EndKnitrBlock{theorem}
 
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Sea $W$ un subconjunto de vectores con la propiedad de que $\forall u,v\in W$ y $\forall \lambda\in\mathbb{F}$, $\lambda u + v\in W$. Sea $r\in W$, ya que $W$ no es vacío, entonces, por la propiedad del conjunto $(-1)r+r=-r+r=0\in W$, lo que indica que $W$ contiene al elemento neutro; así $(-1)r+0=-r\in W$, por lo que $W$ tiene al opuesto de todo sus vectores; en general $\lambda u +0\in W$, es decir el producto por un escalar es cerrado; de este modo, si $u,v\in W$, $u+v=(1)u+v\in W$, por lo que se tiene que la suma es cerrada; de donde se concluye que $W$ es un subespacio. Recíprocamente, si $W$ es un subespacio, por definición se tiene que cumple que $\forall u,v\in W$ y $\forall \lambda\in\mathbb{F}$, $\lambda u + v\in W$.</div>\EndKnitrBlock{proof}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-273"><strong>(\#exm:unnamed-chunk-273) </strong></span>Dado un espacio vectorial $V$, el mismo $V$ es subespacio de $V$. El conjunto cuyo único elemento es el vector cero $\{\vec{0}\}$ es subespacio de $V$, llamado el subespacio nulo de $V$. Estos dos subespacios son los subespacios triviales de $V$.</div>\EndKnitrBlock{example}
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-272"><strong>(\#exm:unnamed-chunk-272) </strong></span>Dado un espacio vectorial $V$, el mismo $V$ es subespacio de $V$. El conjunto cuyo único elemento es el vector cero $\{\vec{0}\}$ es subespacio de $V$, llamado el subespacio nulo de $V$. Estos dos subespacios son los subespacios triviales de $V$.</div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-274"><strong>(\#exm:unnamed-chunk-274) </strong></span>En el espacio $\mathbb{F}^{n}$, el conjunto de las $n$-tuplas $(x_{1}, x_{2},\cdots , x_{n})$ donde $x_{i}=0$, para algún $i$ fijo, es un subespacio de $\mathbb{F}^{n}$. Pero el conjunto de las $n$-tuplas, tales que $x_{i}+kx_{j}=p$ no es un subespacio.</div>\EndKnitrBlock{example}
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-273"><strong>(\#exm:unnamed-chunk-273) </strong></span>En el espacio $\mathbb{F}^{n}$, el conjunto de las $n$-tuplas $(x_{1}, x_{2},\cdots , x_{n})$ donde $x_{i}=0$, para algún $i$ fijo, es un subespacio de $\mathbb{F}^{n}$. Pero el conjunto de las $n$-tuplas, tales que $x_{i}+kx_{j}=p$ no es un subespacio.</div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-275"><strong>(\#exm:unnamed-chunk-275) </strong></span>El espacio de las funciones polinómicas es subespacio del espacio de todas las funciones.</div>\EndKnitrBlock{example}
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-274"><strong>(\#exm:unnamed-chunk-274) </strong></span>El espacio de las funciones polinómicas es subespacio del espacio de todas las funciones.</div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-276"><strong>(\#exm:unnamed-chunk-276) </strong></span>Una matriz cuadrada $n\times n$, es una *matriz simétrica* si $a_{ij}=a_{ji}$ para todo $1\leq i,j\leq n$. El conjunto de las matrices simétricas es un subespacio del espacio de las matrices $n\times n$.</div>\EndKnitrBlock{example}
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-275"><strong>(\#exm:unnamed-chunk-275) </strong></span>Una matriz cuadrada $n\times n$, es una *matriz simétrica* si $a_{ij}=a_{ji}$ para todo $1\leq i,j\leq n$. El conjunto de las matrices simétricas es un subespacio del espacio de las matrices $n\times n$.</div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-277"><strong>(\#exm:unnamed-chunk-277) </strong></span>Una matriz cuadrada $n\times n$ sobre el cuerpo de los números complejos $\mathbb{C}$ es una *matriz hermítica* (o *autoadjunta*) si $a_{jk}=\bar{a_{kj}}$ para todo $1\leq j,k\leq n$, donde la barra sobre el escalar $a_{kj}$ denota la conjugación compleja. El conjunto de las matrices hermíticas es un subespacio sobre el espacio de las matrices cuadradas $n\times n$ sobre $\mathbb{R}$.</div>\EndKnitrBlock{example}
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-276"><strong>(\#exm:unnamed-chunk-276) </strong></span>Una matriz cuadrada $n\times n$ sobre el cuerpo de los números complejos $\mathbb{C}$ es una *matriz hermítica* (o *autoadjunta*) si $a_{jk}=\bar{a_{kj}}$ para todo $1\leq j,k\leq n$, donde la barra sobre el escalar $a_{kj}$ denota la conjugación compleja. El conjunto de las matrices hermíticas es un subespacio sobre el espacio de las matrices cuadradas $n\times n$ sobre $\mathbb{R}$.</div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-278"><strong>(\#exm:unnamed-chunk-278) </strong></span>El espacio de las soluciones de un sistema  homogéneo de ecuaciones. Dada una matriz $A$ $m\times n$, el conjunto de las soluciones, de la ecuación $AX=0$, forman un subespacio del espacio de las matrices $n\times 1$. Para esto basta ver que dadas dos soluciones del sistema $X_{1}$ y $X_{2}$, la matriz $\lambda X_{1} + X_{2}$, con $\lambda$ un escalar cualquiera, es también solución del sistema. Esto es fácil de ver, ya que
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-277"><strong>(\#exm:unnamed-chunk-277) </strong></span>El espacio de las soluciones de un sistema  homogéneo de ecuaciones. Dada una matriz $A$ $m\times n$, el conjunto de las soluciones, de la ecuación $AX=0$, forman un subespacio del espacio de las matrices $n\times 1$. Para esto basta ver que dadas dos soluciones del sistema $X_{1}$ y $X_{2}$, la matriz $\lambda X_{1} + X_{2}$, con $\lambda$ un escalar cualquiera, es también solución del sistema. Esto es fácil de ver, ya que
 
 $$\begin{array}{cl}
 [A(\lambda X_{1}+X_{2})]_{ij}&=\sum_{k=1}^{n} [A]_{ik}[\lambda X_{1}+ X_{2}]_{kj}\\
@@ -2743,22 +2743,22 @@ $$\begin{array}{cl}
 
 De hecho, la demostración del ejemplo anterior se puede generalizar.
 
-\BeginKnitrBlock{lemma}<div class="lemma"><span class="lemma" id="lem:unnamed-chunk-279"><strong>(\#lem:unnamed-chunk-279) </strong></span>Sea $A$ una matriz $m\times n$ sobre el cuerpo $\mathbb{F}$.
+\BeginKnitrBlock{lemma}<div class="lemma"><span class="lemma" id="lem:unnamed-chunk-278"><strong>(\#lem:unnamed-chunk-278) </strong></span>Sea $A$ una matriz $m\times n$ sobre el cuerpo $\mathbb{F}$.
 
 Si $B$ y $C$ matrices $n\times p$ sobre el mismo cuerpo, y $\lambda$ un escalar. Entonces $A(\lambda B + C)=\lambda(AB)+ AC$.
 
 Si $B$ y $C$ matrices $q\times m$ sobre el mismo cuerpo, y $\lambda$ un escalar. Entonces $(\lambda B + C)A=\lambda(BA)+ CA$.
 </div>\EndKnitrBlock{lemma}
 	
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-280"><strong>(\#thm:unnamed-chunk-280) </strong></span>Sea $V$ un espacio vectorial. Entonces la intersección de una colección arbitraria de subespacios de $V$, es un subespacio de $V$.</div>\EndKnitrBlock{theorem}
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-279"><strong>(\#thm:unnamed-chunk-279) </strong></span>Sea $V$ un espacio vectorial. Entonces la intersección de una colección arbitraria de subespacios de $V$, es un subespacio de $V$.</div>\EndKnitrBlock{theorem}
 
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Sea $\{W_{\alpha} \}$ una colección de subespacios de $V$. Sea $W=\bigcap _{\alpha} W_{\alpha}$ la intersección de la colección de subespacios. Note que el vector cero pertece a todo $W_{\alpha}$ ya que cada $W_{\alpha}$ es un subespacio de $V$; por lo tanto el vector cero pertenece a la intersección $W$, así $W$ no es vacío. Sean $u,v\in W$, y $\lambda$ un escalar. Entonces $u,v\in W_{\alpha}$ para todo $\alpha$, como cada $W_{\aleph}$ es un subespacio, se tiene que $\lambda u + v\in W_{\alpha}$ para todo $\alpha$, de donde se sigue que $\lambda u +v\in W$, lo que muestra que $W\prec V$.</div>\EndKnitrBlock{proof}
 
 Del teorema anterior dado un subconjunto no vacío $S$ de un espacio vectorial, podemos construír un subespacio que contenga a $S$ y que sea mínimo (en el sentido de la contención).
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-282"><strong>(\#def:unnamed-chunk-282) </strong></span>Sea $S$ un conjunto de vectores de un espacio vectorial $V$. El *subespacio generado* por $S$ es la intersección de todos los subespacios que contienen a $S$ y se denota $\left\langle S \right\langle$. Es decir, $\left\langle S \right\rangle =\bigcap \{W\prec V : S\subseteq W \}$. Cuando $S$ es un conjunto finito de vectores, $u_{1}, u_{2},\cdots u_{n}$ se denota $\left\langle u_{1}, u_{2},\cdots u_{n} \right\rangle$ y dicimos simplemente que $\left\langle u_{1}, u_{2},\cdots u_{n} \right\rangle$ es el subespacio generado por los vectores $u_{1}, u_{2},\cdots u_{n}$.</div>\EndKnitrBlock{definition}
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-281"><strong>(\#def:unnamed-chunk-281) </strong></span>Sea $S$ un conjunto de vectores de un espacio vectorial $V$. El *subespacio generado* por $S$ es la intersección de todos los subespacios que contienen a $S$ y se denota $\left\langle S \right\langle$. Es decir, $\left\langle S \right\rangle =\bigcap \{W\prec V : S\subseteq W \}$. Cuando $S$ es un conjunto finito de vectores, $u_{1}, u_{2},\cdots u_{n}$ se denota $\left\langle u_{1}, u_{2},\cdots u_{n} \right\rangle$ y dicimos simplemente que $\left\langle u_{1}, u_{2},\cdots u_{n} \right\rangle$ es el subespacio generado por los vectores $u_{1}, u_{2},\cdots u_{n}$.</div>\EndKnitrBlock{definition}
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-283"><strong>(\#thm:unnamed-chunk-283) </strong></span>Sea $V$ un espacio vectorial y $S\subseteq V$ no vacío. El subespacio generado por $S$, $\left\langle S \right\rangle$, es el conjunto de todas las combinaciones lineales de los vectores de $S$.</div>\EndKnitrBlock{theorem}
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-282"><strong>(\#thm:unnamed-chunk-282) </strong></span>Sea $V$ un espacio vectorial y $S\subseteq V$ no vacío. El subespacio generado por $S$, $\left\langle S \right\rangle$, es el conjunto de todas las combinaciones lineales de los vectores de $S$.</div>\EndKnitrBlock{theorem}
 
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Sea $L(S)$ el conjunto de todas las combinaciones lineales de $S$, es decir, $L(S)=\{\sum_{i=1}^{n} \lambda_{i} u_{i}: \lambda_{i}\mbox{ es un escalar, } u_{i}\in S, n\in\mathbb{N} \}$. Es claro que $L(S)\subseteq \left\langle S \right\rangle$, ya que toda combinación lineal de elementos de $S$ es un elemento de $\left\langle S \right\rangle$ (por definición de subespacio).
 
@@ -2768,13 +2768,13 @@ Por lo que $\left\langle S \right\rangle = L(S)$.</div>\EndKnitrBlock{proof}
 
 Se puede usar $L(S)$ o $\left\langle S \right\rangle$ indistintamente para denotar el subespacio generado por $S$.
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-285"><strong>(\#def:unnamed-chunk-285) </strong></span>Sean $S_{1}, S_{2},\cdots, S_{n}\subseteq V$, la suma de $S_{1}, S_{2},\cdots, S_{n}$ es el conjunto de todos las sumas $v_{1}+v_{2}+\cdots + v_{n}$ con $v_{i}\in S_{i}$, para cada $1\leq i\leq n$ y se denota $S_{1}+S_{2}+\cdots+S_{n}$ o $\sum_{i=1}^{n} S_{i}$.</div>\EndKnitrBlock{definition}
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-284"><strong>(\#def:unnamed-chunk-284) </strong></span>Sean $S_{1}, S_{2},\cdots, S_{n}\subseteq V$, la suma de $S_{1}, S_{2},\cdots, S_{n}$ es el conjunto de todos las sumas $v_{1}+v_{2}+\cdots + v_{n}$ con $v_{i}\in S_{i}$, para cada $1\leq i\leq n$ y se denota $S_{1}+S_{2}+\cdots+S_{n}$ o $\sum_{i=1}^{n} S_{i}$.</div>\EndKnitrBlock{definition}
 
 Note que si $W_{1}, W_{2}, \cdots, W_{n}$ son subespacios de un espacio vectorial $V$, entonces $W=W_{1}+W_{2}+\cdots +W_{n}$ es subespacio de $V$, que contienen a cada $W_{i}$, con $1\leq i\leq n$. Entonces $W=W_{1}+W_{2}+\cdots +W_{n}=\left\langle W_{1}\cup W_{2}\cdots W_{n}\right\rangle$.
 
 \BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:ejm361"><strong>(\#exm:ejm361) </strong></span>Sean $v_{1}=(1,0,2,0,1), v_{2}=(0,1,0,3,2), v_{3}=(0,0,1,0,0)$ vectores del espacio $\mathbb{R}^{5}$. El subespacio generado por $v_{1}, v_{2}, v_{3}$ es el espacio $\left\langle v_{1}, v_{2}, v_{3}\right\rangle =\{\lambda_{1}v_{1}+\lambda_{2}v_{2}+\lambda_{3}v_{3}: \lambda_{1}, \lambda_{2},\lambda_{3}\in\mathbb{R} \}$. Como $\alpha=\lambda_{1}v_{1}+\lambda_{2}v_{2}+\lambda_{3}v_{3}=(\lambda_{1},\lambda_{2},2\lambda_{1}+\lambda_{3},3\lambda_{2},\lambda_{1}+2\lambda_{2})$, se tiene que $\left\langle v_{1}, v_{2}, v_{3}\right\rangle =\{v\in\mathbb{R}^{5}:(\lambda_{1},\lambda_{2},2\lambda_{1}+\lambda_{3},3\lambda_{2},\lambda_{1}+2\lambda_{2})\mbox{ con } \lambda_{1}, \lambda_{2},\lambda_{3}\in\mathbb{R}\}\subseteq\mathbb{R}^{5}$.</div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-286"><strong>(\#exm:unnamed-chunk-286) </strong></span>Las matrices de la forma 
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-285"><strong>(\#exm:unnamed-chunk-285) </strong></span>Las matrices de la forma 
 
 $$\left[ \begin{array}{cc} 
 	a & b\\
@@ -2799,7 +2799,7 @@ $$\left[ \begin{array}{cc}
 	0 & 0
 	\end{array}\right]\mbox{ con } a\in\mathbb{R}$$.</div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-287"><strong>(\#exm:unnamed-chunk-287) </strong></span>Sea $A$ una matriz $m\times n$, sobre un cuerpo $\mathbb{F}$. Los *vectores filas* de la matriz $A$ son vectores de $\mathbb{R}^{n}$ dados por $A_{i\ast}=(a_{i1},a_{i2},\cdots, a_{in})$, con $1\leq i\leq n$. El espacio fila de la matriz $A$ es el espacio generado por los vectores fila, es decir, $\left\langle A_{1\ast},A_{2\ast}, \cdots A_{m\ast} \right\rangle $. El subespacio visto en el ejemplo \@ref(exm:ejm361) es exactamente el espacio fila de la matriz 
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-286"><strong>(\#exm:unnamed-chunk-286) </strong></span>Sea $A$ una matriz $m\times n$, sobre un cuerpo $\mathbb{F}$. Los *vectores filas* de la matriz $A$ son vectores de $\mathbb{R}^{n}$ dados por $A_{i\ast}=(a_{i1},a_{i2},\cdots, a_{in})$, con $1\leq i\leq n$. El espacio fila de la matriz $A$ es el espacio generado por los vectores fila, es decir, $\left\langle A_{1\ast},A_{2\ast}, \cdots A_{m\ast} \right\rangle $. El subespacio visto en el ejemplo \@ref(exm:ejm361) es exactamente el espacio fila de la matriz 
 
 $$\left[ \begin{array}{ccccc} 
 	1 & 0 & 2 & 0 & 1 \\
@@ -2828,7 +2828,7 @@ $$\left[ \begin{array}{ccccc}
 es diferente, esto es porque las filas de esta matriz son linealmente independientes.
 </div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-288"><strong>(\#def:unnamed-chunk-288) </strong></span>Un subconjunto $S$ de un espacio vectorial $V$ es *linealmente dependiente* (se puede abreviar l.d.) si existen vectores $v_{1}, v_{2},\cdots ,v_{n}\in S$ distintos y escalares $\lambda_{1}, \lambda_{2}, \cdots , \lambda_{n}$ no todos nulos tales que la combinación lineal $\lambda_{1}v_{1}+\lambda_{2}v_{2}+\cdots +\lambda_{n}v_{n}=0$ sea igual al vector cero.
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-287"><strong>(\#def:unnamed-chunk-287) </strong></span>Un subconjunto $S$ de un espacio vectorial $V$ es *linealmente dependiente* (se puede abreviar l.d.) si existen vectores $v_{1}, v_{2},\cdots ,v_{n}\in S$ distintos y escalares $\lambda_{1}, \lambda_{2}, \cdots , \lambda_{n}$ no todos nulos tales que la combinación lineal $\lambda_{1}v_{1}+\lambda_{2}v_{2}+\cdots +\lambda_{n}v_{n}=0$ sea igual al vector cero.
 
 Un conjunto que no es linealmente dependiente, se llama *linealmente independiente*. Se puede abreviar l.i.</div>\EndKnitrBlock{definition}
 
@@ -2845,11 +2845,11 @@ Si el conjunto es finito $S=\{v_{1}, v_{2},\cdots ,v_{n}\}$ podemos decir direct
 4. Un conjunto $S$ es l.i. si y solo si toda combinación lineal de vectores de $S$ que es igual a cero, implica que todos los escalares de dicha combinación lineal son iguales a cero, es decir, si para todo $n\in \mathbb{N}$, $\lambda_{1}v_{1}+\lambda_{2}v_{2}+\cdots +\lambda_{n}v_{n}=0$, donde $v_{i}\in S$ para $0\leq i\leq n$, entonces $\lambda_{1}=\lambda_{2}= \cdots =\lambda_{n}=0$.
 	</div>\EndKnitrBlock{remark}
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-290"><strong>(\#def:unnamed-chunk-290) </strong></span>*Una base* de un espacio vectorial $V$, es un conjunto de vectores linealmente independientes de $V$, cuyo espacio generado coincide con $V$. El espacio $V$ es de *dimensión finita* si tiene una base finita.</div>\EndKnitrBlock{definition}
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-289"><strong>(\#def:unnamed-chunk-289) </strong></span>*Una base* de un espacio vectorial $V$, es un conjunto de vectores linealmente independientes de $V$, cuyo espacio generado coincide con $V$. El espacio $V$ es de *dimensión finita* si tiene una base finita.</div>\EndKnitrBlock{definition}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-291"><strong>(\#exm:unnamed-chunk-291) </strong></span>Los vectores $v_{1}=(1,0,2,0,1), v_{2}=(0,1,0,3,2), v_{3}=(0,0,1,0,0), v_{4}=(2,1,5,3,4)$ son linealmente dependientes, ya que $2v_{1}+v_{2}+v_{3}-v_{4}=0$. Pero $v_{1}=(1,0,2,0,1), v_{2}=(0,1,0,3,2), v_{3}=(0,0,1,0,0)$ son linealmente independientes, ya que $\lambda v_{1}+\lambda v_{2}+\lambda v_{3}=0$ solo si $\lambda_{1}=\lambda_{2}=\lambda_{3}=0$. Note que cualquier otra combinación lineal (de dos o menos vectores) es igual a cero solo cuando sus escalares son todos cero.</div>\EndKnitrBlock{example}
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-290"><strong>(\#exm:unnamed-chunk-290) </strong></span>Los vectores $v_{1}=(1,0,2,0,1), v_{2}=(0,1,0,3,2), v_{3}=(0,0,1,0,0), v_{4}=(2,1,5,3,4)$ son linealmente dependientes, ya que $2v_{1}+v_{2}+v_{3}-v_{4}=0$. Pero $v_{1}=(1,0,2,0,1), v_{2}=(0,1,0,3,2), v_{3}=(0,0,1,0,0)$ son linealmente independientes, ya que $\lambda v_{1}+\lambda v_{2}+\lambda v_{3}=0$ solo si $\lambda_{1}=\lambda_{2}=\lambda_{3}=0$. Note que cualquier otra combinación lineal (de dos o menos vectores) es igual a cero solo cuando sus escalares son todos cero.</div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-292"><strong>(\#exm:unnamed-chunk-292) </strong></span>Sean $e_{1}, e_{2}, \cdots ,e_{n}$ vectores de $\mathbb{R}^{n}$ tales que 
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-291"><strong>(\#exm:unnamed-chunk-291) </strong></span>Sean $e_{1}, e_{2}, \cdots ,e_{n}$ vectores de $\mathbb{R}^{n}$ tales que 
 
 $$[e_{i}]_{j}=\left\lbrace \begin{array}{cc}
 	1 & \mbox{ si } i=j\\
@@ -2871,13 +2871,13 @@ Sea $v=(x_{1}, x_{2},\cdots, x_{n})\in \mathbb{R}^{n}$ un vector cualquiera. Se 
 
 Ahora es fácil ver que $\{e_{1}, e_{2}, \cdots ,e_{n}\}$ es un conjunto l.i., por lo tanto forman una base para el espacio $\mathbb{R}^{n}$. Lo que nos permite decir que $\mathbb{R}^{n}$ es un espacio de dimensión finita. A la base $\{e_{1}, e_{2}, \cdots ,e_{n}\}$ se le conoce con el nombre de base canónica de $\mathbb{R}^{n}$.</div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-293"><strong>(\#exm:unnamed-chunk-293) </strong></span>Sea $A\in \mathcal{M}_{n}(\mathbb{F})$ invertible. Sean $A_{1\ast}, A_{2\ast},\cdots, A_{n\ast}$ los vectores fila de la $A$. $A_{1\ast}, A_{2\ast},\cdots, A_{n\ast}$ son l.i. ya que $\lambda_{1} A_{1\ast}+\lambda_{2} A_{2\ast}+\cdots+\lambda_{n} A_{n\ast}=0$ si y solo si $AX=0$, donde $X$ es la matriz $n\times 1$ formada por los $\lambda_{i}$. Como $AX=0\Leftrightarrow X=A^{-1}0\Leftrightarrow \lambda_{1}=\lambda_{2}=\cdots=\lambda_{n}=0$. Además forman una base del espacio de las matrices filas $\mathcal{M}_{1\times n}(F)$: Sea $B=(b_{11} b_{12},\cdots,b_{1n})$, sea $X=A^{-1}B\Leftrightarrow AX=B$. Luego, el espacio de las matrices filas $\mathcal{M}_{1\times n}(F)$, es un espacio de dimensión finita.</div>\EndKnitrBlock{example}
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-292"><strong>(\#exm:unnamed-chunk-292) </strong></span>Sea $A\in \mathcal{M}_{n}(\mathbb{F})$ invertible. Sean $A_{1\ast}, A_{2\ast},\cdots, A_{n\ast}$ los vectores fila de la $A$. $A_{1\ast}, A_{2\ast},\cdots, A_{n\ast}$ son l.i. ya que $\lambda_{1} A_{1\ast}+\lambda_{2} A_{2\ast}+\cdots+\lambda_{n} A_{n\ast}=0$ si y solo si $AX=0$, donde $X$ es la matriz $n\times 1$ formada por los $\lambda_{i}$. Como $AX=0\Leftrightarrow X=A^{-1}0\Leftrightarrow \lambda_{1}=\lambda_{2}=\cdots=\lambda_{n}=0$. Además forman una base del espacio de las matrices filas $\mathcal{M}_{1\times n}(F)$: Sea $B=(b_{11} b_{12},\cdots,b_{1n})$, sea $X=A^{-1}B\Leftrightarrow AX=B$. Luego, el espacio de las matrices filas $\mathcal{M}_{1\times n}(F)$, es un espacio de dimensión finita.</div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-294"><strong>(\#exm:unnamed-chunk-294) </strong></span>El espacio de las funciones polinómicas sobre $\mathbb{R}$.
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-293"><strong>(\#exm:unnamed-chunk-293) </strong></span>El espacio de las funciones polinómicas sobre $\mathbb{R}$.
 
 Sea $S=\{f_{k}(x)=x^{k}: k\geq 0 \}=\{1, x, x^{2},\cdots \}$. Sea $n$ un entero positivo, consideremos la combinación lineal  $f(x)=\lambda_{0}+\lambda_{1}x+\lambda_{2}x^{2}+\cdots + \lambda_{n}x^{n}$, entonces $f(x)=0$ para todo $x\in \mathbb{F}$ si y solo si $\lambda_{1}=\lambda_{2}=\cdots=\lambda_{n}=0$. Por lo tanto $S$ es un conjunto linealmente independiente. Cualquier subconjunto finito de $S$ no genera a todo el espacio, Lo que demuestra que el espacio de las funciones polinómicas es de dimensión infinita.</div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-295"><strong>(\#thm:unnamed-chunk-295) </strong></span>Sea $V$ un espacio vectorial generado por un conjunto finito de $n$ vectores $v_{1}, v_{2},\cdots, v_{n}$. Entonces todo subconjunto de $V$ linealmente independiente no tiene mas de $n$ vectores.</div>\EndKnitrBlock{theorem}
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-294"><strong>(\#thm:unnamed-chunk-294) </strong></span>Sea $V$ un espacio vectorial generado por un conjunto finito de $n$ vectores $v_{1}, v_{2},\cdots, v_{n}$. Entonces todo subconjunto de $V$ linealmente independiente no tiene mas de $n$ vectores.</div>\EndKnitrBlock{theorem}
 
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Veamos que $S=\{u_{1}, u_{2}, \cdots, u_{m} \}$, con $m\geq n$, es linealmente dependiente. Como $v_{1}, v_{2},\cdots, v_{n}$ generan a todo el espacio $V$, cada $u_{i}$ se escribe como combinación lineal de los $v_{j}$, es decir, 
 
@@ -2926,11 +2926,11 @@ $$(x_{1},x_{2},\cdots, x_{m}) \left[ \begin{array}{cccc}
 		  
 Como $m>n$ tiene múltiples soluciones, esto es, existen $x_{1},x_{2},\cdots, x_{m}$ no todos ceros tales que $x_{1} u_{1}+ x_{2} u_{2}+ \cdots+ x_{m} u_{m}=0$, por lo tanto $S$ es linealmente dependiente.</div>\EndKnitrBlock{proof}
 
-\BeginKnitrBlock{corollary}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-297"><strong>(\#cor:unnamed-chunk-297) </strong></span>Si $V$ en un espacio de dimensión finita, entonces dos bases cualesquiera tienen el mismo número (finito) de elementos.</div>\EndKnitrBlock{corollary}
+\BeginKnitrBlock{corollary}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-296"><strong>(\#cor:unnamed-chunk-296) </strong></span>Si $V$ en un espacio de dimensión finita, entonces dos bases cualesquiera tienen el mismo número (finito) de elementos.</div>\EndKnitrBlock{corollary}
 
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Como $V$ es de dimensión finita, tiene una base finita, digamos $B=\{v_{1}, v_{2}, \cdots, v_{n} \}$. Sea $B´$ una base de $V$, entonces $B´$ tiene una cantidad finita de vectores, digamos $B´=\{u_{1}, u_{2}, \cdots, u_{m} \}$ con $m\leq n$. Análogamente, $n\leq m$, por lo tanto $n=m$.</div>\EndKnitrBlock{proof}
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-299"><strong>(\#def:unnamed-chunk-299) </strong></span>Llamaremos *dimensión* al número de vectores de una base de un espacio de dimensión finita y se denota $\dim V$.</div>\EndKnitrBlock{definition}
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-298"><strong>(\#def:unnamed-chunk-298) </strong></span>Llamaremos *dimensión* al número de vectores de una base de un espacio de dimensión finita y se denota $\dim V$.</div>\EndKnitrBlock{definition}
 
 Podemos reformular el teorema anterior en términos de la definición anterior.
 
@@ -2941,7 +2941,7 @@ Podemos reformular el teorema anterior en términos de la definición anterior.
 (2) Ningún subconjunto de $V$ que contenga menos de $n$ vectores puede generar a $V$.
 </div>\EndKnitrBlock{corollary}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-300"><strong>(\#exm:unnamed-chunk-300) </strong></span>(1) $\mathbb{R}^{n}$ tiene dimensión $n$. Ya vimos antes que la base canónica de $\mathbb{R}^{n}$ está formada por los vectores $e_{1}, e_{2}, \cdots ,e_{n}$,  
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-299"><strong>(\#exm:unnamed-chunk-299) </strong></span>(1) $\mathbb{R}^{n}$ tiene dimensión $n$. Ya vimos antes que la base canónica de $\mathbb{R}^{n}$ está formada por los vectores $e_{1}, e_{2}, \cdots ,e_{n}$,  
 		
 $$[e_{i}]_{j}=\left\lbrace \begin{array}{cc}
 		1 & \mbox{ si } i=j\\
@@ -2962,24 +2962,24 @@ Hay $mn$ matrices de esta forma, por lo tanto la dimensión del espacio $\mathca
 
 Vamos a convenir dar dimensión cero al espacio nulo.
 
-\BeginKnitrBlock{lemma}<div class="lemma"><span class="lemma" id="lem:unnamed-chunk-301"><strong>(\#lem:unnamed-chunk-301) </strong></span>Sea $S$ un subconjunto linealmente independiente de un espacio vectorial $V$. Sea $v\in V\setminus\left\langle S \right\rangle$. Entonces $S\cup \{v\}$ es linealmente independiente.</div>\EndKnitrBlock{lemma}
+\BeginKnitrBlock{lemma}<div class="lemma"><span class="lemma" id="lem:unnamed-chunk-300"><strong>(\#lem:unnamed-chunk-300) </strong></span>Sea $S$ un subconjunto linealmente independiente de un espacio vectorial $V$. Sea $v\in V\setminus\left\langle S \right\rangle$. Entonces $S\cup \{v\}$ es linealmente independiente.</div>\EndKnitrBlock{lemma}
 
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Sean $u_{1}, u_{2},\cdots, u_{n}\in S$; tomemos $\lambda_{1}u_{1}+\lambda_{2}u_{2}+\cdots +\lambda_{n}u_{n}+\gamma v=0$, necesariamente $\gamma=0$ porque en otro caso, $v=\gamma^{-1}(\lambda_{1}u_{1}+\lambda_{2}u_{2}+\cdots +\lambda_{n}u_{n})=\gamma^{-1}\lambda_{1}u_{1}+\gamma^{-1}\lambda_{2}u_{2}+\cdots +\gamma^{-1}\lambda_{n}u_{n}$ y así $v\in\left\langle S \right\rangle$. Como $S$ es l.i. se tiene que si $\lambda_{1}u_{1}+\lambda_{2}u_{2}+\cdots +\lambda_{n}u_{n}+\gamma v=0$, entonces $\lambda_{1}u_{1}+\lambda_{2}u_{2}+\cdots +\lambda_{n}u_{n}=0$, por lo tanto,  $\lambda_{1}=\lambda_{2}=\cdots=\lambda_{n}=\gamma=0$ de donde se sigue que $S\cup \{v\}$ es l.i.
 </div>\EndKnitrBlock{proof}
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-303"><strong>(\#thm:unnamed-chunk-303) </strong></span>Sea $V$ un espacio de dimensión finita. Sea $W\prec V$, entonces todo subconjunto $S\subseteq W$ l.i. es finito y es parte de una base de $W$ (esta base debe ser finita).
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-302"><strong>(\#thm:unnamed-chunk-302) </strong></span>Sea $V$ un espacio de dimensión finita. Sea $W\prec V$, entonces todo subconjunto $S\subseteq W$ l.i. es finito y es parte de una base de $W$ (esta base debe ser finita).
 </div>\EndKnitrBlock{theorem}
 
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Sea $n=\dim V$. Sea $S=S_{0}\subseteq W$ un conjunto l.i. Por el corolario \ref{coro3.72}, $S_{0}$ tiene a lo sumo $n$ vectores. Si $S_{0}$ genera a $W$, esto es $\left\langle S_{0}\right\rangle=W$, el mismo es la base de $W$. Si no, existe $v_{1}\in W\setminus\left\langle S_{0} \right\rangle$, y por el corolario anterior, $S_{1}=S_{0}\cup\{v_{1}\}$ es l.i. Si $\left\langle S_{1}\right\rangle=W$, ya tenemos la base de $W$, sino repetimos el proceso, tomamos $v_{2}\in W\setminus\left\langle S_{1} \right\rangle$ y construimos $S_{2}=S_{1}\cup\{v_{2}\}$ un conjunto l.i. Volvemos a preguntarnos si $S_{2}$ genera al subespacio $W$, si la respuesta es afirmativa, conseguimos la base, si no, continuamos con este proceso hasta hallar $k$ vectores $\{v_{1}, v_{2}, \cdots, v_{k}\}$, que completen una base para el subespacio $W$, a saber $S_{k}=S_{0}\cup \{v_{0}, v_{1}, \cdots, v_{k}\}$. Note que este proceso es finito ya que la dimensión de $V$ es finita.
 </div>\EndKnitrBlock{proof}
 
-\BeginKnitrBlock{corollary}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-305"><strong>(\#cor:unnamed-chunk-305) </strong></span>Sea $V$ un espacio vectorial de dimensión finita. Sea $W$ un subespacio propio de $V$. Entonces $\dim W < \dim V$, por lo tanto $W$ es de dimensión finita.</div>\EndKnitrBlock{corollary}
+\BeginKnitrBlock{corollary}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-304"><strong>(\#cor:unnamed-chunk-304) </strong></span>Sea $V$ un espacio vectorial de dimensión finita. Sea $W$ un subespacio propio de $V$. Entonces $\dim W < \dim V$, por lo tanto $W$ es de dimensión finita.</div>\EndKnitrBlock{corollary}
 
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Si $W$ es el subespacio nulo se tiene el resultado de forma trivial. Supongamos que $W$ no es el espacio nulo. Sea $\vDash\in W$, entonces $\{v\}$ es l.i. y por el teorema anterior $v$ pertenece a $B$ una base finita de $W$, y $B$ no tiene mas de $\dim V$ vectores. Por lo tanto $\dim W\leq \dim V$. Pero como $W$ es un subespacio propio de $V$, existe $u\in V\setminus W$, y así $B\cup\{u\}$ es un conjunto l.i., por lo tanto cualquier base de $V$ tiene mas de $\dim W$ elementos, entonces $\dim V > \dim W$.</div>\EndKnitrBlock{proof}
 
-\BeginKnitrBlock{corollary}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-307"><strong>(\#cor:unnamed-chunk-307) </strong></span>En todo espacio $V$ de dimensión finita, todo conjunto de vectores linealmente independientes es parte de una base.</div>\EndKnitrBlock{corollary}
+\BeginKnitrBlock{corollary}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-306"><strong>(\#cor:unnamed-chunk-306) </strong></span>En todo espacio $V$ de dimensión finita, todo conjunto de vectores linealmente independientes es parte de una base.</div>\EndKnitrBlock{corollary}
 
-\BeginKnitrBlock{corollary}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-308"><strong>(\#cor:unnamed-chunk-308) </strong></span>Sea $A\in\mathcal{M}_{n}(\mathbb{F})$. Si los vectores filas de $A$ son un conjunto linealmente independientes de $\mathbb{F}^{n}$, entonces $A$ es invertible.</div>\EndKnitrBlock{corollary}
+\BeginKnitrBlock{corollary}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-307"><strong>(\#cor:unnamed-chunk-307) </strong></span>Sea $A\in\mathcal{M}_{n}(\mathbb{F})$. Si los vectores filas de $A$ son un conjunto linealmente independientes de $\mathbb{F}^{n}$, entonces $A$ es invertible.</div>\EndKnitrBlock{corollary}
 
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Sean $v_{1}, v_{2},\cdots, v_{n}$ los vectores filas de $A$ (es decir $v_{i}=A_{i*}$ para cada $1\leq i\leq n$) y supongamos que es un conjunto l.i. Sea $W=\left\langle v_{1}, v_{2},\cdots, v_{n}\right\rangle$, entonces $\dim W=n$, así $W=\mathbb{F}^{n}$. Además, los vectores $e_{i}$, 
 
@@ -2991,7 +2991,7 @@ $$[e_{i}]_{j}=\left\lbrace \begin{array}{cc}
 que forman la base canónica de $\mathbb{F}^{n}$ se escriben como combinación lineal de los vectores $v_{1}, v_{2},\cdots, v_{n}$. Esto es, existen escalares $\lambda_{ij}\in \mathbb{F}$ tales que: $e_{i}=\sum_{j=1}^{n} b_{ij}v_{j}$ para cada $1\leq i\leq n$. Es decir, $BA=I$, donde $[B]_{ij}=b_{ij}$.
 </div>\EndKnitrBlock{proof}
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-310"><strong>(\#thm:unnamed-chunk-310) </strong></span>Si $W_{1}$ y $W_{2}$ son subespacios de dimensión finita de un espacio vectorial $V$, entonces $W_{1}+W_{2}$ es de dimensión finita y $\dim W_{1}+\dim W_{2}=\dim (W_{1}\cap W_{2}) + \dim (W_{1}+W_{2})$.</div>\EndKnitrBlock{theorem}
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-309"><strong>(\#thm:unnamed-chunk-309) </strong></span>Si $W_{1}$ y $W_{2}$ son subespacios de dimensión finita de un espacio vectorial $V$, entonces $W_{1}+W_{2}$ es de dimensión finita y $\dim W_{1}+\dim W_{2}=\dim (W_{1}\cap W_{2}) + \dim (W_{1}+W_{2})$.</div>\EndKnitrBlock{theorem}
 
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Como $W_{1}\cap W_{2}$ es un subespacio vectorial y $W_{1}\cap W_{2}\subseteq W_{1}$ y $W_{1}\cap W_{2}\subseteq W_{2}$ se sigue que $W_{1}\cap W_{2}$ tiene una base finita $B=\{v_{1}, v_{2},\cdots, v_{k} \}$ que es parte de una base de $W_{1}$, digamos $B_{1}=\{v_{1}, v_{2},\cdots, v_{k}, u_{1}, u_{2}, \cdots, u_{m} \}$ y de base de $W_{2}$, digamos $B_{2}=\{v_{1}, v_{2},\cdots, v_{k}, w_{1}, w_{2}, \cdots, w_{n} \}$ así el subespacio $W_{1}+W_{2}$ es generado por los vectores $v_{1}, v_{2},\cdots, v_{k}, u_{1}, u_{2}, \cdots, u_{m}, w_{1}, w_{2}, \cdots, w_{n}$ los cuales forman un conjunto l.i.
 	
@@ -3005,31 +3005,31 @@ Como $B_{2}$ es una base, se tiene que $\lambda_{1}=\lambda_{2}=\cdots=\lambda_{
 
 Finalmente, $\dim W_{1}+\dim W_{2}=(k+m)+(k+n)=k+(k+m+n)=\dim (W_{1}\cup W_{2})+\dim (W_{1}+W_{2})$.</div>\EndKnitrBlock{proof}
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-312"><strong>(\#def:unnamed-chunk-312) </strong></span>El *rango fila* de una matriz $A$ de orden $n\times m$, es la dimensión del espacio fila de la $A$. </div>\EndKnitrBlock{definition}
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-311"><strong>(\#def:unnamed-chunk-311) </strong></span>El *rango fila* de una matriz $A$ de orden $n\times m$, es la dimensión del espacio fila de la $A$. </div>\EndKnitrBlock{definition}
 
 Note que, si $P\in\mathcal{M}_{k\times m}(\mathbb{R})$, entonces $B=PA\in\mathcal{M}_{k\times n}(\mathbb{R})$ por lo tanto sus vectores fila son $v=P_{i1}u_{1}+P_{i2}u_{2}+\cdots+P_{im}u_{m}$, donde $P_{ij}=[P]_{i1}$ y $u_{j}=A_{j\ast}=(a_{j1}, a_{j2},\cdots, a_{jn})$. Entonces, el espacio fila de $B$ es un subespacio del espacio fila de $A$. Si $P$ es una matriz invertible $m\times m$, entonces $A=P^{-1}B$ y de forma análoga, el espacio fila de la matriz $A$ es subespacio del espacio fila de la matriz $B$. Esto lo describimos en el siguiente teorema.
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-313"><strong>(\#thm:unnamed-chunk-313) </strong></span>Las matrices equivalentes por filas tienen el mismo espacio fila.</div>\EndKnitrBlock{theorem}
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-312"><strong>(\#thm:unnamed-chunk-312) </strong></span>Las matrices equivalentes por filas tienen el mismo espacio fila.</div>\EndKnitrBlock{theorem}
 
 Así solo basta estudiar el espacio fila de la matriz escalón reducida por filas.
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-314"><strong>(\#thm:unnamed-chunk-314) </strong></span>Sea $R$ una matriz escalón reducida por filas, no nula. Entonces los vectores filas no nulas de $R$ forman una base del espacio fila de $R$.</div>\EndKnitrBlock{theorem}
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-313"><strong>(\#thm:unnamed-chunk-313) </strong></span>Sea $R$ una matriz escalón reducida por filas, no nula. Entonces los vectores filas no nulas de $R$ forman una base del espacio fila de $R$.</div>\EndKnitrBlock{theorem}
 
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Sea $R\in\mathcal{M}_{n}(\mathbb{R})$ como en la hipótesis. Sean $s_{1}, s_{2},\cdots, s_{r}$ los vectores filas no nulos de $R$, esto es, $r_{i}=(s_{i1}, s_{i2},\cdots, s_{in})$ para todo $1\leq i\leq r$. Es claro que $s_{1}, s_{2},\cdots, s_{r}$ generan el espacio fila de $R$. Como $R$ es escalón reducida por filas, se tiene que existen $k_{1}<k_{2}<\cdots<k_{r}\in\mathbb{N}$ tales que $[R]_{ij}=0$ si $j<k_{i}$ y $[R]_{ik_{j}}=\delta_{ij}$.
 
 Consideremos $\lambda_{1}s_{1}+ \lambda_{2}s_{2}+\cdots+ \lambda_{r}s_{r}=0$ si y solo si $\lambda_{1}=\lambda_{2}=\cdots=\lambda_{r}$ ya que $\lambda_{1}s_{1}+ \lambda_{2}s_{2}+\cdots+ \lambda_{r}s_{r}=(b_{1}, b_{2}, \cdots, b_{n})$ si y solo si $b_{k_{j}}=\sum_{i=1}^{r} \lambda_{i}s_{ik_{j}}=\lambda_{j}s_{jk_{j}}=\lambda_{j}$ por lo tanto $s_{1}, s_{2},\cdots, s_{r}$ son l.i.</div>\EndKnitrBlock{proof}
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-316"><strong>(\#thm:unnamed-chunk-316) </strong></span>Sean $m$ y $n$ enteros positivos y sea $W$ un subespacio de $\mathbb{R}^{n}$ tal que $\dim W\leq m$. Entonces existe una única matriz escalón reducida por filas $m\times n$ que tiene a $W$ como espacio fila.</div>\EndKnitrBlock{theorem}
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-315"><strong>(\#thm:unnamed-chunk-315) </strong></span>Sean $m$ y $n$ enteros positivos y sea $W$ un subespacio de $\mathbb{R}^{n}$ tal que $\dim W\leq m$. Entonces existe una única matriz escalón reducida por filas $m\times n$ que tiene a $W$ como espacio fila.</div>\EndKnitrBlock{theorem}
 
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Sean $v_{1}, v_{2}, \cdots, v_{m}\in\mathbb{R}^{n}$ vectores generadores de $W$.
 
 Sea $A$ una matriz $m\times n$ cuyas filas son los vectores $v_{i}$, es decir, $A_{i\ast}=v_{i}$ para cada $1\leq i\leq m$. Si $R$ es una matriz escalón reducida por filas equivalente a la matriz $A$, entonces $W$ es el espacio fila de la matriz $R$ y por lo tanto de la matriz $A$.</div>\EndKnitrBlock{proof}
 
-\BeginKnitrBlock{corollary}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-318"><strong>(\#cor:unnamed-chunk-318) </strong></span>Cada matriz $A$ es equivalente por filas a una y solo una mtriz escalón reducida por filas.</div>\EndKnitrBlock{corollary}
+\BeginKnitrBlock{corollary}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-317"><strong>(\#cor:unnamed-chunk-317) </strong></span>Cada matriz $A$ es equivalente por filas a una y solo una mtriz escalón reducida por filas.</div>\EndKnitrBlock{corollary}
 
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Si dos matrices escalón reducida por filas tienen el mismo espacio fila,  entonces ellas son identicas.</div>\EndKnitrBlock{proof}
 
-\BeginKnitrBlock{corollary}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-320"><strong>(\#cor:unnamed-chunk-320) </strong></span>Dos matrices $A$ y $B$ son equivalentes por filas si y solo si $A$ y $B$ tienen el mismo espacio fila.</div>\EndKnitrBlock{corollary}
+\BeginKnitrBlock{corollary}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-319"><strong>(\#cor:unnamed-chunk-319) </strong></span>Dos matrices $A$ y $B$ son equivalentes por filas si y solo si $A$ y $B$ tienen el mismo espacio fila.</div>\EndKnitrBlock{corollary}
 
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Es claro que si $A\sim B$, entonces $A$ y $B$ tienen el mismo espacio fila.
 
@@ -3038,7 +3038,7 @@ Supongamos que $A$ y $B$ tienen el mismo espacio fila. Sean $R$ y $S$ dos matric
 
 ### Espacio cociente
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-322"><strong>(\#def:unnamed-chunk-322) </strong></span>Sea $W$ un subespacio de un espacio vectorial $V$. Si $u$ y $v$ son vectores en $V$, diremos que *$u$ es congruente con $v$ módulo $W$* si el vector $v-u\in W$. Esto lo denotaremos $u\cong v\mbox{ mó d }W$.
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-321"><strong>(\#def:unnamed-chunk-321) </strong></span>Sea $W$ un subespacio de un espacio vectorial $V$. Si $u$ y $v$ son vectores en $V$, diremos que *$u$ es congruente con $v$ módulo $W$* si el vector $v-u\in W$. Esto lo denotaremos $u\cong v\mbox{ mó d }W$.
 </div>\EndKnitrBlock{definition}
 
 La congruencia módulo $W$, es una relación de equivalencia sobre $V$:
@@ -3090,6 +3090,172 @@ De donde se sigue que $(V,\mathbb{R},+,\cdot)$ es un espacio vectorial.
 
 <!--chapter:end:040-espacios-vectoriales.Rmd-->
 
+# Polinomios
+En este capítulo estudiaremos una estructura especial de objetos: *las álgebras*; avocándonos especialmente al estudio de un ejemplo muy importante, *los polinomios* y sus propiedades.
+
+Ya vimos que la definición de espacio vectorial $V$ sobre un cuerpo $\mathbb{F}$ lleva intrínseca la definición de dos operaciones, la suma de vectores, definida en $V\times V$ a $V$, y el producto por un escalar, definda de $\mathbb{F}\times V$ en $V$. Podemos definir una operación distinta a la suma de vectores, en $V\times V$ y que el resultado sea un vector. A dicha operación la llamaremos *multiplicación de vectores* y la denotaremos por $u\cdot v$ o simplemente $uv$.
+
+El producto de matrices es un ejemplo de multiplicación de vectores.
+
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-322"><strong>(\#def:unnamed-chunk-322) </strong></span>Un *algebra lineal sobre un cuerpo* $\mathbb{F}$ es una terna $(\mathcal{A},+,\cdot)$, en la que $(\mathcal{A},+)$ un espacio vectorial sobre $\mathbb{F}$ y $\cdot$ es la operación multiplicación de vectores, de modo que:
+  
+(i) la multiplicación es asociativa, es decir, $u(vw)=(uv)w$,
+
+(ii) la multiplicación es distributiva respectoa la suma, esto es, $u(v+w)=uv+uw$ y $(u+v)w=uw+vw$,
+
+(iii) para todo escalar $c\in\mathbb{F}$, se tiene que $c(uv)=(cu)v=u(cv)$.
+
+Si existe un elemento $1\in\mathcal{A}$ tal que $1v=v1=v$, para todo $v\in\mathcal{A}$, decimos que $\mathcal{A}$ es un *álgebra lineal con unidad* y llamaremos *unidad* a dicho elemento. Diremos que $\mathcal{A}$ es un álgebra  conmutativa* si $uv=vu$ para todo $uv\in\mathcal{A}$.
+</div>\EndKnitrBlock{definition}
+
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}Un álgebra lineal no es mas que un anillo $\mathcal{A}$ en el que $\mathcal{A}$ tiene estructura de espacio vectorial (con la operación suma definida en el anillo), donde además se cumple que $c(uv)=(cu)v=u(cv)$, para todo escalar $c\in\mathbb{F}$ y para todo $u,v\in \mathcal{A}$.
+</div>\EndKnitrBlock{remark}
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-324"><strong>(\#exm:unnamed-chunk-324) </strong></span>El conjunto de las matrices $n\times n$ sobre un cuerpo $\mathbb{F}$ con las operaciones usuales, es un álgebra lineal con unidad no es conmutativa salvo que $n=1$, es ese caso las matrices no son mas que el mismo cuerpo de escalares y entonces es un álgebra conmutativa, obviamente. 
+</div>\EndKnitrBlock{example}
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-325"><strong>(\#exm:unnamed-chunk-325) </strong></span>El espacio de los operadores lineales sobre un espacio vectorial $V$, $L(V,V)$ con la composición como multiplicación de vectores, es un álgebra lineal con unidad. Es conmutativa si y solo si el espacio es de dimensión uno.
+</div>\EndKnitrBlock{example}
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-326"><strong>(\#exm:unnamed-chunk-326) </strong></span>El *álgebra de las series formales de potencias*. Consideremos el espacio vectorial de las funciones del conjunto de los enteros no negativos $S=\{0,1,2,\cdots\}$ a un cuerpo $\mathbb{F}$, es decir $\mathbb{F}^{\infty}=\{f:S\longrightarrow \mathbb{F}: f \mbox{ es función } \}$. Entonces cada vector $f$ de $\mathbb{F}^{\infty}$ es una sucesión infinita de elementos de $\mathbb{F}$, $f=(f_{0},f_{1},\cdots)$ (donde cada coordenada $i$ es la imagen de $i$ por la función $f$, es decir, $f_{i}=f(i)$). Se tiene que  $\lambda f +g=\lambda(f_{0},f_{1},\cdots )+(g_{0},g_{1},\cdots )=(\lambda f_{0}+g_{0}, \lambda f_{1}+g_{1},\cdots )$, donde $f=(f_{0},f_{1},\cdots)$, $g=(g_{0},g_{1},\cdots)$ y $\lambda\in\mathbb{F}$.
+Definimos la operación multiplicación de vectores así: dados $f=(f_{0},f_{1},\cdots)$ y $g=(g_{0},g_{1},\cdots)$
+$$(fg)_{n}=\sum_{i=0}^{n} f_{i}g_{n-i} \mbox{ para } n=0,1,2,\cdots$$ es decir, $$fg=(f_{0}g_{0}, f_{0}g_{1}+f_{1}g_{0},f_{0}g_{2}+f_{1}g_{1}+f_{2}g_{1},\cdots).$$
+Además, es fácil ver que esta operación es conmutativa $$(fg)_{n}=\sum_{i=0}^{n} f_{i}g_{n-i} = \sum_{i=0}^{n} g_{i}f_{n-i}=(gf)_{n} \mbox{ para } n=0,1,2,\cdots$$
+Si $h$ es otro vector de $\mathbb{F}^{\infty}$, entonces para $n=1,2,\cdots$, se tiene que:
+$$\begin{array}{rl}
+[(fg)h]_{n}=&\sum_{i=0}^{n}(fg)_{i}h_{n-i}\\
+&\sum_{i=0}^{n}(\sum_{j=0}^{i}f_{j}g_{i-j})h_{n-i}\\
+&\sum_{i=0}^{n}\sum_{j=0}^{i}f_{j}g_{i-j}h_{n-i}\\
+&\sum_{j=0}^{n}\sum_{i=0}^{n-j}f_{j}g_{i}h_{n-j-i}\\
+&\sum_{j=0}^{n}f_{j}\sum_{i=0}^{n-j}g_{i}h_{n-j-i}\\
+&\sum_{j=0}^{n}f_{j}(gh)_{n-j}\\
+&=[f(gh)]_{n}
+\end{array}$$ de donde se deduce que $(fg)h=f(gh)$.
+Se puede verificar fácilmente que la multiplicación cumple las condiciones (i) y (ii) de la definición de álgebra lineal y que el vector $(1,0,0,0,\cdots)$ es la unidad. De donde se concluye que $\mathbb{F}^{\infty}$ es un álgebra lineal conmutativa con unidad sobre el cuerpo $\mathbb{F}$.
+El vector $(0,1,0,0,\cdots)$ juega un papel importante en esta álgebra, por lo que le otorgaremos una notación especial, $x=(0,1,0,0,\cdots)$. Vea que $xx=(0,0,1,0,0,\cdots)$ y que $xxx=(0,0,0,1,0,\cdots)$. En general, el producto de $x$ por si mismo $n$ veces se denotará $x^{n}$ y es igual al vector $(x^{n})_{n}=1$ y $(x^{n})_{k}=0$ siempre que $k\neq n$. Convendremos que $x^{0}=1$.
+Note además que el conjunto $\{1,x,x^{2},\cdots\}$ formado por todas las potencias de $x$ es un conjunto linealmente independiente e infinito, por lo tanto la dimensión de $\mathbb{F}^{\infty}$ no puede ser finita.
+Por último, cada vector $f=(f_{0},f_{1},f_{2},\cdots)$ suele escribirse como $$f=\sum_{n=0}^{\infty} f_{n}x^{n}$$ Esta notación es puramente formal ya que no tenemos la noción de sumas infinitas desde el punto de vista algebraico, no debe confundirse con la definición de series susceptible a nociones de convergencia.
+</div>\EndKnitrBlock{example}
+
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-327"><strong>(\#def:unnamed-chunk-327) </strong></span>Sea $\mathbb{F}[x]$ el espacio vectorial generado por los vectores potencia de $x$, es decir, $\mathbb{F}[x]=\left\langle 1,x,x^{2},x^{3},\cdots \right\rangle $. Un elemento de $\mathbb{F}[x]$ se llamará *polinomio sobre* $\mathbb{F}$.
+</div>\EndKnitrBlock{definition}
+
+Por definición $\mathbb{F}[x]$ es un subespacio de $\mathbb{F}[{\infty}]$. Además se tiene que $f\in\mathbb{F}^{\infty}$ no nulo, es un polinomio si y solo si existe un número entero $n\geq0$ tal que $f_{n}\neq 0$ y $f_{k}=0$ para todo $k>n$; llamaremos *grado* de $f$ a este entero y se denotará por $\mbox{grd } f$. No se le asignará ningún grado al polinomio $0$. Es decir, si $f$ es un polinomio no nulo de grado $n$, $f=f_{0}x^{0}+f_{1}x^{1}+\cdots+f_{n}x^{n}$ con $f_{n}\neq 0$. Se llamarán *coeficientes* a los escalares $f_{0},f_{1},\cdots, f_{n}$, además se dirá que $f$ es un polinomio con coeficientes $\mathbb{F}$. Se llamarán *polinomios escalares* a los polinomios de la forma $cx^{0}$ y se escribirá $c$ en lugar de $cx^{0}$. Un polinomio no nulo de grado $n$ se llamará *mónico* si $f_{n}=1$.
+
+Note que los polinomios son objetos diferentes a las funciones polinómicas mencionadas en la sección espacios vectoriales, pero ciertamente estos objetos tienen relación entre si.
+
+Veamos que el conjunto de los polinomios forman un álgebra.
+
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-328"><strong>(\#thm:unnamed-chunk-328) </strong></span>Sean $f$ y $g$ polinomios no nulos sobre $\mathbb{F}$, entonces:
+  
+(i.) $fg$ es un polinomio no nulo.
+
+(ii.) $\mbox{grd }f=\mbox{grd }f + \mbox{grd }g$.
+
+(iii.) $fg$ es polinomio mónico si y solo si $f$ y $g$ son polinomios mónicos.
+
+(iv.) $fg$ es un polinomio escalar si y solo si $f$ y $g$ polinomios escalares.
+
+(v.) Si $f+g\neq 0$, entonces $\mbox{grd }(f+g)=\max (\mbox{grd }f, \mbox{grd }g)$.
+</div>\EndKnitrBlock{theorem}
+
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Supongamos que $f$ tiene grado $m$ y que $g$ tiene grado $n$. Estudiemos los términos $(fg)_{i}$. Sea $k$ un entero no negativo, entoces $$(fg)_{m+n+k}=\sum_{i=0}^{m+n+k} f_{i}g_{m+n+k-i}$$ Si $i\leq m$ y $m+n+k-i\leq n$, se tiene que $(fg)_{m+n+k}\neq 0$; por lo tanto para que $(fg)_{m+n+k}\neq 0$ es necesario que $m+k\leq i\leq m$, de donde se sigue que $k=0$ e $i=m$. Así $(fg)_{m+n}=f_{m}g_{n}$, además $(fg)_{m+n+k}=0$ si $k>0$. Luego se verifica (i.) esto es que $fg$ es un polinomio no nulo, al igual que (ii.) $\mbox{grd }(fg)=m+n=\mbox{grd }f + \mbox{grd }g$, por lo tanto si $f$ y $g$ son polinomios mónicos, $fg$ también lo es (iii.). Y de aquí se sigue fácilmente (iv.). Para ver (v.) supongamos que $f+g\neq 0$, entonces existe $i\geq 0$ tal que $f_{i}+g_{i}\neq 0$. No puede suceder que $i>\max (\mbox{grd }f, \mbox{grd }g)$ de donde se sigue el resultado.
+</div>\EndKnitrBlock{proof}
+
+\BeginKnitrBlock{corollary}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-330"><strong>(\#cor:unnamed-chunk-330) </strong></span>El conjunto de los polinomios sobre el cuerpo $\mathbb{F}$ junto con las operaciones de suma y multiplicación de polinomios, forman un álgebra lineal conmutativa con unidad sobre $\mathbb{F}$.
+</div>\EndKnitrBlock{corollary}
+
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Como $\mathbb{F}[x]$ es un subespacio de $\mathbb{F}^{\infty}$ y las operaciones de suma y el multiplicación de polinomios son las mismas operaciones de sumas y multiplicación definidas en $\mathbb{F}^{\infty}$, basta ver que la multiplicación de polinomios es cerrada, es decir, el resultado es nuevamente un polinomio. Esto se tiene directamente del teorema anterior cuando ambos factores de la multiplicación son polinomios no nulos. Cuando alguno de los factores es el polinomio cero, el producto es cero, el cual también es un polinomio.
+</div>\EndKnitrBlock{proof}
+
+\BeginKnitrBlock{corollary}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-332"><strong>(\#cor:unnamed-chunk-332) </strong></span>Sean $f, g$ y $h$ polinomios sobre el cuerpo $\mathbb{F}$ con $f\neq 0$. Si $fg=fh$, entonces $g=h$.
+</div>\EndKnitrBlock{corollary}
+
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Como $fg=fh$, entonces $f(g-h)=0$. De la parte (i.) del teorema, como $f\neq 0$, se tiene que $g-h=0$, de donde se sigue el resultado.
+</div>\EndKnitrBlock{proof}
+
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}Para el caso de los polinomios, la expresión de la multiplicación de series de potencias $fg$ puede reescribirse de la siguiente forma, $$fg=\sum_{s=0}^{m+n}(\sum_{r=0}^{s}f_{r}g_{s-r})x^{s}\mbox{, con } \mbox{grad}f=m \mbox{ y grad}g=n$$
+En particular, si $f=cx^{m}$ y $g=dx^{n}$, con $c, d\in\mathbb{F}$, entonces $fg=cdx^{m+n}$. De esta forma, usando las leyes distributivas en $\mathbb{F}[x]$, la multiplicación de polinomios viene dada por $$\sum_{i\leq m, j\leq n} f_{i}g_{j}x^{i+j}$$
+</div>\EndKnitrBlock{remark}
+
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-335"><strong>(\#def:unnamed-chunk-335) </strong></span>Sea $\mathcal{A}$ un álgebra lineal con unidad sobre $\mathbb{F}$. Se indicará la unidad de $\mathcal{A}$ por $1$ y se conviene que $\alpha^{0}=1$ para todo $\alpha\in\mathcal{A}$. Entonces a cada polinomio $f=\sum_{i=0}^{n} f_{i}x^{i}$ sobre $\mathbb{F}$ y cada $\alpha\in\mathcal{A}$ se asocia un elemento de $f(\alpha)\in\mathcal{A}$, de la forma: $$f(\alpha)=\sum_{i=0}^{n}f_{i}\alpha^{i}.$$
+</div>\EndKnitrBlock{definition}
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-336"><strong>(\#exm:unnamed-chunk-336) </strong></span>Sea $\mathbb{C}$ el cuerpo de los números complejos y sea $f=x^{2}+1$.
+
+(a) Si $\mathcal{A}=\mathbb{C}$. Sea $z\in\mathbb{C}$, entonces $f(z)=z^{2}+1$, en particular $f(3)=10$ y $f(i)=0$.
+(b) Si $\mathcal{A}=\mathcal{M}_{2}(\mathbb{C})$, el álgebra de las matrices $2\times 2$ sobre el cuerpo $\mathbb{C}$. Y sea $$B=\left[\begin{array}{cc}
+		-1&2\\
+		1&0
+		\end{array} \right] $$
+		se tiene que $f(B)=\left[\begin{array}{cc}
+		-1&2\\
+		1&0
+		\end{array} \right]^{2}+\left[\begin{array}{cc}
+		1&0\\
+		0&1
+		\end{array} \right]=\left[\begin{array}{cc}
+		4&-2\\
+		-1&3
+		\end{array} \right]$
+(c) Si $\mathcal{A}$ es el álgebra de los operadores lineales en $\mathbb{C}^{3}$ y sea $T(c_{1},c_{2},c_{3})=(ic_{2},-c_{3},-ic_{1})$. Entonces $f(T)=T^{2}+T$, esto es $f(T)(c_{1},c_{2},c_{3})=(c_{1}-ic_{3},c_{2}+ic_{1},c_{2}+c_{3})$, ya que $T^{2}(c_{1},c_{2},c_{3})=T(T(c_{1},c_{2},c_{3}))=(-ic_{3},ic_{1},c_{2})$
+</div>\EndKnitrBlock{example}
+
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-337"><strong>(\#thm:unnamed-chunk-337) </strong></span>Sea $\mathbb{F}$ un cuerpo y $\mathcal{A}$ un álgebra lineal con unidad sobre $\mathbb{F}$. Sean $f$ y $g$ polinomios sobre $\mathbb{F}$, $\alpha\in\mathcal{A}$ y $c\in\mathbb{F}$. Entonces:
+
+(i.) $(cf+g)(\alpha)=cf(\alpha)+g(\alpha)$ y
+(ii.) $(fg)(\alpha)=f(\alpha)g(\alpha)$.
+</div>\EndKnitrBlock{theorem}
+
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Supongamos que $f=\sum_{i=0}^{m} f_{i}x^{i}$ y $g=\sum_{j=0}^{n} g_{j}x^{j}$, por lo tanto $$\displaystyle{\begin{array}{rl}
+	fg=&\sum_{\substack{i\leq m\\ j\leq n}} f_{i}g_{j}\alpha^{i+j}\\
+	=&\left( \sum_{\substack{i\leq m\\ j\leq n}} f_{i}\alpha^{i+j}\right)  \left( \sum_{\substack{i\leq m\\ j\leq n}} g_{i}\alpha^{i+j}\right)  \\
+	=&f(\alpha)g(\alpha)
+	\end{array}}.$$
+	Por otra parte, $$\begin{array}{rl}
+	(cf+g)(\alpha)=&\sum_{i=0}^{\max(m,n)} (cf_{i}+g_{i})\alpha^{i}\\
+	=&\sum_{i=0}^{\max(m,n)} cf_{i}(\alpha^{i})+g_{i}(\alpha^{i})\\
+	=&cf(\alpha)+g(\alpha)
+	\end{array}$$
+</div>\EndKnitrBlock{proof}
+
+En esta parte haremos un breve estudio sobre la interpolación de Lagrange (interpolación polinómica de Lagrange). Se quiere construír un polinomio sencillo que "pase" por ciertos puntos. Más formalmente, sea $\mathbb{F}$ un cuerpo y $t_{0},t_{1},\cdots, t_{n}$ $n+1$ elementos distintos de $\mathbb{F}$. Consideremos el subespacio $V$ de $\mathbb{F}[x]$ formado por los polinomios de grado menor o igual a $n$ (incluído el polinomio $0$ para dar estructura de espacio vectorial). Sean $L_{i}$ las funciones definidas por $L_{i}(f)=f(t_{i})$ para todo $f\in V$, con $i=0,1,\cdots ,n$. Note que cada $L_{i}$ es una función de $V$ en el cuerpo $\mathbb{F}$, es decir es un funcional lineal sobre $V$. Se tiene que $\{L_{i}:i=0,1,\cdots, n \}$ es una base de $V^{\ast}$, mas específicamente, $\{L_{i}:i=0,1,\cdots, n \}$ es el dual de una base $\{P_{i}:i=0,1,\cdots, n \}$ de $V$. Además, en virtud del teorema \@ref{thm:teorema443} es única para esta y esta caracterizada por $$L_{j}(P_{i})=P_{i}(t_{j})=\delta_{ij}.$$ 
+Sean $$P_{i}=\frac{(x-t_{0})\cdots(x-t_{i-1})(x-t_{i+1})\cdots (x-t_{n}) }{(t_{i}-t_{0})\cdots(t_{i}-t_{i-1})(t_{i}-t_{i+1})\cdots (t_{i}-t_{n})}=\prod_{j\neq i} \left( \frac{x-t_{j}}{t_{i}-t_{j}}\right) $$
+polinomios en $V$. Si $f=\sum_{i=0}^{n} c_{i}P_{i}$, entonces para todo $j$ se tiene que $f(t_{j})=\sum_{i=0}^{n} c_{i}P_{i}(t_{j})=c_{j}$ (ya que $P_{i}(t_{j})\neq 0$ solo cuando $i=j$). Como el polinomio cero es cero para todo coeficiente $t$, es decir $0(t)=0$ para todo $t\in\mathbb{F}$, se tiene que $P_{0},P_{1},\cdots,P_{n}$ son linealmente independientes. Recordemos que la dimensión de $V$ es $n+1$, por lo tanto la colección $\{P_{0},P_{1},\cdots,P_{n}\}$ es también una base de $V$. Entonces, para todo $f\in V$ se tiene que $$f=\sum_{i=0}^{n} f(t_{i})P_{i}$$ conocida como la *fórmula de interpolación de Lagrange*.
+
+##ejercicios
+
+(1) Sea $S$ el conjunto de los enteros no negativos y $\mathbb{F}$ un cuerpo. Sea $\mathbb{F}^{\infty}$ el conjunto de las funciones de $S$ en $\mathbb{F}$. Se definen las operaciones, suma, producto por un escalar y multiplicación de vectores en $\mathbb{F}^{\infty}$ como en el ejemplo \ref{ejemplo55}. Demuestre que:
+(i.) la multiplicación es distributiva respecto de la suma, es decir, es decir, si $f,g,h\in \mathbb{F}^{\infty}$ entonces $f(g+f)=fg+fh$ y $(f+g)h=fh+gh$, 
+(ii.) para todo escalar $c\in\mathbb{F}$, se cumple que $c(fg)=(cf)g=f(cg)$.
+Respuesta: 
+$$\begin{array}{rl}
+[f(g+h)]_{n}=&\sum_{i=0}^{n} f_{i}(g+h)_{n-i} \forall n=1,2,\cdots\\
+=&\sum_{i=0}^{n} f_{i}g_{n-i}+f_{i}h_{n-i}\\
+=&\sum_{i=0}^{n} f_{i}g_{n-i}+\sum_{i=0}^{n}f_{i}h_{n-i}\\
+=&(fg)_{n}+(fh)_{n}
+\end{array}$$ por lo tanto $f(g+h)=fg+fh$.
+De forma análoga se tiene que $[(f+g)h]_{n}=(fh)_{n}+(gh)_{n} \forall n=1,2,\cdots$ y eso demuestra (a).
+Veamos que se cumple (b)
+$$\begin{array}{rl}
+[k(fg)]_{n}=&k(fg)_{n}\\
+=&k\sum_{i=0}^{n} f_{i}g_{n-i} \forall n=1,2,\cdots\\
+=&\sum_{i=0}^{n} kf_{i}g_{n-i}\\
+=&\sum_{i=0}^{n} (kf_{i})g_{n-i}\\
+=&[(kf)g]_{n}
+\end{array}$$
+lo que muestra que $k(fg)=(kf)g$. Ahora, sustituyendo la cuarta linea de la cadena de igualdades anteriores, por $\sum_{i=0}^{n} f_{i}(kg_{n-i})$ obtenemos que $k(fg)=f(kg)$.
+
+(2) Demuestre que si $f=cx^{m}$ y $g=dx^{n}$, con $c, d\in\mathbb{F}$, entonces $fg=cdx^{m+n}$.
+Respuesta: como $(fg)_{k}=\sum_{i=0}^{k}f_{i}g_{k-i}$ y $f_{i}=0$ si $i<m$ y $g_{j}=0$ si $j<n$, se tiene que solo para $k=m+n$ $(fg)_{k}\neq 0$.
+
+(3) Sean $f$ y $g$ polinomios de grado $m$ y $n$ respectivamente. Demuestre que: $$fg=\sum_{s=0}^{m+n}(\sum_{r=0}^{s}f_{r}g_{s-r})x^{s}.$$
+Respuesta: Considerando a $f$ y $g$ como una suma de polinomios de la base $\{x^{n}: n\geq 0\}$, $f=f_{0}+ f_{1}x+ f_{2}x^{2}+\cdots+f_{m}x^{m}$ y $g=g_{0}+ g_{1}x+ g_{2}x^{2}+\cdots+g_{m}x^{m}$, por las propiedades distributivas y el ejercicio anterios se obtiene el resultado.
+
+
+
+<!--chapter:end:041-polinomios.Rmd-->
+
 # Matrices
 
 <!--chapter:end:050-matrices.Rmd-->
@@ -3106,15 +3272,20 @@ De donde se sigue que $(V,\mathbb{R},+,\cdot)$ es un espacio vectorial.
 
 En este capítulos estudiaremos unas funciones especiales entre espacios vectoriales. Lo deseable es que las funciones preserven la estructura de espacio vectorial, entre otras cosas, queremos que la imagen del vector cero, sea el vector cero en el espacio de llegada. Estas funciones son las llamadas transformaciones lineales. Veremos que el nombre obedece a que dichas funciones corresponden a una recta si los espacios son los números reales.
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-323"><strong>(\#def:unnamed-chunk-323) </strong></span>Sean $V$ y $W$ dos espacios vectoriales sobre el mismo cuerpo de escalares $\mathbb{F}$. Decimos que una función $T$ de $V$ en $W$ es una *transformación lineal* si $T(\lambda u+ v)=\lambda T(u)+T(v)$ para todo escalar $\lambda\in \mathbb{F}$ y todo $u,v\in V$.</div>\EndKnitrBlock{definition}
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-339"><strong>(\#def:unnamed-chunk-339) </strong></span>Sean $V$ y $W$ dos espacios vectoriales sobre el mismo cuerpo de escalares $\mathbb{F}$. Decimos que una función $T$ de $V$ en $W$ es una *transformación lineal* si $T(\lambda u+ v)=\lambda T(u)+T(v)$ para todo escalar $\lambda\in \mathbb{F}$ y todo $u,v\in V$.
+</div>\EndKnitrBlock{definition}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-324"><strong>(\#exm:unnamed-chunk-324) </strong></span>La *transformación identidad*. Sea $V$ un espacio vectorial cualquiera. $I: V\longrightarrow V$ en la que a cada vector $v\in V$ se le asigna el mismo $v$, es decir, $I(v)=v$.</div>\EndKnitrBlock{example}
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-340"><strong>(\#exm:unnamed-chunk-340) </strong></span>La *transformación identidad*. Sea $V$ un espacio vectorial cualquiera. $I: V\longrightarrow V$ en la que a cada vector $v\in V$ se le asigna el mismo $v$, es decir, $I(v)=v$.
+</div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-325"><strong>(\#exm:unnamed-chunk-325) </strong></span>La *transformación cero*. Sean $V$ y $W$ espacios vectoriales. $0:V\longrightarrow W$, definido por $0(v)=0$. Note que el cero de la derecha es el vector cero del espacio $W$.</div>\EndKnitrBlock{example}
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-341"><strong>(\#exm:unnamed-chunk-341) </strong></span>La *transformación cero*. Sean $V$ y $W$ espacios vectoriales. $0:V\longrightarrow W$, definido por $0(v)=0$. Note que el cero de la derecha es el vector cero del espacio $W$.
+</div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-326"><strong>(\#exm:unnamed-chunk-326) </strong></span>La *transformación derivación* $D$. Sea $V$ el espacio de las funciones infinitamente derivables. Sea $D:V\longrightarrow V$, definida como $D(f)(x)=f´(x)$. Como la derivada de una suma es la suma de las derivadas y las constantes salen de la derivada, se sigue que $D$ es una transformación lineal.</div>\EndKnitrBlock{example}
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-342"><strong>(\#exm:unnamed-chunk-342) </strong></span>La *transformación derivación* $D$. Sea $V$ el espacio de las funciones infinitamente derivables. Sea $D:V\longrightarrow V$, definida como $D(f)(x)=f´(x)$. Como la derivada de una suma es la suma de las derivadas y las constantes salen de la derivada, se sigue que $D$ es una transformación lineal.
+</div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-327"><strong>(\#exm:unnamed-chunk-327) </strong></span>Sea $A\in\mathcal{M}_{m\times n}(\mathbb{F})$. Definimos la función $T:\mathbb{F}^{n}\longrightarrow \mathbb{F}^{m}$, como $T(X)=AX$. En la sección de matrices vimos las propiedades de las operaciones de suma y producto por un escalar de matrices, de donde se sigue que $T(\lambda X+Y)=A(\lambda X+Y)=\lambda AX+AY=\lambda T(X)+T(Y)$.</div>\EndKnitrBlock{example}
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-343"><strong>(\#exm:unnamed-chunk-343) </strong></span>Sea $A\in\mathcal{M}_{m\times n}(\mathbb{F})$. Definimos la función $T:\mathbb{F}^{n}\longrightarrow \mathbb{F}^{m}$, como $T(X)=AX$. En la sección de matrices vimos las propiedades de las operaciones de suma y producto por un escalar de matrices, de donde se sigue que $T(\lambda X+Y)=A(\lambda X+Y)=\lambda AX+AY=\lambda T(X)+T(Y)$.
+</div>\EndKnitrBlock{example}
 
 Note que si $T$ es una transformación lineal de $V$ en $W$, $T(0)=0$. Además, se puede probar que las transformaciones lineales preservan las combinaciones lineales, es decir, $T(\sum_{i=1}^{n}\lambda_{i}v_{i})=\sum_{i=1}^{n}\lambda_{i}T(v_{i})$.
 
@@ -3122,9 +3293,10 @@ Note que si $T$ es una transformación lineal de $V$ en $W$, $T(0)=0$. Además, 
 
 En el capítulo anterior definimos base de un espacio vectorial, como un conjunto de vectores linealmente independiente que generan el espacio. Para esta parte tomaremos en cuenta el orden en el que aparecen los vectores que conforman la base, es decir, tomaremos bases ordenadas.
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-328"><strong>(\#def:unnamed-chunk-328) </strong></span>Decimos que una sucesión finita de vectores de un espacio vectorial de dimensión finita $V$, es una *base ordenada* si es un conjunto linealmente independiente y generan $V$. Es decir, la sucesión $\mathcal{B}=\{v_{1},v_{2},\cdots v_{n} \}\subseteq V$ es una base ordenada de $V$, si $\mathcal{B}$ es l.i. y $\left\langle v_{1},v_{2},\cdots v_{n} \right\rangle =V$.</div>\EndKnitrBlock{definition}
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-344"><strong>(\#def:unnamed-chunk-344) </strong></span>Decimos que una sucesión finita de vectores de un espacio vectorial de dimensión finita $V$, es una *base ordenada* si es un conjunto linealmente independiente y generan $V$. Es decir, la sucesión $\mathcal{B}=\{v_{1},v_{2},\cdots v_{n} \}\subseteq V$ es una base ordenada de $V$, si $\mathcal{B}$ es l.i. y $\left\langle v_{1},v_{2},\cdots v_{n} \right\rangle =V$.
+</div>\EndKnitrBlock{definition}
 
-Al considerar la base $\mathcal{B}$ como un conjunto ordenado, a cada vector $v\in V$ le corresponde una sucesión única de escalares $(\lambda_{1},\lambda_{2},\cdots ,\lambda_{n})$ tales que $v=\sum_{i=1}^{n} \lambda_{i}v_{i}$. La unicidad viene dada por el orden de los vectores de la base, sin dicho orden, una permutación de los escalares nos dotaría de una sucesión distinta de escalares. Llamaremos *\textit{*$i$-ésima coordenada de $v$ en la base $\mathcal{B}$*, al escalar $\lambda_{i}$. Además, note que
+Al considerar la base $\mathcal{B}$ como un conjunto ordenado, a cada vector $v\in V$ le corresponde una sucesión única de escalares $(\lambda_{1},\lambda_{2},\cdots ,\lambda_{n})$ tales que $v=\sum_{i=1}^{n} \lambda_{i}v_{i}$. La unicidad viene dada por el orden de los vectores de la base, sin dicho orden, una permutación de los escalares nos dotaría de una sucesión distinta de escalares. Llamaremos *$i$-ésima coordenada de $v$ en la base $\mathcal{B}$*, al escalar $\lambda_{i}$. Además, note que
 
 $$v=(v_{1}, v_{2},\cdots , v_{n}) \left( \begin{array}{c}
  \lambda_{1}\\
@@ -3145,9 +3317,10 @@ v=&\sum_{j=1}^{n} \gamma_{j} u_{j}\\
 
 Pero, por otro lado, $v=\sum_{i=1}^{n} \lambda_{i} u_{i}$, por la unicidad de los escalares se tiene que $\lambda_{i}=\gamma_{j}P_{ij}$ para cada $i\in\{1,2,\cdots,n\}$. LLamandos $P$ a la matriz $[P]_{ij}=P_{ij}$, se tiene que $[v]_{\mathcal{B}_{1}}=P[v]_{\mathcal{B}_{2}}$. Como las bases $\mathcal{B}_{1}$ y $\mathcal{B}_{2}$ son conjunto linealmente independientes, se tiene que $[v]_{\mathcal{B}_{1}}=0$ si y solo si $[v]_{\mathcal{B}_{2}}=0$, por lo tanto $P$ es una matriz invertible, de donde se tiene que $[v]_{\mathcal{B}_{2}}=P^{-1}[v]_{\mathcal{B}_{1}}$, es decir, $[v]_{\mathcal{B}_{1}}=P[v]_{\mathcal{B}_{2}}\Leftrightarrow [v]_{\mathcal{B}_{2}}=P^{-1}[v]_{\mathcal{B}_{1}}$.
 
-\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}Ya hemos visto que la matriz $P$ es única (por considerar bases ordenadas), a esta matriz la llamaremos *matriz cambio de base, de $\mathcal{B}_{1}$ a la base $\mathcal{B}_{2}$*. Además, dada una base $\mathcal{B}_{1}$ y una matriz invertible $P$, existe una única base $\mathcal{B}_{2}$ tal que $P$ es la correspondiente matriz cambio de base de $\mathcal{B}_{1}$ a $\mathcal{B}_{2}$.</div>\EndKnitrBlock{remark}
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}Ya hemos visto que la matriz $P$ es única (por considerar bases ordenadas), a esta matriz la llamaremos *matriz cambio de base, de $\mathcal{B}_{1}$ a la base $\mathcal{B}_{2}$*. Además, dada una base $\mathcal{B}_{1}$ y una matriz invertible $P$, existe una única base $\mathcal{B}_{2}$ tal que $P$ es la correspondiente matriz cambio de base de $\mathcal{B}_{1}$ a $\mathcal{B}_{2}$.
+</div>\EndKnitrBlock{remark}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-330"><strong>(\#exm:unnamed-chunk-330) </strong></span>Sean $\mathcal{B}_{1}=\{e_{1}, e_{2}\}$ la base canónica y $\mathcal{B}_{2}=\{(1,2), (-2,1)\}$ otra base de $\mathbb{R}^{2}$. Entonces $$(1,2)=1e_{1}+2e_{2}$$ y $$(-2,1)=-2e_{1}+1e_{2}$$ por lo tanto las coordenadas de los vectores $(1,2), (-2,1)$ de la base $\mathcal{B}_{2}$ son $(1,2)$ y $(-2,1)$ respectivamente.
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-346"><strong>(\#exm:unnamed-chunk-346) </strong></span>Sean $\mathcal{B}_{1}=\{e_{1}, e_{2}\}$ la base canónica y $\mathcal{B}_{2}=\{(1,2), (-2,1)\}$ otra base de $\mathbb{R}^{2}$. Entonces $$(1,2)=1e_{1}+2e_{2}$$ y $$(-2,1)=-2e_{1}+1e_{2}$$ por lo tanto las coordenadas de los vectores $(1,2), (-2,1)$ de la base $\mathcal{B}_{2}$ son $(1,2)$ y $(-2,1)$ respectivamente.
 
 Por otro lado, $$e_{1}=(1,0)=\frac{1}{5}(1,2)-\frac{2}{5}(-2,1)$$ y $$e_{2}=(0,1)=\frac{2}{5}(1,2)+\frac{1}{5}(-2,1)$$
 por lo que las coordenadas de los vectores $e_{1}$ y $e_{2}$ son $(\frac{1}{5},-\frac{2}{5})$ y $(\frac{2}{5},\frac{1}{5})$ respectivamente.
@@ -3172,9 +3345,10 @@ P^{-1}=\left(
 2 & 1
 \end{array}
 \right)
-$$</div>\EndKnitrBlock{example}
+$$
+  </div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-331"><strong>(\#exm:unnamed-chunk-331) </strong></span>Para $\theta$ fijo, 
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-347"><strong>(\#exm:unnamed-chunk-347) </strong></span>Para $\theta$ fijo, 
 
 $$P=\left(\begin{array}{cc}
 \cos\theta & -\sin\theta\\
@@ -3189,9 +3363,11 @@ $$P^{-1}=\left(\begin{array}{cc}
 \end{array} \right)$$
   
 Luego $\mathcal{B}_{2}=\{(\cos\theta,\sin\theta),(-\sin\theta,\cos\theta)\}$ 
-es la base para la cual $P$ es la matriz cambio de base de la base canónica a la base $\mathcal{B}_{2}$.</div>\EndKnitrBlock{example}
+es la base para la cual $P$ es la matriz cambio de base de la base canónica a la base $\mathcal{B}_{2}$.
+</div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-332"><strong>(\#thm:unnamed-chunk-332) </strong></span>Sea $V$ un espacio vectorial de dimensión finita (sobre un cuerpo $\mathbb{F}$). Sea $\{v_{1}, v_{2},\cdots, v_{n}\}$ una base ordenada de $V$. Sea $W$ un espacio vectorial (sobre un cuerpo $\mathbb{F}$) y sean $u_{1}, u_{2},\cdots, u_{n}$ vectores cualesquiera de $W$. Entonces existe una única transformación lineal $T$ de $V$ en $W$ tal que $Tv_{i}=u_{i}$, para todo $1\leq i\leq n$.</div>\EndKnitrBlock{theorem}
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:teorema410"><strong>(\#thm:teorema410) </strong></span>Sea $V$ un espacio vectorial de dimensión finita (sobre un cuerpo $\mathbb{F}$). Sea $\{v_{1}, v_{2},\cdots, v_{n}\}$ una base ordenada de $V$. Sea $W$ un espacio vectorial (sobre un cuerpo $\mathbb{F}$) y sean $u_{1}, u_{2},\cdots, u_{n}$ vectores cualesquiera de $W$. Entonces existe una única transformación lineal $T$ de $V$ en $W$ tal que $Tv_{i}=u_{i}$, para todo $1\leq i\leq n$.
+</div>\EndKnitrBlock{theorem}
 
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Cada $v\in V$ se escribe como combinación lineal de los elementos de la base, esto es, $v=\lambda_{1}v_{1}+\lambda_{2}v_{2}+\cdots+\lambda_{n}v_{n}$. Definamos para cada $v$, $Tv=\lambda_{1}u_{1}+\lambda_{2}u_{2}+\cdots+\lambda_{n}u_{n}$, donde los $\lambda_{i}$ son los mismos coeficientes que lo describen en términos de la base. Esto es $T:V\longrightarrow W$ tal que $Tv$ está definido como antes. Por construcción $Tv_{i}=u_{i}$. Veamos que $T$ es lineal. Sean $v, w\in V$ y $\gamma\in\mathbb{F}$, donde $v=\lambda_{1}v_{1}+\lambda_{2}v_{2}+\cdots+\lambda_{n}v_{n}$ y $w=\delta_{1}v_{1}+\delta_{2}v_{2}+\cdots+\delta_{n}v_{n}$, entonces 
 $$
@@ -3204,31 +3380,38 @@ T(\gamma v+w)=&T((\gamma\lambda_{1}v_{1}+\gamma\lambda_{2}v_{2}+\cdots+\gamma\la
 \end{array}
 $$
   
-Veamos que es única. Sea $T´:V\longrightarrow W$ una transformación tal que $T´v_{i}=u_{i}$, para todo $1\leq i\leq n$. Así $T´v=T´(\sum_{i=1}^{n} \lambda_{i}v_{i})=\sum_{i=1}^{n} \lambda_{i}T´(v_{i})=\sum_{i=1}^{n} \lambda_{i}T(v_{i})=Tv$.</div>\EndKnitrBlock{proof}
+Veamos que es única. Sea $T´:V\longrightarrow W$ una transformación tal que $T´v_{i}=u_{i}$, para todo $1\leq i\leq n$. Así $T´v=T´(\sum_{i=1}^{n} \lambda_{i}v_{i})=\sum_{i=1}^{n} \lambda_{i}T´(v_{i})=\sum_{i=1}^{n} \lambda_{i}T(v_{i})=Tv$.
+</div>\EndKnitrBlock{proof}
 
 El resultado de este teorema nos dice que una transformación lineal está unívocamente determinada por las imagenes de los vectores de una base del espacio $V$.
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-334"><strong>(\#def:unnamed-chunk-334) </strong></span>Sea $T:V\longrightarrow W$ una transformación lineal del espacio vectorial $V$ en el espacio vectorial $W$. El conjunto *imagen de $T$* es el conjunto formado por los vectores imagen de la transformación y se denota por $Img(T)$. Es decir $Img(T)=\{Tv:v\in V \}$.</div>\EndKnitrBlock{definition}
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-349"><strong>(\#def:unnamed-chunk-349) </strong></span>Sea $T:V\longrightarrow W$ una transformación lineal del espacio vectorial $V$ en el espacio vectorial $W$. El conjunto *imagen de $T$* es el conjunto formado por los vectores imagen de la transformación y se denota por $Img(T)$. Es decir $Img(T)=\{Tv:v\in V \}$.
+</div>\EndKnitrBlock{definition}
 
-\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}El conjunto imagen de una transformación lineal, es un subespacio vectorial del codominio de $T$. Además, el conjunto de vectores cuya imagen es el vector cero, es un subespacio del dominio de $T$.</div>\EndKnitrBlock{remark}
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}El conjunto imagen de una transformación lineal, es un subespacio vectorial del codominio de $T$. Además, el conjunto de vectores cuya imagen es el vector cero, es un subespacio del dominio de $T$.
+</div>\EndKnitrBlock{remark}
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-336"><strong>(\#def:unnamed-chunk-336) </strong></span>Sea $T:V\longrightarrow W$ una transformación lineal del espacio vectorial $V$ en el espacio vectorial $W$. El *núcleo (o espacio nulo) de $T$* es el conjunto $Ker(T)=\{v\in V: Tv=0 \}$.</div>\EndKnitrBlock{definition}
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-351"><strong>(\#def:unnamed-chunk-351) </strong></span>Sea $T:V\longrightarrow W$ una transformación lineal del espacio vectorial $V$ en el espacio vectorial $W$. El *núcleo (o espacio nulo) de $T$* es el conjunto $Ker(T)=\{v\in V: Tv=0 \}$.
+</div>\EndKnitrBlock{definition}
 
 Si $V$ es un espacio vectorial de dimensión finita, el*rango de $T$* es la dimensión de la imagen de $T$ y *la nulidad de $T$* es la dimensión del núcleo de $T$. Se denota $rango(T)$ y $Nul(T)$ respectivamente.
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-337"><strong>(\#thm:unnamed-chunk-337) </strong></span>Sean $V$ y $W$ espacios vectoriales, donde $V$ es de dimensión finita. Sea $T$ una transformación lineal de $V$ en $W$. Entonces 
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-352"><strong>(\#thm:unnamed-chunk-352) </strong></span>Sean $V$ y $W$ espacios vectoriales, donde $V$ es de dimensión finita. Sea $T$ una transformación lineal de $V$ en $W$. Entonces 
 
-$$dim V=rango(T)+Nul(T).$$</div>\EndKnitrBlock{theorem}
+$$dim V=rango(T)+Nul(T).$$
+  </div>\EndKnitrBlock{theorem}
 
-\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Sea $n$ la dimensión de $V$. Sea $\{v_{1},v_{2},\cdots,v_{k}\}$ una base de $Ker(T)$ y sean $v_{k+1},v_{k+2},\cdots, v_{n}$ vectores tales que $\{v_{1},v_{2},\cdots,v_{k}, v_{k+1},v_{k+2},\cdots, v_{n} \}$ son base de $V$. Así $T$ está determinada por $Tv_{i}$, para cada $1\leq i\leq n$; como $tv_{i}=0$ para todo $1\leq i\leq k$, se tiene que $Tv_{k+1}, Tv_{k+2},\cdots, Tv_{n}$ generan a $Img(T)$. Veamos que son linealmente independientes, sean $n-k$ escalares $\lambda_{k+1}, \lambda_{k+2}, \cdots, \lambda_{n}$ y consideremos $\lambda_{k+1}Tv_{k+1}+ \lambda_{k+2}Tv_{k+2}+ \cdots+ \lambda_{n}Tv_{n}=0$, entonces $T(\lambda_{k+1}v_{k+1}+ \lambda_{k+2}v_{k+2}+ \cdots+ \lambda_{n}v_{n})=0$ por lo tanto $\lambda_{k+1}v_{k+1}+ \lambda_{k+2}v_{k+2}+ \cdots+ \lambda_{n}v_{n}\in Ker(T)$, de donde se tiene que $\lambda_{k+1}v_{k+1}+ \lambda_{k+2}v_{k+2}+ \cdots+ \lambda_{n}v_{n}=\lambda_{1}v_{1}+\lambda_{2}v_{2}+\cdots+\lambda_{k}v_{k}$, como $\{v_{1},v_{2},\cdots,v_{k}, v_{k+1},v_{k+2},\cdots, v_{n} \}$ es un conjunto linealmente independiente, se tiene que $\lambda_{k+1}=\lambda_{k+2}= \cdots=\lambda_{n}=0$.</div>\EndKnitrBlock{proof}
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Sea $n$ la dimensión de $V$. Sea $\{v_{1},v_{2},\cdots,v_{k}\}$ una base de $Ker(T)$ y sean $v_{k+1},v_{k+2},\cdots, v_{n}$ vectores tales que $\{v_{1},v_{2},\cdots,v_{k}, v_{k+1},v_{k+2},\cdots, v_{n} \}$ son base de $V$. Así $T$ está determinada por $Tv_{i}$, para cada $1\leq i\leq n$; como $tv_{i}=0$ para todo $1\leq i\leq k$, se tiene que $Tv_{k+1}, Tv_{k+2},\cdots, Tv_{n}$ generan a $Img(T)$. Veamos que son linealmente independientes, sean $n-k$ escalares $\lambda_{k+1}, \lambda_{k+2}, \cdots, \lambda_{n}$ y consideremos $\lambda_{k+1}Tv_{k+1}+ \lambda_{k+2}Tv_{k+2}+ \cdots+ \lambda_{n}Tv_{n}=0$, entonces $T(\lambda_{k+1}v_{k+1}+ \lambda_{k+2}v_{k+2}+ \cdots+ \lambda_{n}v_{n})=0$ por lo tanto $\lambda_{k+1}v_{k+1}+ \lambda_{k+2}v_{k+2}+ \cdots+ \lambda_{n}v_{n}\in Ker(T)$, de donde se tiene que $\lambda_{k+1}v_{k+1}+ \lambda_{k+2}v_{k+2}+ \cdots+ \lambda_{n}v_{n}=\lambda_{1}v_{1}+\lambda_{2}v_{2}+\cdots+\lambda_{k}v_{k}$, como $\{v_{1},v_{2},\cdots,v_{k}, v_{k+1},v_{k+2},\cdots, v_{n} \}$ es un conjunto linealmente independiente, se tiene que $\lambda_{k+1}=\lambda_{k+2}= \cdots=\lambda_{n}=0$.
+</div>\EndKnitrBlock{proof}
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-339"><strong>(\#thm:unnamed-chunk-339) </strong></span>Sean $V$ y $W$ espacios vectoriales sobre un cuerpo $\mathbb{F}$. Sean $T_{1}$ y $T_{2}$ transformaciones lineales de $V$ en $W$, se tiene:
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-354"><strong>(\#thm:unnamed-chunk-354) </strong></span>Sean $V$ y $W$ espacios vectoriales sobre un cuerpo $\mathbb{F}$. Sean $T_{1}$ y $T_{2}$ transformaciones lineales de $V$ en $W$, se tiene:
 	
 (1) La función $(T_{1}+T_{2})$ definida por $(T_{1}+T_{2})(v)=T_{1}(v)+T_{2}(v)$, es una transformación lineal de $V$ en $W$.
 
 (2) Dado un escalar $\lambda$, la función $\lambda T_{1}$ definida por $(\lambda T_{1})(v)=\lambda T_{1}(v)$, es una transformación lineal de $V$ en $W$.
 
-(3) El conjunto de las transformaciones lineales de $V$ en $W$, junto con las operaciones definidas antes, es un espacio vectorial sobre el cuerpo $\lambda$.</div>\EndKnitrBlock{theorem}
+(3) El conjunto de las transformaciones lineales de $V$ en $W$, junto con las operaciones definidas antes, es un espacio vectorial sobre el cuerpo $\lambda$.
+</div>\EndKnitrBlock{theorem}
 
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Sean $T_{1}$ y $T_{2}$ como en las hipótesis y $\lambda\in \mathbb{F}$. Sean $u,v\in V$ vectores cuales quiera y $\gamma$ un escalar. Entonces 
 
@@ -3246,12 +3429,14 @@ $$\begin{array}{rl}
 	                             =& \gamma(\lambda T_{1})u+(\lambda T_{1})v
 \end{array}$$
 
-Las propiedades necesarias de las operaciones de transformaciones lineales se siguen del hecho que $W$ es un espacio vectorial y por lo tanto tiene esas propiedades. Note que la transformación cero, $Tv\equiv 0$, es el vector cero del espacio de las transformaciones de $V$ en $W$.</div>\EndKnitrBlock{proof}
+Las propiedades necesarias de las operaciones de transformaciones lineales se siguen del hecho que $W$ es un espacio vectorial y por lo tanto tiene esas propiedades. Note que la transformación cero, $Tv\equiv 0$, es el vector cero del espacio de las transformaciones de $V$ en $W$.
+</div>\EndKnitrBlock{proof}
 
 El teorema dota de multiples ejemplos de espacios vectoriales, para cada par de espacios $V$ y $W$, *el espacio vectorial de las transformaciones lineales de $V$ en $W$* con las operaciones de suma y multiplicación por un escalar definidas en el teorema, que denotamos $L(V,W)$. En el cuerpo de la demostración se evidencia que es importante que ambos espacios vectoriales esten definidos sobre el mismo cuerpo de escalares. Vale preguntarse cuál es la dimensión de este espacio vectorial.
 
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-341"><strong>(\#thm:unnamed-chunk-341) </strong></span>Sean $V$ y $W$ espacios de dimensión finita, digamos $dim V=n$ y $dim W=m$. Entonces $L(V,W)$ es de dimensión finita y su dimensión es $nm$.</div>\EndKnitrBlock{theorem}
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:teorema416"><strong>(\#thm:teorema416) </strong></span>Sean $V$ y $W$ espacios de dimensión finita, digamos $dim V=n$ y $dim W=m$. Entonces $L(V,W)$ es de dimensión finita y su dimensión es $nm$.
+</div>\EndKnitrBlock{theorem}
 
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Sean $\mathcal{B}_{1}=\{v_{1},v_{2},\cdots, v_{n}\}$ y $\mathcal{B}_{2}=\{u_{1},u_{2},\cdots, u_{n}\}$ bases ordenadas de $V$ y $W$ respectivamente.
 
@@ -3274,7 +3459,7 @@ $$\begin{array}{rl}
 
 Ahora veamos que el conjunto de los $E^{pq}$ es linealmente idependiente. De la igualdad anterior se tiene que $\sum_{p=1}^{m}\sum_{q=1}^{n} A_{pq}E^{pq}(v_{j})=\sum_{p=1}^{m} A_{pj}u_{p}=Tv_{j}$. Si $T$ es la transformación cero, es decir $T\equiv 0$, se tiene que $\sum_{p=1}^{m} A_{pj}u_{p}=0$. Como $\mathcal{B}_{2}=\{u_{1},u_{2},\cdots, u_{n}\}$ es linealmente independiente, se tiene que $A_{pj}=0$ para todo $p$ y todo $j$. Luego, $\{E^{pq}: 1\leq p\leq n, 1\leq q\leq m \}$ es un conjunto l.i. Por último, es fácil ver que este conjunto tiene $mn$ transformaciones, por lo tanto la dimensión de $L(V,W)$.</div>\EndKnitrBlock{proof}
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-343"><strong>(\#thm:unnamed-chunk-343) </strong></span>Sean $V_{1}, V_{2}$ y $V_{3}$ espacios vectoriales sobre un cuerpo $\mathbb{F}$. Sean $T_{1}:V_{1}\longrightarrow V_{2}$ y $T_{2}:V_{2}\longrightarrow V_{3}$ transformaciones lineales. Entonces, la función compuesta definida por $(T_{2}\circ T_{1})v=T_{2}(T_{1}v)$ es una transformación lineal de $V_{1}$ en $V_{3}$.</div>\EndKnitrBlock{theorem}
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-357"><strong>(\#thm:unnamed-chunk-357) </strong></span>Sean $V_{1}, V_{2}$ y $V_{3}$ espacios vectoriales sobre un cuerpo $\mathbb{F}$. Sean $T_{1}:V_{1}\longrightarrow V_{2}$ y $T_{2}:V_{2}\longrightarrow V_{3}$ transformaciones lineales. Entonces, la función compuesta definida por $(T_{2}\circ T_{1})v=T_{2}(T_{1}v)$ es una transformación lineal de $V_{1}$ en $V_{3}$.</div>\EndKnitrBlock{theorem}
 
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}$$\begin{array}{rl}
 	(T_{2}\circ T_{2})(\lambda u + v)=&T_{2}(\lambda T_{1} u + T_{1}v)\\
@@ -3284,13 +3469,13 @@ Ahora veamos que el conjunto de los $E^{pq}$ es linealmente idependiente. De la 
 
 La composición de transformaciones lineales $T_{2}\circ T_{1}$ se denota $T_{2}T_{1}$.
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-345"><strong>(\#def:unnamed-chunk-345) </strong></span>Sea $V$ un espacio vectorial sobre un cuerpo $\mathbb{F}$, un operador lineal sobre $V$ es una transformación lineal de $V$ en $V$.</div>\EndKnitrBlock{definition}
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-359"><strong>(\#def:unnamed-chunk-359) </strong></span>Sea $V$ un espacio vectorial sobre un cuerpo $\mathbb{F}$, un operador lineal sobre $V$ es una transformación lineal de $V$ en $V$.</div>\EndKnitrBlock{definition}
 
 En el teorema anterior, si $T_{1}$ y $T_{2}$ son operadores lineales sobre $V$, se tiene que la composición $T_{2}T_{1}$ es también un operador lineal. De este modo el espacio $L(V,V)$ tiene una operación multiplicación definida por la composición de operadores lineales. Además, la composición $T_{1}T_{2}$ también está definida pero en general $T_{2}T_{1}\neq T_{1}T_{2}$, es decir, $T_{2}T_{1}-T_{1}T_{2}\neq 0$.
 
 También es posible componer un operador lineal consigo mismo, dos o más veces, en este caso denotamos $T^{2}=TT$ y en general, $T^{n}=TT\cdots T$ ($n$-veces) para cualquier $n\in \mathbb{N}$. Se define $T^{0}=I$ si $T\neq 0$.
 
-\BeginKnitrBlock{lemma}<div class="lemma"><span class="lemma" id="lem:unnamed-chunk-346"><strong>(\#lem:unnamed-chunk-346) </strong></span>Sea $V$ un espacio vectorial sobre el cuerpo $\mathbb{F}$, sean $U, T_{1}$ y $T_{2}$ operadores lineales sobre $V$; sea $c$ un elemento de $\mathbb{F}$.
+\BeginKnitrBlock{lemma}<div class="lemma"><span class="lemma" id="lem:unnamed-chunk-360"><strong>(\#lem:unnamed-chunk-360) </strong></span>Sea $V$ un espacio vectorial sobre el cuerpo $\mathbb{F}$, sean $U, T_{1}$ y $T_{2}$ operadores lineales sobre $V$; sea $c$ un elemento de $\mathbb{F}$.
 
 (1) $IU=UI=U$;
 
@@ -3326,7 +3511,7 @@ Entonces $\lambda_{j}A_{ij}$ es la $i$-ésima coordenada de $Tv$ en $\mathcal{B}
 Ahora, sea $A\in\mathcal{M}_{m\times n}(\mathbb{F})$, entonces $T(\sum_{j=1}^{n}\lambda_{j}v_{j})=\sum_{i=1}^{m}(\sum_{j=1}^{n}[A]_{ij}\lambda_{j})w_{i}$ define una transformación de $V$ en $W$, para la cual $A$ es la matriz de $T$ respecto de las bases $\mathcal{B}_{1}$ y $\mathcal{B}_{1}$.
 Lo anterior es la demostración del siguiente teorema:
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-348"><strong>(\#thm:unnamed-chunk-348) </strong></span>Sean $V$y $W$ espacios vectoriales de dimensión finita, donde $\dim V=n$ y $\dim W=m$. Sean $\mathcal{B}_{1}$ y $\mathcal{B}_{2}$ bases ordenadas de $V$ y $W$ respectivamente. Para cada transformación $T$ de $V$ en $W$, existe una matriz $A\in\mathcal{M}_{m\times n}(\mathbb{R})$ tal que $[Tv]_{\mathcal{B}_{2}}=A[v]_{\mathcal{B}_{1}}$ para todo $v\in V$. Además $T\longmapsto A$ es una correspondencia biyectiva entre el conjunto $L(V,W)$ y $\mathcal{M}_{m\times n}(\mathbb{R})$.
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-362"><strong>(\#thm:unnamed-chunk-362) </strong></span>Sean $V$y $W$ espacios vectoriales de dimensión finita, donde $\dim V=n$ y $\dim W=m$. Sean $\mathcal{B}_{1}$ y $\mathcal{B}_{2}$ bases ordenadas de $V$ y $W$ respectivamente. Para cada transformación $T$ de $V$ en $W$, existe una matriz $A\in\mathcal{M}_{m\times n}(\mathbb{R})$ tal que $[Tv]_{\mathcal{B}_{2}}=A[v]_{\mathcal{B}_{1}}$ para todo $v\in V$. Además $T\longmapsto A$ es una correspondencia biyectiva entre el conjunto $L(V,W)$ y $\mathcal{M}_{m\times n}(\mathbb{R})$.
 </div>\EndKnitrBlock{theorem}
 
 \BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}Las columnas de la matriz de la transformación, $[T]_{\mathcal{B}_{1}\mathcal{B}_{2}}$, vienen dadas por las coordenadas  de $Tv_{j}$ en la base $\mathcal{B}_{2}$, es decir, $[Tv_{j}]_{\mathcal{B}_{2}}$; donde $v_{j}$ son los vectores de la base $\mathcal{B}_{1}$ del espacio $V$.
@@ -3337,39 +3522,45 @@ Además, si $U$ es otra transformación de $V$ en $W$, entonces la matriz de la 
 
 Recuerde que una función $T:V\longrightarrow W$ es invertible si existe una función $U:W\longrightarrow V$ tal que $UT$ es la función identidad en $V$, $I_{V}$ y $TU$ es la función identidad en $W$, $I_{W}$. Ya vimos que de existir la inversa, es única y la denotamos por $T^{-1}$ y en este caso decimos que $T$ es invertible. Además sabemos que $T$ es biyectiva si y solo si existe su inversa, $T^{-1}$. 
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-350"><strong>(\#thm:unnamed-chunk-350) </strong></span>Sean $V$ y $W$ espacios vectoriales sobre un cuerpo $\mathbb{F}$ y sea $T$ una transformación lineal de $V$ en $W$. Si $T$ es invertible, entonces la función $T^{-1}$ es una transformación lineal de $W$ en $V$.</div>\EndKnitrBlock{theorem}
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-364"><strong>(\#thm:unnamed-chunk-364) </strong></span>Sean $V$ y $W$ espacios vectoriales sobre un cuerpo $\mathbb{F}$ y sea $T$ una transformación lineal de $V$ en $W$. Si $T$ es invertible, entonces la función $T^{-1}$ es una transformación lineal de $W$ en $V$.</div>\EndKnitrBlock{theorem}
 
-\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Sean $u_{1}, u_{2}\in W$ y $\lambda\in\mathbb{F}$. Como $T$ es biyectiva, existen $v_{1},v_{2}\in V$ únicos, tales que $Tv_{1}=u_{1}$ y $Tv_{2}=u_{2}$. Por lo que $\lambda u_{1}+ u_{2}=\lambda Tv_{1} + Tv_{2}$, por linealidad de $T$, $\lambda u_{1}+ u_{2}=T(\lambda v_{1} + v_{2})$. Nuevamente, por la inyectividad de $T$, el único vector de $V$ que cumple que $Tv=\lambda u_{1}+ u_{2}$ es $\lambda v_{1} + v_{2}$, entonces $T^{-1}(\lambda v_{1} + v_{2})=T^{-1}(T(\lambda v_{1} + v_{2}))=\lambda v_{1} + v_{2}=\lambda T^{-1}u_{1}+T^{-1}u_{2}$.</div>\EndKnitrBlock{proof}
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Sean $u_{1}, u_{2}\in W$ y $\lambda\in\mathbb{F}$. Como $T$ es biyectiva, existen $v_{1},v_{2}\in V$ únicos, tales que $Tv_{1}=u_{1}$ y $Tv_{2}=u_{2}$. Por lo que $\lambda u_{1}+ u_{2}=\lambda Tv_{1} + Tv_{2}$, por linealidad de $T$, $\lambda u_{1}+ u_{2}=T(\lambda v_{1} + v_{2})$. Nuevamente, por la inyectividad de $T$, el único vector de $V$ que cumple que $Tv=\lambda u_{1}+ u_{2}$ es $\lambda v_{1} + v_{2}$, entonces $T^{-1}(\lambda v_{1} + v_{2})=T^{-1}(T(\lambda v_{1} + v_{2}))=\lambda v_{1} + v_{2}=\lambda T^{-1}u_{1}+T^{-1}u_{2}$.
+</div>\EndKnitrBlock{proof}
 
-\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}Notemos que:
-  
-1) Si $T_{1}:\longrightarrow V_{2}$ y $T_{2}: V_{2}\longrightarrow V_{3}$ son invertibles. Entonces $T_{2}T_{1}$ es invertible y $(T_{2}T_{1})^{-1}=T_{1}^{-1}T_{2}^{-1}$.
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}1) Si $T_{1}:\longrightarrow V_{2}$ y $T_{2}: V_{2}\longrightarrow V_{3}$ son invertibles. Entonces $T_{2}T_{1}$ es invertible y $(T_{2}T_{1})^{-1}=T_{1}^{-1}T_{2}^{-1}$.
 
-2) Como $T$ es lineal, $T(u-v)=Tu - Tv$, así $Tu=Tv$ si y solo si $T(u-v)=0$. Entonces $T$ es inyectiva si y solo si $v=0$ siempre que $T(v)=0$. Esto es, $T$ es inyectiva si y solo si $Ker(T)=\{0\}$.</div>\EndKnitrBlock{remark}
+2) Como $T$ es lineal, $T(u-v)=Tu - Tv$, así $Tu=Tv$ si y solo si $T(u-v)=0$. Entonces $T$ es inyectiva si y solo si $v=0$ siempre que $T(v)=0$. Esto es, $T$ es inyectiva si y solo si $Ker(T)=\{0\}$.
+</div>\EndKnitrBlock{remark}
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-353"><strong>(\#def:unnamed-chunk-353) </strong></span>Diremos que $T$ es *no singular* si $Tv=0 \Rightarrow v=0$ (esto es $Ker(T)=\{0\}$).</div>\EndKnitrBlock{definition}
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-367"><strong>(\#def:unnamed-chunk-367) </strong></span>Diremos que $T$ es *no singular* si $Tv=0 \Rightarrow v=0$ (esto es $Ker(T)=\{0\}$).
+</div>\EndKnitrBlock{definition}
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-354"><strong>(\#thm:unnamed-chunk-354) </strong></span>Sea $T$ una transformación lineal de $V$ en $W$. Entonces $T$ es no singular si y solo si, $T$ aplica cada conjunto linealmente independiente de $V$ en un conjunto linealmente independiente de $W$.</div>\EndKnitrBlock{theorem}
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-368"><strong>(\#thm:unnamed-chunk-368) </strong></span>Sea $T$ una transformación lineal de $V$ en $W$. Entonces $T$ es no singular si y solo si, $T$ aplica cada conjunto linealmente independiente de $V$ en un conjunto linealmente independiente de $W$.
+</div>\EndKnitrBlock{theorem}
 
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Supongamos que $T$ es no singular. Sea $S\subseteq V$ un conjunto linealmente independiente. Sean $\{v_{1},v_{2},\cdots, v_{k} \}\subseteq S$, vectores de $S$. Consideremos una combinación lineal de las imágenes de estos vectores, igual a cero, $\lambda_{1}Tv_{1}+\lambda_{2}Tv_{2}+\cdots+\lambda_{k}Tv_{k}=0$, como $T$ es lineal, $T(\lambda_{1}v_{1}+\lambda_{2}v_{2}+\cdots+\lambda_{k}v_{k})=T0=0$, por lo tanto, $\lambda_{1}v_{1}+\lambda_{2}v_{2}+\cdots+\lambda_{k}v_{k}=0$. Como $S$ es l.i. se tiene que $\lambda_{1}=\lambda_{2}=\cdots=\lambda_{k}=0$, de donde se sigue que $T(S)$ (la imagen de $S$ por $T$) es l.i.
 
-Recíprocamente, supongamos que $T$ aplica conjuntos l.i. de $V$ en conjuntos l.i. de $W$. En particular, dado $v\in V$, con $v\neq 0$, $Tv$ es l.i. por lo tanto, $Tv\neq 0$ (considerar $Tv=0$ contradice que $Tv$ es l.i.) por lo tanto $T$ es n o singular.</div>\EndKnitrBlock{proof}
+Recíprocamente, supongamos que $T$ aplica conjuntos l.i. de $V$ en conjuntos l.i. de $W$. En particular, dado $v\in V$, con $v\neq 0$, $Tv$ es l.i. por lo tanto, $Tv\neq 0$ (considerar $Tv=0$ contradice que $Tv$ es l.i.) por lo tanto $T$ es n o singular.
+</div>\EndKnitrBlock{proof}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-356"><strong>(\#exm:unnamed-chunk-356) </strong></span>Sea $T:\mathbb{R}^{2}\longrightarrow \mathbb{R}^{2}$ definida por $T(x,y)=(x+y,x)$. Como $T(x,y)=(0,0)$ si y solo si $x=y=0$, se tiene que $T$ es no singular. </div>\EndKnitrBlock{example}
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-370"><strong>(\#exm:unnamed-chunk-370) </strong></span>Sea $T:\mathbb{R}^{2}\longrightarrow \mathbb{R}^{2}$ definida por $T(x,y)=(x+y,x)$. Como $T(x,y)=(0,0)$ si y solo si $x=y=0$, se tiene que $T$ es no singular. 
+</div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-357"><strong>(\#exm:unnamed-chunk-357) </strong></span>Sea $D:V\longrightarrow V$, donde $V$ es el espacio de los polinomios y $D$ es la derivada. Como la derivada de cualquier constante es cero, $D$ es singular. Pero la dimensión de $V$ no es finita y $Img D=V$, entonces es posible definir una inversa a la derecha $E$, a saber la integral indefinida, tal que $ED=I_{V}$. Pero no se puede definir la inversa a la izquierda.</div>\EndKnitrBlock{example}
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-371"><strong>(\#exm:unnamed-chunk-371) </strong></span>Sea $D:V\longrightarrow V$, donde $V$ es el espacio de los polinomios y $D$ es la derivada. Como la derivada de cualquier constante es cero, $D$ es singular. Pero la dimensión de $V$ no es finita y $Img D=V$, entonces es posible definir una inversa a la derecha $E$, a saber la integral indefinida, tal que $ED=I_{V}$. Pero no se puede definir la inversa a la izquierda.
+</div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-358"><strong>(\#thm:unnamed-chunk-358) </strong></span>Sean $V$ y $W$ espacios vectoriales de dimensión finita sobre $\mathbb{F}$, tales que $\dim V=\dim W$. Si $T$ es una transformación lineal de $V$ en $W$, las siguientes afirmaciones son equivalentes:
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:teorema427"><strong>(\#thm:teorema427) </strong></span>Sean $V$ y $W$ espacios vectoriales de dimensión finita sobre $\mathbb{F}$, tales que $\dim V=\dim W$. Si $T$ es una transformación lineal de $V$ en $W$, las siguientes afirmaciones son equivalentes:
 
 1) $T$ es invertible.
 
 2) $T$ es no singular.
 
-3) $T$ es sobreyectiva.</div>\EndKnitrBlock{theorem}
+3) $T$ es sobreyectiva.
+</div>\EndKnitrBlock{theorem}
 
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Sea $n=\dim V=\dim W$. Entonces $rango(T)+Nul(T)=n$. $T$ es no singular si y solo si $rango (T)=n$. Pero $rang(T)=n$ si y solo si $Img(T)=W$. Por lo tanto $T$ es sobreyectiva si y solo si $rango (t)=n=\dim W$ si y solo si $Nul(T)=0$ si y solo si $T$ es no singular.</div>\EndKnitrBlock{proof}
 
-\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-360"><strong>(\#def:unnamed-chunk-360) </strong></span>Sean $V$ y $W$ espacios vectoriales (sobre el mismo cuerpo $\mathbb{F}$). Sea $T$ una transformación lineal de $V$ en $W$. Si $T$ es biyectiva, decimos que $T$ es un *isomorfismo de $V$ sobre $W$*. Si existe un isomorfismo de $V$ en $W$, decimos que *$V$ es isomorfo a $W$* y se denota $V\simeq W$.
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-373"><strong>(\#def:unnamed-chunk-373) </strong></span>Sean $V$ y $W$ espacios vectoriales (sobre el mismo cuerpo $\mathbb{F}$). Sea $T$ una transformación lineal de $V$ en $W$. Si $T$ es biyectiva, decimos que $T$ es un *isomorfismo de $V$ sobre $W$*. Si existe un isomorfismo de $V$ en $W$, decimos que *$V$ es isomorfo a $W$* y se denota $V\simeq W$.
 </div>\EndKnitrBlock{definition}
 
 \BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}La relación de isomorfismo es una relación de equivalencia:
@@ -3378,19 +3569,25 @@ Recíprocamente, supongamos que $T$ aplica conjuntos l.i. de $V$ en conjuntos l.
 
 2) Si $V$ es isomorfo a $W$, es claro que $W$ es isomorfo a $V$.
 
-3) Si $V$ es isomorfo a $W$ y $W$ es isomorfo a $X$, entonces $V$ es isomorfo a $X$.</div>\EndKnitrBlock{remark}
+3) Si $V$ es isomorfo a $W$ y $W$ es isomorfo a $X$, entonces $V$ es isomorfo a $X$.
+</div>\EndKnitrBlock{remark}
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-362"><strong>(\#thm:unnamed-chunk-362) </strong></span>Todo espacio vectorial de dimensión $n$ (sobre un cuerpo $\mathbb{F}$) es isomorfo a $\mathbb{F}^{n}$.</div>\EndKnitrBlock{theorem}
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-375"><strong>(\#thm:unnamed-chunk-375) </strong></span>Todo espacio vectorial de dimensión $n$ (sobre un cuerpo $\mathbb{F}$) es isomorfo a $\mathbb{F}^{n}$.
+</div>\EndKnitrBlock{theorem}
 
-\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Sea $V$ un espacio vectorial sobre $\mathbb{F}$, de dimensión igual a $n\in\mathbb{N}$. Sea $\mathcal{B}=\{v_{1},v_{2},\cdots v_{n} \}$ una base ordenada de $V$. Definimos la tansformación lineal $T:V\longrightarrow \mathbb{F}^{n}$ por $Tv=(\lambda_{1},\lambda_{2},\cdots,\lambda_{n})$ donde $(\lambda_{1},\lambda_{2},\cdots,\lambda_{n})$ son las coordenadas del vector $v$ en la base $\mathcal{B}$, es decir, $v=\lambda_{1}v_{1}+\lambda_{2}v_{2}+\cdots+\lambda_{n}v_{n}$. Es fácil ver que $T$ es un isomorfismo. En efecto, dos vectores distintos, $(\lambda_{1},\lambda_{2},\cdots,\lambda_{n})\neq(\gamma_{1},\gamma_{2},\cdots,\gamma_{n})$ de $\mathbb{F}$, tienen preimágenes distintas, $v_{1}\neq v_{2}$ (de lo contrario, $\mathcal{B}$ no sería un conjunto linealmente independiente). Además, para todo vector en $\mathbb{F}$, $(\lambda_{1},\lambda_{2},\cdots,\lambda_{n})$, existe un vector $v\in V$ tal que $(\lambda_{1},\lambda_{2},\cdots,\lambda_{n})$ es su vector de coordenadas, es decir, $v=\lambda_{1}v_{1}+\lambda_{2}v_{2}+\cdots+\lambda_{n}v_{n}$.</div>\EndKnitrBlock{proof}
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Sea $V$ un espacio vectorial sobre $\mathbb{F}$, de dimensión igual a $n\in\mathbb{N}$. Sea $\mathcal{B}=\{v_{1},v_{2},\cdots v_{n} \}$ una base ordenada de $V$. Definimos la tansformación lineal $T:V\longrightarrow \mathbb{F}^{n}$ por $Tv=(\lambda_{1},\lambda_{2},\cdots,\lambda_{n})$ donde $(\lambda_{1},\lambda_{2},\cdots,\lambda_{n})$ son las coordenadas del vector $v$ en la base $\mathcal{B}$, es decir, $v=\lambda_{1}v_{1}+\lambda_{2}v_{2}+\cdots+\lambda_{n}v_{n}$. Es fácil ver que $T$ es un isomorfismo. En efecto, dos vectores distintos, $(\lambda_{1},\lambda_{2},\cdots,\lambda_{n})\neq(\gamma_{1},\gamma_{2},\cdots,\gamma_{n})$ de $\mathbb{F}$, tienen preimágenes distintas, $v_{1}\neq v_{2}$ (de lo contrario, $\mathcal{B}$ no sería un conjunto linealmente independiente). Además, para todo vector en $\mathbb{F}$, $(\lambda_{1},\lambda_{2},\cdots,\lambda_{n})$, existe un vector $v\in V$ tal que $(\lambda_{1},\lambda_{2},\cdots,\lambda_{n})$ es su vector de coordenadas, es decir, $v=\lambda_{1}v_{1}+\lambda_{2}v_{2}+\cdots+\lambda_{n}v_{n}$.
+</div>\EndKnitrBlock{proof}
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-364"><strong>(\#thm:unnamed-chunk-364) </strong></span>Sean $V$ y $W$ espacios vectoriales (sobre $\mathbb{F}$) de dimensión finita. Sean $n=\dim V$ y $m=\dim W$. Y sean $\mathcal{B}_{1}$ y $\mathcal{B}_{2}$ bases ordenadas de $V$ y $W$ respectivamente. La función que asigna a cada transformación $T$ (de $V$ en $W$), la matriz de la transformación en las bases $\mathcal{B}_{1}$ y $\mathcal{B}_{2}$, es un isomorfismo entre $L(V,W)$ y $\mathcal{M}_{m\times n}(\mathbb{R})$. </div>\EndKnitrBlock{theorem}
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-377"><strong>(\#thm:unnamed-chunk-377) </strong></span>Sean $V$ y $W$ espacios vectoriales (sobre $\mathbb{F}$) de dimensión finita. Sean $n=\dim V$ y $m=\dim W$. Y sean $\mathcal{B}_{1}$ y $\mathcal{B}_{2}$ bases ordenadas de $V$ y $W$ respectivamente. La función que asigna a cada transformación $T$ (de $V$ en $W$), la matriz de la transformación en las bases $\mathcal{B}_{1}$ y $\mathcal{B}_{2}$, es un isomorfismo entre $L(V,W)$ y $\mathcal{M}_{m\times n}(\mathbb{R})$. 
+</div>\EndKnitrBlock{theorem}
 
-\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Sean $V$ y $W$ espacios vectoriales (sobre $\mathbb{F}$) tales que $n=\dim V$ y $m=\dim W$. Sea $f:L(V,W)\longrightarrow \mathcal{M}_{m\times n}(\mathbb{F})$ la función $f(T)=[T]_{\mathcal{B}_{1}\mathcal{B}_{2}}$, donde $\mathcal{B}_{1}$ y $\mathcal{B}_{2}$ son bases de $V$ y $W$ respectivamente. En el teorema \@ref{thm:teorema420} ya demostramos que esta función es biyectiva.</div>\EndKnitrBlock{proof}
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Sean $V$ y $W$ espacios vectoriales (sobre $\mathbb{F}$) tales que $n=\dim V$ y $m=\dim W$. Sea $f:L(V,W)\longrightarrow \mathcal{M}_{m\times n}(\mathbb{F})$ la función $f(T)=[T]_{\mathcal{B}_{1}\mathcal{B}_{2}}$, donde $\mathcal{B}_{1}$ y $\mathcal{B}_{2}$ son bases de $V$ y $W$ respectivamente. En el teorema \@ref{thm:teorema420} ya demostramos que esta función es biyectiva.
+</div>\EndKnitrBlock{proof}
 
 Si $T$ es una transformación lineal de $V$ en si mismo, diremos que $T$ es un *operador lineal*. En este caso, la matriz asociada a $T$ en una base $\mathcal{B}$ de $V$ se denota $[T]_{\mathcal{B}}$ en lugar de $[T]_{\mathcal{B}\mathcal{B}}$.
 
-\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-366"><strong>(\#thm:unnamed-chunk-366) </strong></span>Sean $V_{1}, V_{2}$ y $V_{3}$ espacios vectoriales de dimensión finita, cuyas dimensiones son $n,m$ y $p$ respectivamente. Sean $\mathcal{B}_{1}, \mathcal{B}_{2}$ y $\mathcal{B}_{1}$ bases de $V_{1}, V_{2}$ y $V_{3}$ respectivamente. Sean $T_{1}:V_{1}\longrightarrow V_{2}$ y $T_{2}:V_{1}\longrightarrow V_{2}$ transformaciones lineales. Entonces la matriz de la transformación $[T_{2}\circ T_{1}]_{\mathcal{B}_{1}\mathcal{B}_{3}}=[T_{2}]_{\mathcal{B}_{2}\mathcal{B}_{3}}[T_{1}]_{\mathcal{B}_{1}\mathcal{B}_{2}}$.</div>\EndKnitrBlock{theorem}
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-379"><strong>(\#thm:unnamed-chunk-379) </strong></span>Sean $V_{1}, V_{2}$ y $V_{3}$ espacios vectoriales de dimensión finita, cuyas dimensiones son $n,m$ y $p$ respectivamente. Sean $\mathcal{B}_{1}, \mathcal{B}_{2}$ y $\mathcal{B}_{1}$ bases de $V_{1}, V_{2}$ y $V_{3}$ respectivamente. Sean $T_{1}:V_{1}\longrightarrow V_{2}$ y $T_{2}:V_{1}\longrightarrow V_{2}$ transformaciones lineales. Entonces la matriz de la transformación $[T_{2}\circ T_{1}]_{\mathcal{B}_{1}\mathcal{B}_{3}}=[T_{2}]_{\mathcal{B}_{2}\mathcal{B}_{3}}[T_{1}]_{\mathcal{B}_{1}\mathcal{B}_{2}}$.
+</div>\EndKnitrBlock{theorem}
 
 \BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Como $[T_{1}v]_{\mathcal{B}_{2}}=[T_{1}]_{\mathcal{B}_{1}\mathcal{B}_{2}}[v]_{\mathcal{B}_{1}}$, entonces 
 
@@ -3398,9 +3595,408 @@ $$\begin{array}{rl}
 [T_{2}\circ T_{1}v]_{\mathcal{B}_{3}}=&[T_{2}(T_{1}v)]_{\mathcal{B}_{3}}\\
 =&[T_{2}]_{\mathcal{B}_{2}\mathcal{B}_{3}}[T_{1}v]_{\mathcal{B}_{2}}\\
 =&[T_{2}]_{\mathcal{B}_{2}\mathcal{B}_{3}}[T_{1}]_{\mathcal{B}_{1}\mathcal{B}_{2}}[v]_{\mathcal{B}_{1}}
-\end{array}$$</div>\EndKnitrBlock{proof}
+\end{array}$$
+  </div>\EndKnitrBlock{proof}
 
-\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}Si consideramos el caso de un operador lineal compuesto consigo mismo, entonces $V_{1}=V_{2}=V_{3}$ y considerando la misma base, $\mathcal{B}_{1}=\mathcal{B}_{2}=\mathcal{B}_{3}$, se tiene que $[T\circ T]_{\mathcal{B}}=[T]_{\mathcal{B}}[T]_{\mathcal{B}}=[T]_{\mathcal{B}}^{2}$. Por lo tanto $T$ es invertible si y solo si $[T]_{\mathcal{B}}$ lo es. Más aún, si $T$ es invertible, la matriz de la transformación inversa es igual a la inversa de la matriz de la transformación, es decir $[T^{1}]_{\mathcal{B}}=[T]_{\mathcal{B}}^{-1}$.</div>\EndKnitrBlock{remark}
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}Si consideramos el caso de un operador lineal compuesto consigo mismo, entonces $V_{1}=V_{2}=V_{3}$ y considerando la misma base, $\mathcal{B}_{1}=\mathcal{B}_{2}=\mathcal{B}_{3}$, se tiene que $[T\circ T]_{\mathcal{B}}=[T]_{\mathcal{B}}[T]_{\mathcal{B}}=[T]_{\mathcal{B}}^{2}$. Por lo tanto $T$ es invertible si y solo si $[T]_{\mathcal{B}}$ lo es. Más aún, si $T$ es invertible, la matriz de la transformación inversa es igual a la inversa de la matriz de la transformación, es decir $[T^{1}]_{\mathcal{B}}=[T]_{\mathcal{B}}^{-1}$.
+</div>\EndKnitrBlock{remark}
+Ya antes vimos que dado un espacio de dimensión finita $V$, y dos bases ordenadas $\mathcal{B}_{1}=\{\alpha_{1},\alpha_{2},\cdots, \alpha_{n} \}$ y $\mathcal{B}_{2}=\{\beta_{1},\beta_{2},\cdots, \beta_{n} \}$, existe una matriz (invertible) $P$ cambio de base. Es decir, si $[\alpha]_{\mathcal{B}_{1}}=P[\alpha]_{\mathcal{B}_{2}}$, para vector $\alpha$ en $V$, donde $P=[P_{1}, P_{2},\cdots, P_{n}]$ con $P_{j}=[\beta_{j}]_{\mathcal{B}_{1}}$. Ahora, si consideramos un operador lineal $T:V\longrightarrow V$, se tiene que $$[T\alpha]_{\mathcal{B}_{1}}=[T]_{\mathcal{B}_{1}}[\alpha]_{\mathcal{B}_{1}}$$ por lo tanto, $$\begin{array}{rl}
+[T]_{\mathcal{B}_{1}}P[\alpha]_{\mathcal{B}_{2}}=P[T\alpha]_{\mathcal{B}_{1}}&\Leftrightarrow\\
+P^{-1}[T]_{\mathcal{B}_{1}}P[\alpha]_{\mathcal{B}_{2}}=[T\alpha]_{\mathcal{B}_{1}}&\Leftrightarrow
+\end{array}$$ de donde se sigue que $$[T]_{\mathcal{B}_{2}}=P^{-1}[T]_{\mathcal{B}_{1}}P.$$
+
+Esto se puede enunciar como sigue:
+
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-382"><strong>(\#thm:unnamed-chunk-382) </strong></span>Sea $V$ un espacio vectorial de dimensión finita sobre un cuerpo $\mathbb{F}$ y sean $\mathcal{B}_{1}=\{\alpha_{1},\alpha_{2},\cdots, \alpha_{n} \}$ y $\mathcal{B}_{2}=\{\beta_{1},\beta_{2},\cdots, \beta_{n} \}$ dos bases ordenadas de $V$. Supóngase que $T$ es un operador lineal sobre $V$. Si $P=[P_{1}, P_{2},\cdots, P_{n}]$ es la matriz $n\times n$ de columnas $P_{j}=[\beta_{j}]_{\mathcal{B}_{1}}$, entonces $$[T]_{\mathcal{B}_{2}}=P^{-1}[T]_{\mathcal{B}_{1}}P$$
+  </div>\EndKnitrBlock{theorem}
+
+Otra forma de escribir el resultado anterior es considerar el operador lineal $U$ sobre $V$, definido como $U\alpha_{j}=\beta_{j}$, para todo $j=1,\cdots, n$, entonces $$[T]_{\mathcal{B}_{2}}=[U]^{-1}_{\mathcal{B}_{1}}[T]_{\mathcal{B}_{1}}[U]_{\mathcal{B}_{1}}.$$
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-383"><strong>(\#exm:unnamed-chunk-383) </strong></span>Sea $T$ el operador lineal que aplica un vector $(x,y)$ de $\mathbb{R}^{2}$ en el vector $(x,0)$, es decir $T:\mathbb{R}^{2}\longrightarrow\mathbb{R}^{2}$, definido por $T(x,y)=(x,0)$. Se tiene que la matriz de la transformación $T$ en la base (ordenada) canónica $\mathcal{B}_{1}=\{e_{1},e_{2} \}$, es $$\left[ \begin{array}{cc}
+1&0\\
+0&0
+\end{array}\right] $$
+Dada otra base ordenada de $\mathbb{R}^{2}$, $\mathcal{B}_{2}=\{(1,1), (2,1) \}$, la matriz $P$ cambio de base viene dada por $$\left[\begin{array}{cc}
+1&2\\
+1&1
+\end{array} \right]$$, cuya inversa es $$P^{-1}=\left[\begin{array}{rr}
+-1&2\\
+1&-1
+\end{array} \right]$$
+Por lo tanto $$\begin{array}{rl}
+[T]_{\mathcal{B}_{2}}&=P^{-1}[T]_{\mathcal{B}_{1}}P\\
+&=\left[\begin{array}{rr}
+-1&2\\
+1&-1
+\end{array} \right] \left[\begin{array}{rr}
+1&0\\
+0&0
+\end{array} \right] \left[\begin{array}{rr}
+1&2\\
+1&1
+\end{array} \right] \\
+&=\left[\begin{array}{rr}
+-1&2\\
+1&-1
+\end{array} \right] 
+\left[\begin{array}{rr}
+1&2\\
+0&0
+\end{array}\right]  \\
+&=\left[\begin{array}{rr}
+-1&-2\\
+1&2
+\end{array} \right]
+\end{array}$$
+Esto es coincidente con que:
+$$\begin{array}{ccc}
+T(1,1)=&(1,0)=&-(1,1)+(2,1)\\
+T(2,1=&((2,0)=&-2(1,1)+2(2,1)
+\end{array}$$
+  </div>\EndKnitrBlock{example}
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-384"><strong>(\#exm:unnamed-chunk-384) </strong></span>Sea $V$ el espacio de las funciones polinomios generadas por $\mathcal{B}=\{f_{1}, f_{2}, f_{3}, f_{4} \}$ donde $f_{i}=x^{i-1}$ para cada $i\in\{1,2,3,4\}$. Sea $D:V\longrightarrow V$ el operador derivación. Definamos las funciones $g_{i}=(x+t)^{i-1}$ para un $t\in\mathbb{R}$ fijo y cada $i\in\{1,2,3,4\}$. Se puede ver que las funciones $$\begin{array}{ll}
+g_{1}=&f_{1}\\
+g_{2}=&tf_{1}+f_{2}\\
+g_{3}=&t^{2}f_{1}+2tf_{2}+f_{3}\\
+g_{4}=&t^{3}f_{1}+3t^{2}f_{2}+3tf_{3}+f_{4}
+\end{array}$$ forman una base del espacio $V$. En efecto, la matriz 
+$$P=\left[\begin{array}{cccc}
+1&t&t^{2}&t^{3}\\
+0&1&2t&3t^{2}\\
+0&0&1&3t\\
+0&0&0&1
+\end{array} \right] $$ es invertible, con inversa $$P^{-1}=\left[\begin{array}{cccc}
+1&-t&t^{2}&-t^{3}\\
+0&1&-2t&3t^{2}\\
+0&0&1&-3t\\
+0&0&0&1
+\end{array} \right] $$
+La matriz de la transformación en la base ordena $\mathcal{B}$, es:
+$$[D]_{\mathcal{B}}=\left[\begin{array}{cccc}
+0&1&0&0\\
+0&0&2t&0\\
+0&0&0&3\\
+0&0&0&0
+\end{array} \right] $$
+Entonces la matriz de $D$ en la base ordenada $\mathcal{B}_{2}=\{g_{1},g_{2},g_{3},g_{4} \}$, es:
+$$\begin{array}{rl}
+P^{-1}[D]_{\mathcal{B}}P=&\left[ \begin{array}{cccc}
+1&-t&t^{2}&t^{3}\\
+0&1&-2t&3t^{2}\\
+0&0&1&-3t\\
+0&0&0&1
+\end{array}\right] \left[\begin{array}{cccc}
+0&1&0&0\\
+0&0&2t&0\\
+0&0&0&3\\
+0&0&0&0
+\end{array} \right]\left[\begin{array}{cccc}
+1&t&t^{2}&t^{3}\\
+0&1&2t&3t^{2}\\
+0&0&1&3t\\
+0&0&0&1
+\end{array} \right] \\
+=&\left[ \begin{array}{cccc}
+1&-t&t^{2}&t^{3}\\
+0&1&-2t&3t^{2}\\
+0&0&1&-3t\\
+0&0&0&1
+\end{array}\right] \left[\begin{array}{cccc}
+0&1&2t&3t^{2}\\
+0&0&2&6t\\
+0&0&0&3\\
+0&0&0&0
+\end{array} \right]\\
+=&\left[ \begin{array}{cccc}
+0&1&0&0\\
+0&0&2&0\\
+0&0&0&3\\
+0&0&0&0
+\end{array}\right]
+\end{array}$$
+Pero esto se verifica directamente con las coordenadas de los vectores imágenes $Dg_{i}$ en la base $\mathcal{B}_{2}$, como lo muestran las siguientes igualdades:
+$$\begin{array}{ll}
+Dg_{1}=&0\\
+Dg_{2}=&g_{1}\\
+Dg_{3}=&2g_{2}\\
+Dg_{4}=&3g_{3}
+\end{array}$$	
+  </div>\EndKnitrBlock{example}
+
+Concluíremos esta sección con lo siguiente:
+
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-385"><strong>(\#def:unnamed-chunk-385) </strong></span>Sean $A$ y $B$ dos matrices (cuadradas) $n\times n$ sobre el cuerpo $\mathbb{F}$. Se dice que *$B$ es semejante a $A$ sobre $\mathbb{F}$* si existe una matriz  $n\times n$ sobre $\mathbb{F}$ invertible $P$ tal que $B=P^{-1}AP$.
+</div>\EndKnitrBlock{definition}
+
+De este modo, dado un operador lineal sobre un espacio vectorial $V$ de dimensión finita $n$ y dadas dos bases $\mathcal{B}_{1}$ y $\mathcal{B}_{2}$ del espacio, las matrices del operador $T$ en las bases $\mathcal{B}_{1}$ y $\mathcal{B}_{2}$, son semejantes, es decir, $[T]_{\mathcal{B}_{1}}$ y $[T]_{\mathcal{B}_{2}}$, son semejantes. Inversamente, dadas las matrices semejantes $A$ y $B$ de orden $n\times n$ sobre un cuerpo $\mathbb{F}$, sea $V$ un espacio de dimensión $n$ sobre el cuerpo $\mathbb{F}$ (por ejemplo $\mathbb{F}^{n}$) y sea $\mathbb{B}_{1}$ una base ordenada de $V$. Sea $T$ el operador lineal representado por la matriz $A$ en la base $\mathbb{B}_{1}$, entonces $B$ representa el operador lineal $T$ en la base obtenida de $\mathbb{B}_{1}$ por medio de $P$, donde $P$ es la matriz que evidencia la semejanza de $B$ y $A$.
+Note que toda matriz $A$ $n\times n$ es semejante a si misma tomando $P$ como la identidad. Si $B$ es semejante a $A$, $A$ es semejante a $B$, considerando $P^{-1}$ como la matriz testigo. Además, si $B$ es semejante a $A$ y $C$ es semejante a $B$, entonces $C$ es semejante a $A$, ya que $B=P^{-1}AP$ y $C=Q^{-1}BQ$, por lo tanto $C=(PQ)^{-1}A(PQ)$. De donde concluímos que la semejanza es una relación de equivalencia en el conjunto de matrices $n\times n$ sobre un cuerpo $\mathbb{F}$. 
+
+## Funcionales lineales
+
+Dado un espacio vectorial $V$ sobre el cuerpo $\mathbb{F}$, una transformación lineal $f$ de un espacio vectorial $V$ en el conjunto de escalares $\mathbb{F}$, se llama *funcional lineal* sobre $V$, es decir, es una función $f:V\longrightarrow \mathbb{F}$ tal que $f(\lambda u +v)=\lambda f(u)+ f(v)$ para cualesquiera vectores $u,v\in V$ y cualquier escalar $\lambda \mathbb{F}$.
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-386"><strong>(\#exm:unnamed-chunk-386) </strong></span>	Sea $\mathbb{F}$ un cuerpo y sean $\lambda_{1}, \lambda_{2},\cdots , \lambda_{n}$ en $\mathbb{F}$. Sea $f$ la función en $\mathbb{F}^{n}$ definida por $f(x_{1},x_{2},\cdots,x_{n})=\lambda_{1}x_{1}+ \lambda_{2}x_{2}+\cdots +\lambda_{n}x_{n}$. Entonces $f$ es un funcional lineal sobre $\mathbb{F}^{n}$. Si consideramos la base canónica de $\mathbb{F}^{n}$ y la base $\{1\}$ de $\mathbb{F}$, la matriz del funcional es $[\lambda_{1}, \lambda_{2},\cdots , \lambda_{n}]$, ya que $f(e_{j})=\lambda_{j}$, $j=1,2,\cdots ,n$. Todo funcional lineal sobre $\mathbb{F}$ tendrá esta forma, para ciertos escalares $\lambda_{1}, \lambda_{2},\cdots , \lambda_{n}$ en $\mathbb{F}$, ya que $$\begin{array}{ll}
+	f(x_{1},x_{2},\cdots,x_{n})&=f(\sum_{j=1}^{n} x_{j}e_{j})\\
+	&=\sum_{j=1}^{n} x_{j}f(e_{j})\\
+	&=\sum_{j=1}^{n} \lambda_{j}x_{j}
+	\end{array}$$
+	  </div>\EndKnitrBlock{example}
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-387"><strong>(\#exm:unnamed-chunk-387) </strong></span>	*El operador traza de una matriz*. Sea $A$ una matriz $n\times n$ sobre un cuerpo $\mathbb{F}$, la *traza* de $A$ es el escalar $$tr A=[A]_{11}+[A]_{22}+\cdots +[A]_{nn}$$ la suma de la los elementos de la diagonal de una matriz.
+	Esta función es un funcional lineal sobre el espacio de las matrices $\mathcal{M}_{n\times n}(\mathbb{F})$. En efecto, $$\begin{array}{ll}
+	tr (\lambda A + B)&=\sum_{i=1}^{n}(\lambda [A]_{ii}+[B]_{ii})\\
+	&=\lambda \sum_{i=1}^{n} [A]_{ii} + \sum_{i=1}^{n} [B]_{ii}\\
+	&=\lambda tr A + tr B
+	\end{array}$$
+	  </div>\EndKnitrBlock{example}
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-388"><strong>(\#exm:unnamed-chunk-388) </strong></span>	Sea $V$ el espacio de todas las funciones polinómicas sobre un cuerpo $\mathbb{F}$. Para $t\in\mathbb{F}$, definamos $L_{t}:V\longrightarrow \mathbb{F}$ como la evaluación en $t$, es decir $L_{t}(p)=p(t)$ para todo $p\in V$. Entonces $L_{t}$ es un funcional lineal en $V$. 
+	En general, se puede definir el funcional lineal $L_{t}$ en el espacio de las funciones sobre $\mathbb{F}$ en si mismo, como $L_{t}(f)=f(t)$, para cada función $f: \mathbb{F}\longrightarrow\mathbb{F}$.
+</div>\EndKnitrBlock{example}
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-389"><strong>(\#exm:unnamed-chunk-389) </strong></span>	Sea $\mathcal{C}(I)$ el espacio de las funciones continuas sobre el intervalo $I=[a,b]$. Definimos, $$L(f)=\int_{a}^{b}f(t)dt$$ entonces $L$ es un funcional lineal sobre $\mathcal{C}(I)$.
+</div>\EndKnitrBlock{example}
+
+Si $V$ es un espacio vectorial, el conjunto de todos los funcionales lineales sobre $V$, $L(V,\mathbb{F})$, forman un espacio vectorial. Este recibe el nombre de espacio dual de $V$ y se denota $V^{\ast}$.
+
+Por el teorema \@ref(thm:teorema416), se tiene que $dim V^{\ast}=dim V$.
+
+Dada una base $\mathcal{B}=\{v_{1}, v_{2}, \cdots, v_{n} \}$ de $V$, para cada $i=1,2,\cdots, n$ existe un funcional lineal $f_{i}$ tal que $f_{i}(v_{j})=\delta_{ij}$ (\@ref(thm:teorema410). Estos $n$ funcionales lineales, $f_{1}, f_{2}, \cdots , f_{n}$, son linealmente independientes, en efecto, supongamos que $f=\sum_{i=1}^{n} c_{i}f_{i}$ $$\begin{array}{ll}
+f(v_{j})&=\sum_{i=1}^{n} c_{i}f_{i}(v_{j})\\
+&=\sum_{i=1}^{n} c_{i}f_{i}(v_{j})\\
+&=c_{j}
+\end{array}$$
+Luego, si $f$ es el funcional cero, $f\equiv 0$, se tiene que $f(v_{j})=0$ para todo $j=1,2,\cdots, n$, $f=\sum_{i=1}^{n} c_{i}f_{i}=0$ si y solo si $c_{j}=0$ para cada $j$.
+
+Por lo tanto los $n$ funcionales lineales $f_{1}, f_{2}, \cdots , f_{n}$ forman una base para $V^{\ast}$ a la que llamaremos base dual de $\mathcal{B}$ y denotaremos $\mathcal{B}^{\ast}$.
+
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:teorema114"><strong>(\#thm:teorema114) </strong></span>Sea $V$ un espacio vectorial de dimensión finita sobre el cuerpo $\mathbb{F}$ y sea $\mathcal{B}=\{v_{1}, v_{2}, \cdots, v_{n} \}$ una base de $V$. Existe una única base dual $\mathcal{B}^{\ast}=\{f_{1}, f_{2}, \cdots , f_{n} \}$ de $V^{\ast}$ tal que $f_{i}(v_{j})=\delta_{ij}$. Además, para cada funcional lineal $f$ sobre $V$ se tiene que $$f=\sum_{i=1}^{n} f(v_{i})f_{i}$$ y para cada $v\in V$ se tine que $$v=\sum_{i=1}^{n} f_{i}(v)v_{i}$$.
+</div>\EndKnitrBlock{theorem}
+
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Ya vimos que existe una única base que es dual de $\mathcal{B}$. Sea $f$ un funcional lineal sobre $V$, entoces $f=\sum_{i=1}^{n} c_{i}f_{i}$, donde cada $c_{i}=f(v_{i})$. Por otro lado, sea $v=\sum_{i=1}^{n} \lambda_{i}v_{i}$ un vector de $V$, entonces $$\begin{array}{ll}
+	f_{j}(v)&=\sum_{i=1}^{n} \lambda_{i}f_{j}(v_{i})\\
+	&=\sum_{i=1}^{n} \lambda_{i}\delta_{ij}\\
+	&=\lambda_{j}
+	\end{array}$$
+	por lo tanto la descomposición (única) de $v$ en la base $\mathcal{B}$ es, $v=\sum_{i=1}^{n} f_{j}(v)v_{i}$.
+</div>\EndKnitrBlock{proof}
+
+El teorema anterior nos dice que dada una base $\mathcal{B}=\{v_{1}, v_{2}, \cdots, v_{n} \}$ de un espacio vectorial $V$, la base dual viene dada por las funciones $f_{i}$, donde cada $f_{i}$ es la función que asigna a cada vector $v$ la i-ésima coordenada de $v$ respecto a la base ordenada $\mathcal{B}$, por esta razón también se conoce a las funciones $f_{i}$ como funciones coordenadas de $\mathcal{B}$. Por otro lado, dado un funcional $f$ en $V^{\ast}$, si $\lambda_{i}=f(v_{i})$, entonces para cada vector  $v=\gamma_{1}v_{1}+\gamma_{2}v_{2}+\cdots +\gamma_{n}v_{n}$ se tiene que $f(v)=\gamma_{1}\lambda_{1}+\gamma_{2}\lambda_{2}+\cdots +\gamma_{n}\lambda_{n}$.
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-391"><strong>(\#exm:unnamed-chunk-391) </strong></span>Sea $V$ el espacio vectorial de todas las funciones polinomios $p$ de $\mathbb{R}$ en $\mathbb{R}$ que tienen grado menor o igual que dos. Sean $t_{1}, t{2}, t{3}$ tres números reales distintos cualesquiera y sea $L_{i}(p)=p(t_{i})$. Entonces $L_{1}$, $L_{2}$ y $L_{3}$ son funcionales lineales sobre $V$. Si consideramos el funcional $L=\gamma_{1} L_{1}+ \gamma_{2} L_{2} + \gamma_{3} L_{3}$, luego $L\equiv 0$ si y solo si $L(p)=0$ para todo $p$ de $V$, entonces aplicando $L$ a las funciones plinómicas $1, x, x^{2}$, tenemos 
+	$$\left\lbrace \begin{array}{rl}
+	c_{1}+c_{2}+c_{3}&=0\\
+	t_{1}c_{1}+t_{2}c_{2}+t_{3}c_{3}&=0\\
+	t_{1}^{2}c_{1}+t_{2}^{2}c_{2}+t_{3}^{2}c_{3}&=0
+	\end{array}\right. $$ por lo que $c_{1}=c_{2}=c_{3}$. Entonces, $L_{1}$, $L{2}$ y $L_{3}$ son linealmente independientes y por lo tanto forman una base de $V^{\ast}$.
+Si queremos hallar la base $\mathcal{B}$ del espacio $V$ para la cual $\{L_{1}, L_{2}, L_{3} \}$ es dual, sabemos que cada $p\in\mathcal{B}$ debe satisfacer $L_{i}(p_{j})=\delta_{ij} \Leftrightarrow p_{j}(t_{i})$, específicamente:
+	$$\begin{array}{rl}
+	p_{1}(x)&=\dfrac{(x-t_{2})(x-t_{3})}{(t_{1}-t_{2})(t_{1}-t_{3})}\\
+	\\
+	p_{2}(x)&=\dfrac{(x-t_{1})(x-t_{3})}{(t_{2}-t_{1})(t_{2}-t_{3})}\\
+	\\
+	p_{3}(x)&=\dfrac{(x-t_{1})(x-t_{2})}{(t_{3}-t_{1})(t_{3}-t_{2})}
+\end{array} $$
+	Note que para cada $p\in V$, en virtud del teorema anterior, $p=p(t_{1})p_{1}+p(t_{2})p_{2}+p(t_{3})p_{3}$. Por lo tanto, para cada trio de números reales $r_{1}$, $r_{2}$ y $r_{3}$, existe una y solo una función polinómica $p$ de grado a lo sumo $2$, tal que, $p(t_{i})=r_{i}$ para cada $i=1,2,\cdots,3$ y $p=r_{1}p_{1}+r_{2}p_{2}+r_{3}p_{3}$.
+</div>\EndKnitrBlock{example}
+
+Si $f$ es un funcional lineal no nulo sobre un espacio $V$, el rango de $f$ es uno. Pero sabemos que, como $V$ es de dimensión finita, la dimensión del espacio es la suma del rango y la nulidad, entonces $dim N_{f}=dim V -1$, por lo tanto, el subespacio nulo de $f$, $N_{f}$ tiene dimensión $n-1$.
+
+En un espacio vectorial de dimensión $n$, un subespacio de dimensión $n-1$ se le llama un *hiperespacio* (o *hiperplanos* o *subespacios de codimensión 1*). Se nos ocurre entonces la pregunta, ¿ todo hiperespacio es el espacio nulo de un funcional lineal? se puede ver fácilmente que si. También puede surgir la conjetura: todo subespacio de dimensión $m$ es la intersección de los espacios nulos de $n-m$ funcionales lineales. Esto lo veremos en lo que sigue.
+
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-392"><strong>(\#def:unnamed-chunk-392) </strong></span>Si $V$ es un espacio vectorial sobre un cuerpo $\mathbb{F}$ y $S$ es un subconjunto de $V$, el *anulador* de $S$ es el conjunto $S^{0}$ de funcionales lineales $f$ sobre $V$ tales que $f(v)=0$ para todo $v\in S$.
+</div>\EndKnitrBlock{definition}
+
+Es claro que $S^{0}$ es un subespacio de $V^{\ast}$, independientemente de que $S$ sea subespacio o no de $V$. Además, si $S$ consta unicamente del vector cero, es decir, $S=\{0\}$, entonces $S^{0}=V^{\ast}$; y si $S=V$, entonces $S^{0}$ es el espacio nulo de $V^{\ast}$.
+
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:teorema115"><strong>(\#thm:teorema115) </strong></span>Sea $V$ un espacio vectorial de dimensión finita sobre el cuerpo $\mathbb{F}$ y sea $W$ un subespacio de $V$. Entonces $$dim W+dim W^{0}=dim V.$$
+</div>\EndKnitrBlock{theorem}
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}	Sea $k$ la dimensión de $W$ y $\{v_{1}, v_{2}, \cdots , v_{k} \}$ una base de $W$. Sean $v_{k+1}, v_{k+2}, \cdots, v_{n}$ en $V$, de modo que $\mathcal{B}=\{v_{1}, v_{2}, \cdots , v_{n} \}$ sea una base de $V$. Sea $\{f_{1}, f_{2},\cdots ,f_{n} \}$ la base dual de $\mathcal{B}$. Veamos que $\{f_{k+1}, f_{k+2},\cdots ,f_{n} \}$ es base del anulador $W^{0}$. Como $f_{i}(v_{j})=\delta_{ij}$, se tiene que para $i\geq k+1$, $f_{i}(v_{j})=0$ para todo $v_{j}\in\mathcal{B}$ con $j\leq k$; por lo tanto $f_{i}(v)=0$ para todo $v\in W$ (por ser combinación lineal de los vectores $v_{1}, v_{2}, \cdots , v_{k}$). Además, $\{f_{k+1}, f_{k+2},\cdots ,f_{n} \}$ es un conjunto linealmente independiente (por ser subconjunto de una base). Por otro lado, dado $f\in W^{\ast}$, como $f=\sum_{i=1}^{n} f(v_{i})f_{i}=\sum_{i=k+1}^{n} f(v_{i})f_{i}$, ya que $f(v_{i})=0$ para todo $i\leq k$. De este modo, tenemos que $dim W^{0}=n-k$.
+</div>\EndKnitrBlock{proof}
+
+\BeginKnitrBlock{corollary}<div class="corollary"><span class="corollary" id="cor:corolario11"><strong>(\#cor:corolario11) </strong></span>Si $W$ es un subespacio de dimensión $k$ de un espacio vectorial de dimensión $n$, entonces $W$ es la intersección de $n-k$ hiperespacios de $V$.
+</div>\EndKnitrBlock{corollary}
+
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Sea $\{v_{1}, v_{2}, \cdots , v_{k} \}$ una base de $W$. Sean $v_{k+1}, v_{k+2}, \cdots, v_{n}$ en $V$, los vectores que completan la base, es decir,  $\mathcal{B}=\{v_{1}, v_{2}, \cdots , v_{n} \}$ es base de $V$. Sea $\{f_{1}, f_{2},\cdots ,f_{n} \}$ la base dual de $\mathcal{B}$. Entonces $W$ consta de los vectores $v$ tales que $f_{i}(v)=0$ para $i=k+1, \cdots ,n$.
+</div>\EndKnitrBlock{proof}
+
+\BeginKnitrBlock{corollary}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-395"><strong>(\#cor:unnamed-chunk-395) </strong></span>Si $W_{1}$ y $W_{2}$ son subespacios de un espacio vectorial de dimensión finita, entonces $W_{1}=W_{2}$ si y solo si $W^{0}_{1}=W^{0}_{2}$.
+</div>\EndKnitrBlock{corollary}
+
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Si $W_{1}=W_{2}$, es claro que $W^{0}_{1}=W^{0}_{2}$. Supongamos que $W_{1}\neq W_{2}$ entonces existe un vector que $v\in W_{2}\setminus W_{1}$ o existe $w\in W_{2}\setminus W_{1}$ (o ambas cosas). Sin perdida de generalidad, supongamos que $v\in W_{2}\setminus W_{1}$. Entonces existe un funcional lineal $f$ tal que $f(u)=0$ para todo $u\in W_{1}$ pero $f(v)\neq 0$. Luego, $f\in W_{1}^{0}$ pero $f\notin W_{2}^{0}$, luego $W_{1}^{0}\neq W_{2}^{0}$.
+</div>\EndKnitrBlock{proof}
+Veamos ahora la relación entre los sistemas lineal de ecuaciones homogéneas y los funcionales lineales. Supongamos que se tiene un sistema de ecuaciones lineales homogéneas
+$$\begin{array}{ccccc}
+A_{11}x_{1}+&\cdots&+ A_{1n}x_{n}&=& 0\\
+\vdots& &\vdots& &\\
+A_{m1}x_{1}+&\cdots&+ A_{mn}x_{n}&=& 0
+\end{array}$$
+y deseamos hallar sus soluciones. Si llamamos $f_{i}$ al funcional lineal en $\mathbb{F}^{n}$ definido por $$f_{i}=A_{i1}x_{1}+\cdots +A_{in}x_{n}$$ entonces hallar el subespacio de $\mathbb{F}^{n}$ que se anule por cada $f_{i}$, $i=1,\cdots, m$. Sabemos que el método de reducción por filas nos permitiría hallar el subespacio solución. Ahora bien, considerando la base canónica de $\mathbb{F}^{n}$, los coeficientes $A_{i1},\cdots ,A_{in}$ corresponden a las coordenadas del funcional $f_{i}$ en la base dual (a la canónica), por lo tanto, el espacio fila de la matriz de coeficientes es el espacio generado por los funcionales lineales $f_{1},\cdots ,f_{m}$. Luego el espacio solución es el subespacio de $\mathbb{F}^{n}$ anulado por este espacio de funcionales lineales.
+Ahora, si se tienen $m$ vectores de $\mathbb{F}^{n}$, $v_{i}=(A_{i1}, \cdots, A_{in})$, se quiere hallar el anulador del subespacio generado por los $v_{i}$, como un funcional lineal tiene la forma general $f(x_{1},\cdots, x_{n})=\lambda_{1}x_{1}+\cdots +c_{n}x_{n}$, pero un funcional lineal está en el anulador si $\sum_{j=1}^{n}A_{ij}\lambda_{j}=0$, para cada $i=1,\cdots, m$. Si y solo si, $\lambda_{1},\cdots, \lambda_{n}$ es solución del sistema $$\begin{array}{ccccc}
+A_{11}x_{1}+&\cdots&+ A_{1n}x_{n}&=& 0\\
+\vdots& &\vdots& &\\
+A_{m1}x_{1}+&\cdots&+ A_{mn}x_{n}&=& 0
+\end{array}.$$
+Entonces la reducción de filas nos permite hallar el anulador de un subespacio generado por un conjunto de vectores.
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-397"><strong>(\#exm:unnamed-chunk-397) </strong></span>Dados tres funcionales lineales sobre $\mathbb{R}^{4}$:
+$$\begin{array}{ll}
+f_{1}(x_{1},x_{2},x_{3},x_{4})&= 2x_{1}-1x_{2}+3x_{3}+2x_{4}\\
+f_{2}(x_{1},x_{2},x_{3},x_{4})&= x_{1}+4x_{2}-x_{4}\\
+f_{3}(x_{1},x_{2},x_{3},x_{4})&= 2x_{1}+6x_{2}-x_{3}+5x_{4}
+\end{array}$$ podemos hallar el subespacio anulado por $\{f_{1},f_{2},f_{3} \}$, hallando las soluciones del sistema $AX=0$, donde $$A=\left[\begin{array}{cccc}
+2&-1&3&2\\
+1&4&0&-1\\
+2&6&-1&5
+\end{array} \right] $$ es la matriz de coeficientes.
+Como ya vimos en el ejemplo \@ref(exm:ejm45) del capítulo 4, la matriz $A$ es equivalente por filas a la matriz escalonada reducida  $$R=\left[\begin{array}{cccc}
+1&0&0&\frac{17}{3}\\
+0&1&0&-\frac{5}{3}\\
+0&0&1&-\frac{11}{3}
+\end{array} \right] $$
+Por lo tanto, el espacio generado por los funcionales 
+$$\begin{array}{ll}
+g_{1}(x_{1},x_{2},x_{3},x_{4})&= x_{1}+\frac{17}{3}x_{4}\\
+g_{2}(x_{1},x_{2},x_{3},x_{4})&= x_{2}-\frac{5}{3}x_{4}\\
+g_{3}(x_{1},x_{2},x_{3},x_{4})&= x_{3}-\frac{11}{3}x_{4}
+\end{array}$$
+es el mismo espacio generado por los funcionales $f_{1},f_{2},f_{3}$, además de anular al mismo subespacio. Tal subespacio es fácil de hallar a partir de $g_{1},g_{2}$ y $g_{3}$, ya que $$\begin{array}{lll}
+g_{1}(x_{1},x_{2},x_{3},x_{4})&= x_{1}+\frac{17}{3}x_{4}&=0\\
+g_{2}(x_{1},x_{2},x_{3},x_{4})&= x_{2}-\frac{5}{3}x_{4}&=0\\
+g_{3}(x_{1},x_{2},x_{3},x_{4})&= x_{3}-\frac{11}{3}x_{4}&=0
+\end{array}\Leftrightarrow \begin{array}{ll}
+x_{1}&=-\frac{17}{3}x_{4}\\
+x_{2}&=\frac{5}{3}x_{4}\\
+x_{3}&=\frac{11}{3}x_{4}
+\end{array}$$
+</div>\EndKnitrBlock{example}
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-398"><strong>(\#exm:unnamed-chunk-398) </strong></span>Sean $v_{1}=(-6,-3,0,-3,-3)$, $v_{2}=(0,3,6,3,2)$, $v_{3}=(-3,1,5,1,0)$ y $v_{4}=(4,1,-2,1,5)$ vectores de $\mathbb{R}^{5}$. Sea $W$ el subespacio generado por los vectores $v_{1}, v_{2}, v_{3}$ y $v_{4}$. El espacio anulador de $W$, $W^{0}$ consta de los funcionales $f(x_{1},x_{2},x_{3},x_{4},x_{5})=\sum_{j=1}^{5} \lambda_{j}x_{j}$ tales que $f(v_{i})=0$, para cada $i=1,\cdots,4$.
+Como $$A=\left[\begin{array}{ccccc}
+-6&-3&0&-3&-3\\
+0&3&6&3&2\\
+-3&1&5&1&0\\
+4&1&-2&1&5
+\end{array} \right]$$ es equivalente por filas a $$R=\left[\begin{array}{ccccc}
+1&0&-1&0&0\\
+0&1&2&1&0\\
+0&0&0&0&1\\
+0&0&0&0&0
+\end{array} \right]$$ entonces $f\in W^{0}$ si y solo si $f(v_{i})=0$, para cada $i=1,\cdots,4$ si y solo si $\sum_{j=1}^{5} [A]_{ij}\lambda_{j}=0$ para cada $i=1,\cdots,4$, si y solo si $\sum_{j=1}^{5} [R]_{ij}\lambda_{j}=0$ para cada $i=1,\cdots,3$, esto es $$\begin{array}{rl}
+\lambda_{1}-\lambda_{3}&=0\\
+\lambda_{2}+2\lambda_{3}+\lambda_{4}&=0\\
+\lambda_{5}&=0
+\end{array}$$ De este moso obtenemos todos los funcionales lineales de $W^{0}$ asignando valores arbitrarios a $\lambda_{3}$ y $\lambda_{4}$. Por ejemplo $\lambda_{3}=a$ y $\lambda_{4}=b$, entonces $\lambda_{1}=a$, $\lambda_{2}=-2a-b$ y $\lambda_{5}=0$, por lo tanto $f(x_{1},x_{2},x_{3},x_{4},x_{5})=ax_{1}+(-2a-b)x_{2}+ax_{3}+bx_{4}$. Note que la dimensión del espacio $W^{0}$ es $2$ y una base es $f_{1}=x_{1}-2x_{2}+x_{3}$ poniendo $a=1$ y $b=0$ y $f_{2}=-x_{2}+x_{4}$ poniendo $a=0$ y $b=1$. Es claro que el funcional anterior es $af_{1}+bf_{2}$.
+</div>\EndKnitrBlock{example}
+
+## El doble dual
+
+Ya vimos que a cada base $\mathcal{B}$ de un espacio vectorial $V$, le corresponde una base dual $\mathbb{B}^{\ast}$. Y que dada una base $\mathcal{B}^{\ast}$ de $V^{\ast}$, se puede hallar una base de $V$ para la cual $\mathcal{B}^{\ast}$ es dual. Veremos que podemos hacer esto último considerando el espacio dual de $V^{\ast}$, es decir el *doble dual* de $V$.
+
+Dado un vector $v\in V$, este induce un funcional lineal sobre $V^{\ast}$, $L_{v}$, definido por $L_{v}=f(v)$, para cada $f\in V^{\ast}$. La linealidad de $L_{v}$ viene dada por la linealidad de las operaciones en $V^{\ast}$: $$\begin{array}{rl}
+L_{v}(\lambda f + g)&=(\lambda f + g)(v)\\
+&=(\lambda f)(v)+g(v)\\
+&=\lambda f(v)+g(v)\\
+&=\lambda L_{v}(f)+ L_{v}(g)
+\end{array}$$
+
+Si $v_{0}$ es un vector no nulo de un espacio de dimensión finita $V$, $L_{v_{0}}$ no es cero. Por lo tanto, para cada $v$ no nulo, existe un funcional lineal $f$ tal que $f(v)\neq 0$. Es muy fácil ver que efectivamente es así, tomando una base ordenada $\mathcal{B}=\{v_{1}, v_{2},\cdots, v_{n} \}$ de $V$, de forma que $v_{1}=v_{0}$, se define el funcional lineal $f$ que a cada vector $v$ de $V$ le asigna su primera coordenada en la base $\mathcal{B}$, es decir, $f(v)=([v]_{\mathcal{B}})_{1}$.
+
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:teorema116"><strong>(\#thm:teorema116) </strong></span>	Sea $V$ un espacio de dimensión finita sobre el cuerpo $\mathbb{F}$. Para cada vector $v$ de $V$ se define $$L_{v}(f)
+=f(v)\mbox{, } \forall f\in V^{\ast}$$ La aplicación $v\mapsto L_{v}$ es entonces un isomorfismo de $V$ sobre $V^{\ast\ast}$.
+</div>\EndKnitrBlock{theorem}
+
+Ya vimos que para todo $v\in V$, $L_{v}$ es una transformación lineal. Veamos que la aplicación $v\mapsto L_{v}$ es una transformación lineal de $V$ en $V^{\ast\ast}$. Sean $u,v\in V$ y $\lambda\in\mathbb{F}$ $$\begin{array}{rl}
+L_{\lambda v+ u}(f)=&f(\lambda v+ u)\\
+=&\lambda f(v)+ f(u)\\
+=&\lambda L_{v}(f)+ L_{u}(f)
+\end{array}$$ es decir, $L_{\lambda v+ u}=\lambda L_{v}+ L_{u}$. Además es una transformación inyectiva, ya que $v=0$ si y solo si $L_{v}=0$. Como $\dim V=\dim V^{\ast}=\dim V^{\ast\ast}$, por el teorema \@ref(thm:teorema427) se tiene que esta transformación es biyectiva y por lo tanto, un isomorfismo entre $V$ y $V^{\ast\ast}$.
+
+\BeginKnitrBlock{corollary}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-399"><strong>(\#cor:unnamed-chunk-399) </strong></span>Sea $V$ un espacio vectorial de dimensión finita sobre el cuerpo $\mathbb{F}$. Si $L$ es un funcional lineal en el espacio dual $V^{\ast}$, entonces existe un único $v\in V$ tal que $L(f)=f(v)$ para cada $f\in V^{\ast}$.
+</div>\EndKnitrBlock{corollary}
+
+\BeginKnitrBlock{corollary}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-400"><strong>(\#cor:unnamed-chunk-400) </strong></span>Sea $V$ un espacio vectorial de dimensión finita sobre el cuerpo $\mathbb{F}$. Toda base de $V^{\ast}$ es el dual de una base de $\mathcal{B}$ de $V$.
+</div>\EndKnitrBlock{corollary}
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Sea $\mathcal{B}^{\ast}=\{f_{1},\cdots, f_{n} \}$ una base de $V^{\ast}$. Por el teorema \@ref(thm:teorema114) existe una única base $\{L_{1},\cdots, L_{n} \}$ de $V^{\ast\ast}$ tal que $L_{i}(f_{j})=\delta_{ij}$. Por el corolario anterior se tiene que para cada $i$ existe $v_{i}\in V$ tal que $L_{i}(f)=f(v_{i})=L_{v_{i}}(f)$ para todo $f\in V^{\ast}$. Se sigue que $\{v_{1},\cdots, v_{n}\}$ es una base de $V$ y $\mathcal{B}^{\ast}$ es el dual de esta base.
+</div>\EndKnitrBlock{proof}
+
+El teorema \@ref(thm:teorema116) nos permite pensar que el espacio dual de $V^{\ast}$, es el mismo espacio $V$, en realidad hay una identificación entre ellos. Este hecho es de utilidad, una muestra de ello es el corolario anterior. Pero no es la única; dado un conjunto $C$ del espacio $V^{\ast}$, $C^{0}$ es su anulador en $V^{\ast\ast}$, entonces (por el teorema \@ref(thm:teorema116)) $C^{0}$ es un subespacio de $V$ que consta de todos los vectores $v$ tales que $f(v)=0$ para todos los $f\in C$, es decir de la intersección de todos los espacios nulos de $f\in C$. El corolario \@ref(cor:corolario11) nos dice que todo subespacio $W$ está determinado por su subespacio anulador, esto es, igual que antes, los funcionales que anulan a los vectores de $W$, es decir, las intersecciones de los subespacios nulos de los funcionales $f$ en $W^{0}$. De alguna forma podríamos pensar que $W=(W^{0})^{0}$.
+
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-402"><strong>(\#thm:unnamed-chunk-402) </strong></span>Sea $S$ un subconjunto de un espacio de dimensión finita $V$, entonces $(S^{0})^{0}$ es el espacio generado por $S$, es decir $(S^{0})^{0}=\left\langle S\right\rangle$.
+</div>\EndKnitrBlock{theorem}
+
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Sea $W=\left\langle S\right\rangle $. Es claro que toda combinación lineal de elementos de $S$ pertenece al espacio nulo de toda función $f\in S^{0}$, por lo tanto $S^{0}=W^{0}$. Entonces $(S^{0})^{0}=(W^{0})^{0}=W$, ya que $\dim W+\dim W^{0}=\dim V \mbox{ y } \dim W^{0}+\dim (W^{0})^{0}=\dim V^{\ast}$ y $\dim V=\dim V^{\ast}$, por lo que se tiene que $\dim W=\dim (W^{0})^{0}$ y como $W\prec (W^{0})^{0}$, se concluye que $(W^{0})^{0}=W$.
+</div>\EndKnitrBlock{proof}
+
+Todo lo discutido hasta ahora sobre en esta y la sección anterior se ha hecho para espacios de dimensión finita. Se tienen resultados análogos para espacios de dimensión cualquiera pero requieren del axioma de la elección. El lector interesado puede leer al respecto en HACER REFERENCIA.
+
+Para cerrar esta sección estudiaremos la traspuesta de una una transformación lineal. Note que dada una transformación lineal $T$ de un espacio vectorial $V$ en otro $W$ ambos sobre un cuerpo $\mathbb{F}$. $T$ induce una transformación lineal de $W^{\ast}$ en $V^{\ast}$, de la siguiente manera: dado un funcional lineal $g\in W^{\ast}$, se define $f=g\circ T$. Como ya sabemos, la composición de transformaciones lineales, es una transformación lineal, se tiene que $f$ es un funcional lineal en $V$. Llamamos $T^{t}$ a dicha correspondencia, esto es, $T^{t}:W^{\ast}\longrightarrow V^{\ast}$ definida como antes, $T^{t}(g)=g\circ T$. Se tiene que $T^{t}$ es una transformación lineal, en efecto, sean $g_{1}, g_{2}\in W^{\ast}$ y $\lambda\in\mathbb{F}$, $$\begin{array}{rl}
+T^{t}(\lambda g_{1}+ g_{2})(v)=&((\lambda g_{1}+ g_{2})\circ T)(v)\\
+=&(\lambda g_{1}+ g_{2}) (Tv)\\
+=&\lambda g_{1}(Tv)+ g_{2}(Tv)\\
+=&\lambda (T^{t}g_{1})(v)+ (T^{t}g_{2})(v)
+\end{array}$$
+
+Esto se puede escribir de la siguiente manera
+
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-404"><strong>(\#thm:unnamed-chunk-404) </strong></span>Sean $V$ y $W$ espacios vectoriales sobre el cuerpo $\mathbb{F}$. Para toda transformación lineal $T$ de $V$ en $W$, existe una única transformación lineal $T^{t}$ de $W^{\ast}$ en $V^{\ast}$ tal que $(gT^{t})(v)=g(Tv)$ para toda $g\in W^{\ast}$ y todo $v\in V$.
+</div>\EndKnitrBlock{theorem}
+
+A $T^{t}$ se le llama *traspuesta* de $T$, también se le puede llamar adjunta de $T$.
+
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:teorema819"><strong>(\#thm:teorema819) </strong></span>Sean $V$ y $W$ espacios vectoriales sobre el cuerpo $\mathbb{F}$ y sea $T$ una transformación lineal de $V$ en $W$. El espacio nulo de $T^{t}$ es el anulador de la imagen de $T$. Si $V$ y $W$ son de dimensión finita, entonces
+
+(i.) $rango(T^{t})=rango (T)$.
+
+(ii.) la imagen de $T^{t}$ es el anulador del espacio nulo de $T$.
+</div>\EndKnitrBlock{theorem}
+
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Si $g$ pertenece a $W^{\ast}$, entonces por definición $(gT^{t})(v)=g(Tv)$ para todo $v\in V$, $g$ está en el espacio nulo de $T^{t}$ si y solo si $g(Tv)=0$ para todo $v\in V$. Entonces, el espacio nulo de $T^{t}$ es el anulador de la imagen $T$. Supongamos que $V$ y $W$ son espacios de dimensión finita, digamos $\dim V=n$ y $\dim W=m$. Sea $r=rango T$, por el teorema \@ref(thm:teorema115) se tiene que $\dim (Img T)^{0}=\dim W - rango T=m-r$. Por la primera parte del teorema $Nul (T^{t})=m-r$, por otro lado, como $T^{t}$ es una transformación lineal sobre un espacio de dimensión $m$, $rango T^{t}=\dim W-Nul (T^{t})=m-(m-r)=r$ por lo tanto $rango T^{t}=rango T$. Sea $N=Ker T$, si $f$ es un funcional en la imagen de $T^{t}$, entonces $f=T^{t}g$ para algún $g\in W^{\ast}$, entonces si $v\in N$, $f(v)=(T^{t}g)(v)=g(Tv)=g(0)=0$. Ahora bien, la imagen de $T^{t}$ es un subespacio de $N^{0}$ y $\dim N^{0}=n-\dim N=rango (T)=rango (T^{t})$, por lo tanto la imagen de $T^{t}$ es exactamente $N^{0}$.
+</div>\EndKnitrBlock{proof}
+
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:teorema820"><strong>(\#thm:teorema820) </strong></span>Sean $V$ y $W$ espacios vectoriales de dimensión finita sobre el cuerpo $\mathbb{F}$. Sean $\mathcal{B}$ es una base ordenada de $V$ y $\mathcal{B}^{\ast}$ su base dual. Sean $\mathcal{B}_{1}$ es una base ordenada de $W$ y $\mathcal{B}_{1}^{\ast}$ su base dual. Sea $T$ una transformación lineal de $V$ en $W$. Sea $A$ la matriz de $T$ respecto de las bases $\mathcal{B}$ y $\mathcal{B}_{1}$ y $B$ la matriz de la transformación $T^{t}$ respecto a $\mathcal{B}_{1}^{\ast}$ y $\mathcal{B}^{\ast}$. Entonces $B_{ij}=A_{ji}$.
+</div>\EndKnitrBlock{theorem}
+
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Supongamos que $\dim V=n$ y $\dim W=m$. Sean $\mathcal{B}=\{v_{1}, \cdots v_{n}\}$, $\mathcal{B}_{1}=\{u_{1}, \cdots u_{m}\}$, $\mathcal{B}^{\ast}=\{f_{1}, \cdots f_{n}\}$ y $\mathcal{B}^{\ast}_{1}=\{g_{1}, \cdots g_{m}\}$. Por definición de $A$ y $B$, se tiene que $$Tv_{i}=\sum_{k=1}^{m} A_{ki}u_{k} \mbox{ para } i=1,\cdots , n$$ y $$T^{t}g_{i}=\sum_{k=1}^{n} B_{ki}f_{k} \mbox{ para } i=1,\cdots , m$$
+Entonces se tiene que 
+$$\begin{array}{rl}
+(T^{t}g_{j})(v_{i})=&g_{j}(Tv_{i})\\
+=&g_{j}(\sum_{k=1}^{m} A_{kj}u_{k})\\
+=&\sum_{k=1}^{m} A_{kj}g_{j}(u_{k})\\
+=&\sum_{k=1}^{m} A_{kj}\delta_{jk}\\
+=&A_{ji}
+\end{array}$$
+Ahora, para cualquier funcional $f$ en $V$, se tiene que $f=\sum_{i=1}^{m} f(v_{i})f_{i}$; en particular para el funcional $T^{t}g_{j}$, se tiene que $$T^{t}g_{j}=\sum_{i=1}^{m} (T^{t}g_{j})(v_{i})f_{i}=\sum_{i=1}^{m} A_{ji}f_{i}$$ de donde se tiene que $$\sum_{k=1}^{n} B_{ki}f_{k}=T^{t}g_{i}=\sum_{i=1}^{m} A_{ji}f_{i}$$ por lo tanto $B_{ij}=A_{ji}$.
+</div>\EndKnitrBlock{proof}
+
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-407"><strong>(\#def:unnamed-chunk-407) </strong></span>Si $A$ es una matriz $m\times n$ sobre un cuerpo $\mathbb{F}$, la traspuesta de $A$ es la matriz $A^{t}$, $n\times m$, definida por $A^{t}_{ij}=A_{ji}$.
+</div>\EndKnitrBlock{definition}
+
+En virtud de la definición anterior, el teorema \@ref(thm:teorema820) nos dice que si $T$ es una transformación de $V$ en $W$ y $A$ es la matriz de la transformación $T$ en un par de bases ordenadas, entonces la matriz de $T^{t}$ en las bases duales correspondientes no es mas que la matriz $A^{t}$, la traspuesta de $A$.
+
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-408"><strong>(\#thm:unnamed-chunk-408) </strong></span>Sea $A$ cualquier matriz $m\times n$ sobre el cuerpo $\mathbb{F}$. Entonces el rango de filas de $A$ es igual al rango de columnas de $A$.
+</div>\EndKnitrBlock{theorem}
+
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Sean $\mathcal{B}_{1}$ y $\mathcal{B}_{2}$ las bases canónicas ordenadas de los espacios vectoriales $\mathbb{F}^{n}$ y $\mathbb{F}^{m}$ respectivamente. Sea $T$ la transformación lineal de $\mathbb{F}^{n}$ en $\mathbb{F}^{m}$ correspondiente a la matriz $A$ en las bases $\mathcal{B}_{1}$ y $\mathcal{B}_{2}$. Así, $T(x_{1},\cdots,x_{n})=(y_{1},\cdots,y_{m})$, donde $y_{i}=\sum_{j=1}^{n} A_{ij}x_{j}$.
+Note que el rango de la transformación $T$, que cosnta de las combinaciones lineales de las columnas de $A$, es igual al rango columna de $A$. Análogamente, como $A^{t}$ es la matriz de la transformación $T^{t}$, el rango de $T^{t}$ es el rango columna de $A^{t}$. Además, las filas de $A$ son las columnas de $A^{t}$, por lo tanto, el rango de $T^{t}$ es igual al rango fila de $A$. Por el teorema \@ref(thm:teorema456) se tiene que el rango de $T$ (es igual al rango de $T^{t}$) es igual al rango columna de $A$ y al rango fila de $A$.
+</div>\EndKnitrBlock{proof}
+
+Del teorema anterior podemos afirmar que dada una matriz $A$ $m\times n$ sobre un cuerpo $\mathbb{F}$ y $T$ es la transformación definida antes en la demostración del teorema, entonces $rango(T)=\mbox{ rango de filas } (A)=\mbox{ rango de columna }(A)$ entonces simplemente diremos que este número es el *rango* de $A$.
+
+Dado un espacio vectorial $V$ de dimensión $n$ sobre un cuerpo $\mathbb{F}$ y sea $T$ un operador lineal sobre $V$. Sea $\mathcal{B}=\{v_{1},\cdots, v_{n}\}$ una base ordenada de $V$. Supongamos que $A$ es la matriz de $T$ en la base ordenada $\mathbb{B}$, entonces $Tv_{j}=\sum_{i=1}^{n} A_{ij}v_{i}$, es decir, $A_{ij}$ es la $i-$ésima coordenada del vector $Tv_{j}$ en la base ordenada $\mathbb{B}$. Por otro lado, si $\{f_{1},\cdots, f_{n}\}$ es la base dual de $\mathcal{B}$, sabemos que $v=\sum_{i=1}^{n} f_{i}(v)v_{i}$, para cualquier vector $v$, entonces $A_{ij}=f_{i}(Tv_{j})$. Ahora, si cambiamos de base, digamos a la base ordenada $\mathcal{B}_{2}=\{u_{1},\cdots, u_{n}\}$ de $V$, con base dual $\{g_{1},\cdots, g_{n}\}$, entonces $B_{ij}=g_{i}(Tu_{j})$. Sea $U$ el operador cambio de base, es decir $Uv_{j}=u_{j}$. Entonces, como $U$ es invertible, $U^{t}$ también lo es y $(U^{t})^{-1}=(U^{1})^{t}$, luego la transpuesta de $U$ viene dada por $U^{t}g_{i}=f_{i}$ y $g_{i}=(U^{-1})^{t}f_{1}$, para cada $i=1,\cdots, n$; por lo tanto 
+$$\begin{array}{rl}
+B_{ij}=&[(U^{-1})^{t}f_{i}](Tu_{j})\\
+=&f_{i}(U^{-1}Tu_{j})\\
+=&f_{i}(U^{-1}TUv_{j})
+\end{array}$$
+De este modo, $f_{i}(U^{-1}TUv_{j})$ es el elemento $ij$ de la matriz $U^{-1}TU$ en la base $\mathcal{B}$. Además, es el elemento $ij$ de la matriz de $T$ en la base ordenada $\mathcal{B}_{2}$. Entonces 
+$$\begin{array}{rl}
+[T]_{\mathcal{B}_{2}}=&[U^{-1}TU]_{\mathcal{B}}\\
+	=&[U^{-1}]_{\mathcal{B}}[T]_{\mathcal{B}}[U]_{\mathcal{B}}\\
+	=&[U]_{\mathcal{B}}^{-1}[T]_{\mathcal{B}}[U]_{\mathcal{B}}
+\end{array}$$
+lo que es precisamente la fórmula de cambio de base que antes vimos.
 
 ## Ejercicios
 
@@ -3496,7 +4092,7 @@ An R Markdown document (`*.Rmd`) is first compiled to Markdown (`*.md`) through 
 
 ```r
 rmarkdown::pandoc_version()
-## [1] '1.19.2.1'
+## [1] '1.19.2.4'
 ```
 
 If you find this version too low and there are Pandoc features only in a later version, you can install the later version of Pandoc, and **rmarkdown** will call the newer version instead of its built-in version.
