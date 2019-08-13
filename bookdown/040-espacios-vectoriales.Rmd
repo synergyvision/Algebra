@@ -346,7 +346,7 @@ Ahora veremos las operaciones elementales por filas que corresponden a hacer com
 	
 (2) Intercambio de dos filas de la matriz $A$.
 	
-(3) Sustituír la $i$-\'esima fila de la matriz $A$, por la suma de la fila $r$ mas un múltiplo de la fila $s$-ésima.
+(3) Sustituír la $i$-ésima fila de la matriz $A$, por la suma de la fila $r$ mas un múltiplo de la fila $s$-ésima.
 
 Podemos denotar en forma de función (entre fila) las operaciones elementales por fila del siguiente modo.
 Si $A$ es una matriz $m\times n$, una operación elemental de filas es una función $e$ que se le aplica a la matriz $A$, asociándole la matriz $e(A)$, que corresponde al resultado de alguna de las operaciones antes descritas. esto es:
