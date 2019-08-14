@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+
+  <meta property="og:title" content="" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+<script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+
+
+
+<link rel="stylesheet" href="css\style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"><img src="images/logovision-black.png" width="160"></img></a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path=""><a href="#determinantes"><i class="fa fa-check"></i><b>1</b> Determinantes</a></li>
+<li class="divider"></li>
+<li><a href="https://bookdown.org" target="blank">Publicado con bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<!--bookdown:title:end-->
+<!--bookdown:title:start-->
+<div id="determinantes" class="section level1">
+<h1><span class="header-section-number">Capítulo 1</span> Determinantes</h1>
+<p>Volveremos sobre el tema de las matrices no solo sobre un cuerpo, sino que lo haremos para matrices cuyos elementos son parte de un anillo comunitativo por unidad.</p>
+<p>Recordemos que un anillo comutativo con unidad es un conjunto <span class="math inline">\(K\)</span> con dos operaciones que cumple con los axiomas de grupo para la suma, y con el producto cumple los axiomas de grupo salvo la condición de existencia de un inverso. Un ejemplo natural de anillo conmutativo es el conjunto de los números enteros. Otro ejemplo sería los polinomios sobre un cuerpo. Todo esto ya fué estudiado en el capítulo 1.</p>
+<p>Dado un anillo conmutativo con unidad <span class="math inline">\(K\)</span>, consideremos la matriz <span class="math inline">\(m\times n\)</span> sobre <span class="math inline">\(K\)</span>, esto es una función <span class="math inline">\(A\)</span> de <span class="math inline">\(\{1,2,\cdots, m \} \times \{1,2,\cdots, n \}\)</span> en <span class="math inline">\(K\)</span>, que a cada par <span class="math inline">\((i,j)\)</span> le asigna un elemento <span class="math inline">\(k_{ij}\)</span> de <span class="math inline">\(K\)</span>, es decir <span class="math inline">\(A(i,j)=k_{ij}\)</span> tambien denotado por <span class="math inline">\([K]_{ij}\)</span>. La suma y el producto de matrices las definimos como es usual (igual que en las matrices sobre un cuerpo), dadas las matrices <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> sobre el anillo <span class="math inline">\(K\)</span>, la matriz suma <span class="math inline">\(A+B\)</span> es la matriz <span class="math display">\[(A+B)_{ij}=A_{ij}+B_{ij}\]</span> y el producto <span class="math inline">\(AB\)</span> es la matriz <span class="math display">\[(AB)_{ij}=\sum_{k} A_{ik}B_{kj}\]</span></p>
+<p>El resto de las propiedades y resultados vistos antes para matrices con coeficientes en un cuerpo, funcionan igual cuando los coeficientes de la matriz pertenecen a un anillo, salvo los resultados que involucren inversos multiplicativos (dividir). De este modo, las propiedades algebraicas funcionan igual, por ejemplo, la propiedad distributiva del producto respecto a la suma, <span class="math inline">\(A(B+C)=AB+AC\)</span>, etc.</p>
+<p>Para definir la función determinante podemos seguir dos rutas, la primera y m?s com?n es dando la fórmula explícita del calculo del determinante de una matriz. Un ejemplo de esto es definir el determinante de una matriz cuadrada <span class="math inline">\(A\)</span> de orden <span class="math inline">\(2\)</span> como: <span class="math display">\[ A_{11}A_{22}-A_{12}A_{21}.\]</span> Para una matriz <span class="math inline">\(3\times 3\)</span>, la fórmula se complica un poco mas; suponga que <span class="math inline">\(B\)</span> es una matriz cuadrada de orden <span class="math inline">\(3\)</span>, entonces su determinante es: <span class="math display">\[B_{11}B_{22}B_{33}+B_{12}B_{23}B_{31}+B_{21}B_{32}B_{13}-B_{13}B_{22}B_{31}-B_{23}B_{32}B_{11}-B_{12}B_{21}B_{33}.\]</span> Y si se quiere definir el determinante de una matriz <span class="math inline">\(4\times 4\)</span>, la fórmula es aún mas complicada. El otro camino para definir el determinante de una matriz es definiendo en abstracto una función que se comporte como queremos y luego demostrar que esta función es única (y que coincide con el determinante conocido, es decir, con la fórmula). Este último es el camino que seguiremos.</p>
+<p>En la primera parte del capítulo nos dedicaremos a definir la “función determinante” y mostrar que tal función existe. Luego nos dedicaremos a estudiar dicha función.</p>
+
+<div class="definition">
+<p><span id="def:unnamed-chunk-1" class="definition"><strong>Definición 1.1  </strong></span>Sea <span class="math inline">\(K\)</span> un anillo conmutativo con unidad, <span class="math inline">\(n\)</span> un entero positivo. Sea <span class="math inline">\(D\)</span> una función que a cada matriz <span class="math inline">\(A\)</span> sobre <span class="math inline">\(K\)</span>, de orden <span class="math inline">\(n\)</span> le asigna un escalar <span class="math inline">\(D(A)\)</span> en <span class="math inline">\(K\)</span>. Decimos que <span class="math inline">\(D\)</span> es <em><span class="math inline">\(n\)</span>-lineal</em> si para cada <span class="math inline">\(i\)</span>, <span class="math inline">\(1\leq i\leq n\)</span>, <span class="math inline">\(D\)</span> es una función lineal para la fila <span class="math inline">\(i\)</span>-ésima cuando las otras <span class="math inline">\(n-1\)</span> filas se dejan fijas.</p>
+</div>
+
+
+<div class="remark">
+<p> <span class="remark"><em>Nota. </em></span> En la definición anterior, decir que la función <span class="math inline">\(D\)</span> es lineal en la fila <span class="math inline">\(i\)</span> es equivalente a decir que si <span class="math inline">\(v_{1}, v_{2},\cdots , v_{n}\)</span> son las <span class="math inline">\(n\)</span> filas de la matriz <span class="math inline">\(A\)</span>, y se considera la funci?n <span class="math inline">\(D\)</span> solo respecto de la fila <span class="math inline">\(i\)</span>, se tiene que <span class="math display">\[D(v_{1}, v_{2},\cdots \lambda v_{i}+u_{i},\cdots, v_{n})=\lambda D(v_{1}, v_{2},\cdots v_{i},\cdots, v_{n})+D(v_{1}, v_{2},\cdots u_{i},\cdots, v_{n}).\]</span> Otra forma de verlo es pensar en la linealidad de la función <span class="math inline">\(D\)</span> cuando se considera una matriz <span class="math inline">\(B\)</span> donde <span class="math inline">\(B_{rj}=0\)</span> si <span class="math inline">\(r\neq i\)</span>, donde se cumple que <span class="math inline">\(D(\lambda A+B)=\lambda D(A)+D(B)\)</span>.</p>
+</div>
+
+
+<div class="example">
+<span id="exm:unnamed-chunk-3" class="example"><strong>Ejemplo 1.1  </strong></span>Sea <span class="math inline">\(D\)</span> la función que a cada matriz <span class="math inline">\(A\)</span> sobre <span class="math inline">\(K\)</span> de orden <span class="math inline">\(n\)</span>, le asigna el valor <span class="math inline">\(D(A)=\prod_{r=1}^{n}A_{rr}=A_{11}A_{22}\cdots A_{nn}\)</span>. <span class="math inline">\(D\)</span> es una función <span class="math inline">\(n\)</span>-lineal. En efecto, para cada <span class="math inline">\(i\)</span>, <span class="math inline">\(1\leq i\leq n\)</span>, si consideramos otra matriz <span class="math inline">\(B\)</span> sobre <span class="math inline">\(K\)</span>, de oreden <span class="math inline">\(n\)</span>, y consideramos a <span class="math inline">\(D\)</span> como una función de la <span class="math inline">\(i\)</span>-ésima fila, se tiene que <span class="math inline">\(\begin{array}{rl} D(\lambda A+B)=&amp;(A_{11})(A_{22})\cdots (\lambda A_{ii}+B_{ii}) \cdots (A_{nn})\\ =&amp;(A_{11})(A_{22})\cdots (A_{nn})) (\lambda A_{ii}+B_{ii})\\ =&amp;\lambda ((A_{11})(A_{22})\cdots (A_{nn}))A_{ii}+ ((A_{11})(A_{22})\cdots (A_{nn}))B_{ii})\\ \lambda D(A) + D(B) \end{array}\)</span>
+</div>
+
+
+<div class="lemma">
+<span id="lem:unnamed-chunk-4" class="lemma"><strong>Lema 1.1  </strong></span>Una combinación lineal de funciones <span class="math inline">\(n\)</span>-lineales, es una función <span class="math inline">\(n\)</span>-lineal.
+</div>
+ 
+<div class="proof">
+ <span class="proof"><em>Demostración. </em></span> Basta considerar la combinación lineal de dos funciones <span class="math inline">\(n\)</span>-lineales. Sean <span class="math inline">\(D\)</span> y <span class="math inline">\(E\)</span> dos funciones <span class="math inline">\(n\)</span>-lineales y <span class="math inline">\(a\in K\)</span>. Como <span class="math inline">\((aD+E)(A)=aD(A)+E(A)\)</span> para toda matriz <span class="math inline">\(A\)</span>, entonces al fijar la fila <span class="math inline">\(i\)</span> de las matrices <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span>, considerando un escalar <span class="math inline">\(c\in K\)</span> y <span class="math inline">\(D\)</span> y <span class="math inline">\(E\)</span> son <span class="math inline">\(n\)</span>-lineales, se tiene que <span class="math display">\[\begin{array}{rl}
+(aD+E)(cA_{\ast i}+B_{\ast i})=&amp;aD(cA_{\ast i}+B_{\ast i})+E(cA_{\ast i}+B_{\ast i})\\
+=&amp;acD(A_{\ast i})+aD(B_{\ast i})+cE(A_{\ast i})+E(B_{\ast i})\\
+=&amp;c(aD(A_{\ast i})+E(A_{\ast i}))+(aD(B_{\ast i})+E(B_{\ast i}))\\
+=&amp;c(aD+E)(A_{\ast i})+(aD+E)(B_{\ast i})
+\end{array}.\]</span>
+</div>
+
+<p>El lema anterior nos permite asegurar que el conjunto de funciones <span class="math inline">\(n\)</span>-lineales es un subespacio del espacio de las funciones de <span class="math inline">\(\mathcal{M}_{n}\)</span>, el espacio de las matrices <span class="math inline">\(n\times n\)</span>, en el cuerpo <span class="math inline">\(K\)</span>.</p>
+
+<div class="example">
+<span id="exm:ejm65" class="example"><strong>Ejemplo 1.2  </strong></span>La función <span class="math inline">\(D\)</span> definida en el espacio de las matrices cuadradas de orden <span class="math inline">\(2\)</span>, como <span class="math inline">\(D(A)=A_{11}A_{22}-A_{12}A_{21}\)</span> es una función bilineal que es combinación lineal de las funciones bilineales <span class="math inline">\(D_{1}(A)=A_{11}A_{22}\)</span> y <span class="math inline">\(D_{2}(A)=A_{12}A_{21}\)</span>. En efecto <span class="math inline">\(D=D_{1}-D_{2}\)</span>. Es claro que la función <span class="math inline">\(D\)</span> es exactamente el determinante de matrices <span class="math inline">\(2\times 2\)</span>. Pero la función <span class="math inline">\(D\)</span> tiene mas propiedades que ser la combinación lineal de funciones bilineales: (1) <span class="math inline">\(D(I)=1\)</span>. (2) <span class="math inline">\(D(A)=0\)</span>, si las filas de <span class="math inline">\(A\)</span> son iguales. (3) <span class="math inline">\(D(B)=-D(A)\)</span> si <span class="math inline">\(B\)</span> se obtiene de intercambiar las filas de <span class="math inline">\(A\)</span>. En efecto, si <span class="math inline">\(B=e_{12}A\)</span> (<span class="math inline">\(B\)</span> se obtiene de intercambiar las filas <span class="math inline">\(1\)</span> y <span class="math inline">\(2\)</span> de <span class="math inline">\(A\)</span>), entoces <span class="math inline">\(B_{\ast 1}=A_{\ast 2}\)</span> y <span class="math inline">\(B_{\ast 2}=A_{\ast 1}\)</span>. As? <span class="math display">\[\begin{array}{rl}
+D(B)=&amp;B_{11}B_{22}-B_{12}B_{21}\\
+=&amp;A_{21}A_{21}-A_{22}A_{11}\\
+=&amp;-(A_{22}A_{11}-A_{21}A_{21})\\
+=&amp;-D(A)
+\end{array}\]</span>
+</div>
+
+
+<div class="definition">
+<p><span id="def:unnamed-chunk-6" class="definition"><strong>Definición 1.2  </strong></span>Sea <span class="math inline">\(D\)</span> una función n-lineal. Se dice que <span class="math inline">\(D\)</span> es <em>alternada</em> si se tiene que: (i) <span class="math inline">\(D(A)=0\)</span> cuando <span class="math inline">\(A\)</span> tiene dos filas iguales. (ii) <span class="math inline">\(D(B)=-D(A)\)</span> cuando <span class="math inline">\(B\)</span> se obtiene al aplicar una y solo una operaci?n de cambio de filas a <span class="math inline">\(A\)</span>.</p>
+</div>
+
+
+<div class="definition">
+<p><span id="def:unnamed-chunk-7" class="definition"><strong>Definición 1.3  </strong></span>Sea <span class="math inline">\(K\)</span> un anillo conmutativo con unidad y sea <span class="math inline">\(n\in\mathbb{N}\)</span>. Sea <span class="math inline">\(D\)</span> una función de <span class="math inline">\(\mathcal{M}_{n}\)</span> en <span class="math inline">\(K\)</span>. Decimos que <span class="math inline">\(D\)</span> es una <em>función determinante</em> si (i) es <span class="math inline">\(n\)</span>-lineal, (ii) es alternada y (iii) <span class="math inline">\(D(I)=0\)</span>.</p>
+</div>
+
+
+<div class="example">
+<span id="exm:unnamed-chunk-8" class="example"><strong>Ejemplo 1.3  </strong></span>La función definida en el ejemplo <a href="#exp:ejem65"><strong>??</strong></a> es una función determinante. Ya se vió que es <span class="math inline">\(2\)</span>-lineal. Es fácil ver que <span class="math inline">\(D(I)=1\)</span> para la matriz identidad <span class="math inline">\(2\times 2\)</span>. En efecto, <span class="math display">\[D\left(\begin{array}{cc}
+1&amp;0\\
+0&amp;1
+\end{array} \right) =1+0=1\]</span> Y es alternada, ya que <span class="math display">\[\begin{array}{rl}
+D\left(\begin{array}{cc}
+a&amp;b\\
+c&amp;d
+\end{array} \right)=&amp;ad-bc\\
+=&amp;-(cb-da)\\
+=&amp;-D\left(\begin{array}{cc}
+c&amp;d\\
+a&amp;b
+\end{array} \right)\\
+\end{array}
+\]</span>
+</div>
+
+
+<div class="lemma">
+<span id="lem:unnamed-chunk-9" class="lemma"><strong>Lema 1.2  </strong></span>Sea <span class="math inline">\(D\)</span> una función <span class="math inline">\(2\)</span>-lineal con la propiedad: si <span class="math inline">\(A\)</span> es una matriz <span class="math inline">\(2\times 2\)</span> con dos filas iguales, <span class="math inline">\(D(A)=0\)</span>. Entonces <span class="math inline">\(D\)</span> es alternada.
+</div>
+ 
+<div class="proof">
+ <span class="proof"><em>Demostración. </em></span> Sea <span class="math inline">\(B\)</span> una matriz que se obtiene de <span class="math inline">\(A\)</span> intercambiando filas. Sean <span class="math inline">\(A_{1\ast}\)</span> y <span class="math inline">\(A_{2\ast}\)</span> la primera y segunda fila de <span class="math inline">\(A\)</span> y <span class="math inline">\(B_{1\ast}\)</span> y <span class="math inline">\(B_{2\ast}\)</span> las respectivas filas de <span class="math inline">\(B\)</span>; note que <span class="math inline">\(B_{1\ast}=A_{2\ast}\)</span> y <span class="math inline">\(B_{2\ast}=A_{1\ast}\)</span>. Además <span class="math display">\[\begin{array}{rl}
+D(A+B)=&amp;D(A_{1\ast}+B_{1\ast},A_{2\ast}+B_{2\ast})\\
+=&amp;D(A_{1\ast}+A_{2\ast},A_{2\ast}+A_{1\ast})\\
+\end{array}.\]</span> Como <span class="math inline">\(D\)</span> es <span class="math inline">\(2\)</span>-lineal, se tiene que: <span class="math display">\[\begin{array}{rl}
+D(A+B)=&amp;D(A_{1\ast}+A_{2\ast},A_{2\ast}+A_{1\ast})\\
+=&amp;D(A_{1\ast},A_{2\ast}+A_{1\ast})+D(A_{2\ast},A_{2\ast}+A_{1\ast})\\
+=&amp;D(A_{1\ast},A_{1\ast})+D(A_{1\ast},A_{2\ast})+D(A_{2\ast},A_{1\ast})+D(A_{2\ast},A_{2\ast})\\
+=&amp;D(A_{1\ast},A_{2\ast})+D(A_{2\ast},A_{1\ast})
+\end{array}.\]</span> Por hipótesis, <span class="math inline">\(D(A+B)=0\)</span> y <span class="math inline">\(D(A_{1\ast},A_{1\ast})=D(A_{2\ast},A_{2\ast}=0)\)</span>, entonces <span class="math display">\[0=D(A_{1\ast},A_{2\ast})+D(A_{2\ast},A_{1\ast})\]</span> por lo tanto, <span class="math display">\[D(A_{1\ast},A_{2\ast})=-D(A_{2\ast},A_{1\ast}).\]</span>
+</div>
+
+
+<div class="lemma">
+<span id="lem:unnamed-chunk-11" class="lemma"><strong>Lema 1.3  </strong></span>Sea <span class="math inline">\(D\)</span> una función <span class="math inline">\(n\)</span>-lineal de las matrices <span class="math inline">\(n\times n\)</span> sobre <span class="math inline">\(K\)</span>. Supóngase que <span class="math inline">\(D\)</span> tiene la propiedad: si <span class="math inline">\(A\)</span> es una matriz <span class="math inline">\(n\times n\)</span> con dos filas adyacentes iguales, <span class="math inline">\(D(A)=0\)</span>. Entonces <span class="math inline">\(D\)</span> es alternada.
+</div>
+ 
+<div class="proof">
+<p> <span class="proof"><em>Demostración. </em></span> Sea <span class="math inline">\(B\)</span> una matriz que se obtiene de <span class="math inline">\(A\)</span> al intercambiar dos filas adyacentes. Por un razonamiento análogo al anterior se sigue que <span class="math inline">\(D\)</span> es alternada. Ahora, si <span class="math inline">\(B\)</span> es el resultado de alternar dos filas cuales quiera de <span class="math inline">\(A\)</span>, dig?áos <span class="math inline">\(1\leq i&lt;j\leq n\)</span>, podemos obetener <span class="math inline">\(B\)</span> por una sucesión de intercambio de filas adyacentes. Cambiaríamos la fila <span class="math inline">\(i\)</span> con la fila <span class="math inline">\(i+1\)</span>, luego la fila <span class="math inline">\(i+1\)</span> (donde yace la fila <span class="math inline">\(i\)</span> de <span class="math inline">\(A\)</span>) con la <span class="math inline">\(i+1\)</span> y así sucesivamente hasta alcanzar la posición <span class="math inline">\(j\)</span>-ésima; estas son <span class="math inline">\(j-i\)</span> operaciones. De igual forma <subimos> la fila <span class="math inline">\(j\)</span> de <span class="math inline">\(A\)</span> (que ahora yace en la fila <span class="math inline">\(j-1\)</span>) aplicando intercambio de filas adyacentes, estas son <span class="math inline">\(j-i-1\)</span> operaciones elementales. De este modo, la operación <span class="math inline">\(e_{ij}(A)\)</span> es igual a aplicar <span class="math inline">\((j-i)+(j-i+1)=2(j-i)+1\)</span> operaciones de intercambio de filas adyacentes, para las cuales se tiene la propiedad de <span class="math inline">\(D(\hat{A})=-D(A)\)</span>. Así <span class="math inline">\(D(B)=(-1)^{2k-1}D(A)=-D(A)\)</span>. Ahora, supongamos que <span class="math inline">\(A\)</span> es una matriz con dos filas iguales, digamos <span class="math inline">\(1\leq i&lt;j\leq n\)</span>. Si son adyacentes, es decir, <span class="math inline">\(j=i+1\)</span>, por hipótesis, <span class="math inline">\(D(A)=0\)</span>, si <span class="math inline">\(j&gt;i+1\)</span>, intercambiando la fila <span class="math inline">\(A_{j\ast}\)</span> con la fila <span class="math inline">\(A_{i+1\ast}\)</span> obtenmos una matriz <span class="math inline">\(B\)</span> tal que <span class="math inline">\(D(B)=0\)</span>, entonces <span class="math inline">\(D(A)=-D(B)=0\)</span>.</p>
+</div>
+
+
+<div class="definition">
+<p><span id="def:unnamed-chunk-13" class="definition"><strong>Definición 1.4  </strong></span>Sea <span class="math inline">\(A\)</span> una matriz <span class="math inline">\(n\times n\)</span> (<span class="math inline">\(n&gt;1\)</span>) sobre <span class="math inline">\(\mathbb{K}\)</span>. Denotaremos por <span class="math inline">\(A(i|j)\)</span> a la matriz <span class="math inline">\((n-1)\times (n-1)\)</span> que se obtiene eliminando la <span class="math inline">\(i\)</span>-ésima fila y la <span class="math inline">\(j\)</span>-ésima columna de <span class="math inline">\(A\)</span>. Si <span class="math inline">\(D\)</span> es una función <span class="math inline">\((n-1)\)</span>-lineal, definimos <em><span class="math inline">\(D_{ij}=D(A(i|j))\)</span></em>.</p>
+</div>
+
+
+<div class="theorem">
+<span id="thm:unnamed-chunk-14" class="theorem"><strong>Teorema 1.1  </strong></span>Sea <span class="math inline">\(D\)</span> una funci?n <span class="math inline">\((n-1)\)</span>-lineal alternada de las matrices <span class="math inline">\(n-1\times n-1\)</span> sobre <span class="math inline">\(\mathbb{K}\)</span>. Para todo <span class="math inline">\(1\leq j\leq n\)</span>, la función <span class="math display">\[E_{j}(A)=\sum_{i=1}^{n} (-1)^{i+j}A_{ij}D_{ij}(A)\]</span> es una función <span class="math inline">\(n\)</span>-lineal de las matrices <span class="math inline">\(n\times n\)</span>
+</div>
+
+</div>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-78759535-1', 'auto');
+ga('send', 'pageview');  
+</script>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/synergyvision/Algebra/edit/master/bookdown/%s",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "none"
+},
+"search": false
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
