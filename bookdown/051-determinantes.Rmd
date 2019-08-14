@@ -144,5 +144,5 @@ Sea $A$ una matriz $n\times n$ ($n>1$) sobre $\mathbb{K}$. Denotaremos por $A(i|
 ```
 
 ```{theorem}
-Sea $D$ una funci?n $(n-1)$-lineal alternada de las matrices $n-1\times n-1$ sobre $\mathbb{K}$. Para todo $1\leq j\leq n$, la función $$E_{j}(A)=\sum_{i=1}^{n} (-1)^{i+j}A_{ij}D_{ij}(A)$$ es una función $n$-lineal de las matrices $n\times n$
+Sea $D$ una funci?n $(n-1)$-lineal alternada de las matrices $n-1\times n-1$ sobre $\mathbb{K}$. Para todo $1\leq j\leq n$, la función $$E_{j}(A)=\sum_{i=1}^{n} (-1)^{i+j}A_{ij}D_{ij}(A)$$ es una función $n$-lineal de las matrices $n\times n$. Si $D$ es una función determinante, también lo es $E_{j}$.
 ```
