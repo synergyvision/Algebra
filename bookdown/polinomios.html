@@ -5,42 +5,40 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Capítulo 5 Polinomios | Álgebra Lineal</title>
-  <meta name="description" content="Capítulo 5 Polinomios | Álgebra Lineal">
+  <title></title>
+  <meta name="description" content="">
   <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
-  <meta property="og:title" content="Capítulo 5 Polinomios | Álgebra Lineal" />
+  <meta property="og:title" content="" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="http://synergy.vision/Algebra/" />
-  <meta property="og:image" content="http://synergy.vision/Algebra/images/cover.png" />
   
-  <meta name="github-repo" content="synergyvision/Algebra/" />
+  
+  
+  
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Capítulo 5 Polinomios | Álgebra Lineal" />
+  <meta name="twitter:title" content="" />
   
   
-  <meta name="twitter:image" content="http://synergy.vision/Algebra/images/cover.png" />
-
-<meta name="author" content="Synergy Vision">
+  
 
 
-<meta name="date" content="2019-08-12">
+
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="espacios-vectoriales.html">
-<link rel="next" href="matrices-1.html">
-<script src="libs/jquery/jquery.min.js"></script>
-<link href="libs/gitbook/css/style.css" rel="stylesheet" />
-<link href="libs/gitbook/css/plugin-table.css" rel="stylesheet" />
-<link href="libs/gitbook/css/plugin-bookdown.css" rel="stylesheet" />
-<link href="libs/gitbook/css/plugin-highlight.css" rel="stylesheet" />
-<link href="libs/gitbook/css/plugin-search.css" rel="stylesheet" />
-<link href="libs/gitbook/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
 
 
 
@@ -51,43 +49,6 @@
 <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
 
 
-<style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-</style>
 
 <link rel="stylesheet" href="css\style.css" type="text/css" />
 </head>
@@ -105,75 +66,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="./"><img src="images/logovision-black.png" width="160"></img></a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefacio</a><ul>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#por-que-leer-este-libro"><i class="fa fa-check"></i>¿Por qué leer este libro?</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#estructura-del-libro"><i class="fa fa-check"></i>Estructura del libro</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#informacion-sobre-los-programas-y-convenciones"><i class="fa fa-check"></i>Información sobre los programas y convenciones</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#practicas-interactivas-con-r"><i class="fa fa-check"></i>Prácticas interactivas con R</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#agradecimientos"><i class="fa fa-check"></i>Agradecimientos</a></li>
+<li class="chapter" data-level="1" data-path=""><a href="#polinomios"><i class="fa fa-check"></i><b>1</b> Polinomios</a><ul>
+<li class="chapter" data-level="1.1" data-path=""><a href="#ejercicios"><i class="fa fa-check"></i><b>1.1</b> ejercicios</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="acerca-del-autor.html"><a href="acerca-del-autor.html"><i class="fa fa-check"></i>Acerca del Autor</a></li>
-<li class="chapter" data-level="1" data-path="introduccion.html"><a href="introduccion.html"><i class="fa fa-check"></i><b>1</b> Introducción</a></li>
-<li class="chapter" data-level="2" data-path="estructuras-algebraicas.html"><a href="estructuras-algebraicas.html"><i class="fa fa-check"></i><b>2</b> Estructuras algebraicas</a><ul>
-<li class="chapter" data-level="2.1" data-path="estructuras-algebraicas.html"><a href="estructuras-algebraicas.html#conjuntos"><i class="fa fa-check"></i><b>2.1</b> Conjuntos</a><ul>
-<li class="chapter" data-level="2.1.1" data-path="estructuras-algebraicas.html"><a href="estructuras-algebraicas.html#definiciones-iniciales"><i class="fa fa-check"></i><b>2.1.1</b> Definiciones Iniciales</a></li>
-<li class="chapter" data-level="2.1.2" data-path="estructuras-algebraicas.html"><a href="estructuras-algebraicas.html#operaciones-entre-conjuntos"><i class="fa fa-check"></i><b>2.1.2</b> Operaciones entre conjuntos</a></li>
-<li class="chapter" data-level="2.1.3" data-path="estructuras-algebraicas.html"><a href="estructuras-algebraicas.html#producto-cartesiano"><i class="fa fa-check"></i><b>2.1.3</b> Producto cartesiano</a></li>
-</ul></li>
-<li class="chapter" data-level="2.2" data-path="estructuras-algebraicas.html"><a href="estructuras-algebraicas.html#relaciones-de-equivalencia"><i class="fa fa-check"></i><b>2.2</b> Relaciones de Equivalencia</a></li>
-<li class="chapter" data-level="2.3" data-path="estructuras-algebraicas.html"><a href="estructuras-algebraicas.html#funciones"><i class="fa fa-check"></i><b>2.3</b> Funciones</a></li>
-<li class="chapter" data-level="2.4" data-path="estructuras-algebraicas.html"><a href="estructuras-algebraicas.html#cardinales"><i class="fa fa-check"></i><b>2.4</b> Cardinales</a><ul>
-<li class="chapter" data-level="2.4.1" data-path="estructuras-algebraicas.html"><a href="estructuras-algebraicas.html#ejercicios"><i class="fa fa-check"></i><b>2.4.1</b> Ejercicios</a></li>
-</ul></li>
-<li class="chapter" data-level="2.5" data-path="estructuras-algebraicas.html"><a href="estructuras-algebraicas.html#teoria-de-grupos"><i class="fa fa-check"></i><b>2.5</b> Teoría de Grupos</a><ul>
-<li class="chapter" data-level="2.5.1" data-path="estructuras-algebraicas.html"><a href="estructuras-algebraicas.html#ejercicios-1"><i class="fa fa-check"></i><b>2.5.1</b> Ejercicios</a></li>
-</ul></li>
-<li class="chapter" data-level="2.6" data-path="estructuras-algebraicas.html"><a href="estructuras-algebraicas.html#anillos"><i class="fa fa-check"></i><b>2.6</b> Anillos</a><ul>
-<li class="chapter" data-level="2.6.1" data-path="estructuras-algebraicas.html"><a href="estructuras-algebraicas.html#ejercicios-2"><i class="fa fa-check"></i><b>2.6.1</b> Ejercicios</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="3" data-path="vectores.html"><a href="vectores.html"><i class="fa fa-check"></i><b>3</b> Vectores</a><ul>
-<li class="chapter" data-level="3.1" data-path="vectores.html"><a href="vectores.html#representacion-geometrica"><i class="fa fa-check"></i><b>3.1</b> Representación geométrica</a></li>
-<li class="chapter" data-level="3.2" data-path="vectores.html"><a href="vectores.html#operaciones-entre-vectores"><i class="fa fa-check"></i><b>3.2</b> Operaciones entre vectores</a><ul>
-<li class="chapter" data-level="3.2.1" data-path="vectores.html"><a href="vectores.html#producto-escalar-y-producto-vectorial"><i class="fa fa-check"></i><b>3.2.1</b> Producto escalar y producto vectorial</a></li>
-</ul></li>
-<li class="chapter" data-level="3.3" data-path="vectores.html"><a href="vectores.html#rectas-y-planos"><i class="fa fa-check"></i><b>3.3</b> Rectas y Planos</a><ul>
-<li class="chapter" data-level="3.3.1" data-path="vectores.html"><a href="vectores.html#rectas-en-el-espacio"><i class="fa fa-check"></i><b>3.3.1</b> Rectas en el espacio</a></li>
-<li class="chapter" data-level="3.3.2" data-path="vectores.html"><a href="vectores.html#rectas-en-el-plano"><i class="fa fa-check"></i><b>3.3.2</b> Rectas en el plano</a></li>
-<li class="chapter" data-level="3.3.3" data-path="vectores.html"><a href="vectores.html#planos"><i class="fa fa-check"></i><b>3.3.3</b> Planos</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="4" data-path="espacios-vectoriales.html"><a href="espacios-vectoriales.html"><i class="fa fa-check"></i><b>4</b> Espacios vectoriales</a><ul>
-<li class="chapter" data-level="4.1" data-path="espacios-vectoriales.html"><a href="espacios-vectoriales.html#ecuaciones-lineales"><i class="fa fa-check"></i><b>4.1</b> Ecuaciones lineales</a></li>
-<li class="chapter" data-level="4.2" data-path="espacios-vectoriales.html"><a href="espacios-vectoriales.html#matrices"><i class="fa fa-check"></i><b>4.2</b> Matrices</a></li>
-<li class="chapter" data-level="4.3" data-path="espacios-vectoriales.html"><a href="espacios-vectoriales.html#ecuaciones-lineales-y-matrices"><i class="fa fa-check"></i><b>4.3</b> Ecuaciones lineales y matrices</a></li>
-<li class="chapter" data-level="4.4" data-path="espacios-vectoriales.html"><a href="espacios-vectoriales.html#teoria-de-espacios-vectoriales"><i class="fa fa-check"></i><b>4.4</b> Teoría de espacios vectoriales</a><ul>
-<li class="chapter" data-level="4.4.1" data-path="espacios-vectoriales.html"><a href="espacios-vectoriales.html#espacio-cociente"><i class="fa fa-check"></i><b>4.4.1</b> Espacio cociente</a></li>
-</ul></li>
-<li class="chapter" data-level="4.5" data-path="espacios-vectoriales.html"><a href="espacios-vectoriales.html#ejercicios-3"><i class="fa fa-check"></i><b>4.5</b> Ejercicios</a></li>
-</ul></li>
-<li class="chapter" data-level="5" data-path="polinomios.html"><a href="polinomios.html"><i class="fa fa-check"></i><b>5</b> Polinomios</a><ul>
-<li class="chapter" data-level="5.1" data-path="polinomios.html"><a href="polinomios.html#ejercicios-4"><i class="fa fa-check"></i><b>5.1</b> ejercicios</a></li>
-</ul></li>
-<li class="chapter" data-level="6" data-path="matrices-1.html"><a href="matrices-1.html"><i class="fa fa-check"></i><b>6</b> Matrices</a></li>
-<li class="chapter" data-level="7" data-path="autovalores-y-autovectores.html"><a href="autovalores-y-autovectores.html"><i class="fa fa-check"></i><b>7</b> Autovalores y autovectores</a></li>
-<li class="chapter" data-level="8" data-path="calculo-en-vectores-y-matrices.html"><a href="calculo-en-vectores-y-matrices.html"><i class="fa fa-check"></i><b>8</b> Cálculo en vectores y matrices</a></li>
-<li class="chapter" data-level="9" data-path="transformaciones-lineales.html"><a href="transformaciones-lineales.html"><i class="fa fa-check"></i><b>9</b> Transformaciones lineales</a><ul>
-<li class="chapter" data-level="9.1" data-path="transformaciones-lineales.html"><a href="transformaciones-lineales.html#bases-ordenadas"><i class="fa fa-check"></i><b>9.1</b> Bases ordenadas</a></li>
-<li class="chapter" data-level="9.2" data-path="transformaciones-lineales.html"><a href="transformaciones-lineales.html#matriz-de-una-transformacion"><i class="fa fa-check"></i><b>9.2</b> Matriz de una transformación</a></li>
-<li class="chapter" data-level="9.3" data-path="transformaciones-lineales.html"><a href="transformaciones-lineales.html#transformaciones-invertibles"><i class="fa fa-check"></i><b>9.3</b> Transformaciones invertibles</a></li>
-<li class="chapter" data-level="9.4" data-path="transformaciones-lineales.html"><a href="transformaciones-lineales.html#funcionales-lineales"><i class="fa fa-check"></i><b>9.4</b> Funcionales lineales</a></li>
-<li class="chapter" data-level="9.5" data-path="transformaciones-lineales.html"><a href="transformaciones-lineales.html#el-doble-dual"><i class="fa fa-check"></i><b>9.5</b> El doble dual</a></li>
-<li class="chapter" data-level="9.6" data-path="transformaciones-lineales.html"><a href="transformaciones-lineales.html#ejercicios-5"><i class="fa fa-check"></i><b>9.6</b> Ejercicios</a></li>
-</ul></li>
-<li class="chapter" data-level="10" data-path="producto-escalar.html"><a href="producto-escalar.html"><i class="fa fa-check"></i><b>10</b> Producto escalar</a></li>
-<li class="appendix"><span><b>Apéndice</b></span></li>
-<li class="chapter" data-level="A" data-path="software-tools.html"><a href="software-tools.html"><i class="fa fa-check"></i><b>A</b> Software Tools</a><ul>
-<li class="chapter" data-level="A.1" data-path="software-tools.html"><a href="software-tools.html#r-and-r-packages"><i class="fa fa-check"></i><b>A.1</b> R and R packages</a></li>
-<li class="chapter" data-level="A.2" data-path="software-tools.html"><a href="software-tools.html#pandoc"><i class="fa fa-check"></i><b>A.2</b> Pandoc</a></li>
-<li class="chapter" data-level="A.3" data-path="software-tools.html"><a href="software-tools.html#latex"><i class="fa fa-check"></i><b>A.3</b> LaTeX</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
 <li class="divider"></li>
 <li><a href="https://bookdown.org" target="blank">Publicado con bookdown</a></li>
 
@@ -186,7 +81,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Álgebra Lineal</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
           </h1>
         </div>
 
@@ -194,14 +89,16 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
+<!--bookdown:title:end-->
+<!--bookdown:title:start-->
 <div id="polinomios" class="section level1">
-<h1><span class="header-section-number">Capítulo 5</span> Polinomios</h1>
+<h1><span class="header-section-number">Capítulo 1</span> Polinomios</h1>
 <p>En este capítulo estudiaremos una estructura especial de objetos: <em>las álgebras</em>; avocándonos especialmente al estudio de un ejemplo muy importante, <em>los polinomios</em> y sus propiedades.</p>
 <p>Ya vimos que la definición de espacio vectorial <span class="math inline">\(V\)</span> sobre un cuerpo <span class="math inline">\(\mathbb{F}\)</span> lleva intrínseca la definición de dos operaciones, la suma de vectores, definida en <span class="math inline">\(V\times V\)</span> a <span class="math inline">\(V\)</span>, y el producto por un escalar, definda de <span class="math inline">\(\mathbb{F}\times V\)</span> en <span class="math inline">\(V\)</span>. Podemos definir una operación distinta a la suma de vectores, en <span class="math inline">\(V\times V\)</span> y que el resultado sea un vector. A dicha operación la llamaremos <em>multiplicación de vectores</em> y la denotaremos por <span class="math inline">\(u\cdot v\)</span> o simplemente <span class="math inline">\(uv\)</span>.</p>
 <p>El producto de matrices es un ejemplo de multiplicación de vectores.</p>
 
 <div class="definition">
-<p><span id="def:unnamed-chunk-322" class="definition"><strong>Definición 5.1  </strong></span>Un <em>algebra lineal sobre un cuerpo</em> <span class="math inline">\(\mathbb{F}\)</span> es una terna <span class="math inline">\((\mathcal{A},+,\cdot)\)</span>, en la que <span class="math inline">\((\mathcal{A},+)\)</span> un espacio vectorial sobre <span class="math inline">\(\mathbb{F}\)</span> y <span class="math inline">\(\cdot\)</span> es la operación multiplicación de vectores, de modo que:</p>
+<p><span id="def:unnamed-chunk-1" class="definition"><strong>Definición 1.1  </strong></span>Un <em>algebra lineal sobre un cuerpo</em> <span class="math inline">\(\mathbb{F}\)</span> es una terna <span class="math inline">\((\mathcal{A},+,\cdot)\)</span>, en la que <span class="math inline">\((\mathcal{A},+)\)</span> un espacio vectorial sobre <span class="math inline">\(\mathbb{F}\)</span> y <span class="math inline">\(\cdot\)</span> es la operación multiplicación de vectores, de modo que:</p>
 <ol style="list-style-type: lower-roman">
 <li><p>la multiplicación es asociativa, es decir, <span class="math inline">\(u(vw)=(uv)w\)</span>,</p></li>
 <li><p>la multiplicación es distributiva respectoa la suma, esto es, <span class="math inline">\(u(v+w)=uv+uw\)</span> y <span class="math inline">\((u+v)w=uw+vw\)</span>,</p></li>
@@ -217,17 +114,17 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-324" class="example"><strong>Ejemplo 5.1  </strong></span>El conjunto de las matrices <span class="math inline">\(n\times n\)</span> sobre un cuerpo <span class="math inline">\(\mathbb{F}\)</span> con las operaciones usuales, es un álgebra lineal con unidad no es conmutativa salvo que <span class="math inline">\(n=1\)</span>, es ese caso las matrices no son mas que el mismo cuerpo de escalares y entonces es un álgebra conmutativa, obviamente.</p>
+<p><span id="exm:unnamed-chunk-3" class="example"><strong>Ejemplo 1.1  </strong></span>El conjunto de las matrices <span class="math inline">\(n\times n\)</span> sobre un cuerpo <span class="math inline">\(\mathbb{F}\)</span> con las operaciones usuales, es un álgebra lineal con unidad no es conmutativa salvo que <span class="math inline">\(n=1\)</span>, es ese caso las matrices no son mas que el mismo cuerpo de escalares y entonces es un álgebra conmutativa, obviamente.</p>
 </div>
 
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-325" class="example"><strong>Ejemplo 5.2  </strong></span>El espacio de los operadores lineales sobre un espacio vectorial <span class="math inline">\(V\)</span>, <span class="math inline">\(L(V,V)\)</span> con la composición como multiplicación de vectores, es un álgebra lineal con unidad. Es conmutativa si y solo si el espacio es de dimensión uno.</p>
+<p><span id="exm:unnamed-chunk-4" class="example"><strong>Ejemplo 1.2  </strong></span>El espacio de los operadores lineales sobre un espacio vectorial <span class="math inline">\(V\)</span>, <span class="math inline">\(L(V,V)\)</span> con la composición como multiplicación de vectores, es un álgebra lineal con unidad. Es conmutativa si y solo si el espacio es de dimensión uno.</p>
 </div>
 
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-326" class="example"><strong>Ejemplo 5.3  </strong></span>El <em>álgebra de las series formales de potencias</em>. Consideremos el espacio vectorial de las funciones del conjunto de los enteros no negativos <span class="math inline">\(S=\{0,1,2,\cdots\}\)</span> a un cuerpo <span class="math inline">\(\mathbb{F}\)</span>, es decir <span class="math inline">\(\mathbb{F}^{\infty}=\{f:S\longrightarrow \mathbb{F}: f \mbox{ es función } \}\)</span>. Entonces cada vector <span class="math inline">\(f\)</span> de <span class="math inline">\(\mathbb{F}^{\infty}\)</span> es una sucesión infinita de elementos de <span class="math inline">\(\mathbb{F}\)</span>, <span class="math inline">\(f=(f_{0},f_{1},\cdots)\)</span> (donde cada coordenada <span class="math inline">\(i\)</span> es la imagen de <span class="math inline">\(i\)</span> por la función <span class="math inline">\(f\)</span>, es decir, <span class="math inline">\(f_{i}=f(i)\)</span>). Se tiene que <span class="math inline">\(\lambda f +g=\lambda(f_{0},f_{1},\cdots )+(g_{0},g_{1},\cdots )=(\lambda f_{0}+g_{0}, \lambda f_{1}+g_{1},\cdots )\)</span>, donde <span class="math inline">\(f=(f_{0},f_{1},\cdots)\)</span>, <span class="math inline">\(g=(g_{0},g_{1},\cdots)\)</span> y <span class="math inline">\(\lambda\in\mathbb{F}\)</span>. Definimos la operación multiplicación de vectores así: dados <span class="math inline">\(f=(f_{0},f_{1},\cdots)\)</span> y <span class="math inline">\(g=(g_{0},g_{1},\cdots)\)</span> <span class="math display">\[(fg)_{n}=\sum_{i=0}^{n} f_{i}g_{n-i} \mbox{ para } n=0,1,2,\cdots\]</span> es decir, <span class="math display">\[fg=(f_{0}g_{0}, f_{0}g_{1}+f_{1}g_{0},f_{0}g_{2}+f_{1}g_{1}+f_{2}g_{1},\cdots).\]</span> Además, es fácil ver que esta operación es conmutativa <span class="math display">\[(fg)_{n}=\sum_{i=0}^{n} f_{i}g_{n-i} = \sum_{i=0}^{n} g_{i}f_{n-i}=(gf)_{n} \mbox{ para } n=0,1,2,\cdots\]</span> Si <span class="math inline">\(h\)</span> es otro vector de <span class="math inline">\(\mathbb{F}^{\infty}\)</span>, entonces para <span class="math inline">\(n=1,2,\cdots\)</span>, se tiene que: <span class="math display">\[\begin{array}{rl}
+<p><span id="exm:unnamed-chunk-5" class="example"><strong>Ejemplo 1.3  </strong></span>El <em>álgebra de las series formales de potencias</em>. Consideremos el espacio vectorial de las funciones del conjunto de los enteros no negativos <span class="math inline">\(S=\{0,1,2,\cdots\}\)</span> a un cuerpo <span class="math inline">\(\mathbb{F}\)</span>, es decir <span class="math inline">\(\mathbb{F}^{\infty}=\{f:S\longrightarrow \mathbb{F}: f \mbox{ es función } \}\)</span>. Entonces cada vector <span class="math inline">\(f\)</span> de <span class="math inline">\(\mathbb{F}^{\infty}\)</span> es una sucesión infinita de elementos de <span class="math inline">\(\mathbb{F}\)</span>, <span class="math inline">\(f=(f_{0},f_{1},\cdots)\)</span> (donde cada coordenada <span class="math inline">\(i\)</span> es la imagen de <span class="math inline">\(i\)</span> por la función <span class="math inline">\(f\)</span>, es decir, <span class="math inline">\(f_{i}=f(i)\)</span>). Se tiene que <span class="math inline">\(\lambda f +g=\lambda(f_{0},f_{1},\cdots )+(g_{0},g_{1},\cdots )=(\lambda f_{0}+g_{0}, \lambda f_{1}+g_{1},\cdots )\)</span>, donde <span class="math inline">\(f=(f_{0},f_{1},\cdots)\)</span>, <span class="math inline">\(g=(g_{0},g_{1},\cdots)\)</span> y <span class="math inline">\(\lambda\in\mathbb{F}\)</span>. Definimos la operación multiplicación de vectores así: dados <span class="math inline">\(f=(f_{0},f_{1},\cdots)\)</span> y <span class="math inline">\(g=(g_{0},g_{1},\cdots)\)</span> <span class="math display">\[(fg)_{n}=\sum_{i=0}^{n} f_{i}g_{n-i} \mbox{ para } n=0,1,2,\cdots\]</span> es decir, <span class="math display">\[fg=(f_{0}g_{0}, f_{0}g_{1}+f_{1}g_{0},f_{0}g_{2}+f_{1}g_{1}+f_{2}g_{1},\cdots).\]</span> Además, es fácil ver que esta operación es conmutativa <span class="math display">\[(fg)_{n}=\sum_{i=0}^{n} f_{i}g_{n-i} = \sum_{i=0}^{n} g_{i}f_{n-i}=(gf)_{n} \mbox{ para } n=0,1,2,\cdots\]</span> Si <span class="math inline">\(h\)</span> es otro vector de <span class="math inline">\(\mathbb{F}^{\infty}\)</span>, entonces para <span class="math inline">\(n=1,2,\cdots\)</span>, se tiene que: <span class="math display">\[\begin{array}{rl}
 [(fg)h]_{n}=&amp;\sum_{i=0}^{n}(fg)_{i}h_{n-i}\\
 &amp;\sum_{i=0}^{n}(\sum_{j=0}^{i}f_{j}g_{i-j})h_{n-i}\\
 &amp;\sum_{i=0}^{n}\sum_{j=0}^{i}f_{j}g_{i-j}h_{n-i}\\
@@ -240,7 +137,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 
 <div class="definition">
-<p><span id="def:unnamed-chunk-327" class="definition"><strong>Definición 5.2  </strong></span>Sea <span class="math inline">\(\mathbb{F}[x]\)</span> el espacio vectorial generado por los vectores potencia de <span class="math inline">\(x\)</span>, es decir, $[x]=1,x,x<sup>{2},x</sup>{3},$. Un elemento de <span class="math inline">\(\mathbb{F}[x]\)</span> se llamará <em>polinomio sobre</em> <span class="math inline">\(\mathbb{F}\)</span>.</p>
+<p><span id="def:unnamed-chunk-6" class="definition"><strong>Definición 1.2  </strong></span>Sea <span class="math inline">\(\mathbb{F}[x]\)</span> el espacio vectorial generado por los vectores potencia de <span class="math inline">\(x\)</span>, es decir, $[x]=1,x,x<sup>{2},x</sup>{3},$. Un elemento de <span class="math inline">\(\mathbb{F}[x]\)</span> se llamará <em>polinomio sobre</em> <span class="math inline">\(\mathbb{F}\)</span>.</p>
 </div>
 
 <p>Por definición <span class="math inline">\(\mathbb{F}[x]\)</span> es un subespacio de <span class="math inline">\(\mathbb{F}[{\infty}]\)</span>. Además se tiene que <span class="math inline">\(f\in\mathbb{F}^{\infty}\)</span> no nulo, es un polinomio si y solo si existe un número entero <span class="math inline">\(n\geq0\)</span> tal que <span class="math inline">\(f_{n}\neq 0\)</span> y <span class="math inline">\(f_{k}=0\)</span> para todo <span class="math inline">\(k&gt;n\)</span>; llamaremos <em>grado</em> de <span class="math inline">\(f\)</span> a este entero y se denotará por <span class="math inline">\(\mbox{grd } f\)</span>. No se le asignará ningún grado al polinomio <span class="math inline">\(0\)</span>. Es decir, si <span class="math inline">\(f\)</span> es un polinomio no nulo de grado <span class="math inline">\(n\)</span>, <span class="math inline">\(f=f_{0}x^{0}+f_{1}x^{1}+\cdots+f_{n}x^{n}\)</span> con <span class="math inline">\(f_{n}\neq 0\)</span>. Se llamarán <em>coeficientes</em> a los escalares <span class="math inline">\(f_{0},f_{1},\cdots, f_{n}\)</span>, además se dirá que <span class="math inline">\(f\)</span> es un polinomio con coeficientes <span class="math inline">\(\mathbb{F}\)</span>. Se llamarán <em>polinomios escalares</em> a los polinomios de la forma <span class="math inline">\(cx^{0}\)</span> y se escribirá <span class="math inline">\(c\)</span> en lugar de <span class="math inline">\(cx^{0}\)</span>. Un polinomio no nulo de grado <span class="math inline">\(n\)</span> se llamará <em>mónico</em> si <span class="math inline">\(f_{n}=1\)</span>.</p>
@@ -248,7 +145,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>Veamos que el conjunto de los polinomios forman un álgebra.</p>
 
 <div class="theorem">
-<p><span id="thm:unnamed-chunk-328" class="theorem"><strong>Teorema 5.1  </strong></span>Sean <span class="math inline">\(f\)</span> y <span class="math inline">\(g\)</span> polinomios no nulos sobre <span class="math inline">\(\mathbb{F}\)</span>, entonces:</p>
+<p><span id="thm:unnamed-chunk-7" class="theorem"><strong>Teorema 1.1  </strong></span>Sean <span class="math inline">\(f\)</span> y <span class="math inline">\(g\)</span> polinomios no nulos sobre <span class="math inline">\(\mathbb{F}\)</span>, entonces:</p>
 <p>(i.) <span class="math inline">\(fg\)</span> es un polinomio no nulo.</p>
 <p>(ii.) <span class="math inline">\(\mbox{grd }f=\mbox{grd }f + \mbox{grd }g\)</span>.</p>
 <p>(iii.) <span class="math inline">\(fg\)</span> es polinomio mónico si y solo si <span class="math inline">\(f\)</span> y <span class="math inline">\(g\)</span> son polinomios mónicos.</p>
@@ -263,7 +160,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 
 <div class="corollary">
-<p><span id="cor:unnamed-chunk-330" class="corollary"><strong>Corolario 5.1  </strong></span>El conjunto de los polinomios sobre el cuerpo <span class="math inline">\(\mathbb{F}\)</span> junto con las operaciones de suma y multiplicación de polinomios, forman un álgebra lineal conmutativa con unidad sobre <span class="math inline">\(\mathbb{F}\)</span>.</p>
+<p><span id="cor:unnamed-chunk-9" class="corollary"><strong>Corolario 1.1  </strong></span>El conjunto de los polinomios sobre el cuerpo <span class="math inline">\(\mathbb{F}\)</span> junto con las operaciones de suma y multiplicación de polinomios, forman un álgebra lineal conmutativa con unidad sobre <span class="math inline">\(\mathbb{F}\)</span>.</p>
 </div>
 
 
@@ -273,7 +170,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 
 <div class="corollary">
-<p><span id="cor:unnamed-chunk-332" class="corollary"><strong>Corolario 5.2  </strong></span>Sean <span class="math inline">\(f, g\)</span> y <span class="math inline">\(h\)</span> polinomios sobre el cuerpo <span class="math inline">\(\mathbb{F}\)</span> con <span class="math inline">\(f\neq 0\)</span>. Si <span class="math inline">\(fg=fh\)</span>, entonces <span class="math inline">\(g=h\)</span>.</p>
+<p><span id="cor:unnamed-chunk-11" class="corollary"><strong>Corolario 1.2  </strong></span>Sean <span class="math inline">\(f, g\)</span> y <span class="math inline">\(h\)</span> polinomios sobre el cuerpo <span class="math inline">\(\mathbb{F}\)</span> con <span class="math inline">\(f\neq 0\)</span>. Si <span class="math inline">\(fg=fh\)</span>, entonces <span class="math inline">\(g=h\)</span>.</p>
 </div>
 
 
@@ -288,12 +185,12 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 
 <div class="definition">
-<p><span id="def:unnamed-chunk-335" class="definition"><strong>Definición 5.3  </strong></span>Sea <span class="math inline">\(\mathcal{A}\)</span> un álgebra lineal con unidad sobre <span class="math inline">\(\mathbb{F}\)</span>. Se indicará la unidad de <span class="math inline">\(\mathcal{A}\)</span> por <span class="math inline">\(1\)</span> y se conviene que <span class="math inline">\(\alpha^{0}=1\)</span> para todo <span class="math inline">\(\alpha\in\mathcal{A}\)</span>. Entonces a cada polinomio <span class="math inline">\(f=\sum_{i=0}^{n} f_{i}x^{i}\)</span> sobre <span class="math inline">\(\mathbb{F}\)</span> y cada <span class="math inline">\(\alpha\in\mathcal{A}\)</span> se asocia un elemento de <span class="math inline">\(f(\alpha)\in\mathcal{A}\)</span>, de la forma: <span class="math display">\[f(\alpha)=\sum_{i=0}^{n}f_{i}\alpha^{i}.\]</span></p>
+<p><span id="def:unnamed-chunk-14" class="definition"><strong>Definición 1.3  </strong></span>Sea <span class="math inline">\(\mathcal{A}\)</span> un álgebra lineal con unidad sobre <span class="math inline">\(\mathbb{F}\)</span>. Se indicará la unidad de <span class="math inline">\(\mathcal{A}\)</span> por <span class="math inline">\(1\)</span> y se conviene que <span class="math inline">\(\alpha^{0}=1\)</span> para todo <span class="math inline">\(\alpha\in\mathcal{A}\)</span>. Entonces a cada polinomio <span class="math inline">\(f=\sum_{i=0}^{n} f_{i}x^{i}\)</span> sobre <span class="math inline">\(\mathbb{F}\)</span> y cada <span class="math inline">\(\alpha\in\mathcal{A}\)</span> se asocia un elemento de <span class="math inline">\(f(\alpha)\in\mathcal{A}\)</span>, de la forma: <span class="math display">\[f(\alpha)=\sum_{i=0}^{n}f_{i}\alpha^{i}.\]</span></p>
 </div>
 
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-336" class="example"><strong>Ejemplo 5.4  </strong></span>Sea <span class="math inline">\(\mathbb{C}\)</span> el cuerpo de los números complejos y sea <span class="math inline">\(f=x^{2}+1\)</span>.</p>
+<p><span id="exm:unnamed-chunk-15" class="example"><strong>Ejemplo 1.4  </strong></span>Sea <span class="math inline">\(\mathbb{C}\)</span> el cuerpo de los números complejos y sea <span class="math inline">\(f=x^{2}+1\)</span>.</p>
 <ol style="list-style-type: lower-alpha">
 <li>Si <span class="math inline">\(\mathcal{A}=\mathbb{C}\)</span>. Sea <span class="math inline">\(z\in\mathbb{C}\)</span>, entonces <span class="math inline">\(f(z)=z^{2}+1\)</span>, en particular <span class="math inline">\(f(3)=10\)</span> y <span class="math inline">\(f(i)=0\)</span>.</li>
 <li>Si <span class="math inline">\(\mathcal{A}=\mathcal{M}_{2}(\mathbb{C})\)</span>, el álgebra de las matrices <span class="math inline">\(2\times 2\)</span> sobre el cuerpo <span class="math inline">\(\mathbb{C}\)</span>. Y sea <span class="math display">\[B=\left[\begin{array}{cc}
@@ -306,7 +203,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 
 <div class="theorem">
-<p><span id="thm:unnamed-chunk-337" class="theorem"><strong>Teorema 5.2  </strong></span>Sea <span class="math inline">\(\mathbb{F}\)</span> un cuerpo y <span class="math inline">\(\mathcal{A}\)</span> un álgebra lineal con unidad sobre <span class="math inline">\(\mathbb{F}\)</span>. Sean <span class="math inline">\(f\)</span> y <span class="math inline">\(g\)</span> polinomios sobre <span class="math inline">\(\mathbb{F}\)</span>, <span class="math inline">\(\alpha\in\mathcal{A}\)</span> y <span class="math inline">\(c\in\mathbb{F}\)</span>. Entonces:</p>
+<p><span id="thm:unnamed-chunk-16" class="theorem"><strong>Teorema 1.2  </strong></span>Sea <span class="math inline">\(\mathbb{F}\)</span> un cuerpo y <span class="math inline">\(\mathcal{A}\)</span> un álgebra lineal con unidad sobre <span class="math inline">\(\mathbb{F}\)</span>. Sean <span class="math inline">\(f\)</span> y <span class="math inline">\(g\)</span> polinomios sobre <span class="math inline">\(\mathbb{F}\)</span>, <span class="math inline">\(\alpha\in\mathcal{A}\)</span> y <span class="math inline">\(c\in\mathbb{F}\)</span>. Entonces:</p>
 <p>(i.) <span class="math inline">\((cf+g)(\alpha)=cf(\alpha)+g(\alpha)\)</span> y (ii.) <span class="math inline">\((fg)(\alpha)=f(\alpha)g(\alpha)\)</span>.</p>
 </div>
 
@@ -324,8 +221,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </div>
 
 <p>En esta parte haremos un breve estudio sobre la interpolación de Lagrange (interpolación polinómica de Lagrange). Se quiere construír un polinomio sencillo que “pase” por ciertos puntos. Más formalmente, sea <span class="math inline">\(\mathbb{F}\)</span> un cuerpo y <span class="math inline">\(t_{0},t_{1},\cdots, t_{n}\)</span> <span class="math inline">\(n+1\)</span> elementos distintos de <span class="math inline">\(\mathbb{F}\)</span>. Consideremos el subespacio <span class="math inline">\(V\)</span> de <span class="math inline">\(\mathbb{F}[x]\)</span> formado por los polinomios de grado menor o igual a <span class="math inline">\(n\)</span> (incluído el polinomio <span class="math inline">\(0\)</span> para dar estructura de espacio vectorial). Sean <span class="math inline">\(L_{i}\)</span> las funciones definidas por <span class="math inline">\(L_{i}(f)=f(t_{i})\)</span> para todo <span class="math inline">\(f\in V\)</span>, con <span class="math inline">\(i=0,1,\cdots ,n\)</span>. Note que cada <span class="math inline">\(L_{i}\)</span> es una función de <span class="math inline">\(V\)</span> en el cuerpo <span class="math inline">\(\mathbb{F}\)</span>, es decir es un funcional lineal sobre <span class="math inline">\(V\)</span>. Se tiene que <span class="math inline">\(\{L_{i}:i=0,1,\cdots, n \}\)</span> es una base de <span class="math inline">\(V^{\ast}\)</span>, mas específicamente, <span class="math inline">\(\{L_{i}:i=0,1,\cdots, n \}\)</span> es el dual de una base <span class="math inline">\(\{P_{i}:i=0,1,\cdots, n \}\)</span> de <span class="math inline">\(V\)</span>. Además, en virtud del teorema @ref{thm:teorema443} es única para esta y esta caracterizada por <span class="math display">\[L_{j}(P_{i})=P_{i}(t_{j})=\delta_{ij}.\]</span> Sean <span class="math display">\[P_{i}=\frac{(x-t_{0})\cdots(x-t_{i-1})(x-t_{i+1})\cdots (x-t_{n}) }{(t_{i}-t_{0})\cdots(t_{i}-t_{i-1})(t_{i}-t_{i+1})\cdots (t_{i}-t_{n})}=\prod_{j\neq i} \left( \frac{x-t_{j}}{t_{i}-t_{j}}\right) \]</span> polinomios en <span class="math inline">\(V\)</span>. Si <span class="math inline">\(f=\sum_{i=0}^{n} c_{i}P_{i}\)</span>, entonces para todo <span class="math inline">\(j\)</span> se tiene que <span class="math inline">\(f(t_{j})=\sum_{i=0}^{n} c_{i}P_{i}(t_{j})=c_{j}\)</span> (ya que <span class="math inline">\(P_{i}(t_{j})\neq 0\)</span> solo cuando <span class="math inline">\(i=j\)</span>). Como el polinomio cero es cero para todo coeficiente <span class="math inline">\(t\)</span>, es decir <span class="math inline">\(0(t)=0\)</span> para todo <span class="math inline">\(t\in\mathbb{F}\)</span>, se tiene que <span class="math inline">\(P_{0},P_{1},\cdots,P_{n}\)</span> son linealmente independientes. Recordemos que la dimensión de <span class="math inline">\(V\)</span> es <span class="math inline">\(n+1\)</span>, por lo tanto la colección <span class="math inline">\(\{P_{0},P_{1},\cdots,P_{n}\}\)</span> es también una base de <span class="math inline">\(V\)</span>. Entonces, para todo <span class="math inline">\(f\in V\)</span> se tiene que <span class="math display">\[f=\sum_{i=0}^{n} f(t_{i})P_{i}\]</span> conocida como la <em>fórmula de interpolación de Lagrange</em>.</p>
-<div id="ejercicios-4" class="section level2">
-<h2><span class="header-section-number">5.1</span> ejercicios</h2>
+<div id="ejercicios" class="section level2">
+<h2><span class="header-section-number">1.1</span> ejercicios</h2>
 <ol style="list-style-type: decimal">
 <li><p>Sea <span class="math inline">\(S\)</span> el conjunto de los enteros no negativos y <span class="math inline">\(\mathbb{F}\)</span> un cuerpo. Sea <span class="math inline">\(\mathbb{F}^{\infty}\)</span> el conjunto de las funciones de <span class="math inline">\(S\)</span> en <span class="math inline">\(\mathbb{F}\)</span>. Se definen las operaciones, suma, producto por un escalar y multiplicación de vectores en <span class="math inline">\(\mathbb{F}^{\infty}\)</span> como en el ejemplo . Demuestre que: (i.) la multiplicación es distributiva respecto de la suma, es decir, es decir, si <span class="math inline">\(f,g,h\in \mathbb{F}^{\infty}\)</span> entonces <span class="math inline">\(f(g+f)=fg+fh\)</span> y <span class="math inline">\((f+g)h=fh+gh\)</span>, (ii.) para todo escalar <span class="math inline">\(c\in\mathbb{F}\)</span>, se cumple que <span class="math inline">\(c(fg)=(cf)g=f(cg)\)</span>. Respuesta: <span class="math display">\[\begin{array}{rl}
 [f(g+h)]_{n}=&amp;\sum_{i=0}^{n} f_{i}(g+h)_{n-i} \forall n=1,2,\cdots\\
@@ -342,7 +239,6 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><p>Demuestre que si <span class="math inline">\(f=cx^{m}\)</span> y <span class="math inline">\(g=dx^{n}\)</span>, con <span class="math inline">\(c, d\in\mathbb{F}\)</span>, entonces <span class="math inline">\(fg=cdx^{m+n}\)</span>. Respuesta: como <span class="math inline">\((fg)_{k}=\sum_{i=0}^{k}f_{i}g_{k-i}\)</span> y <span class="math inline">\(f_{i}=0\)</span> si <span class="math inline">\(i&lt;m\)</span> y <span class="math inline">\(g_{j}=0\)</span> si <span class="math inline">\(j&lt;n\)</span>, se tiene que solo para <span class="math inline">\(k=m+n\)</span> <span class="math inline">\((fg)_{k}\neq 0\)</span>.</p></li>
 <li><p>Sean <span class="math inline">\(f\)</span> y <span class="math inline">\(g\)</span> polinomios de grado <span class="math inline">\(m\)</span> y <span class="math inline">\(n\)</span> respectivamente. Demuestre que: <span class="math display">\[fg=\sum_{s=0}^{m+n}(\sum_{r=0}^{s}f_{r}g_{s-r})x^{s}.\]</span> Respuesta: Considerando a <span class="math inline">\(f\)</span> y <span class="math inline">\(g\)</span> como una suma de polinomios de la base <span class="math inline">\(\{x^{n}: n\geq 0\}\)</span>, <span class="math inline">\(f=f_{0}+ f_{1}x+ f_{2}x^{2}+\cdots+f_{m}x^{m}\)</span> y <span class="math inline">\(g=g_{0}+ g_{1}x+ g_{2}x^{2}+\cdots+g_{m}x^{m}\)</span>, por las propiedades distributivas y el ejercicio anterios se obtiene el resultado.</p></li>
 </ol>
-
 </div>
 </div>
 <script>
@@ -356,17 +252,17 @@ ga('send', 'pageview');
           </div>
         </div>
       </div>
-<a href="espacios-vectoriales.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="matrices-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+
+
     </div>
   </div>
-<script src="libs/gitbook/js/app.min.js"></script>
-<script src="libs/gitbook/js/lunr.js"></script>
-<script src="libs/gitbook/js/plugin-search.js"></script>
-<script src="libs/gitbook/js/plugin-sharing.js"></script>
-<script src="libs/gitbook/js/plugin-fontsettings.js"></script>
-<script src="libs/gitbook/js/plugin-bookdown.js"></script>
-<script src="libs/gitbook/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
@@ -387,17 +283,18 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/synergyvision/Algebra/edit/master/bookdown/041-polinomios.Rmd",
+"link": "https://github.com/synergyvision/Algebra/edit/master/bookdown/%s",
 "text": "Edit"
 },
 "history": {
 "link": null,
 "text": null
 },
-"download": ["Algebra-Lineal.pdf"],
+"download": null,
 "toc": {
 "collapse": "none"
-}
+},
+"search": false
 });
 });
 </script>

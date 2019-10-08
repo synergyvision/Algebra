@@ -1,0 +1,163 @@
+# Polinomios
+En este capítulo estudiaremos una estructura especial de objetos: *las álgebras*; avocándonos especialmente al estudio de un ejemplo muy importante, *los polinomios* y sus propiedades.
+
+Ya vimos que la definición de espacio vectorial $V$ sobre un cuerpo $\mathbb{F}$ lleva intrínseca la definición de dos operaciones, la suma de vectores, definida en $V\times V$ a $V$, y el producto por un escalar, definda de $\mathbb{F}\times V$ en $V$. Podemos definir una operación distinta a la suma de vectores, en $V\times V$ y que el resultado sea un vector. A dicha operación la llamaremos *multiplicación de vectores* y la denotaremos por $u\cdot v$ o simplemente $uv$.
+
+El producto de matrices es un ejemplo de multiplicación de vectores.
+
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-1"><strong>(\#def:unnamed-chunk-1) </strong></span>Un *algebra lineal sobre un cuerpo* $\mathbb{F}$ es una terna $(\mathcal{A},+,\cdot)$, en la que $(\mathcal{A},+)$ un espacio vectorial sobre $\mathbb{F}$ y $\cdot$ es la operación multiplicación de vectores, de modo que:
+  
+(i) la multiplicación es asociativa, es decir, $u(vw)=(uv)w$,
+
+(ii) la multiplicación es distributiva respectoa la suma, esto es, $u(v+w)=uv+uw$ y $(u+v)w=uw+vw$,
+
+(iii) para todo escalar $c\in\mathbb{F}$, se tiene que $c(uv)=(cu)v=u(cv)$.
+
+Si existe un elemento $1\in\mathcal{A}$ tal que $1v=v1=v$, para todo $v\in\mathcal{A}$, decimos que $\mathcal{A}$ es un *álgebra lineal con unidad* y llamaremos *unidad* a dicho elemento. Diremos que $\mathcal{A}$ es un álgebra  conmutativa* si $uv=vu$ para todo $uv\in\mathcal{A}$.
+</div>\EndKnitrBlock{definition}
+
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}Un álgebra lineal no es mas que un anillo $\mathcal{A}$ en el que $\mathcal{A}$ tiene estructura de espacio vectorial (con la operación suma definida en el anillo), donde además se cumple que $c(uv)=(cu)v=u(cv)$, para todo escalar $c\in\mathbb{F}$ y para todo $u,v\in \mathcal{A}$.
+</div>\EndKnitrBlock{remark}
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-3"><strong>(\#exm:unnamed-chunk-3) </strong></span>El conjunto de las matrices $n\times n$ sobre un cuerpo $\mathbb{F}$ con las operaciones usuales, es un álgebra lineal con unidad no es conmutativa salvo que $n=1$, es ese caso las matrices no son mas que el mismo cuerpo de escalares y entonces es un álgebra conmutativa, obviamente. 
+</div>\EndKnitrBlock{example}
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-4"><strong>(\#exm:unnamed-chunk-4) </strong></span>El espacio de los operadores lineales sobre un espacio vectorial $V$, $L(V,V)$ con la composición como multiplicación de vectores, es un álgebra lineal con unidad. Es conmutativa si y solo si el espacio es de dimensión uno.
+</div>\EndKnitrBlock{example}
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-5"><strong>(\#exm:unnamed-chunk-5) </strong></span>El *álgebra de las series formales de potencias*. Consideremos el espacio vectorial de las funciones del conjunto de los enteros no negativos $S=\{0,1,2,\cdots\}$ a un cuerpo $\mathbb{F}$, es decir $\mathbb{F}^{\infty}=\{f:S\longrightarrow \mathbb{F}: f \mbox{ es función } \}$. Entonces cada vector $f$ de $\mathbb{F}^{\infty}$ es una sucesión infinita de elementos de $\mathbb{F}$, $f=(f_{0},f_{1},\cdots)$ (donde cada coordenada $i$ es la imagen de $i$ por la función $f$, es decir, $f_{i}=f(i)$). Se tiene que  $\lambda f +g=\lambda(f_{0},f_{1},\cdots )+(g_{0},g_{1},\cdots )=(\lambda f_{0}+g_{0}, \lambda f_{1}+g_{1},\cdots )$, donde $f=(f_{0},f_{1},\cdots)$, $g=(g_{0},g_{1},\cdots)$ y $\lambda\in\mathbb{F}$.
+Definimos la operación multiplicación de vectores así: dados $f=(f_{0},f_{1},\cdots)$ y $g=(g_{0},g_{1},\cdots)$
+$$(fg)_{n}=\sum_{i=0}^{n} f_{i}g_{n-i} \mbox{ para } n=0,1,2,\cdots$$ es decir, $$fg=(f_{0}g_{0}, f_{0}g_{1}+f_{1}g_{0},f_{0}g_{2}+f_{1}g_{1}+f_{2}g_{1},\cdots).$$
+Además, es fácil ver que esta operación es conmutativa $$(fg)_{n}=\sum_{i=0}^{n} f_{i}g_{n-i} = \sum_{i=0}^{n} g_{i}f_{n-i}=(gf)_{n} \mbox{ para } n=0,1,2,\cdots$$
+Si $h$ es otro vector de $\mathbb{F}^{\infty}$, entonces para $n=1,2,\cdots$, se tiene que:
+$$\begin{array}{rl}
+[(fg)h]_{n}=&\sum_{i=0}^{n}(fg)_{i}h_{n-i}\\
+&\sum_{i=0}^{n}(\sum_{j=0}^{i}f_{j}g_{i-j})h_{n-i}\\
+&\sum_{i=0}^{n}\sum_{j=0}^{i}f_{j}g_{i-j}h_{n-i}\\
+&\sum_{j=0}^{n}\sum_{i=0}^{n-j}f_{j}g_{i}h_{n-j-i}\\
+&\sum_{j=0}^{n}f_{j}\sum_{i=0}^{n-j}g_{i}h_{n-j-i}\\
+&\sum_{j=0}^{n}f_{j}(gh)_{n-j}\\
+&=[f(gh)]_{n}
+\end{array}$$ de donde se deduce que $(fg)h=f(gh)$.
+Se puede verificar fácilmente que la multiplicación cumple las condiciones (i) y (ii) de la definición de álgebra lineal y que el vector $(1,0,0,0,\cdots)$ es la unidad. De donde se concluye que $\mathbb{F}^{\infty}$ es un álgebra lineal conmutativa con unidad sobre el cuerpo $\mathbb{F}$.
+El vector $(0,1,0,0,\cdots)$ juega un papel importante en esta álgebra, por lo que le otorgaremos una notación especial, $x=(0,1,0,0,\cdots)$. Vea que $xx=(0,0,1,0,0,\cdots)$ y que $xxx=(0,0,0,1,0,\cdots)$. En general, el producto de $x$ por si mismo $n$ veces se denotará $x^{n}$ y es igual al vector $(x^{n})_{n}=1$ y $(x^{n})_{k}=0$ siempre que $k\neq n$. Convendremos que $x^{0}=1$.
+Note además que el conjunto $\{1,x,x^{2},\cdots\}$ formado por todas las potencias de $x$ es un conjunto linealmente independiente e infinito, por lo tanto la dimensión de $\mathbb{F}^{\infty}$ no puede ser finita.
+Por último, cada vector $f=(f_{0},f_{1},f_{2},\cdots)$ suele escribirse como $$f=\sum_{n=0}^{\infty} f_{n}x^{n}$$ Esta notación es puramente formal ya que no tenemos la noción de sumas infinitas desde el punto de vista algebraico, no debe confundirse con la definición de series susceptible a nociones de convergencia.
+</div>\EndKnitrBlock{example}
+
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-6"><strong>(\#def:unnamed-chunk-6) </strong></span>Sea $\mathbb{F}[x]$ el espacio vectorial generado por los vectores potencia de $x$, es decir, $\mathbb{F}[x]=\left\langle 1,x,x^{2},x^{3},\cdots \right\rangle $. Un elemento de $\mathbb{F}[x]$ se llamará *polinomio sobre* $\mathbb{F}$.
+</div>\EndKnitrBlock{definition}
+
+Por definición $\mathbb{F}[x]$ es un subespacio de $\mathbb{F}[{\infty}]$. Además se tiene que $f\in\mathbb{F}^{\infty}$ no nulo, es un polinomio si y solo si existe un número entero $n\geq0$ tal que $f_{n}\neq 0$ y $f_{k}=0$ para todo $k>n$; llamaremos *grado* de $f$ a este entero y se denotará por $\mbox{grd } f$. No se le asignará ningún grado al polinomio $0$. Es decir, si $f$ es un polinomio no nulo de grado $n$, $f=f_{0}x^{0}+f_{1}x^{1}+\cdots+f_{n}x^{n}$ con $f_{n}\neq 0$. Se llamarán *coeficientes* a los escalares $f_{0},f_{1},\cdots, f_{n}$, además se dirá que $f$ es un polinomio con coeficientes $\mathbb{F}$. Se llamarán *polinomios escalares* a los polinomios de la forma $cx^{0}$ y se escribirá $c$ en lugar de $cx^{0}$. Un polinomio no nulo de grado $n$ se llamará *mónico* si $f_{n}=1$.
+
+Note que los polinomios son objetos diferentes a las funciones polinómicas mencionadas en la sección espacios vectoriales, pero ciertamente estos objetos tienen relación entre si.
+
+Veamos que el conjunto de los polinomios forman un álgebra.
+
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-7"><strong>(\#thm:unnamed-chunk-7) </strong></span>Sean $f$ y $g$ polinomios no nulos sobre $\mathbb{F}$, entonces:
+  
+(i.) $fg$ es un polinomio no nulo.
+
+(ii.) $\mbox{grd }f=\mbox{grd }f + \mbox{grd }g$.
+
+(iii.) $fg$ es polinomio mónico si y solo si $f$ y $g$ son polinomios mónicos.
+
+(iv.) $fg$ es un polinomio escalar si y solo si $f$ y $g$ polinomios escalares.
+
+(v.) Si $f+g\neq 0$, entonces $\mbox{grd }(f+g)=\max (\mbox{grd }f, \mbox{grd }g)$.
+</div>\EndKnitrBlock{theorem}
+
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Supongamos que $f$ tiene grado $m$ y que $g$ tiene grado $n$. Estudiemos los términos $(fg)_{i}$. Sea $k$ un entero no negativo, entoces $$(fg)_{m+n+k}=\sum_{i=0}^{m+n+k} f_{i}g_{m+n+k-i}$$ Si $i\leq m$ y $m+n+k-i\leq n$, se tiene que $(fg)_{m+n+k}\neq 0$; por lo tanto para que $(fg)_{m+n+k}\neq 0$ es necesario que $m+k\leq i\leq m$, de donde se sigue que $k=0$ e $i=m$. Así $(fg)_{m+n}=f_{m}g_{n}$, además $(fg)_{m+n+k}=0$ si $k>0$. Luego se verifica (i.) esto es que $fg$ es un polinomio no nulo, al igual que (ii.) $\mbox{grd }(fg)=m+n=\mbox{grd }f + \mbox{grd }g$, por lo tanto si $f$ y $g$ son polinomios mónicos, $fg$ también lo es (iii.). Y de aquí se sigue fácilmente (iv.). Para ver (v.) supongamos que $f+g\neq 0$, entonces existe $i\geq 0$ tal que $f_{i}+g_{i}\neq 0$. No puede suceder que $i>\max (\mbox{grd }f, \mbox{grd }g)$ de donde se sigue el resultado.
+</div>\EndKnitrBlock{proof}
+
+\BeginKnitrBlock{corollary}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-9"><strong>(\#cor:unnamed-chunk-9) </strong></span>El conjunto de los polinomios sobre el cuerpo $\mathbb{F}$ junto con las operaciones de suma y multiplicación de polinomios, forman un álgebra lineal conmutativa con unidad sobre $\mathbb{F}$.
+</div>\EndKnitrBlock{corollary}
+
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Como $\mathbb{F}[x]$ es un subespacio de $\mathbb{F}^{\infty}$ y las operaciones de suma y el multiplicación de polinomios son las mismas operaciones de sumas y multiplicación definidas en $\mathbb{F}^{\infty}$, basta ver que la multiplicación de polinomios es cerrada, es decir, el resultado es nuevamente un polinomio. Esto se tiene directamente del teorema anterior cuando ambos factores de la multiplicación son polinomios no nulos. Cuando alguno de los factores es el polinomio cero, el producto es cero, el cual también es un polinomio.
+</div>\EndKnitrBlock{proof}
+
+\BeginKnitrBlock{corollary}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-11"><strong>(\#cor:unnamed-chunk-11) </strong></span>Sean $f, g$ y $h$ polinomios sobre el cuerpo $\mathbb{F}$ con $f\neq 0$. Si $fg=fh$, entonces $g=h$.
+</div>\EndKnitrBlock{corollary}
+
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Como $fg=fh$, entonces $f(g-h)=0$. De la parte (i.) del teorema, como $f\neq 0$, se tiene que $g-h=0$, de donde se sigue el resultado.
+</div>\EndKnitrBlock{proof}
+
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}Para el caso de los polinomios, la expresión de la multiplicación de series de potencias $fg$ puede reescribirse de la siguiente forma, $$fg=\sum_{s=0}^{m+n}(\sum_{r=0}^{s}f_{r}g_{s-r})x^{s}\mbox{, con } \mbox{grad}f=m \mbox{ y grad}g=n$$
+En particular, si $f=cx^{m}$ y $g=dx^{n}$, con $c, d\in\mathbb{F}$, entonces $fg=cdx^{m+n}$. De esta forma, usando las leyes distributivas en $\mathbb{F}[x]$, la multiplicación de polinomios viene dada por $$\sum_{i\leq m, j\leq n} f_{i}g_{j}x^{i+j}$$
+</div>\EndKnitrBlock{remark}
+
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-14"><strong>(\#def:unnamed-chunk-14) </strong></span>Sea $\mathcal{A}$ un álgebra lineal con unidad sobre $\mathbb{F}$. Se indicará la unidad de $\mathcal{A}$ por $1$ y se conviene que $\alpha^{0}=1$ para todo $\alpha\in\mathcal{A}$. Entonces a cada polinomio $f=\sum_{i=0}^{n} f_{i}x^{i}$ sobre $\mathbb{F}$ y cada $\alpha\in\mathcal{A}$ se asocia un elemento de $f(\alpha)\in\mathcal{A}$, de la forma: $$f(\alpha)=\sum_{i=0}^{n}f_{i}\alpha^{i}.$$
+</div>\EndKnitrBlock{definition}
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-15"><strong>(\#exm:unnamed-chunk-15) </strong></span>Sea $\mathbb{C}$ el cuerpo de los números complejos y sea $f=x^{2}+1$.
+
+(a) Si $\mathcal{A}=\mathbb{C}$. Sea $z\in\mathbb{C}$, entonces $f(z)=z^{2}+1$, en particular $f(3)=10$ y $f(i)=0$.
+(b) Si $\mathcal{A}=\mathcal{M}_{2}(\mathbb{C})$, el álgebra de las matrices $2\times 2$ sobre el cuerpo $\mathbb{C}$. Y sea $$B=\left[\begin{array}{cc}
+		-1&2\\
+		1&0
+		\end{array} \right] $$
+		se tiene que $f(B)=\left[\begin{array}{cc}
+		-1&2\\
+		1&0
+		\end{array} \right]^{2}+\left[\begin{array}{cc}
+		1&0\\
+		0&1
+		\end{array} \right]=\left[\begin{array}{cc}
+		4&-2\\
+		-1&3
+		\end{array} \right]$
+(c) Si $\mathcal{A}$ es el álgebra de los operadores lineales en $\mathbb{C}^{3}$ y sea $T(c_{1},c_{2},c_{3})=(ic_{2},-c_{3},-ic_{1})$. Entonces $f(T)=T^{2}+T$, esto es $f(T)(c_{1},c_{2},c_{3})=(c_{1}-ic_{3},c_{2}+ic_{1},c_{2}+c_{3})$, ya que $T^{2}(c_{1},c_{2},c_{3})=T(T(c_{1},c_{2},c_{3}))=(-ic_{3},ic_{1},c_{2})$
+</div>\EndKnitrBlock{example}
+
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-16"><strong>(\#thm:unnamed-chunk-16) </strong></span>Sea $\mathbb{F}$ un cuerpo y $\mathcal{A}$ un álgebra lineal con unidad sobre $\mathbb{F}$. Sean $f$ y $g$ polinomios sobre $\mathbb{F}$, $\alpha\in\mathcal{A}$ y $c\in\mathbb{F}$. Entonces:
+
+(i.) $(cf+g)(\alpha)=cf(\alpha)+g(\alpha)$ y
+(ii.) $(fg)(\alpha)=f(\alpha)g(\alpha)$.
+</div>\EndKnitrBlock{theorem}
+
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Supongamos que $f=\sum_{i=0}^{m} f_{i}x^{i}$ y $g=\sum_{j=0}^{n} g_{j}x^{j}$, por lo tanto $$\displaystyle{\begin{array}{rl}
+	fg=&\sum_{\substack{i\leq m\\ j\leq n}} f_{i}g_{j}\alpha^{i+j}\\
+	=&\left( \sum_{\substack{i\leq m\\ j\leq n}} f_{i}\alpha^{i+j}\right)  \left( \sum_{\substack{i\leq m\\ j\leq n}} g_{i}\alpha^{i+j}\right)  \\
+	=&f(\alpha)g(\alpha)
+	\end{array}}.$$
+	Por otra parte, $$\begin{array}{rl}
+	(cf+g)(\alpha)=&\sum_{i=0}^{\max(m,n)} (cf_{i}+g_{i})\alpha^{i}\\
+	=&\sum_{i=0}^{\max(m,n)} cf_{i}(\alpha^{i})+g_{i}(\alpha^{i})\\
+	=&cf(\alpha)+g(\alpha)
+	\end{array}$$
+</div>\EndKnitrBlock{proof}
+
+En esta parte haremos un breve estudio sobre la interpolación de Lagrange (interpolación polinómica de Lagrange). Se quiere construír un polinomio sencillo que "pase" por ciertos puntos. Más formalmente, sea $\mathbb{F}$ un cuerpo y $t_{0},t_{1},\cdots, t_{n}$ $n+1$ elementos distintos de $\mathbb{F}$. Consideremos el subespacio $V$ de $\mathbb{F}[x]$ formado por los polinomios de grado menor o igual a $n$ (incluído el polinomio $0$ para dar estructura de espacio vectorial). Sean $L_{i}$ las funciones definidas por $L_{i}(f)=f(t_{i})$ para todo $f\in V$, con $i=0,1,\cdots ,n$. Note que cada $L_{i}$ es una función de $V$ en el cuerpo $\mathbb{F}$, es decir es un funcional lineal sobre $V$. Se tiene que $\{L_{i}:i=0,1,\cdots, n \}$ es una base de $V^{\ast}$, mas específicamente, $\{L_{i}:i=0,1,\cdots, n \}$ es el dual de una base $\{P_{i}:i=0,1,\cdots, n \}$ de $V$. Además, en virtud del teorema \@ref{thm:teorema443} es única para esta y esta caracterizada por $$L_{j}(P_{i})=P_{i}(t_{j})=\delta_{ij}.$$ 
+Sean $$P_{i}=\frac{(x-t_{0})\cdots(x-t_{i-1})(x-t_{i+1})\cdots (x-t_{n}) }{(t_{i}-t_{0})\cdots(t_{i}-t_{i-1})(t_{i}-t_{i+1})\cdots (t_{i}-t_{n})}=\prod_{j\neq i} \left( \frac{x-t_{j}}{t_{i}-t_{j}}\right) $$
+polinomios en $V$. Si $f=\sum_{i=0}^{n} c_{i}P_{i}$, entonces para todo $j$ se tiene que $f(t_{j})=\sum_{i=0}^{n} c_{i}P_{i}(t_{j})=c_{j}$ (ya que $P_{i}(t_{j})\neq 0$ solo cuando $i=j$). Como el polinomio cero es cero para todo coeficiente $t$, es decir $0(t)=0$ para todo $t\in\mathbb{F}$, se tiene que $P_{0},P_{1},\cdots,P_{n}$ son linealmente independientes. Recordemos que la dimensión de $V$ es $n+1$, por lo tanto la colección $\{P_{0},P_{1},\cdots,P_{n}\}$ es también una base de $V$. Entonces, para todo $f\in V$ se tiene que $$f=\sum_{i=0}^{n} f(t_{i})P_{i}$$ conocida como la *fórmula de interpolación de Lagrange*.
+
+##ejercicios
+
+(1) Sea $S$ el conjunto de los enteros no negativos y $\mathbb{F}$ un cuerpo. Sea $\mathbb{F}^{\infty}$ el conjunto de las funciones de $S$ en $\mathbb{F}$. Se definen las operaciones, suma, producto por un escalar y multiplicación de vectores en $\mathbb{F}^{\infty}$ como en el ejemplo \ref{ejemplo55}. Demuestre que:
+(i.) la multiplicación es distributiva respecto de la suma, es decir, es decir, si $f,g,h\in \mathbb{F}^{\infty}$ entonces $f(g+f)=fg+fh$ y $(f+g)h=fh+gh$, 
+(ii.) para todo escalar $c\in\mathbb{F}$, se cumple que $c(fg)=(cf)g=f(cg)$.
+Respuesta: 
+$$\begin{array}{rl}
+[f(g+h)]_{n}=&\sum_{i=0}^{n} f_{i}(g+h)_{n-i} \forall n=1,2,\cdots\\
+=&\sum_{i=0}^{n} f_{i}g_{n-i}+f_{i}h_{n-i}\\
+=&\sum_{i=0}^{n} f_{i}g_{n-i}+\sum_{i=0}^{n}f_{i}h_{n-i}\\
+=&(fg)_{n}+(fh)_{n}
+\end{array}$$ por lo tanto $f(g+h)=fg+fh$.
+De forma análoga se tiene que $[(f+g)h]_{n}=(fh)_{n}+(gh)_{n} \forall n=1,2,\cdots$ y eso demuestra (a).
+Veamos que se cumple (b)
+$$\begin{array}{rl}
+[k(fg)]_{n}=&k(fg)_{n}\\
+=&k\sum_{i=0}^{n} f_{i}g_{n-i} \forall n=1,2,\cdots\\
+=&\sum_{i=0}^{n} kf_{i}g_{n-i}\\
+=&\sum_{i=0}^{n} (kf_{i})g_{n-i}\\
+=&[(kf)g]_{n}
+\end{array}$$
+lo que muestra que $k(fg)=(kf)g$. Ahora, sustituyendo la cuarta linea de la cadena de igualdades anteriores, por $\sum_{i=0}^{n} f_{i}(kg_{n-i})$ obtenemos que $k(fg)=f(kg)$.
+
+(2) Demuestre que si $f=cx^{m}$ y $g=dx^{n}$, con $c, d\in\mathbb{F}$, entonces $fg=cdx^{m+n}$.
+Respuesta: como $(fg)_{k}=\sum_{i=0}^{k}f_{i}g_{k-i}$ y $f_{i}=0$ si $i<m$ y $g_{j}=0$ si $j<n$, se tiene que solo para $k=m+n$ $(fg)_{k}\neq 0$.
+
+(3) Sean $f$ y $g$ polinomios de grado $m$ y $n$ respectivamente. Demuestre que: $$fg=\sum_{s=0}^{m+n}(\sum_{r=0}^{s}f_{r}g_{s-r})x^{s}.$$
+Respuesta: Considerando a $f$ y $g$ como una suma de polinomios de la base $\{x^{n}: n\geq 0\}$, $f=f_{0}+ f_{1}x+ f_{2}x^{2}+\cdots+f_{m}x^{m}$ y $g=g_{0}+ g_{1}x+ g_{2}x^{2}+\cdots+g_{m}x^{m}$, por las propiedades distributivas y el ejercicio anterios se obtiene el resultado.
+
+

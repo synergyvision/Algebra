@@ -4,7 +4,7 @@
 title: "Álgebra Lineal"
 subtitle: "Ciencia de los Datos Financieros"
 author: "Synergy Vision"
-date: "2019-07-15"
+date: "2019-08-12"
 knit: "bookdown::render_book"
 documentclass: krantz
 bibliography: [book.bib, packages.bib]
@@ -1304,17 +1304,12 @@ El producto de vectores por un escalar tiene las siguientes propiedades:
 
 \BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-184"><strong>(\#exm:unnamed-chunk-184) </strong></span>Dados los vectores $v_{1}=(10,2)$, $v_{2}=(-5,4)$ y $v_{3}=(-1,-2)$, entonces 
 
-$$v_{1}+v_{2}=(10,2)+(-5,4)=(10-5,2+4)=(5,6),$$
-	 
-$$v_{1}-v_{2}=(10,2)-(-5,4)=(10-(-5),2-4)=(15,-2) \mbox{ y}$$ 
-  
-$$v_{3}+v_{2}-v_{1}=(-1,-2)+(-5,4)-(10,2)=(-1-5-10,-2+4-2)=(-16,0).$$ 
-  
+$v_{1}+v_{2}=(10,2)+(-5,4)=(10-5,2+4)=(5,6),$
+$v_{1}-v_{2}=(10,2)-(-5,4)=(10-(-5),2-4)=(15,-2) \mbox{ y}$
+$v_{3}+v_{2}-v_{1}=(-1,-2)+(-5,4)-(10,2)=(-1-5-10,-2+4-2)=(-16,0).$
 También	 
-
-$$-2v_{1}=-2(10,2)=(-20,-4)\mbox{ y }$$ 
-  
-$$-2v_{1}+3v_{2}-v_{3}=-2(10,2)+3(-5,4)-1(-1,-2)=(-20-15+1,-4+12+2)=(-34,10).$$</div>\EndKnitrBlock{example}
+$-2v_{1}=-2(10,2)=(-20,-4)\mbox{ y }$
+$-2v_{1}+3v_{2}-v_{3}=-2(10,2)+3(-5,4)-1(-1,-2)=(-20-15+1,-4+12+2)=(-34,10).$</div>\EndKnitrBlock{example}
 
 ### Producto escalar y producto vectorial
 
@@ -2113,7 +2108,7 @@ Ahora veremos las operaciones elementales por filas que corresponden a hacer com
 	
 (2) Intercambio de dos filas de la matriz $A$.
 	
-(3) Sustituír la $i$-\'esima fila de la matriz $A$, por la suma de la fila $r$ mas un múltiplo de la fila $s$-ésima.
+(3) Sustituír la $i$-ésima fila de la matriz $A$, por la suma de la fila $r$ mas un múltiplo de la fila $s$-ésima.
 
 Podemos denotar en forma de función (entre fila) las operaciones elementales por fila del siguiente modo.
 Si $A$ es una matriz $m\times n$, una operación elemental de filas es una función $e$ que se le aplica a la matriz $A$, asociándole la matriz $e(A)$, que corresponde al resultado de alguna de las operaciones antes descritas. esto es:
@@ -3258,6 +3253,7 @@ Respuesta: Considerando a $f$ y $g$ como una suma de polinomios de la base $\{x^
 
 # Matrices
 
+
 <!--chapter:end:050-matrices.Rmd-->
 
 # Autovalores y autovectores
@@ -4092,7 +4088,7 @@ An R Markdown document (`*.Rmd`) is first compiled to Markdown (`*.md`) through 
 
 ```r
 rmarkdown::pandoc_version()
-## [1] '1.19.2.4'
+## [1] '1.19.2.1'
 ```
 
 If you find this version too low and there are Pandoc features only in a later version, you can install the later version of Pandoc, and **rmarkdown** will call the newer version instead of its built-in version.
@@ -4142,18 +4138,13 @@ LaTeX distributions and packages are also updated from time to time, and you may
 
 ```r
 system('pdflatex --version')
-## pdfTeX 3.14159265-2.6-1.40.18 (TeX Live 2017)
-## kpathsea version 6.2.3
-## Copyright 2017 Han The Thanh (pdfTeX) et al.
-## There is NO warranty.  Redistribution of this software is
-## covered by the terms of both the pdfTeX copyright and
-## the Lesser GNU General Public License.
-## For more information about these matters, see the file
-## named COPYING and the pdfTeX source.
-## Primary author of pdfTeX: Han The Thanh (pdfTeX) et al.
-## Compiled with libpng 1.6.29; using libpng 1.6.29
-## Compiled with zlib 1.2.11; using zlib 1.2.11
-## Compiled with xpdf version 3.04
+## MiKTeX-pdfTeX 2.9.5840 (1.40.16) (MiKTeX 2.9)
+## Copyright (C) 1982 D. E. Knuth, (C) 1996-2014 Han The Thanh
+## TeX is a trademark of the American Mathematical Society.
+## compiled with zlib version 1.2.8; using 1.2.8
+## compiled with libpng version 1.6.19; using 1.6.19
+## compiled with poppler version 0.32.0
+## compiled with jpeg version 8.4
 ```
 
 <!--chapter:end:400-apendice.Rmd-->
