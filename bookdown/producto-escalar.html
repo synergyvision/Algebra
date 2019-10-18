@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+
+  <meta property="og:title" content="" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+<script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+
+
+
+<link rel="stylesheet" href="css\style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"><img src="images/logovision-black.png" width="160"></img></a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path=""><a href="#producto-escalar"><i class="fa fa-check"></i><b>1</b> Producto escalar</a></li>
+<li class="divider"></li>
+<li><a href="https://bookdown.org" target="blank">Publicado con bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<!--bookdown:title:end-->
+<!--bookdown:title:start-->
+<div id="producto-escalar" class="section level1">
+<h1><span class="header-section-number">Capítulo 1</span> Producto escalar</h1>
+<p>En este capítulo estaremos considerando espacios vectoriales reales y complejos, por lo tanto cada vez que se mencione un cuerpo se estará haciendo referencia al cuerpo de los números reales, <span class="math inline">\(\mathbb{R}\)</span>, o al cuerpo de los números complejos, <span class="math inline">\(\mathbf{C}\)</span>. Y se hará una abstracción de lo que en el capítulo 2 se presentó como el producto punto entre vectores.</p>
+
+<div class="definition">
+<p><span id="def:unnamed-chunk-1" class="definition"><strong>Definición 1.1  </strong></span>Sea <span class="math inline">\(\mathbb{F}\)</span> un cuerpo (<span class="math inline">\(\mathbb{R}\)</span> o <span class="math inline">\(\mathbf{C}\)</span>), y <span class="math inline">\(V\)</span> un espacio vectorial sobre <span class="math inline">\(\mathbb{F}\)</span>. Un <em>producto interno</em> (o <em>producto interior</em>) sobre <span class="math inline">\(V\)</span> es una operación binaria de <span class="math inline">\(V\times V\)</span> en <span class="math inline">\(\mathbb{F}\)</span>, <span class="math inline">\((\alpha,\beta)\mapsto (\alpha|\beta)\)</span> tal que para todo <span class="math inline">\(\alpha,\beta,\gamma\in V\)</span> y <span class="math inline">\(c,d\in\mathbb{F}\)</span>: [a] <span class="math inline">\((\alpha|\beta)=\bar{(\beta|\alpha)}\)</span>, donde la barra indica la conjugación compleja; [b] <span class="math inline">\((c\alpha+d\beta|\gamma)=c(\alpha|\gamma)+d(\beta|\gamma)\)</span> y [c] <span class="math inline">\((\alpha|\alpha)&gt;0\)</span> si <span class="math inline">\(\alpha\neq 0\)</span>.</p>
+<p>En el caso que tal operación exista, decimos que <span class="math inline">\(V\)</span> es un <em>espacio vectorial con producto interno</em>.</p>
+</div>
+
+
+<div class="remark">
+<p> <span class="remark"><em>Nota. </em></span> De (a) y (b) se sigue que <span class="math inline">\((\alpha|c\beta+\gamma)=\bar{c}(\alpha|\beta)+(\alpha|\gamma)\)</span>.</p>
+</div>
+
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-3" class="example"><strong>Ejemplo 1.1  </strong></span>En el espacio vectorial <span class="math inline">\(\mathbf{C}^{n}\)</span>, la operación <span class="math inline">\((\alpha|\beta)=\sum_{i=1}^{n} x_{i}\bar{y_{i}}\)</span>, donde <span class="math inline">\(\alpha=(x_{1},x_{2},\cdots,x_{n})\)</span> y <span class="math inline">\(\beta=(y_{1},y_{2},\cdots,y_{n})\)</span>; es un producto interno, llamado el <em>producto interno canónico en</em> <span class="math inline">\(\mathbf{C}^{n}\)</span>. Por otro lado, si consideramos esta misma operación sobre <span class="math inline">\(\mathbb{R}\)</span>, la conjugación queda sin efecto y así el <em>producto interno canónico en</em> <span class="math inline">\(\mathbb{R}\)</span> es la operación <span class="math inline">\((\alpha|\beta)=\sum_{i=1}^{n} x_{i}y_{i}\)</span>.</p>
+</div>
+
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-4" class="example"><strong>Ejemplo 1.2  </strong></span>En <span class="math inline">\(\mathbb{C}^{2}\)</span> definimos la operación <span class="math inline">\(((x,y)|(z,w))=2x\bar{z}+x\bar{w}+y\bar{z}+y\bar{w}\)</span> es un producto interno.</p>
+</div>
+
+
+<div class="example">
+<p><span id="exm:ejemplo85" class="example"><strong>Ejemplo 1.3  </strong></span>Sea <span class="math inline">\(V=\mathbb{F}^{n\times n}\)</span>, el espacio de todas las matrices <span class="math inline">\(n\times n\)</span> sobre <span class="math inline">\(\mathbb{F}\)</span>. Entonces <span class="math inline">\(V\)</span> es isomorfo de forma natural al espacio <span class="math inline">\(\mathbb{F}^{n^{2}}\)</span>, entonces se sigue: <span class="math display">\[(A|B)=\sum_{i,j}A_{ij}\bar{B}_{ij}\]</span> define un producto interno sobre <span class="math inline">\(V\)</span>. Si definimos <span class="math inline">\([B^{\ast}]_{kj}=\bar{B}_{jk}\)</span>, entonces <span class="math inline">\((A|B)=tr(AB^{\ast})=tr(B^{\ast}A)\)</span>.</p>
+</div>
+
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-5" class="example"><strong>Ejemplo 1.4  </strong></span>Sea <span class="math inline">\(V\)</span> el espacio vectorial de las funciones continuas de valores complejos definidas en el intervalo <span class="math inline">\([0,1]\)</span>. La operación <span class="math display">\[(f|g)=\int_{0}^{1} f(t)\bar{g(t)}dt\]</span> es un producto interno en <span class="math inline">\(V\)</span>. Para funciones a valores reales, la misma operación omitiendo el conjugado, es un producto interno sobre el espacio respectivo.</p>
+</div>
+
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-6" class="example"><strong>Ejemplo 1.5  </strong></span>Se pueden construír productos internos a partir de un producto interno dado. Sean <span class="math inline">\(V\)</span> y <span class="math inline">\(W\)</span> espacios vectoriales sobre <span class="math inline">\(\mathbb{F}\)</span>. Sea <span class="math inline">\((|)\)</span> es un producto interno en <span class="math inline">\(W\)</span>. Sea <span class="math inline">\(T\)</span> una transformación lineal inyectiva de <span class="math inline">\(V\)</span> en <span class="math inline">\(W\)</span>, entonces la operación <span class="math display">\[p_{T}(\alpha|\beta)=(T\alpha|T\beta)\]</span> define un producto interno en <span class="math inline">\(V\)</span>.</p>
+</div>
+
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-7" class="example"><strong>Ejemplo 1.6  </strong></span>Sea <span class="math inline">\(\mathbb{F}^{n\times 1}\)</span> el espacio de las matrices columnas <span class="math inline">\(n\times 1\)</span> sobre <span class="math inline">\(\mathbb{F}\)</span> y sea <span class="math inline">\(P\)</span> una matriz <span class="math inline">\(n\times n\)</span> invertible. Definimos la operación <span class="math display">\[(A|B)=B^{\ast}P^{\ast}PA\]</span> para <span class="math inline">\(A,B\in \mathbb{F}^{n\times 1}\)</span>. Si identificamos la matriz <span class="math inline">\(1\times 1\)</span> con el único elemento que la conforma, tenemos una operación de <span class="math inline">\(\mathbb{F}^{n\times 1}\times \mathbb{F}^{n\times 1}\)</span> en el campo <span class="math inline">\(\mathbb{F}\)</span> que resulta ser un producto interno. Note que si <span class="math inline">\(P\)</span> es la matriz unidad, entonces la operación es la misma (esencialmente) que la del ejemplo @ref{ejemplo85}. También es un caso particular del ejemplo anterior.</p>
+</div>
+
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-8" class="example"><strong>Ejemplo 1.7  </strong></span>Sea <span class="math inline">\(V\)</span> un espacio vectorial de dimensión finita y sea <span class="math inline">\(\mathcal{B}=\{\beta_{1},\beta_{2},\cdots,\beta_{n}\}\)</span> una base ordenada de <span class="math inline">\(V\)</span>. Sean <span class="math inline">\(\epsilon_{1},\epsilon_{2},\cdots,\epsilon_{n}\)</span> la base canónica en <span class="math inline">\(\mathbb{F}^{n}\)</span>. Sea <span class="math inline">\(T\)</span> la transformación lineal de <span class="math inline">\(V\)</span> en <span class="math inline">\(\mathbb{F}^{n}\)</span> definida por <span class="math inline">\(T\beta_{j}=\epsilon_{j}\)</span>, para cada <span class="math inline">\(1\leq j\leq n\)</span>. Entonces <span class="math display">\[p_{T}(\sum_{i=1}^{n}x_{i}\beta_{i}\sum_{j=1}^{n}y_{j}\beta_{j})=\sum_{i=1}^{n} x_{i}\bar{y_{i}}\]</span> es un producto interno en vista del ejemplo anterior. De este modo, para cada base de <span class="math inline">\(V\)</span>, existe un producto interno sobre <span class="math inline">\(V\)</span> con la propiedad <span class="math inline">\((\beta_{i}|\beta_{j})=\delta_{ij}\)</span>.</p>
+</div>
+
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-9" class="example"><strong>Ejemplo 1.8  </strong></span>Sea <span class="math inline">\(V\)</span> el espacio de las funciones continuas en el intervalo <span class="math inline">\([0,1]\)</span> y <span class="math inline">\(W=V\)</span>. Sean <span class="math inline">\(T\)</span> el operador <span class="math inline">\((Tf)(t)=tf(t)\)</span> para <span class="math inline">\(0\leq t\leq 1\)</span>. Es fácil ver que <span class="math inline">\(T\)</span> es lineal, además que <span class="math inline">\(T\)</span> es no singular, en efecto, <span class="math inline">\(Tf=0\)</span> si y solo si <span class="math inline">\(tf(t)=0\)</span> para todo <span class="math inline">\(0\leq t\leq 1\)</span>, si y solo si <span class="math inline">\(f(t)=0\)</span> para todo <span class="math inline">\(0&lt; t\leq 1\)</span>. Pero en <span class="math inline">\(t=0\)</span>, como <span class="math inline">\(f\)</span> es continua, <span class="math inline">\(f(0)=0\)</span>.</p>
+</div>
+
+</div>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-78759535-1', 'auto');
+ga('send', 'pageview');  
+</script>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/synergyvision/Algebra/edit/master/bookdown/%s",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "none"
+},
+"search": false
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
