@@ -17,23 +17,89 @@ En el caso que tal operación exista, decimos que $V$ es un *espacio vectorial c
 Por otro lado, si consideramos esta misma operación sobre $\mathbb{R}$, la conjugación queda sin efecto y así el *producto interno canónico en* $\mathbb{R}$ es la operación $(\alpha|\beta)=\sum_{i=1}^{n} x_{i}y_{i}$.
 </div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-4"><strong>(\#exm:unnamed-chunk-4) </strong></span>En $\mathbb{C}^{2}$ definimos la operación $((x,y)|(z,w))=2x\bar{z}+x\bar{w}+y\bar{z}+y\bar{w}$ es un producto interno.
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:ejemplo84"><strong>(\#exm:ejemplo84) </strong></span>En $\mathbb{C}^{2}$ definimos la operación $((x,y)|(z,w))=2x\bar{z}+x\bar{w}+y\bar{z}+y\bar{w}$ es un producto interno.
 </div>\EndKnitrBlock{example}
 
 \BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:ejemplo85"><strong>(\#exm:ejemplo85) </strong></span>Sea $V=\mathbb{F}^{n\times n}$, el espacio de todas las matrices $n\times n$ sobre $\mathbb{F}$. Entonces $V$ es isomorfo de forma natural al espacio $\mathbb{F}^{n^{2}}$, entonces se sigue: $$(A|B)=\sum_{i,j}A_{ij}\bar{B}_{ij}$$ define un producto interno sobre $V$. Si definimos $[B^{\ast}]_{kj}=\bar{B}_{jk}$, entonces $(A|B)=tr(AB^{\ast})=tr(B^{\ast}A)$. 
 </div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-5"><strong>(\#exm:unnamed-chunk-5) </strong></span>Sea $V$ el espacio vectorial de las funciones continuas de valores complejos definidas en el intervalo $[0,1]$. La operación $$(f|g)=\int_{0}^{1} f(t)\bar{g(t)}dt$$ es un producto interno en $V$. Para funciones a valores reales, la misma operación omitiendo el conjugado, es un producto interno sobre el espacio respectivo.
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:ejemplo86"><strong>(\#exm:ejemplo86) </strong></span>Sea $V$ el espacio vectorial de las funciones continuas de valores complejos definidas en el intervalo $[0,1]$. La operación $$(f|g)=\int_{0}^{1} f(t)\bar{g(t)}dt$$ es un producto interno en $V$. Para funciones a valores reales, la misma operación omitiendo el conjugado, es un producto interno sobre el espacio respectivo.
 </div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-6"><strong>(\#exm:unnamed-chunk-6) </strong></span>Se pueden construír productos internos a partir de un producto interno dado. Sean $V$ y $W$ espacios vectoriales sobre $\mathbb{F}$. Sea $(|)$ es un producto interno en $W$. Sea $T$ una transformación lineal inyectiva de $V$ en $W$, entonces la operación $$p_{T}(\alpha|\beta)=(T\alpha|T\beta)$$ define un producto interno en $V$.
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-4"><strong>(\#exm:unnamed-chunk-4) </strong></span>Se pueden construír productos internos a partir de un producto interno dado. Sean $V$ y $W$ espacios vectoriales sobre $\mathbb{F}$. Sea $(|)$ es un producto interno en $W$. Sea $T$ una transformación lineal inyectiva de $V$ en $W$, entonces la operación $$p_{T}(\alpha|\beta)=(T\alpha|T\beta)$$ define un producto interno en $V$.
 </div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-7"><strong>(\#exm:unnamed-chunk-7) </strong></span>Sea $\mathbb{F}^{n\times 1}$ el espacio de las matrices columnas $n\times 1$ sobre $\mathbb{F}$ y sea $P$ una matriz $n\times n$ invertible. Definimos la operación $$(A|B)=B^{\ast}P^{\ast}PA$$ para $A,B\in \mathbb{F}^{n\times 1}$. Si identificamos la matriz $1\times 1$ con el único elemento que la conforma, tenemos una operación de $\mathbb{F}^{n\times 1}\times \mathbb{F}^{n\times 1}$ en el campo $\mathbb{F}$ que resulta ser un producto interno. Note que si $P$ es la matriz unidad, entonces la operación es la misma (esencialmente) que la del ejemplo \@ref{ejemplo85}. También es un caso particular del ejemplo anterior.
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-5"><strong>(\#exm:unnamed-chunk-5) </strong></span>Sea $\mathbb{F}^{n\times 1}$ el espacio de las matrices columnas $n\times 1$ sobre $\mathbb{F}$ y sea $P$ una matriz $n\times n$ invertible. Definimos la operación $$(A|B)=B^{\ast}P^{\ast}PA$$ para $A,B\in \mathbb{F}^{n\times 1}$. Si identificamos la matriz $1\times 1$ con el único elemento que la conforma, tenemos una operación de $\mathbb{F}^{n\times 1}\times \mathbb{F}^{n\times 1}$ en el campo $\mathbb{F}$ que resulta ser un producto interno. Note que si $P$ es la matriz unidad, entonces la operación es la misma (esencialmente) que la del ejemplo \@ref{ejemplo85}. También es un caso particular del ejemplo anterior.
 </div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-8"><strong>(\#exm:unnamed-chunk-8) </strong></span>Sea $V$ un espacio vectorial de dimensión finita y sea $\mathcal{B}=\{\beta_{1},\beta_{2},\cdots,\beta_{n}\}$ una base ordenada de $V$. Sean $\epsilon_{1},\epsilon_{2},\cdots,\epsilon_{n}$ la base canónica en $\mathbb{F}^{n}$. Sea $T$ la transformación lineal de $V$ en $\mathbb{F}^{n}$ definida por $T\beta_{j}=\epsilon_{j}$, para cada $1\leq j\leq n$. Entonces $$p_{T}(\sum_{i=1}^{n}x_{i}\beta_{i}\sum_{j=1}^{n}y_{j}\beta_{j})=\sum_{i=1}^{n} x_{i}\bar{y_{i}}$$ es un producto interno en vista del ejemplo anterior. De este modo, para cada base de $V$, existe un producto interno sobre $V$ con la propiedad $(\beta_{i}|\beta_{j})=\delta_{ij}$.
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-6"><strong>(\#exm:unnamed-chunk-6) </strong></span>Sea $V$ un espacio vectorial de dimensión finita y sea $\mathcal{B}=\{\beta_{1},\beta_{2},\cdots,\beta_{n}\}$ una base ordenada de $V$. Sean $\epsilon_{1},\epsilon_{2},\cdots,\epsilon_{n}$ la base canónica en $\mathbb{F}^{n}$. Sea $T$ la transformación lineal de $V$ en $\mathbb{F}^{n}$ definida por $T\beta_{j}=\epsilon_{j}$, para cada $1\leq j\leq n$. Entonces $$p_{T}(\sum_{i=1}^{n}x_{i}\beta_{i}\sum_{j=1}^{n}y_{j}\beta_{j})=\sum_{i=1}^{n} x_{i}\bar{y_{i}}$$ es un producto interno en vista del ejemplo anterior. De este modo, para cada base de $V$, existe un producto interno sobre $V$ con la propiedad $(\beta_{i}|\beta_{j})=\delta_{ij}$.
 </div>\EndKnitrBlock{example}
 
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-9"><strong>(\#exm:unnamed-chunk-9) </strong></span>Sea $V$ el espacio de las funciones continuas en el intervalo $[0,1]$ y $W=V$. Sean $T$ el operador $(Tf)(t)=tf(t)$ para $0\leq t\leq 1$. Es fácil ver que $T$ es lineal, además que $T$ es no singular, en efecto, $Tf=0$ si y solo si $tf(t)=0$ para todo $0\leq t\leq 1$, si y solo si $f(t)=0$ para todo $0< t\leq 1$. Pero en $t=0$, como $f$ es continua, $f(0)=0$. 
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-7"><strong>(\#exm:unnamed-chunk-7) </strong></span>Sea $V$ el espacio de las funciones continuas en el intervalo $[0,1]$ y $W=V$. Sean $T$ el operador $(Tf)(t)=tf(t)$ para $0\leq t\leq 1$. Es fácil ver que $T$ es lineal, además que $T$ es no singular, en efecto, $Tf=0$ si y solo si $tf(t)=0$ para todo $0\leq t\leq 1$, si y solo si $f(t)=0$ para todo $0< t\leq 1$. Pero en $t=0$, como $f$ es continua, $f(0)=0$. Usando el producto interno del ejemplo \@ref{exp=ejemplo86}, se define el producto interno $$p_{T}(f,g)=\int_{0}^{1} (Tf)(t)\bar{(Tg)(t)}dt=\int_{0}^{1} t^{2}f(t)\overline{g(t)}dt.$$
+</div>\EndKnitrBlock{example}
+Veamos algunos hechos generales sobre el producto interno. Supongamos que $V$ es un espacio vectorial complejo con producto interno. Sean $\alpha$ y $\beta$ vectores cualesquiera en $V$, entonces $$(\alpha|\beta)=Re(\alpha|\beta)+iIm(\alpha|\beta)$$
+ donde $Re(\alpha|\beta)$ y $Im(\alpha|\beta)$ representan la parte real y la parte imaginaria del número $(\alpha|\beta)$, respectivamente. Como para todo número complejo $z$, $Im(z)=Re(-iz)$, se tiene que $Im(\alpha|\beta)=Re(-i(\alpha|\beta))$, por las propiedades del producto interno tenemos que $Im(\alpha|\beta)=Re(\alpha|i\beta))$. Luego, el producto interno se expresa en términos de la parte real de los números $(\alpha|\beta)$ $(\alpha|i\beta)$, esto es $$(\alpha|\beta)=Re(\alpha|\beta)+Re(\alpha|i\beta).$$
+ También es útil expresar el producto interno en términos de la forma cuadrática. Definimos $||\alpha||:=\sqrt{(\alpha|\alpha)}$, la *función norma* de $\alpha$. Esta función es la que en los espacios $\mathbb{R}$ y $\mathbf{C}$ conocemos como longitud de un vector. La *forma cuadrática* determinada por el producto interno es la función $\alpha\mapsto||\alpha||^{2}$. De las propiedades del producto interno, se tiene que 
+ $$||\alpha\pm\beta||^{2}=||\alpha||^{2}\pm 2Re(\alpha|\beta)+||\beta||^{2}.$$
+ En el caso que real
+ $$(\alpha|\beta)=\frac{1}{4}||\alpha+\beta||-\frac{1}{4}||\alpha-\beta||$$
+ y en el caso complejo, sabiendo que $(\alpha|\beta)=Re(\alpha|\beta)+Re(\alpha|i\beta)$, tenemos que
+ $$\begin{array}{rl}
+ (\alpha|\beta)=&\frac{1}{4}||\alpha+\beta||-\frac{1}{4}||\alpha-\beta||+\frac{i}{4}||\alpha+i\beta||-\frac{i}{4}||\alpha-i\beta||\\
+ =&\frac{1}{4}\sum_{n=1}^{4}i^{n}||\alpha+i^{n}\beta||^{2}
+ \end{array}.$$
+ Estas últimas dos igualdades se conocen con el nombre de *identidades de polarización.
+ Note que las propiedades anteriores son válidas para todo espacio $V$ (real o complejo) independientemente de su dimensión. En el caso de espacios de dimensión finita, se puede representar el producto interno en términos de una base ordenada del espacio.
+ Sea $V$ es un espacio de dimensión finita y $\mathcal{B}=\{\alpha_{1},\cdots, \alpha_{n}\}$ una base de $V$. Supongamos que $\alpha=\sum_{k} x_{k}\alpha_{k}$ y $\beta=\sum_{j} y_{j}\beta_{j}$. entonces
+ $$\begin{array}{rl}
+ (\alpha|\beta)=&(\sum_{k} x_{k}\alpha_{k}|\beta)\\
+ =&\sum_{k} x_{k}(\alpha_{k}|\beta)\\
+ =&\sum_{k} x_{k}\sum_{j}\bar{y_{j}}(\alpha_{k}|\alpha_{j})\\
+ =&\sum_{k,j} \bar{y_{j}}(\alpha_{k}|\alpha_{j})x_{k}
+ \end{array}$$
+ si llamamos $G$ a la matriz de los productos internos $(\alpha_{k}|\alpha_{j})$, esto es $G_{jk}=(\alpha_{k}|\alpha_{j})$ y $X$ y $Y$ a las matrices de coordenadas de los vectores $\alpha$ y $\beta$ en la base ordenada $\mathcal{B}$, nos queda 
+ $$\begin{array}{rl}
+ (\alpha|\beta)=&\sum_{k,j} \bar{y_{j}}(\alpha_{k}|\alpha_{j})x_{k}\\
+ =&\sum_{k,j} Y^{\ast}GX
+ \end{array}$$
+ Diremos que $G$ es la *matriz del producto interno en la base ordenada. Esta matriz es hermítica, esto es $G^{\ast}=G$, que además satisface que 
+ 
+ ```equation
+ X^{\ast}GX>0
+ 
+ ```
+ 
+ siempre que $X\neq 0$. Además, $G$ es invertible; en efecto, si $G$ no es invertible, existe $X\neq 0$ tal que $GX=0$ y as\'i $X^{\ast}GX=0$, lo que es una contradicción. Interpretando \@ref{eq=ec81}, nos dice que existen escalares $x_{1},\cdots,x_{n}$ no todos nulos, tales que $$\sum_{k,j} \bar{x_{j}}G_{jk}x_{k}>0$$
+ Esto último implica que los elementos de la diagonal de $G$ son positivos.
+ De forma recíproca, si $G$ es una matriz $n\times n$ sobre $\mathbb{F}$ que satisface \@ref{eq=ec81} y la condición $G^{\ast}=G$, entonces existe una función producto interno en $V$ y una base ordenada $\mathcal{B}$ tal que $G$ es la matriz del producto interno en la base $\mathcal{B}$. Más específicamente, la función dada por $(\alpha|\beta)=Y^{\ast}GX$ donde $X$ e $Y$ son las matrices de coordenadas de $\alpha$ y $\beta$ en la base $\mathcal{B}$.
+ 
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-8"><strong>(\#def:unnamed-chunk-8) </strong></span> Un espacio $V$ con un producto interno definido sobre él, lo llamaremos *espacio (con) producto interno*. Un espacio producto interno real de dimensión finita, se suele llamar *espacio euclideano*. Llamaremos *espacio unitario* a los espacios producto interno complejos.
+</div>\EndKnitrBlock{definition}
+
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-9"><strong>(\#thm:unnamed-chunk-9) </strong></span>Sea $V$ un espacio producto interno. Entonces para cuales quiera vectores $\alpha$, $\beta\in V$ y todo escalar $c$, se cumple que:
+(i.) $||c\alpha||=|c|\,||\alpha||$,
+(ii.) Si $\alpha\neq 0$, $||\alpha||>0$,
+(iii.) $|(\alpha|\beta)|\leq ||\alpha||\,||\beta||$,
+(iv.) $||\alpha+\beta||\leq||\alpha||+||\beta||$.
+</div>\EndKnitrBlock{theorem}
+
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Tanto (i.) como (ii.) se siguen fácilmente de las definiciones de producto interno y norma.
+Si $\alpha=0$, (iii.) se cumple. Supongamos que $\alpha\neq 0$. Sea $\gamma=\beta-\frac{(\beta|\alpha)}{||\alpha||^{2}} \alpha$. Entonces $(\gamma|\alpha)=0$, así
+$$\begin{array}{rrl}
+	0\leq&||\gamma||^{2}=&\left(\beta-\dfrac{(\beta|\alpha)}{||\alpha||^{2}} \left|  \beta-\dfrac{(\beta|\alpha)}{||\alpha||^{2}} \right.  \right)\\
+		&=&(\beta|\beta)-\dfrac{(\beta|\alpha)(\alpha|\beta)}{\| \alpha \|^{2}}\\
+		&=&\|\beta\|^{2}-\dfrac{|(\alpha|\beta)|^{2}}{\|\alpha\|^{2}}
+	\end{array}$$
+de donde se tiene que $|(\alpha|\beta)|^{2}=\|\alpha\|^{2}\|\beta\|^{2}$.
+Ahora, ya habíamos visto que 
+$$\begin{array}{rl}
+	\|\alpha+\beta\|^{2}=&\|\alpha\|^{2}+2Re(\alpha|\beta)+\|\beta\|^{2}\\
+	\leq&\|\alpha\|^{2}+2\|\alpha\|\|\beta\|+\|\beta\|^{2}\\
+	=&(\|\alpha\|+\|\beta\|)^{2}
+	\end{array}$$ luego $\|\alpha+\beta\|\leq \|\alpha\|+\|\beta\|$.
+</div>\EndKnitrBlock{proof}
+
+La desigualdad (iii.) del teorema anterior se llama *desigualdad de Cauchy-Schwarz*. De la demostración se puede ver que la igualdad en (iii.) se tiene si y solo si los vectores $\alpha$ y $\beta$ son linealmente dependientes.
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-11"><strong>(\#exm:unnamed-chunk-11) </strong></span>Aplicando la desigualdad de Cauchy-Schwarz al producto interno canónico se obteiren $$|\sum x_{j}\bar{y_{j}}|\leq \left( \sum |x_{j}|^{2} \right)^{\frac{1}{2}} \left( \sum |y_{j}|^{2} \right)^{\frac{1}{2}} $$
 </div>\EndKnitrBlock{example}
