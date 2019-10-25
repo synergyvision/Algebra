@@ -66,7 +66,9 @@
 <li><a href="./"><img src="images/logovision-black.png" width="160"></img></a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path=""><a href="#producto-escalar"><i class="fa fa-check"></i><b>1</b> Producto escalar</a></li>
+<li class="chapter" data-level="1" data-path=""><a href="#producto-escalar"><i class="fa fa-check"></i><b>1</b> Producto escalar</a><ul>
+<li class="chapter" data-level="1.0.1" data-path=""><a href="#ejercicios"><i class="fa fa-check"></i><b>1.0.1</b> Ejercicios</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://bookdown.org" target="blank">Publicado con bookdown</a></li>
 
@@ -186,6 +188,29 @@
 <p><span id="exm:unnamed-chunk-11" class="example"><strong>Ejemplo 1.9  </strong></span>Aplicando la desigualdad de Cauchy-Schwarz al producto interno canónico se obteiren <span class="math display">\[|\sum x_{j}\bar{y_{j}}|\leq \left( \sum |x_{j}|^{2} \right)^{\frac{1}{2}} \left( \sum |y_{j}|^{2} \right)^{\frac{1}{2}} \]</span></p>
 </div>
 
+<div id="ejercicios" class="section level3">
+<h3><span class="header-section-number">1.0.1</span> Ejercicios</h3>
+<p>[1] Sea <span class="math inline">\((|)\)</span> un producto interno sobre el espacio vectorial <span class="math inline">\(V\)</span>. Demuestre que: (a) <span class="math inline">\((0|\beta)=0\)</span> para todo vector <span class="math inline">\(\beta\in V\)</span>. (b) Si <span class="math inline">\((\alpha|\beta)=0\)</span> para todo <span class="math inline">\(\beta\in V\)</span>, entonces <span class="math inline">\(\alpha=0\)</span>.</p>
+<p>Respuesta: (a) De las propiedades del producto interno, se tiene que <span class="math inline">\((0|\beta)=(\alpha-\alpha|\beta)=(\alpha|\beta)-(\alpha|\beta)\)</span> para cualquier <span class="math inline">\(\beta\in V\)</span>. (b) Se sigue de la última condición de la definición de producto interno.</p>
+<p>[2] Sea <span class="math inline">\(V\)</span> un espacio vectorial sobre el cuerpo <span class="math inline">\(\mathbb{F}\)</span>. Muestre que la suma y los múltiplos positivos de productos internos sobre <span class="math inline">\(V\)</span>, es un producto interno sobre <span class="math inline">\(V\)</span>.</p>
+<p>Respuesta: (a) Sean <span class="math inline">\((|)\)</span> y <span class="math inline">\([|]\)</span> dos productos internos sobre <span class="math inline">\(V\)</span>. Sea <span class="math inline">\(p(\alpha,\beta)=(\alpha|\beta)+[\alpha|\beta]\)</span>. Veamos que <span class="math inline">\(p\)</span> es un producto interno: [i.] <span class="math inline">\(\begin{array}{rl} p(c\alpha+\gamma|\beta)=&amp;(c\alpha+\gamma|\beta)+[c\alpha+\gamma|\beta]\\ =&amp;c(\alpha|\beta)+c[\alpha|\beta]+(\gamma|\beta)+[\gamma|\beta]\\ =&amp;cp(\alpha,\beta)+p(\gamma,\beta) \end{array},\)</span> [ii.] <span class="math inline">\(p(\beta,\alpha)=(\beta|\alpha)+[\beta|\alpha]=\overline{(\alpha|\beta)}+\overline{[\alpha|\beta]}=\overline{(\beta|\alpha)+[\beta|\alpha]}=\overline{p(\beta,\alpha)}\)</span>, [iii.] Supongamos que <span class="math inline">\(\alpha\neq 0\)</span>, <span class="math inline">\(p(\alpha,\alpha)=(\alpha|\alpha)+[\alpha|\alpha]&gt;0\)</span>. (b) Sea <span class="math inline">\(k\in\mathbb{F}\)</span> un escalar positivo, veamos que <span class="math inline">\(k(|)\)</span> es un producto interno. [i.] <span class="math display">\[\begin{array}{rl}
+ k(c\alpha+\gamma|\beta)=&amp;k(c\alpha+\gamma|\beta)\\
+ =&amp;k(c(\alpha|\beta)+(\gamma|\beta))\\
+ =&amp;ck(\alpha,\beta)+k(\gamma,\beta)
+ \end{array},\]</span> [ii.] <span class="math inline">\(k(\beta,\alpha)=k\overline{(\alpha|\beta)}=\overline{k(\beta|\alpha)}\)</span>, [iii.] Supongamos que <span class="math inline">\(\alpha\neq 0\)</span>, <span class="math inline">\(k(\alpha,\alpha)&gt;0\)</span> ya que <span class="math inline">\((\alpha,\alpha)&gt;0\)</span>.</p>
+<p>[3.] Demuestre que el producto interno canónico sobre <span class="math inline">\(\mathbb{F}^{n}\)</span>, es un producto interno. Respuesta: Veamos que <span class="math inline">\((\alpha|\beta)=\sum_{j}x_{j}\bar{y}_{j}\)</span> es un producto interno. Sean <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\beta\)</span> y <span class="math inline">\(\gamma\)</span> vectores de <span class="math inline">\(\mathbb{F}^{n}\)</span>; supongamos que <span class="math inline">\(\alpha=(x_{1},\cdots,x_{n})\)</span>, <span class="math inline">\(\beta=(y_{1},\cdots,y_{n})\)</span> y <span class="math inline">\(\gamma=(z_{1},\cdots,z_{n})\)</span>. Entonces: [i.] <span class="math display">\[\begin{array}{rl}
+        (c\alpha+\gamma|\beta)=&amp;\sum_{j}(cx_{j}+z_{j})\bar{y}_{j}\\
+        =&amp;\sum_{j}cx_{j}\bar{y}_{j}+z_{j}\bar{y}_{j}\\
+        =&amp;c\sum_{j}x_{j}\bar{y}_{j}+\sum_{j}z_{j}\bar{y}_{j}\\
+        =&amp;c(\alpha|\beta)+(\gamma|\beta)
+        \end{array},\]</span> [ii.] <span class="math display">\[\begin{array}{rl}
+        (\beta|\alpha)=&amp;\sum_{j}(y_{j})\bar{x}_{j}\\
+        =&amp;\overline{\sum_{j}\bar{y}_{j}{x}_{j}}\\
+        =&amp;\overline{(\alpha|\beta)}
+        \end{array},\]</span> [iii.] Supongamos que <span class="math inline">\(\alpha\neq 0\)</span>, <span class="math inline">\((\alpha|\alpha)=\sum_{j}x_{j}\bar{x}_{j}=\sum_{j} |x_{j}|^{2}&gt;0\)</span>.</p>
+<p>[4.] Describa la desigualdad de Cauchy-Schwarz para los productos internos definidos en los ejemplos  y .</p>
+<p>Respuesta: Para el ejemplo , la desigualdad de Cauchy-Schwarz es: <span class="math display">\[|tr(AB^{\ast})|\leq (tr(AA^{\ast}))^{\frac{1}{2}}(tr(BB^{\ast}))^{\frac{1}{2}}\]</span> y en el ejemplo , la desigualdad de Cauchy-Schwarz quedaría expresada como: <span class="math display">\[\left|\int_{0}^{1} f(x)\overline{g(x)} dx\right|\leq \left( \int_{0}^{1} |f(x)|^{2} dx\right)^{2}  \left(\int_{0}^{1} |g(x)|^{2} dx\right)^{2}\]</span></p>
+</div>
 </div>
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

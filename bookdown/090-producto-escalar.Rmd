@@ -130,3 +130,50 @@ La desigualdad (iii.) del teorema anterior se llama *desigualdad de Cauchy-Schwa
 Aplicando la desigualdad de Cauchy-Schwarz al producto interno canónico se obteiren $$|\sum x_{j}\bar{y_{j}}|\leq \left( \sum |x_{j}|^{2} \right)^{\frac{1}{2}} \left( \sum |y_{j}|^{2} \right)^{\frac{1}{2}} $$
 
 ```
+
+###Ejercicios
+[1] Sea $(|)$ un producto interno sobre el espacio vectorial $V$. Demuestre que:
+		(a) $(0|\beta)=0$ para todo vector $\beta\in V$.
+ 		(b) Si $(\alpha|\beta)=0$ para todo $\beta\in V$, entonces $\alpha=0$.
+
+Respuesta: (a) De las propiedades del producto interno, se tiene que $(0|\beta)=(\alpha-\alpha|\beta)=(\alpha|\beta)-(\alpha|\beta)$ para cualquier $\beta\in V$. (b) Se sigue de la última condición de la definición de producto interno.
+
+[2] Sea $V$ un espacio vectorial sobre el cuerpo $\mathbb{F}$. Muestre que la suma  y los múltiplos positivos de productos internos sobre $V$, es un producto interno sobre $V$.
+
+Respuesta: (a) Sean $(|)$ y $[|]$ dos productos internos sobre $V$. Sea $p(\alpha,\beta)=(\alpha|\beta)+[\alpha|\beta]$. Veamos que $p$ es un producto interno: 
+[i.] $\begin{array}{rl}
+p(c\alpha+\gamma|\beta)=&(c\alpha+\gamma|\beta)+[c\alpha+\gamma|\beta]\\
+=&c(\alpha|\beta)+c[\alpha|\beta]+(\gamma|\beta)+[\gamma|\beta]\\
+=&cp(\alpha,\beta)+p(\gamma,\beta)
+\end{array},$
+[ii.] $p(\beta,\alpha)=(\beta|\alpha)+[\beta|\alpha]=\overline{(\alpha|\beta)}+\overline{[\alpha|\beta]}=\overline{(\beta|\alpha)+[\beta|\alpha]}=\overline{p(\beta,\alpha)}$,
+[iii.] Supongamos que $\alpha\neq 0$, $p(\alpha,\alpha)=(\alpha|\alpha)+[\alpha|\alpha]>0$.
+(b) Sea $k\in\mathbb{F}$ un escalar positivo, veamos que $k(|)$ es un producto interno. 
+[i.] $$\begin{array}{rl}
+ k(c\alpha+\gamma|\beta)=&k(c\alpha+\gamma|\beta)\\
+ =&k(c(\alpha|\beta)+(\gamma|\beta))\\
+ =&ck(\alpha,\beta)+k(\gamma,\beta)
+ \end{array},$$
+ [ii.] $k(\beta,\alpha)=k\overline{(\alpha|\beta)}=\overline{k(\beta|\alpha)}$,
+ [iii.] Supongamos que $\alpha\neq 0$, $k(\alpha,\alpha)>0$ ya que $(\alpha,\alpha)>0$.
+
+[3.] Demuestre que el producto interno canónico sobre $\mathbb{F}^{n}$, es un producto interno.
+ Respuesta: Veamos que $(\alpha|\beta)=\sum_{j}x_{j}\bar{y}_{j}$ es un producto interno. Sean $\alpha$, $\beta$ y $\gamma$ vectores de $\mathbb{F}^{n}$; supongamos que $\alpha=(x_{1},\cdots,x_{n})$, $\beta=(y_{1},\cdots,y_{n})$ y $\gamma=(z_{1},\cdots,z_{n})$. Entonces:
+[i.] $$\begin{array}{rl}
+ 		(c\alpha+\gamma|\beta)=&\sum_{j}(cx_{j}+z_{j})\bar{y}_{j}\\
+ 		=&\sum_{j}cx_{j}\bar{y}_{j}+z_{j}\bar{y}_{j}\\
+ 		=&c\sum_{j}x_{j}\bar{y}_{j}+\sum_{j}z_{j}\bar{y}_{j}\\
+ 		=&c(\alpha|\beta)+(\gamma|\beta)
+ 		\end{array},$$
+[ii.] $$\begin{array}{rl}
+ 		(\beta|\alpha)=&\sum_{j}(y_{j})\bar{x}_{j}\\
+ 		=&\overline{\sum_{j}\bar{y}_{j}{x}_{j}}\\
+ 		=&\overline{(\alpha|\beta)}
+ 		\end{array},$$
+[iii.] Supongamos que $\alpha\neq 0$, $(\alpha|\alpha)=\sum_{j}x_{j}\bar{x}_{j}=\sum_{j} |x_{j}|^{2}>0$.
+
+[4.] Describa la desigualdad de Cauchy-Schwarz para los productos internos definidos en los ejemplos \ref{ej85} y \ref{ej86}.
+
+ Respuesta: Para el ejemplo \ref{ej85}, la desigualdad de Cauchy-Schwarz es: $$|tr(AB^{\ast})|\leq (tr(AA^{\ast}))^{\frac{1}{2}}(tr(BB^{\ast}))^{\frac{1}{2}}$$
+ y en el ejemplo \ref{ej86}, la desigualdad de Cauchy-Schwarz quedaría expresada como:
+ 	$$\left|\int_{0}^{1} f(x)\overline{g(x)} dx\right|\leq \left( \int_{0}^{1} |f(x)|^{2} dx\right)^{2}  \left(\int_{0}^{1} |g(x)|^{2} dx\right)^{2}$$
