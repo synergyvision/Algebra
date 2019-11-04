@@ -131,6 +131,122 @@ En esta parte haremos un breve estudio sobre la interpolación de Lagrange (inte
 Sean $$P_{i}=\frac{(x-t_{0})\cdots(x-t_{i-1})(x-t_{i+1})\cdots (x-t_{n}) }{(t_{i}-t_{0})\cdots(t_{i}-t_{i-1})(t_{i}-t_{i+1})\cdots (t_{i}-t_{n})}=\prod_{j\neq i} \left( \frac{x-t_{j}}{t_{i}-t_{j}}\right) $$
 polinomios en $V$. Si $f=\sum_{i=0}^{n} c_{i}P_{i}$, entonces para todo $j$ se tiene que $f(t_{j})=\sum_{i=0}^{n} c_{i}P_{i}(t_{j})=c_{j}$ (ya que $P_{i}(t_{j})\neq 0$ solo cuando $i=j$). Como el polinomio cero es cero para todo coeficiente $t$, es decir $0(t)=0$ para todo $t\in\mathbb{F}$, se tiene que $P_{0},P_{1},\cdots,P_{n}$ son linealmente independientes. Recordemos que la dimensión de $V$ es $n+1$, por lo tanto la colección $\{P_{0},P_{1},\cdots,P_{n}\}$ es también una base de $V$. Entonces, para todo $f\in V$ se tiene que $$f=\sum_{i=0}^{n} f(t_{i})P_{i}$$ conocida como la *fórmula de interpolación de Lagrange*.
 
+###Factorizacion prima de un polinomio
+En esta parte veremos que todo polinomio sobre un cuerpo puede descomponerse en polinomios primos. Para esto estudiaremos primero los ideales de polinomios.
+
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-18"><strong>(\#def:unnamed-chunk-18) </strong></span>Sean $f$ y $g$ polinomios sobre $\mathbb{F}$ con $g$ no nulo. Si existe $q\in\mathbb{F}$ tal que $f=gq$, decimos que $g$ *divide a* $f$ (o que $f$ es *divisible* por $g$) y $q$ es el *cociente* de $f$ por $g$.
+</div>\EndKnitrBlock{definition}
+
+Si $f$ es divisible por $g$, también se dice que $f$ es múltiplo de $g$.
+
+\BeginKnitrBlock{lemma}<div class="lemma"><span class="lemma" id="lem:unnamed-chunk-19"><strong>(\#lem:unnamed-chunk-19) </strong></span>Sean $f$ y $g$ polinomios no nulos sobre $\mathbb{F}$ tales que $grd g\leq grd f$. Entonces existe un polinomio $q$ tal que $f-gq=0$ o $grd (f-gq)<grd f$.
+</div>\EndKnitrBlock{lemma}
+
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-20"><strong>(\#thm:unnamed-chunk-20) </strong></span>Si $f$ y $g$ son polinomios sobre un cuerpo $\mathbb{F}$ y $g$ no es nulo, entonces existen polinomios $q$ y $r$ en $\mathbb{F}$ únicos, tales que:
+[i.] $f=gq+r$,
+[ii] $r=0$ o $grd r< grd g$.
+</div>\EndKnitrBlock{theorem}
+
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Si $f=0$ o de grado menor a $grd g$, se puede tomar $q=0$ y $r=f$. En caso contrario, por el lema anterior, existe $q$ tal que $f-gq=0$ o $grd (f-gq)<grd f$. Si $f-gq\neq0$ y $grd (f-gq)<grd g$, se toma un polinomio $h$ tal que $f-gq-gh=0$ o $grd (f-g(q+h))<grd f-gq$. Siguiendo este proceso se hallan $q$ y $r$ tales que $r=0$ o $grd r< grd g$ y $f=gq+r$. Para probar la unicidad, supongamos que existen $q_{1}$ y $r_{1}$ tales que $r_{1}=0$ o $grd r_{1}< grd g$ y $f=gq_{1}+r_{1}$. Entonces $gq+r=gq_{1}+r_{1}$, por lo tanto, $g(q-q_{1})=r_{1}-r$, si $q\neq q_{1}$ entonces $grd g+grd(q-q_{1})=grd(r_{1}-r)$, lo que contradice que $grd (r_{1}-r)<grd g$. Por lo tanto $q=q_{1}$ y $r_{1}=r$.
+</div>\EndKnitrBlock{proof}
+
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-22"><strong>(\#def:unnamed-chunk-22) </strong></span>Sea $\mathbb{F}$ un cuerpo. Un escalar $c\in\mathbb{F}$ es una raíz de un polinomio $f$ sobre $\mathbb{F}$ si $f(c)=0$.
+</div>\EndKnitrBlock{definition}
+
+\BeginKnitrBlock{corollary}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-23"><strong>(\#cor:unnamed-chunk-23) </strong></span>Sea $f$ un polinomio sobre el cuerpo $\mathbb{F}$ y sea $c$ un escalar. Entonces $f$ es divisible por $x-c$ si $c$ es una raíz de $f$.
+</div>\EndKnitrBlock{corollary}
+
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Por el teorema anterior existen $q$ y $r$ tales que $f=(x-c)q+r$, donde $r$ es un polinomio escalar. Luego, como $f(c)=r(c)$, $r(c)=0$ si y solo si $f(c)=0$.
+</div>\EndKnitrBlock{proof}
+
+\BeginKnitrBlock{corollary}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-25"><strong>(\#cor:unnamed-chunk-25) </strong></span>Un polinomio $f$ de grado $n$ sobre un cuerpo $\mathbb{F}$ tiene a lo sumo $n$ raíces.
+</div>\EndKnitrBlock{corollary}
+
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Procederemos por inducción. El resultado es obviamente cierto para polinomios de grado 0 y grado 1. Supongamos que los polinomios de grado $n-1$ tienen a lo sumo $n-1$ raíces. Sea $f$ un polinomio de grado $n$, supongamos que $c$ es raíz del polinomio $f$, entonces $f=(x-c)q$ para algún polinomio $q$ de grado $n-1$, por lo tanto $f$ tiene a lo sumo $n$ raices.
+</div>\EndKnitrBlock{proof}
+
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-27"><strong>(\#def:unnamed-chunk-27) </strong></span>Dado un cuerpo $\mathbb{F}$, un \textit{ideal} en $\mathbb{F}[x]$ es un subespacio $I$ de $\mathbb{F}[x]$ tal que para todo $f\in\mathbb{F}$ y $g\in I$, $fg\in I$.
+</div>\EndKnitrBlock{definition}
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-28"><strong>(\#exm:unnamed-chunk-28) </strong></span>Dado un polinomio $g\in\mathbb{F}[x]$, el conjunto $I=g\mathbb{F}[x]=\{fg| f\in\mathbb{F}[x]\}$ de múltiplos del polinomio $g$ es un ideal. En efecto, $cgf+gh=g(cf+h)$ para cualquier escalar $c$ y cuales quiera polinomios $f$ y $h$ sobre $\mathbb{F}$, esto es $I$ es un subespacio de $\mathbb{F}$. Además, por definición del conjunto $I$, este absorve los productos $fg$ para todo $f\in\mathbb{F}$ y $g\in I$. Este conjunto se conoce como el *ideal principal geneardo* por $g$.
+</div>\EndKnitrBlock{example}
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-29"><strong>(\#exm:unnamed-chunk-29) </strong></span>Sean $g_{1},g_{2},\cdots,g_{n}$ polinomios sobre $\mathbb{F}$. Consideremos la suma de los subespacios (ideales) $g_{i}\mathbb{F}[x]$, esto es $M=g_{1}\mathbb{f}[x]+\cdots+g_{n}\mathbb{F}[x]$. $M$ es también un subespacio de $\mathbb{F}[x]$ (esto se probó en el capítulo de espacios vectoriales) y además un ideal, ya que dado $g\in M$ y $f\in\mathbb{F}[x]$, se tiene que $fg=f(g_{1}h_{1}+\cdots+g_{n}h_{n})=g_{1}(fh_{1}+\cdots+fh_{n})\in M$, donde $g=g_{1}h_{1}+\cdots+g_{n}h_{n}$, con $g_{i}h_{i}\in g_{i}\mathbb{F}[x]$. Este es el *ideal generado* por los polinomios $g_{1},g_{2},\cdots,g_{n}$.
+</div>\EndKnitrBlock{example}
+
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-30"><strong>(\#thm:unnamed-chunk-30) </strong></span>Si $M$ es un ideal no nulo de $\mathbb{F}[x]$, entonces existe un único polinomio $g\in\mathbb{F}[x]$ tal que $M$ es el ideal principal generado por $g$.
+</div>\EndKnitrBlock{theorem}
+
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Como $M$ es un ideal no nulo, existe un polinomio $g$ no nulo de menor grado, podemos suponer que $g$ es mónico (en otro caso se puede multiplicar por un escalar $c$ para hacerlo mónico, donde $cg$ está en $M$). Dado $f\in M$, por el teorema amterior, existen $q$ y $r$ tales que $f=gq+r$ y $r=0$ o $grd r< grd g$. Como $g$ y $f\in M$, $r=f-gq\in M$, luego no puede ocurrir que $grd r< grd g$, por lo que se concluye que $g\mathbb{F}[x]=M$. Supongamos que existe un polinomio $d$ tal que $M=d\mathbb{F}[x]$, entonces $g=df$ para algún polinomio no nulo $f$, y $d=gq$ para algún polinomio no nulo $q$, luego $g=gqf$, por lo tanto $grd g=grd g+grd q + grd f$. Como $g$ y $d$ son mónicos, se concluye que $q=f=1$, luego $g=d$.
+</div>\EndKnitrBlock{proof}
+
+\BeginKnitrBlock{corollary}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-32"><strong>(\#cor:unnamed-chunk-32) </strong></span>Sean $p_{1},\cdots,p_{n}$ polinomios sobre el cuerpo $\mathbb{F}$, no todos nulos. Entonces existe un único polinomio mónico $g$ tal que:
+[i.] $g$ pertenece al ideal generado por $p_{1},\cdots,p_{n}$,
+[ii] $g$ divide a cada $p_{i}$, $i\leq n$,
+[iii] si $f$ divide a cada $p_{i}$, entoces divide a $g$.
+Además todo polinomio $d$ que satisfaga $(i)$ y $(ii)$, tambén satisface $(iii)$.
+</div>\EndKnitrBlock{corollary}
+
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Sea $g$ el polinomio mónico generador de $p_{1}\mathbb{F}[x]+\cdots+p_{n}\mathbb{F}[x]$. Todo elemento de este ideal es divisible por $g$. Supongamos que $f$ es un polinomio que divide a cada $p_{i}$, entonces existen polinomios $g_{1},\cdots,g_{n}$ tales que $p_{i}=fg_{i}$ para cada $i$. Como $g$ pertenece al ideal $p_{1}\mathbb{F}[x]+\cdots+p_{n}\mathbb{F}[x]$, existen polinomios $q_{1},\cdots,q_{n}$ en $\mathbb{F}[x]$ tales que $g=q_{1}p_{1}+\cdots+q_{n}p_{n}$, luego $g=q_{1}fg_{1}+\cdots+q_{n}fg_{n}=f(q_{1}g_{1}+\cdots+q_{n}g_{n})$. Por lo tanto $g$ es un polinomio mónico que satisface $(i)$, $(ii)$ y $(iii)$. Supongamos que $g`$ satisface $(i)$ y $(ii)$, entonces por $(i)$ y la definición de $g$ se tiene que $g´$ es múltiplo escalar de $g$, luego satisface $(iii)$. Note que si $g´$ es mónico, entonces es igual a $g$.
+</div>\EndKnitrBlock{proof}
+
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-34"><strong>(\#def:unnamed-chunk-34) </strong></span>Sean $p_{1},\cdots,p_{n}$ polinomios sobre el cuerpo $\mathbb{F}$, no todos nulos, el generador $g$ del ideal $p_{1}\mathbb{F}[x]+\cdots+p_{n}\mathbb{F}[x]$ se llama *máximo común divisor (m.c.d) de* $p_{1},\cdots,p_{n}$. Si el máximo común divisor de $p_{1},\cdots,p_{n}$ es $1$, decimos que $p_{1},\cdots,p_{n}$ son *primos relativos*.
+
+´´´
+</div>\EndKnitrBlock{definition}
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}El máximo común divisor de $p_{1},\cdots,p_{n}$ es $1$ si y solo si el ideal genrado por $p_{1},\cdots,p_{n}$ es todo $\mathbb{F}[x]$.
+</div>\EndKnitrBlock{remark}
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-36"><strong>(\#exm:unnamed-chunk-36) </strong></span>El m.c.d. de los polinomios $x+2$ y $x^{2}+8x+16$ es $1$.\\
+Por otro lado, el m.c.d. de $(x-2)^{2}(x+i)$ y $(x-2)(x^{2}+1)$ es $(x-2)(x+i)$, en efecto, el ideal generado por $(x-2)^{2}(x+i)$ y $(x-2)(x^{2}+1)$ contiene a $(i-2)(x-2)(x+i)=(x-2)^{2}(x+i)-(x-2)(x^{2}+1)$, luego contiene a $(x-2)(x+i)$.
+</div>\EndKnitrBlock{example}
+
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-37"><strong>(\#def:unnamed-chunk-37) </strong></span>Sea $\mathbb{F}$ un campo y $f$ un polinomio sobre $\mathbb{F}$. Decimos que $f$ es *reducible sobre* $\mathbb{F}$ si existen polinomios $g,h\in \mathbb{F}[x]$ de grado mayor a cero tales que $f=gh$. En otro caso decimos que $f$ es *irreducible sobre* $\mathbb{F}$. Un polinomio no escalar irreducible sobre $\mathbb{F}$ es llamado *polinomio primo (o simplemente primo) sobre* $\mathbb{F}$.
+</div>\EndKnitrBlock{definition}
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-38"><strong>(\#exm:unnamed-chunk-38) </strong></span>El polinomio $f(x)=x^{2}+1$ es irreducible sobre $\mathbb{R}$. Pero es reducible sobre $\mathbb{C}$, ya que $x^{2}+1=(x+i)(x-i)$.
+</div>\EndKnitrBlock{example}
+
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-39"><strong>(\#thm:unnamed-chunk-39) </strong></span>Sean $f$ y $g$ polinomios sobre un cuerpo $\mathbb{F}$, y sea $p$ un polinomio primo sobre $\mathbb{F}$. Si $p$ divide al producto $fg$ entonces $p$ divide a $f$ o $p$ divide a $g$.
+</div>\EndKnitrBlock{theorem}
+
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Supongamos, sin pérdida de generalidad, que $p$ es un polinomio primo mónico. Sea $d$ el m.c.d. de $p$ y $f$. Entonces $d=1$ o $d=p$ (ya que los únicos divisores mónicos de $p$ son $1$ y $p$). Si $d=p$, entonces $p$ divide a $f$, lo que concluye la demostración. Si $d=1$, $p$ y $f$ son primos relativos. Luego, existen polinomios $h$ y $q$ tales que $1=hf+qp$. Multiplicando por $g$ tenemos que $g=(gf)h+(gq)p$, como $p$ divide a $fg$, entonces también a $(gf)h$ y claramente divide a $(gq)p$.
+</div>\EndKnitrBlock{proof}
+
+\BeginKnitrBlock{corollary}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-41"><strong>(\#cor:unnamed-chunk-41) </strong></span>Si $p$ es un polinomio primo y divide al producto $f_{1}\cdots f_{n}$, entonces divide $f_{i}$ para algún $1\leq i\leq n$.
+</div>\EndKnitrBlock{corollary}
+
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Por inducción, del teorema anterior se sigue el resultado.
+</div>\EndKnitrBlock{proof}
+
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-43"><strong>(\#thm:unnamed-chunk-43) </strong></span>Sea $\mathbb{F}$ es un cuerpo. Un polinomio mónico no escalar en $\mathbb{F}[x]$ puede descomponerse en forma única como el producto de polinomios primos mónicos en $\mathbb{F}[x]$.
+</div>\EndKnitrBlock{theorem}
+
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Sea $f$ un polinomio mónico no escalar en $\mathbb{F}[x]$. Si $f$ es de grado 1, es irreducible, luego la representación en polinomios primos es el mismo polinomio $f$. Supongamos que $grd\, f> 1$ y que todo polinomio de grado menor que $n$ se puede descomponer como el producto de polinomios primos mónicos. Veamos que el resultado también es cierto para polinomios de grado $n$. Si $f$, de grado $n$ es un polinomio irreducible, se obtiene el resultado, en caso contrario $f=gh$, donde $g$ y $h$ son polinomios mónicos de grado menor que $n$, por lo tanto pueden expresarse como producto de polinomios primos mónicos cada uno, y por lo tanto $f$ también. Ahora, supongamos que existen dos representaciones para $f$ en productos de polinomios primo, digamos $f=p_{1}\cdots p_{m}$ y $f=q_{1}\cdots q_{n}$, con $p_{i}$ y $q_{j}$ polinomios mónicos primos, para todo $i$ y todo $j$. Por el corolario, como $p_{m}$ divide a $q_{1}\cdots q_{n}$, divide a algún $q_{i}$, podemos suponer que $q_{i}$ es el último polinomio de la lista (reordemando los polinomios de la lista). Pero $p_{m}$ y $q_{n}$ son polinomios mónicos primos, por lo tanto $p_{m}=q_{n}$. Además, si $m=1$ o $n=1$, $m=n=1$, ya que $grd\, f=\sum_{i=1}^{n} grd p_{i}=\sum_{j=1}^{m} grd q_{j}$, en este caso queda demostrado el teorema. Si por el contrario, $m>1$ y $n>1$, como $p_{1}\cdots p_{m}=q_{1}\cdots q_{n-1}p_{m}$, entonces $p_{1}\cdots p_{m-1}=q_{1}\cdots q_{n-1}$; como el producto $p_{1}\cdots p_{m-1}$ es un polinomio de grado menor que $n$, el producto $q_{1}\cdots q_{n-1}$ no es más que un reordenamiento de este, luego la representación de $f$ es única salvo el orden de los factores.
+</div>\EndKnitrBlock{proof}
+En la factorización descrita en la demostración del teorema anterior, los factores primos mónicos pueden estar repetidos en la lista $p_{1}\cdots p_{m}$. Si $p_{1},\cdots,p_{r}$ son los factores distintos de la factorización, entonces $$f=p_{1}^{n_{1}}\cdots p_{r}^{n_{r}}$$ donde $n_{i}$ es el número de veces que aparece el factor $p_{i}$ en la factorización de $f$. Esta descomposición (única) recibe el nombre de *descomposición prima* de $f$. Es fácil de demostrar que todo polinomio mónico que divide a $f$ es producto de algunos de estos factores, es decir, es de la forma $p_{1}^{m_{1}}\cdots p_{r}^{m_{r}}$ donde cada exponente $m_{i}$ es un número tal que $0\leq m_{i}\leq n_{i}$. Luego, es muy fácil hallar el m.c.d. de dos polinomios $f$ y $g$ si tenemos su descomposición prima de cada uno de ellos, en este caso, si $f=p_{1}^{n_{1}}\cdots p_{r}^{n_{r}}$ y $g=q_{1}^{m_{1}}\cdots q_{s}^{m_{s}}$ entonces el m.c.d. es el producto de los factores comunes a ambas descomposiciones con el menor exponente, es decir, si $p_{i}=q_{j}$, entonces el factor $p_{i}^{k}$, con $k=max{n_{i},m_{j}}$ formará parte del m.c.d de $f$ y $g$.
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-45"><strong>(\#exm:unnamed-chunk-45) </strong></span>Los polinomios mónicos $x+a$, $x+b$ y $x+c$, donde $a$, $b$ y $c$ son escalares sobre un cuerpo $\mathbb{F}$, son primos relativos, mientras que el m.c.d. $(x+a)^{n}(x+b)^{m}$ y $(x+a)^{n}(x+c)^{r}$ es el polinomio $(x+a)^{n}$. Y el m.c.d. del los polinomios $(x+a)^{n+i}(x+b)^{m}(x+c)^{r}$ y $(x+a)^{n}(x+c)^{r+j}(x+b)^{m+k}$ es el polinomio $(x+a)^{n}(x+c)^{r}(x+b)^{m}$. Pero los polinomios $(x+a)^{n}(x+b)^{m}$, $(x+b)^{m}(x+c)^{r}$ y $(x+a)^{n}(x+c)^{r}$ son primos relativos (no tienen factores en  común).
+</div>\EndKnitrBlock{example}
+
+\BeginKnitrBlock{remark}<div class="remark">\iffalse{} <span class="remark"><em>Nota. </em></span>  \fi{}Si $f=p_{1}^{n_{1}}\cdots p_{r}^{n_{r}}$ es la descomposición prima de un polinomio $f$, entonces los polinomio $f_{i}=\prod_{\substack{j=1\\j\ne i}}^r f_{j}$, con $1\leq i\leq r$, son primos relativos.
+</div>\EndKnitrBlock{remark}
+
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-47"><strong>(\#thm:unnamed-chunk-47) </strong></span>Sea $f$ un polinomio sobre un  cuerpo $\mathbb{F}$ y sea $f`$ su derivada. $f$ es producto de factores irreducibles distintos si y solo si $f$ y $f`$ son primos relativos.
+</div>\EndKnitrBlock{theorem}
+
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Supongamos que $f=p_{1}\cdots p_{k}$, donde $p_{1},\cdots,p_{k}$ son polinomios irreducibles no escalares distintos entre si. Sea $f_{i}=\prod_{\substack{j=1\\j\ne i}}^k f_{j}$, entonces $f`=p_{1}`f_{1}+\cdots +p_{k}`f_{k}$. Supongamos que existe $p$ un polinomio primo que divide a $f$ y a $f`$. Como $p$ divide a $f$, $p$ debe ser algún factor $p_{i}$. Además $p$ divide a cada $f_{j}$, para todo $j\neq i$ y como $p$ divide a $f`$, entonces $p$ divide a $p_{i}`f_{i}$, por lo tanto $p$ divide a $p_{i}`$ o divide a $f_{i}$, pero esto no es posible ya que $p$ no puede dividir a $f_{i}$ por ser producto de polinomios primos irreducibles todos distintos a $p_{i}$ y tampoco puede dividir a $p_{i}`$, ya que $grd p_{i}`< grd p_{i}$, luego no esxiste un polinomio primo $p$ que divida a $f$ y $f`$. Recíprocamente, supongamos que en la factorización prima de $f$ se repite un factor, es decir, $f=p^{2}h$, donde $p$ es un polinomio mónico primo y $h$ un polinomio sobre $\mathbb{F}$. Entonces, $f`=2pp`h+p^{2}h`$, de donde se sigue que $p$ es divisor de $f$ y de $f`$.
+</div>\EndKnitrBlock{proof}
+
+Por último, daremos la forma general de factorización de culquier polinomio (sobre $\mathbb{R}$ y $\mathbb{C}$). Para ellos definiremos lo siguiente:
+
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-49"><strong>(\#def:unnamed-chunk-49) </strong></span>El cuerpo $\mathbb{F}$ es dice *algebraicamente cerrado* si todo polinomio primo sobre $\mathbb{F}$ tiene grado $1$.
+</div>\EndKnitrBlock{definition}
+
+Otra forma de definir cuerpo algebraicamente cerrado es pidiendo que todo polinomio mónico irreducible tenga la forma $(x-c)$ donde $c\in\mathbb{F}$. por otro lado, en cualquier cuerpo hemos visto que este tipo de polinomios es irreducible, por lo que la definición de cuerpo algebraicamente cerrado es equivalente a decir que $\mathbb{F}$ es un cuerpo tal que todo polinomio no escalar sobre $\mathbb{F}$ se puede expresar de la forma $f=k(x-c_{1})^{n_{1}}\cdots(x-c_{r})^{n_{r}}$, donde $c_{1},\cdots,c_{r}$ son escalares distintos en $\mathbb{F}$, $c\in\mathbb{F}$ no cero y $n_{1},\cdots,n_{r}$ enteros positivos. También es equivalente a decir que si $f$ es un polinomio no escalar sobre $\mathbb{F}$ entonces existe $c\in\mathbb{F}$ tal que $f(c)=0$.
+
+Con esto podemos afirmar que $\mathbb{R}$ no es algebraicamente cerrado ya que el polinomio $x^{2}+1$ no es reducible en polinomios primos de grado $1$. De otra forma, no existe un número real $c$ tal que $c^{2}+1=0$. Pero este mismo polinomio si es irreducible sobre el cuerpo de los números complejos $\mathbb{C}$, de hecho el Teorema fundamental del Álgebra afirma que el cuerpo de los números complejos es algebraicamente cerrado. Este teorema nos permite afirmar que las posibles factorizaciones de un polinomio $f$ sobre $\mathbb{R}$ es de la forma $f=c(x-t_{1})\cdots(x-t_{k})p_{1}\cdots p_{r}$ donde $p_{i}$ es un polinomio cuadrático de la forma $p_{i}=(x-c_{i})(x-\bar{c_{i}})$, donde $c_{i}$ y $\bar{c_{i}}$ son números complejos puros conjugados entre sí, de coeficientes reales. De donde se sigue que todo polinomio irreducible sobre $\mathbb{R}$ tiene grado $1$ o $2$, por lo tanto todo polinomio sobre $\mathbb{R}$ es el producto de factores irreducibles de grado $2$ y de polinomios lineales (de la forma $x-c$). 
+
 ##ejercicios
 
 (1) Sea $S$ el conjunto de los enteros no negativos y $\mathbb{F}$ un cuerpo. Sea $\mathbb{F}^{\infty}$ el conjunto de las funciones de $S$ en $\mathbb{F}$. Se definen las operaciones, suma, producto por un escalar y multiplicación de vectores en $\mathbb{F}^{\infty}$ como en el ejemplo \ref{ejemplo55}. Demuestre que:
