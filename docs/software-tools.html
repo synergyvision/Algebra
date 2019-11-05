@@ -25,7 +25,7 @@
 <meta name="author" content="Synergy Vision">
 
 
-<meta name="date" content="2019-11-04">
+<meta name="date" content="2019-11-05">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -89,7 +89,7 @@ code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* Com
 code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 </style>
 
-<link rel="stylesheet" href="css\style.css" type="text/css" />
+<link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
 
 <body>
@@ -221,7 +221,7 @@ devtools<span class="op">::</span><span class="kw">install_github</span>(<span c
 <h2><span class="header-section-number">A.2</span> Pandoc</h2>
 <p>An R Markdown document (<code>*.Rmd</code>) is first compiled to Markdown (<code>*.md</code>) through the <strong>knitr</strong> package, and then Markdown is compiled to other output formats (such as LaTeX or HTML) through Pandoc. This process is automated by the <strong>rmarkdown</strong> package. You do not need to install <strong>knitr</strong> or <strong>rmarkdown</strong> separately, because they are the required packages of <strong>bookdown</strong> and will be automatically installed when you install <strong>bookdown</strong>. However, Pandoc is not an R package, so it will not be automatically installed when you install <strong>bookdown</strong>. You can follow the installation instructions on the Pandoc homepage (<a href="http://pandoc.org" class="uri">http://pandoc.org</a>) to install Pandoc, but if you use the RStudio IDE, you do not really need to install Pandoc separately, because RStudio includes a copy of Pandoc. The Pandoc version number can be obtained via:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">rmarkdown<span class="op">::</span><span class="kw">pandoc_version</span>()
-## [1] &#39;1.19.2.1&#39;</code></pre></div>
+## [1] &#39;1.19.2.4&#39;</code></pre></div>
 <p>If you find this version too low and there are Pandoc features only in a later version, you can install the later version of Pandoc, and <strong>rmarkdown</strong> will call the newer version instead of its built-in version.</p>
 </div>
 <div id="latex" class="section level2">
@@ -251,13 +251,18 @@ Execution halted</code></pre></div>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">tlmgr</span> install titling  # may require sudo</code></pre></div>
 <p>LaTeX distributions and packages are also updated from time to time, and you may consider updating them especially when you run into LaTeX problems. You can find out the version of your LaTeX distribution by:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">system</span>(<span class="st">&#39;pdflatex --version&#39;</span>)
-## MiKTeX-pdfTeX 2.9.5840 (1.40.16) (MiKTeX 2.9)
-## Copyright (C) 1982 D. E. Knuth, (C) 1996-2014 Han The Thanh
-## TeX is a trademark of the American Mathematical Society.
-## compiled with zlib version 1.2.8; using 1.2.8
-## compiled with libpng version 1.6.19; using 1.6.19
-## compiled with poppler version 0.32.0
-## compiled with jpeg version 8.4</code></pre></div>
+## pdfTeX 3.14159265-2.6-1.40.18 (TeX Live 2017)
+## kpathsea version 6.2.3
+## Copyright 2017 Han The Thanh (pdfTeX) et al.
+## There is NO warranty.  Redistribution of this software is
+## covered by the terms of both the pdfTeX copyright and
+## the Lesser GNU General Public License.
+## For more information about these matters, see the file
+## named COPYING and the pdfTeX source.
+## Primary author of pdfTeX: Han The Thanh (pdfTeX) et al.
+## Compiled with libpng 1.6.29; using libpng 1.6.29
+## Compiled with zlib 1.2.11; using zlib 1.2.11
+## Compiled with xpdf version 3.04</code></pre></div>
 
 </div>
 </div>
