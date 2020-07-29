@@ -4,7 +4,7 @@
 title: "Álgebra Lineal"
 subtitle: "Ciencia de los Datos Financieros"
 author: "Synergy Vision"
-date: "2019-11-05"
+date: "2020-07-28"
 knit: "bookdown::render_book"
 documentclass: krantz
 bibliography: [book.bib, packages.bib]
