@@ -5026,6 +5026,70 @@ La desigualdad (iii.) del teorema anterior se llama *desigualdad de Cauchy-Schwa
 \BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-521"><strong>(\#exm:unnamed-chunk-521) </strong></span>Aplicando la desigualdad de Cauchy-Schwarz al producto interno canónico se obteiren $$|\sum x_{j}\bar{y_{j}}|\leq \left( \sum |x_{j}|^{2} \right)^{\frac{1}{2}} \left( \sum |y_{j}|^{2} \right)^{\frac{1}{2}} $$
 </div>\EndKnitrBlock{example}
 
+\BeginKnitrBlock{definition}<div class="definition"><span class="definition" id="def:unnamed-chunk-522"><strong>(\#def:unnamed-chunk-522) </strong></span>Sea $V$ un espacio vectorial con producto interno, sean $\alpha$ y $\beta\in V$. Decimos que $\alpha$ *es ortogonal a* $\beta$ si y solo si $(\alpha|\beta)=0$. Si $S$ es un conjunto de vectores ortogonales dos a dos, decimos que $S$ es un *conjunto ortogonal*. Si además todo vector $\alpha\in S$ tiene norma $1$ ($\|\alpha\|=1$), decimos que $S$ es un conjunto *ortonormal*.
+</div>\EndKnitrBlock{definition}
+
+Es claro que la relación de ortogonalidad de vectores es simétrica. El vector es el único vector ortogonal a todo vector del espacio. Geométricamente, un conjunto ortonormal es un conjunto de vectores perpendiculares entre sí.
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-523"><strong>(\#exm:unnamed-chunk-523) </strong></span>La base canónica de $\mathbb{F}^{n}$ es un conjunto ortonormal, respecto al producto interno canónico.
+</div>\EndKnitrBlock{example}
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-524"><strong>(\#exm:unnamed-chunk-524) </strong></span>En $\mathbb{R}^{2}$, considerando el producto interno canónico, el vector $(x,y)$ es ortogonal $(-y,x)$. En efecto $$((x,y)|(-y,x))=-xy+yx=0.$$
+</div>\EndKnitrBlock{example}
+
+\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-525"><strong>(\#exm:unnamed-chunk-525) </strong></span>Sea $V$ el espacio de las funciones continuas de valores en $\mathbb{C}$ o $\mathbb{R}$ definidas en el intervalo $0\leq x\leq 1$ con el producto interno definido en el ejemplo \@ref{exp:ejemplo86}. Sean $f_{n}=\sqrt{2}\cos 2\pi nx$ y $g_{n}=\sqrt{2}\sen 2\pi nx$ para cada $n\in\mathbb{N}$. Entonces $\{1,f_{1},g_{1},f_{2},g_{2},\cdots\}$ es un conjunto infinito ortonormal.
+</div>\EndKnitrBlock{example}
+
+En los ejemplos vemos que todos los conjuntos ortonormales mostrados son linealmente independientes. Veamos que siempre es el caso.
+
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-526"><strong>(\#thm:unnamed-chunk-526) </strong></span>Un conjunto ortogonal de vectores no nulos es linealmente independiente.
+</div>\EndKnitrBlock{theorem}
+
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Sea $V$ un espacio vectorial con producto interno y sea $S$ un conjunto ortogonal de vectores no nulos. Sean $\alpha_{1},\cdots,\alpha_{m}$ vectores (distintos) de $S$. Tomemos una combinación lineal de estos vectores:
+	$$\beta=\sum_{i=1}^{m} c_{i}\alpha_{i}$$
+	donde $c_{1},\cdots,c_{m}$ son escalares. Entonces:
+	$$\begin{array}{rl}
+	(\beta|\alpha_{k})=&(\sum_{i=1}^{m} c_{i}\alpha_{i}|\alpha_{k})\\
+	=&\sum_{i=1}^{m} c_{i}(\alpha_{i}|\alpha_{k})\\
+	=&c_{k}(\alpha_{k}|\alpha_{k})
+	\end{array}$$
+Como $(\alpha_{k}|\alpha_{k})\neq 0$, se tiene que $\beta=0$ si solo si $c_{k}=0$ para cada $k\leq m$.
+</div>\EndKnitrBlock{proof}
+
+\BeginKnitrBlock{corollary}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-528"><strong>(\#cor:unnamed-chunk-528) </strong></span>Si un vector $\beta$ es combinación lineal de un conjunto ortogonal de vectores no nulos $\alpha_{1},\cdots,\alpha_{m}$, entonces $\beta$ es la siguiente combinación lineal:
+	$$\beta=\sum_{i=1}^{m} \dfrac{(\beta|\alpha_{i})}{\|\alpha\|^{2}} \alpha_{k}.$$
+</div>\EndKnitrBlock{corollary}
+
+Otro resultado que se desprende fácilmente del teorema anterior es el siguiente:
+
+\BeginKnitrBlock{corollary}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-529"><strong>(\#cor:unnamed-chunk-529) </strong></span>Si $\alpha_{1},\cdots,\alpha_{m}$ son vectores ortogonales no nulos de un espacio vectorial con producto interno $V$ de dimensión finita. Entonces $\dim V\geq m$.
+</div>\EndKnitrBlock{corollary}
+
+El corolario anterior asegura que no puede haber mas que $\dim V$ vectores mutuamente perpendiculares. Así, en $\mathbb{R}^{2}$ no podemos hallar $3$ vectores mutuamente perpendicules. Esto es lo que se conoce como la dimensión geométrica del espacio, y el corolario nos asegura que esta es igual a la dimensión algebraica.
+
+\BeginKnitrBlock{theorem}<div class="theorem"><span class="theorem" id="thm:unnamed-chunk-530"><strong>(\#thm:unnamed-chunk-530) </strong></span>Sea $V$ una espacio vectorial con producto interno y sean $\beta_{1},\cdots,\beta_{n}\in V$ vectores linealmente independientes. Entonces se pueden construír vectores ortogonales $\alpha_{1},\cdots, \alpha_{n}\in V$ tales que para cada $k\leq n$ el conjunto $\{\alpha_{1},\cdots,\alpha_{k}\}$ sea una base del subespacio generado por $\{\beta_{1},\cdots,\beta_{k}\}$.
+</div>\EndKnitrBlock{theorem}
+
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Sea $\alpha_{1}=\beta_{1}$. Construiremos el resto de los vectores de forma inductiva. Supongamos definidos los vectores $\alpha_{1},\cdots,\alpha_{m}$, $m< n$, tales que para cada $k\leq m$, $\{\alpha_{1},\cdots,\alpha_{k}\}$ es una base ortogonal del subespacio $\left\langle \beta_{1},\cdots,\beta_{k} \right\rangle$. Definamos $$\alpha_{m+1}=\beta_{m+1}-\sum_{k=1}^{m} \dfrac{(\beta_{m+1}|\alpha_{k})}{\|\alpha\|^{2}}\alpha_{k}.$$ 
+	Entonces $\alpha_{m+1}\neq 0$ ya que en otro caso, $$\beta_{m+1}-\sum_{k=1}^{m} \dfrac{(\beta_{m+1}|\alpha_{k})}{\|\alpha\|^{2}}\alpha_{k}=0$$ donde cada escalar es distinto de cero, lo que contradice la hipótesis $\beta_{1},\cdots,\beta_{n}$ son l.i. Además, para cada $j\leq m$ se tiene que 
+	$$\begin{array}{rl}
+	(\alpha_{m+1}|\alpha_{j})=&(\beta_{m+1}|\alpha_{j})-\sum_{k=1}^{m} \dfrac{(\beta_{m+1}|\alpha_{k})}{\|\alpha\|^{2}}(\alpha_{k}|\alpha_{j})\\
+	=&(\beta_{m+1}|\alpha_{j})-(\beta_{m+1}|\alpha_{j})\\
+	=&0
+	\end{array}$$
+Así, el conjunto $\{\alpha_{1},\cdots,\alpha_{m+1}\}$ es un conjunto ortogonal de vectores no nulos, pertenecientes al subespacio $\left\langle \beta_{1},\cdots,\beta_{m+1}\right\rangle$, del teorema anterior se tiene que el conjunto $\{\alpha_{1},\cdots,\alpha_{m+1}\}$ es l.i. luego una base para $\left\langle \beta_{1},\cdots,\beta_{m+1}\right\rangle$.
+Este proceso se puede continuar hasta completar $n$ vectores $\alpha_{1},\cdots,\alpha_{n}$ tales como se requiere.
+</div>\EndKnitrBlock{proof}
+
+La construcción hecha en la demostración del teorema anterior lleva por nombre *proceso de ortogonalización de Gram-Schmidt*.
+
+\BeginKnitrBlock{corollary}<div class="corollary"><span class="corollary" id="cor:unnamed-chunk-532"><strong>(\#cor:unnamed-chunk-532) </strong></span>Todo espacio vectorial de dimensión finita, con producto escalar, tiene una base ortonormal.
+</div>\EndKnitrBlock{corollary}
+\BeginKnitrBlock{proof}<div class="proof">\iffalse{} <span class="proof"><em>Demostración. </em></span>  \fi{}Sean $V$ un espacio con producto interno cuya dimensión es $n$. Sea $\{\beta_{1}\cdots,\beta_{n}\}$ una base de $V$. Por el teorama anterior, podemos hallar vectores $\alpha_{1},\cdots,\alpha_{n}$ ortogonales que generan al espacio $V$. Ahora tomando los vectores $\alpha_{i}/\|\alpha_{i}\|$, obtenemos una base ortonormal.
+</div>\EndKnitrBlock{proof}
+La utilidad de las bases ortonormales radica en la simplificación de los cálculos que involucran coordenadas. Un ejemplo de esto es que la matriz asociada al producto interno del espacio, en la base ortonormal, es la base unidad. De esta forma, para escalares $x_{j}$ e $y_{k}$ se tiene que 
+$$\left( \sum_{j}x_{j}\alpha_{j}\left| \sum_{k}x_{k}\alpha_{k}\right. \right) =\sum_{j} x_{j}\bar{y}_{j}$$
+
 ###Ejercicios
 [1] Sea $(|)$ un producto interno sobre el espacio vectorial $V$. Demuestre que:
 		(a) $(0|\beta)=0$ para todo vector $\beta\in V$.
